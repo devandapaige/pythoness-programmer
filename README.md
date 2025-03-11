@@ -51,11 +51,27 @@ src/
 
 ## Color Scheme
 
-- Brand Green Dark
-- Brand Purple Dark
-- Brand Green Accent
-- Brand Cream
-- White (for contrast and readability)
+```css
+/* Brand Colors */
+--brand-green-dark: #1A472A;    /* Deep forest green */
+--brand-purple-dark: #2D1B69;   /* Rich purple */
+--brand-green-accent: #157F1F;  /* Vibrant green */
+--brand-cream: #F5F5DC;         /* Soft cream */
+--brand-purple-light: #9747FF;  /* Light purple accent */
+
+/* UI Colors */
+--white: #FFFFFF;               /* Pure white for contrast */
+--white-opacity-10: rgba(255, 255, 255, 0.1);
+--white-opacity-20: rgba(255, 255, 255, 0.2);
+--white-opacity-90: rgba(255, 255, 255, 0.9);
+```
+
+Common color applications:
+- Text on dark: `text-white`, `text-white/90`, `text-brand-cream`
+- Text on light: `text-brand-purple-dark`, `text-brand-green-dark`
+- Accents: `text-brand-green-accent`, `text-brand-purple-light`
+- Backgrounds: Dark gradient combinations of `brand-green-dark` and `brand-purple-dark`
+- Overlays: `bg-white/5`, `bg-white/10` with `backdrop-blur-sm`
 
 ## Sections
 
