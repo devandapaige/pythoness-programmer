@@ -1,83 +1,90 @@
 # Pythoness Programmer
 
-A modern, accessible portfolio website built with Next.js, TypeScript, and Tailwind CSS. This site showcases professional services in software development, tech coaching, and digital craft creation.
+A professional portfolio and service website built with Next.js, showcasing tech coaching, professional development, and local craft services.
+
+## Project Overview
+
+This website serves as a platform for:
+- Tech coaching and consultation services
+- Professional development and career coaching
+- Local craft and print services (Central Virginia)
+- Industry insights and strategic guidance
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) - React framework for production
-- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm (comes with Node.js)
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/devandapaige/pythoness-programmer.git
-cd pythoness-programmer
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-### Development
-
-To start the development server:
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-### Building for Production
-
-To create a production build:
-```bash
-npm run build
-```
-
-To start the production server:
-```bash
-npm start
-```
+- **Framework:** Next.js 14
+- **Styling:** Tailwind CSS
+- **Typography:** Custom font implementation
+- **Animations:** CSS transitions and transforms
+- **Integrations:** 
+  - Cal.com for scheduling
+  - Beehiiv for newsletter
+  - Custom SVG patterns
 
 ## Project Structure
 
 ```
-pythoness-programmer/
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx    # Root layout component
-│   │   ├── page.tsx      # Home page component
-│   │   └── globals.css   # Global styles
-│   └── components/
-│       ├── Header.tsx    # Navigation header
-│       └── Section.tsx   # Reusable section component
-├── public/              # Static files
-└── package.json        # Project dependencies and scripts
+src/
+├── app/
+│   ├── page.tsx           # Main landing page
+│   └── layout.tsx         # Root layout
+├── components/
+│   ├── Header.tsx         # Navigation and branding
+│   ├── Footer.tsx         # Site footer with links
+│   └── Section.tsx        # Reusable section component
+├── styles/
+│   └── globals.css        # Global styles and Tailwind
+└── public/
+    └── pattern.svg        # Background pattern asset
 ```
 
-## Features
+## Key Features
 
-- Responsive design that works on all devices
-- Smooth scroll behavior for navigation
-- Accessible navigation and content structure
-- SEO optimized with proper metadata
-- Modern UI with consistent styling
-- Performance optimized
+- Responsive design with mobile-first approach
+- Gradient backgrounds with animated patterns
+- Accessible UI components
+- Integrated booking system
+- Newsletter subscription
+- Service cards with hover effects
+- Professional experience showcase
+- Local craft services section
+
+## Color Scheme
+
+- Brand Green Dark
+- Brand Purple Dark
+- Brand Green Accent
+- Brand Cream
+- White (for contrast and readability)
+
+## Sections
+
+1. Hero - Introduction and primary CTAs
+2. Process - How tech coaching works
+3. Services - Digital services overview
+4. Experience - Professional background
+5. Craft Services - Local physical products
+6. Contact - Booking options and rates
+7. Newsletter - Industry insights signup
+
+## Development
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+The site is built for deployment on Vercel or similar platforms that support Next.js.
+
+## Contact
+
+For questions or collaborations:
+admin@pythonessprogrammer.com
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Author
-
-Amanda Paige - [GitHub](https://github.com/devandapaige)
+All rights reserved. This code is proprietary and not for public use.
