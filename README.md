@@ -38,7 +38,6 @@ src/
 │   │   └── layout.tsx             # Blog section layout
 │   └── vibe-coding-cheatsheet/     # Vibe Coding Cheatsheet section
 │       ├── page.tsx               # Cheatsheet main page
-│       ├── layout.tsx             # Cheatsheet section layout
 │       ├── components/            # Cheatsheet-specific components
 │       └── data/                  # Cheatsheet content data
 ├── components/                    # Shared components

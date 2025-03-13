@@ -99,7 +99,7 @@ export default function Home() {
                 <ul className="space-y-3 text-white/90">
                   <li className="flex items-start space-x-3">
                     <span className="text-brand-green-accent text-xl leading-none mt-1">•</span>
-                    <span>Proficient in React, Next.js, TypeScript, Node.js, Express, and PostgreSQL with 13+ years of combined experience</span>
+                    <span>Proficient in React, Next.js, TypeScript, Node.js, Express, and PostgreSQL, with 4 years tech experience building on 11 years in communications</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-brand-green-accent text-xl leading-none mt-1">•</span>
