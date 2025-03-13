@@ -2,9 +2,12 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-purple-dark text-white py-12 px-4 md:px-6">
+    <footer 
+      className="bg-brand-green-dark text-white py-12 px-4 md:px-6"
+      role="contentinfo"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div className="space-y-4">
             <h3 className="font-display text-xl text-white">Pythoness Programmer</h3>
@@ -16,7 +19,11 @@ export default function Footer() {
           {/* Social Links */}
           <div className="space-y-4">
             <h3 className="font-display text-xl text-white">Connect</h3>
-            <ul className="space-y-2">
+            <ul 
+              className="space-y-2"
+              role="list"
+              aria-label="Social media links"
+            >
               <li>
                 <Link 
                   href="https://www.linkedin.com/in/pythonessprogrammer/"
@@ -48,7 +55,8 @@ export default function Footer() {
                 <Link 
                   href="https://www.tiktok.com/@pythoness_programmer"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   <span>TikTok</span>
                 </Link>
@@ -57,7 +65,8 @@ export default function Footer() {
                 <Link 
                   href="https://bsky.app/profile/pythonessdev.bsky.social"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   <span>Bluesky</span>
                 </Link>
@@ -66,7 +75,8 @@ export default function Footer() {
                 <Link 
                   href="https://pythoness.beehiiv.com/"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   <span>Newsletter</span>
                 </Link>
@@ -76,42 +86,40 @@ export default function Footer() {
 
           {/* Calendar Links */}
           <div className="space-y-4">
-            <h3 className="font-display text-xl text-white">Book a Session</h3>
-            <ul className="space-y-2">
+            <h3 className="font-display text-xl text-white">Book a Call</h3>
+            <ul 
+              className="space-y-2"
+              role="list"
+              aria-label="Booking options"
+            >
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/tech30" 
+                  href="https://cal.com/pythoness/15min"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  30-Min Clarity Call ($40)
+                  15min Vibe Check
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/tech60" 
+                  href="https://cal.com/pythoness/tech30"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  60-Min Deep Dive ($70)
+                  30min Tech Session
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/15min" 
+                  href="https://cal.com/pythoness/60min"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  15-Min Vibe Check (Free)
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="https://cal.com/pythoness/craft" 
-                  target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
-                >
-                  Craft Consultation
+                  60min Deep Dive
                 </Link>
               </li>
             </ul>
@@ -120,11 +128,15 @@ export default function Footer() {
           {/* Free Resources */}
           <div className="space-y-4">
             <h3 className="font-display text-xl text-white">Free Resources</h3>
-            <ul className="space-y-2">
+            <ul 
+              className="space-y-2"
+              role="list"
+              aria-label="Free resources"
+            >
               <li>
                 <Link 
                   href="/vibe-coding-cheatsheet" 
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   Vibe Coding Cheatsheet
                 </Link>
@@ -136,11 +148,15 @@ export default function Footer() {
           {/* Legal Links */}
           <div className="space-y-4">
             <h3 className="font-display text-xl text-white">Legal</h3>
-            <ul className="space-y-2">
+            <ul 
+              className="space-y-2"
+              role="list"
+              aria-label="Legal information"
+            >
               <li>
                 <Link 
                   href="/privacy-policy" 
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   Privacy Policy
                 </Link>
@@ -148,7 +164,7 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/terms" 
-                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   Terms of Service
                 </Link>
@@ -163,7 +179,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div 
+          className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          role="contentinfo"
+        >
           <p className="text-white/60 text-sm">
             © {new Date().getFullYear()} Pythoness Programmer. All rights reserved.
           </p>
