@@ -14,7 +14,7 @@ export default function RootLayoutClient({
 
   return (
     <>
-      {!isHomePage && <Header />}
+      <Header />
       <main className={!isHomePage ? "pt-20" : ""}>
         {children}
       </main>

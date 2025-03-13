@@ -1,4 +1,3 @@
-import Header from '@/components/Header'
 import Section from '@/components/Section'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -6,8 +5,6 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
-      
       {/* Hero Section - Gradient */}
       <section className="relative min-h-[90vh] flex items-center justify-center py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">
         {/* Background pattern with adjusted opacity */}
