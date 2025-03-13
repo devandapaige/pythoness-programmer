@@ -117,6 +117,22 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Free Resources */}
+          <div className="space-y-4">
+            <h3 className="font-display text-xl text-white">Free Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  href="/vibe-coding-cheatsheet" 
+                  className="text-white/80 hover:text-brand-green-accent transition-colors"
+                >
+                  Vibe Coding Cheatsheet
+                </Link>
+              </li>
+              {/* Add more free resources here as they become available */}
+            </ul>
+          </div>
+
           {/* Legal Links */}
           <div className="space-y-4">
             <h3 className="font-display text-xl text-white">Legal</h3>
