@@ -9,6 +9,7 @@ This website serves as a platform for:
 - Professional development and career coaching
 - Local craft and print services (Central Virginia)
 - Industry insights and strategic guidance
+- Technical blog and resources
 
 ## Tech Stack
 
@@ -20,22 +21,36 @@ This website serves as a platform for:
   - Cal.com for scheduling
   - Beehiiv for newsletter
   - Custom SVG patterns
+  - MDX for blog content
 
 ## Project Structure
 
 ```
 src/
 ├── app/
-│   ├── page.tsx           # Main landing page
-│   └── layout.tsx         # Root layout
-├── components/
-│   ├── Header.tsx         # Navigation and branding
-│   ├── Footer.tsx         # Site footer with links
-│   └── Section.tsx        # Reusable section component
-├── styles/
-│   └── globals.css        # Global styles and Tailwind
-└── public/
-    └── pattern.svg        # Background pattern asset
+│   ├── page.tsx                    # Main landing page
+│   ├── layout.tsx                  # Root layout
+│   ├── globals.css                 # Global styles
+│   ├── blog/                       # Blog section
+│   │   ├── page.tsx               # Blog index page
+│   │   ├── [slug]/                # Dynamic blog post routes
+│   │   │   └── page.tsx           # Individual blog post page
+│   │   └── layout.tsx             # Blog section layout
+│   └── vibe-coding-cheatsheet/     # Vibe Coding Cheatsheet section
+│       ├── page.tsx               # Cheatsheet main page
+│       ├── layout.tsx             # Cheatsheet section layout
+│       ├── components/            # Cheatsheet-specific components
+│       └── data/                  # Cheatsheet content data
+├── components/                    # Shared components
+│   ├── Header.tsx                # Navigation and branding
+│   ├── Footer.tsx                # Site footer with links
+│   └── Section.tsx               # Reusable section component
+├── lib/                          # Utility functions and shared logic
+│   ├── mdx.ts                    # MDX processing utilities
+│   └── blog.ts                   # Blog-related utilities
+└── content/                      # Content directory
+    └── blog/                     # Blog posts in MDX format
+        └── posts/                # Individual blog post files
 ```
 
 ## Key Features
@@ -48,6 +63,43 @@ src/
 - Service cards with hover effects
 - Professional experience showcase
 - Local craft services section
+- MDX-based blog system
+- Vibe Coding Cheatsheet resource
+
+## Blog Implementation
+
+The blog is implemented using MDX for content management. Here's how to work with it:
+
+1. Create new blog posts:
+```bash
+# Create a new blog post
+touch src/content/blog/posts/your-post-title.mdx
+```
+
+2. Blog post frontmatter structure:
+```mdx
+---
+title: "Your Post Title"
+date: "2024-03-13"
+description: "A brief description of your post"
+author: "Your Name"
+tags: ["tag1", "tag2"]
+---
+
+Your content here...
+```
+
+3. Available MDX components:
+```tsx
+// Example usage in MDX files
+<Callout type="info">
+  This is an info callout
+</Callout>
+
+<CodeBlock language="typescript">
+  const example = "code here";
+</CodeBlock>
+```
 
 ## Color Scheme
 
@@ -82,14 +134,25 @@ Common color applications:
 5. Craft Services - Local physical products
 6. Contact - Booking options and rates
 7. Newsletter - Industry insights signup
+8. Blog - Technical articles and resources
+9. Vibe Coding Cheatsheet - Developer resource (Freebie)
 
 ## Development
 
 To run the project locally:
 
 ```bash
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
 ## Deployment

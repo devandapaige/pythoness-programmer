@@ -28,7 +28,8 @@ export default function Footer() {
                 <Link 
                   href="https://www.linkedin.com/in/pythonessprogrammer/"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   <span>LinkedIn</span>
                 </Link>
@@ -37,7 +38,8 @@ export default function Footer() {
                 <Link 
                   href="https://github.com/devandapaige" 
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   <span>GitHub</span>
                 </Link>
@@ -46,7 +48,8 @@ export default function Footer() {
                 <Link 
                   href="https://www.youtube.com/@pythonessprogrammer"
                   target="_blank"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
                   <span>YouTube</span>
                 </Link>
@@ -97,9 +100,9 @@ export default function Footer() {
                   href="https://cal.com/pythoness/15min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  15min Vibe Check
+                  <span>15min Vibe Check</span>
                 </Link>
               </li>
               <li>
@@ -107,9 +110,9 @@ export default function Footer() {
                   href="https://cal.com/pythoness/tech30"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  30min Tech Session
+                  <span>30min Tech Session</span>
                 </Link>
               </li>
               <li>
@@ -117,9 +120,9 @@ export default function Footer() {
                   href="https://cal.com/pythoness/60min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  60min Deep Dive
+                  <span>60min Deep Dive</span>
                 </Link>
               </li>
             </ul>
@@ -136,9 +139,9 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/vibe-coding-cheatsheet" 
-                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  Vibe Coding Cheatsheet
+                  <span>Vibe Coding Cheatsheet</span>
                 </Link>
               </li>
               {/* Add more free resources here as they become available */}
@@ -156,17 +159,17 @@ export default function Footer() {
               <li>
                 <Link 
                   href="/privacy-policy" 
-                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  Privacy Policy
+                  <span>Privacy Policy</span>
                 </Link>
               </li>
               <li>
                 <Link 
                   href="/terms" 
-                  className="text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  Terms of Service
+                  <span>Terms of Service</span>
                 </Link>
               </li>
             </ul>
@@ -186,8 +189,43 @@ export default function Footer() {
           <p className="text-white/60 text-sm">
             © {new Date().getFullYear()} Pythoness Programmer. All rights reserved.
           </p>
-          <p className="text-white/60 text-sm">
-            Crafted with ✨ and Next.js
+          <p className="text-white/60 text-sm text-right">
+            Crafted with ✨ using{' '}
+            <Link 
+              href="https://nextjs.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-brand-green-accent transition-colors"
+            >
+              Next.js
+            </Link>
+            {', '}
+            <Link 
+              href="https://tailwindcss.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-brand-green-accent transition-colors"
+            >
+              Tailwind
+            </Link>
+            {', '}
+            <Link 
+              href="https://contentlayer.dev" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-brand-green-accent transition-colors"
+            >
+              Contentlayer
+            </Link>
+            {' & '}
+            <Link 
+              href="https://mdx-js.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-brand-green-accent transition-colors"
+            >
+              MDX
+            </Link>
           </p>
         </div>
       </div>

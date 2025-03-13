@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import Section from '@/components/Section'
-import Footer from '@/components/Footer'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -28,17 +27,17 @@ export default function Home() {
               to help you build a digital presence that feels authentically yours.
             </p>
           </div>
-          <div className="mt-12 space-x-6">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <Link 
               href="https://cal.com/pythoness/tech30"
               target="_blank"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+              className="w-full sm:w-auto inline-block bg-brand-green-accent text-white px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20 text-center"
             >
               Book a $40 Clarity Call
             </Link>
             <Link 
               href="#services"
-              className="inline-block bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
+              className="w-full sm:w-auto inline-block bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105 text-center"
             >
               See How I Can Help
             </Link>
@@ -111,11 +110,11 @@ export default function Home() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-brand-green-accent text-xl leading-none mt-1">•</span>
-                    <span>Demonstrated expertise in Digital Ocean, AWS, and other cloud platforms</span>
+                    <span>Digital Ocean, AWS, and other cloud platforms</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="text-brand-green-accent text-xl leading-none mt-1">•</span>
-                    <span>Created N8N-powered solutions for streamlined business processes</span>
+                    <span>Business automation with N8N, Make.com, and Zapier for streamlined workflows</span>
                   </li>
                 </ul>
               </div>
@@ -583,8 +582,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      <Footer />
     </main>
   )
 }
