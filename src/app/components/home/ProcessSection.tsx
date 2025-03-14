@@ -1,56 +1,58 @@
-import Link from 'next/link'
-import Section from '@/components/Section'
-import { processSection } from '@/app/data/homeData'
+import { getMDXContent } from '@/lib/mdx'
 
-export default function ProcessSection() {
+export default async function ProcessSection() {
+  const { frontmatter } = await getMDXContent('home/process.mdx')
+  const { id, title, subtitle, steps, expertise } = frontmatter
+
   return (
-    <Section id={processSection.id} title={processSection.title} className="bg-brand-green-dark text-white">
-      <div className="grid gap-12 md:grid-cols-2 items-center">
-        <div className="space-y-8">
-          <h3 className="text-3xl font-display mb-6 text-brand-cream">{processSection.subtitle}</h3>
-          <div className="space-y-6">
-            {processSection.steps.map((step) => (
-              <div key={step.number} className="flex items-start group hover:transform hover:translate-x-2 transition-transform duration-300">
-                <div className="w-14 h-14 rounded-full bg-brand-green-accent flex items-center justify-center mr-6 shrink-0 shadow-lg group-hover:shadow-xl transition-shadow">
-                  <span className="font-display text-lg">{step.number}</span>
-                </div>
-                <div>
-                  <h4 className="font-display text-xl mb-3 text-brand-cream">{step.title}</h4>
-                  <p className="text-white/90">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="pt-8">
-            <Link 
-              href="https://cal.com/pythoness"
-              target="_blank"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
-            >
-              Schedule Your Session
-            </Link>
-          </div>
+    <section id={id} className="py-24 px-4 md:px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-display mb-4 text-brand-green-dark">
+            {title}
+          </h2>
+          <p className="text-xl text-gray-600">{subtitle}</p>
         </div>
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 space-y-6">
-          <h3 className="text-3xl font-display mb-6 text-brand-cream">{processSection.expertise.title}</h3>
-          <p className="text-white/90 text-lg mb-6 leading-relaxed">
-            {processSection.expertise.description}
-          </p>
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h4 className="font-display text-xl text-brand-cream">Technical Expertise</h4>
-              <ul className="space-y-3 text-white/90">
-                {processSection.expertise.skills.map((skill, index) => (
-                  <li key={index} className="flex items-start space-x-3">
-                    <span className="text-brand-green-accent text-xl leading-none mt-1">•</span>
-                    <span>{skill}</span>
-                  </li>
-                ))}
-              </ul>
+
+        {/* Process Steps */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          {steps.map((step: any) => (
+            <div
+              key={step.number}
+              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="text-4xl font-display text-brand-green-accent mb-4">
+                {step.number}
+              </div>
+              <h3 className="text-xl font-display mb-4 text-brand-green-dark">
+                {step.title}
+              </h3>
+              <p className="text-gray-600">{step.description}</p>
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Expertise Section */}
+        <div className="bg-brand-green-light/10 p-8 md:p-12 rounded-2xl">
+          <h3 className="text-2xl md:text-3xl font-display mb-6 text-brand-green-dark">
+            {expertise.title}
+          </h3>
+          <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+            {expertise.description}
+          </p>
+          <ul className="space-y-4">
+            {expertise.skills.map((skill: string, index: number) => (
+              <li
+                key={index}
+                className="flex items-start text-gray-600"
+              >
+                <span className="text-brand-green-accent mr-2">•</span>
+                {skill}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-    </Section>
+    </section>
   )
 } 

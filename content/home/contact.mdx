@@ -1,0 +1,71 @@
+---
+id: "contact"
+title: "Let's Create Something Amazing"
+intro:
+  mainText: "Every digital challenge is an opportunity to learn, grow, and maybe even laugh a little along the way. Let's work together to find your path to tech confidence."
+  subText: "Proudly serving all humans • LGBTQIA+ affirming • Neurodiversity celebrating • Always judgment-free"
+sessions:
+  - title: "30-Minute Clarity Call"
+    price: "$40"
+    duration: "30 minutes"
+    perfectFor:
+      - "Quick website tweaks & fixes"
+      - "Specific tech tool questions"
+      - "AI tool recommendations"
+    link: "https://cal.com/pythoness/tech30"
+  - title: "60-Minute Deep Dive"
+    price: "$70"
+    duration: "60 minutes"
+    perfectFor:
+      - "Marketing funnel setup"
+      - "Website overhaul planning"
+      - "Complex system integrations"
+    link: "https://cal.com/pythoness/tech60"
+benefits:
+  title: "Why Book a Tech Coaching Session?"
+  items:
+    - "Get unstuck and move forward with your tech projects"
+    - "Receive clear, actionable advice tailored to your needs"
+    - "Learn about tools and solutions that fit your budget"
+    - "Get judgment-free support for your unique situation"
+contact:
+  email: "admin@pythonessprogrammer.com"
+  message: "Questions? Email me at"
+closing:
+  text: "Let's work together to create technology solutions that enhance your work, not complicate it. My approach combines technical expertise with empathy, ensuring you get solutions that truly work for you."
+  buttons:
+    - text: "Schedule Free 15min Vibe Check"
+      link: "https://cal.com/pythoness/15min"
+    - text: "Book Craft Consultation"
+      link: "https://cal.com/pythoness/craft"
+---
+
+# {title}
+
+{intro.mainText}
+
+{intro.subText}
+
+## Available Sessions
+
+{sessions.map((session) => (
+  <div key={session.title}>
+    ### {session.title}
+    **{session.price}** • {session.duration}
+
+    Perfect for:
+    {session.perfectFor.map((item) => (
+      - {item}
+    ))}
+  </div>
+))}
+
+## {benefits.title}
+
+{benefits.items.map((item) => (
+  - {item}
+))}
+
+---
+
+{closing.text} 

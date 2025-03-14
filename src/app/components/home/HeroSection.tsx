@@ -1,7 +1,10 @@
 import Link from 'next/link'
-import { heroSection } from '@/app/data/homeData'
+import { getMDXContent } from '@/lib/mdx'
 
-export default function HeroSection() {
+export default async function HeroSection() {
+  const { frontmatter } = await getMDXContent('home/hero.mdx')
+  const { title, mainText, subText, buttons } = frontmatter
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">
       {/* Background pattern with adjusted opacity */}
@@ -12,18 +15,18 @@ export default function HeroSection() {
       
       <div className="relative max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-8 tracking-tight text-white">
-          {heroSection.title}
+          {title}
         </h1>
         <div className="space-y-6">
           <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white font-light leading-relaxed">
-            {heroSection.mainText}
+            {mainText}
           </p>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/90 font-light leading-relaxed">
-            {heroSection.subText}
+            {subText}
           </p>
         </div>
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          {heroSection.buttons.map((button, index) => (
+          {buttons.map((button: any, index: number) => (
             <Link
               key={index}
               href={button.href}

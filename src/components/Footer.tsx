@@ -190,7 +190,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Pythoness Programmer. All rights reserved.
           </p>
           <p className="text-white/60 text-sm text-right">
-            Crafted with ✨ using{' '}
+            Crafted using{' '}
             <Link 
               href="https://nextjs.org" 
               target="_blank" 
@@ -217,14 +217,23 @@ export default function Footer() {
             >
               Contentlayer
             </Link>
-            {' & '}
+            {', '}
             <Link 
-              href="https://mdx-js.com" 
+              href="https://mdxjs.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-brand-green-accent transition-colors"
             >
               MDX
+            </Link>
+            {', '}
+            <Link 
+              href="https://vercel.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-brand-green-accent transition-colors"
+            >
+              Vercel
             </Link>
           </p>
         </div>

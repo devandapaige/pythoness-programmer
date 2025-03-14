@@ -1,0 +1,70 @@
+---
+id: "services"
+title: "Your Digital Journey, Your Way"
+description: "Everyone learns and grows differently. I'm here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way."
+services:
+  - title: "Business Tech Coaching"
+    subtitle: "Learn, Adapt, and Thrive in the Digital Space"
+    features:
+      - "Personalized website & platform guidance"
+      - "Smart marketing systems that fit your style"
+      - "Practical AI & automation solutions"
+      - "Sustainable tech strategies you'll love"
+    pricing:
+      - name: "30-Minute Clarity Call"
+        price: "$40"
+      - name: "60-Minute Deep Dive"
+        price: "$70"
+    ctaLink: "https://cal.com/pythoness"
+    ctaText: "Book Your Session"
+  - title: "Professional Coaching"
+    subtitle: "Growth at Your Own Pace"
+    features:
+      - "Empowering career transitions"
+      - "Authentic leadership development"
+      - "Flexible accountability partnerships"
+      - "Inclusive, neurodiversity-affirming support"
+    note: "Monthly coaching packages available after initial consultation"
+    ctaLink: "https://cal.com/pythoness/15min"
+    ctaText: "Schedule 15min Vibe Check"
+  - title: "Custom Development"
+    subtitle: "Solutions That Grow With You"
+    features:
+      - "Resilient web applications"
+      - "Intuitive marketing automation"
+      - "Thoughtful AI integrations"
+      - "Universal, accessible design"
+    note: "Available for Contract Work Starting April 2025"
+    ctaLink: "#contact"
+    ctaText: "Discuss Your Project"
+---
+
+# {title}
+
+{description}
+
+## Our Services
+
+{services.map((service) => (
+  <div key={service.title}>
+    ### {service.title}
+    #### {service.subtitle}
+
+    {service.features.map((feature) => (
+      - {feature}
+    ))}
+
+    {service.pricing && (
+      <>
+        #### Pricing
+        {service.pricing.map((price) => (
+          - {price.name}: {price.price}
+        ))}
+      </>
+    )}
+
+    {service.note && (
+      > {service.note}
+    )}
+  </div>
+))} 

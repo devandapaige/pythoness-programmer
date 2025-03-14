@@ -1,0 +1,43 @@
+---
+id: "process"
+title: "How Tech Coaching Works"
+subtitle: "Simple, Straightforward Support"
+steps:
+  - number: "01"
+    title: "Book Your Call"
+    description: "Choose a 30-min ($40) or 60-min ($70) session that fits your schedule."
+  - number: "02"
+    title: "Share Your Challenge"
+    description: "Tell me about your tech struggles and what you want to achieve."
+  - number: "03"
+    title: "Get Clear Solutions"
+    description: "Receive step-by-step guidance and actionable next steps you can implement right away."
+expertise:
+  title: "Beyond Code: A Human-First Approach"
+  description: "My journey through marketing, management, and software engineering gives me a perspective that goes beyond code. I understand the human side of technology—how it feels when systems don't work, when websites don't convert, and when digital tools create more stress than solutions."
+  skills:
+    - "Proficient in React, Next.js, TypeScript, Node.js, Express, and PostgreSQL, with 4 years tech experience building on 11 years in communications"
+    - "Pioneered inclusive design practices ensuring seamless experiences for all users"
+    - "Digital Ocean, AWS, and other cloud platforms"
+    - "Business automation with N8N, Make.com, and Zapier for streamlined workflows"
+---
+
+# {title}
+
+## {subtitle}
+
+{steps.map((step) => (
+  <div key={step.number}>
+    ### {step.title}
+    {step.description}
+  </div>
+))}
+
+## {expertise.title}
+
+{expertise.description}
+
+### Skills & Experience
+{expertise.skills.map((skill) => (
+  - {skill}
+))} 

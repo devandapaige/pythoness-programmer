@@ -1,65 +1,72 @@
 import Link from 'next/link'
-import Section from '@/components/Section'
-import { servicesSection } from '@/app/data/homeData'
+import { getMDXContent } from '@/lib/mdx'
 
-export default function ServicesSection() {
+export default async function ServicesSection() {
+  const { frontmatter } = await getMDXContent('home/services.mdx')
+  const { id, title, description, services } = frontmatter
+
   return (
-    <Section id={servicesSection.id} title={servicesSection.title} className="bg-gradient-to-b from-brand-cream to-white">
-      <div className="max-w-3xl mx-auto mb-12 text-center">
-        <p className="text-xl text-brand-purple-dark leading-relaxed">
-          {servicesSection.description}
-        </p>
-      </div>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {servicesSection.services.map((service, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            <div className="h-48 relative bg-gradient-to-br from-brand-green-dark to-brand-purple-dark">
-              <div className="absolute inset-0 flex items-center justify-center text-white opacity-80 group-hover:opacity-100 transition-opacity">
-                <span className="text-sm">{service.title}</span>
-              </div>
-            </div>
-            <div className="p-8 space-y-6">
-              <h3 className="text-2xl font-display text-brand-green-dark">{service.title}</h3>
-              <p className="text-brand-purple-dark/90">{service.subtitle}</p>
-              <ul className="space-y-4">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start space-x-3">
-                    <span className="text-brand-green-accent text-xl leading-none mt-1">•</span>
-                    <span className="flex-1 text-brand-purple-dark">{feature}</span>
+    <section id={id} className="py-24 px-4 md:px-6 bg-brand-green-light/5">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-display mb-6 text-brand-green-dark">
+            {title}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service: any, index: number) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8"
+            >
+              <h3 className="text-2xl font-display mb-3 text-brand-green-dark">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-6">{service.subtitle}</p>
+
+              <ul className="space-y-3 mb-8">
+                {service.features.map((feature: string, featureIndex: number) => (
+                  <li key={featureIndex} className="flex items-start text-gray-600">
+                    <span className="text-brand-green-accent mr-2">•</span>
+                    {feature}
                   </li>
                 ))}
               </ul>
-              <div className="pt-4 space-y-2">
-                {service.pricing && (
-                  <>
-                    <p className="font-medium text-brand-green-dark">Available Sessions:</p>
-                    <ul className="space-y-2 text-sm text-brand-purple-dark">
-                      {service.pricing.map((price, priceIndex) => (
-                        <li key={priceIndex} className="flex items-center justify-between">
-                          <span>• {price.name}</span>
-                          <span className="font-medium">{price.price}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-                {service.note && (
-                  <p className="text-sm text-brand-purple-dark/80 italic">{service.note}</p>
-                )}
-                <div className="pt-4">
-                  <Link 
-                    href={service.ctaLink}
-                    target={service.ctaLink.startsWith('http') ? '_blank' : undefined}
-                    className="inline-block w-full bg-brand-green-accent text-white text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105"
-                  >
-                    {service.ctaText}
-                  </Link>
+
+              {service.pricing && (
+                <div className="mb-6">
+                  <h4 className="font-display text-lg mb-3 text-brand-green-dark">
+                    Pricing
+                  </h4>
+                  <ul className="space-y-2">
+                    {service.pricing.map((price: any, priceIndex: number) => (
+                      <li key={priceIndex} className="text-gray-600">
+                        {price.name}: <span className="font-semibold">{price.price}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
+
+              {service.note && (
+                <p className="text-sm text-gray-500 italic mb-6">{service.note}</p>
+              )}
+
+              <Link
+                href={service.ctaLink}
+                target={service.ctaLink.startsWith('http') ? '_blank' : undefined}
+                className="inline-block w-full text-center bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+              >
+                {service.ctaText}
+              </Link>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </Section>
+    </section>
   )
 } 

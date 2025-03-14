@@ -3,8 +3,13 @@ import path from 'path'
 import matter from 'gray-matter'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+import Section from '@/app/vibe-coding-cheatsheet/components/Section'
 
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
+
+const contentDirectory = path.join(process.cwd(), 'content')
 
 export interface BlogPost {
   slug: string
@@ -14,6 +19,16 @@ export interface BlogPost {
   author: string
   tags: string[]
   content: string
+}
+
+export interface MDXContent {
+  content: string
+  frontmatter: {
+    title: string
+    lastUpdated: string
+    summary: string
+    [key: string]: any
+  }
 }
 
 export async function getAllPosts(): Promise<BlogPost[]> {
@@ -77,4 +92,34 @@ export async function compileMDXContent(content: string) {
   })
 
   return compiledContent
+}
+
+export async function getMDXContent(filepath: string): Promise<MDXContent> {
+  const fullPath = path.join(contentDirectory, filepath)
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+
+  return {
+    content,
+    frontmatter: data as MDXContent['frontmatter'],
+  }
+}
+
+export async function getVibeCheatsheetContent() {
+  const filePath = join(process.cwd(), 'content', 'vibe-coding-cheatsheet.mdx')
+  const source = readFileSync(filePath, 'utf8')
+  const { data: frontmatter } = matter(source)
+
+  const { content } = await compileMDX({
+    source,
+    options: { 
+      parseFrontmatter: true,
+      scope: frontmatter
+    },
+    components: {
+      Section
+    }
+  })
+
+  return content
 } 
