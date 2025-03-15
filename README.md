@@ -28,7 +28,7 @@ This website serves as a platform for:
 ```
 src/
 ├── app/
-│   ├── page.tsx                    # Main landing page
+│   ├── page.tsx                    # Main landing page wrapper
 │   ├── layout.tsx                  # Root layout
 │   ├── globals.css                 # Global styles
 │   ├── blog/                       # Blog section
@@ -36,21 +36,67 @@ src/
 │   │   ├── [slug]/                # Dynamic blog post routes
 │   │   │   └── page.tsx           # Individual blog post page
 │   │   └── layout.tsx             # Blog section layout
-│   └── vibe-coding-cheatsheet/     # Vibe Coding Cheatsheet section
-│       ├── page.tsx               # Cheatsheet main page
+│   ├── terms/                      # Terms of Service
+│   │   └── page.tsx               # Terms page wrapper
+│   ├── privacy/                    # Privacy Policy
+│   │   └── page.tsx               # Privacy page wrapper
+│   └── vibe-coding-cheatsheet/     # Interactive Cheatsheet section
+│       ├── page.tsx               # Cheatsheet React component page
 │       ├── components/            # Cheatsheet-specific components
 │       └── data/                  # Cheatsheet content data
 ├── components/                    # Shared components
 │   ├── Header.tsx                # Navigation and branding
 │   ├── Footer.tsx                # Site footer with links
-│   └── Section.tsx               # Reusable section component
+│   └── LegalLayout.tsx           # Layout for legal pages
 ├── lib/                          # Utility functions and shared logic
 │   ├── mdx.ts                    # MDX processing utilities
 │   └── blog.ts                   # Blog-related utilities
 └── content/                      # Content directory
-    └── blog/                     # Blog posts in MDX format
-        └── posts/                # Individual blog post files
+    ├── blog/                     # Blog posts in MDX format
+    │   └── posts/               # Individual blog post files
+    ├── home/                    # Home page sections in MDX
+    └── legal/                   # Legal documents in MDX
+        ├── terms-of-service.mdx # Terms of Service content
+        └── privacy-policy.mdx   # Privacy Policy content
 ```
+
+## Content Management Approaches
+
+The project uses two different approaches for content management:
+
+### 1. MDX-Based Static Content
+Used for content that is primarily text-based and requires minimal interactivity:
+- Home page sections
+- Legal documents (Terms of Service, Privacy Policy)
+- Blog posts
+
+These pages use the `getMDXContent` utility to parse and render MDX files stored in the `content/` directory.
+
+Example MDX structure:
+```mdx
+---
+title: "Terms of Service"
+lastUpdated: "2024-03-13"
+summary: "Legal terms for using Pythoness Programmer services"
+---
+
+Content here...
+```
+
+### 2. Component-Based Interactive Content
+Used for features requiring complex interactivity and state management:
+- Vibe Coding Cheatsheet - A professional showcase of TailwindCSS capabilities combined with interactive features
+
+The cheatsheet is implemented as a React component-based page with:
+- Custom components for specific functionality
+- Advanced TailwindCSS styling techniques and patterns
+- Structured data in TypeScript files
+- Interactive features like copy-to-clipboard
+- Dynamic state management
+- Custom styling and animations
+- Responsive design patterns and best practices
+
+This approach allows for more complex user interactions and immediate feedback that wouldn't be practical with static MDX content, while serving as a living example of professional TailwindCSS implementation.
 
 ## Key Features
 
@@ -63,7 +109,7 @@ src/
 - Professional experience showcase
 - Local craft services section
 - MDX-based blog system
-- Vibe Coding Cheatsheet resource
+- Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
 
 ## Blog Implementation
 
@@ -134,7 +180,7 @@ Common color applications:
 6. Contact - Booking options and rates
 7. Newsletter - Industry insights signup
 8. Blog - Technical articles and resources
-9. Vibe Coding Cheatsheet - Developer resource (Freebie)
+9. Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
 
 ## Development
 

@@ -5,7 +5,7 @@ import { compileMDX } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import { readFileSync } from 'fs'
 import { join } from 'path'
-import Section from '@/app/vibe-coding-cheatsheet/components/Section'
+import ContentSection from '@/app/vibe-coding-cheatsheet/components/ContentSection'
 
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
 
@@ -117,7 +117,7 @@ export async function getVibeCheatsheetContent() {
       scope: frontmatter
     },
     components: {
-      Section
+      ContentSection
     }
   })
 

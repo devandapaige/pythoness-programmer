@@ -15,15 +15,41 @@ const norwester = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pythoness Programmer | Where Code Meets Calm",
-  description: "Senior Software Engineer offering full-stack development services, tech execution coaching, and digital craft services. Specializing in React, Next.js, and TypeScript with a focus on neurodivergent-friendly solutions.",
-  keywords: ["Software Engineer", "Full-Stack Development", "Tech Coaching", "React", "Next.js", "TypeScript", "Neurodivergent-friendly"],
-  authors: [{ name: "Amanda Paige" }],
-  creator: "Amanda Paige",
+  metadataBase: new URL('https://pythonessprogrammer.com'),
+  title: "Pythoness Programmer | Tech Clarified, Empowering Digital Confidence",
+  description: "Tech Clarified | Empowering Digital Confidence. Providing empathetic tech coaching and full-stack development services for neurodivergent professionals. Specializing in website solutions, marketing funnels, and system integrations with a judgment-free, accessible approach.",
+  keywords: [
+    "Tech Coaching",
+    "Tech Clarified",
+    "Digital Confidence",
+    "Neurodivergent-friendly Development",
+    "Website Solutions",
+    "Marketing Funnel Setup",
+    "System Integration",
+    "Full-Stack Development",
+    "React Development",
+    "Next.js",
+    "TypeScript",
+    "LGBTQIA+ Affirming",
+    "Accessible Tech Solutions",
+    "Tech Consultation",
+    "Website Planning",
+    "Digital Craft Services",
+    "Central Virginia Tech Services"
+  ],
+  authors: [{ name: "Amanda Nelson" }],
+  creator: "Pythoness Programmer",
   openGraph: {
-    title: "Pythoness Programmer | Where Code Meets Calm",
-    description: "Senior Software Engineer offering full-stack development services and tech execution coaching with a focus on neurodivergent-friendly solutions.",
+    title: "Pythoness Programmer | Tech Clarified, Empowering Digital Confidence",
+    description: "Tech Clarified | Empowering Digital Confidence. Providing empathetic tech coaching and development services focused on neurodivergent success. Clear solutions, judgment-free support, and accessible technology for all.",
     type: "website",
+    url: '/',
+    siteName: 'Pythoness Programmer',
+  },
+  /* do not add twitter metadata, fuck Elon Musk */
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
