@@ -46,18 +46,6 @@ export default function Header() {
             Services
           </Link>
           <Link 
-            href={getNavHref('#craft')} 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-          >
-            Craft
-          </Link>
-          <Link 
-            href={getNavHref('#process')} 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-          >
-            Process
-          </Link>
-          <Link 
             href={getNavHref('#work')} 
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
           >
@@ -70,10 +58,11 @@ export default function Header() {
             Blog
           </Link>
           <Link 
-            href={getNavHref('#contact')} 
+            href="https://cal.com/pythoness/30mins" 
+            target="_blank"
             className="bg-brand-green-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2"
           >
-            Contact
+            Book a Call
           </Link>
         </div>
         <button 
@@ -124,20 +113,6 @@ export default function Header() {
               Services
             </Link>
             <Link 
-              href={getNavHref('#craft')} 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Craft
-            </Link>
-            <Link 
-              href={getNavHref('#process')} 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Process
-            </Link>
-            <Link 
               href={getNavHref('#work')} 
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
               onClick={() => setIsMenuOpen(false)}
@@ -152,11 +127,12 @@ export default function Header() {
               Blog
             </Link>
             <Link 
-              href={getNavHref('#contact')} 
+              href="https://cal.com/pythoness/30mins" 
+              target="_blank"
               className="bg-brand-green-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Contact
+              Book a Call
             </Link>
           </div>
         </div>

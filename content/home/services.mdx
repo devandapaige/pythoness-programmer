@@ -2,21 +2,44 @@
 id: "services"
 title: "Your Digital Journey, Your Way"
 description: "Everyone learns and grows differently. I'm here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way."
-services:
-  - title: "Business Tech Coaching"
-    subtitle: "Learn, Adapt, and Thrive in the Digital Space"
+mainServices:
+  - title: "30-Minute Clarity Call"
+    subtitle: "Quick Tech Solutions"
     features:
-      - "Personalized website & platform guidance"
-      - "Smart marketing systems that fit your style"
-      - "Practical AI & automation solutions"
-      - "Sustainable tech strategies you'll love"
-    pricing:
-      - name: "30-Minute Clarity Call"
-        price: "$40"
-      - name: "60-Minute Deep Dive"
-        price: "$70"
-    ctaLink: "https://cal.com/pythoness"
-    ctaText: "Book Your Session"
+      - "Expert Software Guidance: Quick solutions to your current technical hurdle"
+      - "Simplified Approach: Complex problems made manageable"
+      - "Clear Next Steps: Walk away with an actionable plan"
+    price: "$40"
+    description: "Senior software engineer with 15+ years in customer service. I specialize in making the complex simple and getting you unstuck, judgement free."
+    note: "No prep is needed—just come as you are."
+    ctaLink: "https://cal.com/pythoness/30mins"
+    ctaText: "Book Now"
+  - title: "Tech Stack Audit"
+    subtitle: "Digital Tools Optimization"
+    features:
+      - "A personalized assessment of your current digital tools"
+      - "Identification of potential redundancies and cost-saving opportunities"
+      - "Recommendations for tools that might better align with your workflow"
+      - "Post-session email with actionable suggestions and resources"
+      - "A framework for making future tech decisions with confidence"
+    price: "$55"
+    description: "Transform your digital workflow with this focused 30-minute consultation (over Zoom) where we'll examine your current tech stack, identify redundancies, and discover opportunities for simplification. I'll help you evaluate which tools truly serve your needs and which might be creating unnecessary friction in your day-to-day operations."
+    highlight: true
+    ctaLink: "https://cal.com/pythoness/tech30"
+    ctaText: "Book Now"
+  - title: "60-Minute Deep Dive"
+    subtitle: "Comprehensive Tech Support"
+    features:
+      - "Tech-Savvy Advice: No matter what your software is, I can help"
+      - "Personalized Plans: Strategies built just for you"
+      - "Optional Intuitive Insights: For deeper, customized solutions"
+      - "Action Guide: Leave with a plan you can start using right away"
+    price: "$70"
+    description: "A comprehensive session to dive deep into your technical challenges and opportunities."
+    note: "No prep is needed—just come as you are."
+    ctaLink: "https://cal.com/pythoness/tech60"
+    ctaText: "Book Now"
+additionalServices:
   - title: "Professional Coaching"
     subtitle: "Growth at Your Own Pace"
     features:
@@ -34,7 +57,7 @@ services:
       - "Intuitive marketing automation"
       - "Thoughtful AI integrations"
       - "Universal, accessible design"
-    note: "Available for Contract Work Starting April 2025"
+    note: "Available for Contract Work Starting May 2025"
     ctaLink: "#contact"
     ctaText: "Discuss Your Project"
 ---
@@ -43,28 +66,62 @@ services:
 
 {description}
 
-## Our Services
+## Quick Tech Support
 
-{services.map((service) => (
-  <div key={service.title}>
-    ### {service.title}
-    #### {service.subtitle}
-
-    {service.features.map((feature) => (
-      - {feature}
-    ))}
-
-    {service.pricing && (
-      <>
-        #### Pricing
-        {service.pricing.map((price) => (
-          - {price.name}: {price.price}
-        ))}
-      </>
-    )}
-
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+{mainServices.map((service) => (
+  <div key={service.title} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl ${service.highlight ? 'ring-2 ring-brand-green-accent' : ''}`}>
+    <h3 className="text-2xl font-display mb-3 text-brand-cream">{service.title}</h3>
+    <p className="text-brand-cream/90 mb-6">{service.subtitle}</p>
+    <p className="text-3xl font-display mb-6 text-brand-green-accent">{service.price}</p>
+    <p className="text-sm text-brand-cream/80 mb-6">{service.description}</p>
+    <ul className="space-y-3 mb-6">
+      {service.features.map((feature) => (
+        <li key={feature} className="flex items-center space-x-3 text-brand-cream/90">
+          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-green-accent"></span>
+          <span>{feature}</span>
+        </li>
+      ))}
+    </ul>
     {service.note && (
-      > {service.note}
+      <p className="text-sm text-brand-cream/80 italic mb-6">{service.note}</p>
     )}
+    <a 
+      href={service.ctaLink}
+      target="_blank"
+      className="inline-block w-full text-center bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+    >
+      {service.ctaText}
+    </a>
   </div>
-))} 
+))}
+</div>
+
+## Additional Services
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+{additionalServices.map((service) => (
+  <div key={service.title} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl">
+    <h3 className="text-2xl font-display mb-3 text-brand-cream">{service.title}</h3>
+    <p className="text-brand-cream/90 mb-6">{service.subtitle}</p>
+    <ul className="space-y-3 mb-6">
+      {service.features.map((feature) => (
+        <li key={feature} className="flex items-center space-x-3 text-brand-cream/90">
+          <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-green-accent"></span>
+          <span>{feature}</span>
+        </li>
+      ))}
+    </ul>
+    {service.note && (
+      <p className="text-sm text-brand-cream/80 italic mb-6">{service.note}</p>
+    )}
+    <a 
+      href={service.ctaLink}
+      target={service.ctaLink.startsWith('http') ? '_blank' : undefined}
+      className="inline-block w-full text-center bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+    >
+      {service.ctaText}
+    </a>
+  </div>
+))}
+</div> 

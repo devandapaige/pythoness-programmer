@@ -26,16 +26,6 @@ export default function Footer() {
             >
               <li>
                 <Link 
-                  href="https://www.linkedin.com/in/pythonessprogrammer/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-                >
-                  <span>LinkedIn</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
                   href="https://github.com/devandapaige" 
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/tech30"
+                  href="https://cal.com/pythoness/30mins"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
@@ -117,7 +107,17 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/60min"
+                  href="https://cal.com/pythoness/tech30"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                >
+                  <span>30min Tech Stack Audit</span>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="https://cal.com/pythoness/tech60"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
