@@ -52,10 +52,11 @@ export default function Header() {
             Work
           </Link>
           <Link 
-            href="/blog" 
+            href="https://pythoness.beehiiv.com" 
+            target="_blank"
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
           >
-            Blog
+            Newsletter
           </Link>
           <Link 
             href="https://cal.com/pythoness/30mins" 
@@ -120,11 +121,12 @@ export default function Header() {
               Work
             </Link>
             <Link 
-              href="/blog" 
+              href="https://pythoness.beehiiv.com" 
+              target="_blank"
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
               onClick={() => setIsMenuOpen(false)}
             >
-              Blog
+              Newsletter
             </Link>
             <Link 
               href="https://cal.com/pythoness/30mins" 
