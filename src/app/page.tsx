@@ -1,4 +1,5 @@
 import HeroSection from './components/home/HeroSection'
+import AboutSection from './components/home/AboutSection'
 import ServicesSection from './components/home/ServicesSection'
 import WorkSection from './components/home/WorkSection'
 import ContactSection from './components/home/ContactSection'
@@ -13,6 +14,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
+      <AboutSection />
       <ServicesSection />
       <WorkSection />
       <ContactSection />

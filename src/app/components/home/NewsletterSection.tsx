@@ -15,7 +15,7 @@ export default async function NewsletterSection() {
       <div className="relative max-w-4xl mx-auto">
         {/* Section header with glass effect */}
         <div className="text-center mb-12 animate-fade-in-up">
-          <div className="inline-block bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-white/20">
+          <div className="inline-block bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-none">
             <h2 className="text-4xl md:text-5xl font-display mb-4 text-brand-green-dark">
               {title}
             </h2>
@@ -27,7 +27,7 @@ export default async function NewsletterSection() {
 
         {/* Newsletter embed */}
         <div 
-          className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border border-white/50 shadow-xl animate-fade-in-up"
+          className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl border-none shadow-xl animate-fade-in-up"
           style={{ animationDelay: '150ms' }}
         >
           <iframe
