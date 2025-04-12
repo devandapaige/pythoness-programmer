@@ -59,7 +59,7 @@ export default function Header() {
             Newsletter
           </Link>
           <Link 
-            href="https://cal.com/pythoness/30mins" 
+            href="https://cal.com/pythoness" 
             target="_blank"
             className="bg-brand-green-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2"
           >

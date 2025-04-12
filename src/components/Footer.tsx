@@ -102,7 +102,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  <span>30min Tech Session</span>
+                  <span>30min Clarity Call</span>
                 </Link>
               </li>
               <li>
