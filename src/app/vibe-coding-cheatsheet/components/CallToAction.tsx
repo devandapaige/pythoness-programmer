@@ -25,7 +25,7 @@ export default function CallToAction() {
         <span className="text-white/80">30 minutes</span>
       </div>
       <Link 
-        href="https://cal.com/pythoness/tech30"
+        href="https://cal.com/pythoness/30mins"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-block bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
