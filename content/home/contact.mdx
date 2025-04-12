@@ -1,33 +1,33 @@
 ---
 id: "contact"
 title: "Let's Create Something Amazing"
-intro:
-  mainText: "Every digital challenge is an opportunity to learn, grow, and maybe even laugh a little along the way. Let's work together to find your path to tech confidence."
-  subText: "Proudly serving all humans • LGBTQIA+ affirming • Neurodiversity celebrating • Always judgment-free"
-sessions:
+description: "Every digital challenge is an opportunity to learn, grow, and create something exceptional. Let's work together to find your path to tech confidence."
+services:
   - title: "30-Minute Clarity Call"
     price: "$40"
-    duration: "30 minutes"
-    perfectFor:
+    description: "A focused session to solve specific tech issues or answer targeted questions."
+    features:
       - "Quick website tweaks & fixes"
       - "Specific tech tool questions"
       - "AI tool recommendations"
-    link: "https://cal.com/pythoness/30mins"
+      - "Judgment-free support"
+    ctaText: "Book a Clarity Call"
+    ctaLink: "https://cal.com/pythoness/30mins"
   - title: "60-Minute Deep Dive"
     price: "$70"
-    duration: "60 minutes"
-    perfectFor:
+    description: "An in-depth session to tackle complex problems or plan larger projects."
+    features:
       - "Marketing funnel setup"
       - "Website overhaul planning"
       - "Complex system integrations"
-    link: "https://cal.com/pythoness/tech60"
-benefits:
+      - "Customized tech strategy"
+    ctaText: "Book a Deep Dive"
+    ctaLink: "https://cal.com/pythoness/tech60"
+why:
   title: "Why Book a Tech Coaching Session?"
-  items:
-    - "Get unstuck and move forward with your tech projects"
-    - "Receive clear, actionable advice tailored to your needs"
-    - "Learn about tools and solutions that fit your budget"
-    - "Get judgment-free support for your unique situation"
+  content: 
+    - "Technology should empower you, not frustrate you. My coaching sessions are designed to meet you exactly where you are, providing clear, actionable guidance tailored to your unique needs. You'll leave with concrete next steps and renewed confidence in your tech journey."
+    - "Unlike typical tech support, I focus on teaching and empowering you to understand your tools better, so you gain independence along with solutions. My approach blends technical expertise with empathy, ensuring you get solutions that truly work for your specific situation."
 contact:
   email: "admin@pythonessprogrammer.com"
   message: "Questions? Email me at"
@@ -42,27 +42,29 @@ closing:
 
 # {title}
 
-{intro.mainText}
-
-{intro.subText}
+{description}
 
 ## Available Sessions
 
-{sessions.map((session) => (
-  <div key={session.title}>
-    ### {session.title}
-    **{session.price}** • {session.duration}
+{services.map((service) => (
+  <div key={service.title}>
+    ### {service.title}
+    **{service.price}** • {service.duration}
 
-    Perfect for:
-    {session.perfectFor.map((item) => (
-      - {item}
+    {service.description}
+
+    Features:
+    {service.features.map((feature) => (
+      - {feature}
     ))}
+
+    {service.ctaText}: {service.ctaLink}
   </div>
 ))}
 
-## {benefits.title}
+## {why.title}
 
-{benefits.items.map((item) => (
+{why.content.map((item) => (
   - {item}
 ))}
 
