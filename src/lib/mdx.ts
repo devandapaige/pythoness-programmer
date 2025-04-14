@@ -6,6 +6,8 @@ import { notFound } from 'next/navigation'
 import { readFileSync } from 'fs'
 import { join } from 'path'
 import ContentSection from '@/app/vibe-coding-cheatsheet/components/ContentSection'
+import { logError } from './errorHandling'
+import { isValidString, sanitizeString } from './validation'
 
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
 
@@ -75,6 +77,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
       content
     }
   } catch (error) {
+    logError(`Error reading post with slug "${slug}"`, error, { filePath })
     notFound()
   }
 }
@@ -94,14 +97,49 @@ export async function compileMDXContent(content: string) {
   return compiledContent
 }
 
+/**
+ * Safely reads and processes MDX content with validation
+ */
 export async function getMDXContent(filepath: string): Promise<MDXContent> {
-  const fullPath = path.join(contentDirectory, filepath)
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
-  const { data, content } = matter(fileContents)
+  if (!isValidString(filepath)) {
+    logError('Invalid filepath provided to getMDXContent', new Error('Invalid filepath'), { filepath })
+    throw new Error('Invalid filepath provided')
+  }
 
-  return {
-    content,
-    frontmatter: data as MDXContent['frontmatter'],
+  // Sanitize the filepath to prevent directory traversal attacks
+  const sanitizedPath = sanitizeString(filepath).replace(/\.\./g, '')
+  const fullPath = path.join(contentDirectory, sanitizedPath)
+  
+  try {
+    // Verify the file exists before attempting to read
+    if (!fs.existsSync(fullPath)) {
+      logError('MDX file not found', new Error('File not found'), { fullPath })
+      notFound()
+    }
+    
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+    const { data, content } = matter(fileContents)
+
+    // Validate frontmatter has required fields
+    if (!data.title) {
+      logError('MDX frontmatter missing required fields', new Error('Invalid frontmatter'), { 
+        filepath: sanitizedPath,
+        data
+      })
+      throw new Error('Invalid MDX content: missing required frontmatter')
+    }
+
+    return {
+      content,
+      frontmatter: data as MDXContent['frontmatter'],
+    }
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('Invalid MDX content')) {
+      throw error // Rethrow validation errors
+    }
+    
+    logError('Failed to load MDX content', error, { filepath: sanitizedPath })
+    notFound()
   }
 }
 

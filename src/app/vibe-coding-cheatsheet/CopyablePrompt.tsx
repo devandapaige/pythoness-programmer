@@ -1,9 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { logError } from '@/lib/errorHandling'
 
 export default function CopyablePrompt({ text }: { text: string }) {
   const [showCopied, setShowCopied] = useState(false)
+  const [showError, setShowError] = useState(false)
   const cleanText = text.replace(/^"|"$/g, '')
   
   const handleCopy = async () => {
@@ -12,7 +14,11 @@ export default function CopyablePrompt({ text }: { text: string }) {
       setShowCopied(true)
       setTimeout(() => setShowCopied(false), 2000) // Hide after 2 seconds
     } catch (err) {
-      console.error('Failed to copy text:', err)
+      logError('Failed to copy text to clipboard', err, { 
+        textPreview: cleanText.slice(0, 20) 
+      })
+      setShowError(true)
+      setTimeout(() => setShowError(false), 2000)
     }
   }
 
@@ -41,6 +47,15 @@ export default function CopyablePrompt({ text }: { text: string }) {
           aria-live="polite"
         >
           Copied!
+        </div>
+      )}
+      {showError && (
+        <div 
+          className="absolute top-0 right-0 -mt-2 -mr-2 px-2 py-1 bg-red-600 text-white text-sm rounded-md shadow-lg animate-fade-in-out"
+          role="alert"
+          aria-live="assertive"
+        >
+          Failed to copy!
         </div>
       )}
     </div>
