@@ -11,14 +11,15 @@ export default function RootLayoutClient({
 }) {
   const pathname = usePathname()
   const isHomePage = pathname === '/'
+  const isLinksPage = pathname === '/links' || pathname.startsWith('/links/')
 
   return (
     <>
-      <Header />
-      <main className={!isHomePage ? "pt-20" : ""}>
+      {!isLinksPage && <Header />}
+      <main className={!isHomePage && !isLinksPage ? "pt-20" : ""}>
         {children}
       </main>
-      <Footer />
+      {!isLinksPage && <Footer />}
     </>
   )
 } 
