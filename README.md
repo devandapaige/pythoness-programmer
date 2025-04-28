@@ -233,6 +233,13 @@ const result = await tryCatch(
 ```
 
 ## Color Scheme
+- **Deep forest green:** #2E3D2A
+- **Rich purple:** #442B48
+- **Vibrant green accent:** #32d24d
+- **Soft cream:** #F4f1de
+- **Light purple accent:** #D8B9F7
+- **Bright Blue** #00A6FB
+- **White:** #FFFFFF
 
 ```css
 /* Brand Colors */
