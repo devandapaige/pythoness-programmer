@@ -14,24 +14,22 @@ export default function CallToAction() {
         Need More Support?
       </h2>
       <p className="mb-4 text-white">
-        Ready to level up your coding experience? Book a 30-minute clarity call where we can discuss your specific challenges and create a personalized strategy for your development journey.
+        Ready to level up your coding experience? Explore our services to find the perfect support for your development journey.
       </p>
       <div 
         className="flex items-center justify-between mb-6"
         role="contentinfo"
-        aria-label="Pricing information"
+        aria-label="Service information"
       >
-        <span className="text-2xl font-display text-brand-cream">$40</span>
-        <span className="text-white/80">30 minutes</span>
+        <span className="text-2xl font-display text-brand-cream">Services</span>
+        <span className="text-white/80">Tailored Support</span>
       </div>
       <Link 
-        href="https://cal.com/pythoness/30mins"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/#services"
         className="inline-block bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
-        aria-label="Book a 30-minute clarity call for $40"
+        aria-label="View our services"
       >
-        Book Your Clarity Call
+        Explore Services
       </Link>
     </div>
   )

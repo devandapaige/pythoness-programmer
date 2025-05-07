@@ -47,6 +47,10 @@ src/
 │       ├── page.tsx               # Cheatsheet React component page
 │       ├── components/            # Cheatsheet-specific components
 │       └── data/                  # Cheatsheet content data
+│   └── sourdough/                 # Sourdough Corner section
+│       ├── page.tsx               # Sourdough page wrapper
+│       ├── components/            # Sourdough-specific components
+│       └── content.mdx           # Sourdough content
 ├── components/                    # Shared components
 │   ├── Header.tsx                # Navigation and branding
 │   ├── Footer.tsx                # Site footer with links
@@ -126,6 +130,7 @@ This approach allows for more complex user interactions and immediate feedback t
 - Local craft services section
 - MDX-based blog system
 - Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
+- Sourdough Corner - Local craft baking resource and guide (Freebie)
 - Enhanced error handling with user feedback
 - Input validation and sanitization for security
 - Comprehensive testing suite
@@ -327,6 +332,7 @@ A GitHub Actions workflow runs on all PRs and pushes to the main branch:
 6. Newsletter - Industry insights signup
 7. Blog - Technical articles and resources
 8. Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
+9. Sourdough Corner - Local craft baking resource and guide (Freebie)
 
 ## Code Standards
 

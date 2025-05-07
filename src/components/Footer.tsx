@@ -127,6 +127,14 @@ export default function Footer() {
                   <span>Vibe Coding Cheatsheet</span>
                 </Link>
               </li>
+              <li>
+                <Link 
+                  href="/sourdough" 
+                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
+                >
+                  <span>Sourdough Corner</span>
+                </Link>
+              </li>
               {/* Add more free resources here as they become available */}
             </ul>
           </div>
