@@ -67,6 +67,9 @@ export default async function ContactSection() {
             </div>
           ))}
         </div>
+        <p className="text-center text-brand-cream/80 mb-20 text-sm">
+          Coming this summer: Group events and office hours! Stay tuned for updates.
+        </p>
 
         {/* Why coaching section with decorative elements */}
         <div 

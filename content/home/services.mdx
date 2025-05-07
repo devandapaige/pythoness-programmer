@@ -3,17 +3,6 @@ id: "services"
 title: "Your Digital Journey, Your Way"
 description: "Everyone learns and grows differently. I'm here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way."
 mainServices:
-  - title: "30-Minute Clarity Call"
-    subtitle: "Quick Tech Solutions"
-    features:
-      - "Expert Software Guidance: Quick solutions to your current technical hurdle"
-      - "Simplified Approach: Complex problems made manageable"
-      - "Clear Next Steps: Walk away with an actionable plan"
-    price: "$40"
-    description: "Senior software engineer with 15+ years in customer service. I specialize in making the complex simple and getting you unstuck, judgement free."
-    note: "No prep is needed—just come as you are."
-    ctaLink: "https://cal.com/pythoness/30mins"
-    ctaText: "Book Now"
   - title: "Tech Stack Audit"
     subtitle: "Digital Tools Optimization"
     features:
@@ -22,42 +11,41 @@ mainServices:
       - "Recommendations for tools that might better align with your workflow"
       - "Post-session email with actionable suggestions and resources"
       - "A framework for making future tech decisions with confidence"
-    price: "$55"
+    price: "$70"
     description: "Transform your digital workflow with this focused 30-minute consultation (over Zoom) where we'll examine your current tech stack, identify redundancies, and discover opportunities for simplification. I'll help you evaluate which tools truly serve your needs and which might be creating unnecessary friction in your day-to-day operations."
-    highlight: true
     ctaLink: "https://cal.com/pythoness/tech30"
     ctaText: "Book Now"
-  - title: "60-Minute Deep Dive"
-    subtitle: "Comprehensive Tech Support"
+  - title: "75-min Digital Reset Session"
+    subtitle: "Personal & Small Business Workflows"
     features:
-      - "Tech-Savvy Advice: No matter what your software is, I can help"
-      - "Personalized Plans: Strategies built just for you"
-      - "Optional Intuitive Insights: For deeper, customized solutions"
-      - "Action Guide: Leave with a plan you can start using right away"
-    price: "$70"
-    description: "A comprehensive session to dive deep into your technical challenges and opportunities."
-    note: "No prep is needed—just come as you are."
-    ctaLink: "https://cal.com/pythoness/tech60"
+      - "Comprehensive digital tools audit"
+      - "Brain-friendly workflow design"
+      - "Personalized action plan"
+      - "Follow-up support included"
+      - "Perfect for neurodivergent creatives"
+    price: "$265"
+    description: "Audit your digital tools, design brain-friendly workflows, and get a personalized action plan to reduce overwhelm and boost efficiency. Perfect for neurodivergent creatives and small businesses. Includes follow-up support."
+    highlight: true
+    ctaLink: "https://cal.com/pythoness/tech75"
     ctaText: "Book Now"
 additionalServices:
-  - title: "Professional Coaching"
-    subtitle: "Growth at Your Own Pace"
+  - title: "Group Events"
+    subtitle: "Coming This Summer"
     features:
-      - "Empowering career transitions"
-      - "Authentic leadership development"
-      - "Flexible accountability partnerships"
-      - "Inclusive, neurodiversity-affirming support"
-    note: "Monthly coaching packages available after initial consultation"
-    ctaLink: "https://cal.com/pythoness/15min"
-    ctaText: "Schedule 15min Vibe Check"
-  - title: "Custom Development"
+      - "Interactive workshops"
+      - "Group office hours"
+      - "Community learning sessions"
+      - "Collaborative problem-solving"
+    note: "Stay tuned for updates on our upcoming group events and office hours!"
+    ctaLink: "https://pythoness.beehiiv.com"
+    ctaText: "Join Newsletter for Updates"
+  - title: "Custom Fullstack JavaScript Development"
     subtitle: "Solutions That Grow With You"
     features:
-      - "Resilient web applications"
+      - "Resilient, accessible, web applications"
       - "Intuitive marketing automation"
       - "Thoughtful AI integrations"
-      - "Universal, accessible design"
-    note: "Available for Contract Work Starting May 2025"
+    note: "Available for Contract Work Starting September 2025"
     ctaLink: "mailto:admin@pythonessprogrammer.com"
     ctaText: "Discuss Your Project"
 ---
@@ -68,9 +56,9 @@ additionalServices:
 
 ## Quick Tech Support
 
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 {mainServices.map((service) => (
-  <div key={service.title} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl ${service.highlight ? 'ring-2 ring-brand-green-accent' : ''}`}>
+  <div key={service.title} className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl ${service.highlight ? 'ring-2 ring-brand-green-accent' : ''}`}>
     <h3 className="text-2xl font-display mb-3 text-brand-cream">{service.title}</h3>
     <p className="text-brand-cream/90 mb-6">{service.subtitle}</p>
     <p className="text-3xl font-display mb-6 text-brand-green-accent">{service.price}</p>
@@ -96,6 +84,10 @@ additionalServices:
   </div>
 ))}
 </div>
+
+<p className="text-center text-brand-cream/80 mt-8 text-sm">
+  Coming this summer: Group events and office hours! Stay tuned for updates.
+</p>
 
 ## Additional Services
 

@@ -46,23 +46,13 @@ const socialLinks: LinkItem[] = [
 // Booking links - easy to update
 const bookingLinks: LinkItem[] = [
   {
-    name: '15min Vibe Check',
-    url: 'https://cal.com/pythoness/15min',
-    color: 'bg-brand-green-accent text-brand-green-dark'
-  },
-  {
-    name: '30min Clarity Call',
-    url: 'https://cal.com/pythoness/30mins',
-    color: 'bg-brand-green-accent text-brand-green-dark'
-  },
-  {
     name: '30min Tech Stack Audit',
     url: 'https://cal.com/pythoness/tech30',
     color: 'bg-brand-green-accent text-brand-green-dark'
   },
   {
-    name: '60min Deep Dive',
-    url: 'https://cal.com/pythoness/tech60',
+    name: '75min Deep Dive',
+    url: 'https://cal.com/pythoness/tech75',
     color: 'bg-brand-green-accent text-brand-green-dark'
   }
 ]
@@ -143,6 +133,9 @@ export default function LinksPage() {
                     {link.name}
                   </Link>
                 ))}
+                <p className="text-white/80 text-sm text-center mt-4">
+                  Coming this summer: Group events and office hours! Stay tuned for updates.
+                </p>
               </div>
             </div>
           )}

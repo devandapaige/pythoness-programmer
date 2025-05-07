@@ -87,26 +87,6 @@ export default function Footer() {
             >
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/15min"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-                >
-                  <span>15min Vibe Check</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="https://cal.com/pythoness/30mins"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-                >
-                  <span>30min Clarity Call</span>
-                </Link>
-              </li>
-              <li>
-                <Link 
                   href="https://cal.com/pythoness/tech30"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -117,15 +97,18 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="https://cal.com/pythoness/tech60"
+                  href="https://cal.com/pythoness/tech75"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
                 >
-                  <span>60min Deep Dive</span>
+                  <span>75min Deep Dive</span>
                 </Link>
               </li>
             </ul>
+            <p className="text-white/60 text-sm mt-2">
+              Coming this summer: Group events and office hours! Stay tuned for updates.
+            </p>
           </div>
 
           {/* Free Resources */}

@@ -34,7 +34,7 @@ export default async function ServicesSection() {
         {/* Main Services with improved visuals */}
         <div className="mb-16">
           <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Quick Tech Support</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {mainServices.map((service: any, index: number) => (
               <div
                 key={index}
@@ -43,8 +43,8 @@ export default async function ServicesSection() {
                 }`}
                 style={{ animationDelay: `${(index + 1) * 150}ms` }}
               >
-                {/* New badge for Tech Stack Audit */}
-                {service.title === "Tech Stack Audit" && (
+                {/* New badge for 75-min Digital Reset Session */}
+                {service.title === "75-min Digital Reset Session" && (
                   <div className="absolute -top-3 -right-3 z-20">
                     <div className="bg-brand-green-accent text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform rotate-3">
                       NEW
@@ -104,6 +104,9 @@ export default async function ServicesSection() {
               </div>
             ))}
           </div>
+          <p className="text-center text-brand-cream/80 mt-8 text-sm">
+            Coming this summer: Group events and office hours! Stay tuned for updates.
+          </p>
         </div>
 
         {/* Additional Services with improved visuals */}
