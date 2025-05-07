@@ -14,7 +14,7 @@ export default function HeroSection() {
               Cultivated using Joshua Weissman's Ultimate Sourdough Starter Guide.
             </p>
             <div className="text-sm text-brand-purple-dark/60 mb-8">
-              Last Updated: March 4, 2024
+              Last Updated: May 7, 2025
             </div>
             <a
               href="https://youtu.be/sTAiDki7AQA?si=bOuIC3ayju42_Baq"

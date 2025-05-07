@@ -2,6 +2,8 @@ import { Metadata } from 'next'
 import HeroSection from './components/HeroSection'
 import StarterGuideSection from './components/StarterGuideSection'
 import RecipesSection from './components/RecipesSection'
+import ToolsAndResourcesSection from './components/ToolsAndResourcesSection'
+import TerminologySection from './components/TerminologySection'
 
 export const metadata: Metadata = {
   title: 'Sourdough Resources | Pythoness',
@@ -13,7 +15,9 @@ export default function SourdoughPage() {
     <main className="min-h-screen">
       <HeroSection />
       <StarterGuideSection />
+      <TerminologySection />
       <RecipesSection />
+      <ToolsAndResourcesSection />
     </main>
   )
 }
