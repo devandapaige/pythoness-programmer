@@ -2,7 +2,7 @@ import { sectionStyles } from './shared/Styles'
 
 export default function StarterGuideSection() {
   return (
-    <section className="py-16 bg-white">
+    <section id="starter-guide" className="py-16 bg-white">
       <div className={sectionStyles.container}>
         <div className={sectionStyles.content}>
           <h2 className={sectionStyles.heading.h2}>

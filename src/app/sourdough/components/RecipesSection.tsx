@@ -57,11 +57,11 @@ const recipes = {
 
 export default function RecipesSection() {
   return (
-    <section className="py-16 bg-brand-purple-light">
+    <section id="recipes" className="py-16 bg-brand-purple-light">
       <div className={sectionStyles.container}>
         <div className={sectionStyles.content}>
-          <h2 className={`${sectionStyles.heading.h2} text-center`}>
-            Recipes
+          <h2 className={`${sectionStyles.heading.h2} text-left`}>
+            My Go-To Recipes
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">

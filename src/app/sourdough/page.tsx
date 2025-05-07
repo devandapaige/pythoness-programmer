@@ -16,8 +16,8 @@ export default function SourdoughPage() {
       <HeroSection />
       <StarterGuideSection />
       <TerminologySection />
-      <RecipesSection />
       <ToolsAndResourcesSection />
+      <RecipesSection />
     </main>
   )
 }

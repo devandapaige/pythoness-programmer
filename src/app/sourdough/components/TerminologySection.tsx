@@ -2,7 +2,7 @@ import { sectionStyles } from './shared/Styles'
 
 export default function TerminologySection() {
   return (
-    <section className="py-16 bg-white">
+    <section id="terminology" className="py-16 bg-white">
       <div className={sectionStyles.container}>
         <div className={sectionStyles.content}>
           <div className="grid md:grid-cols-2 gap-8">

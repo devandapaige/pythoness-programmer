@@ -31,6 +31,43 @@ export default function HeroSection() {
               </svg>
               Watch Joshua Weissman's Guide
             </a>
+
+            <nav className="mt-12">
+              <ul className="flex flex-wrap justify-center gap-4">
+                <li>
+                  <a 
+                    href="#starter-guide" 
+                    className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-brand-purple-dark transition-colors"
+                  >
+                    Starter Guide
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#terminology" 
+                    className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-brand-purple-dark transition-colors"
+                  >
+                    Terminology
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#tools-resources" 
+                    className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-brand-purple-dark transition-colors"
+                  >
+                    Tools & Resources
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#recipes" 
+                    className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full text-brand-purple-dark transition-colors"
+                  >
+                    Recipes
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>

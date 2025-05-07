@@ -2,16 +2,16 @@ import { sectionStyles } from './shared/Styles'
 
 export default function ToolsAndResourcesSection() {
   return (
-    <section className="py-16 bg-brand-cream/30">
+    <section id="tools-resources" className="py-16 bg-brand-green-dark">
       <div className={sectionStyles.container}>
         <div className={sectionStyles.content}>
-          <h2 className={sectionStyles.heading.h2}>
+          <h2 className={`${sectionStyles.heading.h2} text-white`}>
             Amanda's Favorite Flours and Tools
           </h2>
           
           <div className="prose prose-lg max-w-none">
             <div className="grid md:grid-cols-2 gap-8 my-8">
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-brand-cream p-6 rounded-lg">
                 <h3 className={sectionStyles.heading.h3}>
                   Flours
                 </h3>
@@ -22,7 +22,7 @@ export default function ToolsAndResourcesSection() {
                 </ul>
               </div>
 
-              <div className="bg-white p-6 rounded-lg">
+              <div className="bg-brand-cream p-6 rounded-lg">
                 <h3 className={sectionStyles.heading.h3}>
                   Tools
                 </h3>
@@ -42,20 +42,27 @@ export default function ToolsAndResourcesSection() {
               </div>
             </div>
 
-            <div className="bg-brand-purple-light/30 p-6 rounded-lg my-8">
+            <div className="bg-brand-cream p-6 rounded-lg my-8">
               <h3 className={sectionStyles.heading.h3}>
                 Videos and Other Resources
               </h3>
-              <ul className={sectionStyles.list.unordered}>
-                <li>
-                  <a href="https://www.tiktok.com/@pythoness_programmer/collection/sourdough-7352284778902604587?is_from_webapp=1&sender_device=pc" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     className="text-brand-purple-dark hover:text-brand-purple-light">
-                    Sourdough Playlist Collection on TikTok
-                  </a>
-                </li>
-              </ul>
+              <div className="mt-6">
+                <a
+                  href="https://www.tiktok.com/@pythoness_programmer/collection/sourdough-7352284778902604587?is_from_webapp=1&sender_device=pc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition-colors"
+                >
+                  <svg
+                    className="w-5 h-5 mr-2"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                  </svg>
+                  Sourdough Playlist Collection on TikTok
+                </a>
+              </div>
             </div>
           </div>
         </div>
