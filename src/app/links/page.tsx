@@ -64,6 +64,16 @@ const resourceLinks: LinkItem[] = [
     url: '/vibe-coding-cheatsheet',
     color: 'bg-white/20 hover:bg-white/30'
   },
+  {
+    name: 'Sourdough Corner',
+    url: 'https://www.pythonessprogrammer.com/sourdough',
+    color: 'bg-white/20 hover:bg-white/30'
+  },
+  {
+    name: 'Tip the Pythoness',
+    url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
+    color: 'bg-white/20 hover:bg-white/30'
+  }
   // Add more resources here as they become available
 ]
 

@@ -8,6 +8,9 @@ import NewsletterSection from './components/home/NewsletterSection'
 export const metadata = {
   title: 'Pythoness Programmer | Tech Coaching & Development',
   description: 'Tech coaching, web development, and digital crafts for conscious creators and business owners.',
+  other: {
+    'p:domain_verify': '18888270799e128d4d49644962be5ab6'
+  }
 }
 
 export default async function Home() {
