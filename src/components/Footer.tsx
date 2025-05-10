@@ -1,5 +1,14 @@
 import Link from 'next/link'
 
+function FooterSection({ title, children }: { title: string, children: React.ReactNode }) {
+  return (
+    <div className="space-y-2">
+      <h3 className="font-display text-lg text-white mb-1">{title}</h3>
+      {children}
+    </div>
+  );
+}
+
 export default function Footer() {
   // 1. Add a single class for all footer links
   const footerLinkClass = "text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded px-1 py-0.5 text-sm";
@@ -13,17 +22,15 @@ export default function Footer() {
     >
       <div className="max-w-7xl mx-auto">
         {/* First Row: Main Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-[auto_auto_1fr_auto] gap-6 md:gap-x-12 pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-12 pb-4">
           {/* Brand Column */}
-          <div className="space-y-2">
-            <h3 className="font-display text-lg text-white mb-1">Pythoness Programmer</h3>
+          <FooterSection title="Pythoness Programmer">
             <p className="text-white/80 text-sm">
               Crafting digital joy through code, coaching, and creativity.
             </p>
-          </div>
+          </FooterSection>
           {/* Social Links */}
-          <div className="space-y-2">
-            <h3 className="font-display text-lg text-white mb-1">Connect</h3>
+          <FooterSection title="Connect">
             <ul className="space-y-1" role="list" aria-label="Social media links">
               <li><Link href="https://github.com/devandapaige" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>GitHub</Link></li>
               <li><Link href="https://www.linkedin.com/in/pythonessprogrammer/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>LinkedIn</Link></li>
@@ -32,49 +39,42 @@ export default function Footer() {
               <li><Link href="https://bsky.app/profile/pythonessdev.bsky.social" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Bluesky</Link></li>
               <li><Link href="https://pythoness.beehiiv.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
             </ul>
-          </div>
+          </FooterSection>
           {/* Calendar Links */}
-          <div className="space-y-2">
-            <h3 className="font-display text-lg text-white mb-1">Book a Call</h3>
+          <FooterSection title="Book a Call">
             <ul className="space-y-1" role="list" aria-label="Booking options">
               <li><Link href="https://cal.com/pythoness/tech30" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>30min Tech Stack Audit</Link></li>
               <li><Link href="https://cal.com/pythoness/tech75" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>75min Deep Dive</Link></li>
             </ul>
             <p className="text-white/60 text-xs mt-1">Coming this summer: Group events and office hours! Stay tuned for updates.</p>
-          </div>
+          </FooterSection>
           {/* Free Resources */}
-          <div className="space-y-2">
-            <h3 className="font-display text-lg text-white mb-1">Free Resources</h3>
+          <FooterSection title="Free Resources">
             <ul className="space-y-1" role="list" aria-label="Free resources">
               <li><Link href="/vibe-coding-cheatsheet" className={footerLinkClass}>Vibe Coding Cheatsheet</Link></li>
               <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
             </ul>
-          </div>
+          </FooterSection>
         </div>
 
         {/* Second Row: Legal & Support the Pythoness */}
-        <div className="grid grid-cols-1 md:grid-cols-[auto_auto_1fr_auto] gap-6 md:gap-x-4 pb-2">
-          {/* Legal under Pythoness Programmer */}
-          <div>
-            <h3 className="font-display text-lg text-white mb-1">Legal</h3>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-4 pb-2">
+          <FooterSection title="Legal">
             <ul className="space-y-1">
               <li><Link href="/privacy-policy" className={footerLinkClass}>Privacy Policy</Link></li>
               <li><Link href="/terms" className={footerLinkClass}>Terms of Service</Link></li>
               <li><span className="text-white/60 text-sm">Richmond & New Kent, VA</span></li>
             </ul>
-          </div>
-          {/* Empty columns for alignment */}
-          <div></div>
-          <div></div>
-          {/* Support the Pythoness under Free Resources */}
-          <div>
-            <h3 className="font-display text-lg text-white mb-1">Support the Pythoness</h3>
+          </FooterSection>
+          <FooterSection title="Support the Pythoness">
             <p className="text-white/80 text-sm mb-1">If you enjoy my work, you can buy me a coffee!</p>
             <ul className="space-y-1" role="list" aria-label="Support options">
               <li><Link href="https://buy.stripe.com/eVaeWq6303RIejK28g" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Tip the Pythoness ☕</Link></li>
               {/* <li><Link href="#" className={footerLinkClass + ' opacity-60 cursor-not-allowed'} aria-disabled="true">Become a Monthly Supporter 💚 (coming soon!)</Link></li> */}
             </ul>
-          </div>
+          </FooterSection>
+          <div></div>
+          <div></div>
         </div>
 
         {/* Third Row: Copyright and Tech Stack */}
