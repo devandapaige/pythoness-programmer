@@ -51,13 +51,35 @@ export default function Header() {
           >
             Work
           </Link>
-          <Link 
-            href="https://pythoness.beehiiv.com" 
-            target="_blank"
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-          >
-            Newsletter
-          </Link>
+          <div className="relative group">
+            <Link 
+              href="https://pythoness.beehiiv.com" 
+              target="_blank"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 inline-flex items-center"
+            >
+              Newsletter
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </Link>
+            <div className="absolute left-0 mt-2 w-48 bg-brand-green-dark/95 backdrop-blur-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="py-2">
+                <Link 
+                  href="/digital-spring-cleaning"
+                  className="block px-4 py-2 text-sm text-white hover:text-brand-green-accent hover:bg-white/10"
+                >
+                  GRIT Digital Cleaning
+                </Link>
+                <Link 
+                  href="https://pythoness.beehiiv.com/subscribe"
+                  target="_blank"
+                  className="block px-4 py-2 text-sm text-white hover:text-brand-green-accent hover:bg-white/10"
+                >
+                  Subscribe
+                </Link>
+              </div>
+            </div>
+          </div>
           <Link 
             href="https://cal.com/pythoness" 
             target="_blank"
@@ -120,14 +142,24 @@ export default function Header() {
             >
               Work
             </Link>
-            <Link 
-              href="https://pythoness.beehiiv.com" 
-              target="_blank"
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Newsletter
-            </Link>
+            <div className="space-y-2">
+              <p className="text-white/80 text-sm px-2">Newsletter</p>
+              <Link 
+                href="/digital-spring-cleaning"
+                className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                GRIT Digital Cleaning
+              </Link>
+              <Link 
+                href="https://pythoness.beehiiv.com/subscribe"
+                target="_blank"
+                className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Subscribe
+              </Link>
+            </div>
             <Link 
               href="https://cal.com/pythoness" 
               target="_blank"
