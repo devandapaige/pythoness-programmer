@@ -143,22 +143,24 @@ export default function Header() {
               Work
             </Link>
             <div className="space-y-2">
-              <p className="text-white/80 text-sm px-2">Newsletter</p>
-              <Link 
-                href="/digital-spring-cleaning"
-                className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                GRIT Digital Cleaning
-              </Link>
-              <Link 
-                href="https://pythoness.beehiiv.com/subscribe"
-                target="_blank"
-                className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Subscribe
-              </Link>
+              <p className="text-white/80 text-sm px-2 italic">Newsletter</p>
+              <div className="pl-6 space-y-1">
+                <Link 
+                  href="/digital-spring-cleaning"
+                  className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  GRIT Digital Cleaning
+                </Link>
+                <Link 
+                  href="https://pythoness.beehiiv.com/subscribe"
+                  target="_blank"
+                  className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Subscribe
+                </Link>
+              </div>
             </div>
             <Link 
               href="https://cal.com/pythoness" 
