@@ -54,6 +54,7 @@ export default function Footer() {
               <li><Link href="/vibe-coding-cheatsheet" className={footerLinkClass}>Vibe Coding Cheatsheet</Link></li>
               <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
               <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
+              <li><Link href="https://pythoness.substack.com/podcast" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>NotebookLM Podcast</Link></li>
             </ul>
           </FooterSection>
         </div>

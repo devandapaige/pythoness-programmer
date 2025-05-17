@@ -1,13 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isWorkMenuOpen, setIsWorkMenuOpen] = useState(false)
+  const [isNewsletterMenuOpen, setIsNewsletterMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
+  const workMenuRef = useRef<HTMLDivElement>(null)
+  const newsletterMenuRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -17,6 +21,23 @@ export default function Header() {
   const getNavHref = (hash: string) => {
     return isHomePage ? hash : `/${hash}`
   }
+
+  // Accessibility: close dropdowns on blur
+  const handleBlur = (event: React.FocusEvent, setOpen: (open: boolean) => void, menuRef: React.RefObject<HTMLDivElement>) => {
+    if (!menuRef.current?.contains(event.relatedTarget)) {
+      setOpen(false);
+    }
+  };
+
+  // Accessibility: handle keyboard for dropdowns
+  const handleDropdownKeyDown = (event: React.KeyboardEvent, setOpen: (open: boolean) => void) => {
+    if (event.key === 'Escape') {
+      setOpen(false);
+    } else if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      setOpen(!open);
+    }
+  };
 
   return (
     <header 
@@ -45,35 +66,77 @@ export default function Header() {
           >
             Services
           </Link>
-          <Link 
-            href={getNavHref('#work')} 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2"
-          >
-            Work
-          </Link>
-          <div className="relative group">
-            <Link 
-              href="https://pythoness.beehiiv.com" 
-              target="_blank"
+          <div className="relative" ref={workMenuRef} onBlur={e => handleBlur(e, setIsWorkMenuOpen, workMenuRef)}>
+            <button
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={isWorkMenuOpen}
+              aria-controls="work-menu"
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 inline-flex items-center"
+              onClick={() => setIsWorkMenuOpen(!isWorkMenuOpen)}
+              onKeyDown={e => handleDropdownKeyDown(e, setIsWorkMenuOpen)}
+            >
+              Work
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div
+              id="work-menu"
+              role="menu"
+              className={`absolute left-0 mt-2 w-56 bg-brand-green-dark/95 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-200 ${isWorkMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+            >
+              <div className="py-2">
+                <Link 
+                  href="https://pythoness.substack.com/podcast"
+                  target="_blank"
+                  role="menuitem"
+                  tabIndex={isWorkMenuOpen ? 0 : -1}
+                  className="block px-4 py-2 text-sm text-white hover:text-brand-green-accent hover:bg-white/10"
+                  onClick={() => setIsWorkMenuOpen(!isWorkMenuOpen)}
+                >
+                  NotebookLM Podcast
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="relative" ref={newsletterMenuRef} onBlur={e => handleBlur(e, setIsNewsletterMenuOpen, newsletterMenuRef)}>
+            <button
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={isNewsletterMenuOpen}
+              aria-controls="newsletter-menu"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 inline-flex items-center"
+              onClick={() => setIsNewsletterMenuOpen(!isNewsletterMenuOpen)}
+              onKeyDown={e => handleDropdownKeyDown(e, setIsNewsletterMenuOpen)}
             >
               Newsletter
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </Link>
-            <div className="absolute left-0 mt-2 w-48 bg-brand-green-dark/95 backdrop-blur-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            </button>
+            <div
+              id="newsletter-menu"
+              role="menu"
+              className={`absolute left-0 mt-2 w-48 bg-brand-green-dark/95 backdrop-blur-sm rounded-lg shadow-lg transition-all duration-200 ${isNewsletterMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
+            >
               <div className="py-2">
                 <Link 
                   href="/digital-spring-cleaning"
+                  role="menuitem"
+                  tabIndex={isNewsletterMenuOpen ? 0 : -1}
                   className="block px-4 py-2 text-sm text-white hover:text-brand-green-accent hover:bg-white/10"
+                  onClick={() => setIsNewsletterMenuOpen(!isNewsletterMenuOpen)}
                 >
                   GRIT Digital Cleaning
                 </Link>
                 <Link 
                   href="https://pythoness.beehiiv.com/subscribe"
                   target="_blank"
+                  role="menuitem"
+                  tabIndex={isNewsletterMenuOpen ? 0 : -1}
                   className="block px-4 py-2 text-sm text-white hover:text-brand-green-accent hover:bg-white/10"
+                  onClick={() => setIsNewsletterMenuOpen(!isNewsletterMenuOpen)}
                 >
                   Subscribe
                 </Link>
@@ -135,30 +198,16 @@ export default function Header() {
             >
               Services
             </Link>
-            <Link 
-              href={getNavHref('#work')} 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Work
-            </Link>
             <div className="space-y-2">
-              <p className="text-white/80 text-sm px-2 italic">Newsletter</p>
+              <p className="text-white/80 text-sm px-2">Work</p>
               <div className="pl-6 space-y-1">
                 <Link 
-                  href="/digital-spring-cleaning"
-                  className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  GRIT Digital Cleaning
-                </Link>
-                <Link 
-                  href="https://pythoness.beehiiv.com/subscribe"
+                  href="https://pythoness.substack.com/podcast"
                   target="_blank"
                   className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Subscribe
+                  NotebookLM Podcast
                 </Link>
               </div>
             </div>
