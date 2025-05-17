@@ -20,7 +20,12 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: |
+        npm ci
+        npm install --save-dev eslint-config-next@latest
+        
+    - name: Verify ESLint configuration
+      run: npx eslint --print-config .eslintrc.json
       
     - name: Lint
       run: npm run lint
