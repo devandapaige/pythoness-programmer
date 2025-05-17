@@ -5,20 +5,10 @@ import Script from 'next/script';
 export default function CookieYes() {
   return (
     <Script
-      id="cookieyes-script"
+      id="cookieyes"
+      type="text/javascript"
+      src="https://cdn-cookieyes.com/client_data/67059772a91132cceb485e37/script.js"
       strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
-          (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6406931,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-          })(window,document,'https://cdn-cookieyes.com/client_data/67059772a91132cceb485e37/script.js','');
-        `,
-      }}
     />
   );
 } 
