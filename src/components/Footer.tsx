@@ -37,7 +37,6 @@ export default function Footer() {
               <li><Link href="https://www.youtube.com/@pythonessprogrammer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>YouTube</Link></li>
               <li><Link href="https://www.tiktok.com/@pythoness_programmer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>TikTok</Link></li>
               <li><Link href="https://bsky.app/profile/pythonessdev.bsky.social" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Bluesky</Link></li>
-              <li><Link href="https://pythoness.beehiiv.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
             </ul>
           </FooterSection>
           {/* Calendar Links */}
@@ -54,13 +53,12 @@ export default function Footer() {
               <li><Link href="/vibe-coding-cheatsheet" className={footerLinkClass}>Vibe Coding Cheatsheet</Link></li>
               <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
               <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
-              <li><Link href="https://pythoness.substack.com/podcast" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>NotebookLM Podcast</Link></li>
             </ul>
           </FooterSection>
         </div>
 
-        {/* Second Row: Legal & Support the Pythoness */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-4 pb-2">
+        {/* Second Row: Legal, Support the Pythoness, Listen, Read */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-12 pb-2">
           <FooterSection title="Legal">
             <ul className="space-y-1">
               <li><Link href="/privacy-policy" className={footerLinkClass}>Privacy Policy</Link></li>
@@ -72,11 +70,18 @@ export default function Footer() {
             <p className="text-white/80 text-sm mb-1">If you enjoy my work, you can buy me a coffee!</p>
             <ul className="space-y-1" role="list" aria-label="Support options">
               <li><Link href="https://buy.stripe.com/eVaeWq6303RIejK28g" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Tip the Pythoness ☕</Link></li>
-              {/* <li><Link href="#" className={footerLinkClass + ' opacity-60 cursor-not-allowed'} aria-disabled="true">Become a Monthly Supporter 💚 (coming soon!)</Link></li> */}
             </ul>
           </FooterSection>
-          <div></div>
-          <div></div>
+          <FooterSection title="Listen">
+            <ul className="space-y-1" role="list" aria-label="Listen options">
+              <li><Link href="https://pythoness.substack.com/podcast" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>NotebookLM Podcast</Link></li>
+            </ul>
+          </FooterSection>
+          <FooterSection title="Read">
+            <ul className="space-y-1" role="list" aria-label="Read options">
+              <li><Link href="https://pythoness.beehiiv.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
+            </ul>
+          </FooterSection>
         </div>
 
         {/* Third Row: Copyright and Tech Stack */}
@@ -88,6 +93,8 @@ export default function Footer() {
             </div>
             <div className="text-white/60 text-xs mt-2 md:mt-0">
               Crafted using{' '}
+              <Link href="https://www.typescriptlang.org" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>TypeScript</Link>
+              {', '}
               <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>Next.js</Link>
               {', '}
               <Link href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>Tailwind</Link>
