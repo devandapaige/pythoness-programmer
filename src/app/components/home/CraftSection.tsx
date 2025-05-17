@@ -1,9 +1,71 @@
 import Link from 'next/link'
 import { getMDXContent } from '@/lib/mdx'
 
+interface Services {
+  title: string;
+  items: string[];
+}
+
+interface Process {
+  title: string;
+  steps: string[];
+}
+
+interface Collaboration {
+  text: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+interface CraftFrontmatter {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  services: Services;
+  process: Process;
+  collaboration: Collaboration;
+}
+
+// Type guard to check if the data matches our CraftFrontmatter interface
+function isCraftFrontmatter(data: unknown): data is CraftFrontmatter {
+  const d = data as Record<string, unknown>;
+  const services = d.services as Record<string, unknown>;
+  const process = d.process as Record<string, unknown>;
+  const collaboration = d.collaboration as Record<string, unknown>;
+  
+  return (
+    typeof d === 'object' &&
+    d !== null &&
+    typeof d.id === 'string' &&
+    typeof d.title === 'string' &&
+    typeof d.subtitle === 'string' &&
+    typeof d.description === 'string' &&
+    typeof services === 'object' &&
+    services !== null &&
+    typeof services.title === 'string' &&
+    Array.isArray(services.items) &&
+    typeof process === 'object' &&
+    process !== null &&
+    typeof process.title === 'string' &&
+    Array.isArray(process.steps) &&
+    typeof collaboration === 'object' &&
+    collaboration !== null &&
+    typeof collaboration.text === 'string' &&
+    typeof collaboration.ctaText === 'string' &&
+    typeof collaboration.ctaLink === 'string'
+  );
+}
+
 export default async function CraftSection() {
   const { frontmatter } = await getMDXContent('home/craft.mdx')
-  const { id, title, subtitle, description, services, process, collaboration } = frontmatter
+  
+  // Validate the frontmatter data
+  if (!isCraftFrontmatter(frontmatter)) {
+    throw new Error('Invalid frontmatter data structure in craft.mdx');
+  }
+
+  const { id, title, subtitle, description, services, process, collaboration } = frontmatter;
 
   return (
     <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">

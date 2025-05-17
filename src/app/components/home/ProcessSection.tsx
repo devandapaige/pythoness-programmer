@@ -6,9 +6,57 @@ interface Step {
   description: string;
 }
 
+interface ProcessFrontmatter {
+  id: string;
+  title: string;
+  subtitle: string;
+  steps: Step[];
+  expertise: {
+    title: string;
+    description: string;
+    skills: string[];
+  };
+}
+
+// Type guard to check if the data matches our ProcessFrontmatter interface
+function isProcessFrontmatter(data: unknown): data is ProcessFrontmatter {
+  const d = data as Record<string, unknown>;
+  const steps = d.steps as unknown[];
+  const expertise = d.expertise as Record<string, unknown>;
+  
+  return (
+    typeof d === 'object' &&
+    d !== null &&
+    typeof d.id === 'string' &&
+    typeof d.title === 'string' &&
+    typeof d.subtitle === 'string' &&
+    Array.isArray(steps) &&
+    steps.every((step: unknown) => {
+      if (typeof step !== 'object' || step === null) return false;
+      const s = step as Record<string, unknown>;
+      return (
+        typeof s.number === 'string' &&
+        typeof s.title === 'string' &&
+        typeof s.description === 'string'
+      );
+    }) &&
+    typeof expertise === 'object' &&
+    expertise !== null &&
+    typeof expertise.title === 'string' &&
+    typeof expertise.description === 'string' &&
+    Array.isArray(expertise.skills)
+  );
+}
+
 export default async function ProcessSection() {
   const { frontmatter } = await getMDXContent('home/process.mdx')
-  const { id, title, subtitle, steps, expertise } = frontmatter
+  
+  // Validate the frontmatter data
+  if (!isProcessFrontmatter(frontmatter)) {
+    throw new Error('Invalid frontmatter data structure in process.mdx');
+  }
+
+  const { id, title, subtitle, steps, expertise } = frontmatter;
 
   const safeId = id as string;
   const safeTitle = title as string;

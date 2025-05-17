@@ -29,9 +29,49 @@ interface Frontmatter {
   photo?: Photo;
 }
 
+// Type guard to check if the data matches our Frontmatter interface
+function isFrontmatter(data: unknown): data is Frontmatter {
+  const d = data as Record<string, unknown>;
+  const highlights = d.highlights as Record<string, unknown>;
+  const philosophy = d.philosophy as Record<string, unknown>;
+  const photo = d.photo as Record<string, unknown> | undefined;
+  
+  return (
+    typeof d === 'object' &&
+    d !== null &&
+    typeof d.id === 'string' &&
+    typeof d.title === 'string' &&
+    typeof highlights === 'object' &&
+    highlights !== null &&
+    typeof highlights.title === 'string' &&
+    Array.isArray(highlights.items) &&
+    typeof philosophy === 'object' &&
+    philosophy !== null &&
+    typeof philosophy.title === 'string' &&
+    Array.isArray(philosophy.items) &&
+    typeof philosophy.quote === 'string' &&
+    (photo === undefined || (
+      typeof photo === 'object' &&
+      photo !== null &&
+      typeof photo.main === 'string' &&
+      typeof photo.caption === 'object' &&
+      photo.caption !== null &&
+      typeof (photo.caption as Record<string, unknown>).title === 'string' &&
+      typeof (photo.caption as Record<string, unknown>).quote === 'string' &&
+      typeof (photo.caption as Record<string, unknown>).description === 'string'
+    ))
+  );
+}
+
 export default async function WorkSection() {
   const { frontmatter } = await getMDXContent('home/work.mdx')
-  const { id, title, highlights, philosophy, photo } = frontmatter as Frontmatter
+  
+  // Validate the frontmatter data
+  if (!isFrontmatter(frontmatter)) {
+    throw new Error('Invalid frontmatter data structure in work.mdx');
+  }
+
+  const { id, title, highlights, philosophy, photo } = frontmatter;
 
   return (
     <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-cream via-white to-brand-cream overflow-hidden">

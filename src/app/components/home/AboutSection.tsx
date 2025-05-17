@@ -1,9 +1,60 @@
 import Image from 'next/image'
 import { getMDXContent } from '@/lib/mdx'
 
+interface Photo {
+  main: string;
+  decorative?: string[];
+}
+
+interface Values {
+  title: string;
+  items: string[];
+}
+
+interface AboutFrontmatter {
+  id: string;
+  title: string;
+  description: string;
+  pythia: string;
+  values: Values;
+  photo?: Photo;
+}
+
+// Type guard to check if the data matches our AboutFrontmatter interface
+function isAboutFrontmatter(data: unknown): data is AboutFrontmatter {
+  const d = data as Record<string, unknown>;
+  const values = d.values as Record<string, unknown>;
+  const photo = d.photo as Record<string, unknown> | undefined;
+  
+  return (
+    typeof d === 'object' &&
+    d !== null &&
+    typeof d.id === 'string' &&
+    typeof d.title === 'string' &&
+    typeof d.description === 'string' &&
+    typeof d.pythia === 'string' &&
+    typeof values === 'object' &&
+    values !== null &&
+    typeof values.title === 'string' &&
+    Array.isArray(values.items) &&
+    (photo === undefined || (
+      typeof photo === 'object' &&
+      photo !== null &&
+      typeof photo.main === 'string' &&
+      (photo.decorative === undefined || Array.isArray(photo.decorative))
+    ))
+  );
+}
+
 export default async function AboutSection() {
   const { frontmatter } = await getMDXContent('home/about.mdx')
-  const { id, title, description, pythia, values, photo } = frontmatter
+  
+  // Validate the frontmatter data
+  if (!isAboutFrontmatter(frontmatter)) {
+    throw new Error('Invalid frontmatter data structure in about.mdx');
+  }
+
+  const { id, title, description, pythia, values, photo } = frontmatter;
 
   return (
     <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-white via-brand-purple-light/5 to-white overflow-hidden">

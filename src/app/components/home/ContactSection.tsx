@@ -15,9 +15,80 @@ interface ClosingButton {
   text: string;
 }
 
+interface ContactFrontmatter {
+  id: string;
+  title: string;
+  description: string;
+  services: Service[];
+  why: {
+    title: string;
+    content: string[];
+  };
+  contact: {
+    message: string;
+    email: string;
+  };
+  closing: {
+    text: string;
+    buttons: ClosingButton[];
+  };
+}
+
+// Type guard to check if the data matches our ContactFrontmatter interface
+function isContactFrontmatter(data: unknown): data is ContactFrontmatter {
+  const d = data as Record<string, unknown>;
+  const closing = d.closing as Record<string, unknown>;
+  const buttons = closing.buttons as unknown[];
+  
+  return (
+    typeof d === 'object' &&
+    d !== null &&
+    typeof d.id === 'string' &&
+    typeof d.title === 'string' &&
+    typeof d.description === 'string' &&
+    Array.isArray(d.services) &&
+    d.services.every((service: Record<string, unknown>) => (
+      typeof service === 'object' &&
+      service !== null &&
+      typeof service.title === 'string' &&
+      typeof service.price === 'string' &&
+      typeof service.description === 'string' &&
+      Array.isArray(service.features) &&
+      typeof service.ctaLink === 'string' &&
+      typeof service.ctaText === 'string'
+    )) &&
+    typeof d.why === 'object' &&
+    d.why !== null &&
+    typeof (d.why as Record<string, unknown>).title === 'string' &&
+    Array.isArray((d.why as Record<string, unknown>).content) &&
+    typeof d.contact === 'object' &&
+    d.contact !== null &&
+    typeof (d.contact as Record<string, unknown>).message === 'string' &&
+    typeof (d.contact as Record<string, unknown>).email === 'string' &&
+    typeof closing === 'object' &&
+    closing !== null &&
+    typeof closing.text === 'string' &&
+    Array.isArray(buttons) &&
+    buttons.every((button: unknown) => {
+      if (typeof button !== 'object' || button === null) return false;
+      const b = button as Record<string, unknown>;
+      return (
+        typeof b.link === 'string' &&
+        typeof b.text === 'string'
+      );
+    })
+  );
+}
+
 export default async function ContactSection() {
   const { frontmatter } = await getMDXContent('home/contact.mdx')
-  const { id, title, description, services, why, contact, closing } = frontmatter
+  
+  // Validate the frontmatter data
+  if (!isContactFrontmatter(frontmatter)) {
+    throw new Error('Invalid frontmatter data structure in contact.mdx');
+  }
+
+  const { id, title, description, services, why, contact, closing } = frontmatter;
 
   // Typecast to expected types
   const safeId = id as string;
