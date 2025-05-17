@@ -1,9 +1,21 @@
 import Link from 'next/link'
 import { getMDXContent } from '@/lib/mdx'
 
+export interface Button {
+  href: string;
+  text: string;
+  primary?: boolean;
+}
+
 export default async function HeroSection() {
   const { frontmatter } = await getMDXContent('home/hero.mdx')
   const { title, tagline, mainText, subText, buttons } = frontmatter
+
+  // Typecast to string to resolve linter errors
+  const safeTitle = title as string;
+  const safeTagline = tagline as string;
+  const safeMainText = mainText as string;
+  const safeSubText = subText as string;
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">
@@ -20,13 +32,13 @@ export default async function HeroSection() {
           {/* Title with enhanced animation */}
           <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-4 tracking-tight text-white">
-              {title}
+              {safeTitle}
             </h1>
             {/* Tagline with separator lines */}
             <div className="flex items-center justify-center gap-4 mb-8">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide">
-                {tagline}
+                {safeTagline}
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -35,16 +47,16 @@ export default async function HeroSection() {
           {/* Main content with staggered animation */}
           <div className="space-y-6 animate-fade-in-up animation-delay-150">
             <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white font-light leading-relaxed">
-              {mainText}
+              {safeMainText}
             </p>
             <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/90 font-light leading-relaxed">
-              {subText}
+              {safeSubText}
             </p>
           </div>
 
           {/* Buttons with enhanced hover effects */}
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-fade-in-up animation-delay-300">
-            {buttons.map((button: any, index: number) => (
+            {(buttons as Button[]).map((button, index) => (
               <Link
                 key={index}
                 href={button.href}

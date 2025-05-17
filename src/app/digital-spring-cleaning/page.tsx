@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function DigitalSpringCleaningPage() {
   return (
     <main className="min-h-screen pt-20 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
@@ -14,12 +12,12 @@ export default function DigitalSpringCleaningPage() {
             Download our free worksheet and try the NAA (Notice, Adjust, Acknowledge) micro-reflection, inspired by our April 2025 newsletter series and podcast.
           </p>
           <div className="mt-6 bg-white/90 text-brand-green-dark rounded-lg px-6 py-4 mx-auto max-w-xl shadow-md border-l-4 border-brand-green-accent text-base md:text-lg">
-            <span className="font-semibold">Note:</span> This toolkit is adapted from <a href="https://angeladuckworth.com/grit-book/" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Angela Duckworth's research and her book <span className='italic'>GRIT</span></a>, which explores how passion and perseverance drive meaningful achievement.
+            <span className="font-semibold">Note:</span> This toolkit is adapted from <a href="https://angeladuckworth.com/grit-book/" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Angela Duckworth&apos;s research and her book <span className="italic">GRIT</span></a>, which explores how passion and perseverance drive meaningful achievement.
           </div>
 
-          {/* Main Content Block: What's Inside & Downloads */}
+          {/* Main Content Block: What&apos;s Inside & Downloads */}
           <div className="mt-12 bg-white/90 rounded-2xl p-8 border border-brand-green-accent shadow-xl">
-            <h2 className="text-2xl font-semibold mb-2 text-brand-green-dark text-center">What's Inside?</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-brand-green-dark text-center">What&apos;s Inside?</h2>
             <ul className="list-disc list-inside text-base mb-4 text-brand-green-dark">
               <li><strong>Digital Spring Cleaning Worksheet:</strong> A 4-page resource designed to be partially or fully filled out monthly or quarterly—use it to reflect, set goals, and simplify your digital world using the GRIT framework (Passion, Perseverance, Growth, Resilience).</li>
             </ul>
@@ -60,7 +58,7 @@ export default function DigitalSpringCleaningPage() {
           {/* Newsletter Series Attribution */}
           <div className="mt-12 bg-white/90 border border-brand-green-accent rounded-2xl p-6 text-center shadow-xl">
             <h4 className="text-lg font-semibold mb-2 text-brand-green-dark">From Our April 2025 Newsletter Series</h4>
-            <p className="mb-4 text-base text-brand-green-dark">These resources are adapted from our in-depth Digital Spring Cleaning series. Dive deeper into each week's topic:</p>
+            <p className="mb-4 text-base text-brand-green-dark">These resources are adapted from our in-depth Digital Spring Cleaning series. Dive deeper into each week&apos;s topic:</p>
             <ul className="list-disc list-inside text-brand-green-accent mb-4 text-left max-w-xl mx-auto">
               <li><a href="https://pythoness.beehiiv.com/p/monthly-grit-framework-for-your-digital-spring-cleaning" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week One: Monthly GRIT Framework for Your Digital Spring Cleaning</a></li>
               <li><a href="https://pythoness.beehiiv.com/p/digital-spring-cleaning-deepening-our-grit-journey" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Two: Deepening Our GRIT Journey</a></li>
@@ -74,7 +72,7 @@ export default function DigitalSpringCleaningPage() {
           <div className="text-center mt-12">
             <p className="text-lg mb-2 text-white">Ready to take your first step?</p>
             <p className="text-base text-white mb-4">Try the NAA micro-reflection right now: <span className="text-brand-purple-light font-semibold">Notice</span> your digital space, <span className="text-brand-purple-light font-semibold">Adjust</span> one small thing, and <span className="text-brand-purple-light font-semibold">Acknowledge</span> your effort. Small changes add up!</p>
-            <p className="text-sm text-brand-green-accent">Inspired by the Pythoness Programmer's podcast and newsletter. Share this page with a friend who could use a digital refresh!</p>
+            <p className="text-sm text-brand-green-accent">Inspired by the Pythoness Programmer&apos;s podcast and newsletter. Share this page with a friend who could use a digital refresh!</p>
           </div>
         </div>
       </div>

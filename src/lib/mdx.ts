@@ -29,7 +29,7 @@ export interface MDXContent {
     title: string
     lastUpdated: string
     summary: string
-    [key: string]: any
+    [key: string]: unknown
   }
 }
 

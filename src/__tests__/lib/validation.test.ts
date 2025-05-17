@@ -74,11 +74,11 @@ describe('Validation Utilities', () => {
     });
 
     it('returns false for non-number values', () => {
-      expect(isValidNumber('123' as any)).toBe(false);
+      expect(isValidNumber('123' as unknown)).toBe(false);
       expect(isValidNumber(null)).toBe(false);
       expect(isValidNumber(undefined)).toBe(false);
       expect(isValidNumber(NaN)).toBe(false);
-      expect(isValidNumber({} as any)).toBe(false);
+      expect(isValidNumber({} as unknown)).toBe(false);
     });
 
     it('uses default min/max if not provided', () => {

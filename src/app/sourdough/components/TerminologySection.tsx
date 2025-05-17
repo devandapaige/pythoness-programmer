@@ -8,12 +8,12 @@ export default function TerminologySection() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <h2 className={sectionStyles.heading.h2}>
-                "Starter" Sourdough Terms
+                &ldquo;Starter&rdquo; Sourdough Terms
               </h2>
               <dl className="mt-6 space-y-4">
                 <div>
-                  <dt className="font-semibold text-brand-purple-dark">Starter</dt>
-                  <dd className="text-brand-purple-dark/80">A fermented mixture of flour and water that contains wild yeast and beneficial bacteria. It's used as a natural leavening agent instead of commercial yeast.</dd>
+                  <dt className="text-lg font-semibold text-brand-green-dark">Sourdough Starter</dt>
+                  <dd className="text-gray-600">A mixture of flour and water that&apos;s been fermented to cultivate wild yeast and beneficial bacteria. It&apos;s used as a natural leavening agent instead of commercial yeast.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-brand-purple-dark">Feeding</dt>
@@ -56,8 +56,8 @@ export default function TerminologySection() {
                   <dd className="text-brand-purple-dark/80">A rest period where flour and water are mixed and left to sit before adding starter and salt, allowing for better flour hydration and gluten development.</dd>
                 </div>
                 <div>
-                  <dt className="font-semibold text-brand-purple-dark">Bulk Fermentation</dt>
-                  <dd className="text-brand-purple-dark/80">The first rise of the dough after mixing all ingredients, where the majority of fermentation happens, typically lasting 4-12 hours depending on temperature.</dd>
+                  <dt className="text-lg font-semibold text-brand-green-dark">Bulk Fermentation</dt>
+                  <dd className="text-gray-600">The first rise after mixing the dough, where the yeast &ldquo;eats&rdquo; the sugars and produces carbon dioxide.</dd>
                 </div>
                 <div>
                   <dt className="font-semibold text-brand-purple-dark">Stretch and Fold</dt>

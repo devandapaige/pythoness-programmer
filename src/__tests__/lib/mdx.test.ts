@@ -5,8 +5,7 @@ import { notFound } from 'next/navigation';
 import { 
   getAllPosts, 
   getPostBySlug, 
-  getMDXContent, 
-  compileMDXContent 
+  getMDXContent
 } from '@/lib/mdx';
 import { logError } from '@/lib/errorHandling';
 
@@ -21,6 +20,21 @@ jest.mock('@/lib/errorHandling', () => ({
   logError: jest.fn(),
 }));
 
+interface MockPostData {
+  data: {
+    title: string;
+    date: string;
+    description: string;
+    author: string;
+    tags: string[];
+  };
+  content: string;
+}
+
+interface MockData {
+  [key: string]: MockPostData;
+}
+
 describe('MDX Utilities', () => {
   beforeEach(() => {
     jest.clearAllMocks();
@@ -31,7 +45,7 @@ describe('MDX Utilities', () => {
     it('returns sorted blog posts by date', async () => {
       // Mock filesystem and matter responses
       const mockFiles = ['post1.mdx', 'post2.mdx'];
-      const mockData = {
+      const mockData: MockData = {
         'post1': {
           data: { 
             title: 'Post 1', 
@@ -56,12 +70,12 @@ describe('MDX Utilities', () => {
       
       (fs.readdirSync as jest.Mock).mockReturnValue(mockFiles);
       (fs.readFileSync as jest.Mock).mockImplementation((filePath) => {
-        const fileName = filePath.split('/').pop().replace('.mdx', '');
+        const fileName = filePath.split('/').pop()?.replace('.mdx', '') || '';
         return `Content for ${fileName}`;
       });
       
       (matter as unknown as jest.Mock).mockImplementation((source) => {
-        const postId = source.split(' ').pop();
+        const postId = source.split(' ').pop() || '';
         return mockData[postId];
       });
       
@@ -78,7 +92,7 @@ describe('MDX Utilities', () => {
   describe('getPostBySlug', () => {
     it('returns the correct blog post for a valid slug', async () => {
       const mockSlug = 'valid-post';
-      const mockPostData = {
+      const mockPostData: MockPostData = {
         data: {
           title: 'Valid Post',
           date: '2023-01-01',

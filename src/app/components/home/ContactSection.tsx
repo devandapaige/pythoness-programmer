@@ -1,12 +1,36 @@
 import Link from 'next/link'
 import { getMDXContent } from '@/lib/mdx'
 
+interface Service {
+  title: string;
+  price: string;
+  description: string;
+  features: string[];
+  ctaLink: string;
+  ctaText: string;
+}
+
+interface ClosingButton {
+  link: string;
+  text: string;
+}
+
 export default async function ContactSection() {
   const { frontmatter } = await getMDXContent('home/contact.mdx')
   const { id, title, description, services, why, contact, closing } = frontmatter
 
+  // Typecast to expected types
+  const safeId = id as string;
+  const safeTitle = title as string;
+  const safeDescription = description as string;
+  const safeServices = services as Service[];
+  const safeClosing = closing as { text: string; buttons: ClosingButton[] };
+  const safeClosingButtons = safeClosing.buttons;
+  const safeWhy = why as { title: string; content: string[] };
+  const safeContact = contact as { message: string; email: string };
+
   return (
-    <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark/90 via-brand-green-dark to-brand-green-dark/90 text-white overflow-hidden">
+    <section id={safeId} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark/90 via-brand-green-dark to-brand-green-dark/90 text-white overflow-hidden">
       {/* Background pattern with animated elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>
@@ -19,17 +43,17 @@ export default async function ContactSection() {
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-block bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              {title}
+              {safeTitle}
             </h2>
             <p className="text-xl text-brand-cream">
-              {description}
+              {safeDescription}
             </p>
           </div>
         </div>
 
         {/* Services grid with improved visual styling */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {services.map((service: any, index: number) => (
+          {safeServices.map((service: Service, index: number) => (
             <div
               key={index}
               className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] animate-fade-in-up"
@@ -78,18 +102,18 @@ export default async function ContactSection() {
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
             <h3 className="text-3xl font-display mb-8 text-brand-cream text-center">
-              {why.title}
+              {safeWhy.title}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <p className="text-white/90 leading-relaxed">
-                  {why.content[0]}
+                  {safeWhy.content[0]}
                 </p>
                 <div className="h-px w-full bg-gradient-to-r from-transparent via-brand-cream/30 to-transparent md:hidden"></div>
               </div>
               <div className="space-y-6">
                 <p className="text-white/90 leading-relaxed">
-                  {why.content[1]}
+                  {safeWhy.content[1]}
                 </p>
               </div>
             </div>
@@ -102,12 +126,12 @@ export default async function ContactSection() {
           style={{ animationDelay: '600ms' }}
         >
           <p className="text-white/90">
-            {contact.message}{' '}
+            {safeContact.message}{' '}
             <a
-              href={`mailto:${contact.email}`}
+              href={`mailto:${safeContact.email}`}
               className="text-brand-cream hover:text-white transition-colors relative group"
             >
-              <span className="relative z-10">{contact.email}</span>
+              <span className="relative z-10">{safeContact.email}</span>
               <span className="absolute inset-x-0 bottom-0 h-1 bg-brand-cream/30 group-hover:h-full group-hover:bg-brand-cream/10 transition-all duration-300 -z-0"></span>
             </a>
           </p>
@@ -119,10 +143,10 @@ export default async function ContactSection() {
           style={{ animationDelay: '750ms' }}
         >
           <p className="text-lg text-white/90 mb-8">
-            {closing.text}
+            {safeClosing.text}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {closing.buttons.map((button: any, index: number) => (
+            {safeClosingButtons.map((button: ClosingButton, index: number) => (
               <Link
                 key={index}
                 href={button.link}

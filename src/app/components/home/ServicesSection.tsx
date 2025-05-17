@@ -2,12 +2,31 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { getMDXContent } from '@/lib/mdx'
 
+interface Service {
+  title: string;
+  subtitle?: string;
+  price?: string;
+  description?: string;
+  features: string[];
+  ctaLink: string;
+  ctaText: string;
+  icon?: string;
+  note?: string;
+  highlight?: boolean;
+}
+
 export default async function ServicesSection() {
   const { frontmatter } = await getMDXContent('home/services.mdx')
   const { id, title, description, mainServices, additionalServices } = frontmatter
 
+  const safeId = id as string;
+  const safeTitle = title as string;
+  const safeDescription = description as string;
+  const safeMainServices = mainServices as Service[];
+  const safeAdditionalServices = additionalServices as Service[];
+
   return (
-    <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
+    <section id={safeId} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_80s_linear_infinite]"></div>
@@ -19,12 +38,12 @@ export default async function ServicesSection() {
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-block bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              {title}
+              {safeTitle}
             </h2>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-brand-cream max-w-3xl">
-                {description}
+                {safeDescription}
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -35,7 +54,7 @@ export default async function ServicesSection() {
         <div className="mb-16">
           <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Quick Tech Support</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {mainServices.map((service: any, index: number) => (
+            {safeMainServices.map((service, index) => (
               <div
                 key={index}
                 className={`group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] animate-fade-in-up ${
@@ -113,7 +132,7 @@ export default async function ServicesSection() {
         <div>
           <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Additional Services</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {additionalServices.map((service: any, index: number) => (
+            {safeAdditionalServices.map((service, index) => (
               <div
                 key={index}
                 className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] animate-fade-in-up"

@@ -14,8 +14,11 @@ export default async function BlogPage() {
     <div className="space-y-8">
       <div className="prose prose-invert max-w-none">
         <p className="text-white/80">
-          Welcome to the Pythoness Programmer blog! Here you'll find technical articles,
+          Welcome to the Pythoness Programmer blog! Here you&apos;ll find technical articles,
           coding tips, and industry insights to help you on your programming journey.
+        </p>
+        <p className="text-lg text-brand-purple-dark/80 mb-8">
+          Let&apos;s explore the world of tech together!
         </p>
       </div>
       

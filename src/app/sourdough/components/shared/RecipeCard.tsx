@@ -53,11 +53,11 @@ export default function RecipeCard({
               target="_blank"
               rel="noopener noreferrer"
             >
-              View the recipe on Pantry Mama's website →
+              View the recipe on Pantry Mama&apos;s website →
             </a>
           </p>
           {externalNote && (
-            <p className="text-brand-purple-dark/80 italic">
+            <p className="text-sm text-brand-purple-dark/80">
               {externalNote}
             </p>
           )}

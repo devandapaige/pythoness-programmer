@@ -1,9 +1,37 @@
 import Image from 'next/image'
 import { getMDXContent } from '@/lib/mdx'
 
+interface Highlights {
+  title: string;
+  items: string[];
+}
+
+interface Philosophy {
+  title: string;
+  items: string[];
+  quote: string;
+}
+
+interface Photo {
+  main: string;
+  caption: {
+    title: string;
+    quote: string;
+    description: string;
+  };
+}
+
+interface Frontmatter {
+  id: string;
+  title: string;
+  highlights: Highlights;
+  philosophy: Philosophy;
+  photo?: Photo;
+}
+
 export default async function WorkSection() {
   const { frontmatter } = await getMDXContent('home/work.mdx')
-  const { id, title, highlights, philosophy, photo } = frontmatter
+  const { id, title, highlights, philosophy, photo } = frontmatter as Frontmatter
 
   return (
     <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-cream via-white to-brand-cream overflow-hidden">
@@ -69,7 +97,7 @@ export default async function WorkSection() {
               ))}
             </ul>
             <blockquote className="relative">
-              <div className="absolute -top-4 -left-2 text-4xl text-brand-green-accent opacity-30">"</div>
+              <div className="absolute -top-4 -left-2 text-4xl text-brand-green-accent opacity-30">&ldquo;</div>
               <p className="relative z-10 italic text-gray-600 pl-6 border-l-2 border-brand-green-accent/30">
                 {philosophy.quote}
               </p>
@@ -104,7 +132,7 @@ export default async function WorkSection() {
                     {photo.caption.title}
                   </h3>
                   <p className="text-lg text-gray-600 mb-6 italic leading-relaxed">
-                    "{photo.caption.quote}"
+                    &ldquo;{photo.caption.quote}&rdquo;
                   </p>
                   <p className="text-gray-600">
                     {photo.caption.description}

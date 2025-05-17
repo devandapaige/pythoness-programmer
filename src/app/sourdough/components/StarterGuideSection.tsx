@@ -23,8 +23,10 @@ export default function StarterGuideSection() {
               </p>
               <ul className={sectionStyles.list.unordered}>
                 <li>So for the starter you received from Amanda, add 100g flour and 100g of lukewarm water (50g:100g:100g).</li>
-                <li>To avoid killing the active yeasts, don't use hot water or bleached flours when feeding.</li>
-                <li>When the starter is sitting out on the counter or being brought to room temperature, keep the metal band around the Mason jar loose to prevent forming a seal. Make sure it's sealed when resting in the fridge.</li>
+                <li>To avoid killing the active yeasts, don&apos;t use hot water or bleached flours when feeding.</li>
+                <li>Use a rubber band to mark the starter&apos;s level after feeding, so you can track its growth.</li>
+                <li>Keep your starter in a warm place (around 75-80°F) for optimal fermentation.</li>
+                <li>Use a loose-fitting lid or cover with a cloth to prevent forming a seal. Make sure it&apos;s sealed when resting in the fridge.</li>
               </ul>
             </div>
 
