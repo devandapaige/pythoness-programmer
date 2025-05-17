@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import RootLayoutClient from "../components/RootLayoutClient";
+import Hotjar from "../components/Hotjar";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -61,6 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${openSans.variable} ${norwester.variable} font-sans bg-brand-cream text-brand-green-dark antialiased`}>
+        <Hotjar />
         <RootLayoutClient>
           {children}
         </RootLayoutClient>
