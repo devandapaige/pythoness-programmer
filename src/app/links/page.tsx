@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Links | Pythoness Programmer',
-  description: 'Connect with Pythoness Programmer through various platforms and resources.',
+  title: 'Connect with Amanda | Pythoness Programmer',
+  description: 'Connect with Amanda through various platforms, book calls, and access free resources.',
 }
 
 // Define interface for link objects
@@ -142,7 +142,9 @@ export default function LinksPage() {
               />
             </div>
           </div>
-          <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
+          </Link>
           <p className="text-white/80 max-w-md mx-auto">
             Crafting digital joy through code, coaching, and creativity.
           </p>
@@ -153,7 +155,7 @@ export default function LinksPage() {
           {/* Social Links */}
           {socialLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Connect With Me</h2>
+              <h2 className="font-display text-xl text-white text-center">Connect with Amanda</h2>
               <div className="flex justify-center items-center space-x-4">
                 {socialLinks.map((link) => (
                   <Link
@@ -262,26 +264,6 @@ export default function LinksPage() {
             </div>
           )}
 
-          {/* Legal Links */}
-          {legalLinks.length > 0 && (
-            <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Legal</h2>
-              <div className="space-y-3">
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Link to Main Website */}
           <div className="pt-8 text-center">
             <Link
@@ -290,6 +272,17 @@ export default function LinksPage() {
             >
               <span>Visit my website →</span>
             </Link>
+            <div className="mt-4 space-y-2">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  className="block text-brand-purple-light hover:text-brand-purple-light/80 text-sm transition-colors"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
