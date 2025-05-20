@@ -6,7 +6,7 @@ export default function Hotjar() {
   return (
     <Script
       id="hotjar-script"
-      strategy="beforeInteractive"
+      strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
           (function(h,o,t,j,a,r){
@@ -21,4 +21,4 @@ export default function Hotjar() {
       }}
     />
   );
-} 
+}

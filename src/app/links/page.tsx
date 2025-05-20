@@ -106,6 +106,7 @@ const mediaLinks: LinkItem[] = [
 ]
 
 // Affiliate links section - ready for future expansion
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const affiliateLinks: LinkItem[] = [
   // This section is ready for future affiliate links
 ]
