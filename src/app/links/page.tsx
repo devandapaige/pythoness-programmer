@@ -12,6 +12,7 @@ interface LinkItem {
   name: string;
   url: string;
   color: string;
+  icon?: string;
 }
 
 // Social media links - easy to update
@@ -19,27 +20,32 @@ const socialLinks: LinkItem[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/devandapaige',
-    color: 'bg-white/10 hover:bg-white/20'
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/github.svg'
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/pythonessprogrammer/',
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/linkedin.svg'
   },
   {
     name: 'YouTube',
     url: 'https://www.youtube.com/@pythonessprogrammer',
-    color: 'bg-white/10 hover:bg-white/20'
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/youtube.svg'
   },
   {
     name: 'TikTok',
     url: 'https://www.tiktok.com/@pythoness_programmer',
-    color: 'bg-white/10 hover:bg-white/20'
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/tiktok.svg'
   },
   {
     name: 'Bluesky',
     url: 'https://bsky.app/profile/pythonessdev.bsky.social',
-    color: 'bg-white/10 hover:bg-white/20'
-  },
-  {
-    name: 'Newsletter',
-    url: 'https://pythoness.beehiiv.com/',
-    color: 'bg-white/10 hover:bg-white/20'
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/bluesky.svg'
   }
 ]
 
@@ -62,24 +68,60 @@ const resourceLinks: LinkItem[] = [
   {
     name: 'Vibe Coding Cheatsheet',
     url: '/vibe-coding-cheatsheet',
-    color: 'bg-white/20 hover:bg-white/30'
+    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   },
   {
     name: 'Sourdough Corner',
-    url: 'https://www.pythonessprogrammer.com/sourdough',
-    color: 'bg-white/20 hover:bg-white/30'
+    url: '/sourdough',
+    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   },
   {
-    name: 'Tip the Pythoness',
-    url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
-    color: 'bg-white/20 hover:bg-white/30'
+    name: 'Digital Spring Cleaning',
+    url: '/digital-spring-cleaning',
+    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   }
-  // Add more resources here as they become available
+]
+
+// Support links section
+const supportLinks: LinkItem[] = [
+  {
+    name: 'Tip the Pythoness ☕',
+    url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
+    color: 'bg-white/10 hover:bg-white/20'
+  }
+]
+
+// Media links section
+const mediaLinks: LinkItem[] = [
+  {
+    name: 'Newsletter',
+    url: 'https://pythoness.beehiiv.com/',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+  },
+  {
+    name: 'NotebookLM Podcast',
+    url: 'https://pythoness.substack.com/podcast',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+  }
 ]
 
 // Affiliate links section - ready for future expansion
 const affiliateLinks: LinkItem[] = [
   // This section is ready for future affiliate links
+]
+
+// Legal links section
+const legalLinks: LinkItem[] = [
+  {
+    name: 'Privacy Policy',
+    url: '/privacy-policy',
+    color: 'bg-brand-green-dark/40 backdrop-blur-md border border-white/10 hover:bg-brand-green-dark/60 text-white shadow-lg hover:shadow-xl transition-all duration-300'
+  },
+  {
+    name: 'Terms of Service',
+    url: '/terms',
+    color: 'bg-brand-green-dark/40 backdrop-blur-md border border-white/10 hover:bg-brand-green-dark/60 text-white shadow-lg hover:shadow-xl transition-all duration-300'
+  }
 ]
 
 export default function LinksPage() {
@@ -111,14 +153,43 @@ export default function LinksPage() {
           {socialLinks.length > 0 && (
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Connect With Me</h2>
-              <div className="space-y-3">
+              <div className="flex justify-center items-center space-x-4">
                 {socialLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    className={`block ${link.color} w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    aria-label={link.name}
+                  >
+                    {link.icon && (
+                      <Image
+                        src={link.icon}
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="w-6 h-6"
+                      />
+                    )}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Media Links */}
+          {mediaLinks.length > 0 && (
+            <div className="space-y-3">
+              <h2 className="font-display text-xl text-white text-center">Subscribe for Updates</h2>
+              <div className="space-y-3">
+                {mediaLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
                   >
                     {link.name}
                   </Link>
@@ -138,7 +209,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
                   >
                     {link.name}
                   </Link>
@@ -161,7 +232,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
                   >
                     {link.name}
                   </Link>
@@ -170,18 +241,18 @@ export default function LinksPage() {
             </div>
           )}
 
-          {/* Affiliate Links - hidden until populated */}
-          {affiliateLinks.length > 0 && (
+          {/* Support Links */}
+          {supportLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Recommended Products</h2>
+              <h2 className="font-display text-xl text-white text-center">Support the Pythoness</h2>
               <div className="space-y-3">
-                {affiliateLinks.map((link) => (
+                {supportLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
                   >
                     {link.name}
                   </Link>
@@ -189,7 +260,27 @@ export default function LinksPage() {
               </div>
             </div>
           )}
-          
+
+          {/* Legal Links */}
+          {legalLinks.length > 0 && (
+            <div className="space-y-3">
+              <h2 className="font-display text-xl text-white text-center">Legal</h2>
+              <div className="space-y-3">
+                {legalLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Link to Main Website */}
           <div className="pt-8 text-center">
             <Link
