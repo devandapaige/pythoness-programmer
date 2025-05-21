@@ -252,7 +252,7 @@ export default function LinksPage() {
           {/* Support Links */}
           {supportLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Support the Pythoness</h2>
+              <h2 className="font-display text-xl text-white text-center">Support</h2>
               <div className="space-y-3">
                 {supportLinks.map((link) => (
                   <Link
