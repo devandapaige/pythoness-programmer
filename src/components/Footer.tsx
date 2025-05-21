@@ -68,7 +68,7 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="/privacy-policy" className={footerLinkClass}>Privacy Policy</Link></li>
               <li><Link href="/terms" className={footerLinkClass}>Terms of Service</Link></li>
-              <li><span className="text-white/60 text-sm">Richmond & New Kent, VA</span></li>
+              <li><span className="text-white/60 text-sm">Based in New Kent, Virginia crafting remote, digital services since 2018</span></li>
             </ul>
           </FooterSection>
           <FooterSection title="Support the Pythoness">
@@ -95,7 +95,7 @@ export default function Footer() {
           <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center w-full">
             <div>
               <p className="text-white/60 text-xs mb-1">© {new Date().getFullYear()} Pythoness Programmer. All rights reserved.</p>
-              <p className="text-white/60 text-xs mb-1">Richmond & New Kent, VA</p>
+              <p className="text-white/60 text-xs mb-1">Based in New Kent, Virginia crafting remote, digital services since 2018</p>
             </div>
             <div className="text-white/60 text-xs mt-2 md:mt-0">
               Crafted using{' '}
