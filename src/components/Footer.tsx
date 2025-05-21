@@ -1,6 +1,7 @@
 import Link from 'next/link'
+import { ReactNode } from 'react'
 
-function FooterSection({ title, children }: { title: string, children: React.ReactNode }) {
+function FooterSection({ title, children }: { title: string | ReactNode, children: React.ReactNode }) {
   return (
     <div className="space-y-2">
       <h3 className="font-display text-lg text-white mb-1">{title}</h3>
@@ -24,7 +25,11 @@ export default function Footer() {
         {/* First Row: Main Sections */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-12 pb-4">
           {/* Brand Column */}
-          <FooterSection title="Pythoness Programmer">
+          <FooterSection title={
+            <Link href="/" className="hover:text-brand-green-accent transition-colors">
+              Pythoness Programmer
+            </Link>
+          }>
             <p className="text-white/80 text-sm">
               Crafting digital joy through code, coaching, and creativity.
             </p>
