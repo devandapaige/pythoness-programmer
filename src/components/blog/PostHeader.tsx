@@ -35,17 +35,14 @@ export default function PostHeader({ post }: PostHeaderProps) {
         ))}
       </div>
       {post.image && (
-        <div className="w-full max-w-full rounded-md overflow-hidden mb-6" style={{ aspectRatio: '1200/650', background: '#222' }}>
-          <Image
-            src={post.image}
-            alt={post.title + ' cover image'}
-            width={1200}
-            height={650}
-            className="w-full h-full object-cover"
-            style={{ display: 'block', maxWidth: '100%', maxHeight: '100%' }}
-            priority
-          />
-        </div>
+        <Image
+          src={post.image}
+          alt={post.title + ' cover image'}
+          width={1200}
+          height={600}
+          className="w-full h-auto object-contain rounded-md bg-black/10 mb-6"
+          priority
+        />
       )}
     </header>
   )
