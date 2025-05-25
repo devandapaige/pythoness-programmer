@@ -13,7 +13,15 @@ export default function BlogLayout({
   return (
     <div className="min-h-screen bg-gradient-to-b from-brand-green-dark to-brand-purple-dark">
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-display text-white mb-8">Blog</h1>
+        <h1 className="text-4xl font-display text-white mb-8">
+          <a
+            href="/blog"
+            className="hover:underline hover:text-brand-green-accent transition-colors"
+            aria-label="Go to all blog posts"
+          >
+            Blog
+          </a>
+        </h1>
         <div className="prose prose-invert max-w-none">
           {children}
         </div>
