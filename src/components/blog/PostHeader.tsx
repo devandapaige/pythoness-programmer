@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { BlogPost } from '@/lib/mdx'
 
 interface PostHeaderProps {
@@ -22,12 +23,14 @@ export default function PostHeader({ post }: PostHeaderProps) {
       </div>
       <div className="flex flex-wrap gap-2">
         {post.tags.map((tag) => (
-          <span 
+          <Link
             key={tag}
-            className="px-2 py-1 bg-brand-green-accent/20 text-brand-green-accent rounded-full text-sm"
+            href={`/blog?tag=${encodeURIComponent(tag)}`}
+            className="px-2 py-1 bg-brand-green-accent/20 text-brand-green-accent rounded-full text-sm hover:bg-brand-green-accent/30 transition-colors"
+            aria-label={`View all posts tagged ${tag}`}
           >
             {tag}
-          </span>
+          </Link>
         ))}
       </div>
     </header>

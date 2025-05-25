@@ -1,0 +1,50 @@
+---
+title: "Accommodating Yourself is Cute"
+date: "2023-10-15"
+description: "A guide to making your development workflow more accessible and comfortable, featuring font recommendations and customization tips for VS Code."
+author: "Amanda Nelson"
+tags: ["accessibility", "developer-tools", "vscode", "productivity"]
+---
+
+# Accommodating Yourself is Cute
+
+Hi Barbie 👋🏻 
+
+tl;dr: Updating the font in your workflow is self-care, babe 🔮 
+
+If you're anything like me, living in 2023 can make staring at your IDE near impossible. Being back in code is exhausting, and I must make changes to improve my workflow. In my era of not repeating cycles, my brain is better suited to struggling with complex systems and not trying to read my screen.
+
+So what's the solution? Make the font easier to read!
+
+## OpenDyslexic
+
+This font has been tremendous in helping me get back into my writing and journaling, and as I get back into my coding practice again, I know that that will be my #1 choice of font. It may not give hacker-core, but accommodating yourself is cute.
+
+However, one issue is that it looks a little wonky in the terminal because it has extra large spaces (and I have an Oh My Zsh layout I'm not changing yet 😉). Changing just the editor's font family will also automatically update the terminal within VSCode. So, while we're here, let's update the terminal font too!
+
+## Fira Code
+
+This is the font you wish you had in your terminal. Fira Code looks just better in every way. This is also a great option to update your main editor font.
+
+## Install Instructions
+
+1. Download the desired font/s onto your computer. Make a note of the name of each font you'll be using for later.
+2. In VSCode, use the Shortcut: Command ⌘+Shift+P (control+shift+P on Windows) and search for your settings JSON. Start typing "settings.json" after the >, and you can select it. For this example, I'm updating the "User Settings."
+3. This should pull up your settings JSON, and you'll add the following key-value pairs to that JSON:
+
+```json
+"terminal.integrated.fontFamily": "'FiraCode', monospace",
+"editor.fontFamily": "'OpenDyslexic', monospace"
+```
+
+Feel free to save and adjust the fonts from there. Each install font you use should be in single quotes, followed by the default font you want to appear if things aren't working correctly.
+
+Making your workflow easier for your brain doesn't make you lazy, friend. It will save you time and stress, which is priceless.
+
+What font are you adding to your VS Code?
+
+Until next time,
+
+💕 Barbie
+
+P.S. Deep Dive: The two fonts mentioned above have an Open Font License (OFL), which means they are free to install and use on projects, websites, etc. This type of font allows us engineers to know who created them and to whom to give credit. 
