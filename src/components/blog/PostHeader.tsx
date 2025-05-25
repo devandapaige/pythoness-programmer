@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { BlogPost } from '@/lib/mdx'
+import Image from 'next/image'
 
 interface PostHeaderProps {
   post: BlogPost
@@ -21,7 +22,7 @@ export default function PostHeader({ post }: PostHeaderProps) {
         </time>
         <span>by {post.author}</span>
       </div>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 mb-4">
         {post.tags.map((tag) => (
           <Link
             key={tag}
@@ -33,6 +34,19 @@ export default function PostHeader({ post }: PostHeaderProps) {
           </Link>
         ))}
       </div>
+      {post.image && (
+        <div className="w-full max-w-full rounded-md overflow-hidden mb-6" style={{ aspectRatio: '1200/650', background: '#222' }}>
+          <Image
+            src={post.image}
+            alt={post.title + ' cover image'}
+            width={1200}
+            height={650}
+            className="w-full h-full object-cover"
+            style={{ display: 'block', maxWidth: '100%', maxHeight: '100%' }}
+            priority
+          />
+        </div>
+      )}
     </header>
   )
 } 

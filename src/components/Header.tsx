@@ -7,11 +7,9 @@ import Link from 'next/link'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isWorkMenuOpen, setIsWorkMenuOpen] = useState(false)
-  const [isNewsletterMenuOpen, setIsNewsletterMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
   const workMenuRef = useRef<HTMLDivElement>(null)
-  const newsletterMenuRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
