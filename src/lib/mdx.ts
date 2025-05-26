@@ -21,6 +21,7 @@ export interface BlogPost {
   author: string
   tags: string[]
   content: string
+  image?: string
 }
 
 export interface MDXContent {
@@ -60,7 +61,8 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           description: data.description,
           author: data.author,
           tags: data.tags || [],
-          content
+          content,
+          image: data.image,
         }
       })
   )
@@ -94,7 +96,8 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
       description: data.description,
       author: data.author,
       tags: data.tags || [],
-      content
+      content,
+      image: data.image,
     }
   } catch (error) {
     logError(`Error reading post with slug "${slug}"`, error, { filePath })
