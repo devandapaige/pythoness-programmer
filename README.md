@@ -148,6 +148,17 @@ Your content here...
 </CodeBlock>
 ```
 
+4. RSS Feed:
+
+The blog includes an RSS feed for subscribers to stay updated with new posts. The feed is available at `/feed.xml` and includes:
+- Full post content
+- Publication dates
+- Author information
+- Tags as categories
+- Automatic updates when new posts are published
+
+The feed is cached for an hour to maintain good performance and can be accessed through the RSS link in the blog header or on the main blog page.
+
 ## Security Features
 
 The application includes several security measures:
