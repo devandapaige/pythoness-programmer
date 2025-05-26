@@ -15,63 +15,37 @@ This website serves as a platform for:
 ## Tech Stack
 
 - **Framework:** Next.js 14
-- **Styling:** Tailwind CSS
-- **Typography:** Custom font implementation
-- **Animations:** CSS transitions and transforms
-- **Integrations:**
-  - Cal.com for scheduling
-  - Beehiiv for newsletter
-  - Custom SVG patterns
-  - MDX for blog content
+- **Styling:** Tailwind CSS with Typography plugin
+- **Content:** MDX with next-mdx-remote
+- **Analytics:** Hotjar
 - **Testing:** Jest with React Testing Library
-- **CI/CD:** GitHub Actions workflow
+- **Type Checking:** TypeScript
+- **Linting:** ESLint with TypeScript support
+- **Build Tools:** PostCSS, Sharp for image optimization
+- **Environment:** dotenv for environment variables
 
 ## Project Structure
 
 ```
-src/
-├── app/
-│   ├── page.tsx                    # Main landing page wrapper
-│   ├── layout.tsx                  # Root layout
-│   ├── globals.css                 # Global styles
-│   ├── blog/                       # Blog section
-│   │   ├── page.tsx               # Blog index page
-│   │   ├── [slug]/                # Dynamic blog post routes
-│   │   │   └── page.tsx           # Individual blog post page
-│   │   └── layout.tsx             # Blog section layout
-│   ├── terms/                      # Terms of Service
-│   │   └── page.tsx               # Terms page wrapper
-│   ├── privacy/                    # Privacy Policy
-│   │   └── page.tsx               # Privacy page wrapper
-│   └── vibe-coding-cheatsheet/     # Interactive Cheatsheet section
-│       ├── page.tsx               # Cheatsheet React component page
-│       ├── components/            # Cheatsheet-specific components
-│       └── data/                  # Cheatsheet content data
-│   └── sourdough/                 # Sourdough Corner section
-│       ├── page.tsx               # Sourdough page wrapper
-│       ├── components/            # Sourdough-specific components
-│       └── content.mdx           # Sourdough content
-├── components/                    # Shared components
-│   ├── Header.tsx                # Navigation and branding
-│   ├── Footer.tsx                # Site footer with links
-│   └── LegalLayout.tsx           # Layout for legal pages
-├── lib/                          # Utility functions and shared logic
-│   ├── mdx.ts                    # MDX processing utilities
-│   ├── validation.ts             # Input validation utilities
-│   ├── errorHandling.ts          # Error handling utilities
-│   └── blog.ts                   # Blog-related utilities
-├── __tests__/                    # Test files
-│   ├── lib/                      # Tests for utility functions
-│   └── components/               # Tests for React components
-├── docs/                         # Documentation
-│   └── naming-conventions.md     # Coding standards and naming conventions
-└── content/                      # Content directory
-    ├── blog/                     # Blog posts in MDX format
-    │   └── posts/               # Individual blog post files
-    ├── home/                    # Home page sections in MDX
-    └── legal/                   # Legal documents in MDX
-        ├── terms-of-service.mdx # Terms of Service content
-        └── privacy-policy.mdx   # Privacy Policy content
+.
+├── src/
+│   ├── app/                    # Next.js app directory
+│   ├── components/            # Shared React components
+│   ├── lib/                   # Utility functions
+│   ├── content/              # MDX content
+│   ├── __tests__/           # Test files
+│   └── docs/                # Documentation
+├── public/                   # Static assets
+├── content/                 # Root content directory
+├── .github/                # GitHub workflows
+├── .next/                  # Next.js build output
+├── node_modules/          # Dependencies
+├── next.config.js         # Next.js configuration
+├── tailwind.config.ts     # Tailwind CSS configuration
+├── postcss.config.js      # PostCSS configuration
+├── jest.config.js         # Jest configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Project dependencies
 ```
 
 ## Content Management Approaches
@@ -155,6 +129,7 @@ date: "2024-03-13"
 description: "A brief description of your post"
 author: "Your Name"
 tags: ["tag1", "tag2"]
+image: "url hosting image"
 ---
 
 Your content here...
@@ -238,13 +213,28 @@ const result = await tryCatch(
 ```
 
 ## Color Scheme
-- **Deep forest green:** #2E3D2A
-- **Rich purple:** #442B48
-- **Vibrant green accent:** #32d24d
-- **Soft cream:** #F4f1de
-- **Light purple accent:** #D8B9F7
-- **Bright Blue** #00A6FB
-- **White:** #FFFFFF
+
+### Brand Colors
+- **Deep forest green:** #1A472A (`--brand-green-dark`)
+- **Rich purple:** #2D1B69 (`--brand-purple-dark`)
+- **Vibrant green accent:** #157F1F (`--brand-green-accent`)
+- **Soft cream:** #F5F5DC (`--brand-cream`)
+- **Light purple accent:** #9747FF (`--brand-purple-light`)
+
+### UI Colors
+- **White:** #FFFFFF (`--white`)
+- **White with opacity:**
+  - 10% opacity: rgba(255, 255, 255, 0.1) (`--white-opacity-10`)
+  - 20% opacity: rgba(255, 255, 255, 0.2) (`--white-opacity-20`)
+  - 90% opacity: rgba(255, 255, 255, 0.9) (`--white-opacity-90`)
+
+Common color applications:
+
+- Text on dark: `text-white`, `text-white/90`, `text-brand-cream`
+- Text on light: `text-brand-purple-dark`, `text-brand-green-dark`
+- Accents: `text-brand-green-accent`, `text-brand-purple-light`
+- Backgrounds: Dark gradient combinations of `brand-green-dark` and `brand-purple-dark`
+- Overlays: `bg-white/5`, `bg-white/10` with `backdrop-blur-sm`
 
 ```css
 /* Brand Colors */
@@ -260,14 +250,6 @@ const result = await tryCatch(
 --white-opacity-20: rgba(255, 255, 255, 0.2);
 --white-opacity-90: rgba(255, 255, 255, 0.9);
 ```
-
-Common color applications:
-
-- Text on dark: `text-white`, `text-white/90`, `text-brand-cream`
-- Text on light: `text-brand-purple-dark`, `text-brand-green-dark`
-- Accents: `text-brand-green-accent`, `text-brand-purple-light`
-- Backgrounds: Dark gradient combinations of `brand-green-dark` and `brand-purple-dark`
-- Overlays: `bg-white/5`, `bg-white/10` with `backdrop-blur-sm`
 
 ## Development
 
@@ -291,6 +273,9 @@ npm run build
 
 # Start production server
 npm start
+
+# Run linting
+npm run lint
 ```
 
 ## Testing
@@ -309,18 +294,22 @@ npm test -- --coverage
 ```
 
 Test files follow this naming convention:
-
 - `__tests__/lib/*.test.ts` - for utility function tests
 - `__tests__/components/*.test.tsx` - for React component tests
 
 ## CI/CD
 
 A GitHub Actions workflow runs on all PRs and pushes to the main branch:
-
 - Runs linting checks
 - Executes all tests
 - Performs a security audit
 - Builds the application
+
+## Environment Variables
+
+The project uses the following environment variables:
+- `NEXT_PUBLIC_HOTJAR_ID` - Hotjar tracking ID
+- Additional environment variables can be added in `.env.local`
 
 ## Sections
 
