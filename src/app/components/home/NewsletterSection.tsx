@@ -7,6 +7,10 @@ interface NewsletterFrontmatter {
   embedUrl: string;
 }
 
+interface NewsletterSectionProps {
+  bgColor?: string;
+}
+
 // Type guard to check if the data matches our NewsletterFrontmatter interface
 function isNewsletterFrontmatter(data: unknown): data is NewsletterFrontmatter {
   const d = data as Record<string, unknown>;
@@ -20,7 +24,7 @@ function isNewsletterFrontmatter(data: unknown): data is NewsletterFrontmatter {
   );
 }
 
-export default async function NewsletterSection() {
+export default async function NewsletterSection({ bgColor }: NewsletterSectionProps) {
   const { frontmatter } = await getMDXContent('home/newsletter.mdx')
   
   // Validate the frontmatter data
@@ -31,7 +35,7 @@ export default async function NewsletterSection() {
   const { id, title, description, embedUrl } = frontmatter;
 
   return (
-    <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark/5 via-brand-cream to-brand-green-dark/5 overflow-hidden">
+    <section id={id} className={`relative py-24 px-4 md:px-6 ${bgColor || 'bg-gradient-to-br from-brand-purple-dark/5 via-brand-cream to-brand-green-dark/5'} overflow-hidden`}>
       {/* Background pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.03] bg-[url('/pattern.svg')] bg-repeat"></div>

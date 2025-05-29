@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import NewsletterSection from '../components/home/NewsletterSection'
 
 export const metadata: Metadata = {
   title: 'May 2025: Mindful Automation - The Pythoness Programmer',
@@ -25,6 +26,74 @@ export default function May2025LandingPage(): ReactNode {
               We explored how simple if/then thinking can help neurodivergent brains create essential external systems while maintaining control over tech spending 
               and avoiding automation overwhelm.
             </p>
+          </section>
+
+          {/* Podcast Embed Section */}
+          <section className="mb-12 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark text-center">Listen to the Mindful Automation Episode</h2>
+            <div className="w-full">
+              <iframe 
+                style={{borderRadius: '12px'}} 
+                src="https://open.spotify.com/embed/episode/6qqXLsuiHMGisicEDRLSye?utm_source=generator" 
+                width="100%" 
+                height="152" 
+                frameBorder="0" 
+                allowFullScreen 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy"
+              />
+            </div>
+          </section>
+
+          {/* Y.O.U. Framework Section */}
+          <section className="mb-12 bg-white/90 border border-brand-green-accent rounded-2xl p-8 shadow-xl">
+            <h2 className="text-3xl font-semibold mb-6 text-brand-green-dark text-center">The Y.O.U. Framework</h2>
+            
+            <div className="grid gap-8 md:grid-cols-3">
+              {/* Y - Your Unique Brain */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4 text-brand-green-dark">Y - Your Unique Brain</h3>
+                <ul className="list-disc pl-5 text-brand-green-dark">
+                  <li>Understanding your natural information processing</li>
+                  <li>Identifying energy-draining vs. energizing tasks</li>
+                  <li>Recognizing your natural thinking patterns</li>
+                  <li>Working with your existing tools</li>
+                </ul>
+              </div>
+
+              {/* O - Observe & Optimize */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4 text-brand-green-dark">O - Observe & Optimize</h3>
+                <ul className="list-disc pl-5 text-brand-green-dark">
+                  <li>Noticing workflow friction points</li>
+                  <li>Tracking daily energy patterns</li>
+                  <li>Monitoring cognitive load impact</li>
+                  <li>Visualizing your workflows</li>
+                </ul>
+              </div>
+
+              {/* U - Uncomplicate & Understand */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-semibold mb-4 text-brand-green-dark">U - Uncomplicate & Understand</h3>
+                <ul className="list-disc pl-5 text-brand-green-dark">
+                  <li>Starting with small, focused automations</li>
+                  <li>Building clear error handling</li>
+                  <li>Creating brain-friendly documentation</li>
+                  <li>Maintaining simple backup processes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center">
+              <Link 
+                href="https://www.canva.com/design/DAGorHEU8wY/lXRelW3MghRn5kUZKERZUw/view?utm_content=DAGorHEU8wY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab887fd650"
+                className="inline-block bg-brand-green-accent text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition-colors text-lg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Your Y.O.U. Framework Template
+              </Link>
+            </div>
           </section>
 
           {/* Weekly Content Sections */}
@@ -97,7 +166,7 @@ export default function May2025LandingPage(): ReactNode {
                 </ul>
               </div>
               <Link 
-                href="https://www.canva.com/design/your-template-link"
+                href="https://www.canva.com/design/DAGorHEU8wY/lXRelW3MghRn5kUZKERZUw/view?utm_content=DAGorHEU8wY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab887fd650"
                 className="inline-block bg-brand-purple-dark text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-colors"
               >
                 Get Canva Whiteboard Template
@@ -105,36 +174,8 @@ export default function May2025LandingPage(): ReactNode {
             </section>
           </div>
 
-          {/* Resources Section */}
-          <section className="mt-12 bg-white/90 border border-brand-green-accent rounded-2xl p-6 text-center shadow-xl">
-            <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark">Additional Resources</h2>
-            <div className="grid gap-4">
-              <Link 
-                href="https://open.spotify.com/show/0VLZyZrD50Pk9JcyJL2AdX"
-                className="text-brand-green-accent hover:text-brand-purple-dark"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Listen on Spotify
-              </Link>
-              <Link 
-                href="https://www.youtube.com/playlist?list=PLl8kW5pVKC-p8kzPChiNPoEHkfi_kR1LA"
-                className="text-brand-green-accent hover:text-brand-purple-dark"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Watch on YouTube
-              </Link>
-              <Link 
-                href="https://pythoness.substack.com/"
-                className="text-brand-green-accent hover:text-brand-purple-dark"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read on Substack
-              </Link>
-            </div>
-          </section>
+          {/* Newsletter Section */}
+          <NewsletterSection bgColor="bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark" />
         </div>
       </div>
     </main>
