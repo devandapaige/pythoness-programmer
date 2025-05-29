@@ -3,35 +3,99 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import NewsletterSection from '../components/home/NewsletterSection'
 
-export const metadata: Metadata = {
-  title: 'May 2025: Mindful Automation - The Pythoness Programmer',
-  description: 'Explore mindful automation strategies for neurodivergent developers, focusing on systems that work with your existing tools and energy patterns.',
+// Define types for our content
+interface FrameworkPillar {
+  title: string;
+  quickTip: string;
+  reflectionQuestion: string;
+  keyPoints: string[];
 }
+
+// Enhanced metadata for better SEO
+export const metadata: Metadata = {
+  title: 'Mindful Automation: Systems That Work For You - The Pythoness Programmer',
+  description: 'Explore mindful automation strategies for neurodivergent developers, focusing on systems that work with your existing tools and energy patterns.',
+  openGraph: {
+    title: 'Mindful Automation: Systems That Work For You',
+    description: 'Unlock sustainable automation strategies tailored for neurodivergent thinkers—no new software subscriptions required.',
+    type: 'website',
+    url: 'https://www.pythonessprogrammer.com/mindful-automation',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mindful Automation: Systems That Work For You',
+    description: 'Unlock sustainable automation strategies tailored for neurodivergent thinkers—no new software subscriptions required.',
+  },
+}
+
+// Content data
+const frameworkPillars: FrameworkPillar[] = [
+  {
+    title: 'Y - Your Unique Brain',
+    quickTip: 'Start by identifying your peak focus hours',
+    reflectionQuestion: 'When do you feel most energized and focused?',
+    keyPoints: [
+      'Understanding your natural information processing',
+      'Identifying energy-draining vs. energizing tasks',
+      'Recognizing your natural thinking patterns',
+    ],
+  },
+  {
+    title: 'O - Observe & Optimize',
+    quickTip: 'Group similar tasks to reduce context switching',
+    reflectionQuestion: 'What patterns do you notice in your most productive days?',
+    keyPoints: [
+      'Noticing workflow friction points',
+      'Tracking daily energy patterns',
+      'Monitoring cognitive load impact',
+    ],
+  },
+  {
+    title: 'U - Uncomplicate & Understand',
+    quickTip: 'Document one automation win each week',
+    reflectionQuestion: 'What small automation has made the biggest difference?',
+    keyPoints: [
+      'Starting with small, focused automations',
+      'Building clear error handling',
+      'Creating brain-friendly documentation',
+    ],
+  },
+];
+
+// Y.O.U. Framework Pillar Colors (for future reference):
+// Y: Yellow - fill #ffde59, border #ffd52c
+// O: Orange - fill #ffbd59, border #ff914d
+// U: Blue   - fill #5ce1e6, border #0cc0df
 
 export default function May2025LandingPage(): ReactNode {
   return (
     <main className="min-h-screen pt-20 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
-          <h1 className="font-display font-normal text-4xl md:text-5xl text-white mb-6">
-            Mindful Automation: Systems That Work For You
-          </h1>
-          
-          {/* Overview Section */}
-          <section className="mb-12">
-            <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide mb-6">
-              May 2025 focused on &ldquo;Mindful Automation&rdquo; - setting up systems that work with your existing tools rather than adding new software subscriptions.
+          {/* Hero Section with Value Proposition */}
+          <section className="mb-6 mt-0 text-center">
+            <h1 className="font-display text-4xl md:text-5xl text-white mb-2 mt-0">
+              Mindful Automation: Systems That Work For Y.O.U.
+            </h1>
+            <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide mb-4 mt-0">
+              Unlock sustainable automation strategies tailored for neurodivergent thinkers—no new software subscriptions required.
             </p>
-            <p className="text-lg md:text-xl text-white font-light leading-relaxed">
-              We explored how simple if/then thinking can help neurodivergent brains create essential external systems while maintaining control over tech spending 
-              and avoiding automation overwhelm.
-            </p>
+            <Link 
+              href="#you-framework"
+              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
+              aria-label="Start learning about the Y.O.U. Framework"
+            >
+              Start the Y.O.U. Framework
+            </Link>
           </section>
 
-          {/* Podcast Embed Section */}
-          <section className="mb-12 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
-            <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark text-center">Listen to the Mindful Automation Episode</h2>
-            <div className="w-full">
+          {/* Podcast Section */}
+          <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl font-display mb-2 text-brand-green-dark text-center mt-0 mt-1">Listen to the Mindful Automation Episode</h2>
+            <p className="text-brand-green-dark text-center mb-2 mt-0">
+              Learn how to create automation systems that work with your unique brain patterns, not against them.
+            </p>
+            <div className="w-full mt-0">
               <iframe 
                 style={{borderRadius: '12px'}} 
                 src="https://open.spotify.com/embed/episode/6qqXLsuiHMGisicEDRLSye?utm_source=generator" 
@@ -41,141 +105,211 @@ export default function May2025LandingPage(): ReactNode {
                 allowFullScreen 
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                 loading="lazy"
+                title="Mindful Automation Podcast Episode"
+                aria-label="Spotify podcast player for Mindful Automation episode"
               />
             </div>
           </section>
 
           {/* Y.O.U. Framework Section */}
-          <section className="mb-12 bg-white/90 border border-brand-green-accent rounded-2xl p-8 shadow-xl">
-            <h2 className="text-3xl font-semibold mb-6 text-brand-green-dark text-center">The Y.O.U. Framework</h2>
-            
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Y - Your Unique Brain */}
-              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-4 text-brand-green-dark">Y - Your Unique Brain</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Understanding your natural information processing</li>
-                  <li>Identifying energy-draining vs. energizing tasks</li>
-                  <li>Recognizing your natural thinking patterns</li>
-                  <li>Working with your existing tools</li>
-                </ul>
-              </div>
-
-              {/* O - Observe & Optimize */}
-              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-4 text-brand-green-dark">O - Observe & Optimize</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Noticing workflow friction points</li>
-                  <li>Tracking daily energy patterns</li>
-                  <li>Monitoring cognitive load impact</li>
-                  <li>Visualizing your workflows</li>
-                </ul>
-              </div>
-
-              {/* U - Uncomplicate & Understand */}
-              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-4 text-brand-green-dark">U - Uncomplicate & Understand</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Starting with small, focused automations</li>
-                  <li>Building clear error handling</li>
-                  <li>Creating brain-friendly documentation</li>
-                  <li>Maintaining simple backup processes</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-8 text-center">
-              <Link 
-                href="https://www.canva.com/design/DAGorHEU8wY/lXRelW3MghRn5kUZKERZUw/view?utm_content=DAGorHEU8wY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab887fd650"
-                className="inline-block bg-brand-green-accent text-white px-8 py-3 rounded-md hover:bg-opacity-90 transition-colors text-lg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Your Y.O.U. Framework Template
-              </Link>
+          <section id="you-framework" className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+            <h2 className="text-4xl font-display mb-2 text-brand-green-dark text-center tracking-tight mt-0 mt-1">THE Y.O.U. FRAMEWORK</h2>
+            <p className="text-lg md:text-xl text-brand-green-dark mb-4 text-center max-w-2xl mx-auto mt-0" style={{lineHeight: 1.4}}>
+              The Y.O.U. Framework helps you build automation systems that work with your unique thinking style, not against it. No more forcing yourself into rigid productivity systems that don&apos;t fit your brain.
+            </p>
+            <div className="grid gap-6 md:grid-cols-3 mt-0">
+              {frameworkPillars.map((pillar, i) => {
+                // Assign color classes and hex codes for each pillar
+                const colorStyles = [
+                  {
+                    border: 'border-[#ffd52c]',
+                    bg: 'bg-[#ffde59]/30',
+                    iconBg: '#ffde59',
+                    iconBorder: '#ffd52c',
+                    letter: 'Y',
+                  },
+                  {
+                    border: 'border-[#ff914d]',
+                    bg: 'bg-[#ffbd59]/30',
+                    iconBg: '#ffbd59',
+                    iconBorder: '#ff914d',
+                    letter: 'O',
+                  },
+                  {
+                    border: 'border-[#0cc0df]',
+                    bg: 'bg-[#5ce1e6]/30',
+                    iconBg: '#5ce1e6',
+                    iconBorder: '#0cc0df',
+                    letter: 'U',
+                  },
+                ][i];
+                // Remove the letter from the title for the header
+                const headerTitle = pillar.title.replace(/^\w\s-\s/, '');
+                return (
+                  <div
+                    key={pillar.title}
+                    className={`relative rounded-2xl shadow-lg p-5 md:p-6 border-t-8 ${colorStyles.border} ${colorStyles.bg} hover:scale-105 transition-transform duration-200`}
+                  >
+                    {/* Icon Circle with Letter */}
+                    <div className="mb-3 flex justify-center">
+                      <span style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: 44,
+                        height: 44,
+                        borderRadius: '50%',
+                        background: colorStyles.iconBg,
+                        border: `3px solid ${colorStyles.iconBorder}`,
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+                        fontWeight: 700,
+                        fontSize: 24,
+                        color: '#234236', // brand-green-dark
+                        letterSpacing: '0.05em',
+                        fontFamily: 'Norwester, Arial, sans-serif',
+                      }}>
+                        {colorStyles.letter}
+                      </span>
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-display mb-2 text-brand-green-dark text-center mt-1" style={{lineHeight: 1.2}}>{headerTitle}</h3>
+                    <div className="mb-2 text-brand-purple-dark font-semibold text-center" style={{lineHeight: 1.2}}>Quick Tip:</div>
+                    <p className="mb-3 text-center" style={{lineHeight: 1.4}}>{pillar.quickTip}</p>
+                    <div className="mb-1 text-brand-green-dark font-semibold text-center" style={{lineHeight: 1.2}}>Ask Yourself:</div>
+                    <p className="mb-3 text-center" style={{lineHeight: 1.4}}>{pillar.reflectionQuestion}</p>
+                    <ul className="list-disc pl-5 text-brand-green-dark text-sm" style={{lineHeight: 1.4}}>
+                      {pillar.keyPoints.map((point, pointIndex) => (
+                        <li key={pointIndex}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </section>
 
-          {/* Weekly Content Sections */}
-          <div className="grid gap-8 md:grid-cols-2">
-            {/* Week 1 */}
-            <section className="bg-white/90 p-6 rounded-lg shadow-md border border-brand-green-accent">
-              <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark">Week 1: The Y.O.U. Framework</h2>
-              <div className="mb-4">
-                <h3 className="font-semibold mb-2 text-brand-green-dark">Key Components:</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Understanding your unique brain patterns</li>
-                  <li>Learning to observe and optimize your workflow</li>
-                  <li>Starting with simple, maintainable automations</li>
-                </ul>
-              </div>
-              <div className="mb-4">
-                <h3 className="font-semibold mb-2 text-brand-green-dark">The 2-Minute Y.O.U. Check-In:</h3>
-                <ol className="list-decimal pl-5 text-brand-green-dark">
-                  <li>Does this reduce my cognitive load?</li>
-                  <li>Can I maintain this system?</li>
-                  <li>What&apos;s my backup plan?</li>
-                  <li>Can I do this with my existing tools?</li>
-                </ol>
-              </div>
-            </section>
+          {/* PDF Resource Section */}
+          <section className="mb-6 mt-0 bg-gradient-to-br from-[#ffde59]/30 via-[#ffbd59]/30 to-[#5ce1e6]/30 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl text-center">
+            <h2 className="text-3xl font-display mb-4 text-white mt-0">Download the Y.O.U. Framework Guide</h2>
+            <p className="text-lg text-white mb-6 max-w-2xl mx-auto">
+              Get your comprehensive guide to implementing the Y.O.U. Framework in your daily workflow. Includes worksheets, templates, and step-by-step instructions.
+            </p>
+            <Link 
+              href="/mindful-automation/youframework.pdf"
+              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download PDF Guide
+            </Link>
+          </section>
 
-            {/* Week 2 */}
-            <section className="bg-white/90 p-6 rounded-lg shadow-md border border-brand-green-accent">
-              <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark">Week 2: Energy-Aware Automation</h2>
-              <div className="mb-4">
-                <h3 className="font-semibold mb-2 text-brand-green-dark">Daily Energy Structure:</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Morning (Low Energy): Morning pages, calendar review</li>
-                  <li>First Work Block (High Energy): Deep work, no interruptions</li>
-                  <li>Afternoon Break (Low Energy): Admin tasks, meal prep</li>
-                  <li>Second Work Block (High Energy): Creative work, content creation</li>
-                </ul>
-              </div>
-            </section>
+          {/* Weekly Recaps Section */}
+          <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 md:p-8 shadow-xl">
+            <h2 className="text-3xl font-display mb-2 text-brand-green-dark text-center mt-0 mt-1">WEEKLY DEEP DIVES</h2>
+            <p className="text-lg text-brand-green-dark mb-4 text-center mt-0">
+              Each week we explore a different aspect of mindful automation, with practical resources and real-world examples.
+            </p>
 
-            {/* Week 3 */}
-            <section className="bg-white/90 p-6 rounded-lg shadow-md border border-brand-green-accent">
-              <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark">Week 3: Error-Proofing Your Systems</h2>
-              <div className="mb-4">
-                <h3 className="font-semibold mb-2 text-brand-green-dark">Key Elements:</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Creating robust backup processes</li>
-                  <li>Building clear documentation</li>
-                  <li>Setting up effective error notifications</li>
-                  <li>Maintaining systems without overwhelm</li>
-                </ul>
+            <div className="space-y-8">
+              {/* Week 1 */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-display mb-4 text-brand-green-dark mt-1">Week 1: Your Unique Brain</h3>
+                <p className="text-brand-green-dark mb-4">
+                  Understanding your unique brain patterns and learning to observe and optimize your workflow. Start with simple, maintainable automations.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link 
+                    href="https://newsletter.pythoness.xyz/p/the-you-framework"
+                    className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read Newsletter
+                  </Link>
+                </div>
               </div>
-              <Link 
-                href="/mindful-automation/error-proofing-worksheet.pdf"
-                className="inline-block bg-brand-green-accent text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-colors"
-              >
-                Download Error-Proofing Worksheet
-              </Link>
-            </section>
 
-            {/* Week 4 */}
-            <section className="bg-white/90 p-6 rounded-lg shadow-md border border-brand-green-accent">
-              <h2 className="text-2xl font-semibold mb-4 text-brand-green-dark">Week 4: Bringing It All Together</h2>
-              <div className="mb-4">
-                <h3 className="font-semibold mb-2 text-brand-green-dark">Key Components:</h3>
-                <ul className="list-disc pl-5 text-brand-green-dark">
-                  <li>Reviewing and refining your automation strategy</li>
-                  <li>Creating your personal automation playbook</li>
-                  <li>Building a support system for your workflows</li>
-                </ul>
+              {/* Week 2 */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-display mb-4 text-brand-green-dark mt-1">Week 2: Energy-Aware Automation</h3>
+                <p className="text-brand-green-dark mb-4">
+                  Mapping your daily energy patterns, creating automations that respect your boundaries, and building in rest and recovery time.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link 
+                    href="https://newsletter.pythoness.xyz/p/mindful-automation-systems"
+                    className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read Newsletter
+                  </Link>
+                </div>
               </div>
-              <Link 
-                href="https://www.canva.com/design/DAGorHEU8wY/lXRelW3MghRn5kUZKERZUw/view?utm_content=DAGorHEU8wY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab887fd650"
-                className="inline-block bg-brand-purple-dark text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition-colors"
-              >
-                Get Canva Whiteboard Template
-              </Link>
-            </section>
-          </div>
+
+              {/* Week 3 */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-display mb-4 text-brand-green-dark mt-1">Week 3: Error-Proofing Your Systems</h3>
+                <p className="text-brand-green-dark mb-4">
+                  Creating robust backup processes, building clear documentation that works for your brain, and setting up effective error notifications.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link 
+                    href="https://newsletter.pythoness.xyz/p/error-proofing-your-automation"
+                    className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read Newsletter
+                  </Link>
+                  <Link 
+                    href="/mindful-automation/error-proofing-worksheet.pdf"
+                    className="inline-block bg-brand-green-accent text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Download Worksheet
+                  </Link>
+                </div>
+              </div>
+
+              {/* Week 4 */}
+              <div className="bg-brand-green-dark/10 p-6 rounded-lg">
+                <h3 className="text-2xl font-display mb-4 text-brand-green-dark mt-1">Week 4: Bringing It All Together</h3>
+                <p className="text-brand-green-dark mb-4">
+                  Reviewing and refining your automation strategy, creating your personal automation playbook, and building a support system for your automated workflows.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link 
+                    href="https://newsletter.pythoness.xyz/p/bringing-it-all-together-mindful-automation-1"
+                    className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Read Newsletter
+                  </Link>
+                  <Link 
+                    href="https://www.canva.com/design/DAGorHEU8wY/lXRelW3MghRn5kUZKERZUw/view?utm_content=DAGorHEU8wY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab887fd650"
+                    className="inline-block bg-brand-green-accent text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Whiteboard
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
 
           {/* Newsletter Section */}
-          <NewsletterSection bgColor="bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark" />
+          <section className="mt-12">
+            <NewsletterSection bgColor="bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark" />
+          </section>
+
+          {/* Update Banner - Moved to bottom */}
+          <div className="mt-12 bg-brand-green-accent/20 text-white text-center py-2 px-4 rounded-lg" role="status" aria-label="Content update status">
+            <p className="text-sm">✨ Last updated: May 2025 ✨</p>
+          </div>
         </div>
       </div>
     </main>
