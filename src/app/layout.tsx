@@ -62,7 +62,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} ${norwester.variable} font-sans bg-brand-cream text-brand-green-dark antialiased`}>
+      <body className={`${openSans.variable} ${norwester.variable} font-sans bg-brand-cream text-brand-green-dark antialiased [&_h1]:font-display [&_h2]:font-display [&_h3]:font-display [&_h4]:font-display [&_h5]:font-display [&_h6]:font-display`}>
         <Hotjar />
         <CookieYes />
         <RootLayoutClient>
