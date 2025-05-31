@@ -66,6 +66,11 @@ const bookingLinks: LinkItem[] = [
 // Resource links - easy to update
 const resourceLinks: LinkItem[] = [
   {
+    name: 'Mindful Automation',
+    url: '/mindful-automation',
+    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
+  },
+  {
     name: 'Vibe Coding Cheatsheet',
     url: '/vibe-coding-cheatsheet',
     color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
