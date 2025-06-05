@@ -1,6 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { compileMDX } from 'next-mdx-remote/rsc'
+import { useMDXComponents } from './mdx-components'
 import { serialize } from 'next-mdx-remote/serialize'
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { notFound } from 'next/navigation'
@@ -14,15 +16,15 @@ import { isValidString, sanitizeString } from './validation'
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
 const contentDirectory = path.join(process.cwd(), 'content')
 
-export interface BlogPost {
+export type BlogPost = {
   slug: string
   title: string
   date: string
   description: string
   author: string
   tags: string[]
-  content: MDXRemoteSerializeResult
-  image?: string
+  image: string
+  content: any
 }
 
 export interface MDXContent {
@@ -45,31 +47,15 @@ export interface MDXContent {
  */
 export async function getAllPosts(): Promise<BlogPost[]> {
   const files = fs.readdirSync(POSTS_DIR)
-  
   const posts = await Promise.all(
     files
-      .filter(file => file.endsWith('.mdx'))
+      .filter((file) => file.endsWith('.mdx'))
       .map(async (file) => {
-        const filePath = path.join(POSTS_DIR, file)
-        const source = fs.readFileSync(filePath, 'utf8')
-        const { data, content } = matter(source)
         const slug = file.replace(/\.mdx$/, '')
-        const mdxSource = await serialize(content, { scope: data })
-        return {
-          slug,
-          title: data.title,
-          date: data.date,
-          description: data.description,
-          author: data.author,
-          tags: data.tags || [],
-          content: mdxSource,
-          image: data.image,
-        }
+        return getPostBySlug(slug)
       })
   )
-
-  // Sort posts by date in descending order (newest first)
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  return posts.filter((post): post is BlogPost => post !== null)
 }
 
 /**
@@ -83,26 +69,34 @@ export async function getAllPosts(): Promise<BlogPost[]> {
  * @returns Promise resolving to a BlogPost object
  * @throws Triggers a 404 page if the post is not found
  */
-export async function getPostBySlug(slug: string): Promise<BlogPost> {
-  const filePath = path.join(POSTS_DIR, `${slug}.mdx`)
-  
-  try {
-    const source = fs.readFileSync(filePath, 'utf8')
-    const { data, content } = matter(source)
-    const mdxSource = await serialize(content, { scope: data })
-    return {
-      slug,
-      title: data.title,
-      date: data.date,
-      description: data.description,
-      author: data.author,
-      tags: data.tags || [],
-      content: mdxSource,
-      image: data.image,
-    }
-  } catch (error) {
-    logError(`Error reading post with slug "${slug}"`, error, { filePath })
-    notFound()
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  const realSlug = slug.replace(/\.mdx$/, '')
+  const fullPath = path.join(POSTS_DIR, `${realSlug}.mdx`)
+
+  if (!fs.existsSync(fullPath)) {
+    return null
+  }
+
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
+  const { data, content } = matter(fileContents)
+
+  const { content: compiledContent } = await compileMDX({
+    source: content,
+    components: useMDXComponents({}),
+    options: {
+      parseFrontmatter: true,
+    },
+  })
+
+  return {
+    slug: realSlug,
+    title: data.title,
+    date: data.date,
+    description: data.description,
+    author: data.author,
+    tags: data.tags,
+    image: data.image,
+    content: compiledContent,
   }
 }
 
@@ -150,14 +144,11 @@ export async function getMDXContent(filepath: string): Promise<MDXContent> {
       throw new Error('Invalid MDX content: missing required frontmatter')
     }
 
-    // Serialize the MDX content
-    const mdxSource = await serialize(content, { 
-      scope: data,
-      parseFrontmatter: true
+    // Serialize the MDX content with the latest version's approach
+    const mdxSource = await serialize(content, {
+      parseFrontmatter: false,
+      scope: data
     })
-
-    console.log('MDX Source type:', typeof mdxSource)
-    console.log('MDX Source keys:', Object.keys(mdxSource))
 
     return {
       source: mdxSource,

@@ -9,10 +9,16 @@ export const metadata = {
 
 export default async function PrivacyPolicy() {
   const { source, frontmatter } = await getMDXContent('legal/privacy-policy.mdx')
+  const lastUpdated = typeof frontmatter.lastUpdated === 'string' 
+    ? frontmatter.lastUpdated 
+    : new Date(frontmatter.lastUpdated).toISOString()
 
   return (
-    <LegalLayout title={frontmatter.title} lastUpdated={frontmatter.lastUpdated}>
-      <MDXRemote source={source.compiledSource} />
+    <LegalLayout 
+      title={frontmatter.title} 
+      lastUpdated={lastUpdated}
+    >
+      <MDXRemote source={source} />
     </LegalLayout>
   )
 } 

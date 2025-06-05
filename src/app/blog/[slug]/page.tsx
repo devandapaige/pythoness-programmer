@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { PostMetadata } from '@/components/blog/PostMetadata'
-import { MDXRemote } from 'next-mdx-remote/rsc'
 import PostNavigation from '@/components/blog/PostNavigation'
 import type { BlogPost } from '@/lib/mdx'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
@@ -50,7 +49,7 @@ export default async function PostPage({ params }: PostPageProps) {
         image={post.image}
       />
       <div className="blog-content prose prose-lg max-w-none prose-invert">
-        <MDXRemote source={post.content.compiledSource} />
+        {post.content}
       </div>
       <PostNavigation previousPost={previousPost} nextPost={nextPost} />
     </article>

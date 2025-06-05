@@ -9,10 +9,16 @@ export const metadata = {
 
 export default async function TermsOfService() {
   const { source, frontmatter } = await getMDXContent('legal/terms-of-service.mdx')
+  const lastUpdated = typeof frontmatter.lastUpdated === 'string' 
+    ? frontmatter.lastUpdated 
+    : new Date(frontmatter.lastUpdated).toISOString()
 
   return (
-    <LegalLayout title={frontmatter.title} lastUpdated={frontmatter.lastUpdated}>
-      <MDXRemote source={source.compiledSource} />
+    <LegalLayout 
+      title={frontmatter.title} 
+      lastUpdated={lastUpdated}
+    >
+      <MDXRemote source={source} />
     </LegalLayout>
   )
 } 
