@@ -14,7 +14,7 @@ export default function TagFilter({ posts, selectedTag, onTagSelect }: TagFilter
   const urlTag = searchParams.get('tag')
   
   // Get unique tags from all posts
-  const allTags = Array.from(new Set(posts.flatMap(post => post.tags))).sort()
+  const allTags = Array.from(new Set(posts.flatMap(post => post.frontmatter.tags))).sort()
 
   // If URL has a tag parameter, use that as the selected tag
   const effectiveSelectedTag = urlTag || selectedTag

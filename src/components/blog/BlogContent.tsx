@@ -65,7 +65,7 @@ export function BlogContent({ posts }: BlogContentProps) {
   }, [selectedTag, router])
 
   const filteredPosts = selectedTag
-    ? posts.filter(post => post.tags.includes(selectedTag))
+    ? posts.filter(post => post.frontmatter.tags.includes(selectedTag))
     : posts
 
   return (
@@ -77,20 +77,20 @@ export function BlogContent({ posts }: BlogContentProps) {
       />
       <div className="space-y-8">
         {filteredPosts.map((post) => (
-          <article key={post.slug} className="border-b border-gray-200 pb-8">
+          <article key={post.frontmatter.slug} className="border-b border-gray-200 pb-8">
             <h2 className="text-2xl font-display text-[#F4F1DE]">
-              <Link href={`/blog/${post.slug}`} className="hover:text-brand-green">
-                {post.title}
+              <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-green">
+                {post.frontmatter.title}
               </Link>
             </h2>
             <div className="mt-2 text-sm text-white/60">
-              <time dateTime={post.date}>{new Date(post.date).toLocaleDateString()}</time>
+              <time dateTime={post.frontmatter.date}>{new Date(post.frontmatter.date).toLocaleDateString()}</time>
               <span className="mx-2">•</span>
-              <span>{post.author}</span>
+              <span>{post.frontmatter.author}</span>
             </div>
-            <p className="mt-4 text-white/80">{post.description}</p>
+            <p className="mt-4 text-white/80">{post.frontmatter.description}</p>
             <div className="mt-4">
-              {post.tags.map((tag) => (
+              {post.frontmatter.tags.map((tag) => (
                 <TagPill key={tag} tag={tag} />
               ))}
             </div>

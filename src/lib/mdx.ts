@@ -1,14 +1,12 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { compileMDX } from 'next-mdx-remote/rsc'
-import { useMDXComponents } from './mdx-components'
 
 // Constants for file paths to improve maintainability and avoid hardcoding
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
-const contentDirectory = path.join(process.cwd(), 'content')
+// const contentDirectory = path.join(process.cwd(), 'content')
 
-export type BlogPost = {
+export type BlogPostFrontmatter = {
   slug: string
   title: string
   date: string
@@ -16,7 +14,11 @@ export type BlogPost = {
   author: string
   tags: string[]
   image: string
-  content: JSX.Element
+}
+
+export type BlogPost = {
+  frontmatter: BlogPostFrontmatter
+  content: string
 }
 
 /**
@@ -29,15 +31,14 @@ export type BlogPost = {
  */
 export async function getAllPosts(): Promise<BlogPost[]> {
   const files = fs.readdirSync(POSTS_DIR)
-  const posts = await Promise.all(
-    files
-      .filter((file) => file.endsWith('.mdx'))
-      .map(async (file) => {
-        const slug = file.replace(/\.mdx$/, '')
-        return getPostBySlug(slug)
-      })
-  )
-  return posts.filter((post): post is BlogPost => post !== null)
+  const posts = files
+    .filter((file) => file.endsWith('.mdx'))
+    .map((file) => {
+      const slug = file.replace(/\.mdx$/, '')
+      return getPostBySlugSync(slug)
+    })
+    .filter(Boolean) as BlogPost[]
+  return posts
 }
 
 /**
@@ -51,7 +52,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
  * @returns Promise resolving to a BlogPost object
  * @throws Triggers a 404 page if the post is not found
  */
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+export function getPostBySlugSync(slug: string): BlogPost | null {
   const realSlug = slug.replace(/\.mdx$/, '')
   const fullPath = path.join(POSTS_DIR, `${realSlug}.mdx`)
 
@@ -62,23 +63,20 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  const mdxComponents = useMDXComponents({});
-  const { content: compiledContent } = await compileMDX({
-    source: content,
-    components: mdxComponents,
-    options: {
-      parseFrontmatter: true,
-    },
-  })
-
   return {
-    slug: realSlug,
-    title: data.title,
-    date: data.date,
-    description: data.description,
-    author: data.author,
-    tags: data.tags,
-    image: data.image,
-    content: compiledContent,
+    frontmatter: {
+      slug: realSlug,
+      title: data.title,
+      date: data.date,
+      description: data.description,
+      author: data.author,
+      tags: data.tags,
+      image: data.image,
+    },
+    content,
   }
+}
+
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  return getPostBySlugSync(slug)
 } 

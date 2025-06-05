@@ -14,7 +14,10 @@ export default async function BlogPage() {
   // Ensure all dates are properly formatted strings
   const processedPosts = posts.map(post => ({
     ...post,
-    date: typeof post.date === 'string' ? post.date : new Date(post.date).toISOString()
+    frontmatter: {
+      ...post.frontmatter,
+      date: typeof post.frontmatter.date === 'string' ? post.frontmatter.date : new Date(post.frontmatter.date).toISOString()
+    }
   }))
 
   return (

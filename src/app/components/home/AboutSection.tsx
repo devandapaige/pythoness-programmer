@@ -62,9 +62,11 @@ export default function AboutSection() {
               {/* Main photo */}
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 {photo?.main ? (
-                  <img
+                  <Image
                     src={photo.main}
                     alt="Pythoness Programmer"
+                    width={400}
+                    height={400}
                     style={{ width: '100%', height: 'auto', backgroundColor: 'transparent' }}
                   />
                 ) : (

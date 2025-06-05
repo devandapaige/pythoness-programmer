@@ -13,7 +13,7 @@ export default function TermsOfService() {
       <h1>Terms of Service</h1>
       <p><strong>Last updated:</strong> April 11, 2025</p>
       <h2>Agreement to Terms</h2>
-      <p>By accessing and using Pythoness Programmer's website and services, you agree to be bound by these Terms of Service.</p>
+      <p>By accessing and using Pythoness Programmer&apos;s website and services, you agree to be bound by these Terms of Service.</p>
       <h2>Services Description</h2>
       <p>Pythoness Programmer provides:</p>
       <ul>
