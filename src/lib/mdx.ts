@@ -1,7 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { compileMDX } from 'next-mdx-remote/rsc'
+import { serialize } from 'next-mdx-remote/serialize'
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { notFound } from 'next/navigation'
 import { readFileSync } from 'fs'
 import { join } from 'path'
@@ -20,12 +21,12 @@ export interface BlogPost {
   description: string
   author: string
   tags: string[]
-  content: string
+  content: MDXRemoteSerializeResult
   image?: string
 }
 
 export interface MDXContent {
-  content: string
+  source: MDXRemoteSerializeResult
   frontmatter: {
     title: string
     lastUpdated: string
@@ -53,7 +54,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         const source = fs.readFileSync(filePath, 'utf8')
         const { data, content } = matter(source)
         const slug = file.replace(/\.mdx$/, '')
-        
+        const mdxSource = await serialize(content, { scope: data })
         return {
           slug,
           title: data.title,
@@ -61,7 +62,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           description: data.description,
           author: data.author,
           tags: data.tags || [],
-          content,
+          content: mdxSource,
           image: data.image,
         }
       })
@@ -88,7 +89,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
   try {
     const source = fs.readFileSync(filePath, 'utf8')
     const { data, content } = matter(source)
-    
+    const mdxSource = await serialize(content, { scope: data })
     return {
       slug,
       title: data.title,
@@ -96,37 +97,13 @@ export async function getPostBySlug(slug: string): Promise<BlogPost> {
       description: data.description,
       author: data.author,
       tags: data.tags || [],
-      content,
+      content: mdxSource,
       image: data.image,
     }
   } catch (error) {
     logError(`Error reading post with slug "${slug}"`, error, { filePath })
     notFound()
   }
-}
-
-/**
- * Compiles MDX content into React components
- * 
- * Takes raw MDX content as input and compiles it into React components
- * using the next-mdx-remote library.
- * 
- * @param content - Raw MDX content string
- * @returns Promise resolving to the compiled MDX content
- */
-export async function compileMDXContent(content: string) {
-  const { content: compiledContent } = await compileMDX({
-    source: content,
-    options: {
-      parseFrontmatter: true,
-      mdxOptions: {
-        remarkPlugins: [],
-        rehypePlugins: [],
-      },
-    },
-  })
-
-  return compiledContent
 }
 
 /**
@@ -173,8 +150,17 @@ export async function getMDXContent(filepath: string): Promise<MDXContent> {
       throw new Error('Invalid MDX content: missing required frontmatter')
     }
 
+    // Serialize the MDX content
+    const mdxSource = await serialize(content, { 
+      scope: data,
+      parseFrontmatter: true
+    })
+
+    console.log('MDX Source type:', typeof mdxSource)
+    console.log('MDX Source keys:', Object.keys(mdxSource))
+
     return {
-      content,
+      source: mdxSource,
       frontmatter: data as MDXContent['frontmatter'],
     }
   } catch (error) {
@@ -185,32 +171,4 @@ export async function getMDXContent(filepath: string): Promise<MDXContent> {
     logError('Failed to load MDX content', error, { filepath: sanitizedPath })
     notFound()
   }
-}
-
-/**
- * Retrieves and compiles the Vibe Coding Cheatsheet content
- * 
- * This specialized function reads the vibe-coding-cheatsheet.mdx file,
- * extracts its frontmatter, and compiles the MDX content with the 
- * ContentSection component available for use within the MDX.
- * 
- * @returns Promise resolving to the compiled cheatsheet content as React components
- */
-export async function getVibeCheatsheetContent() {
-  const filePath = join(process.cwd(), 'content', 'vibe-coding-cheatsheet.mdx')
-  const source = readFileSync(filePath, 'utf8')
-  const { data: frontmatter } = matter(source)
-
-  const { content } = await compileMDX({
-    source,
-    options: { 
-      parseFrontmatter: true,
-      scope: frontmatter
-    },
-    components: {
-      ContentSection
-    }
-  })
-
-  return content
 } 

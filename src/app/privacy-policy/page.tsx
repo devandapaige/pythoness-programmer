@@ -8,11 +8,11 @@ export const metadata = {
 }
 
 export default async function PrivacyPolicy() {
-  const { content, frontmatter } = await getMDXContent('legal/privacy-policy.mdx')
+  const { source, frontmatter } = await getMDXContent('legal/privacy-policy.mdx')
 
   return (
     <LegalLayout title={frontmatter.title} lastUpdated={frontmatter.lastUpdated}>
-      <MDXRemote source={content} />
+      <MDXRemote source={source.compiledSource} />
     </LegalLayout>
   )
 } 

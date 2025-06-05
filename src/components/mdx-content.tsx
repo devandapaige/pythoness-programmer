@@ -1,10 +1,10 @@
-import { useMDXComponent } from 'next-contentlayer/hooks'
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 interface MDXContentProps {
-  code: string
+  source: MDXRemoteSerializeResult;
 }
 
-export function MDXContent({ code }: MDXContentProps) {
-  const Component = useMDXComponent(code)
-  return <Component />
+export function MDXContent({ source }: MDXContentProps) {
+  return <MDXRemote source={source} />;
 } 

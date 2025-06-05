@@ -8,11 +8,11 @@ export const metadata = {
 }
 
 export default async function TermsOfService() {
-  const { content, frontmatter } = await getMDXContent('legal/terms-of-service.mdx')
+  const { source, frontmatter } = await getMDXContent('legal/terms-of-service.mdx')
 
   return (
     <LegalLayout title={frontmatter.title} lastUpdated={frontmatter.lastUpdated}>
-      <MDXRemote source={content} />
+      <MDXRemote source={source.compiledSource} />
     </LegalLayout>
   )
 } 
