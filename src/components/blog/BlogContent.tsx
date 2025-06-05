@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { BlogPost } from '@/lib/mdx'
-import PostCard from './PostCard'
 import TagFilter from './TagFilter'
+import { TagPill } from './Tag'
 
 function OpenSourceNotice() {
   return (
@@ -49,7 +49,7 @@ interface BlogContentProps {
   posts: BlogPost[]
 }
 
-export default function BlogContent({ posts }: BlogContentProps) {
+export function BlogContent({ posts }: BlogContentProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const initialTag = searchParams.get('tag')
@@ -65,7 +65,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
   }, [selectedTag, router])
 
   const filteredPosts = selectedTag
-    ? posts.filter(post => post.tags.includes(selectedTag))
+    ? posts.filter(post => post.frontmatter.tags.includes(selectedTag))
     : posts
 
   return (
@@ -75,13 +75,26 @@ export default function BlogContent({ posts }: BlogContentProps) {
         selectedTag={selectedTag}
         onTagSelect={setSelectedTag}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="space-y-8">
         {filteredPosts.map((post) => (
-          <PostCard
-            key={post.slug}
-            post={post}
-            onTagClick={setSelectedTag}
-          />
+          <article key={post.frontmatter.slug} className="border-b border-gray-200 pb-8">
+            <h2 className="text-2xl font-display text-[#F4F1DE]">
+              <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-green">
+                {post.frontmatter.title}
+              </Link>
+            </h2>
+            <div className="mt-2 text-sm text-white/60">
+              <time dateTime={post.frontmatter.date}>{new Date(post.frontmatter.date).toLocaleDateString()}</time>
+              <span className="mx-2">•</span>
+              <span>{post.frontmatter.author}</span>
+            </div>
+            <p className="mt-4 text-white/80">{post.frontmatter.description}</p>
+            <div className="mt-4">
+              {post.frontmatter.tags.map((tag) => (
+                <TagPill key={tag} tag={tag} />
+              ))}
+            </div>
+          </article>
         ))}
       </div>
       <RSSFeedLink />

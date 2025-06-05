@@ -1,7 +1,8 @@
 import HeroSection from './components/home/HeroSection'
 import AboutSection from './components/home/AboutSection'
+import ExperienceSection from './components/home/ExperienceSection'
 import ServicesSection from './components/home/ServicesSection'
-import WorkSection from './components/home/WorkSection'
+// import WorkSection from './components/home/WorkSection'
 import ContactSection from './components/home/ContactSection'
 import NewsletterSection from './components/home/NewsletterSection'
 
@@ -19,7 +20,8 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <WorkSection />
+      <ExperienceSection />
+      {/* <WorkSection /> */}
       <ContactSection />
       <NewsletterSection />
     </main>

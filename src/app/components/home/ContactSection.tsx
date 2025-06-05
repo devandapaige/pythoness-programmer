@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { getMDXContent } from '@/lib/mdx'
 
 interface Service {
   title: string;
@@ -15,116 +14,88 @@ interface ClosingButton {
   text: string;
 }
 
-interface ContactFrontmatter {
-  id: string;
-  title: string;
-  description: string;
-  services: Service[];
-  why: {
-    title: string;
-    content: string[];
+export default function ContactSection() {
+  // Static content from content/home/contact.mdx
+  const id = "contact";
+  const title = "Let's Connect & Problem-Solve Together";
+  const description = "Every digital challenge is an opportunity to learn, grow, and create something exceptional. Let's work together to find your path to tech confidence.";
+  const services: Service[] = [
+    {
+      title: "Tech Stack Audit",
+      price: "$70",
+      description: "A focused 30-minute session to optimize your digital tools and workflow.",
+      features: [
+        "Personalized tool assessment",
+        "Cost-saving opportunities",
+        "Workflow optimization",
+        "Actionable recommendations"
+      ],
+      ctaText: "Book Tech Stack Audit",
+      ctaLink: "https://cal.com/pythoness/tech30"
+    },
+    {
+      title: "75-min Digital Reset Session",
+      price: "$265",
+      description: "Audit your digital tools, design brain-friendly workflows, and get a personalized action plan to reduce overwhelm and boost efficiency. Perfect for neurodivergent creatives and small businesses. Includes follow-up support.",
+      features: [
+        "Comprehensive digital tools audit",
+        "Brain-friendly workflow design",
+        "Personalized action plan",
+        "Follow-up support included",
+        "Perfect for neurodivergent creatives"
+      ],
+      ctaText: "Book Digital Reset",
+      ctaLink: "https://cal.com/pythoness/tech75"
+    }
+  ];
+  const why = {
+    title: "Why Book a Tech Coaching Session?",
+    content: [
+      "Technology should empower you, not frustrate you. My coaching sessions are designed to meet you exactly where you are, providing clear, actionable guidance tailored to your unique needs. You'll leave with concrete next steps and renewed confidence in your tech journey.",
+      "Unlike typical tech support, I focus on teaching and empowering you to understand your tools better, so you gain independence along with solutions. My approach blends technical expertise with empathy, ensuring you get solutions that truly work for your specific situation."
+    ]
   };
-  contact: {
-    message: string;
-    email: string;
+  const contact = {
+    message: "Questions? Email me at",
+    email: "admin@pythonessprogrammer.com"
   };
-  closing: {
-    text: string;
-    buttons: ClosingButton[];
+  const closing = {
+    text: "Let's work together to create technology solutions that enhance your work, not complicate it. My approach combines technical expertise with empathy, ensuring you get solutions that truly work for you. Stay tuned for group events and office hours coming this summer!",
+    buttons: [
+      {
+        text: "Join Newsletter for Updates",
+        link: "https://pythoness.beehiiv.com"
+      },
+      {
+        text: "Email Me Directly",
+        link: "mailto:admin@pythonessprogrammer.com"
+      }
+    ]
   };
-}
-
-// Type guard to check if the data matches our ContactFrontmatter interface
-function isContactFrontmatter(data: unknown): data is ContactFrontmatter {
-  const d = data as Record<string, unknown>;
-  const closing = d.closing as Record<string, unknown>;
-  const buttons = closing.buttons as unknown[];
-  
-  return (
-    typeof d === 'object' &&
-    d !== null &&
-    typeof d.id === 'string' &&
-    typeof d.title === 'string' &&
-    typeof d.description === 'string' &&
-    Array.isArray(d.services) &&
-    d.services.every((service: Record<string, unknown>) => (
-      typeof service === 'object' &&
-      service !== null &&
-      typeof service.title === 'string' &&
-      typeof service.price === 'string' &&
-      typeof service.description === 'string' &&
-      Array.isArray(service.features) &&
-      typeof service.ctaLink === 'string' &&
-      typeof service.ctaText === 'string'
-    )) &&
-    typeof d.why === 'object' &&
-    d.why !== null &&
-    typeof (d.why as Record<string, unknown>).title === 'string' &&
-    Array.isArray((d.why as Record<string, unknown>).content) &&
-    typeof d.contact === 'object' &&
-    d.contact !== null &&
-    typeof (d.contact as Record<string, unknown>).message === 'string' &&
-    typeof (d.contact as Record<string, unknown>).email === 'string' &&
-    typeof closing === 'object' &&
-    closing !== null &&
-    typeof closing.text === 'string' &&
-    Array.isArray(buttons) &&
-    buttons.every((button: unknown) => {
-      if (typeof button !== 'object' || button === null) return false;
-      const b = button as Record<string, unknown>;
-      return (
-        typeof b.link === 'string' &&
-        typeof b.text === 'string'
-      );
-    })
-  );
-}
-
-export default async function ContactSection() {
-  const { frontmatter } = await getMDXContent('home/contact.mdx')
-  
-  // Validate the frontmatter data
-  if (!isContactFrontmatter(frontmatter)) {
-    throw new Error('Invalid frontmatter data structure in contact.mdx');
-  }
-
-  const { id, title, description, services, why, contact, closing } = frontmatter;
-
-  // Typecast to expected types
-  const safeId = id as string;
-  const safeTitle = title as string;
-  const safeDescription = description as string;
-  const safeServices = services as Service[];
-  const safeClosing = closing as { text: string; buttons: ClosingButton[] };
-  const safeClosingButtons = safeClosing.buttons;
-  const safeWhy = why as { title: string; content: string[] };
-  const safeContact = contact as { message: string; email: string };
 
   return (
-    <section id={safeId} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark/90 via-brand-green-dark to-brand-green-dark/90 text-white overflow-hidden">
+    <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark/90 via-brand-green-dark to-brand-green-dark/90 text-white overflow-hidden">
       {/* Background pattern with animated elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat [transform:rotate(60deg)] animate-[spin_80s_linear_reverse_infinite]"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/50 to-transparent"></div>
       </div>
-      
       <div className="relative max-w-7xl mx-auto">
         {/* Section header with glass effect */}
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-block bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              {safeTitle}
+              {title}
             </h2>
             <p className="text-xl text-brand-cream">
-              {safeDescription}
+              {description}
             </p>
           </div>
         </div>
-
         {/* Services grid with improved visual styling */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {safeServices.map((service: Service, index: number) => (
+          {services.map((service: Service, index: number) => (
             <div
               key={index}
               className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] animate-fade-in-up"
@@ -165,7 +136,6 @@ export default async function ContactSection() {
         <p className="text-center text-brand-cream/80 mb-20 text-sm">
           Coming this summer: Group events and office hours! Stay tuned for updates.
         </p>
-
         {/* Why coaching section with decorative elements */}
         <div 
           className="mb-20 animate-fade-in-up"
@@ -173,51 +143,49 @@ export default async function ContactSection() {
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
             <h3 className="text-3xl font-display mb-8 text-brand-cream text-center">
-              {safeWhy.title}
+              {why.title}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <p className="text-white/90 leading-relaxed">
-                  {safeWhy.content[0]}
+                  {why.content[0]}
                 </p>
                 <div className="h-px w-full bg-gradient-to-r from-transparent via-brand-cream/30 to-transparent md:hidden"></div>
               </div>
               <div className="space-y-6">
                 <p className="text-white/90 leading-relaxed">
-                  {safeWhy.content[1]}
+                  {why.content[1]}
                 </p>
               </div>
             </div>
           </div>
         </div>
-
         {/* Contact info with glowing effect */}
         <div 
           className="text-center mb-16 animate-fade-in-up"
           style={{ animationDelay: '600ms' }}
         >
           <p className="text-white/90">
-            {safeContact.message}{' '}
+            {contact.message}{' '}
             <a
-              href={`mailto:${safeContact.email}`}
+              href={`mailto:${contact.email}`}
               className="text-brand-cream hover:text-white transition-colors relative group"
             >
-              <span className="relative z-10">{safeContact.email}</span>
+              <span className="relative z-10">{contact.email}</span>
               <span className="absolute inset-x-0 bottom-0 h-1 bg-brand-cream/30 group-hover:h-full group-hover:bg-brand-cream/10 transition-all duration-300 -z-0"></span>
             </a>
           </p>
         </div>
-
         {/* Closing with improved button styling */}
         <div 
           className="max-w-3xl mx-auto text-center animate-fade-in-up"
           style={{ animationDelay: '750ms' }}
         >
           <p className="text-lg text-white/90 mb-8">
-            {safeClosing.text}
+            {closing.text}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {safeClosingButtons.map((button: ClosingButton, index: number) => (
+            {closing.buttons.map((button: ClosingButton, index: number) => (
               <Link
                 key={index}
                 href={button.link}

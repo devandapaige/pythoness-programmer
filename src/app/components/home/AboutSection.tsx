@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { getMDXContent } from '@/lib/mdx'
 
 interface Photo {
   main: string;
@@ -11,50 +10,26 @@ interface Values {
   items: string[];
 }
 
-interface AboutFrontmatter {
-  id: string;
-  title: string;
-  description: string;
-  pythia: string;
-  values: Values;
-  photo?: Photo;
-}
-
-// Type guard to check if the data matches our AboutFrontmatter interface
-function isAboutFrontmatter(data: unknown): data is AboutFrontmatter {
-  const d = data as Record<string, unknown>;
-  const values = d.values as Record<string, unknown>;
-  const photo = d.photo as Record<string, unknown> | undefined;
-  
-  return (
-    typeof d === 'object' &&
-    d !== null &&
-    typeof d.id === 'string' &&
-    typeof d.title === 'string' &&
-    typeof d.description === 'string' &&
-    typeof d.pythia === 'string' &&
-    typeof values === 'object' &&
-    values !== null &&
-    typeof values.title === 'string' &&
-    Array.isArray(values.items) &&
-    (photo === undefined || (
-      typeof photo === 'object' &&
-      photo !== null &&
-      typeof photo.main === 'string' &&
-      (photo.decorative === undefined || Array.isArray(photo.decorative))
-    ))
-  );
-}
-
-export default async function AboutSection() {
-  const { frontmatter } = await getMDXContent('home/about.mdx')
-  
-  // Validate the frontmatter data
-  if (!isAboutFrontmatter(frontmatter)) {
-    throw new Error('Invalid frontmatter data structure in about.mdx');
-  }
-
-  const { id, title, description, pythia, values, photo } = frontmatter;
+export default function AboutSection() {
+  // Static content from content/home/about.mdx
+  const id = "about";
+  const title = "The Pythoness Behind The Code";
+  const description = "I'm a tech coach, developer, and digital craftswoman who believes technology should be a joy to use, not a frustration to endure. With over a decade of experience building digital experiences that delight and empower, I work with conscious creators and business owners to make their digital visions come alive.";
+  const pythia = "The name 'Pythoness' is a nod to the Pythia, the high priestesses who served as oracles at the Temple of Apollo at Delphi. These women were the technology experts of their time, trusted advisors who helped leaders navigate uncertainty with wisdom and foresight. Like the ancient oracles, I aim to demystify complex systems and help you find clarity in your digital journey.";
+  const values: Values = {
+    title: "My Approach",
+    items: [
+      "Human-centered design that puts your users first and creates intuitive, beautiful experiences",
+      "Sustainable technology choices that grow with you and don't lock you into expensive ecosystems",
+      "Education alongside implementation, empowering you to understand and manage your digital tools",
+      "Conscious business practices that align with your values and amplify your positive impact",
+      "Joy and creativity in every step of the process - because technology should be fun!"
+    ]
+  };
+  const photo: Photo = {
+    main: "/pythoness-main.png",
+    decorative: ["/pythoness-coding.png", "/pythoness-workshop.png"]
+  };
 
   return (
     <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-white via-brand-purple-light/5 to-white overflow-hidden">
@@ -84,18 +59,15 @@ export default async function AboutSection() {
               {/* Decorative elements */}
               <div className="absolute -bottom-24 -left-8 w-48 h-48 rounded-full bg-brand-green-accent/20 backdrop-blur-sm -z-10"></div>
               <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-brand-purple-dark/20 backdrop-blur-sm z-0"></div>
-              
               {/* Main photo */}
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 {photo?.main ? (
                   <Image
                     src={photo.main}
                     alt="Pythoness Programmer"
-                    width={600}
-                    height={800}
-                    className="w-full h-auto"
-                    priority
-                    style={{ backgroundColor: 'transparent' }}
+                    width={400}
+                    height={400}
+                    style={{ width: '100%', height: 'auto', backgroundColor: 'transparent' }}
                   />
                 ) : (
                   <div className="w-full h-[400px] flex items-center justify-center bg-brand-purple-dark/10">
@@ -103,7 +75,6 @@ export default async function AboutSection() {
                   </div>
                 )}
               </div>
-              
               {/* Small decorative photos */}
               {photo?.decorative && photo.decorative.length > 0 && (
                 <>
@@ -133,7 +104,6 @@ export default async function AboutSection() {
                   )}
                 </>
               )}
-              
               {/* Pythia caption */}
               <div className="mt-6 bg-brand-purple-dark rounded-lg shadow-lg p-4 relative z-10 transform rotate-1 hover:rotate-0 transition-transform duration-500">
                 <p className="text-sm text-white/90 italic leading-relaxed">
@@ -151,11 +121,9 @@ export default async function AboutSection() {
             <p className="text-xl text-brand-purple-dark mb-8 leading-relaxed">
               {description}
             </p>
-            
             <h3 className="text-2xl font-display mb-6 text-brand-green-dark">
               {values.title}
             </h3>
-            
             <ul className="space-y-4">
               {values.items.map((item: string, index: number) => (
                 <li 

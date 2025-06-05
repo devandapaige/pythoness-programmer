@@ -91,10 +91,8 @@ export default function May2025LandingPage(): ReactNode {
 
           {/* Podcast Section */}
           <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
-            <h2 className="text-2xl font-display mb-2 text-brand-green-dark text-center mt-0 mt-1">Listen to the Mindful Automation Episode</h2>
-            <p className="text-brand-green-dark text-center mb-2 mt-0">
-              Learn how to create automation systems that work with your unique brain patterns, not against them.
-            </p>
+            <h2 className="text-2xl font-display mb-2 text-brand-green-dark text-center mt-1">Listen to the Mindful Automation Episode</h2>
+            <p className="text-brand-green-dark text-center mb-2">Learn how to create automation systems that work with your unique brain patterns, not against them.</p>
             <div className="w-full mt-0">
               <iframe 
                 style={{borderRadius: '12px'}} 
@@ -113,8 +111,8 @@ export default function May2025LandingPage(): ReactNode {
 
           {/* Y.O.U. Framework Section */}
           <section id="you-framework" className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
-            <h2 className="text-4xl font-display mb-2 text-brand-green-dark text-center tracking-tight mt-0 mt-1">THE Y.O.U. FRAMEWORK</h2>
-            <p className="text-lg md:text-xl text-brand-green-dark mb-4 text-center max-w-2xl mx-auto mt-0" style={{lineHeight: 1.4}}>
+            <h2 className="text-4xl font-display mb-2 text-brand-green-dark text-center tracking-tight mt-1">THE Y.O.U. FRAMEWORK</h2>
+            <p className="text-lg md:text-xl text-brand-green-dark mb-4 text-center max-w-2xl mx-auto" style={{lineHeight: 1.4}}>
               The Y.O.U. Framework helps you build automation systems that work with your unique thinking style, not against it. No more forcing yourself into rigid productivity systems that don&apos;t fit your brain.
             </p>
             <div className="grid gap-6 md:grid-cols-3 mt-0">
@@ -189,7 +187,7 @@ export default function May2025LandingPage(): ReactNode {
 
           {/* PDF Resource Section */}
           <section className="mb-6 mt-0 bg-gradient-to-br from-[#ffde59]/30 via-[#ffbd59]/30 to-[#5ce1e6]/30 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl text-center">
-            <h2 className="text-3xl font-display mb-4 text-white mt-0">Download the Y.O.U. Framework Guide</h2>
+            <h2 className="text-3xl font-display mb-4 text-white">Download the Y.O.U. Framework Guide</h2>
             <p className="text-lg text-white mb-6 max-w-2xl mx-auto">
               Get your comprehensive guide to implementing the Y.O.U. Framework in your daily workflow. Includes worksheets, templates, and step-by-step instructions.
             </p>
@@ -205,8 +203,8 @@ export default function May2025LandingPage(): ReactNode {
 
           {/* Weekly Recaps Section */}
           <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 md:p-8 shadow-xl">
-            <h2 className="text-3xl font-display mb-2 text-brand-green-dark text-center mt-0 mt-1">WEEKLY DEEP DIVES</h2>
-            <p className="text-lg text-brand-green-dark mb-4 text-center mt-0">
+            <h2 className="text-3xl font-display mb-2 text-brand-green-dark text-center mt-1">WEEKLY DEEP DIVES</h2>
+            <p className="text-lg text-brand-green-dark mb-4 text-center">
               Each week we explore a different aspect of mindful automation, with practical resources and real-world examples.
             </p>
 

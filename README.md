@@ -14,9 +14,9 @@ This website serves as a platform for:
 
 ## Tech Stack
 
-- **Framework:** Next.js 14
-- **Styling:** Tailwind CSS with Typography plugin
-- **Content:** MDX with next-mdx-remote
+- **Framework:** Next.js 15.3.3 with React Server Components
+- **Styling:** Tailwind CSS v4+ with Typography plugin
+- **Content:** MDX with next-mdx-remote (RSC-compatible)
 - **Analytics:** Hotjar
 - **Testing:** Jest with React Testing Library
 - **Type Checking:** TypeScript
@@ -29,7 +29,7 @@ This website serves as a platform for:
 ```
 .
 ├── src/
-│   ├── app/                    # Next.js app directory
+│   ├── app/                    # Next.js app directory (RSC)
 │   ├── components/            # Shared React components
 │   ├── lib/                   # Utility functions
 │   ├── content/              # MDX content
@@ -60,7 +60,7 @@ Used for content that is primarily text-based and requires minimal interactivity
 - Legal documents (Terms of Service, Privacy Policy)
 - Blog posts
 
-These pages use the `getMDXContent` utility to parse and render MDX files stored in the `content/` directory.
+These pages use the `getMDXContent` utility to parse and render MDX files stored in the `content/` directory. The MDX content is processed using `next-mdx-remote` with React Server Components (RSC) support.
 
 Example MDX structure:
 
@@ -102,7 +102,7 @@ This approach allows for more complex user interactions and immediate feedback t
 - Service cards with hover effects
 - Professional experience showcase
 - Local craft services section
-- MDX-based blog system
+- MDX-based blog system with RSC support
 - Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
 - Sourdough Corner - Local craft baking resource and guide (Freebie)
 - Enhanced error handling with user feedback
@@ -111,7 +111,7 @@ This approach allows for more complex user interactions and immediate feedback t
 
 ## Blog Implementation
 
-The blog is implemented using MDX for content management. Here's how to work with it:
+The blog is implemented using MDX for content management with React Server Components. Here's how to work with it:
 
 1. Create new blog posts:
 
@@ -176,7 +176,7 @@ Functions for handling MDX content with proper error handling and security:
 
 ```typescript
 // Get content from an MDX file with validation
-const { content, frontmatter } = await getMDXContent('path/to/file.mdx');
+const { source, frontmatter } = await getMDXContent('path/to/file.mdx');
 
 // Get all blog posts sorted by date
 const posts = await getAllPosts();

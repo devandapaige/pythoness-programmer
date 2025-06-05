@@ -107,8 +107,6 @@ export default function Footer() {
               {', '}
               <Link href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>Tailwind</Link>
               {', '}
-              <Link href="https://contentlayer.dev" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>Contentlayer</Link>
-              {', '}
               <Link href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>MDX</Link>
               {', '}
               <Link href="https://vercel.com" target="_blank" rel="noopener noreferrer" className={footerInlineLinkClass}>Vercel</Link>

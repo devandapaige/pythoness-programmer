@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BlogPost } from '@/lib/mdx'
+import type { Post } from 'contentlayer/generated'
+import { TagPill } from './Tag'
 
 interface PostCardProps {
-  post: BlogPost
-  onTagClick?: (tag: string) => void
+  post: Post
 }
 
-export default function PostCard({ post, onTagClick }: PostCardProps) {
+export default function PostCard({ post }: PostCardProps) {
   return (
     <article 
       className="bg-white/5 backdrop-blur-sm rounded-lg pt-0 pb-2.5 px-6 hover:bg-white/10 transition-colors"
@@ -47,16 +47,7 @@ export default function PostCard({ post, onTagClick }: PostCardProps) {
       </Link>
       <div className="flex flex-wrap gap-2">
         {post.tags.map((tag) => (
-          <button
-            key={tag}
-            onClick={(e) => {
-              e.preventDefault()
-              onTagClick?.(tag)
-            }}
-            className="px-2 py-1 bg-brand-green-accent/20 text-brand-green-accent rounded-full text-sm hover:bg-brand-green-accent/30 transition-colors"
-          >
-            {tag}
-          </button>
+          <TagPill key={tag} tag={tag} />
         ))}
       </div>
     </article>

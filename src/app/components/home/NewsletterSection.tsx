@@ -1,38 +1,34 @@
-import { getMDXContent } from '@/lib/mdx'
-
-interface NewsletterFrontmatter {
-  id: string;
-  title: string;
-  description: string;
-  embedUrl: string;
-}
+// interface NewsletterFrontmatter {
+//   id: string;
+//   title: string;
+//   description: string;
+//   embedUrl: string;
+// }
 
 interface NewsletterSectionProps {
   bgColor?: string;
 }
 
 // Type guard to check if the data matches our NewsletterFrontmatter interface
-function isNewsletterFrontmatter(data: unknown): data is NewsletterFrontmatter {
-  const d = data as Record<string, unknown>;
-  return (
-    typeof d === 'object' &&
-    d !== null &&
-    typeof d.id === 'string' &&
-    typeof d.title === 'string' &&
-    typeof d.description === 'string' &&
-    typeof d.embedUrl === 'string'
-  );
-}
+// function isNewsletterFrontmatter(data: unknown): data is NewsletterFrontmatter {
+//   const d = data as Record<string, unknown>;
+//   return (
+//     typeof d === 'object' &&
+//     d !== null &&
+//     typeof d.id === 'string' &&
+//     typeof d.title === 'string' &&
+//     typeof d.description === 'string' &&
+//     typeof d.embedUrl === 'string'
+//   );
+// }
 
-export default async function NewsletterSection({ bgColor }: NewsletterSectionProps) {
-  const { frontmatter } = await getMDXContent('home/newsletter.mdx')
-  
-  // Validate the frontmatter data
-  if (!isNewsletterFrontmatter(frontmatter)) {
-    throw new Error('Invalid frontmatter data structure in newsletter.mdx');
-  }
-
-  const { id, title, description, embedUrl } = frontmatter;
+export default function NewsletterSection({ bgColor }: NewsletterSectionProps) {
+  // Static content from content/home/newsletter.mdx
+  const id = "newsletter";
+  const title = "Stay Connected";
+  const description = "Get strategic insights on navigating tech spaces, building sustainable systems, and creating accessible solutions. No fluff, just practical expertise and industry awareness.";
+  const embedUrl = "https://embeds.beehiiv.com/5eb2e329-cfe4-4c22-b470-7ed460e5e900";
+  // const image = "/pythoness-newsletter.png";
 
   return (
     <section id={id} className={`relative py-24 px-4 md:px-6 ${bgColor || 'bg-gradient-to-br from-brand-purple-dark/5 via-brand-cream to-brand-green-dark/5'} overflow-hidden`}>

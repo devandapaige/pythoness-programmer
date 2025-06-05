@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Brand color palette */
+  --brand-forest: #2e3d2a;
+  --brand-cream: #f4f1de;
+  --brand-green: #32d24d;
+  --brand-light-purple: #d8b9f7;
+  --brand-purple: #442b48;
+  --brand-blue: #00a6fb;
+}
+
 html {
   scroll-behavior: smooth;
 }

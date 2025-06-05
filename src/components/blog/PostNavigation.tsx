@@ -12,7 +12,7 @@ export default function PostNavigation({ previousPost, nextPost }: PostNavigatio
       <div className="flex-1 flex flex-col items-start">
         {previousPost ? (
           <Link 
-            href={`/blog/${previousPost.slug}`}
+            href={`/blog/${previousPost.frontmatter.slug}`}
             className="group flex flex-col items-start w-full"
           >
             <div className="flex items-center mb-2">
@@ -20,7 +20,7 @@ export default function PostNavigation({ previousPost, nextPost }: PostNavigatio
               <div>
                 <div className="text-sm text-gray-400">Previous Post</div>
                 <div className="text-gray-200 group-hover:text-white transition-colors">
-                  {previousPost.title}
+                  {previousPost.frontmatter.title}
                 </div>
               </div>
             </div>
@@ -31,14 +31,14 @@ export default function PostNavigation({ previousPost, nextPost }: PostNavigatio
       <div className="flex-1 flex flex-col items-end text-right">
         {nextPost ? (
           <Link 
-            href={`/blog/${nextPost.slug}`}
+            href={`/blog/${nextPost.frontmatter.slug}`}
             className="group flex flex-col items-end w-full"
           >
             <div className="flex items-center mb-2 justify-end">
               <div>
                 <div className="text-sm text-gray-400">Next Post</div>
                 <div className="text-gray-200 group-hover:text-white transition-colors">
-                  {nextPost.title}
+                  {nextPost.frontmatter.title}
                 </div>
               </div>
               <span className="ml-2">→</span>
