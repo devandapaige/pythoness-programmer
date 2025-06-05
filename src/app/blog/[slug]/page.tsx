@@ -1,39 +1,64 @@
 import { Metadata } from 'next'
-import { getPostBySlug, compileMDXContent, getAllPosts } from '@/lib/mdx'
-import PostHeader from '@/components/blog/PostHeader'
+import { notFound } from 'next/navigation'
+import { allPosts } from 'contentlayer/generated'
+import { PostMetadata } from '@/components/blog/PostMetadata'
+import { MDXContent } from '@/components/mdx-content'
 import PostNavigation from '@/components/blog/PostNavigation'
+import type { BlogPost } from '@/lib/mdx'
 
-interface BlogPostPageProps {
+interface PostPageProps {
   params: {
     slug: string
   }
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = await getPostBySlug(params.slug)
-  
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  const post = allPosts.find((post) => post.slug === params.slug)
+  if (!post) return {}
+
   return {
-    title: `${post.title} | Pythoness Programmer Blog`,
+    title: post.title,
     description: post.description,
   }
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getPostBySlug(params.slug)
-  const content = await compileMDXContent(post.content)
-  
-  // Get all posts and find the current post's index
-  const allPosts = await getAllPosts()
-  const currentIndex = allPosts.findIndex(p => p.slug === params.slug)
-  
-  // Get previous and next posts
-  const previousPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null
-  const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post.slug,
+  }))
+}
+
+const mappedPosts: BlogPost[] = allPosts.map(post => ({
+  slug: post.slug,
+  title: post.title,
+  date: post.date,
+  description: post.description,
+  author: post.author,
+  tags: post.tags,
+  content: post.body.code,
+  image: post.image
+})).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
+export default function PostPage({ params }: PostPageProps) {
+  const postIndex = mappedPosts.findIndex((post) => post.slug === params.slug)
+  if (postIndex === -1) notFound()
+  const post = mappedPosts[postIndex]
+  const previousPost = postIndex > 0 ? mappedPosts[postIndex - 1] : null
+  const nextPost = postIndex < mappedPosts.length - 1 ? mappedPosts[postIndex + 1] : null
 
   return (
-    <article className="prose prose-invert max-w-none">
-      <PostHeader post={post} />
-      {content}
+    <article>
+      <PostMetadata
+        title={post.title}
+        date={post.date}
+        description={post.description}
+        author={post.author}
+        tags={post.tags}
+        image={post.image}
+      />
+      <div className="blog-content prose prose-lg max-w-none prose-invert">
+        <MDXContent code={post.content} />
+      </div>
       <PostNavigation previousPost={previousPost} nextPost={nextPost} />
     </article>
   )

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { BlogPost } from '@/lib/mdx'
 import Image from 'next/image'
+import { TagPill } from './Tag'
 
 interface PostHeaderProps {
   post: BlogPost
@@ -24,14 +24,7 @@ export default function PostHeader({ post }: PostHeaderProps) {
       </div>
       <div className="flex flex-wrap gap-2 mb-4">
         {post.tags.map((tag) => (
-          <Link
-            key={tag}
-            href={`/blog?tag=${encodeURIComponent(tag)}`}
-            className="px-2 py-1 bg-brand-green-accent/20 text-brand-green-accent rounded-full text-sm hover:bg-brand-green-accent/30 transition-colors"
-            aria-label={`View all posts tagged ${tag}`}
-          >
-            {tag}
-          </Link>
+          <TagPill key={tag} tag={tag} />
         ))}
       </div>
       {post.image && (

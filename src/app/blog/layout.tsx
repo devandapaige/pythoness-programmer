@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { BlogStyles } from '@/components/blog/BlogStyles'
 
 export const metadata: Metadata = {
   title: 'Blog | Pythoness Programmer',
@@ -12,35 +13,34 @@ export default function BlogLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-brand-green-dark to-brand-purple-dark">
-      <div className="max-w-4xl mx-auto px-4 py-16">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-display text-white">
-            <Link
-              href="/blog"
-              className="hover:underline hover:text-brand-green-accent transition-colors"
-              aria-label="Go to all blog posts"
-            >
-              Blog
-            </Link>
-          </h1>
-          <Link
-            href="/feed.xml"
-            className="text-white/60 hover:text-brand-green-accent transition-colors flex items-center gap-2"
-            aria-label="Subscribe to RSS feed"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M4 11a9 9 0 0 1 9 9" />
-              <path d="M4 4a16 16 0 0 1 16 16" />
-              <circle cx="5" cy="19" r="1" />
-            </svg>
-            RSS
-          </Link>
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--brand-forest)', color: 'var(--brand-cream)' }}>
+      <header className="border-b" style={{ borderColor: 'var(--brand-purple)', backgroundColor: 'var(--brand-forest)' }}>
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <Link href="/blog" className="text-xl" style={{ color: '#fff', fontFamily: 'var(--font-norwester), sans-serif', letterSpacing: '-0.015em', textTransform: 'uppercase' }}>
+                Blog
+              </Link>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link
+                href="/feed.xml"
+                className="text-sm"
+                style={{ color: 'var(--brand-cream)' }}
+              >
+                RSS Feed
+              </Link>
+            </div>
+          </div>
         </div>
-        <div className="prose prose-invert max-w-none">
+      </header>
+
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl" style={{ color: 'var(--brand-cream)' }}>
+          <BlogStyles />
           {children}
         </div>
-      </div>
+      </main>
     </div>
   )
 } 
