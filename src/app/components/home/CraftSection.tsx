@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { getMDXContent } from '@/lib/mdx'
 
 interface Services {
   title: string;
@@ -17,55 +16,35 @@ interface Collaboration {
   ctaLink: string;
 }
 
-interface CraftFrontmatter {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  services: Services;
-  process: Process;
-  collaboration: Collaboration;
-}
-
-// Type guard to check if the data matches our CraftFrontmatter interface
-function isCraftFrontmatter(data: unknown): data is CraftFrontmatter {
-  const d = data as Record<string, unknown>;
-  const services = d.services as Record<string, unknown>;
-  const process = d.process as Record<string, unknown>;
-  const collaboration = d.collaboration as Record<string, unknown>;
-  
-  return (
-    typeof d === 'object' &&
-    d !== null &&
-    typeof d.id === 'string' &&
-    typeof d.title === 'string' &&
-    typeof d.subtitle === 'string' &&
-    typeof d.description === 'string' &&
-    typeof services === 'object' &&
-    services !== null &&
-    typeof services.title === 'string' &&
-    Array.isArray(services.items) &&
-    typeof process === 'object' &&
-    process !== null &&
-    typeof process.title === 'string' &&
-    Array.isArray(process.steps) &&
-    typeof collaboration === 'object' &&
-    collaboration !== null &&
-    typeof collaboration.text === 'string' &&
-    typeof collaboration.ctaText === 'string' &&
-    typeof collaboration.ctaLink === 'string'
-  );
-}
-
-export default async function CraftSection() {
-  const { frontmatter } = await getMDXContent('home/craft.mdx')
-  
-  // Validate the frontmatter data
-  if (!isCraftFrontmatter(frontmatter)) {
-    throw new Error('Invalid frontmatter data structure in craft.mdx');
-  }
-
-  const { id, title, subtitle, description, services, process, collaboration } = frontmatter;
+export default function CraftSection() {
+  // Static content from content/home/craft.mdx
+  const id = "craft";
+  const title = "Digital Meets Tangible";
+  const subtitle = "Local Craft & Print Services";
+  const description = "Based in Central Virginia, I create custom physical products for local businesses, events, and fellow creatives. Supporting Virginia artists and businesses through accessible, personalized craft services.";
+  const services: Services = {
+    title: "Small-Batch Creations",
+    items: [
+      "Business promotional materials",
+      "Custom party & event favors",
+      "Small-run print materials",
+      "Personalized vinyl designs"
+    ]
+  };
+  const process: Process = {
+    title: "How It Works",
+    steps: [
+      "Free project consultation",
+      "Custom design mockups",
+      "Small-batch production",
+      "Local delivery or shipping"
+    ]
+  };
+  const collaboration: Collaboration = {
+    text: "Fellow artists and creators: I'm open to trading services and collaborating on projects. Let's discuss how we can support each other's work.",
+    ctaLink: "https://cal.com/pythoness/craft",
+    ctaText: "Book Craft Consultation"
+  };
 
   return (
     <section id={id} className="relative py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">
@@ -74,7 +53,6 @@ export default async function CraftSection() {
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_80s_linear_reverse_infinite]"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-brand-purple-dark/30 to-transparent"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Section header with glass effect */}
         <div className="text-center mb-16 animate-fade-in-up">
@@ -92,7 +70,6 @@ export default async function CraftSection() {
             </div>
           </div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {/* Services */}
           <div 
@@ -114,7 +91,6 @@ export default async function CraftSection() {
               ))}
             </ul>
           </div>
-
           {/* Process */}
           <div 
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl animate-fade-in-up"
@@ -138,7 +114,6 @@ export default async function CraftSection() {
             </ul>
           </div>
         </div>
-
         {/* Collaboration */}
         <div 
           className="max-w-3xl mx-auto text-center animate-fade-in-up"

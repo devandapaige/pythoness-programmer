@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { BlogContent } from '@/components/blog/BlogContent'
-import type { BlogPost } from '@/lib/mdx'
 import { getAllPosts } from '@/lib/mdx'
 
 export const metadata: Metadata = {

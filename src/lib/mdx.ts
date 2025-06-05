@@ -3,14 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import { useMDXComponents } from './mdx-components'
-import { serialize } from 'next-mdx-remote/serialize'
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { notFound } from 'next/navigation'
-import { readFileSync } from 'fs'
-import { join } from 'path'
-import ContentSection from '@/app/vibe-coding-cheatsheet/components/ContentSection'
-import { logError } from './errorHandling'
-import { isValidString, sanitizeString } from './validation'
 
 // Constants for file paths to improve maintainability and avoid hardcoding
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
@@ -24,17 +16,7 @@ export type BlogPost = {
   author: string
   tags: string[]
   image: string
-  content: any
-}
-
-export interface MDXContent {
-  source: MDXRemoteSerializeResult
-  frontmatter: {
-    title: string
-    lastUpdated: string
-    summary: string
-    [key: string]: unknown
-  }
+  content: JSX.Element
 }
 
 /**
@@ -80,9 +62,10 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
+  const mdxComponents = useMDXComponents({});
   const { content: compiledContent } = await compileMDX({
     source: content,
-    components: useMDXComponents({}),
+    components: mdxComponents,
     options: {
       parseFrontmatter: true,
     },
@@ -97,69 +80,5 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     tags: data.tags,
     image: data.image,
     content: compiledContent,
-  }
-}
-
-/**
- * Safely reads and processes MDX content with validation
- * 
- * This function implements several security measures:
- * 1. Input validation for the filepath
- * 2. Sanitization to prevent directory traversal attacks
- * 3. File existence verification
- * 4. Frontmatter validation
- * 5. Comprehensive error handling with logging
- * 
- * @param filepath - Path to the MDX file relative to the content directory
- * @returns Promise resolving to the processed MDX content with frontmatter
- * @throws Error for invalid input or missing required frontmatter
- * @throws Triggers a 404 page if the file is not found
- */
-export async function getMDXContent(filepath: string): Promise<MDXContent> {
-  if (!isValidString(filepath)) {
-    logError('Invalid filepath provided to getMDXContent', new Error('Invalid filepath'), { filepath })
-    throw new Error('Invalid filepath provided')
-  }
-
-  // Sanitize the filepath to prevent directory traversal attacks
-  const sanitizedPath = sanitizeString(filepath).replace(/\.\./g, '')
-  const fullPath = path.join(contentDirectory, sanitizedPath)
-  
-  try {
-    // Verify the file exists before attempting to read
-    if (!fs.existsSync(fullPath)) {
-      logError('MDX file not found', new Error('File not found'), { fullPath })
-      notFound()
-    }
-    
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data, content } = matter(fileContents)
-
-    // Validate frontmatter has required fields
-    if (!data.title) {
-      logError('MDX frontmatter missing required fields', new Error('Invalid frontmatter'), { 
-        filepath: sanitizedPath,
-        data
-      })
-      throw new Error('Invalid MDX content: missing required frontmatter')
-    }
-
-    // Serialize the MDX content with the latest version's approach
-    const mdxSource = await serialize(content, {
-      parseFrontmatter: false,
-      scope: data
-    })
-
-    return {
-      source: mdxSource,
-      frontmatter: data as MDXContent['frontmatter'],
-    }
-  } catch (error) {
-    if (error instanceof Error && error.message.includes('Invalid MDX content')) {
-      throw error // Rethrow validation errors
-    }
-    
-    logError('Failed to load MDX content', error, { filepath: sanitizedPath })
-    notFound()
   }
 } 
