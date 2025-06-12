@@ -15,6 +15,12 @@ interface LinkItem {
   icon?: string;
 }
 
+// Define interface for affiliate items with image
+interface AffiliateItem extends LinkItem {
+  image: string;
+  description: string;
+}
+
 // Social media links - easy to update
 const socialLinks: LinkItem[] = [
   {
@@ -110,10 +116,22 @@ const mediaLinks: LinkItem[] = [
   }
 ]
 
-// Affiliate links section - ready for future expansion
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const affiliateLinks: LinkItem[] = [
-  // This section is ready for future affiliate links
+// Affiliate links section
+const affiliateItems: AffiliateItem[] = [
+  {
+    name: 'My Favorite Keyboard',
+    url: '#', // Replace with your actual affiliate link
+    color: 'bg-white/10 hover:bg-white/20',
+    image: '/images/placeholder-keyboard.jpg', // Replace with actual image
+    description: 'The keyboard I use for all my coding sessions'
+  },
+  {
+    name: 'Coding Playlist',
+    url: '#', // Replace with your Shopify playlist link
+    color: 'bg-white/10 hover:bg-white/20',
+    image: '/images/placeholder-playlist.jpg', // Replace with actual image
+    description: 'My curated playlist for productive coding sessions'
+  }
 ]
 
 // Legal links section
@@ -263,6 +281,36 @@ export default function LinksPage() {
                     className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
                   >
                     {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Affiliate Items */}
+          {affiliateItems.length > 0 && (
+            <div className="space-y-3">
+              <h2 className="font-display text-xl text-white text-center">Daily Essentials & Playlists</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {affiliateItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block ${item.color} p-4 rounded-lg transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                  >
+                    <div className="aspect-w-16 aspect-h-9 mb-3 rounded-lg overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        width={400}
+                        height={225}
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="font-medium text-lg mb-1">{item.name}</h3>
+                    <p className="text-sm text-white/80">{item.description}</p>
                   </Link>
                 ))}
               </div>
