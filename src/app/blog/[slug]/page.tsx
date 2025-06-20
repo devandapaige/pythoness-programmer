@@ -4,7 +4,8 @@ import { PostMetadata } from '@/components/blog/PostMetadata'
 import PostNavigation from '@/components/blog/PostNavigation'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
 import { compileMDX } from 'next-mdx-remote/rsc'
-import { useMDXComponents } from '@/lib/mdx-components'
+import Image from 'next/image'
+import type { MDXComponents } from 'mdx/types'
 
 interface PostPageProps {
   params: Promise<{
@@ -39,8 +40,22 @@ export default async function PostPage({ params }: PostPageProps) {
   const previousPost = postIndex > 0 ? posts[postIndex - 1] : null
   const nextPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null
 
+  // Define mdxComponents directly instead of using the hook
+  const mdxComponents: MDXComponents = {
+    Signature: () => (
+      <div style={{ textAlign: 'left', width: '100%' }}>
+        <Image
+          src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5abd08ee-bc4d-49f0-9303-3d5d75ef4359/email_signatures.png?t=1742411231"
+          alt="Signature"
+          width={200}
+          height={100}
+          style={{ width: '33%', height: 'auto', display: 'inline-block' }}
+        />
+      </div>
+    ),
+  }
+
   // Compile MDX content here
-  const mdxComponents = useMDXComponents()
   const { content: compiledContent } = await compileMDX({
     source: post.content,
     components: mdxComponents,
