@@ -112,6 +112,11 @@ const mediaLinks: LinkItem[] = [
     name: 'NotebookLM Podcast',
     url: 'https://pythoness.substack.com/podcast',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+  },
+  {
+    name: 'Current Music Rotation',
+    url: 'https://open.spotify.com/playlist/19jEmPqzZqp4zH8uyF7uCS?si=d413cc41fba54edc',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   }
 ]
 
@@ -207,6 +212,22 @@ export default function LinksPage() {
                     {link.name}
                   </Link>
                 ))}
+              </div>
+              
+              {/* Spotify Embed */}
+              <div className="mt-6">
+                <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg p-4 shadow-lg">
+                  <iframe 
+                    style={{borderRadius: '12px'}} 
+                    src="https://open.spotify.com/embed/playlist/19jEmPqzZqp4zH8uyF7uCS?utm_source=generator&theme=0" 
+                    width="100%" 
+                    height="152" 
+                    frameBorder="0" 
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           )}
