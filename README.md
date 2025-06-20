@@ -14,8 +14,8 @@ This website serves as a platform for:
 
 ## Tech Stack
 
-- **Framework:** Next.js 15.3.3 with React Server Components
-- **Styling:** Tailwind CSS v4+ with Typography plugin
+- **Framework:** Next.js 14.1.0 with React Server Components
+- **Styling:** Tailwind CSS 3.4.1 with Typography plugin
 - **Content:** MDX with next-mdx-remote (RSC-compatible)
 - **Analytics:** Hotjar
 - **Testing:** Jest with React Testing Library
@@ -226,11 +226,12 @@ const result = await tryCatch(
 ## Color Scheme
 
 ### Brand Colors
-- **Deep forest green:** #1A472A (`--brand-green-dark`)
-- **Rich purple:** #2D1B69 (`--brand-purple-dark`)
-- **Vibrant green accent:** #157F1F (`--brand-green-accent`)
-- **Soft cream:** #F5F5DC (`--brand-cream`)
-- **Light purple accent:** #9747FF (`--brand-purple-light`)
+- **Deep forest green:** #2E3D2A (`--brand-green-dark`)
+- **Rich purple:** #442B48 (`--brand-purple-dark`)
+- **Vibrant green accent:** #32d24d (`--brand-green-accent`)
+- **Soft cream:** #F4f1de (`--brand-cream`)
+- **Light purple accent:** #D8B9F7 (`--brand-purple-light`)
+- **Bright Blue:** #00A6FB (`--brand-blue`)
 
 ### UI Colors
 - **White:** #FFFFFF (`--white`)
@@ -243,17 +244,18 @@ Common color applications:
 
 - Text on dark: `text-white`, `text-white/90`, `text-brand-cream`
 - Text on light: `text-brand-purple-dark`, `text-brand-green-dark`
-- Accents: `text-brand-green-accent`, `text-brand-purple-light`
+- Accents: `text-brand-green-accent`, `text-brand-purple-light`, `text-brand-blue`
 - Backgrounds: Dark gradient combinations of `brand-green-dark` and `brand-purple-dark`
 - Overlays: `bg-white/5`, `bg-white/10` with `backdrop-blur-sm`
 
 ```css
 /* Brand Colors */
---brand-green-dark: #1A472A;    /* Deep forest green */
---brand-purple-dark: #2D1B69;   /* Rich purple */
---brand-green-accent: #157F1F;  /* Vibrant green */
---brand-cream: #F5F5DC;         /* Soft cream */
---brand-purple-light: #9747FF;  /* Light purple accent */
+--brand-green-dark: #2E3D2A;    /* Deep forest green */
+--brand-purple-dark: #442B48;   /* Rich purple */
+--brand-green-accent: #32d24d;  /* Vibrant green accent */
+--brand-cream: #F4f1de;         /* Soft cream */
+--brand-purple-light: #D8B9F7;  /* Light purple accent */
+--brand-blue: #00A6FB;          /* Bright Blue */
 
 /* UI Colors */
 --white: #FFFFFF;               /* Pure white for contrast */
