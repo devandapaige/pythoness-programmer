@@ -38,6 +38,8 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       return getPostBySlugSync(slug)
     })
     .filter(Boolean) as BlogPost[]
+  // Sort by date descending (newest first)
+  posts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
   return posts
 }
 

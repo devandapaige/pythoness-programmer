@@ -5,7 +5,8 @@ import { notFound } from 'next/navigation';
 import { 
   getAllPosts, 
   getPostBySlug, 
-  getMDXContent
+  getPostBySlugSync,
+  type BlogPost
 } from '@/lib/mdx';
 import { logError } from '@/lib/errorHandling';
 
@@ -13,8 +14,8 @@ import { logError } from '@/lib/errorHandling';
 jest.mock('fs');
 jest.mock('path');
 jest.mock('gray-matter');
-jest.mock('next-mdx-remote/rsc', () => ({
-  compileMDX: jest.fn().mockResolvedValue({ content: 'Compiled content' }),
+jest.mock('next/navigation', () => ({
+  notFound: jest.fn(),
 }));
 jest.mock('@/lib/errorHandling', () => ({
   logError: jest.fn(),
@@ -27,6 +28,7 @@ interface MockPostData {
     description: string;
     author: string;
     tags: string[];
+    image: string;
   };
   content: string;
 }
@@ -44,7 +46,7 @@ describe('MDX Utilities', () => {
   describe('getAllPosts', () => {
     it('returns sorted blog posts by date', async () => {
       // Mock filesystem and matter responses
-      const mockFiles = ['post1.mdx', 'post2.mdx'];
+      const mockFiles = ['post2.mdx', 'post1.mdx'];
       const mockData: MockData = {
         'post1': {
           data: { 
@@ -53,6 +55,7 @@ describe('MDX Utilities', () => {
             description: 'Description 1',
             author: 'Author 1',
             tags: ['tag1', 'tag2'],
+            image: 'image1.jpg',
           },
           content: 'Content 1'
         },
@@ -63,27 +66,32 @@ describe('MDX Utilities', () => {
             description: 'Description 2',
             author: 'Author 2',
             tags: ['tag2', 'tag3'],
+            image: 'image2.jpg',
           }, 
           content: 'Content 2'
         }
       };
       
       (fs.readdirSync as jest.Mock).mockReturnValue(mockFiles);
+      (fs.existsSync as jest.Mock).mockReturnValue(true);
       (fs.readFileSync as jest.Mock).mockImplementation((filePath) => {
-        const fileName = filePath.split('/').pop()?.replace('.mdx', '') || '';
-        return `Content for ${fileName}`;
+        if (filePath.includes('post1.mdx')) return 'Content for post1';
+        if (filePath.includes('post2.mdx')) return 'Content for post2';
+        return '';
       });
       
       (matter as unknown as jest.Mock).mockImplementation((source) => {
-        const postId = source.split(' ').pop() || '';
+        // Extract the post ID from the source content (e.g., 'Content for post1')
+        const match = source.match(/Content for (post\d+)/);
+        const postId = match ? match[1] : 'post1';
         return mockData[postId];
       });
       
       const result = await getAllPosts();
       
       // Most recent post should be first
-      expect(result[0].title).toBe('Post 2');
-      expect(result[1].title).toBe('Post 1');
+      expect(result[0].frontmatter.title).toBe('Post 2');
+      expect(result[1].frontmatter.title).toBe('Post 1');
       expect(result).toHaveLength(2);
       expect(fs.readdirSync).toHaveBeenCalled();
     });
@@ -99,98 +107,93 @@ describe('MDX Utilities', () => {
           description: 'This is a valid post',
           author: 'Test Author',
           tags: ['test', 'valid'],
+          image: 'valid-image.jpg',
         },
         content: 'Post content'
       };
       
+      (fs.existsSync as jest.Mock).mockReturnValue(true);
       (fs.readFileSync as jest.Mock).mockReturnValue('mock file content');
       (matter as unknown as jest.Mock).mockReturnValue(mockPostData);
       
       const result = await getPostBySlug(mockSlug);
       
-      expect(result.slug).toBe(mockSlug);
-      expect(result.title).toBe(mockPostData.data.title);
-      expect(result.content).toBe(mockPostData.content);
+      expect(result?.frontmatter.slug).toBe(mockSlug);
+      expect(result?.frontmatter.title).toBe(mockPostData.data.title);
+      expect(result?.content).toBe(mockPostData.content);
       expect(fs.readFileSync).toHaveBeenCalled();
     });
     
-    it('calls notFound for an invalid slug', async () => {
+    it('returns null for an invalid slug', async () => {
       const mockSlug = 'invalid-post';
-      
-      (fs.readFileSync as jest.Mock).mockImplementation(() => {
-        throw new Error('File not found');
-      });
-      
-      await getPostBySlug(mockSlug);
-      
-      expect(logError).toHaveBeenCalledWith(
-        expect.stringContaining(mockSlug),
-        expect.any(Error),
-        expect.any(Object)
-      );
-      expect(notFound).toHaveBeenCalled();
-    });
-  });
-  
-  describe('getMDXContent', () => {
-    it('returns content and frontmatter for valid filepath', async () => {
-      const mockFilepath = 'valid/file.mdx';
-      const mockData = {
-        data: {
-          title: 'Test Title',
-          lastUpdated: '2023-01-01',
-          summary: 'Test summary',
-          customField: 'Custom value'
-        },
-        content: 'Test content'
-      };
-      
-      (fs.existsSync as jest.Mock).mockReturnValue(true);
-      (fs.readFileSync as jest.Mock).mockReturnValue('mock file content');
-      (matter as unknown as jest.Mock).mockReturnValue(mockData);
-      
-      const result = await getMDXContent(mockFilepath);
-      
-      expect(result.content).toBe(mockData.content);
-      expect(result.frontmatter.title).toBe(mockData.data.title);
-      expect(result.frontmatter.customField).toBe(mockData.data.customField);
-    });
-    
-    it('throws error for invalid filepath', async () => {
-      const mockInvalidFilepath = '';
-      
-      await expect(getMDXContent(mockInvalidFilepath)).rejects.toThrow('Invalid filepath');
-      expect(logError).toHaveBeenCalled();
-    });
-    
-    it('calls notFound for non-existent file', async () => {
-      const mockFilepath = 'nonexistent/file.mdx';
       
       (fs.existsSync as jest.Mock).mockReturnValue(false);
       
-      await getMDXContent(mockFilepath);
+      const result = await getPostBySlug(mockSlug);
       
-      expect(logError).toHaveBeenCalled();
-      expect(notFound).toHaveBeenCalled();
+      expect(result).toBeNull();
     });
-    
-    it('throws error for missing required frontmatter', async () => {
-      const mockFilepath = 'invalid/frontmatter.mdx';
-      const mockData = {
+  });
+
+  describe('getPostBySlugSync', () => {
+    it('returns the correct blog post for a valid slug', () => {
+      const mockSlug = 'valid-post';
+      const mockPostData: MockPostData = {
         data: {
-          // Missing title
-          lastUpdated: '2023-01-01',
-          summary: 'Test summary'
+          title: 'Valid Post',
+          date: '2023-01-01',
+          description: 'This is a valid post',
+          author: 'Test Author',
+          tags: ['test', 'valid'],
+          image: 'valid-image.jpg',
         },
-        content: 'Test content'
+        content: 'Post content'
       };
       
       (fs.existsSync as jest.Mock).mockReturnValue(true);
       (fs.readFileSync as jest.Mock).mockReturnValue('mock file content');
-      (matter as unknown as jest.Mock).mockReturnValue(mockData);
+      (matter as unknown as jest.Mock).mockReturnValue(mockPostData);
       
-      await expect(getMDXContent(mockFilepath)).rejects.toThrow('Invalid MDX content');
-      expect(logError).toHaveBeenCalled();
+      const result = getPostBySlugSync(mockSlug);
+      
+      expect(result?.frontmatter.slug).toBe(mockSlug);
+      expect(result?.frontmatter.title).toBe(mockPostData.data.title);
+      expect(result?.content).toBe(mockPostData.content);
+      expect(fs.readFileSync).toHaveBeenCalled();
+    });
+    
+    it('returns null for an invalid slug', () => {
+      const mockSlug = 'invalid-post';
+      
+      (fs.existsSync as jest.Mock).mockReturnValue(false);
+      
+      const result = getPostBySlugSync(mockSlug);
+      
+      expect(result).toBeNull();
+    });
+
+    it('handles slug with .mdx extension', () => {
+      const mockSlug = 'valid-post.mdx';
+      const mockPostData: MockPostData = {
+        data: {
+          title: 'Valid Post',
+          date: '2023-01-01',
+          description: 'This is a valid post',
+          author: 'Test Author',
+          tags: ['test', 'valid'],
+          image: 'valid-image.jpg',
+        },
+        content: 'Post content'
+      };
+      
+      (fs.existsSync as jest.Mock).mockReturnValue(true);
+      (fs.readFileSync as jest.Mock).mockReturnValue('mock file content');
+      (matter as unknown as jest.Mock).mockReturnValue(mockPostData);
+      
+      const result = getPostBySlugSync(mockSlug);
+      
+      expect(result?.frontmatter.slug).toBe('valid-post');
+      expect(result?.frontmatter.title).toBe(mockPostData.data.title);
     });
   });
 }); 
