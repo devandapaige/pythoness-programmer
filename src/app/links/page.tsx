@@ -93,11 +93,6 @@ const supportLinks: LinkItem[] = [
     name: 'Tip the Pythoness ☕',
     url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
     color: 'bg-white/10 hover:bg-white/20'
-  },
-  {
-    name: 'Subscribe on Substack',
-    url: 'https://pythoness.substack.com',
-    color: 'bg-white/10 hover:bg-white/20'
   }
 ]
 

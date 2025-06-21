@@ -76,7 +76,6 @@ export default function Footer() {
             <p className="text-white/80 text-sm mb-1">If you enjoy my work, you can buy me a coffee!</p>
             <ul className="space-y-1" role="list" aria-label="Support options">
               <li><Link href="https://buy.stripe.com/eVaeWq6303RIejK28g" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Tip the Pythoness ☕</Link></li>
-              <li><Link href="https://pythoness.substack.com" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Subscribe on Substack</Link></li>
             </ul>
           </FooterSection>
           <FooterSection title="Listen">

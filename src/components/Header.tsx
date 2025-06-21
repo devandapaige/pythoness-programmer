@@ -123,17 +123,6 @@ export default function Header() {
                     <span role="img" aria-label="Automation gears">⚙️</span>{' '}
                     Mindful Automation
                   </Link>
-                  <Link 
-                    href="https://pythoness.beehiiv.com/subscribe"
-                    target="_blank"
-                    role="menuitem"
-                    tabIndex={isWorkMenuOpen ? 0 : -1}
-                    className="block px-4 py-2 text-sm text-white hover:text-brand-green-accent hover:bg-white/10"
-                    onClick={() => setIsWorkMenuOpen(!isWorkMenuOpen)}
-                  >
-                    <span role="img" aria-label="Newsletter email">📧</span>{' '}
-                    Subscribe to Newsletter
-                  </Link>
                 </div>
               </div>
             </div>
@@ -228,15 +217,6 @@ export default function Header() {
               >
                 <span role="img" aria-label="Automation gears">⚙️</span>{' '}
                 Mindful Automation
-              </Link>
-              <Link
-                href="https://pythoness.beehiiv.com/subscribe"
-                target="_blank"
-                className="block text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <span role="img" aria-label="Newsletter email">📧</span>{' '}
-                Subscribe to Newsletter
               </Link>
             </div>
           </div>
