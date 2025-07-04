@@ -32,14 +32,14 @@ export default async function Home() {
 
       {/* Forever Topics Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <div>
           <ForeverTopicsCard />
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
+        <div>
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
