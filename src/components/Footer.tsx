@@ -30,9 +30,11 @@ export default function Footer() {
               Pythoness Programmer
             </Link>
           }>
-            <p className="text-white/80 text-sm">
-              Crafting digital joy through code, coaching, and creativity.
-            </p>
+            <ul className="space-y-1">
+              <li><Link href="/about" className={footerLinkClass}>About</Link></li>
+              <li><Link href="/services" className={footerLinkClass}>Book a Call</Link></li>
+              <li><Link href="/resources" className={footerLinkClass}>Free Resources</Link></li>
+            </ul>
           </FooterSection>
           {/* Social Links */}
           <FooterSection title="Connect">
