@@ -18,14 +18,14 @@ export default async function Home() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="pt-24 bg-brand-green-dark">
-        <div className="max-w-7xl mx-auto">
+        <div>
           <HeroCard />
         </div>
       </section>
       
       {/* Pain Points Section */}
       <section className="bg-brand-purple-dark">
-        <div className="max-w-7xl mx-auto">
+        <div>
           <PainPointsCard />
         </div>
       </section>
