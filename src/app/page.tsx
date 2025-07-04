@@ -48,7 +48,7 @@ export default async function Home() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-brand-cream max-w-3xl">
-                Everyone learns and grows differently. I'm here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way.
+                Everyone learns and grows differently. I&apos;m here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>

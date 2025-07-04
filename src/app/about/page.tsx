@@ -24,7 +24,7 @@ export default function AboutPage() {
                   I help neurodivergent creatives and small businesses build digital fluency through thoughtful tech guidance and brain-friendly workflows.
                 </p>
                 <p className="text-lg text-brand-cream/80 mt-4">
-                  With over 13 years of experience as a Senior Full Stack Software Engineer, I've built and led projects for companies like Zappos.com (an Amazon company), Happi Home, and a range of SaaS startups. My work spans e-commerce, accessibility, automation, and technical mentorship.
+                  With over 13 years of experience as a Senior Full Stack Software Engineer, I&apos;ve built and led projects for companies like Zappos.com (an Amazon company), Happi Home, and a range of SaaS startups. My work spans e-commerce, accessibility, automation, and technical mentorship.
                 </p>
               </div>
               
@@ -105,7 +105,7 @@ export default function AboutPage() {
               Today, I combine my technical expertise with deep empathy for the neurodivergent experience to help others build digital fluency, support digital wellbeing, and create workflows that actually feel comfortable for your unique brain.
             </p>
             <p>
-              Alongside my passion for making tech accessible, I've had the privilege of working as a Senior Software Engineer and Product Developer, leading agile teams and building robust web applications for both global brands and small businesses. My technical background means I bring not just empathy, but also deep expertise and proven results to every project.
+              Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Senior Software Engineer and Product Developer, leading agile teams and building robust web applications for both global brands and small businesses. My technical background means I bring not just empathy, but also deep expertise and proven results to every project.
             </p>
           </div>
         </div>

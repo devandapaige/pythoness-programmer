@@ -8,18 +8,13 @@ export interface Button {
 
 interface HeroCardProps {
   title?: string;
-  tagline?: string;
   mainText?: string;
-  subText?: string;
   buttons?: Button[];
-  className?: string;
 }
 
 export default function HeroCard({
-  title = "Crafting Digital Joy",
-  tagline = "Tech Clarified | Empowering Digital Confidence",
-  mainText = "Tech doesn't have to be overwhelming. Together, we'll turn your digital challenges into opportunities for growth, learning, and (yes!) even fun.",
-  subText = "From coaching to coding to crafting, I blend technical expertise with creative problem-solving to help you build a digital presence that feels authentically yours.",
+  title = "Your Tech, Clarified",
+  mainText = "Feeling stuck in digital clutter? I provide clear, joyful, and human-first tech solutions. From coaching to coding, I help you build systems that reduce anxiety and amplify your creativity.",
   buttons = [
     {
       text: "Book a 15min Vibe Check",
@@ -28,11 +23,10 @@ export default function HeroCard({
     },
     {
       text: "View Services",
-      href: "#services",
+      href: "/services",
       primary: false
     }
-  ],
-  className = ""
+  ]
 }: HeroCardProps) {
   return (
     <div className="bg-gradient-to-b from-brand-green-dark to-brand-purple-dark text-white">
@@ -51,23 +45,12 @@ export default function HeroCard({
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-4 tracking-tight text-white">
               {title}
             </h1>
-            {/* Tagline with separator lines */}
-            <div className="flex items-center justify-center gap-4 mb-8">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-              <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide">
-                {tagline}
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-            </div>
           </div>
           
           {/* Main content with staggered animation */}
           <div className="space-y-6 animate-fade-in-up animation-delay-150">
             <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-white font-light leading-relaxed">
               {mainText}
-            </p>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/90 font-light leading-relaxed">
-              {subText}
             </p>
           </div>
           
