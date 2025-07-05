@@ -1,14 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { notFound } from 'next/navigation';
 import { 
   getAllPosts, 
   getPostBySlug, 
-  getPostBySlugSync,
-  type BlogPost
+  getPostBySlugSync
 } from '@/lib/mdx';
-import { logError } from '@/lib/errorHandling';
 
 // Mock dependencies
 jest.mock('fs');
