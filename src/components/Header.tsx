@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 export default function Header() {
@@ -14,7 +13,7 @@ export default function Header() {
   return (
     <>
       <header 
-        className="h-20 px-4 md:px-6 bg-brand-green-dark/95 backdrop-blur-sm fixed w-full z-50"
+        className="h-20 px-4 md:px-6 bg-brand-green-dark/95 backdrop-blur-sm fixed w-full z-50 overflow-hidden"
         role="banner"
       >
         <nav 
@@ -23,50 +22,51 @@ export default function Header() {
         >
           <Link 
             href="/" 
-            className="text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg"
+            className="text-lg sm:text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg truncate min-w-0 flex-shrink"
             aria-label="Pythoness Programmer - Home"
           >
-            Pythoness Programmer
+            <span className="block sm:hidden">Pythoness</span>
+            <span className="hidden sm:block">Pythoness Programmer</span>
           </Link>
           <div 
-            className="hidden md:flex space-x-8 text-sm font-medium"
+            className="hidden md:flex space-x-4 lg:space-x-8 text-sm font-medium flex-shrink-0"
             role="navigation"
             aria-label="Primary navigation"
           >
             <Link 
               href="/about" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 whitespace-nowrap"
             >
               About
             </Link>
             <Link 
               href="/services" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 whitespace-nowrap"
             >
               Services
             </Link>
             <Link 
               href="/resources" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 whitespace-nowrap"
             >
               Resources
             </Link>
             <Link 
               href="/blog" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 whitespace-nowrap"
             >
               Blog
             </Link>
             <Link 
               href="https://cal.com/pythoness" 
               target="_blank"
-              className="bg-brand-green-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2"
+              className="bg-brand-green-accent text-white px-3 lg:px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 whitespace-nowrap"
             >
               Book a Call
             </Link>
           </div>
           <button 
-            className="md:hidden text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg p-2"
+            className="md:hidden text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg p-2 flex-shrink-0"
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -101,12 +101,13 @@ export default function Header() {
           md:hidden
           z-50
           transition-all duration-300 ease-in-out
+          overflow-hidden
           ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
         `}
         role="navigation"
         aria-label="Mobile navigation"
       >
-        <div className="flex flex-col space-y-4 p-6">
+        <div className="flex flex-col space-y-4 p-6 max-w-7xl mx-auto">
           <Link 
             href="/about" 
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
@@ -138,7 +139,7 @@ export default function Header() {
           <Link 
             href="https://cal.com/pythoness" 
             target="_blank"
-            className="bg-brand-green-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2"
+            className="bg-brand-green-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 w-fit"
             onClick={() => setIsMenuOpen(false)}
           >
             Book a Call
