@@ -58,16 +58,7 @@ export default function ForeverTopicsCard({
   ],
   className = ""
 }: ForeverTopicsCardProps) {
-  const defaultEmojis: { [key: string]: { emoji: string; label: string } } = {
-    "Digital Security": { emoji: "🛡️", label: "Digital Security" },
-    "Workflow Optimization": { emoji: "⚡", label: "Workflow Optimization" },
-    "Tool Selection": { emoji: "🧰", label: "Tool Selection" },
-    "Digital Organization": { emoji: "🗂️", label: "Digital Organization" },
-    "Automation": { emoji: "🤖", label: "Automation" },
-    "Tech Confidence": { emoji: "💪", label: "Tech Confidence" },
-    "Digital Wellness": { emoji: "🌱", label: "Digital Wellness" },
-    "Future-Proofing": { emoji: "🔮", label: "Future-Proofing" },
-  };
+
 
   return (
     <div className={`bg-transparent rounded-2xl p-8 border-none shadow-2xl animate-fade-in-up py-12 ${className}`}>

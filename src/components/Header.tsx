@@ -6,7 +6,6 @@ import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
