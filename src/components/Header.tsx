@@ -23,13 +23,14 @@ export default function Header() {
         >
           <Link 
             href="/" 
-            className="text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg"
+            className="text-lg sm:text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg flex-shrink-0 min-w-0"
             aria-label="Pythoness Programmer - Home"
           >
-            Pythoness Programmer
+            <span className="hidden xs:inline">Pythoness Programmer</span>
+            <span className="xs:hidden">Pythoness</span>
           </Link>
           <div 
-            className="hidden md:flex space-x-8 text-sm font-medium"
+            className="hidden md:flex space-x-8 text-sm font-medium flex-shrink-0"
             role="navigation"
             aria-label="Primary navigation"
           >
@@ -66,7 +67,7 @@ export default function Header() {
             </Link>
           </div>
           <button 
-            className="md:hidden text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg p-2"
+            className="md:hidden text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg p-2 flex-shrink-0"
             aria-label="Toggle mobile menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
