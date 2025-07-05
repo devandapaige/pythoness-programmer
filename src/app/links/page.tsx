@@ -24,12 +24,6 @@ const socialLinks: LinkItem[] = [
     icon: '/icons/github.svg'
   },
   {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/pythonessprogrammer/',
-    color: 'bg-white/10 hover:bg-white/20',
-    icon: '/icons/linkedin.svg'
-  },
-  {
     name: 'YouTube',
     url: 'https://www.youtube.com/@pythonessprogrammer',
     color: 'bg-white/10 hover:bg-white/20',
@@ -52,13 +46,13 @@ const socialLinks: LinkItem[] = [
 // Booking links - easy to update
 const bookingLinks: LinkItem[] = [
   {
-    name: '30min Tech Stack Audit',
-    url: 'https://cal.com/pythoness/tech30',
+    name: '30min Tech Clarity Call',
+    url: 'https://cal.com/pythoness/clarity',
     color: 'bg-brand-green-accent text-brand-green-dark'
   },
   {
-    name: '75min Deep Dive',
-    url: 'https://cal.com/pythoness/tech75',
+    name: '90min Tech Overhaul Call',
+    url: 'https://cal.com/pythoness/overhaul',
     color: 'bg-brand-green-accent text-brand-green-dark'
   }
 ]
@@ -115,6 +109,20 @@ const mediaLinks: LinkItem[] = [
   }
 ]
 
+// Read links section
+const readLinks: LinkItem[] = [
+  {
+    name: 'Blog',
+    url: '/blog',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+  },
+  {
+    name: 'Newsletter',
+    url: 'https://pythoness.beehiiv.com/',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+  }
+]
+
 // Affiliate links section - ready for future expansion
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const affiliateLinks: LinkItem[] = [
@@ -156,7 +164,7 @@ export default function LinksPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-md mx-auto">
-            Crafting digital joy through code, coaching, and creativity.
+            From coaching to coding, I help you build systems that reduce anxiety and amplify your creativity.
           </p>
         </div>
 
@@ -165,7 +173,7 @@ export default function LinksPage() {
           {/* Social Links */}
           {socialLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Connect with Amanda</h2>
+              <h2 className="font-display text-xl text-white text-center">Connect</h2>
               <div className="flex justify-center items-center space-x-4">
                 {socialLinks.map((link) => (
                   <Link
@@ -191,42 +199,6 @@ export default function LinksPage() {
             </div>
           )}
 
-          {/* Media Links */}
-          {mediaLinks.length > 0 && (
-            <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Subscribe for Updates</h2>
-              <div className="space-y-3">
-                {mediaLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-              
-              {/* Spotify Embed */}
-              <div className="mt-6">
-                <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg p-4 shadow-lg">
-                  <iframe 
-                    style={{borderRadius: '12px'}} 
-                    src="https://open.spotify.com/embed/playlist/19jEmPqzZqp4zH8uyF7uCS?utm_source=generator&theme=0" 
-                    width="100%" 
-                    height="152" 
-                    frameBorder="0" 
-                    allowFullScreen={true}
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Booking Links */}
           {bookingLinks.length > 0 && (
             <div className="space-y-3">
@@ -244,7 +216,7 @@ export default function LinksPage() {
                   </Link>
                 ))}
                 <p className="text-white/80 text-sm text-center mt-4">
-                  Coming this summer: Group events and office hours! Stay tuned for updates.
+                  Coming this summer: Pythoness Network Slack Community and Office Hours!
                 </p>
               </div>
             </div>
@@ -274,6 +246,9 @@ export default function LinksPage() {
           {supportLinks.length > 0 && (
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Support</h2>
+              <p className="text-white/80 text-sm text-center mb-3">
+                If you enjoy my work, you can buy me a coffee!
+              </p>
               <div className="space-y-3">
                 {supportLinks.map((link) => (
                   <Link
@@ -289,6 +264,58 @@ export default function LinksPage() {
               </div>
             </div>
           )}
+
+          {/* Listen Links */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Listen</h2>
+            <div className="space-y-3">
+              {mediaLinks.filter(link => link.name === 'NotebookLM Podcast').map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+            
+            {/* Spotify Embed */}
+            <div className="mt-6">
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg p-4 shadow-lg">
+                <iframe 
+                  style={{borderRadius: '12px'}} 
+                  src="https://open.spotify.com/embed/playlist/19jEmPqzZqp4zH8uyF7uCS?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="152" 
+                  frameBorder="0" 
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Read Links */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Read</h2>
+            <div className="space-y-3">
+              {readLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
 
           {/* Link to Main Website */}
           <div className="pt-8 text-center">
