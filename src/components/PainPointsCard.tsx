@@ -10,7 +10,7 @@ interface PainPointsCardProps {
 }
 
 export default function PainPointsCard({
-  title = "Feeling Stuck? I Can Help.",
+  title = "Let's Find Your Digital Clarity",
   painPoints = [
     { text: "Drowning in digital clutter" },
     { text: "Overwhelmed by apps" },
@@ -19,7 +19,7 @@ export default function PainPointsCard({
     { text: "Tech decisions causing stress" },
     { text: "Need a clear digital strategy" }
   ],
-  className = ""
+  className = "bg-brand-purple-dark text-white"
 }: PainPointsCardProps) {
   return (
     <div className={`p-8 border-none shadow-2xl animate-fade-in-up ${className}`}>

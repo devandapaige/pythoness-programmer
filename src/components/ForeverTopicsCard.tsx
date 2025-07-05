@@ -48,58 +48,80 @@ export default function ForeverTopicsCard({
   ],
   className = ""
 }: ForeverTopicsCardProps) {
+  const defaultEmojis: { [key: string]: { emoji: string; label: string } } = {
+    "Digital Security": { emoji: "🛡️", label: "Digital Security" },
+    "Workflow Optimization": { emoji: "⚡", label: "Workflow Optimization" },
+    "Tool Selection": { emoji: "🧰", label: "Tool Selection" },
+    "Digital Organization": { emoji: "🗂️", label: "Digital Organization" },
+    "Automation": { emoji: "🤖", label: "Automation" },
+    "Tech Confidence": { emoji: "💪", label: "Tech Confidence" },
+    "Digital Wellness": { emoji: "🌱", label: "Digital Wellness" },
+    "Future-Proofing": { emoji: "🔮", label: "Future-Proofing" },
+  };
+
   return (
-    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl animate-fade-in-up ${className}`}>
+    <div className={`bg-transparent rounded-2xl p-8 border-none shadow-2xl animate-fade-in-up ${className}`}>
       {/* Section Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+        <h2 className="text-4xl md:text-5xl font-display mb-6 text-black">
           {title}
         </h2>
         <div className="flex items-center justify-center gap-4">
-          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-          <p className="text-xl text-brand-cream max-w-3xl">
+          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
+          <p className="text-xl text-brand-purple max-w-3xl">
             These are the core topics that will guide you toward lasting tech confidence and clarity.
           </p>
-          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
+          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
         </div>
       </div>
 
       {/* Topics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {topics.map((topic, index) => (
-          <div
-            key={index}
-            className="group bg-white/5 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 text-center"
-            style={{ animationDelay: `${index * 100}ms` }}
-          >
-            {/* Topic Icon Placeholder */}
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-brand-green-accent/20 flex items-center justify-center group-hover:bg-brand-green-accent/30 transition-colors">
-              <span className="text-brand-green-accent text-xl font-bold">
-                {topic.title.charAt(0)}
-              </span>
+        {topics.map((topic, index) => {
+          const isEven = index % 2 === 0;
+          const borderColor = isEven ? 'border-brand-purple-dark/30' : 'border-brand-green-accent/30';
+          const iconText = isEven ? 'text-brand-purple-dark' : 'text-brand-green-accent';
+          return (
+            <div
+              key={index}
+              className={`group rounded-xl p-6 hover:bg-brand-purple/10 transition-all duration-300 text-center border-2 ${borderColor}`}
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              {/* Topic Icon - emoji only, no circle */}
+              <div className="mb-4 flex items-center justify-center">
+                {topic.icon ? (
+                  <span className={`text-xl font-bold ${iconText}`} role="img" aria-label={topic.title}>
+                    {topic.icon}
+                  </span>
+                ) : defaultEmojis[topic.title] ? (
+                  <span className={`text-xl font-bold ${iconText}`} role="img" aria-label={defaultEmojis[topic.title].label}>
+                    {defaultEmojis[topic.title].emoji}
+                  </span>
+                ) : (
+                  <span className={`text-xl font-bold ${iconText}`}>{topic.title.charAt(0)}</span>
+                )}
+              </div>
+              {/* Topic Title */}
+              <h3 className="text-lg font-display text-brand-purple group-hover:text-black transition-colors mb-3">
+                {topic.title}
+              </h3>
+              {/* Topic Description */}
+              <p className="text-sm text-black/80 group-hover:text-black transition-colors leading-relaxed">
+                {topic.description}
+              </p>
             </div>
-            
-            {/* Topic Title */}
-            <h3 className="text-lg font-display text-brand-cream group-hover:text-white transition-colors mb-3">
-              {topic.title}
-            </h3>
-            
-            {/* Topic Description */}
-            <p className="text-sm text-brand-cream/80 group-hover:text-brand-cream transition-colors leading-relaxed">
-              {topic.description}
-            </p>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Call to Action */}
       <div className="text-center mt-12">
-        <p className="text-brand-cream/80 mb-6">
+        <p className="text-black/80 mb-6">
           Ready to dive deeper into these topics?
         </p>
         <a
           href="/resources"
-          className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
+          className="inline-block bg-brand-green-dark text-white px-8 py-4 rounded-lg hover:bg-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
         >
           Explore Resources
         </a>

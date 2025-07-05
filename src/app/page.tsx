@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="pt-24 bg-brand-green-dark">
+      <section className="bg-brand-green-dark">
         <div>
           <HeroCard />
         </div>
@@ -31,14 +31,14 @@ export default async function Home() {
       </section>
 
       {/* Forever Topics Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
+      <section>
         <div>
           <ForeverTopicsCard />
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden">
         <div>
           {/* Section Header */}
           <div className="text-center mb-16">
