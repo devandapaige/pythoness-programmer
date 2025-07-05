@@ -23,11 +23,11 @@ export default function Header() {
         >
           <Link 
             href="/" 
-            className="text-lg sm:text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg flex-shrink-0 min-w-0"
+            className="text-base sm:text-lg md:text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg flex-shrink-0 min-w-0 whitespace-nowrap"
             aria-label="Pythoness Programmer - Home"
           >
-            <span className="hidden xs:inline">Pythoness Programmer</span>
-            <span className="xs:hidden">Pythoness</span>
+            <span className="hidden sm:inline">Pythoness Programmer</span>
+            <span className="sm:hidden">Pythoness</span>
           </Link>
           <div 
             className="hidden md:flex space-x-8 text-sm font-medium flex-shrink-0"
