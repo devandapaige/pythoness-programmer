@@ -17,21 +17,21 @@ export default async function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-brand-green-dark pt-24">
+      <section className="bg-brand-green-dark pt-24 overflow-hidden">
         <div>
           <HeroCard />
         </div>
       </section>
       
       {/* Pain Points Section */}
-      <section className="bg-brand-purple-dark">
+      <section className="bg-brand-purple-dark overflow-hidden">
         <div>
           <PainPointsCard />
         </div>
       </section>
 
       {/* Forever Topics Section */}
-      <section>
+      <section className="overflow-hidden">
         <div>
           <ForeverTopicsCard />
         </div>
@@ -110,7 +110,7 @@ export default async function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section>
+      <section className="overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <NewsletterCard />
         </div>

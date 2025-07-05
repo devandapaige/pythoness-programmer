@@ -51,13 +51,13 @@ export default function AboutCard({
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Image with decorative elements */}
         <div 
-          className="relative animate-fade-in-up order-2 md:order-1"
+          className="relative animate-fade-in-up order-2 md:order-1 overflow-hidden"
           style={{ animationDelay: '150ms' }}
         >
           <div className="relative mx-auto max-w-md">
             {/* Decorative elements */}
-            <div className="absolute -bottom-24 -left-8 w-48 h-48 rounded-full bg-brand-green-accent/20 backdrop-blur-sm -z-10"></div>
-            <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-brand-purple-dark/20 backdrop-blur-sm z-0"></div>
+            <div className="absolute -bottom-12 -left-4 w-48 h-48 rounded-full bg-brand-green-accent/20 backdrop-blur-sm -z-10"></div>
+            <div className="absolute -top-3 -right-3 w-24 h-24 rounded-full bg-brand-purple-dark/20 backdrop-blur-sm z-0"></div>
             {/* Main photo */}
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
               {photo?.main ? (
@@ -78,7 +78,7 @@ export default function AboutCard({
             {photo?.decorative && photo.decorative.length > 0 && (
               <>
                 {photo.decorative[0] && (
-                  <div className="absolute top-1/4 -right-12 w-24 h-24 rounded-lg overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-500 z-20">
+                  <div className="absolute top-1/4 -right-6 w-24 h-24 rounded-lg overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-500 z-20">
                     <Image
                       src={photo.decorative[0]}
                       alt="Decorative"
@@ -90,7 +90,7 @@ export default function AboutCard({
                   </div>
                 )}
                 {photo.decorative[1] && (
-                  <div className="absolute bottom-1/4 -left-12 w-24 h-24 rounded-lg overflow-hidden transform rotate-6 hover:rotate-0 transition-transform duration-500 z-20">
+                  <div className="absolute bottom-1/4 -left-6 w-24 h-24 rounded-lg overflow-hidden transform rotate-6 hover:rotate-0 transition-transform duration-500 z-20">
                     <Image
                       src={photo.decorative[1]}
                       alt="Decorative"
