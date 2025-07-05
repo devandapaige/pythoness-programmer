@@ -12,7 +12,7 @@ export default function ServicesPage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
-        <div>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-display mb-6 text-white">
               Services That Work for Your Brain
@@ -41,7 +41,7 @@ export default function ServicesPage() {
 
       {/* Pain Points Section */}
       <section className="bg-brand-green-dark">
-        <div>
+        <div className="max-w-7xl mx-auto">
           <PainPointsCard 
             className="bg-brand-green-dark text-white"
             title="Struggling with Tech? I Understand."
@@ -59,7 +59,7 @@ export default function ServicesPage() {
 
       {/* Main Services Section */}
       <section id="services" className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
-        <div>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
               My Services
@@ -120,7 +120,7 @@ export default function ServicesPage() {
 
       {/* Process Section */}
       <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
-        <div>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
               How We&apos;ll Work Together
