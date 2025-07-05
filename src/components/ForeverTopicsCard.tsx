@@ -60,7 +60,7 @@ export default function ForeverTopicsCard({
   };
 
   return (
-    <div className={`bg-transparent rounded-2xl p-8 border-none shadow-2xl animate-fade-in-up ${className}`}>
+    <div className={`bg-transparent rounded-2xl p-8 border-none shadow-2xl animate-fade-in-up py-12 ${className}`}>
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-display mb-6 text-black">

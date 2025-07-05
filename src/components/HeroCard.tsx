@@ -29,7 +29,7 @@ export default function HeroCard({
   ]
 }: HeroCardProps) {
   return (
-    <div className="bg-gradient-to-b from-brand-green-dark to-brand-purple-dark text-white">
+    <div className="bg-gradient-to-b from-brand-green-dark to-brand-purple-dark text-white py-12">
       {/* Enhanced background patterns with multiple layers */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>

@@ -15,9 +15,9 @@ export const metadata = {
 
 export default async function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       {/* Hero Section */}
-      <section className="bg-brand-green-dark">
+      <section className="bg-brand-green-dark pt-24">
         <div>
           <HeroCard />
         </div>
@@ -38,7 +38,7 @@ export default async function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden">
+      <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white overflow-hidden">
         <div>
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -142,7 +142,7 @@ export default async function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-24 px-4 md:px-6">
+      <section>
         <div className="max-w-7xl mx-auto">
           <NewsletterCard />
         </div>

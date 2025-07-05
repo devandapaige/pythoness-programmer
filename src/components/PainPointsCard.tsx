@@ -22,7 +22,7 @@ export default function PainPointsCard({
   className = "bg-brand-purple-dark text-white"
 }: PainPointsCardProps) {
   return (
-    <div className={`p-8 border-none shadow-2xl animate-fade-in-up ${className}`}>
+    <div className={`p-8 border-none shadow-2xl animate-fade-in-up py-12 ${className}`}>
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
