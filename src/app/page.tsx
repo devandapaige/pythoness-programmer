@@ -59,75 +59,43 @@ export default async function Home() {
             <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Quick Tech Support</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ServiceCard
-                title="Tech Stack Audit"
-                subtitle="Digital Tools Optimization"
-                price="$70"
-                description="Transform your digital workflow with this focused 30-minute consultation (over Zoom) where we'll examine your current tech stack, identify redundancies, and discover opportunities for simplification."
+                title="Tech Clarity Session"
+                subtitle="30-minute focused consultation"
+                price="$75"
+                description="Perfect for when you need quick guidance on a specific tech challenge or want to explore working together."
                 features={[
-                  "A personalized assessment of your current digital tools",
-                  "Identification of potential redundancies and cost-saving opportunities",
-                  "Recommendations for tools that might better align with your workflow",
-                  "Post-session email with actionable suggestions and resources",
-                  "A framework for making future tech decisions with confidence"
+                  "Personalized tech assessment",
+                  "Workflow optimization recommendations",
+                  "Tool selection guidance",
+                  "Action plan with next steps",
+                  "Follow-up email with resources"
                 ]}
-                ctaLink="https://cal.com/pythoness/tech30"
+                ctaLink="https://cal.com/pythoness/clarity"
                 ctaText="Book Now"
+                icon="🎯"
                 textColor="text-brand-cream"
+                note="Great for one-time challenges or initial consultation"
               />
               <ServiceCard
-                title="75-min Digital Reset Session"
-                subtitle="Personal & Small Business Workflows"
-                price="$265"
-                description="Audit your digital tools, design brain-friendly workflows, and get a personalized action plan to reduce overwhelm and boost efficiency. Perfect for neurodivergent creatives and small businesses. Includes follow-up support."
+                title="Digital Systems Overhaul"
+                subtitle="90-minute comprehensive review"
+                price="$295"
+                description="Complete digital workflow audit and system redesign for lasting change and clarity."
                 features={[
-                  "Comprehensive digital tools audit",
-                  "Brain-friendly workflow design",
-                  "Personalized action plan",
-                  "Follow-up support included",
-                  "Perfect for neurodivergent creatives"
+                  "Comprehensive digital audit",
+                  "System redesign and optimization",
+                  "Tool integration recommendations",
+                  "Implementation roadmap",
+                  "30-day follow-up consultation",
+                  "Resource library access"
                 ]}
-                ctaLink="https://cal.com/pythoness/tech75"
+                ctaLink="https://cal.com/pythoness/overhaul"
                 ctaText="Book Now"
+                icon="🔄"
                 highlight={true}
                 isNew={true}
                 textColor="text-brand-cream"
-              />
-            </div>
-            <p className="text-center text-brand-cream/80 mt-8 text-sm">
-              Coming this summer: Group events and office hours! Stay tuned for updates.
-            </p>
-          </div>
-
-          {/* Additional Services */}
-          <div>
-            <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Additional Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <ServiceCard
-                title="Group Events"
-                subtitle="Coming This Summer"
-                features={[
-                  "Interactive workshops",
-                  "Group office hours",
-                  "Community learning sessions",
-                  "Collaborative problem-solving"
-                ]}
-                note="Stay tuned for updates on our upcoming group events and office hours!"
-                ctaLink="https://pythoness.beehiiv.com"
-                ctaText="Join Newsletter for Updates"
-                textColor="text-brand-cream"
-              />
-              <ServiceCard
-                title="Custom Fullstack JavaScript Development"
-                subtitle="Solutions That Grow With You"
-                features={[
-                  "Resilient, accessible, web applications",
-                  "Intuitive marketing automation",
-                  "Thoughtful AI integrations"
-                ]}
-                note="Available for Contract Work Starting September 2025"
-                ctaLink="mailto:admin@pythonessprogrammer.com"
-                ctaText="Discuss Your Project"
-                textColor="text-brand-cream"
+                note="Most popular choice for lasting change"
               />
             </div>
           </div>

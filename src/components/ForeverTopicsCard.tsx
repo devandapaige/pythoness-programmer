@@ -8,42 +8,52 @@ interface ForeverTopicsCardProps {
   title?: string;
   topics?: Topic[];
   className?: string;
+  description?: string;
 }
 
 export default function ForeverTopicsCard({
-  title = "Your Guide to Lifelong Tech Clarity",
+  title = "Your Path to Digital Confidence",
+  description = "These core practices will guide you toward lasting tech confidence. We can explore them together in our sessions.",
   topics = [
     {
-      title: "Digital Security",
-      description: "Protect your data and privacy with best practices that evolve with technology."
-    },
-    {
       title: "Workflow Optimization",
-      description: "Streamline your digital processes for maximum efficiency and minimal stress."
+      description: "Streamline your digital processes for maximum efficiency and minimal stress.",
+      icon: "⚡"
     },
     {
       title: "Tool Selection",
-      description: "Choose the right tools for your needs without getting overwhelmed by options."
+      description: "Choose the right tools for your needs without getting overwhelmed by options.",
+      icon: "🧰"
     },
     {
       title: "Digital Organization",
-      description: "Create systems that work for your brain and keep your digital life clutter-free."
+      description: "Create systems that work for your brain and keep your digital life clutter-free.",
+      icon: "🗂️"
     },
     {
-      title: "Automation",
-      description: "Let technology work for you with thoughtful, accessible automation strategies."
-    },
-    {
-      title: "Tech Confidence",
-      description: "Build lasting confidence in your ability to navigate and master new technologies."
+      title: "Mindful Automation",
+      description: "Let technology work for you with thoughtful, accessible automation strategies.",
+      icon: "🤖"
     },
     {
       title: "Digital Wellness",
-      description: "Maintain healthy relationships with technology while staying productive."
+      description: "Maintain healthy relationships with technology while staying productive.",
+      icon: "🌱"
     },
     {
       title: "Future-Proofing",
-      description: "Stay ahead of tech changes with adaptable strategies and continuous learning."
+      description: "Stay ahead of tech changes with adaptable strategies and continuous learning.",
+      icon: "🔮"
+    },
+    {
+      title: "Tech Confidence",
+      description: "Build lasting confidence in your ability to navigate and master new technologies.",
+      icon: "💪"
+    },
+    {
+      title: "Digital Security",
+      description: "Protect your data and privacy with best practices that evolve with technology.",
+      icon: "🛡️"
     }
   ],
   className = ""
@@ -66,11 +76,11 @@ export default function ForeverTopicsCard({
         <h2 className="text-4xl md:text-5xl font-display mb-6 text-black">
           {title}
         </h2>
+        {description && (
+          <p className="text-lg text-brand-purple max-w-3xl mx-auto mb-6">{description}</p>
+        )}
         <div className="flex items-center justify-center gap-4">
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
-          <p className="text-xl text-brand-purple max-w-3xl">
-            These are the core topics that will guide you toward lasting tech confidence and clarity.
-          </p>
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
         </div>
       </div>
@@ -87,18 +97,12 @@ export default function ForeverTopicsCard({
               className={`group rounded-xl p-6 hover:bg-brand-purple/10 transition-all duration-300 text-center border-2 ${borderColor}`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Topic Icon - emoji only, no circle */}
+              {/* Topic Icon - emoji only, no circle, accessible */}
               <div className="mb-4 flex items-center justify-center">
-                {topic.icon ? (
+                {topic.icon && (
                   <span className={`text-xl font-bold ${iconText}`} role="img" aria-label={topic.title}>
                     {topic.icon}
                   </span>
-                ) : defaultEmojis[topic.title] ? (
-                  <span className={`text-xl font-bold ${iconText}`} role="img" aria-label={defaultEmojis[topic.title].label}>
-                    {defaultEmojis[topic.title].emoji}
-                  </span>
-                ) : (
-                  <span className={`text-xl font-bold ${iconText}`}>{topic.title.charAt(0)}</span>
                 )}
               </div>
               {/* Topic Title */}

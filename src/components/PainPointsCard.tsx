@@ -7,10 +7,12 @@ interface PainPointsCardProps {
   title?: string;
   painPoints?: PainPoint[];
   className?: string;
+  description?: string;
 }
 
 export default function PainPointsCard({
   title = "Let's Find Your Digital Clarity",
+  description = "If you feel overwhelmed by digital clutter, endless apps, or security worries, you are not alone. I help you solve these common challenges by creating a clear digital strategy, choosing the right tools, and designing systems that work for your brain.",
   painPoints = [
     { text: "Drowning in digital clutter" },
     { text: "Overwhelmed by apps" },
@@ -28,6 +30,9 @@ export default function PainPointsCard({
         <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
           {title}
         </h2>
+        {description && (
+          <p className="text-lg text-white/80 mb-6 max-w-3xl mx-auto">{description}</p>
+        )}
         <div className="flex items-center justify-center gap-4">
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
           <p className="text-xl text-white/80 max-w-3xl">
