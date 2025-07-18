@@ -60,6 +60,11 @@ const bookingLinks: LinkItem[] = [
 // Resource links - easy to update
 const resourceLinks: LinkItem[] = [
   {
+    name: 'Pythoness Network',
+    url: '/network',
+    color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
+  },
+  {
     name: 'Mindful Automation',
     url: '/mindful-automation',
     color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
