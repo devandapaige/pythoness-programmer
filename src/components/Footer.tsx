@@ -51,7 +51,7 @@ export default function Footer() {
               <li><Link href="https://cal.com/pythoness/clarity" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>30min Tech Clarity Call</Link></li>
               <li><Link href="https://cal.com/pythoness/overhaul" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>90min Tech Overhaul Call</Link></li>
             </ul>
-            <p className="text-white/60 text-xs mt-1">Coming this summer: Pythoness Network Slack Community and Office Hours!</p>
+
           </FooterSection>
           {/* Free Resources */}
           <FooterSection title="Free Resources">
