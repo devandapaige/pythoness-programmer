@@ -51,6 +51,12 @@ export default function Header() {
               Resources
             </Link>
             <Link 
+              href="/network" 
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+            >
+              Pythoness Network
+            </Link>
+            <Link 
               href="/blog" 
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
             >
@@ -126,6 +132,13 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             Resources
+          </Link>
+          <Link 
+            href="/network" 
+            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Pythoness Network
           </Link>
           <Link 
             href="/blog" 
