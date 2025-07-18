@@ -67,7 +67,7 @@ const bookingLinks: LinkItem[] = [
 // Resource links - easy to update
 const resourceLinks: LinkItem[] = [
   {
-    name: 'Slack Community and Office Hours: Pythoness Network',
+    name: 'Slack Community: Pythoness Network',
     url: '/network',
     color: 'bg-brand-green-dark text-white border-2 border-brand-green-accent hover:bg-brand-green-dark/90 hover:border-brand-green-accent/80',
     boldPart: 'Pythoness Network'
@@ -118,6 +118,11 @@ const mediaLinks: LinkItem[] = [
   {
     name: 'Current Music Rotation',
     url: 'https://open.spotify.com/playlist/19jEmPqzZqp4zH8uyF7uCS?si=d413cc41fba54edc',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+  },
+  {
+    name: 'Working Lo-Fi Playlist',
+    url: 'https://open.spotify.com/playlist/6aZF7YvZTVkfqU2JC0HWQo?si=01d86ac4bd8347ac',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   }
 ]
@@ -291,7 +296,7 @@ export default function LinksPage() {
           <div className="space-y-3">
             <h2 className="font-display text-xl text-white text-center">Listen</h2>
             <div className="space-y-3">
-              {mediaLinks.filter(link => link.name === 'NotebookLM Podcast').map((link) => (
+              {mediaLinks.filter(link => link.name !== 'Current Music Rotation').map((link) => (
                 <Link
                   key={link.name}
                   href={link.url}
