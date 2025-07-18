@@ -13,6 +13,7 @@ interface LinkItem {
   url: string;
   color: string;
   icon?: string;
+  boldPart?: string;
 }
 
 // Social media links - easy to update
@@ -40,6 +41,12 @@ const socialLinks: LinkItem[] = [
     url: 'https://bsky.app/profile/pythonessdev.bsky.social',
     color: 'bg-white/10 hover:bg-white/20',
     icon: '/icons/bluesky.svg'
+  },
+  {
+    name: 'Slack',
+    url: 'https://join.slack.com/t/pythoness-network/shared_invite/zt-39an3ft5g-aECsS7ST9aapySR9yGewZw',
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/slack-alt-svgrepo-com.svg'
   }
 ]
 
@@ -60,9 +67,10 @@ const bookingLinks: LinkItem[] = [
 // Resource links - easy to update
 const resourceLinks: LinkItem[] = [
   {
-    name: 'Pythoness Network',
+    name: 'Slack Community and Office Hours: Pythoness Network',
     url: '/network',
-    color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
+    color: 'bg-brand-green-dark text-white border-2 border-brand-green-accent hover:bg-brand-green-dark/90 hover:border-brand-green-accent/80',
+    boldPart: 'Pythoness Network'
   },
   {
     name: 'Mindful Automation',
@@ -189,7 +197,11 @@ export default function LinksPage() {
                     className={`block ${link.color} w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
                     aria-label={link.name}
                   >
-                    {link.icon && (
+                    {link.icon && link.name === 'Slack' ? (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" className="w-6 h-6 text-white">
+                        <path d="M23,9.5A3.50424,3.50424,0,0,0,19.5,6a3.45946,3.45946,0,0,0-1.5.35107V4.5a3.49466,3.49466,0,0,0-6-2.44171A3.48676,3.48676,0,0,0,6.35107,6H4.5a3.49466,3.49466,0,0,0-2.44171,6A3.48676,3.48676,0,0,0,6,17.64893V19.5a3.49466,3.49466,0,0,0,6,2.44171A3.48676,3.48676,0,0,0,17.64893,18H19.5a3.49466,3.49466,0,0,0,2.44171-6A3.48559,3.48559,0,0,0,23,9.5Zm-10-5a1.5,1.5,0,0,1,3,0v5a1.5,1.5,0,0,1-3,0Zm-7,10A1.5,1.5,0,1,1,4.5,13H6Zm5,5a1.5,1.5,0,0,1-3,0v-5a1.5,1.5,0,0,1,3,0ZM9.5,11h-5a1.5,1.5,0,0,1,0-3h5a1.5,1.5,0,0,1,0,3ZM11,6H9.5A1.5,1.5,0,1,1,11,4.5Zm1,6.05829c-.01935-.01978-.03851-.03894-.05829-.05829.01978-.01935.03894-.03851.05829-.05829.01935.01978.03851.03894.05829.05829C12.03851,12.01935,12.01935,12.03851,12,12.05829ZM14.5,21A1.50164,1.50164,0,0,1,13,19.5V18h1.5a1.5,1.5,0,0,1,0,3Zm5-5h-5a1.5,1.5,0,0,1,0-3h5a1.5,1.5,0,0,1,0,3Zm0-5H18V9.5A1.5,1.5,0,1,1,19.5,11Z"/>
+                      </svg>
+                    ) : link.icon && (
                       <Image
                         src={link.icon}
                         alt=""
@@ -220,9 +232,6 @@ export default function LinksPage() {
                     {link.name}
                   </Link>
                 ))}
-                <p className="text-white/80 text-sm text-center mt-4">
-                  Coming this summer: Pythoness Network Slack Community and Office Hours!
-                </p>
               </div>
             </div>
           )}
@@ -240,7 +249,15 @@ export default function LinksPage() {
                     rel="noopener noreferrer"
                     className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
                   >
-                    {link.name}
+                    {link.boldPart ? (
+                      <>
+                        {link.name.split(link.boldPart)[0]}
+                        <span className="font-bold">{link.boldPart}</span>
+                        {link.name.split(link.boldPart)[1]}
+                      </>
+                    ) : (
+                      link.name
+                    )}
                   </Link>
                 ))}
               </div>
