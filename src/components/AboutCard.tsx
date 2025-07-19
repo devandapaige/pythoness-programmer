@@ -21,7 +21,7 @@ interface AboutCardProps {
 
 export default function AboutCard({
   title = "The Pythoness Behind The Code",
-  description = "I'm a tech coach, developer, and digital craftswoman who believes technology should be a joy to use, not a frustration to endure. With over a decade of experience building digital experiences that delight and empower, I work with conscious creators and business owners to make their digital visions come alive.",
+  description = "I'm a tech coach, developer, and digital craftswoman who believes technology should be a joy to use, not a frustration to endure. With over a decade of experience building digital experiences that delight and empower, I work with conscious creators and business owners to make their digital visions come alive. I have an instinct for finding the signal in the noise and understanding what creatives and developers truly need to thrive. My goal is to transmit that knowledge back to the community, creating systems that feel supportive and intuitive.",
   pythia = "The name 'Pythoness' is a nod to the Pythia, the high priestesses who served as oracles at the Temple of Apollo at Delphi. These women were the technology experts of their time, trusted advisors who helped leaders navigate uncertainty with wisdom and foresight. Like the ancient oracles, I aim to demystify complex systems and help you find clarity in your digital journey.",
   values = {
     title: "My Approach",

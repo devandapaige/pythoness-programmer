@@ -67,7 +67,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                I offer focused, brain-friendly tech support sessions designed for neurodivergent professionals. As a software engineer, I bring deep technical expertise to help you optimize your digital life, but I do not offer web development or custom software development services under the Pythoness Programmer brand.
+                I offer deeply focused, brain-friendly tech support sessions designed for neurodivergent professionals. My instinct for getting to the root of a problem means we can make significant progress, even in a short amount of time. I bring my full concentration to your challenge. As a software engineer, I bring deep technical expertise to help you optimize your digital life, but I do not offer web development or custom software development services under the Pythoness Programmer brand.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>

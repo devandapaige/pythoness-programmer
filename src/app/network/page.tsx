@@ -16,7 +16,7 @@ export default function NetworkPage() {
             Pythoness Network
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            A free Slack community for mindful productivity, tech support, and co-working sessions
+          Our Space for Mindful Tech & Productivity
           </p>
           
           {/* CTA Buttons */}
@@ -132,7 +132,7 @@ export default function NetworkPage() {
 
       {/* Community Guidelines */}
       <div className="max-w-4xl mx-auto px-4 py-16">
-        <h2 className="font-display text-3xl text-white text-center mb-12">Our Community Guidelines</h2>
+        <h2 className="font-display text-3xl text-white text-center mb-12">Our Community Bargains</h2>
         
         <div className="space-y-8">
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-lg p-6">
@@ -203,7 +203,7 @@ export default function NetworkPage() {
       <div className="max-w-4xl mx-auto px-4 py-16 text-center">
         <h2 className="font-display text-3xl text-white mb-6">Ready to Join?</h2>
         <p className="text-xl text-white/80 mb-8">
-          Connect with like-minded developers and creators in a supportive, mindful environment.
+          Ready to be part of a community built on mutual support and a shared desire for digital clarity? Your voice is a valuable part of our perspective.
         </p>
         <Link
           href="https://join.slack.com/t/pythoness-network/shared_invite/zt-39an3ft5g-aECsS7ST9aapySR9yGewZw"

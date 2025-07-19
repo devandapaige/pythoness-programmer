@@ -12,8 +12,8 @@ interface ForeverTopicsCardProps {
 }
 
 export default function ForeverTopicsCard({
-  title = "Your Path to Digital Confidence",
-  description = "These core practices will guide you toward lasting tech confidence. We can explore them together in our sessions.",
+  title = "Building Our Digital Confidence, Together",
+  description = "These are the core practices we build together in our community. We can also explore them in our sessions.",
   topics = [
     {
       title: "Workflow Optimization",

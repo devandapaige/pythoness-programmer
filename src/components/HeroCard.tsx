@@ -13,7 +13,7 @@ interface HeroCardProps {
 }
 
 export default function HeroCard({
-  title = "Your Tech, Clarified",
+  title = "Tech That Works, for People Like Us",
   mainText = "Feeling stuck in digital clutter? I provide clear, joyful, and human-first tech solutions. From coaching to coding, I help you build systems that reduce anxiety and amplify your creativity.",
   buttons = [
     {

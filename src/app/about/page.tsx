@@ -90,7 +90,7 @@ export default function AboutPage() {
 
           <div className="space-y-8 text-lg leading-relaxed">
             <p>
-              My journey into tech began like many others - with curiosity and a desire to solve problems. But what set my path apart was my neurodivergent brain and the unique challenges it presented when navigating the digital world.
+            My journey into tech has always been about making sense of the chaos. I&apos;ve found that the biggest breakthroughs—in code and in life—often come after periods of deep confusion. My gift is sitting with that complexity until the &apos;aha&apos; moment arrives, and then sharing that clarity with others.
             </p>
             
             <p>
@@ -186,11 +186,26 @@ export default function AboutPage() {
             {/* Principle 6 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">💚</span>
+                <span className="text-2xl">🤝</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">LGBTQIA+ Affirming</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Community-Centered Bargains</h3>
               <p className="text-brand-cream/80">
-                I provide a safe, affirming space for LGBTQIA+ individuals and businesses, understanding the unique challenges and opportunities in our community.
+                I believe in clear, fair exchanges. When we work together, whether in a coaching session or in the free community, my commitment is to provide immense value in exchange for your trust and engagement. We build this space together.
+              </p>
+            </div>
+          </div>
+
+          {/* Centered Affirming Statement */}
+          <div className="mt-16 text-center">
+            <div className="bg-brand-green-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20 shadow-2xl max-w-4xl mx-auto">
+              <div className="w-20 h-20 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-3xl">💚</span>
+              </div>
+              <h3 className="text-3xl font-display mb-6 text-brand-cream">
+                LGBTQIA+ & SW Affirming
+              </h3>
+              <p className="text-xl text-brand-cream/90 leading-relaxed max-w-3xl mx-auto">
+                I provide a safe, affirming space for LGBTQIA+ individuals and SW, understanding the unique challenges and opportunities in our communities. This commitment to inclusivity and support is the foundation that makes all my other principles possible.
               </p>
             </div>
           </div>
