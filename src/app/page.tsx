@@ -82,7 +82,7 @@ export default async function Home() {
                 price="$295"
                 description="Complete digital workflow audit and system redesign for lasting change and clarity."
                 features={[
-                  "Comprehensive digital audit",
+                  "A Deeply Focused Audit of Your Digital Systems",
                   "System redesign and optimization",
                   "Tool integration recommendations",
                   "Implementation roadmap",

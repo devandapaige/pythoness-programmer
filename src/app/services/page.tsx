@@ -100,7 +100,7 @@ export default function ServicesPage() {
               description="Complete digital workflow audit and system redesign for lasting change and clarity."
               price="$295"
               features={[
-                "Comprehensive digital audit",
+                "A Deeply Focused Audit of Your Digital Systems",
                 "System redesign and optimization",
                 "Tool integration recommendations",
                 "Implementation roadmap",
@@ -225,7 +225,7 @@ export default function ServicesPage() {
                 How do I know which service is right for me?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Start with a free consultation! We&apos;ll discuss your specific needs and I&apos;ll recommend the best approach. The Tech Clarity Session is perfect for exploring options, while the Digital Systems Overhaul is ideal for comprehensive change.
+                Start with a <a href="https://cal.com/pythoness/15min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">free consultation</a>! We&apos;ll discuss your specific needs and I&apos;ll recommend the best approach. The Tech Clarity Session is perfect for exploring options, while the Digital Systems Overhaul is ideal for comprehensive change.
               </p>
             </div>
 
