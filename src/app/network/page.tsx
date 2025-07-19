@@ -16,7 +16,7 @@ export default function NetworkPage() {
             Pythoness Network
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-          Our Space for Mindful Tech & Productivity
+          Our Slack Community for Mindful Tech & Productivity
           </p>
           
           {/* CTA Buttons */}
@@ -213,18 +213,6 @@ export default function NetworkPage() {
         >
           Join Pythoness Network
         </Link>
-      </div>
-
-      {/* Footer */}
-      <div className="border-t border-white/10 py-8">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <Link
-            href="/links"
-            className="text-brand-green-accent hover:text-white transition-colors"
-          >
-            ← Back to Links
-          </Link>
-        </div>
       </div>
     </div>
   )
