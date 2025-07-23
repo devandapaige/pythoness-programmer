@@ -68,12 +68,12 @@ export default function DigitalSpringCleaningPage() {
             <h2 className="text-2xl font-display mb-4 text-brand-green-dark text-center">From Our April 2025 Newsletter Series</h2>
             <p className="mb-4 text-base text-brand-green-dark text-center">These resources are adapted from our in-depth Digital Spring Cleaning series. Dive deeper into each week&apos;s topic:</p>
             <ul className="list-disc list-inside text-brand-green-accent mb-4 text-left max-w-xl mx-auto">
-              <li><a href="https://pythoness.beehiiv.com/p/monthly-grit-framework-for-your-digital-spring-cleaning" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week One: Monthly GRIT Framework for Your Digital Spring Cleaning</a></li>
-              <li><a href="https://pythoness.beehiiv.com/p/digital-spring-cleaning-deepening-our-grit-journey" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Two: Deepening Our GRIT Journey</a></li>
-              <li><a href="https://pythoness.beehiiv.com/p/monthly-grit-reflection-worksheet" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Three: Monthly GRIT Reflection Worksheet</a></li>
-              <li><a href="https://pythoness.beehiiv.com/p/digital-spring-cleaning-a-month-of-grit-and-growth" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Four: A Month of GRIT and Growth</a></li>
+              <li><a href="https://newsletter.pythonessprogrammer.com/p/monthly-grit-framework-for-your-digital-spring-cleaning" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week One: Monthly GRIT Framework for Your Digital Spring Cleaning</a></li>
+              <li><a href="https://newsletter.pythonessprogrammer.com/p/digital-spring-cleaning-deepening-our-grit-journey" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Two: Deepening Our GRIT Journey</a></li>
+              <li><a href="https://newsletter.pythonessprogrammer.com/p/monthly-grit-reflection-worksheet" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Three: Monthly GRIT Reflection Worksheet</a></li>
+              <li><a href="https://newsletter.pythonessprogrammer.com/p/digital-spring-cleaning-a-month-of-grit-and-growth" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-purple-dark">Week Four: A Month of GRIT and Growth</a></li>
             </ul>
-            <p className="text-base text-brand-green-dark text-center">Want more mindful tech tips and digital well-being tools? <a href="https://pythoness.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer" className="font-semibold underline text-brand-green-accent hover:text-brand-purple-dark">Subscribe to the Pythoness Perspective newsletter</a> for the latest sovereign tech strategies!</p>
+            <p className="text-base text-brand-green-dark text-center">Want more mindful tech tips and digital well-being tools? <a href="https://newsletter.pythonessprogrammer.com/subscribe" target="_blank" rel="noopener noreferrer" className="font-semibold underline text-brand-green-accent hover:text-brand-purple-dark">Subscribe to the Pythoness Perspective newsletter</a> for the latest sovereign tech strategies!</p>
           </section>
 
           {/* Encouragement/Outro */}

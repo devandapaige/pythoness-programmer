@@ -217,7 +217,7 @@ export default function May2025LandingPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythoness.xyz/p/the-you-framework"
+                    href="https://newsletter.pythonessprogrammer.com/p/the-you-framework"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -235,7 +235,7 @@ export default function May2025LandingPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythoness.xyz/p/mindful-automation-systems"
+                    href="https://newsletter.pythonessprogrammer.com/p/mindful-automation-systems"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -253,7 +253,7 @@ export default function May2025LandingPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythoness.xyz/p/error-proofing-your-automation"
+                    href="https://newsletter.pythonessprogrammer.com/p/error-proofing-your-automation"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -279,7 +279,7 @@ export default function May2025LandingPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythoness.xyz/p/bringing-it-all-together-mindful-automation-1"
+                    href="https://newsletter.pythonessprogrammer.com/p/bringing-it-all-together-mindful-automation-1"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"

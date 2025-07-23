@@ -88,7 +88,7 @@ export default function Footer() {
           <FooterSection title="Read">
             <ul className="space-y-1" role="list" aria-label="Read options">
               <li><Link href="/blog" className={footerLinkClass}>Blog</Link></li>
-              <li><Link href="https://pythoness.beehiiv.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
+              <li><Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
             </ul>
           </FooterSection>
         </div>

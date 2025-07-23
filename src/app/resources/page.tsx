@@ -255,7 +255,7 @@ export default function ResourcesPage() {
                     Monthly insights on digital wellness, automation strategies, and neurodivergent-friendly tech.
                   </p>
                   <Link
-                    href="https://pythoness.beehiiv.com"
+                    href="https://newsletter.pythonessprogrammer.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-brand-green-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
@@ -308,7 +308,7 @@ export default function ResourcesPage() {
                 </div>
               </div>
               <Link
-                href="https://pythoness.beehiiv.com"
+                href="https://newsletter.pythonessprogrammer.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"

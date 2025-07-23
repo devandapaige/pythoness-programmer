@@ -107,7 +107,7 @@ const supportLinks: LinkItem[] = [
 const mediaLinks: LinkItem[] = [
   {
     name: 'Newsletter',
-    url: 'https://pythoness.beehiiv.com/',
+    url: 'https://newsletter.pythonessprogrammer.com/subscribe',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   },
   {
@@ -136,7 +136,7 @@ const readLinks: LinkItem[] = [
   },
   {
     name: 'Newsletter',
-    url: 'https://pythoness.beehiiv.com/',
+    url: 'https://newsletter.pythonessprogrammer.com/',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   }
 ]
