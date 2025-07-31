@@ -34,7 +34,7 @@ export default function Footer() {
               <li><Link href="/about" className={footerLinkClass}>About</Link></li>
               <li><Link href="/services" className={footerLinkClass}>Services</Link></li>
               <li><Link href="/resources" className={footerLinkClass}>Resources</Link></li>
-              <li><Link href="https://www.pythoness.store" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</Link></li>
+                              <li><Link href="https://www.pythoness.shop" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</Link></li>
             </ul>
           </FooterSection>
           {/* Social Links */}

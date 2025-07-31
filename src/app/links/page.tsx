@@ -107,7 +107,7 @@ const supportLinks: LinkItem[] = [
 const shopLinks: LinkItem[] = [
   {
     name: 'Sticky Spells Store',
-    url: 'https://www.pythoness.store',
+            url: 'https://www.pythoness.shop',
     color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
   }
 ]

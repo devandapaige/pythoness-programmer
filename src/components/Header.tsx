@@ -63,7 +63,7 @@ export default function Header() {
               Blog
             </Link>
             <Link 
-              href="https://www.pythoness.store" 
+              href="https://www.pythoness.shop" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 font-medium"
@@ -156,7 +156,7 @@ export default function Header() {
             Blog
           </Link>
           <Link 
-            href="https://www.pythoness.store" 
+            href="https://www.pythoness.shop" 
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 font-medium"
