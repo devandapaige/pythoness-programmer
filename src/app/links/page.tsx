@@ -103,6 +103,15 @@ const supportLinks: LinkItem[] = [
   }
 ]
 
+// Shop links section
+const shopLinks: LinkItem[] = [
+  {
+    name: 'Sticky Spells Store',
+    url: 'https://www.pythoness.store',
+    color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
+  }
+]
+
 // Media links section
 const mediaLinks: LinkItem[] = [
   {
@@ -227,6 +236,26 @@ export default function LinksPage() {
               <h2 className="font-display text-xl text-white text-center">Book a Call</h2>
               <div className="space-y-3">
                 {bookingLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Shop Links */}
+          {shopLinks.length > 0 && (
+            <div className="space-y-3">
+              <h2 className="font-display text-xl text-white text-center">Shop</h2>
+              <div className="space-y-3">
+                {shopLinks.map((link) => (
                   <Link
                     key={link.name}
                     href={link.url}
