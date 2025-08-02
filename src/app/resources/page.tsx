@@ -131,6 +131,80 @@ export default function ResourcesPage() {
                 </div>
               </div>
 
+              {/* Neuroinclusive Design */}
+              <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-brand-green-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl">🧠</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display text-brand-green-dark mb-1">Neuroinclusive Design</h3>
+                    <p className="text-brand-green-dark/70 text-sm">June 2025 Deep Dive</p>
+                  </div>
+                </div>
+                <p className="text-brand-green-dark mb-6">
+                  Learn how designing for neurodivergent users creates better experiences for everyone—moving beyond 
+                  accommodation to proactive inclusion with practical principles and tools.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Four Core Design Principles
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Five-Minute Accessibility Check
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Weekly Deep Dives & Newsletter Links
+                  </div>
+                </div>
+                <Link
+                  href="/neuroinclusive-design"
+                  className="block bg-brand-green-accent text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                >
+                  Explore Neuroinclusive Design
+                </Link>
+              </div>
+
+              {/* Tech Boundaries */}
+              <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-brand-green-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display text-brand-green-dark mb-1">Tech Boundaries</h3>
+                    <p className="text-brand-green-dark/70 text-sm">July 2025 Deep Dive</p>
+                  </div>
+                </div>
+                <p className="text-brand-green-dark mb-6">
+                  Small boundaries, big energy gains—learn to create digital systems that work with your brain, 
+                  not against it. Transform tech overwhelm into creative fuel.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Three Core Boundary Pillars
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    PARA Method & Energy-Aware Automation
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Weekly Deep Dives & Newsletter Links
+                  </div>
+                </div>
+                <Link
+                  href="/tech-boundaries"
+                  className="block bg-brand-green-accent text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                >
+                  Explore Tech Boundaries
+                </Link>
+              </div>
+
               {/* Vibe Coding Cheatsheet */}
               <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
                 <div className="flex items-center mb-6">
