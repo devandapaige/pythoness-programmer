@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import CopyField from '@/components/CopyField'
 
 export const metadata: Metadata = {
   title: 'Connect with Amanda | Pythoness Programmer',
@@ -305,6 +306,19 @@ export default function LinksPage() {
               <p className="text-white/80 text-sm text-center mb-3">
                 If you enjoy my work, you can buy me a coffee!
               </p>
+              {/* Direct support usernames */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <CopyField
+                  label="Cash App"
+                  value="$ANCreative"
+                  ariaLabel="Cash App username"
+                />
+                <CopyField
+                  label="Venmo"
+                  value="$andapaige"
+                  ariaLabel="Venmo username"
+                />
+              </div>
               <div className="space-y-3">
                 {supportLinks.map((link) => (
                   <Link
