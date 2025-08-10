@@ -315,7 +315,7 @@ export default function LinksPage() {
                 />
                 <CopyField
                   label="Venmo"
-                  value="$andapaige"
+                  value="@ANCreative"
                   ariaLabel="Venmo username"
                 />
               </div>
