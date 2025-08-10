@@ -18,12 +18,12 @@ export default function Footer() {
 
   return (
     <footer 
-      className="bg-brand-green-dark text-white py-12 px-4 md:px-6"
+      className="bg-brand-green-dark text-white py-8 md:py-12 px-4 md:px-6"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto">
         {/* First Row: Main Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-12 pb-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:gap-x-12 pb-4 md:pb-4">
           {/* Brand Column */}
           <FooterSection title={
             <Link href="/" className="hover:text-brand-green-accent transition-colors">
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         {/* Second Row: Legal, Support the Pythoness, Listen, Read */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-x-12 pb-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:gap-x-12 pb-2 md:pb-2">
           <FooterSection title="Legal">
             <ul className="space-y-1">
               <li><Link href="/privacy-policy" className={footerLinkClass}>Privacy Policy</Link></li>
