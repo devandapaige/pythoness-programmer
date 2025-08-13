@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import CopyField from '@/components/CopyField'
+import AddEventCalendar from '@/components/AddEventCalendar'
 
 export const metadata: Metadata = {
   title: 'Connect with Amanda | Pythoness Programmer',
@@ -192,16 +193,32 @@ export default function LinksPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-md mx-auto">
-            From coaching to coding, I help you build systems that reduce anxiety and amplify your creativity.
+            Tech coaching, mindful automation, and digital systems that work for your brain. From workflow optimization to accessible development.
           </p>
         </div>
 
-        {/* Links Container */}
-        <div className="w-full space-y-8">
-          {/* Social Links */}
-          {socialLinks.length > 0 && (
-            <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Connect</h2>
+        {/* Combined Calendar & Connect Section */}
+        <div className="text-center mb-8">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 max-w-md mx-auto">
+            <h2 className="font-display text-xl text-white mb-3">Stay Updated & Connect</h2>
+            <p className="text-white/80 text-sm mb-4">
+              Add my Calendar to yours to stay up to date on my TikTok lives, Workshops, Co-Working Sessions, and more.
+            </p>
+            <AddEventCalendar>
+              <div 
+                title="Add to Calendar" 
+                className="addeventstc bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors cursor-pointer inline-block mb-4"
+                data-styling="none" 
+                data-id="em600805"
+              >
+                Add to Calendar
+                <span className="addeventstc_icon ml-2"></span>
+              </div>
+            </AddEventCalendar>
+            
+            {/* Social Media Links */}
+            <div className="mt-6">
+              <p className="text-white/80 text-sm mb-3">where to find me</p>
               <div className="flex justify-center items-center space-x-4">
                 {socialLinks.map((link) => (
                   <Link
@@ -209,28 +226,31 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} w-12 h-12 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    className={`block ${link.color} w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
                     aria-label={link.name}
                   >
                     {link.icon && link.name === 'Slack' ? (
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" className="w-6 h-6 text-white">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" className="w-5 h-5 text-white">
                         <path d="M23,9.5A3.50424,3.50424,0,0,0,19.5,6a3.45946,3.45946,0,0,0-1.5.35107V4.5a3.49466,3.49466,0,0,0-6-2.44171A3.48676,3.48676,0,0,0,6.35107,6H4.5a3.49466,3.49466,0,0,0-2.44171,6A3.48676,3.48676,0,0,0,6,17.64893V19.5a3.49466,3.49466,0,0,0,6,2.44171A3.48676,3.48676,0,0,0,17.64893,18H19.5a3.49466,3.49466,0,0,0,2.44171-6A3.48559,3.48559,0,0,0,23,9.5Zm-10-5a1.5,1.5,0,0,1,3,0v5a1.5,1.5,0,0,1-3,0Zm-7,10A1.5,1.5,0,1,1,4.5,13H6Zm5,5a1.5,1.5,0,0,1-3,0v-5a1.5,1.5,0,0,1,3,0ZM9.5,11h-5a1.5,1.5,0,0,1,0-3h5a1.5,1.5,0,0,1,0,3ZM11,6H9.5A1.5,1.5,0,1,1,11,4.5Zm1,6.05829c-.01935-.01978-.03851-.03894-.05829-.05829.01978-.01935.03894-.03851.05829-.05829.01935.01978.03851.03894.05829.05829C12.03851,12.01935,12.01935,12.03851,12,12.05829ZM14.5,21A1.50164,1.50164,0,0,1,13,19.5V18h1.5a1.5,1.5,0,0,1,0,3Zm5-5h-5a1.5,1.5,0,0,1,0-3h5a1.5,1.5,0,0,1,0,3Zm0-5H18V9.5A1.5,1.5,0,1,1,19.5,11Z"/>
                       </svg>
                     ) : link.icon && (
                       <Image
                         src={link.icon}
                         alt=""
-                        width={24}
-                        height={24}
-                        className="w-6 h-6"
+                        width={20}
+                        height={20}
+                        className="w-5 h-5"
                       />
                     )}
                   </Link>
                 ))}
               </div>
             </div>
-          )}
+          </div>
+        </div>
 
+        {/* Links Container */}
+        <div className="w-full space-y-8">
           {/* Booking Links */}
           {bookingLinks.length > 0 && (
             <div className="space-y-3">
@@ -271,6 +291,58 @@ export default function LinksPage() {
             </div>
           )}
 
+          {/* Read Links */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Read</h2>
+            <div className="space-y-3">
+              {readLinks.slice().reverse().map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Listen Links */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Listen</h2>
+            <div className="space-y-3">
+              {mediaLinks.filter(link => link.name !== 'Current Music Rotation' && link.name !== 'Newsletter').map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+            
+            {/* Spotify Embed */}
+            <div className="mt-6">
+              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg p-4 shadow-lg">
+                <iframe 
+                  style={{borderRadius: '12px'}} 
+                  src="https://open.spotify.com/embed/playlist/19jEmPqzZqp4zH8uyF7uCS?utm_source=generator&theme=0" 
+                  width="100%" 
+                  height="152" 
+                  frameBorder="0" 
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Resource Links */}
           {resourceLinks.length > 0 && (
             <div className="space-y-3">
@@ -299,7 +371,7 @@ export default function LinksPage() {
             </div>
           )}
 
-          {/* Support Links */}
+          {/* Support Links section - moved to bottom */}
           {supportLinks.length > 0 && (
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Support</h2>
@@ -334,58 +406,6 @@ export default function LinksPage() {
               </div>
             </div>
           )}
-
-          {/* Listen Links */}
-          <div className="space-y-3">
-            <h2 className="font-display text-xl text-white text-center">Listen</h2>
-            <div className="space-y-3">
-              {mediaLinks.filter(link => link.name !== 'Current Music Rotation').map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-            
-            {/* Spotify Embed */}
-            <div className="mt-6">
-              <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-lg p-4 shadow-lg">
-                <iframe 
-                  style={{borderRadius: '12px'}} 
-                  src="https://open.spotify.com/embed/playlist/19jEmPqzZqp4zH8uyF7uCS?utm_source=generator&theme=0" 
-                  width="100%" 
-                  height="152" 
-                  frameBorder="0" 
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Read Links */}
-          <div className="space-y-3">
-            <h2 className="font-display text-xl text-white text-center">Read</h2>
-            <div className="space-y-3">
-              {readLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
 
           {/* Link to Main Website */}
           <div className="pt-8 text-center">

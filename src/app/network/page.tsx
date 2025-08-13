@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import AddEventCalendar from '@/components/AddEventCalendar'
 
 export const metadata: Metadata = {
   title: 'Pythoness Network | Free Slack Community',
@@ -20,22 +21,30 @@ export default function NetworkPage() {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col gap-6 justify-center mb-12">
+            <div className="flex flex-col items-center gap-2">
+              <AddEventCalendar>
+                <div 
+                  title="Add to Calendar" 
+                  className="addeventstc bg-brand-green-accent text-brand-green-dark px-8 py-4 rounded-lg font-medium text-lg hover:bg-brand-green-accent/90 transition-colors cursor-pointer"
+                  data-styling="none" 
+                  data-id="em600805"
+                >
+                  Add to Calendar
+                  <span className="addeventstc_icon ml-2"></span>
+                </div>
+              </AddEventCalendar>
+              <p className="text-sm text-white/70 max-w-xs">
+                Add my Calendar to yours to stay up to date on my TikTok lives, Workshops, Co-Working Sessions, and more.
+              </p>
+            </div>
             <Link
               href="https://join.slack.com/t/pythoness-network/shared_invite/zt-39an3ft5g-aECsS7ST9aapySR9yGewZw"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-green-accent text-brand-green-dark px-8 py-4 rounded-lg font-medium text-lg hover:bg-brand-green-accent/90 transition-colors"
+              className="bg-brand-green-accent text-brand-green-dark px-8 py-4 rounded-lg font-medium text-lg hover:bg-brand-green-accent/90 transition-colors text-center"
             >
               Join the Community
-            </Link>
-            <Link
-              href="https://www.addevent.com/calendar/em600805"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white/10 text-white px-8 py-4 rounded-lg font-medium text-lg hover:bg-white/20 transition-colors border border-white/20"
-            >
-              Add to Calendar
             </Link>
           </div>
         </div>
@@ -170,9 +179,12 @@ export default function NetworkPage() {
               <p className="text-white/80 mb-4">
                 Join us for a dedicated session to finish the week strong. This is a great time to complete any pressing tasks before the weekend.
               </p>
-              <div className="text-brand-green-accent font-medium">
+              <div className="text-brand-green-accent font-medium mb-2">
                 Fridays @ 1 PM - 3 PM ET
               </div>
+              <p className="text-sm text-white/70">
+                <strong>RSVP Required:</strong> Zoom link sent after RSVP
+              </p>
             </div>
             
             <div>
@@ -180,21 +192,33 @@ export default function NetworkPage() {
               <p className="text-white/80 mb-4">
                 A 90-minute session combining a deep dive into digital accessibility with a guided meditation to help us recenter.
               </p>
-              <div className="text-brand-green-accent font-medium">
+              <div className="text-brand-green-accent font-medium mb-2">
                 Last Tuesday @ 8 PM - 9:30 PM ET
               </div>
+              <p className="text-sm text-white/70">
+                <strong>RSVP Required:</strong> Zoom link sent after RSVP
+              </p>
             </div>
           </div>
           
           <div className="mt-8 text-center">
-            <Link
-              href="https://www.addevent.com/calendar/em600805"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors"
-            >
-              Subscribe to Calendar
-            </Link>
+            <div className="mb-4">
+              <p className="text-white/80 text-sm mb-4">
+                <strong>Note:</strong> Workshops & co-working sessions require RSVP for zoom links. 
+                Other lives are scheduled with links to TikTok or streaming platforms.
+              </p>
+            </div>
+            <AddEventCalendar>
+              <div 
+                title="Add to Calendar" 
+                className="addeventstc bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors cursor-pointer inline-block"
+                data-styling="none" 
+                data-id="em600805"
+              >
+                Subscribe to Calendar
+                <span className="addeventstc_icon ml-2"></span>
+              </div>
+            </AddEventCalendar>
           </div>
         </div>
       </div>

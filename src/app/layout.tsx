@@ -62,6 +62,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <style>{`
+          .addeventstc {
+            background-color:#32d24d!important;
+            color:#ffffff!important;
+          }
+          .addeventstc:hover {
+            background-color:#32d24d!important;
+            filter:brightness(105%);
+          }
+          .addeventstc:active {
+            background-color:#32d24d!important;
+            filter:brightness(110%);
+          }
+          .addeventstc .addeventstc_icon {
+            background:url(https://cdn.addevent.com/libs/imgs/icon-calendar-fff-t1.svg) no-repeat!important;
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+        `}</style>
+      </head>
       <body className={`${openSans.variable} ${norwester.variable} font-sans bg-brand-cream text-brand-green-dark antialiased [&_h1]:font-display [&_h2]:font-display [&_h3]:font-display [&_h4]:font-display [&_h5]:font-display [&_h6]:font-display`}>
         <Hotjar />
         <CookieYes />
