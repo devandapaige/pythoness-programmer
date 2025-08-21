@@ -16,6 +16,25 @@ export default function DigitalSpringCleaningPage() {
             </p>
           </section>
 
+          {/* Video Section */}
+          <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl font-display mb-2 text-brand-green-dark text-center mt-1">Watch the Digital Spring Cleaning Video</h2>
+            <p className="text-brand-green-dark text-center mb-2">A powerful, bite-sized video recap of digital spring cleaning strategies and the NAA framework.</p>
+            <div className="w-full mt-0">
+              <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/1S0fF63_gUY?si=6tVXYKpwPuc7m0Tm" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+                style={{borderRadius: '12px'}}
+              />
+            </div>
+          </section>
+
           {/* Note Section */}
           <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
             <p className="text-brand-green-dark text-base md:text-lg">
@@ -85,7 +104,7 @@ export default function DigitalSpringCleaningPage() {
 
           {/* Update Banner */}
           <div className="mt-12 bg-brand-green-accent/20 text-white text-center py-2 px-4 rounded-lg" role="status" aria-label="Content update status">
-            <p className="text-sm">✨ Last updated: April 2025 ✨</p>
+            <p className="text-sm">✨ Last updated: August 2025 ✨</p>
           </div>
         </div>
       </div>
