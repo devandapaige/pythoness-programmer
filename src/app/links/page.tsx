@@ -55,13 +55,13 @@ const socialLinks: LinkItem[] = [
 // Booking links - easy to update
 const bookingLinks: LinkItem[] = [
   {
-    name: '30min Tech Clarity Call',
-    url: 'https://cal.com/pythoness/clarity',
+    name: '20min Software Psychic Session',
+    url: 'https://cal.com/pythoness/20min',
     color: 'bg-brand-green-accent text-brand-green-dark'
   },
   {
-    name: '90min Tech Overhaul Call',
-    url: 'https://cal.com/pythoness/overhaul',
+    name: '60min Software Psychic Session',
+    url: 'https://cal.com/pythoness/60min',
     color: 'bg-brand-green-accent text-brand-green-dark'
   }
 ]
@@ -193,7 +193,7 @@ export default function LinksPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-md mx-auto">
-            Tech coaching, mindful automation, and digital systems that work for your brain. From workflow optimization to accessible development.
+            Software Psychic Sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. From quick guidance to extended problem-solving.
           </p>
         </div>
 

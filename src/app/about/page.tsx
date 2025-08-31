@@ -24,13 +24,13 @@ export default function AboutPage() {
                   I help neurodivergent creatives and small businesses build digital fluency through thoughtful tech guidance and brain-friendly workflows.
                 </p>
                 <p className="text-lg text-brand-cream/80 mt-4">
-                  With over 13 years of experience as a Senior Full Stack Software Engineer, I&apos;ve built and led projects for companies ranging from Amazon.com to small businesses and SaaS startups. My work spans e-commerce, accessibility, automation, and technical mentorship across the full spectrum of business sizes.
+                  With 3 years of software engineering experience and 10+ years in communications, customer service, and business operations, I bring a unique perspective to tech challenges. My background spans access control security, training and hiring, managing, scheduling, order fulfillment, law settlements and recalls—experience that translates tremendously to understanding how businesses actually work and how systems are designed to succeed or fail.
                 </p>
               </div>
               
               <div className="space-y-4">
                 <p className="text-lg text-brand-cream/80">
-                  With over a decade of experience in web development and digital systems, I understand the overwhelm that comes with too many tools and not enough clarity.
+                  With experience across both technical and operational systems, I understand the overwhelm that comes with too many tools and not enough clarity.
                 </p>
                 <p className="text-lg text-brand-cream/80">
                   My approach is rooted in empathy, accessibility, and the belief that technology should work for you, not against you.
@@ -90,23 +90,77 @@ export default function AboutPage() {
 
           <div className="space-y-8 text-lg leading-relaxed">
             <p>
-            My journey into tech has always been about making sense of the chaos. I&apos;ve found that the biggest breakthroughs—in code and in life—often come after periods of deep confusion. My gift is sitting with that complexity until the &apos;aha&apos; moment arrives, and then sharing that clarity with others.
+            My journey into tech has always been about making sense of the chaos. I&apos;ve found that the biggest breakthroughs—in code and in life—often come after periods of deep confusion. My gift is sitting with that complexity until the &apos;aha&apos; moment arrives, and then sharing that clarity with others. But it&apos;s not just about solving problems—it&apos;s about seeing the patterns others miss and connecting dots across industries that have historically gatekept knowledge.
             </p>
             
             <p>
-              I discovered that traditional tech approaches often don&apos;t account for different ways of thinking and processing information. The overwhelm of too many options, the frustration of tools that don&apos;t work the way my brain does, and the constant feeling of being &quot;behind&quot; in an ever-changing landscape.
+              I discovered that traditional tech approaches often don&apos;t account for different ways of thinking and processing information. The overwhelm of too many options, the frustration of tools that don&apos;t work the way my brain does, and the constant feeling of being &quot;behind&quot; in an ever-changing landscape. But more than that, I realized that many industries—law, marketing, tech—are designed to keep people dependent rather than empowered.
             </p>
             
             <p>
-              This led me to develop a different approach - one that prioritizes clarity over complexity, accessibility over assumptions, and individual needs over one-size-fits-all solutions.
+              This led me to develop a different approach - one that prioritizes clarity over complexity, accessibility over assumptions, and individual needs over one-size-fits-all solutions. I don&apos;t want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life.
             </p>
             
             <p>
-              Today, I combine my technical expertise with deep empathy for the neurodivergent experience to help others build digital fluency, support digital wellbeing, and create workflows that actually feel comfortable for your unique brain.
+              Today, I combine my technical expertise with deep empathy for the neurodivergent experience to help others build digital fluency, support digital wellbeing, and create workflows that actually feel comfortable for your unique brain. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights.
             </p>
             <p>
-              Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Senior Software Engineer and Product Developer, leading agile teams and building robust web applications for enterprise-level companies, global brands, and small businesses. My technical background means I bring not just empathy, but also deep expertise and proven results to every project, regardless of scale.
+              Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Software Engineer since 2021, when I completed a bootcamp and pivoted into tech. But my real superpower comes from my 10+ years in communications and customer service across access control security, training and hiring, managing, scheduling, order fulfillment (both in-person and online), law settlements and recalls, and other communication patterns. This diverse background translates tremendously to my tech work—I understand how businesses actually operate, how people communicate, and how systems are designed to work (or fail). My technical background means I bring not just empathy, but also deep operational insights and proven results to every project. But what truly sets me apart is my ability to see patterns others miss—connections across law, marketing, and tech that reveal how systems are designed to work, and where they&apos;re designed to fail.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The "Psychic" Approach Section */}
+      <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+              Why &quot;Software Psychic&quot;?
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+              <p className="text-xl text-white max-w-3xl">
+                My insights aren&apos;t mystical predictions—they&apos;re real connections drawn from deep pattern recognition across industries that have historically gatekept knowledge.
+              </p>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left Column */}
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
+                <h3 className="text-2xl font-display mb-4 text-brand-cream">Pattern Recognition</h3>
+                <p className="text-white/90">
+                  My background in sociology, civics, and politics gives me a unique lens for seeing how systems truly work—and where they&apos;re designed to fail. I don&apos;t just see the surface-level tech issues; I see the deeper structural problems that create them.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
+                <h3 className="text-2xl font-display mb-4 text-brand-cream">Industry Connections</h3>
+                <p className="text-white/90">
+                  I make unsettling connections across law, marketing, and tech—industries that have historically gatekept knowledge from the people who need it most. My recommendations come from understanding how these systems interconnect and where the gaps are designed to keep people dependent.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
+                <h3 className="text-2xl font-display mb-4 text-brand-cream">Spiritual Creation</h3>
+                <p className="text-white/90">
+                  Creation and ideation are spiritual processes. I combine the mystical with the practical to get at the heart of what your business truly needs. The tarot cards aren&apos;t about fortune-telling—they&apos;re about accessing deeper intuition and wisdom.
+                </p>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
+                <h3 className="text-2xl font-display mb-4 text-brand-cream">Empowering, Not Enabling</h3>
+                <p className="text-white/90">
+                  I don&apos;t want clients who want me to solve their problems. I want clients who want to solve their own problems but need a hand in bringing their vision to life. My role is to guide you to your own insights and help you implement them.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -222,62 +276,46 @@ export default function AboutPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-black to-transparent"></div>
               <p className="text-xl text-black/80 max-w-3xl">
-                A comprehensive overview of my services and how I can help you build digital fluency, support your digital wellbeing, and make technology comfortable for you.
+                A comprehensive overview of my Software Psychic Sessions and how I can help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding.
                 <span className="block mt-2">
-                  As a recognized expert in TypeScript, React, Node.js, and cloud platforms, I combine technical excellence with a people-first approach. Whether you&apos;re a small business owner or part of an enterprise team, you get solutions that are both powerful and truly usable.
+                  I don&apos;t solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life.
                 </span>
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-black to-transparent"></div>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
-              title="Tech Coaching"
-              subtitle="Personalized guidance for your digital journey"
-              description="One-on-one sessions focused on your specific tech challenges and goals."
+              title="20-Minute Software Psychic Session"
+              subtitle="Quick guidance & ideation"
+              description="Perfect for specific questions, quick wins, or exploring new ideas. We'll start and end with a tarot card pull to guide our session."
               features={[
-                "Personalized tech assessment",
-                "Workflow optimization",
-                "Tool selection guidance",
-                "Ongoing support and accountability"
+                "Tarot card pull at start and end",
+                "Quick software problem-solving",
+                "Tool and workflow recommendations",
+                "Action plan with next steps"
               ]}
-              ctaLink="/services"
-              ctaText="Learn More"
-              icon="🎯"
+              ctaLink="https://cal.com/pythoness/20min"
+              ctaText="Book Now"
+              icon="🔮"
               textColor="text-black"
             />
 
             <ServiceCard
-              title="Web Development"
-              subtitle="Custom websites that work for your brain"
-              description="Full-stack development with a focus on accessibility and user experience."
+              title="60-Minute Software Psychic Session"
+              subtitle="Extended problem-solving & design"
+              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
               features={[
-                "Custom website design",
-                "Accessibility-first approach",
-                "SEO optimization",
-                "Ongoing maintenance"
+                "Tarot card pull at start and end",
+                "Extended software problem-solving",
+                "Deep workflow analysis & design",
+                "Strategic planning & next steps"
               ]}
-              ctaLink="/services"
-              ctaText="Learn More"
-              icon="💻"
+              ctaLink="https://cal.com/pythoness/60min"
+              ctaText="Book Now"
+              icon="🔮"
               highlight={true}
-              textColor="text-black"
-            />
-
-            <ServiceCard
-              title="System Integration"
-              subtitle="Connect your tools seamlessly"
-              description="Help you build workflows that actually work for your unique needs."
-              features={[
-                "Workflow analysis",
-                "Tool integration",
-                "Automation setup",
-                "Training and documentation"
-              ]}
-              ctaLink="/services"
-              ctaText="Learn More"
-              icon="🔗"
               textColor="text-black"
             />
           </div>
@@ -288,18 +326,18 @@ export default function AboutPage() {
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-            Ready to Make Tech Comfortable?
+            Ready to Solve Your Own Tech Challenges?
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s work together to create a digital environment that supports your wellbeing and helps you become fluent and comfortable with technology.
+            Let&apos;s work together to bring your vision to life. I&apos;ll guide you with pattern recognition, spiritual insight, and deep technical understanding—but the solutions will be yours.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://cal.com/pythoness/15min"
+              href="https://cal.com/pythoness/20min"
               target="_blank"
               className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
             >
-              Book a Free Consultation
+              Book a Software Psychic Session
             </Link>
             <Link
               href="/services"

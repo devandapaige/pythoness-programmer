@@ -18,16 +18,16 @@ export default function ServicesPage() {
               Services That Work for Your Brain
             </h1>
             <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
-              Whether you need tech coaching, a custom website, or help integrating your digital tools, I provide solutions that respect your unique thinking patterns and support your goals.
+              I don't solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://cal.com/pythoness/15min"
-                target="_blank"
-                className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
-              >
-                Book a Free Consultation
-              </Link>
+                          <Link
+              href="https://cal.com/pythoness/20min"
+              target="_blank"
+              className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
+            >
+              Book a Software Psychic Session
+            </Link>
               <Link
                 href="#services"
                 className="inline-block bg-transparent border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-brand-cream/10 hover:border-brand-cream/50 transition-all duration-300 text-lg font-semibold"
@@ -67,59 +67,112 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                I offer deeply focused, brain-friendly tech support sessions designed for neurodivergent professionals. My instinct for getting to the root of a problem means we can make significant progress, even in a short amount of time. I bring my full concentration to your challenge. As a software engineer, I bring deep technical expertise to help you optimize your digital life, but I do not offer web development or custom software development services under the Pythoness Programmer brand.
+                I offer deeply focused, brain-friendly software psychic sessions designed for neurodivergent professionals. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don't want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it's helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Tech Clarity Session */}
+            {/* 20-Minute Software Psychic Session */}
             <ServiceCard
-              title="Tech Clarity Session"
-              subtitle="30-minute focused consultation"
-              description="Perfect for when you need quick guidance on a specific tech challenge or want to explore working together."
-              price="$75"
+              title="20-Minute Software Psychic Session"
+              subtitle="Quick guidance and ideation"
+              description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
+              price="$30"
               features={[
-                "Personalized tech assessment",
-                "Workflow optimization recommendations",
-                "Tool selection guidance",
+                "Tarot card pull at start and end",
+                "Quick software problem-solving",
+                "Tool and workflow recommendations",
                 "Action plan with next steps",
                 "Follow-up email with resources"
               ]}
-              ctaLink="https://cal.com/pythoness/clarity"
+              ctaLink="https://cal.com/pythoness/20min"
               ctaText="Book Now"
-              icon="🎯"
-              note="Great for one-time challenges or initial consultation"
+              icon="🔮"
+              note="Great for specific questions or quick wins"
             />
 
-            {/* Digital Systems Overhaul */}
+            {/* 60-Minute Software Psychic Session */}
             <ServiceCard
-              title="Digital Systems Overhaul"
-              subtitle="90-minute comprehensive review"
-              description="Complete digital workflow audit and system redesign for lasting change and clarity."
-              price="$295"
+              title="60-Minute Software Psychic Session"
+              subtitle="Extended problem-solving & design"
+              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
+              price="$60"
               features={[
-                "A Deeply Focused Audit of Your Digital Systems",
-                "System redesign and optimization",
-                "Tool integration recommendations",
-                "Implementation roadmap",
-                "30-day follow-up consultation",
-                "Resource library access"
+                "Tarot card pull at start and end",
+                "Extended software problem-solving",
+                "Deep workflow analysis & design",
+                "Tool evaluation & recommendations",
+                "Strategic planning & next steps",
+                "Detailed action plan with resources"
               ]}
-              ctaLink="https://cal.com/pythoness/overhaul"
+              ctaLink="https://cal.com/pythoness/60min"
               ctaText="Book Now"
-              icon="🔄"
+              icon="🔮"
               highlight={true}
               isNew={true}
-              note="Most popular choice for lasting change"
+              note="Most popular choice for extended guidance"
             />
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Why "Psychic" Section */}
       <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+              Why &quot;Software Psychic&quot;?
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+              <p className="text-xl text-white max-w-3xl">
+                My approach isn&apos;t about predicting the future—it&apos;s about seeing patterns others miss and connecting dots across industries that have historically gatekept knowledge.
+              </p>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Pattern Recognition */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
+              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-2xl">🔍</span>
+              </div>
+              <h3 className="text-2xl font-display mb-4 text-white">Pattern Recognition</h3>
+              <p className="text-white/90">
+                My background in sociology, civics, and politics gives me a unique lens for seeing how systems truly work—and where they&apos;re designed to fail.
+              </p>
+            </div>
+
+            {/* Industry Connections */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
+              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-2xl">🔗</span>
+              </div>
+              <h3 className="text-2xl font-display mb-4 text-white">Industry Connections</h3>
+              <p className="text-white/90">
+                I make unsettling connections across law, marketing, and tech—industries that have historically gatekept knowledge from the people who need it most.
+              </p>
+            </div>
+
+            {/* Spiritual Creation */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
+              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-2xl">✨</span>
+              </div>
+              <h3 className="text-2xl font-display mb-4 text-white">Spiritual Creation</h3>
+              <p className="text-white/90">
+                Creation and ideation are spiritual processes. I combine the mystical with the practical to get at the heart of what your business truly needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-24 px-4 md:px-6 bg-brand-purple-dark text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
@@ -128,7 +181,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                A clear, structured process designed to reduce overwhelm and maximize results. The process starts as soon as you book your session.
+                A clear, structured process designed to reduce overwhelm and maximize results. The process starts as soon as you book your session, including your deck preference for our tarot or oracle card pulls.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
             </div>
@@ -225,7 +278,7 @@ export default function ServicesPage() {
                 How do I know which service is right for me?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Start with a <a href="https://cal.com/pythoness/15min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">free consultation</a>! We&apos;ll discuss your specific needs and I&apos;ll recommend the best approach. The Tech Clarity Session is perfect for exploring options, while the Digital Systems Overhaul is ideal for comprehensive change.
+                Start with a <a href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">20-minute session</a>! We&apos;ll discuss your specific needs and I&apos;ll recommend the best approach. The 20-minute session is perfect for exploring options, while the 60-minute session is ideal for comprehensive change.
               </p>
             </div>
 
@@ -263,11 +316,11 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://cal.com/pythoness/15min"
+              href="https://cal.com/pythoness/20min"
               target="_blank"
               className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
             >
-              Book a Free Consultation
+              Book a Software Psychic Session
             </Link>
             <Link
               href="/about"

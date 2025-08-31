@@ -59,43 +59,43 @@ export default async function Home() {
             <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Quick Tech Support</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ServiceCard
-                title="Tech Clarity Session"
-                subtitle="30-minute focused consultation"
-                price="$75"
-                description="Perfect for when you need quick guidance on a specific tech challenge or want to explore working together."
+                title="20-Minute Software Psychic Session"
+                subtitle="Quick guidance and ideation"
+                price="$30"
+                description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
                 features={[
-                  "Personalized tech assessment",
-                  "Workflow optimization recommendations",
-                  "Tool selection guidance",
+                  "Tarot card pull at start and end",
+                  "Quick software problem-solving",
+                  "Tool and workflow recommendations",
                   "Action plan with next steps",
                   "Follow-up email with resources"
                 ]}
-                ctaLink="https://cal.com/pythoness/clarity"
+                ctaLink="https://cal.com/pythoness/20min"
                 ctaText="Book Now"
-                icon="🎯"
+                icon="🔮"
                 textColor="text-brand-cream"
-                note="Great for one-time challenges or initial consultation"
+                note="Great for specific questions or quick wins"
               />
               <ServiceCard
-                title="Digital Systems Overhaul"
-                subtitle="90-minute comprehensive review"
-                price="$295"
-                description="Complete digital workflow audit and system redesign for lasting change and clarity."
+                title="60-Minute Software Psychic Session"
+                subtitle="Extended problem-solving & design"
+                price="$60"
+                description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
                 features={[
-                  "A Deeply Focused Audit of Your Digital Systems",
-                  "System redesign and optimization",
-                  "Tool integration recommendations",
-                  "Implementation roadmap",
-                  "30-day follow-up consultation",
-                  "Resource library access"
+                  "Tarot card pull at start and end",
+                  "Extended software problem-solving",
+                  "Deep workflow analysis & design",
+                  "Tool evaluation & recommendations",
+                  "Strategic planning & next steps",
+                  "Detailed action plan with resources"
                 ]}
-                ctaLink="https://cal.com/pythoness/overhaul"
+                ctaLink="https://cal.com/pythoness/60min"
                 ctaText="Book Now"
-                icon="🔄"
+                icon="🔮"
                 highlight={true}
                 isNew={true}
                 textColor="text-brand-cream"
-                note="Most popular choice for lasting change"
+                note="Most popular choice for extended guidance"
               />
             </div>
           </div>

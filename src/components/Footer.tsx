@@ -49,8 +49,8 @@ export default function Footer() {
           {/* Calendar Links */}
           <FooterSection title="Book a Call">
             <ul className="space-y-1" role="list" aria-label="Booking options">
-              <li><Link href="https://cal.com/pythoness/clarity" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>30min Tech Clarity Call</Link></li>
-              <li><Link href="https://cal.com/pythoness/overhaul" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>90min Tech Overhaul Call</Link></li>
+              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>20min Software Psychic Session</Link></li>
+              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>60min Software Psychic Session</Link></li>
             </ul>
 
           </FooterSection>

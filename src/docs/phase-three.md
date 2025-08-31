@@ -15,8 +15,8 @@ Systematic rebuild of the homepage to reflect new, focused business strategy. Us
 - [X] Create new git branch: `git checkout -b feature/website-redesign-2025`
 - [X] Review and update cal.com links with new service copy
 - [X] Verify new URLs are ready for site implementation
-  - https://cal.com/pythoness/clarity - 30min Tech Clarity Session ($75)
-  - https://cal.com/pythoness/overhaul - 90min Digital System Overhaul ($295)
+  - https://cal.com/pythoness/20min - 20min Software Psychic Session ($30)
+  - https://cal.com/pythoness/60min - 60min Software Psychic Session ($60)
 - [X] Set up development environment
 - [X] Review current homepage structure
 
@@ -101,8 +101,8 @@ Systematic rebuild of the homepage to reflect new, focused business strategy. Us
 - [X] Implement "Clear Support for Your Tech Goals." heading
 - [X] Create responsive three-column grid
 - [X] Include service tiers:
-  - Tech Clarity Session
-  - Digital Systems Overhaul
+  - 20-Minute Software Psychic Session
+- 60-Minute Software Psychic Session
   - Group Workshops
 - [X] Add "Learn More" buttons linking to services page
 - [X] Use ServiceCard styling as reference
@@ -259,8 +259,8 @@ Systematic rebuild of the homepage to reflect new, focused business strategy. Us
 
 ### External Links
 - Cal.com booking links (updated):
-  - https://cal.com/pythoness/clarity - 30min Tech Clarity Session ($75)
-  - https://cal.com/pythoness/overhaul - 90min Digital System Overhaul ($295)
+  - https://cal.com/pythoness/20min - 20min Software Psychic Session ($30)
+- https://cal.com/pythoness/60min - 60min Software Psychic Session ($60)
 - Social media profiles
 - Service page URLs
 
