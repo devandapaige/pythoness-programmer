@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import ServiceCard from '../../components/ServiceCard'
 import PainPointsCard from '../../components/PainPointsCard'
@@ -18,7 +19,7 @@ export default function ServicesPage() {
               Services That Work for Your Brain
             </h1>
             <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
-              I don&apos;t solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
+              I don't solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                           <Link
@@ -47,10 +48,10 @@ export default function ServicesPage() {
             title="Struggling with Tech? I Understand."
             painPoints={[
               { text: "Overwhelmed by too many tool options" },
-              { text: "Can&apos;t find workflows that work for your brain" },
+              { text: "Can't find workflows that work for your brain" },
               { text: "Worried about security and privacy" },
-              { text: "Need a website but don&apos;t know where to start" },
-              { text: "Tools don&apos;t talk to each other properly" },
+              { text: "Need a website but don't know where to start" },
+              { text: "Tools don't talk to each other properly" },
               { text: "Tech decisions causing decision fatigue" }
             ]}
           />
@@ -67,7 +68,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                I offer deeply focused, brain-friendly software psychic sessions designed for neurodivergent professionals. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don&apos;t want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it&apos;s helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
+                I offer deeply focused, brain-friendly software psychic sessions designed for neurodivergent professionals. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don't want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it's helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -78,7 +79,7 @@ export default function ServicesPage() {
             <ServiceCard
               title="20-Minute Software Psychic Session"
               subtitle="Quick guidance and ideation"
-              description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We&apos;ll start and end with a tarot card pull to guide our session."
+              description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
               price="$30"
               features={[
                 "Tarot card pull at start and end",
@@ -97,7 +98,7 @@ export default function ServicesPage() {
             <ServiceCard
               title="60-Minute Software Psychic Session"
               subtitle="Extended problem-solving & design"
-              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We&apos;ll start and end with a tarot card pull to guide our session."
+              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
               price="$60"
               features={[
                 "Tarot card pull at start and end",
@@ -128,7 +129,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                My approach isn&apos;t about predicting the future—it&apos;s about seeing patterns others miss and connecting dots across industries that have historically gatekept knowledge.
+                My approach isn't about predicting the future—it's about seeing patterns others miss and connecting dots across industries that have historically gatekept knowledge.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
             </div>
@@ -142,7 +143,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-2xl font-display mb-4 text-white">Pattern Recognition</h3>
               <p className="text-white/90">
-                My background in sociology, civics, and politics gives me a unique lens for seeing how systems truly work—and where they&apos;re designed to fail.
+                My background in sociology, civics, and politics gives me a unique lens for seeing how systems truly work—and where they're designed to fail.
               </p>
             </div>
 
@@ -175,9 +176,9 @@ export default function ServicesPage() {
       <section className="py-24 px-4 md:px-6 bg-brand-purple-dark text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              How We&apos;ll Work Together
-            </h2>
+                          <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+                How We'll Work Together
+              </h2>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
@@ -265,7 +266,7 @@ export default function ServicesPage() {
             {/* FAQ Item 2 */}
             <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
               <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                Do you work with people who aren&apos;t tech-savvy?
+                Do you work with people who aren't tech-savvy?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
                 Absolutely! In fact, many of my clients come to me feeling overwhelmed by technology. I specialize in breaking down complex concepts into manageable pieces and providing judgment-free support regardless of your current tech comfort level.
@@ -278,7 +279,7 @@ export default function ServicesPage() {
                 How do I know which service is right for me?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Start with a <a href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">20-minute session</a>! We&apos;ll discuss your specific needs and I&apos;ll recommend the best approach. The 20-minute session is perfect for exploring options, while the 60-minute session is ideal for comprehensive change.
+                Start with a <a href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">20-minute session</a>! We'll discuss your specific needs and I'll recommend the best approach. The 20-minute session is perfect for exploring options, while the 60-minute session is ideal for comprehensive change.
               </p>
             </div>
 
@@ -298,7 +299,7 @@ export default function ServicesPage() {
                 Do you work with businesses or just individuals?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Both! I work with individual professionals, small business owners, and teams. My approach scales well for different needs, whether you&apos;re a solopreneur or managing a small team&apos;s digital systems.
+                Both! I work with individual professionals, small business owners, and teams. My approach scales well for different needs, whether you're a solopreneur or managing a small team's digital systems.
               </p>
             </div>
           </div>
@@ -312,7 +313,7 @@ export default function ServicesPage() {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss your needs and find the perfect solution for your unique situation. No pressure, no judgment - just a conversation about how I can help.
+            Let's discuss your needs and find the perfect solution for your unique situation. No pressure, no judgment - just a conversation about how I can help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
