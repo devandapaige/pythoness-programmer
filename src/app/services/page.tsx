@@ -18,7 +18,7 @@ export default function ServicesPage() {
               Services That Work for Your Brain
             </h1>
             <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
-              I don't solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
+              I don&apos;t solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                           <Link
@@ -47,10 +47,10 @@ export default function ServicesPage() {
             title="Struggling with Tech? I Understand."
             painPoints={[
               { text: "Overwhelmed by too many tool options" },
-              { text: "Can't find workflows that work for your brain" },
+              { text: "Can&apos;t find workflows that work for your brain" },
               { text: "Worried about security and privacy" },
-              { text: "Need a website but don't know where to start" },
-              { text: "Tools don't talk to each other properly" },
+              { text: "Need a website but don&apos;t know where to start" },
+              { text: "Tools don&apos;t talk to each other properly" },
               { text: "Tech decisions causing decision fatigue" }
             ]}
           />
@@ -67,7 +67,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                I offer deeply focused, brain-friendly software psychic sessions designed for neurodivergent professionals. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don't want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it's helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
+                I offer deeply focused, brain-friendly software psychic sessions designed for neurodivergent professionals. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don&apos;t want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it&apos;s helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -78,7 +78,7 @@ export default function ServicesPage() {
             <ServiceCard
               title="20-Minute Software Psychic Session"
               subtitle="Quick guidance and ideation"
-              description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
+              description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We&apos;ll start and end with a tarot card pull to guide our session."
               price="$30"
               features={[
                 "Tarot card pull at start and end",
@@ -97,7 +97,7 @@ export default function ServicesPage() {
             <ServiceCard
               title="60-Minute Software Psychic Session"
               subtitle="Extended problem-solving & design"
-              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
+              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We&apos;ll start and end with a tarot card pull to guide our session."
               price="$60"
               features={[
                 "Tarot card pull at start and end",
