@@ -80,8 +80,8 @@ const resourceLinks: LinkItem[] = [
     color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   },
   {
-    name: 'Vibe Coding Cheatsheet',
-    url: '/vibe-coding-cheatsheet',
+    name: 'AI Myth-Busting',
+    url: '/ai-mythbusting',
     color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   },
   {

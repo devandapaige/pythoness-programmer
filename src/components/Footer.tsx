@@ -58,7 +58,7 @@ export default function Footer() {
           <FooterSection title="Free Resources">
             <ul className="space-y-1" role="list" aria-label="Free resources">
               <li><Link href="/network" className={footerLinkClass}>Pythoness Network</Link></li>
-              <li><Link href="/vibe-coding-cheatsheet" className={footerLinkClass}>Vibe Coding Cheatsheet</Link></li>
+              <li><Link href="/ai-mythbusting" className={footerLinkClass}>AI Myth-Busting</Link></li>
               <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
               <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
               <li><Link href="/mindful-automation" className={footerLinkClass}>Mindful Automation</Link></li>
