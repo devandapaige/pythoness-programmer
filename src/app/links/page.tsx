@@ -52,6 +52,13 @@ const socialLinks: LinkItem[] = [
   }
 ]
 
+// Featured async service
+const featuredService: LinkItem = {
+  name: 'Async Project & Web Presence Reading - $30',
+  url: 'https://cal.com/pythoness/async',
+  color: 'bg-gradient-to-r from-brand-purple-light to-brand-cream text-brand-purple-dark border-2 border-brand-purple-accent font-semibold'
+}
+
 // Booking links - easy to update
 const bookingLinks: LinkItem[] = [
   {
@@ -193,7 +200,7 @@ export default function LinksPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-md mx-auto">
-            Software Psychic Sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. From quick guidance to extended problem-solving.
+            Software Psychic Sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. From async video readings to live 1:1 sessions.
           </p>
         </div>
 
@@ -251,10 +258,24 @@ export default function LinksPage() {
 
         {/* Links Container */}
         <div className="w-full space-y-8">
+          {/* Featured Service */}
+          <div className="space-y-3">
+            <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
+            <p className="text-white/80 text-center text-sm mb-4">20-minute Loom video reading - no live meeting</p>
+            <Link
+              href={featuredService.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`block ${featuredService.color} py-4 md:py-5 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium shadow-lg`}
+            >
+              {featuredService.name}
+            </Link>
+          </div>
+
           {/* Booking Links */}
           {bookingLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Book a Call</h2>
+              <h2 className="font-display text-xl text-white text-center">Live 1:1 Sessions</h2>
               <div className="space-y-3">
                 {bookingLinks.map((link) => (
                   <Link

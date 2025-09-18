@@ -14,6 +14,14 @@ interface ServiceCardProps {
   isNew?: boolean;
   className?: string;
   textColor?: string;
+  customStyling?: {
+    backgroundColor?: string;
+    textColor?: string;
+    accentColor?: string;
+    borderColor?: string;
+    badgeText?: string;
+    badgeColor?: string;
+  };
 }
 
 export default function ServiceCard({
@@ -29,19 +37,28 @@ export default function ServiceCard({
   highlight = false,
   isNew = false,
   className = "",
-  textColor = "text-white"
+  textColor = "text-white",
+  customStyling
 }: ServiceCardProps) {
+  // Determine styling based on customStyling prop
+  const cardBg = customStyling?.backgroundColor ? `bg-gradient-to-br ${customStyling.backgroundColor}` : 'bg-white/5 backdrop-blur-sm';
+  const cardTextColor = customStyling?.textColor || textColor;
+  const cardAccentColor = customStyling?.accentColor || 'brand-green-accent';
+  const cardBorderColor = customStyling?.borderColor || '';
+  const badgeText = customStyling?.badgeText || 'NEW';
+  const badgeColor = customStyling?.badgeColor || 'brand-green-accent';
+
   return (
     <div
-      className={`group relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl transition-all duration-300 animate-fade-in-up ${
-        highlight ? 'ring-2 ring-brand-green-accent' : ''
+      className={`group relative ${cardBg} rounded-2xl p-8 ${cardBorderColor ? `border-2 ${cardBorderColor}` : 'border-none'} shadow-2xl transition-all duration-300 animate-fade-in-up ${
+        highlight ? `ring-2 ring-${cardAccentColor}` : ''
       } ${className}`}
     >
-      {/* NEW badge */}
+      {/* NEW/ASYNC badge */}
       {isNew && (
         <div className="absolute -top-3 -right-3 z-20">
-          <div className="bg-brand-green-accent text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform rotate-3">
-            NEW
+          <div className={`bg-${badgeColor} text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg transform rotate-3`}>
+            {badgeText}
           </div>
         </div>
       )}
@@ -54,27 +71,27 @@ export default function ServiceCard({
       )}
 
       {/* Service title */}
-      <h3 className={`text-2xl font-display mb-3 ${textColor}`}>
+      <h3 className={`text-2xl font-display mb-3 ${cardTextColor}`}>
         {title}
       </h3>
 
       {/* Subtitle */}
       {subtitle && (
-        <p className={`${textColor}/80 mb-6`}>
+        <p className={`${cardTextColor}/80 mb-6`}>
           {subtitle}
         </p>
       )}
 
       {/* Price */}
       {price && (
-        <p className="text-3xl font-display mb-6 text-brand-green-accent">
+        <p className={`text-3xl font-display mb-6 text-${cardAccentColor}`}>
           {price}
         </p>
       )}
 
       {/* Description */}
       {description && (
-        <p className={`text-sm ${textColor}/70 mb-6`}>
+        <p className={`text-sm ${cardTextColor}/70 mb-6`}>
           {description}
         </p>
       )}
@@ -85,9 +102,9 @@ export default function ServiceCard({
           {features.map((feature: string, featureIndex: number) => (
             <li 
               key={featureIndex} 
-              className={`flex items-center space-x-3 ${textColor}/80`}
+              className={`flex items-center space-x-3 ${cardTextColor}/80`}
             >
-              <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-green-accent"></span>
+              <span className={`flex-shrink-0 w-1.5 h-1.5 rounded-full bg-${cardAccentColor}`}></span>
               <span>{feature}</span>
             </li>
           ))}
@@ -96,14 +113,14 @@ export default function ServiceCard({
 
       {/* Note */}
       {note && (
-        <p className={`text-sm ${textColor}/70 italic mb-6`}>{note}</p>
+        <p className={`text-sm ${cardTextColor}/70 italic mb-6`}>{note}</p>
       )}
 
       {/* Call to action button */}
       <Link
         href={ctaLink}
         target={ctaLink.startsWith('http') ? '_blank' : undefined}
-        className="inline-block w-full text-center bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-6 py-3 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20"
+        className={`inline-block w-full text-center bg-gradient-to-r from-${cardAccentColor} to-${cardAccentColor}/90 text-white px-6 py-3 rounded-lg hover:from-${cardAccentColor}/90 hover:to-${cardAccentColor} transition-all duration-300 shadow-${cardAccentColor}/20`}
       >
         {ctaText}
       </Link>

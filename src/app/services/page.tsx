@@ -23,11 +23,11 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                           <Link
-              href="https://cal.com/pythoness/20min"
+              href="https://cal.com/pythoness/async"
               target="_blank"
               className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
             >
-              Book a Software Psychic Session
+              Book Your Async Reading
             </Link>
               <Link
                 href="#services"
@@ -74,6 +74,45 @@ export default function ServicesPage() {
             </div>
           </div>
 
+          {/* Async Service - Featured in its own row */}
+          <div className="mb-12">
+            <div className="max-w-2xl mx-auto">
+              <ServiceCard
+                title="Async Project & Web Presence Reading"
+                subtitle="20-Minute Loom Video Recording"
+                description="Receive a potent 20-minute intuitive reading for your project, website, or online presence, delivered as a private Loom video. No live meeting required—perfect for busy schedules."
+                price="$30"
+                features={[
+                  "Personalized Loom video recording",
+                  "Tarot card pull at start and end",
+                  "Deep project & web presence analysis",
+                  "Pattern recognition insights",
+                  "Watch and re-watch at your pace"
+                ]}
+                ctaLink="https://cal.com/pythoness/async"
+                ctaText="Book Your Async Reading"
+                icon="🎥"
+                highlight={true}
+                isNew={true}
+                note="Asynchronous—no live meeting"
+                customStyling={{
+                  backgroundColor: 'from-brand-purple-light to-brand-cream',
+                  textColor: 'text-brand-purple-dark',
+                  accentColor: 'brand-green-dark',
+                  borderColor: 'border-brand-purple-accent',
+                  badgeText: 'ASYNC',
+                  badgeColor: 'brand-green-dark'
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Live 1:1 Services */}
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-display text-white mb-2">Live 1:1 Sessions</h3>
+            <p className="text-brand-cream/80">Interactive sessions with real-time guidance</p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* 20-Minute Software Psychic Session */}
             <ServiceCard
@@ -111,8 +150,6 @@ export default function ServicesPage() {
               ctaLink="https://cal.com/pythoness/60min"
               ctaText="Book Now"
               icon="🔮"
-              highlight={true}
-              isNew={true}
               note="Most popular choice for extended guidance"
             />
           </div>
@@ -317,11 +354,11 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://cal.com/pythoness/20min"
+              href="https://cal.com/pythoness/async"
               target="_blank"
               className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
             >
-              Book a Software Psychic Session
+              Book Your Async Reading
             </Link>
             <Link
               href="/about"

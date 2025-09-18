@@ -54,9 +54,45 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Quick Tech Support */}
+          {/* Featured Async Service */}
           <div className="mb-16">
-            <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Quick Tech Support</h3>
+            <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Featured Service</h3>
+            <div className="max-w-2xl mx-auto">
+              <ServiceCard
+                title="Async Project & Web Presence Reading"
+                subtitle="20-Minute Loom Video Recording"
+                price="$30"
+                description="Receive a potent 20-minute intuitive reading for your project, website, or online presence, delivered as a private Loom video. No live meeting required—perfect for busy schedules."
+                features={[
+                  "Personalized Loom video recording",
+                  "Tarot card pull at start and end",
+                  "Deep project & web presence analysis",
+                  "Pattern recognition insights",
+                  "Watch and re-watch at your pace"
+                ]}
+                ctaLink="https://cal.com/pythoness/async"
+                ctaText="Book Your Async Reading"
+                icon="🎥"
+                highlight={true}
+                isNew={true}
+                textColor="text-brand-purple-dark"
+                note="Asynchronous—no live meeting"
+                customStyling={{
+                  backgroundColor: 'from-brand-purple-light to-brand-cream',
+                  textColor: 'text-brand-purple-dark',
+                  accentColor: 'brand-green-dark',
+                  borderColor: 'border-brand-purple-accent',
+                  badgeText: 'ASYNC',
+                  badgeColor: 'brand-green-dark'
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Live 1:1 Sessions */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-display text-center mb-4 text-brand-cream">Live 1:1 Sessions</h3>
+            <p className="text-brand-cream/80 text-center mb-12">Interactive sessions with real-time guidance</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ServiceCard
                 title="20-Minute Software Psychic Session"
@@ -92,8 +128,6 @@ export default async function Home() {
                 ctaLink="https://cal.com/pythoness/60min"
                 ctaText="Book Now"
                 icon="🔮"
-                highlight={true}
-                isNew={true}
                 textColor="text-brand-cream"
                 note="Most popular choice for extended guidance"
               />
