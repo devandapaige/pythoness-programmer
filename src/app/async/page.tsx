@@ -274,11 +274,6 @@ export default function AsyncServicePage() {
               Book Your Reading - $30
             </Link>
           </section>
-
-          {/* Update Banner */}
-          <div className="mt-12 bg-brand-green-accent/20 text-white text-center py-2 px-4 rounded-lg" role="status" aria-label="Content update status">
-            <p className="text-sm">✨ Last updated: January 2025 ✨</p>
-          </div>
         </div>
       </div>
     </main>
