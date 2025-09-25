@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import RootLayoutClient from "../components/RootLayoutClient";
 import Hotjar from "../components/Hotjar";
 import CookieYes from "../components/CookieYes";
@@ -86,6 +87,7 @@ export default function RootLayout({
         `}</style>
       </head>
       <body className={`${openSans.variable} ${norwester.variable} font-sans bg-brand-cream text-brand-green-dark antialiased [&_h1]:font-display [&_h2]:font-display [&_h3]:font-display [&_h4]:font-display [&_h5]:font-display [&_h6]:font-display`}>
+        <SpeedInsights />
         <Hotjar />
         <CookieYes />
         <RootLayoutClient>
