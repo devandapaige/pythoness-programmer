@@ -279,6 +279,47 @@ export default function ResourcesPage() {
                 </Link>
               </div>
 
+              {/* Back to Basics */}
+              <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-brand-green-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl">🏗️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display text-brand-green-dark mb-1">Back to Basics</h3>
+                    <p className="text-brand-green-dark/70 text-sm">Digital Organization & AI-Ready Workflows</p>
+                  </div>
+                </div>
+                <p className="text-brand-green-dark mb-6">
+                  Master the fundamental tech skills that make AI tools actually useful instead of frustrating. 
+                  Build the foundation that supports your creativity with the Wooden Snake&apos;s wisdom.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    The 3-Folder Rule for Digital Organization
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Creative Workflow Revolution
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Data Flow from Chaos to Conscious
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Basic Automation That Serves Creativity
+                  </div>
+                </div>
+                <Link
+                  href="/back-to-basics"
+                  className="block bg-brand-green-accent text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                >
+                  Explore Back to Basics
+                </Link>
+              </div>
+
               {/* Sourdough Corner */}
               <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
                 <div className="flex items-center mb-6">
