@@ -45,6 +45,10 @@ const config: Config = {
         DEFAULT: {
           css: {
             color: '#442b48', // brand-purple-dark
+            fontFamily: '"Open Sans", sans-serif',
+            fontOpticalSizing: 'auto',
+            fontStyle: 'normal',
+            fontVariationSettings: '"wdth" 100',
             h1: {
               color: '#442b48',
               fontWeight: '400',
@@ -65,9 +69,16 @@ const config: Config = {
               fontWeight: '400',
               fontFamily: 'var(--font-display)',
             },
+            p: {
+              fontFamily: '"Open Sans", sans-serif',
+              fontOpticalSizing: 'auto',
+              fontStyle: 'normal',
+              fontVariationSettings: '"wdth" 100',
+            },
             strong: {
               color: '#442b48',
               fontWeight: '600',
+              fontFamily: '"Open Sans", sans-serif',
             },
             a: {
               color: '#32d24d', // brand-green-accent
@@ -94,6 +105,10 @@ const config: Config = {
         invert: {
           css: {
             color: '#f4f1d3',
+            fontFamily: '"Open Sans", sans-serif',
+            fontOpticalSizing: 'auto',
+            fontStyle: 'normal',
+            fontVariationSettings: '"wdth" 100',
             h1: {
               color: '#f4f1d3',
             },
@@ -106,8 +121,15 @@ const config: Config = {
             h4: {
               color: '#f4f1d3',
             },
+            p: {
+              fontFamily: '"Open Sans", sans-serif',
+              fontOpticalSizing: 'auto',
+              fontStyle: 'normal',
+              fontVariationSettings: '"wdth" 100',
+            },
             strong: {
               color: '#f4f1d3',
+              fontFamily: '"Open Sans", sans-serif',
             },
             a: {
               color: '#32d24d',

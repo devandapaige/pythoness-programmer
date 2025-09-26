@@ -22,6 +22,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-norwester);
 }
 
+/* Apply Open Sans to all paragraph and non-header text */
+p, span, div, li, td, th, label, input, textarea, select, button {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Ensure body text uses Open Sans */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
