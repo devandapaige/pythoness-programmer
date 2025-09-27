@@ -3,15 +3,6 @@ import Link from 'next/link'
 import { ReactNode } from 'react'
 import NewsletterSection from '../components/home/NewsletterSection'
 
-// Define types for our content
-interface NewsletterWeek {
-  title: string;
-  description: string;
-  keyPoints: string[];
-  url: string;
-  weekNumber: number;
-}
-
 // Enhanced metadata for better SEO
 export const metadata: Metadata = {
   title: 'Back to Basics: Digital Organization & AI-Ready Workflows - The Pythoness Programmer',
@@ -28,58 +19,6 @@ export const metadata: Metadata = {
     description: 'Build the foundation that makes AI tools actually useful instead of frustrating.',
   },
 }
-
-// Content data
-const newsletterWeeks: NewsletterWeek[] = [
-  {
-    weekNumber: 1,
-    title: 'From Digital Chaos to Creative Flow: Why Your Folders Matter',
-    description: 'How your digital filing system affects AI effectiveness and creative workflow, plus the 3-Folder Rule that changed everything.',
-    keyPoints: [
-      'The AI-Organization Connection: Why AI tools need well-organized inputs',
-      'The 3-Folder Rule: Active Projects, Reference Materials, and Archive',
-      'Obsidian for interconnected note-taking and project organization',
-      'The Wooden Snake\'s "observe before you judge" principle for digital patterns',
-    ],
-    url: 'https://newsletter.pythonessprogrammer.com/p/from-digital-chaos-to-creative-flow-why-your-folders-matter',
-  },
-  {
-    weekNumber: 2,
-    title: 'The Creative Workflow Revolution: How Organization Becomes Your Creative Superpower',
-    description: 'Transform your digital organization from a chore into a creative advantage that amplifies your ideas and energy.',
-    keyPoints: [
-      'Workflow systems that support your creative process',
-      'Building systems that adapt to your energy levels',
-      'Creating sustainable creative practices',
-      'The connection between organization and creative flow',
-    ],
-    url: 'https://newsletter.pythonessprogrammer.com/p/the-creative-workflow-revolution-how-organization-becomes-your-creative-superpower',
-  },
-  {
-    weekNumber: 3,
-    title: 'Data Flow: From Chaos to Conscious',
-    description: 'Understanding how data moves through your creative work and building systems that make information work for you.',
-    keyPoints: [
-      'Understanding data flow in your creative work',
-      'Building information systems that serve creativity',
-      'The Wooden Snake\'s wisdom applied to data organization',
-      'Creating conscious data practices',
-    ],
-    url: 'https://newsletter.pythonessprogrammer.com/p/data-flow-from-chaos-to-conscious',
-  },
-  {
-    weekNumber: 4,
-    title: 'Basic Automation That Serves Your Creativity: From Data Flow to AI Agents',
-    description: 'Learn to build automation systems that enhance your creative process instead of overwhelming it.',
-    keyPoints: [
-      'Basic automation that serves your creativity',
-      'From data flow to AI agents',
-      'Building automation that respects your brain patterns',
-      'Creating sustainable tech habits',
-    ],
-    url: 'https://newsletter.pythonessprogrammer.com/p/basic-automation-that-serves-your-creativity-from-data-flow-to-ai-agents',
-  },
-];
 
 export default function BackToBasicsPage(): ReactNode {
   return (
@@ -167,7 +106,7 @@ export default function BackToBasicsPage(): ReactNode {
                 href="https://newsletter.pythonessprogrammer.com/p/lunar-new-year-2025" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-brand-green-accent hover:text-brand-green-accent/80 underline"
+                className="text-brand-green-hyperlink hover:text-brand-green-hyperlink/80 underline"
               >
                 Lunar New Year edition
               </Link>

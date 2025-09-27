@@ -279,6 +279,47 @@ export default function ResourcesPage() {
                 </Link>
               </div>
 
+              {/* Digital Accessibility Legal Guide */}
+              <div className="bg-white/95 border-2 border-brand-purple-accent rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-brand-purple-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl">⚖️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display text-brand-purple-dark mb-1">Digital Accessibility Legal Guide</h3>
+                    <p className="text-brand-purple-dark/70 text-sm">Starting Point for Business Owners</p>
+                  </div>
+                </div>
+                <p className="text-brand-purple-dark mb-6">
+                  Essential starting guide to digital accessibility laws, compliance requirements, and practical implementation 
+                  for business owners. Legal framework, risk management, and actionable first steps.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    Four Simple Tests You Can Do Right Now
+                  </div>
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    90-Day Implementation Plan
+                  </div>
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    Legal Framework & Compliance Requirements
+                  </div>
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    Free Testing Tools & Resources
+                  </div>
+                </div>
+                <Link
+                  href="/accessibility"
+                  className="block bg-brand-purple-accent text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                >
+                  Explore Accessibility Guide
+                </Link>
+              </div>
+
               {/* Back to Basics */}
               <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
                 <div className="flex items-center mb-6">

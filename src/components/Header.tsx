@@ -5,9 +5,14 @@ import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false)
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+
+  const toggleResources = () => {
+    setIsResourcesOpen(!isResourcesOpen)
   }
 
   return (
@@ -44,18 +49,77 @@ export default function Header() {
             >
               Services
             </Link>
-            <Link 
-              href="/resources" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            >
-              Resources
-            </Link>
-            <Link 
-              href="/network" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            >
-              Pythoness Network
-            </Link>
+            <div className="relative">
+              <button
+                onClick={toggleResources}
+                className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 flex items-center"
+                aria-expanded={isResourcesOpen}
+                aria-haspopup="true"
+              >
+                Resources
+                <svg 
+                  className={`ml-1 h-4 w-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`}
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {isResourcesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-brand-green-accent/20 py-2 z-50">
+                  <Link 
+                    href="/resources" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    All Resources
+                  </Link>
+                  <Link 
+                    href="/digital-spring-cleaning" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    Digital Spring Cleaning
+                  </Link>
+                  <Link 
+                    href="/mindful-automation" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    Mindful Automation
+                  </Link>
+                  <Link 
+                    href="/accessibility" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    Accessibility Legal Guide
+                  </Link>
+                  <Link 
+                    href="/back-to-basics" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    Back to Basics
+                  </Link>
+                  <Link 
+                    href="/ai-mythbusting" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    AI Myth-Busting
+                  </Link>
+                  <Link 
+                    href="/vibe-coding-cheatsheet" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    Vibe Coding Cheatsheet
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link 
               href="/blog" 
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
@@ -134,20 +198,60 @@ export default function Header() {
           >
             Services
           </Link>
-          <Link 
-            href="/resources" 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Resources
-          </Link>
-          <Link 
-            href="/network" 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Pythoness Network
-          </Link>
+          <div className="space-y-2">
+            <div className="text-white font-medium px-2 py-1">Resources</div>
+            <div className="ml-4 space-y-2">
+              <Link 
+                href="/resources" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                All Resources
+              </Link>
+              <Link 
+                href="/digital-spring-cleaning" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Digital Spring Cleaning
+              </Link>
+              <Link 
+                href="/mindful-automation" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Mindful Automation
+              </Link>
+              <Link 
+                href="/accessibility" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Accessibility Legal Guide
+              </Link>
+              <Link 
+                href="/back-to-basics" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Back to Basics
+              </Link>
+              <Link 
+                href="/ai-mythbusting" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                AI Myth-Busting
+              </Link>
+              <Link 
+                href="/vibe-coding-cheatsheet" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Vibe Coding Cheatsheet
+              </Link>
+            </div>
+          </div>
           <Link 
             href="/blog" 
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"

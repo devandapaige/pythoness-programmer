@@ -13,6 +13,7 @@ const config: Config = {
           green: {
             dark: '#2e3d2a',
             accent: '#32d24d',
+            hyperlink: '#156624',
           },
           cream: '#f4f1d3',
           purple: {

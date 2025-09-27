@@ -229,6 +229,7 @@ const result = await tryCatch(
 - **Deep forest green:** #2E3D2A (`--brand-green-dark`)
 - **Rich purple:** #442B48 (`--brand-purple-dark`)
 - **Vibrant green accent:** #32d24d (`--brand-green-accent`)
+- **Hyperlink green:** #156624 (`--brand-green-hyperlink`) - High contrast green for links
 - **Soft cream:** #F4f1de (`--brand-cream`)
 - **Light purple accent:** #D8B9F7 (`--brand-purple-light`)
 - **Bright Blue:** #00A6FB (`--brand-blue`)
@@ -245,6 +246,7 @@ Common color applications:
 - Text on dark: `text-white`, `text-white/90`, `text-brand-cream`
 - Text on light: `text-brand-purple-dark`, `text-brand-green-dark`
 - Accents: `text-brand-green-accent`, `text-brand-purple-light`, `text-brand-blue`
+- Hyperlinks: `text-brand-green-hyperlink` (high contrast green for links)
 - Backgrounds: Dark gradient combinations of `brand-green-dark` and `brand-purple-dark`
 - Overlays: `bg-white/5`, `bg-white/10` with `backdrop-blur-sm`
 
@@ -253,6 +255,7 @@ Common color applications:
 --brand-green-dark: #2E3D2A;    /* Deep forest green */
 --brand-purple-dark: #442B48;   /* Rich purple */
 --brand-green-accent: #32d24d;  /* Vibrant green accent */
+--brand-green-hyperlink: #156624; /* High contrast green for links */
 --brand-cream: #F4f1de;         /* Soft cream */
 --brand-purple-light: #D8B9F7;  /* Light purple accent */
 --brand-blue: #00A6FB;          /* Bright Blue */

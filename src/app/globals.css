@@ -10,6 +10,7 @@
   --brand-light-purple: #d8b9f7;
   --brand-purple: #442b48;
   --brand-blue: #00a6fb;
+  --brand-hyperlink-green: #156624;
 }
 
 html {
@@ -41,6 +42,11 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Brand color utilities */
+  .text-brand-hyperlink {
+    color: var(--brand-hyperlink-green);
   }
 
   /* Animation utilities */
