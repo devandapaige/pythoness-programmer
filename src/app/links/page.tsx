@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 import CopyField from '@/components/CopyField'
-import AddEventCalendar from '@/components/AddEventCalendar'
 
 export const metadata: Metadata = {
   title: 'Connect with Amanda | Pythoness Programmer',
@@ -197,24 +196,21 @@ export default function LinksPage() {
           </p>
         </div>
 
-        {/* Combined Calendar & Connect Section */}
+        {/* Events & Connect Section */}
         <div className="text-center mb-8">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 max-w-md mx-auto">
             <h2 className="font-display text-xl text-white mb-3">Stay Updated & Connect</h2>
             <p className="text-white/80 text-sm mb-4">
-              Add my Calendar to yours to stay up to date on my TikTok lives, Workshops, Co-Working Sessions, and more.
+              Join my upcoming events, workshops, co-working sessions, and more.
             </p>
-            <AddEventCalendar>
-              <div 
-                title="Add to Calendar" 
-                className="addeventstc bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors cursor-pointer inline-block mb-4"
-                data-styling="none" 
-                data-id="em600805"
-              >
-                Add to Calendar
-                <span className="addeventstc_icon ml-2"></span>
-              </div>
-            </AddEventCalendar>
+            <Link
+              href="https://luma.com/pythoness"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors inline-block mb-4"
+            >
+              Upcoming Events
+            </Link>
             
             {/* Social Media Links */}
             <div className="mt-6">
