@@ -28,7 +28,7 @@ export default function AsyncServicePage() {
               Async Project & Web Presence Reading
             </h1>
             <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide mb-6 mt-0">
-              Receive a potent 20-minute intuitive reading delivered as a private Loom video
+              Receive a potent 20-minute intuitive reading delivered as a private video recording
             </p>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-white font-light leading-relaxed mb-8">
               This is an asynchronous session—no live meeting required. You provide the details, and I record a personalized reading for you with a tarot pull to start and end. Perfect for busy schedules and allows you to watch and re-watch the insights at your own pace.
@@ -57,7 +57,7 @@ export default function AsyncServicePage() {
               <div className="space-y-4">
                 <h3 className="text-xl font-display text-brand-green-dark">20-Minute Video Reading</h3>
                 <ul className="list-disc pl-5 text-brand-green-dark space-y-2">
-                  <li>Personalized Loom video recording (not live)</li>
+                  <li>Personalized video recording (not live)</li>
                   <li>Tarot card pull at start and end of session</li>
                   <li>Deep dive into your project and web presence</li>
                   <li>Pattern recognition insights from cross-industry experience</li>
@@ -168,7 +168,7 @@ export default function AsyncServicePage() {
                 </div>
                 <h3 className="text-lg font-display mb-2 text-brand-green-dark">Receive Your Video</h3>
                 <p className="text-sm text-brand-green-dark">
-                  I record your personalized session and deliver the private Loom video link to your email by your scheduled time.
+                  I record your personalized session and deliver the private video link to your email by your scheduled time.
                 </p>
               </div>
             </div>
@@ -205,13 +205,13 @@ export default function AsyncServicePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <h3 className="text-xl font-display mb-3 text-white">Booking Confirmation</h3>
                 <p className="text-white/90">
-                  You will receive a confirmation request after booking. Please be sure to verify your appointment booking via email in order to be officially added to my books and ensure your Loom video can be delivered.
+                  You will receive a confirmation request after booking. Please be sure to verify your appointment booking via email in order to be officially added to my books and ensure your video can be delivered.
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <h3 className="text-xl font-display mb-3 text-white">Asynchronous Delivery</h3>
                 <p className="text-white/90">
-                  This is not a live meeting. There is no location to go to or session to &quot;join.&quot; Your personalized Loom video will be recorded and delivered to your email before the end of your scheduled appointment time.
+                  This is not a live meeting. There is no location to go to or session to &quot;join.&quot; Your personalized video will be recorded and delivered to your email before the end of your scheduled appointment time.
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -244,15 +244,15 @@ export default function AsyncServicePage() {
                 <p className="text-brand-green-dark">
                   My approach combines technical expertise with pattern recognition and spiritual insight. I see connections 
                   across industries that others miss, and I focus on empowering you to solve your own problems rather than 
-                  just giving you solutions. Plus, it&apos;s delivered as a private Loom video you can watch and re-watch.
+                  just giving you solutions. Plus, it&apos;s delivered as a private video you can watch and re-watch.
                 </p>
               </div>
               <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6">
                 <h3 className="text-xl font-display mb-3 text-brand-green-dark">
-                  When will I receive my Loom video?
+                  When will I receive my video?
                 </h3>
                 <p className="text-brand-green-dark">
-                  Your personalized Loom video will be recorded and delivered to your email by the end of your scheduled 
+                  Your personalized video will be recorded and delivered to your email by the end of your scheduled 
                   appointment time. The video link is private and you can watch it as many times as you need.
                 </p>
               </div>

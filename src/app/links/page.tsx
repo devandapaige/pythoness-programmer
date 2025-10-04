@@ -108,7 +108,7 @@ const supportLinks: LinkItem[] = [
 const shopLinks: LinkItem[] = [
   {
     name: 'Sticky Spells Store',
-    url: 'https://www.pythoness.shop',
+    url: 'https://stickyspells.etsy.com',
     color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
   }
 ]
@@ -246,7 +246,7 @@ export default function LinksPage() {
           {/* Featured Service */}
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
-            <p className="text-white/80 text-center text-sm mb-4">20-minute Loom video reading - no live meeting</p>
+            <p className="text-white/80 text-center text-sm mb-4">20-minute video reading - no live meeting</p>
             <Link
               href={featuredService.url}
               target="_blank"

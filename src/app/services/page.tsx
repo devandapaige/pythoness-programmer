@@ -79,11 +79,11 @@ export default function ServicesPage() {
             <div className="max-w-2xl mx-auto">
               <ServiceCard
                 title="Async Project & Web Presence Reading"
-                subtitle="20-Minute Loom Video Recording"
-                description="Receive a potent 20-minute intuitive reading for your project, website, or online presence, delivered as a private Loom video. No live meeting required—perfect for busy schedules."
+                subtitle="20-Minute Video Recording"
+                description="Receive a potent 20-minute intuitive reading for your project, website, or online presence, delivered as a private video recording. No live meeting required—perfect for busy schedules."
                 price="$30"
                 features={[
-                  "Personalized Loom video recording",
+                  "Personalized video recording",
                   "Tarot card pull at start and end",
                   "Deep project & web presence analysis",
                   "Pattern recognition insights",
