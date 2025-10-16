@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Pythoness Programmer</title>
+    <link>https://pythonessprogrammer.com</link>
+    <description>Thoughts on technology, accessibility, and the human experience.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 16 Oct 2025 23:47:22 GMT</lastBuildDate>
+    <atom:link href="https://pythonessprogrammer.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title><![CDATA[Error-Proofing Your Automation: Building Resilient Digital Systems]]></title>
+      <link>https://pythonessprogrammer.com/blog/error-proofing-your-automation</link>
+      <guid>https://pythonessprogrammer.com/blog/error-proofing-your-automation</guid>
+      <pubDate>Thu, 22 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Practical strategies for creating automation systems that are resilient to errors and adaptable to changing needs.]]></description>
+      <content:encoded><![CDATA[
+# Error-Proofing Your Automation: Building Resilient Digital Systems
+
+## Creating Automation That Adapts and Recovers
+
+Hey there,
+
+I'm excited to dive into error-proofing your automation systems this week. After years of building and maintaining automated workflows, I've discovered that the most successful systems aren't the most complex ones—they're the ones with clear documentation and graceful error handling.
+
+### This Month's Roadmap: Your Journey to Mindful Automation
+
+**Week 1**: The Y.O.U. Framework ✓ 
+
+* Understanding your unique brain patterns
+* Learning to observe and optimize your workflow
+* Starting with simple, maintainable automations
+
+**Week 2**: Energy-Aware Automation ✓ 
+
+* Mapping your daily energy patterns
+* Creating automations that respect your boundaries
+* Building in rest and recovery time
+
+**Week 3 (This Week)**: Error-Proofing Your Systems 
+
+* Creating robust backup processes
+* Building clear documentation that works for your brain
+* Setting up effective error notifications
+* Maintaining systems without overwhelm
+
+**Week 4**: Bringing It All Together 
+
+* Reviewing and refining your automation strategy
+* Creating your personal automation playbook
+* Building a support system for your automated workflows
+
+## Main Feature: Building Resilient Automation Systems
+
+The key to creating automation systems that last isn't about preventing every possible error—it's about creating systems that can handle errors gracefully and adapt to changing circumstances. Here's how I approach error-proofing my automation systems:
+
+### 1. Clear Documentation That Works For Your Brain
+
+The first step in error-proofing is creating documentation that you'll actually use. Here's what works for me:
+
+* **Visual Workflows**: I use tools like [Make.com](https://make.com/) to create visual representations of my automation workflows
+* **Simple Checklists**: For each automation, I maintain a basic checklist of what to check if something goes wrong
+* **Regular Reviews**: I schedule monthly reviews of my automation systems to ensure they're still serving their purpose
+
+### 2. Effective Error Notifications
+
+When something goes wrong, you need to know about it—but not in a way that creates more stress. Here's how I handle error notifications:
+
+* **Slack Integration**: I send all automation errors to a dedicated Slack channel
+* **Error Classification**: I categorize errors by severity (critical, warning, info)
+* **Actionable Alerts**: Each error notification includes clear next steps
+
+### 3. Backup Processes
+
+Every automation should have a manual fallback process. Here's what I include in my backup plans:
+
+* **Step-by-Step Instructions**: Clear, written steps for manual completion
+* **Required Access**: List of all accounts and permissions needed
+* **Time Estimates**: How long the manual process should take
+
+## Quick Tip: The Error-Proofing Checklist
+
+Before deploying any new automation, I run through this checklist:
+
+1. **Documentation**
+   * Is the workflow clearly documented?
+   * Do I have a backup process written down?
+   * Can someone else understand how it works?
+
+2. **Error Handling**
+   * What happens if the automation fails?
+   * How will I be notified?
+   * What's the recovery process?
+
+3. **Maintenance**
+   * How often should this be reviewed?
+   * What signs indicate it needs updating?
+   * Who's responsible for maintaining it?
+
+**Ready to Document Your Automation Systems?**
+
+I've created a comprehensive template to help you document your automation systems in a way that works with your brain. This template includes sections for:
+
+- Workflow visualization
+- Error handling procedures
+- Backup processes
+- Maintenance schedules
+
+[Download Documentation Template](/mindful-automation/error-proofing-worksheet.pdf)
+
+## Tool Spotlight: Error-Proofing with Make.com
+
+[Make.com](https://make.com/) has become my go-to tool for creating error-proof automation systems. Here's why:
+
+**For Error Handling:**
+* Built-in error notifications
+* Retry mechanisms for failed steps
+* Detailed logging of all operations
+
+**For Documentation:**
+* Visual workflow builder
+* Easy to share and collaborate
+* Clear step-by-step view
+
+**For Maintenance:**
+* Version control for workflows
+* Easy to test and debug
+* Simple to update and modify
+
+## Community Corner: A New Resource: Podcast Edition
+
+I'm excited to share that I've launched a new podcast on Substack where I share my NotebookLM notes from articles, discussions, and research I'm reading to stay current in the world of AI. You can find it at [pythoness.substack.com](https://pythoness.substack.com/). Subscribe on your favorite platform to stay updated, and if you'd like to support my work, paid subscriptions are available through Substack.
+
+Listen on [Spotify](https://open.spotify.com/show/0VLZyZrD50Pk9JcyJL2AdX)  
+Watch on [YouTube](https://www.youtube.com/playlist?list=PLl8kW5pVKC-p8kzPChiNPoEHkfi_kR1LA)
+
+And speaking of community, I'm thrilled to announce that next month will feature a four-week deep dive into Slack (and sustainable community creation)! We'll explore everything from basic setup to advanced automation, culminating in the launch of the Pythoness Network Slack Community. Stay tuned for more details coming very soon!
+
+## Personal Update: Visualizing My Workflow for Real-World Results
+
+This week, I focused on mapping out my processes and workflows using a whiteboard approach. Laying out the basics visually—seeing each step, tool, and decision point—has made it so much easier to spot where automations can help. It's like giving myself a bird's-eye view of my digital and physical routines, and it's unlocked a whole new level of clarity.
+
+I also took the time to update my Sunsama and Slack channels to reflect the actual physical locations in my home, as well as the specific software I use for each action or task. For example, now I have channels and task lists for spaces like the kitchen, living room, and my coding studio, and I can see at a glance which tool (like Cursor, Canva, or Chrome) I'll need for each task.
+
+The impact? My cognitive load has dropped dramatically—honestly, it feels like it's been cut by a factor of ten! Now, when I'm in a focused work session, I can check my Sunsama task list and immediately see what else I could tackle while I'm still in "code mode" in Cursor. Even if a task is technically scheduled for tomorrow, if I see it and know I can knock it out while I'm in the right headspace, I just do it. This new system has made my workflow more intuitive, flexible, and genuinely joyful.
+
+Next week, we'll explore how to bring all these elements together into a cohesive automation strategy. Until then, I encourage you to try setting up a simple logging system in Slack for one of your automation systems.
+
+With digital care,
+
+The Pythoness Programmer
+
+<Signature />
+
+[Download the Error-Proofing Worksheet](/mindful-automation/error-proofing-worksheet.pdf)]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>automation</category>
+      <category>security</category>
+      <category>foundations</category>
+    </item>
+    <item>
+      <title><![CDATA[Mindful Automation Systems: Creating Digital Workflows That Serve You]]></title>
+      <link>https://pythonessprogrammer.com/blog/mindful-automation-systems</link>
+      <guid>https://pythonessprogrammer.com/blog/mindful-automation-systems</guid>
+      <pubDate>Thu, 15 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Learn how to build automation systems that enhance your productivity while maintaining mindfulness and reducing digital overwhelm.]]></description>
+      <content:encoded><![CDATA[
+# Mindful Automation Systems: Creating Digital Workflows That Serve You
+
+## Building Automation That Supports Rather Than Controls
+
+Hey there,
+
+I'm excited to dive into energy awareness with you this week. After years of working with my brain's natural rhythms, I've discovered how this understanding transforms automation from a source of stress into a tool for sustainable productivity.
+
+_(fyi - Some external links may be referral codes that will benefit my art if used.)_
+
+## This Month's Roadmap: Your Journey to Mindful Automation
+
+**Week 1 (Last Week)**: The Y.O.U. Framework ✅ 
+
+* Understanding your unique brain patterns
+* Learning to observe and optimize your workflow
+* Starting with simple, maintainable automations
+
+**Week 2 (This Week)**: Energy-Aware Automation 
+
+* Mapping your daily energy patterns
+* Creating automations that respect your boundaries
+* Building in rest and recovery time
+* Tools for tracking and optimizing your energy
+
+**Week 3**: Error-Proofing Your Systems 
+
+* Creating robust backup processes
+* Building clear documentation that works for your brain
+* Setting up effective error notifications
+
+**Week 4**: Bringing It All Together 
+
+* Reviewing and refining your automation strategy
+* Creating your personal automation playbook
+* Building a support system for your automated workflows
+
+## Main Feature: The Energy-Based Automation Schedule
+
+When I first started automating tasks, I scheduled everything based on "best practices" rather than my actual energy patterns. The result? Missed deadlines, system failures, and increased anxiety. Here's how I learned to create an energy-aware automation system:
+
+### Understanding Your Energy Patterns
+
+Before setting up any automation, I map my energy levels throughout the day. Here's my simple process:
+
+1. **Track Your Energy**: Look at the data you're already collecting! Many of us are already tracking our energy patterns without realizing it:
+   * Check your habit tracker apps (like [Finch](https://finchcare.com/)) for energy level history
+   * Review your calendar for patterns in when you schedule different types of tasks
+   * Look at your fitness/health tracker data for energy and activity patterns
+   * Consider your existing journal entries or morning pages for energy insights
+
+2. **Identify Patterns**: Look for consistent high and low energy periods
+3. **Match Tasks to Energy**: Schedule automated tasks based on when you have the energy to handle them
+
+_My Story_: I need a slow morning to properly wake up and get my brain going. That's why I start my day with morning pages and coffee - it's my way of gently unlocking my brain for the day ahead.
+
+I've discovered that I need a significant break in the afternoon, so I take 3-4 hours off to recharge. During this time, I do lower-energy tasks like cooking or administrative work - things that don't require deep thinking. This led me to restructure my work schedule:
+
+* Noon to 3-4 PM: First work block
+* 3-4 PM to 5-6 PM: Break and recharge
+* 5-6 PM to 8-9 PM: Second work block
+
+**But here's the crucial part:** I've also learned to set strict boundaries around my energy patterns. Even if I'm in a creative flow or feeling energetic after my "clock out" time, I have automation systems in place to help me maintain these boundaries. For example, my office lights automatically turn off at my scheduled end time - I'd have to deliberately tell my smart home system to turn them back on if I wanted to work longer.
+
+### Creating Energy-Aware Automations
+
+The key to sustainable automation is creating workflows that support your best work. Here's my approach:
+
+**Making High-Energy Periods More Valuable** When I'm in my high-energy periods, I focus on the work that matters most. I use automation to:
+
+* Block off dedicated time for deep work (like writing this newsletter)
+* Create clear boundaries around my high-energy periods
+* Remove friction from my creative process
+
+_Real Example_: When I need to write my newsletter, I create a complete workflow:
+
+1. Block off an hour in my [Cal.com](https://cal.com/) calendar (this prevents others from scheduling meetings)
+2. If I can't write during that time, I can easily move the block to another high-energy period
+3. The calendar block creates a natural pause in my other workflows
+4. I've automated the first step (creating a new page in Obsidian) to reduce friction
+5. This triggers my content creation workflow, including AI assistance
+
+**Pro-Tip**: The most valuable automation creates space for your best work. For example:
+
+* Calendar blocks that protect your high-energy periods
+* Automated reminders that help you transition between tasks
+* Systems that reduce the friction of starting important work
+
+## Quick Tip: The Energy-Based Automation Schedule
+
+Instead of trying to automate everything, focus on creating workflows that support your natural energy patterns. Here's how I structure my day:
+
+**Morning (Low Energy)**
+* Morning pages and coffee (no automation needed, just space to wake up)
+* Review calendar and adjust blocks if needed
+* Set up my workspace for the day
+
+**First Work Block (High Energy)**
+* Deep work tasks (writing, coding, complex problem-solving)
+* No unscheduled meetings or interruptions, usually at my desk
+* Automated "do not disturb" mode on computer
+* Clear boundaries around this time
+
+**Afternoon Break (Low Energy)**
+* Administrative tasks
+* Cooking or meal prep
+* Light reading or research
+* No pressure to be "productive"
+
+**Second Work Block (High Energy)**
+* Creative work
+* Content creation
+* Project planning
+* Automated reminders to wrap up at a specific time
+
+## Tool Spotlight: From Workflow Thinking to Automation
+
+Now that you're thinking in terms of if/then workflows, let's explore how to identify where automation can truly make a difference. Here's a key insight: automation isn't about replacing your human workflow - it's about supporting it.
+
+**The Human Part (No Automation Needed)**
+* Writing the newsletter content
+* Reviewing and editing
+* Adding personal touches
+* Making creative decisions
+
+**The Post-Creation Automation (Where Automation Shines)**
+Once my newsletter is written and reviewed, that's when automation becomes valuable. Here's what I'm automating:
+
+1. **Formatting and Distribution**
+   * Converting my markdown to HTML for Beehiiv
+   * Creating the Substack version
+   * Creating ideas for short and longform content
+   * Setting up the proper formatting for each platform
+   * Scheduling the sends
+
+2. **Cross-Platform Publishing**
+   * Posting to my website
+   * Creating social media snippets
+   * Setting up email sequences
+   * Tracking analytics
+
+## Community Corner: Beyond Work - Automation in Daily Life
+
+As we explore energy-aware automation, I want to reflect on how these principles transform our daily lives and home management. The same if/then thinking and friction reduction that helps us in our professional workflows creates space for what matters most in our personal lives.
+
+Think about it: How many mental reminders are you carrying around for home maintenance tasks? When was the last time you changed your air filter? Does your refrigerator need a new water filter? When should you schedule the annual power washing? These aren't just tasks - they're energy drains that take up valuable mental space.
+
+When we automate or create clear workflows for home maintenance, we create mental space for connection, creativity, and community.
+
+## Personal Update: My Energy-Aware Journey
+
+This week, I've been focusing on simplifying my automation systems. Here's what I've learned:
+
+**Workflow First, Automation Second**
+I focus on creating clear workflows that work with my natural energy patterns. For me, this means:
+
+* Taking time for morning pages and coffee
+* Working in focused blocks during my high-energy periods
+* Taking that crucial afternoon break
+* Returning to work in the evening when my energy returns
+
+**Identifying the Real Friction Points**
+The biggest shift in my thinking has been learning to identify where automation adds value. I now ask:
+
+* Where does my human workflow flow naturally?
+* What tasks take me out of my creative flow?
+* Which repetitive tasks could be handled by automation?
+* How can I create more space for what matters most?
+
+**Creating Space for Connection**
+The most surprising discovery has been how reducing friction in both work and home life creates space for deeper connections. When I'm not constantly tracking maintenance tasks or worrying about distribution workflows, I have more energy for:
+
+* Meaningful conversations
+* Creative projects
+* Community engagement
+* Personal growth
+
+Remember, the goal is to create systems that work with your brain's natural rhythms. Start by observing your energy patterns, then build your automation around them. And most importantly, remember that automation should serve your life, not the other way around.
+
+Next week, we'll explore how to error-proof your automation systems, take a closer look at tools like [Make.com](https://make.com/), and discuss how to mindfully integrate these powerful (and reliable!) automations into your overall workflow. Until then, I encourage you to look at your own workflows - both at work and at home - and identify where reducing friction could create more space for what matters most to you.
+
+With digital care,
+
+The Pythoness Programmer
+
+<Signature />
+
+[Download the Error-Proofing Worksheet](/mindful-automation/error-proofing-worksheet.pdf)]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>automation</category>
+      <category>wellness</category>
+      <category>sustainability</category>
+    </item>
+    <item>
+      <title><![CDATA[The Y.O.U. Framework: Building Systems That Work With Your Brain]]></title>
+      <link>https://pythonessprogrammer.com/blog/the-you-framework</link>
+      <guid>https://pythonessprogrammer.com/blog/the-you-framework</guid>
+      <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A personalized approach to digital organization and automation that honors your unique cognitive style and energy patterns.]]></description>
+      <content:encoded><![CDATA[
+# The Y.O.U. Framework: Building Systems That Work With Your Brain
+
+## Creating Digital Environments That Support Your Unique Mind
+
+Hey there,
+
+I'm thrilled to dive into May's theme: Mindful Automation! As someone who discovered my ADD and complex-PTSD in my late 20s, I've learned that automation creates the external structure my brain needs to thrive. This month, we'll explore how to create systems that work for Y.O.U., not against you.
+
+### This Month's Roadmap: Your Journey to Mindful Automation
+
+**Week 1 (This Week)**: The Y.O.U. Framework 
+
+* Understanding your unique brain patterns
+* Learning to observe and optimize your workflow
+* Starting with simple, maintainable automations
+* Getting to know [Make.com](https://make.com) as a neurodivergent-friendly tool
+
+**Week 2 (Next Week)**: Energy-Aware Automation 
+
+* Mapping your daily energy patterns
+* Creating automations that respect your boundaries
+* Building in rest and recovery time
+* Tools for tracking and optimizing your energy
+
+**Week 3**: Error-Proofing Your Systems 
+
+* Creating robust backup processes
+* Building clear documentation that works for your brain
+* Setting up effective error notifications
+* Maintaining systems without overwhelm
+
+**Week 4**: Bringing It All Together 
+
+* Reviewing and refining your automation strategy
+* Creating your personal automation playbook
+* Building a support system for your automated workflows
+* Planning your next steps in mindful automation
+
+**Important Note About Automation Tools**: Before we dive in, I want to share something crucial I learned the hard way. In today's world of AI and automation, it's easy to get caught up in the latest tools and subscriptions. One tutorial could have you paying for $100 in software very quickly. That's why this month's theme focuses on the simple if/then thinking that helps you make your CURRENT tech work better for you. We're not creating brand new workflows; we're adapting your existing tools to work smarter.
+
+**A Quick Note About My Services**: I'm shifting my focus this year to offer more specialized support for neurodivergent thinkers. Moving beyond general consultations, I'm now offering two focused services: a 30-minute Tech Stack Clarity Session for digital tools optimization and a 75-minute Digital Reset Session for comprehensive workflow transformation. Both are designed specifically for neurodivergent brains looking to create more intentional, efficient, and joy-bringing digital ecosystems. [Book a session here](https://cal.com/pythoness).
+
+## Main Feature: The Y.O.U. Framework for Mindful Automation
+
+When I first started exploring automation, I made the classic mistake of trying to automate everything. Sound familiar? The result? More complexity, more cognitive load, and more anxiety when systems failed. Through my own journey, I've developed the Y.O.U. framework to help create automation that truly serves us:
+
+### Y - Your Unique Brain
+
+* How does your brain naturally process information?
+* What tasks drain your energy vs. energize you?
+* Which patterns of thinking come naturally to you?
+
+_My Story_: Working in the software industry, I've tried countless project management tools, always searching for the "perfect" solution. But here's what I've learned: I keep coming back to my trusty text editor and the tools I already know. Even in this AI-driven age, the real power isn't in constantly adopting new tech—it's in mindfully adapting what you already use.
+
+### O - Observe & Optimize
+
+* Notice which tasks create friction in your workflow
+* Identify patterns in your daily energy levels
+* Observe how different tools affect your cognitive load
+
+_Pro Tip_: Keep a simple log for one week. Note when you feel most energized and when you feel drained. Use this insight to schedule automated tasks during your high-energy periods.
+
+### U - Uncomplicate & Understand
+
+* Start with one small automation that solves a real pain point
+* Build in clear error handling and backup processes
+* Create documentation that works with your memory patterns
+
+_My Favorite Tool_: [Make.com](https://make.com) (formerly Integromat) has become my go-to automation tool because it:
+
+* Uses visual workflows that match my pattern-seeking brain
+* Allows for clear error handling and notifications
+* Provides detailed logging that helps me understand when and why things might fail
+
+## Quick Tip: The 2-Minute Y.O.U. Check-In
+
+Before setting up any new automation, I ask myself these three questions:
+
+1. **Does this reduce my cognitive load?** If it adds more complexity than it removes, it's not worth it.
+2. **Can I maintain this system?** I consider my energy patterns and executive function capacity.
+3. **What's my backup plan?** I always have a simple manual process ready in case the automation fails.
+
+_Real Example_: Earlier this year, I canceled my [Repurpose.io](https://repurpose.io) subscription, thinking I could create a more cost-effective solution using Make.com to repurpose my TikTok content across other platforms. After two months of trying to maintain this complex automation, I realized something important: sometimes the "more expensive" tool is actually the more mindful choice. I resubscribed to Repurpose.io because:
+
+* It's a tool I already know how to use
+* It handles social media account monitoring automatically
+* It requires minimal maintenance from me
+* The cost is worth the mental energy I save
+
+## Tool Spotlight: Make.com for Neurodivergent Thinkers
+
+[Make.com](https://make.com) has become my favorite automation tool by working with my brain's natural patterns. Here's why I think it might work for you too:
+
+**For Visual Thinkers:**
+
+* Drag-and-drop interface that makes workflows visible
+* Color-coding options for different types of tasks
+* Visual error handling that's easy to understand
+
+**For Pattern Seekers:**
+
+* Built-in templates that can be customized
+* Detailed logging that helps identify patterns
+* Ability to create reusable modules
+
+**For Detail-Oriented Minds:**
+
+* Granular control over every step
+* Comprehensive error handling options
+* Detailed documentation capabilities
+
+## Community Corner: Your Automation Journey
+
+I'd love to hear about your experiences with automation! What systems have worked for you? What challenges have you faced? Share your story by replying to this email just to me! Vent it out and let me know, maybe I can help.
+
+Based on your responses to last month's community idea, I'm thrilled to announce that the Pythoness Network Slack Community will launch in mid-July! This will be a space where we can share automation tips, troubleshoot challenges, and support each other in creating systems that support our unique brains.
+
+## Personal Update: My Automation Evolution
+
+This week, I've been reflecting on my own automation journey. The biggest shift came when I stopped trying to automate everything and instead focused on automating the right things—the tasks that drain my energy or create unnecessary cognitive load.
+
+For example, I recently simplified my content creation workflow. Rather than trying to automate the entire process, I identified the specific parts that were most draining: remembering to create social media graphics and scheduling posts. By automating just these elements, I've freed up mental energy for the creative parts I actually enjoy.
+
+Remember, mindful automation creates space for what matters most to you. Start small, observe what works, and build from there. Sometimes the most mindful choice isn't the cheapest or most complex solution—it's the one that best supports your unique brain and business needs.
+
+Next week, we'll dive deeper into creating automation that respects your boundaries and energy patterns. Until then, I encourage you to try the 2-Minute Y.O.U. Check-In with one task in your workflow.
+
+With digital care,
+
+The Pythoness Programmer
+
+<Signature /> ]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>automation</category>
+      <category>accessibility</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title><![CDATA[Digital Spring Cleaning: A Month of Grit and Growth]]></title>
+      <link>https://pythonessprogrammer.com/blog/digital-spring-cleaning-a-month-of-grit-and-growth</link>
+      <guid>https://pythonessprogrammer.com/blog/digital-spring-cleaning-a-month-of-grit-and-growth</guid>
+      <pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A reflection on our month-long journey through digital spring cleaning, celebrating growth and setting intentions for mindful automation.]]></description>
+      <content:encoded><![CDATA[
+# Digital Spring Cleaning: A Month of Grit and Growth
+
+As we wrap up April's Digital Spring Cleaning journey, I want to take a moment to celebrate how far we've come together. Over the past month, we've adapted Angela Duckworth's powerful GRIT Framework—which explores how passion and perseverance drive long-term success—to transform our relationship with technology. Whether you've been with us since the beginning or are just joining us now, this recap will help you catch up on all the key insights and practical tools we've shared.
+
+## Our GRIT Journey: A Month in Review
+
+### Week 1: Passion Pulse
+
+We began by examining our digital tools through the lens of joy and alignment. Remember that journal prompt about listing your software subscriptions? That exercise wasn't just about budgeting—it was about discovering which tools truly serve your unique brain and which might be creating unnecessary complexity.
+
+**Key Insight**: The tools that bring us joy are often the ones that align with our natural thinking patterns, not necessarily the ones with the most features.
+
+### Week 2: Systems That Serve Your Brain
+
+Building on our passion exploration, we dove into creating digital environments that honor neurodivergent thinking patterns. We explored:
+
+- **Context Containers**: Using different browsers for different types of work
+- **Energy-Based Organization**: Sorting tasks by the energy they require
+- **Visual Clarity Systems**: Using color-coding to create intuitive navigation
+
+**Personal Example**: I shared how creating separate browser profiles for different types of work transformed my relationship with financial tracking—a task I'd previously struggled with for years.
+
+### Week 3: Perseverance and Growth
+
+We tackled the inevitable tech challenges with practical strategies:
+
+- Creating contingency plans for essential tools
+- Playing with software settings to discover hidden features
+- Implementing permission-based organization that accommodates fluctuating executive function
+
+**Quick Tip**: The 2-Minute Micro-Reflection (NAA) method:
+
+1. **Notice** your digital environment
+2. **Adjust** one small thing
+3. **Acknowledge** your intentional digital care
+
+### Week 4: Bringing It All Together
+
+Last week, we introduced the GRIT Reflection Worksheet as a practical tool to help implement everything we've discussed. The worksheet's flexible framework is designed specifically for neurodivergent brains, with features like:
+
+- Bite-sized reflections that can be completed independently
+- Visual anchors and color-coding for intuitive navigation
+- Adaptable digital and printable formats
+
+## Tool Spotlight: Your Digital Spring Cleaning Toolkit
+
+Throughout the month, we've shared various tools that support different thinking styles:
+
+**For Visual Thinkers:**
+- Canva's Whiteboard feature for visual planning
+- Mermaid.js for creating flowcharts
+- Arc Browser for customizable web experiences
+
+**For Auditory Processors:**
+- Plaud.ai for voice notes and mindmaps
+- Otter.ai for automatic transcription
+- Loom for video communication
+
+**For Pattern Thinkers:**
+- Obsidian for concept linking
+- Make.com for automated workflows
+- Home Assistant for customizable automation
+
+## Personal Update: My Digital Spring Cleaning Revelations
+
+This month's journey has been transformative for me personally. The most significant insight? Sometimes the most impactful changes aren't about finding the "perfect app" but about creating the right context for your unique brain.
+
+I experienced this firsthand when I made the switch to Obsidian for managing my notes and web clippings. What started as a simple organizational change turned into a creative playground that reignited my love for technical problem-solving. I found myself in that beautiful state of flow where hours would pass without notice as I built custom solutions to make my digital life more intuitive.
+
+One afternoon, while trying to streamline how I save articles, I ended up creating my first Firefox extension—something I'd never attempted before. The process of learning how to build it, testing different approaches, and finally seeing it work seamlessly with my Obsidian vault was incredibly rewarding.
+
+## Looking Ahead: Mindful Automation
+
+Next month, we'll explore Mindful Automation—setting up systems that work for you rather than creating more demands. But before we move forward, I encourage you to take a moment to reflect on your Digital Spring Cleaning journey.
+
+**Bonus Journal Prompt**: Think back to one digital tool or system you've changed this month. How did this change align with your natural thinking patterns? What surprised you about the process of making this change?
+
+**Remember**: Digital organization isn't about achieving perfection—it's about creating spaces that support your natural thinking patterns and energy fluctuations. The GRIT Worksheet is designed to be a living document you can return to whenever you need a reset, not just during spring cleaning season.
+
+[Download the GRIT Reflection Worksheet](/digital-spring-cleaning/digitalspringcleaningWorksheet.pdf)
+
+The Pythoness Programmer
+
+<Signature />]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>community</category>
+      <category>sustainability</category>
+      <category>wellness</category>
+    </item>
+    <item>
+      <title><![CDATA[Digital Spring Cleaning: Completing Our GRIT Journey]]></title>
+      <link>https://pythonessprogrammer.com/blog/monthly-grit-reflection-worksheet</link>
+      <guid>https://pythonessprogrammer.com/blog/monthly-grit-reflection-worksheet</guid>
+      <pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A comprehensive guide to completing your digital spring cleaning journey with the GRIT framework, including reflection worksheets and practical tools.]]></description>
+      <content:encoded><![CDATA[
+# Digital Spring Cleaning: Completing Our GRIT Journey
+
+## Don't have time for a full worksheet? At least stay for our 2min Quick Reflection!
+
+As we wrap up our April journey through Digital Spring Cleaning, I want to offer you a comprehensive set of reflection tools to help you process and integrate everything we've learned. These worksheets are designed to be flexible and accessible, whether you have 2 minutes or 2 hours to reflect.
+
+## Quick Reflection (2 minutes)
+
+Take a moment to answer these three questions:
+
+1. What's one digital tool or practice that's bringing you more joy this month?
+2. Where are you still experiencing friction in your digital life?
+3. What small step could you take today to reduce that friction?
+
+## Deep Dive Reflection (20 minutes)
+
+For those who want to go deeper, I've created a comprehensive reflection worksheet that guides you through:
+
+* Reviewing your tech stack audit
+* Mapping your digital energy patterns
+* Identifying automation opportunities
+* Planning your next steps
+
+You can find the full worksheet and additional resources on our [Digital Spring Cleaning](/digital-spring-cleaning) page.
+
+## Community Reflection
+
+I've been amazed by the insights and transformations shared in our community this month. Here are some highlights:
+
+* "I never realized how much energy I was spending context-switching between different types of work. Creating separate browser profiles has been a game-changer!" - Sarah K.
+* "The permission-based organization concept helped me stop feeling guilty about my 'pending' folder. It's actually working better than my previous system!" - Michael T.
+* "I've started using color-coding in my project management tool, and it's incredible how much faster I can find what I need now." - Lisa M.
+
+## Next Steps
+
+As we move into May, we'll be exploring Mindful Automation—setting up systems that work for you rather than creating more demands. I'm excited to share some practical tools and strategies that have helped me and my clients create more sustainable digital workflows.
+
+Remember, digital organization is a journey, not a destination. The goal isn't perfection—it's creating systems that support your unique brain and help you thrive in the digital world.
+
+With digital care,
+<Signature />
+The Pythoness Programmer
+
+P.S. Don't forget to check out our [Digital Spring Cleaning](/digital-spring-cleaning) page for the full reflection worksheet and additional resources to support your journey!]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>community</category>
+      <category>sustainability</category>
+      <category>wellness</category>
+    </item>
+    <item>
+      <title><![CDATA[Digital Spring Cleaning: Deepening Our GRIT Journey]]></title>
+      <link>https://pythonessprogrammer.com/blog/digital-spring-cleaning-deepening-our-grit-journey</link>
+      <guid>https://pythonessprogrammer.com/blog/digital-spring-cleaning-deepening-our-grit-journey</guid>
+      <pubDate>Thu, 17 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Neurodivergent Digital Organization: Energy-Based Productivity Systems for ADHD, Autism, and Executive Function Challenges | Context Containers for Better Focus]]></description>
+      <content:encoded><![CDATA[
+# Digital Spring Cleaning: Deepening Our GRIT Journey
+
+## Neurodivergent Digital Organization: Energy-Based Productivity Systems for ADHD, Autism, and Executive Function Challenges | Context Containers for Better Focus
+
+Hey there,
+
+Last week, we began our April journey through Digital Spring Cleaning with the Monthly GRIT Framework—exploring how passion, perseverance, growth, and resilience can transform our relationship with technology. Today, I want to weave these concepts together more deeply, offering practical approaches that honor both your technical brilliance and your body's wisdom as we continue this journey.
+
+**Spring Special**: Feeling overwhelmed by your current tech stack? I'm offering 20-minute Software Psychic sessions for just $30. We'll review your current digital tools, identify redundancies, and create a streamlined system that works with your brain instead of against it. [Book your session here](https://cal.com/pythoness/20min).
+
+## Main Feature: Systems That Serve Your Brain
+
+Building on our Passion Pulse discussion from last week, let's explore how to create digital environments that truly align with your neurodivergent thinking patterns.
+
+Traditional file hierarchies rarely match how our brains naturally categorize information. When we examined your software subscriptions last week, we focused on which tools bring you joy. Now, let's take it deeper by exploring how these tools can be organized to support your unique cognitive style:
+
+* **Context Containers**: Create separate digital environments for different areas of your life using different browsers or user profiles. This reduces the cognitive load of context-switching, which can be particularly taxing for neurodivergent brains.
+   * **_Personal Example:_** I use Firefox for my focused work tasks, DuckDuckGo browser for exploring less grounded projects I want to play with first, and Firefox Developer Edition exclusively for development work. This browser-based separation creates distinct "workspaces" that help my brain immediately understand which context I'm operating in, significantly reducing the mental effort needed to transition between different types of work.
+* **Energy-Based Organization**: Rather than organizing by project or category, try sorting digital tasks by the energy they require. Create folders or tags for "low executive function days," "creative energy," or "deep focus work" to match your fluctuating capacity.
+   * **_Personal Example:_** I typically have similar energy levels week by week, so I divide my week into energy-centered tasks: Mondays for writing and drafting content (high creative energy), Wednesdays for "on camera" days (high social energy), Thursdays for checking in on finances (high analytical energy), and mandatory rest/catch-up periods on Tuesdays and Fridays. This prevents weekend burnout and ensures I get regular recharging periods. You can apply this same principle to your digital organization by grouping tasks and files based on the type of energy they require.
+* **Visual Clarity Systems**: Use color-coding extensively across apps and folders to create intuitive visual patterns that your brain can recognize instantly.
+   * **_Personal Example:_** I've created custom themes for my main "work" browser (Firefox) and my digital second brain in Obsidian using my Pythoness Programmer brand colors. Having my brand's color palette consistently present across these tools helps me get into the flow state significantly faster, as the visual cues immediately prime my brain for Pythoness Programmer work. The consistent visual identity creates an environmental trigger that helps me transition into the right mindset without conscious effort.
+
+This approach connects directly to last week's journal prompt about which tools bring you joy—because true joy comes not just from having the right tools, but from organizing them in ways that feel intuitive to your unique brain.
+
+In our Perseverance Points section last week, we discussed creating contingency plans for tech challenges like the Next.js security concerns. A powerful way to extend this resilience is through thoughtful automation—creating systems that work for you rather than creating more demands.
+
+Automation can be especially valuable for neurodivergent individuals who experience time blindness or hyperfocus. Consider these approaches that build on last week's contingency planning:
+
+* Use apps like Freedom to block distracting websites during focused work periods
+* Set up automatic shutdown timers on devices to support work/life boundaries
+* Use [Momentum Dash](https://momentumdash.com/) to create a consistent "new tab" experience across all chromium-based browsers with to-do lists, favorite links, and focus features. Their newer Google Calendar sync automatically puts you in focus mode until your next appointment without any additional effort. It's one of my favorite paid browser extensions and has been transformative for maintaining focus across different workspaces.
+* Create email filters that sort messages by urgency or topic
+* Implement text expanders for frequently typed information
+
+The "Focus" feature on Apple devices allows you to create customized modes that automatically filter notifications based on what you're doing. Similar features are available on Android through Digital Wellbeing.
+
+These automation strategies directly address the tech disappointments we reflected on last week by creating systems that continue functioning smoothly even when individual tools present challenges.
+
+## Quick Tip: Permission-Based Organization
+
+Remember last week's Growth Gauge where I encouraged you to play with your software settings? Many of you shared that while this felt liberating, you still experienced anxiety about "doing it wrong." Today, I want to offer you a concept that's been game-changing for my neurodivergent clients: permission-based organization.
+
+This approach acknowledges that executive function fluctuates and builds flexibility into your systems:
+
+* Create an "executive function pending" folder for files you can't organize right now
+* Use voice memos when writing feels too demanding (tools like [Otter.ai](https://otter.ai/) can transcribe these later)
+* Set up "future you" systems with detailed notes for when you return to projects
+   * **_Personal Example:_** I use the [Plaud Note app](https://plaud.ai/) to capture all my long-form thoughts, favorite quotes, ideas, and meeting notes via voice. The app allows me to keep voice notes unprocessed on my device for days until I have the energy to classify and organize them. This creates a perfect "future me" system where I can brain dump whenever inspiration strikes, without the immediate cognitive load of having to categorize or transcribe the information. Plus the app will use AI to create mind maps and more of your voice note for you.
+
+## Tool Spotlight: Digital Spring Cleaning Toolkit
+
+To support the Grit Goals you set last week, here are some neurodivergent-friendly tools that expand on the organization strategies we've discussed:
+
+**For Visual Thinkers:**
+
+* **Canva Whiteboard**: Create visual plans and maps directly within Canva, which many of you already use for other design tasks
+* **Mermaid.js**: Generate beautiful flowcharts and diagrams with simple JavaScript code (AI tools can help create these even if you're not a coder)
+* **Arc Browser**: Customize the CSS of websites you visit regularly to create a consistent, joy-sparking visual experience across the web
+
+**For Auditory Processors:**
+
+* **Plaud.ai**: AI-powered voice note app that creates mindmaps and organized transcriptions
+* **Otter.ai**: Automatically transcribe spoken notes and conversations
+* **Loom**: Create and share quick video messages with screen recording for visual communication without meetings
+
+**For Pattern Thinkers:**
+
+* **Obsidian**: Connect notes through concept linking and visualization
+* **[Make.com](https://make.com/)** or **N8N**: Create powerful automated workflows between apps with more flexibility and control than traditional automation tools
+* **Home Assistant**: Open-source home automation that gives you full control
+
+## Community Corner: Future Connections
+
+In my research on digital spaces that energize rather than deplete, I've found some fascinating patterns emerging!
+
+The most effective digital communities tend to be focused around specific interests rather than broad social platforms. Micro-communities with fewer than 100 active members often feel more manageable and meaningful, while spaces with clear community guidelines and active moderation create the psychological safety needed to participate authentically.
+
+This research has inspired me to begin planning a Pythoness Network Slack Community with specialized interest channels, which I'm aiming to launch this fall. I envision a space where we can share digital organization strategies, workflow tips, and support one another's GRIT journeys in a more interactive way.
+
+In the meantime, I'd love to see how you're applying the GRIT Framework to your digital spring cleaning!
+
+## Personal Update: Digital Organization Reality Check
+
+I've been experimenting with my own digital spring cleaning this week, and let me be honest—it's been a mixed bag! While I'd love to say I've created the perfect system, the truth is that I'm still figuring it out alongside you.
+
+One approach that's been surprisingly helpful is simply paying attention to how different digital environments make me feel. Some apps and websites instantly create a sense of overwhelm (hello, Gmail inbox with 1,000+ messages!), while others somehow make tasks feel more manageable.
+
+I'm working on using these reactions as signals, though I don't always listen to them right away. I've found that I often need to experience the friction multiple times before I finally make changes. For example, I kept using a project management tool that stressed me out for months before finally switching to something simpler—and the relief was immediate.
+
+If you're also navigating this digital organization journey, remember that perfect systems don't exist, but better ones do. Start by noticing which digital spaces drain your energy and which ones support your flow, then make small adjustments accordingly.
+
+Next month, we'll explore Mindful Automation—setting up systems that work for you rather than creating more demands. Until then, remember that your unique brain deserves digital spaces designed with its strengths in mind.
+
+With digital care,
+
+The Pythoness Programmer
+
+<Signature />
+
+P.S. Don't forget to check out our [Digital Spring Cleaning](/digital-spring-cleaning) page for additional resources and worksheets to support your journey!]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>community</category>
+      <category>accessibility</category>
+      <category>sustainability</category>
+    </item>
+    <item>
+      <title><![CDATA[Monthly Grit Framework for your Digital Spring Cleaning]]></title>
+      <link>https://pythonessprogrammer.com/blog/monthly-grit-framework-for-your-digital-spring-cleaning</link>
+      <guid>https://pythonessprogrammer.com/blog/monthly-grit-framework-for-your-digital-spring-cleaning</guid>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Declutter Your Tech, Boost Your Productivity, and Build Digital Resilience using Angela Duckworth's GRIT framework adapted for digital organization.]]></description>
+      <content:encoded><![CDATA[
+# Monthly Grit Framework for your Digital Spring Cleaning
+
+## Declutter Your Tech, Boost Your Productivity, and Build Digital Resilience
+
+This month, I'm introducing a new feature inspired by Angela Duckworth's groundbreaking work on "Grit" - that powerful combination of passion and perseverance that drives long-term achievement. During my coding bootcamp days, her regular reflection check-ins helped me witness the true power of accumulated progress—those small daily efforts that compound into significant growth. As we tackle April's Digital Spring Cleaning theme, let's use this framework to build resilience while tidying our digital lives.
+
+## Passion Pulse
+
+The digital tools we use should (mostly) spark joy and serve our purposes efficiently. This month, I invite you to examine your tech stack with fresh eyes:
+
+* Which software subscriptions truly align with your goals and values?
+* Where might you be experiencing redundancy across tools?
+* What digital tools bring you genuine joy or help you slip into "the flow"?
+
+**_Journal Prompt: List all your current software subscriptions with their monthly costs. Circle the ones that feel essential. Star those that bring you joy. What patterns emerge?_**
+
+**Need help evaluating your tech stack?** I'm offering 30-minute consultation calls this month where we can review your current setup and identify opportunities for consolidation.
+
+[Book a Software Psychic Session](https://cal.com/pythoness/20min)
+
+## Perseverance Points
+
+Tech challenges are inevitable. Recently, I've been following the Next.js security discussions—a framework I've invested time learning and have built my portfolio with. While my current projects don't handle sensitive customer data, these situations still prompt important reflection about the tools we rely on.
+
+For small business owners, every tech solution will eventually present limitations. Rather than seeking perfect tools (they don't exist!), we can build our resilience by:
+
+1. Expecting occasional changes from our tools
+2. Creating contingency plans
+3. Organizing our core business functions into distinct categories:
+   * Email management
+   * Cloud storage (for cross-device access)
+   * Customer relationship management (CRM)
+   * Marketing email platform (with analytics and CRM integration)
+   * Website hosting
+   * Scheduling and forms
+
+**_Journal Prompt: What tech disappointment have you experienced recently? How did you respond? What would a more resilient response look like next time?_**
+
+## Growth Gauge
+
+File management is a foundational skill that few of us were formally taught. Yet mastering your digital organization system can save countless hours and reduce cognitive load.
+
+This month, I encourage you to **play with your software settings**! You have my official permission to explore, experiment, and even break things (temporarily). Create test projects, generate fake data, and discover the hidden features of the software you're paying for! This playful approach is how we truly learn and grow.
+
+**_Journal Prompt: What's one digital organization skill you'd like to improve this month? How might you set aside 15 minutes to "play" with a tool you use regularly but haven't fully explored?_**
+
+## Resilience Reflection
+
+I recently rekindled my relationship with Sunsama as my task manager after abandoning it four years ago during a post-layoff budget cut. What's fascinating is realizing why I struggled with it initially: I was overcomplicating it!
+
+I had created an elaborate point system where tedious tasks earned more "points," which I'd tally for rewards. This system became so cumbersome that I considered building an app just to manage it. The irony! I've now embraced the simplicity of treating each task with equal importance and focusing on one thing at a time.
+
+**_Journal Prompt: Where in your digital life might you be overcomplicating things? What would simplifying look like? What resistance arises when you consider streamlining?_**
+
+## Grit Goal
+
+Setting achievable digital organization goals that work with neurodivergent thinking patterns:
+
+1. **Time-Bound Approach**: Set a 10 or 15-minute timer for inbox processing rather than aiming for inbox zero
+2. **Flexible Organization**: Designate specific "to be filed" folders rather than requiring immediate organization (I call mine "Inbox" for simplicity)
+3. **Visual Systems**: Use color-coding that aligns with your intuitive associations
+4. **Process Documentation**: Record Loom or Scribe videos of processes you frequently forget or take screenshots before changing settings
+5. **Automation**: Use text expanders for frequently typed information and set up automated backups for peace of mind
+6. **Regular Maintenance**: Create a "digital maintenance" recurring task on the first of each month with built-in rewards
+7. **Intentional Spaces**: Use different browsers for different purposes to create dedicated focus areas
+
+**_Journal Prompt: Select one goal from the list above (or create your own) that resonates most. What small step could you take in the next 24 hours to move toward this goal?_**
+
+## Community Connection
+
+As part of my own digital spring cleaning, I'm mindfully downsizing my online presence. I'll be stepping back from Meta platforms (Facebook, Instagram) and Twitter, focusing instead on [BlueSky](https://bsky.app/profile/pythonessdev.bsky.social), [YouTube](https://www.youtube.com/@pythonessprogrammer), and [TikTok](https://www.tiktok.com/@pythoness_programmer). With the "potential" TikTok ban looming, I'm reflecting on which digital spaces truly serve my wellbeing and community connections.
+
+I'd love to hear where you're finding meaningful community online these days. Which digital spaces feel nourishing rather than depleting?
+
+**_Journal Prompt: Map your digital communities on paper. Which ones energize you? Which ones deplete you? What would an intentional digital community presence look like for you?_**
+
+## Mindfulness Moment
+
+When examining your software systems, approach from a grounded state, ideally first thing in your workday. This allows you to clearly identify friction points in your workflows. Try this practice:
+
+![Friction Questions](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/86ddbaac-365d-4e85-a178-38876d69ee9a/Friction_Questions.png?t=1744334530)
+
+1. Before reviewing a digital process, take three deep breaths
+2. As you move through each step, notice physical sensations in your body
+3. When you encounter a hurdle, pause and write it down
+4. For each friction point, ask:
+   * How is this currently done?
+   * What tools are being used?
+   * (most importantly) Why does this need to happen?
+
+By documenting these answers, you're creating a personalized guidebook for your operations—one that honors both efficiency and your unique needs.
+
+**_Journal Prompt: Select one digital workflow that frequently frustrates you. Move through it slowly while noting your physical and emotional responses at each step. Where do you feel tension? Where does the flow feel natural?_**
+
+## Your Turn!
+
+I'd love to hear your reflections on any part of this framework! Reply to this email with your insights, challenges, or celebrations. Your responses help shape future content and remind us all that we're not alone in our digital organization journeys.
+
+Next month, we'll check in on our Digital Spring Cleaning progress and explore how our grit has grown through consistent small actions.
+
+With clarity and confidence,
+<Signature />
+The Pythoness Programmer
+
+P.S. Don't forget to check out our [Digital Spring Cleaning](/digital-spring-cleaning) page for additional resources and worksheets to support your journey!]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>community</category>
+      <category>sustainability</category>
+      <category>foundations</category>
+    </item>
+    <item>
+      <title><![CDATA[Digital Sustainability That Won't Burn You Out]]></title>
+      <link>https://pythonessprogrammer.com/blog/digital-sustainability-that-wont-burn-you-out</link>
+      <guid>https://pythonessprogrammer.com/blog/digital-sustainability-that-wont-burn-you-out</guid>
+      <pubDate>Wed, 19 Mar 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Practical strategies for maintaining a healthy relationship with technology while building sustainable digital habits that support long-term well-being.]]></description>
+      <content:encoded><![CDATA[
+# Digital Sustainability That Won't Burn You Out
+
+## Building Digital Sustainability one Ritual at a Time
+
+Dear digital explorer,
+
+Welcome to the refreshed Pythoness Perspective newsletter, where our mission is "Tech Clarified | Empowering Digital Confidence."
+
+In this issue, you'll find a neurodivergent-friendly productivity method, a self-care app that makes wellbeing playful, updates on my tech pivot sessions, and personal insights into how I'm integrating digital tools with creative practice. This newsletter aims to explore digital sustainability—creating a relationship with technology that can be maintained over time without depleting your energy, attention, and wellbeing. It's about using tech in ways that support rather than drain you, allowing for a harmonious integration of digital tools in your life without the burnout.
+
+I'm excited to share this new format with you as we explore sustainable digital practices. In a world that often frames technology as something to fear, I believe in a different approach. Technology isn't inherently "good" or "bad" - it's simply a tool. Like any tool throughout human history, its impact depends entirely on how we choose to use it.
+
+When we view technology as a neutral tool rather than an adversary, we can approach it with intention rather than anxiety. We can harness its potential while establishing boundaries that honor our wellbeing. Next week, we'll dive deeper into practices that help maintain this balanced relationship with our digital tools.
+
+Digital sustainability isn't just about environmental impact. It's about creating a relationship with technology that can be maintained over time without depleting your energy, attention, and wellbeing. It's recognizing that your digital practices are intimately connected to your nervous system, your creativity, and your capacity to thrive.
+
+For neurodivergent folks especially, finding sustainable digital practices isn't a luxury—it's essential. Our brains often process digital stimulation differently, making us more susceptible to overwhelm, hyperfocus, and burnout if we don't create systems that work with our unique neurological makeup.
+
+The three pillars I've found most helpful in building digital sustainability are:
+
+1. **Mindful consumption**: Being intentional about what digital content we consume
+2. **Intentional creation**: Approaching digital creative work with awareness of our energy patterns
+3. **Restorative boundaries**: Creating clear divides between different types of digital engagement
+
+## Quick Tip: The 40/20/20 Pomodoro Method for Neurodivergent Brains
+
+Traditional productivity techniques often don't account for how neurodivergent brains actually work. The standard Pomodoro technique never quite clicked for me—it felt like I was constantly interrupting my flow or not getting enough rest.
+
+After much experimentation, I've developed a rhythm that works with my brain instead of against it: the 40/20/20 method.
+
+Here's how it works:
+
+* **40 minutes of focused work**: Long enough to get into flow state but not so long that fatigue sets in
+* **20 minutes of learning/reading**: Shifting to input mode rather than output mode gives your brain a different kind of stimulation
+* **20 minutes of genuine rest**: Attending to your personal needs, not household chores or other responsibilities
+* Repeat with another 40-minute focus session
+
+What makes this approach special is the learning segment. Instead of viewing breaks as "non-productive" time, this method recognizes that learning is valuable but requires a different kind of energy than focused work.
+
+During your 20-minute learning segment, you might watch a YouTube video, listen to part of an audiobook while following along with the text, or explore a documentary segment that expands your thinking.
+
+The rest segment is equally important. This is time for YOU—not your home, not your responsibilities, just your needs. Your nervous system needs this downtime to integrate and process.
+
+Have you tried this method or a variation that works for your brain? I'd love to hear about your experience! Drop me an email with 'My 40/20/20 Experience' in the subject line, and let me know how it worked for you or what adaptations made it even better for your unique needs.
+
+## Tool Spotlight: Finch - The Self-Care App That Makes Well-being Playful
+
+In my quest for digital tools that support well-being rather than deplete it, I've fallen in love with Finch, a self-care app that turns personal goals and tasks into a delightful Tamagotchi-like experience.
+
+For the past 84 days (yes, I'm on a streak!), Finch has been my daily companion in making self-care and personal tasks feel more playful and less like another item on my to-do list.
+
+What makes Finch different from other habit trackers is its gentle, nurturing approach. Instead of shaming you for missed tasks, Finch encourages you through a cute bird companion that grows as you take care of yourself.
+
+Having the Finch widget on my home screen serves as my favorite reminder not to get too lost in my phone throughout the day, while also helping me stay on top of my bare minimums. Even on high pain days, if my little 'birb' got to go on an adventure, I know I'm doing okay. It's a perfect example of sustainable technology—a digital tool that actually replenishes rather than depletes.
+
+The app brilliantly combines:
+
+* Daily check-ins that help you track your mood and energy
+* Customizable goals that can be as simple as "drink water" or as complex as "work on creative project"
+* Reflective journaling prompts that encourage mindfulness
+* Adventure and growth for your bird friend as you complete tasks
+
+For neurodivergent brains that respond well to visual rewards and gamification, Finch offers just enough structure without becoming another source of pressure. I've found it particularly helpful for remembering basic self-care tasks that often get lost in the shuffle of digital work.
+
+What I appreciate most about Finch is how it embodies digital sustainability—it's a tech tool that actually supports well-being rather than depleting it.
+
+(and check out their [reddit page](https://www.reddit.com/r/finch/) to see how others are using the app)
+
+[Check out Finch for Yourself](https://app.befinch.com/invite_v5/KXGW)
+
+## Community Corner
+
+**Tech Pivot Sessions Now Available!**
+
+I'm thrilled to announce that my 30-minute and 60-minute tech pivot sessions are back open for booking! These focused sessions are designed to help you navigate technological transitions with confidence and clarity. [Book your session here](https://cal.com/pythoness).
+
+![Tech Pivot Session Review](https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/7c2e9cc8-c51c-46cf-a169-9409291fb5ba/Screenshot_20240111_164226_TikTok.jpg?t=1742419165)
+
+_Review by [Alex Mandelson of Mandelson Musings](https://www.tiktok.com/@mandelsonmusings)_
+
+## Personal Update
+
+This week has been transformative for my creative practice. After recommitting to morning pages from "The Artist's Way," I've rediscovered my voice in ways that surprise me daily. This mental dump first thing in the morning has created space for the juice of my essence to pour out and overflow into my art.
+
+A tech practice that's been instrumental in this reconnection is something surprisingly simple: I added "Check Sunsama" to my daily tasks in Finch. Since I was already using Finch consistently for tracking reading and medications, this small addition bridges my self-care practice with my work planning in Sunsama. This connection has transformed how I approach my schedule—I find myself actually WANTING to accomplish my goals because they're already integrated into my day rather than feeling like separate obligations.
+
+Another boundary I've been enforcing: no notifications on my phone and no e-commerce apps. Instead, when I feel the urge to purchase something, I add it to my Sunsama to-do list for later in the week. By the time that day arrives, I've usually either found a different solution or realized I didn't need the item at all. This unusual yet surprisingly simple approach has created more ease in my relationship with my phone.
+
+Next week, I'll share more about the actual "spells" I use and how you can transform your phone protector into a black mirror that serves you rather than distracts you.
+
+Until then, may your digital practices be as sustainable as they are powerful.
+
+With clarity and confidence,
+
+The Pythoness Programmer
+
+<Signature />]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>sustainability</category>
+      <category>wellness</category>
+      <category>community</category>
+    </item>
+    <item>
+      <title><![CDATA[Tech is Just a Tool]]></title>
+      <link>https://pythonessprogrammer.com/blog/tech-is-just-a-tool</link>
+      <guid>https://pythonessprogrammer.com/blog/tech-is-just-a-tool</guid>
+      <pubDate>Thu, 06 Mar 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A thoughtful exploration of how technology serves as a means to an end, not an end in itself. Understanding the role of tools in our digital lives.]]></description>
+      <content:encoded><![CDATA[
+# Tech is Just a Tool
+
+## Finding Calm and Positive Energy in the Digital World
+
+_Disclaimer: This post includes affiliate links to products or services that I recommend. If you purchase through these links, I may earn a small commission at no additional cost to you. This support allows me to continue creating content and art. I only recommend products that align with my values and are beneficial to my audience._
+
+As I reflect on my journey with productivity tools, I'm reminded that technology is neither inherently good nor evil. It's a tool. And like any tool, its impact depends on how we use it. Some view tech as a source of negativity or anxiety, but I believe it can be a powerful ally in enhancing our lives.
+
+## Revisiting Old Tools with Fresh Eyes
+
+Recently, I returned to two tools I'd previously abandoned: [Sunsama](https://sunsama.com/share?refId=67b613788d8ce50001d86512) and Notion. At one point, they felt overwhelming, but now they're integral to my workflow. Sunsama helps me plan and reflect, aligning tasks with my energy cycles. Notion, despite its imperfections, serves as a reliable note-taking and database solution, syncing seamlessly with Sunsama.
+
+**The Lesson**: Tools evolve, and so do we. What didn't serve us before might fit perfectly now. **_And that's worth exploring._**
+
+## How Tech Can Enhance Positive Energy
+
+Here are some ways I've reframed my relationship with tech to reduce anxiety and amplify positive energy:
+
+1. **Energy-Based Planning**: Align tasks with your natural energy cycles. High-energy mornings? That's when you tackle deep work. Low-energy afternoons? Perfect for admin tasks or creative brainstorming.
+2. **Mindful Tool Selection**: Not every tool is for everyone. And that's okay! The key is finding tools that feel intuitive and supportive for you. If something feels like friction rather than flow, ask yourself: Is this tool serving me, or am I serving it?
+3. **Boundaries Are Everything**: Notifications off. Social media muted when needed. Clear start-and-stop times for work tools like email or Slack. These boundaries help you stay present and prevent tech from draining your energy.
+4. **Experimentation Without Fear**: Tech isn't static. It's playful! Treat your workflow as an experiment rather than a rigid system. Try new tools or revisit old ones without judgment; you might stumble upon something transformative.
+
+## For Those Who See Tech as "Evil"
+
+If you view tech as a source of negativity or anxiety, I invite you to reconsider. Instead of seeing technology as an enemy, let's try viewing it as neutral energy waiting to be directed by your intentions.
+
+* Ask Yourself: Is this tool adding value to my life? If not, why am I using it?
+* Take Control: Set boundaries around how and when you engage with tech.
+* Find the Fun: Explore ways tech can support hobbies or passions. Whether that's tracking your garden growth in an app or using AI to brainstorm creative projects.
+
+## The Bigger Picture: Building Resilience Through Tech
+
+Technology doesn't have to be overwhelming. It can be grounding when approached mindfully. By understanding the tools we use and aligning them with our needs, we can turn tech into a partner in enhancing our lives rather than a source of stress.
+
+Remember: You're in charge here. Not the algorithms or notifications vying for your attention.
+
+So go ahead. Revisit that app you swore off years ago or try something new entirely. You might just find that what once felt like chaos now feels like calm. A tool ready to amplify your positive energy. 
+
+<Signature />]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>foundations</category>
+      <category>sustainability</category>
+      <category>wellness</category>
+    </item>
+    <item>
+      <title><![CDATA[Pythoness Perspective: On Elon Musk and Dates]]></title>
+      <link>https://pythonessprogrammer.com/blog/on-elon-musk-and-dates</link>
+      <guid>https://pythonessprogrammer.com/blog/on-elon-musk-and-dates</guid>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A technical deep dive into the misinformation surrounding Social Security dates and why it matters in the age of AI and social media.]]></description>
+      <content:encoded><![CDATA[
+# Pythoness Perspective: On Elon Musk and Dates
+
+## "I'm not just concerned - I'm alarmed" - yeah please quote me on that.
+
+Hey there, cosmic coders and stargazers!
+
+Buckle up, because we're about to dive into a tech drama more explosive than a supernova. Grab your favorite mug of something strong, because we're going to need it as we unravel a situation that's got this code witch's alarm bells ringing louder than a midnight deployment gone wrong.
+
+## The "150-Year-Old Social Security Recipients" Saga: More Than Just a Glitch
+
+So, Elon Musk recently claimed that Social Security is paying out to people older than the lightbulb. But this isn't just a quirky misunderstanding - it's a dangerous spread of misinformation that we need to talk about.
+
+## The Technical Reality
+
+Let's break it down:
+
+1. Social Security runs on [COBOL](https://en.wikipedia.org/wiki/COBOL), an ancient programming language designed for basic systems. This was _the_ programming language of the 60s.
+2. COBOL doesn't do dates well. It's like trying to teach your grandma to use TikTok.
+3. The [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601#:~:text=ISO%208601%3A2004%20fixes%20a,8601%2D1%3A2019) date standard starts on May 20th, 1875 per the international treaty known as the Treaty of the Metre. This exact date serves as a starting point for calendar date tracking via only digits. "ISO" refers to the non-governmental "International Organization for Standardization". Not all engineers use the same standards, which can cause issues exactly like this one.
+4. When these systems need to have a number in the system, and the data of birth may not be known exactly it is likely left blank and it is defaulted to 1875 by a system that views "0" or null as May 20th, 1875.
+
+For a comprehensive breakdown of the technical details and conventions behind this issue, I highly recommend watching the video by CJ Trowbridge (they/them) on TikTok. In just 2 minutes and 45 seconds, CJ provides an in-depth explanation that will help you fully grasp the technical nuances of this situation: [CJ's Technical Breakdown](https://www.tiktok.com/t/ZT2SwfNd7/)
+
+## Why This is Scarier Than a Blue Screen of Death
+
+As a software engineer, _**I'm not just concerned - I'm alarmed**_. Here's why:
+
+1. **Platform Power**: Musk owns X (formerly Twitter). Imagine if your database admin suddenly decided to rewrite reality, Musk continues to do this every day he is allowed in DC with his team of 20-somethings.
+2. **Tech Illiteracy in High Places**: When powerful figures misunderstand (or misrepresent) tech, it's like giving a toddler security clearance. (Which by the way, Musk does not have himself.)
+3. **Erosion of Trust**: False tech claims undermine public trust in critical systems. It's like telling everyone that the pandemic is over… oh wait.
+
+## The Cosmic Takeaway
+
+1. **Stay Vigilant**: When tech claims sound off, channel your inner code detective.
+2. **Speak Up**: We've got the knowledge. It's time to use it to call out dangerous misinformation.
+3. **Educate Others**: Share your tech wisdom like it's the hottest gossip in the coding cosmos.
+
+Remember, in this vast dataverse, we're not just reading code - we're guardians of digital truth. So let's use our powers for good, shall we?
+
+Keep your code clean, your facts checked, and your BS detectors finely tuned. Until next time, may your logic be sound and your integrity unbreakable!
+
+Yours in algorithms and accountability,  
+<Signature />
+Your Favorite Pythoness
+
+### Further reading:
+
+* [Newsweek - Elon Musk Issues Major Social Security Warning](https://www.newsweek.com/elon-musk-major-social-security-warning-fraud-billion-week-lost-2029244)
+* [LinkedIn - Best Practices for Handling Date and Time in Software Development](https://www.linkedin.com/pulse/best-practices-handling-date-time-software-development-basant-sahu/)
+* [CJ's awesome video that inspired me to finally unpack my date conversion development trauma](https://www.tiktok.com/@cjtrowbridge/video/7470465628751645983)
+
+_Cover image by [Vlad Tchompalov](https://unsplash.com/@tchompalov) on [Unsplash](https://unsplash.com/photos/close-up-photography-of-red-car-jwyO3NhPZKQ)_ ]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>foundations</category>
+      <category>security</category>
+      <category>accessibility</category>
+    </item>
+    <item>
+      <title><![CDATA[Sawdust and Sacred Stones]]></title>
+      <link>https://pythonessprogrammer.com/blog/sawdust-and-sacred-stones</link>
+      <guid>https://pythonessprogrammer.com/blog/sawdust-and-sacred-stones</guid>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[A Historical Fiction Memoir of Growing Up in Company-Town Baraboo, exploring the tensions between corporate interests and Indigenous resilience in 19th-century Wisconsin.]]></description>
+      <content:encoded><![CDATA[
+# Sawdust and Sacred Stones
+
+## A Historical Fiction Memoir of Growing Up in Company-Town Baraboo
+
+_Author's Note: This story weaves historical fact with fictional elements to explore the tensions between corporate interests and Indigenous resilience in 19th-century Wisconsin. While Baraboo's mills, circuses, and Ho-Chunk history are rooted in reality, the characters and specific events are imagined. The name "Kunu" is inspired by Ho-Chunk birth-order traditions, where "Kųųnų" denotes the first-born son. This fictional usage aims to honor the Ho-Chunk people's enduring connection to their ancestral lands and intergenerational knowledge. As someone who grew up in Baraboo during the aftermath of 9/11, I found the town's complex history particularly illuminating. This narrative is an attempt to bridge past and present, highlighting how historical struggles continue to resonate in our modern world._
+
+## Baraboo, Wisconsin – 1884
+
+The sawdust settled like snow on my eyelashes as I watched Papa's mill churn out another day's worth of timber. It wasn't until Kunu showed me the other Baraboo that I realized our town had two rivers: one visible, one hidden. I was 10 years old when this revelation struck me. There was the Baraboo everyone knew, the one choked with sawdust from Papa's mill, its banks lined with railroad tracks hauling timber to Chicago. Then there was the other river, the one my friend Kunu showed me one October afternoon when the maples blazed crimson. It wasn't on any map the mill bosses used, but it flowed through the quartzite bluffs of Devil's Lake, where the Ho-Chunk had fished for generations before the treaties came.
+
+"This place remembers," Kunu whispered as we crouched by a lichen-crusted stone. His father called it a "sleeping bear," though I couldn't see the shape anymore. Not after the quarrymen blasted the larger mounds to make gravel for the railroad. But the river? It still sang the old songs.
+
+Kunu's father once told me his name meant "first light" in their old language. He was the eldest son, destined to carry stories like the Thunderbirds carried storms. But in the mill's shadow, where even sunrise tasted like sawdust, that name felt like a secret. A rebellion.
+
+"In the old days," Kunu explained as we crouched by Devil's Lake, watching mist rise off the quartzite bluffs, "my ancestors would look to the stars to know when to plant, when to harvest. Each constellation told a story." He traced an invisible pattern in the air. "Now the mill smoke hides the sky, but we remember. That's why they call me Kunu, to keep the old ways burning bright, even when others try to snuff them out."
+
+I thought about my own name, plain as the timbers stacked by the river. How different it felt from Kunu's: a name that carried the weight of generations, of resistance against forgetting. In that moment, as the lake lapped gently at the shore, I realized names could be more than just words. They could be lifelines, tethering us to a past the company ledgers tried to erase.
+
+## **The Two Baraboos**
+
+**The Mill's Baraboo**
+
+Our cabin reeked of pine resin and sweat. Papa's boots left sawdust trails that Mama swept into the stove each night. "Heat's heat," she'd say, but I knew she hated how it clung to our bread. At the mill store, flour cost a day's wages. "Better than Pullman," the clerk boasted, referencing towns where workers owed their souls to company housing. But debt here wore a kinder mask: credit slips decorated with circus elephants.
+
+When the Ringling brothers rolled into town with their first elephant in 1884, the whole village cheered. I didn't understand why Kunu's family stayed away. The circus brought a veneer of excitement, but beneath it, the river suffered. Each year, it ran a little slower, a little darker. Progress was taking its toll on the water that had sustained life for generations.
+
+**The Other Baraboo**
+
+Kunu's grandfather showed me where the bear-shaped mound once stood, its outline erased by plows. "They buried our stories," he said, "but the land keeps them." Though wild rice no longer grew in Devil's Lake, Kunu's aunt tucked a woven bag of northern-grown manoomin into my hands. "Taste what the water used to give," she said. It tasted like smoke and hope.
+
+We gathered hazelnuts where the Ho-Chunk camped before the 1837 treaty pushed them west. "They pay us to forget," Kunu muttered, crushing a shell underfoot. "We remember." His words hung in the air, heavy with the weight of history and the determination to preserve what others sought to erase.
+
+## **The Winter the River Froze Black**
+
+When the mill dumped dye into the Baraboo River, turning the ice a sickly indigo, Kunu's father laughed bitterly. "Now they've tattooed their shame onto the water." The river, once a source of life, now bore the scars of industry, a stark reminder of the cost of progress.
+
+That same winter, as the cold deepened and resources grew scarce, the circus left for warmer climes, taking its promises with it. The town, so dependent on the seasonal spectacle, felt the absence keenly. Workers who'd built their lives around the Ringlings' seasonal jobs starved quietly. Mama traded her wedding ring for a sack of potatoes at the company store.
+
+But in Kunu's world, the cold brought clarity:
+
+**Ice Lessons**: He taught me to read cracks in frozen ponds. Zigzag lines meant danger, concentric circles meant spring was near.
+
+**Stolen Stories**: His grandmother recounted how quarrymen dynamited the bird effigy mound for road gravel. "They take the land's bones," she said, "but not its voice."
+
+## **The Rebellion of Small Things**
+
+By spring, I'd become a thief of seeds, a small act of defiance against the relentless march of industry. I scattered yellow coneflower seeds behind the mill. They sprouted in defiance, their roots clawing through industrial waste: nature's own rebellion. Kunu's family tapped trees in secret, avoiding the mill's "managed" sugarbush. Their syrup tasted of bark and resilience, each drop a testament to their enduring connection to the land.
+
+When the Ringlings' storage barn mysteriously caught fire in 1887, no one investigated. The Ho-Chunk said the bluffs themselves had struck the match. I watched the flames from afar, feeling a mix of awe and unease. The fire seemed to embody the simmering tensions between two worlds: one of spectacle and profit, the other of deep-rooted tradition and respect for the land.
+
+## **Epilogue: 1923**
+
+I returned when the mills closed, their skeletons rusting beside the river. The circus had moved on, but Devil's Lake remained, its quartzite bluffs glowing amber in the sunset. The years had changed me, just as they had changed the landscape. Where I once saw only the mill's prosperity, I now saw the scars left on the land and its people. Kunu's grandchildren showed me the new wild rice beds their community planted up north. "Someday," one said, nodding toward the Baraboo, "it'll be clean enough here too." Their hope was like a seed, small but persistent, ready to take root in the healing earth.
+
+As I knelt by the river, I heard it again: the old song, faint but insistent. Progress had tried to drown it, but water has a way of wearing down even stone. And in that moment, I understood that resilience, like the river, flows not just through places, but through people. It's a current connecting past, present, and future in an unbroken stream.
+
+### Further reading/research:
+
+* [Wisconsin Historical Society - Baraboo](https://www.wisconsinhistory.org/Records/Article/CS1906)
+* [Ho-Chunk Nation - Official Website](https://ho-chunknation.com/)
+* [Circus World Museum in Baraboo](https://circusworldbaraboo.org/about-us/history/)
+* [Sauk County Historical Society](https://www.saukcountyhistory.org/)
+* [The History of Logging in Wisconsin](https://dnr.wisconsin.gov/topic/TimberSales/history.html)
+* [Native American History in Wisconsin](https://www.wisconsinhistory.org/Records/Article/CS4048)
+* [Baraboo Public Library - Local History Resources](https://www.baraboopubliclibrary.org/local-history-genealogy)
+* [Wisconsin's Effigy Mounds](https://www.wisconsinhistory.org/Records/Article/CS4102)
+* [Ringling Brothers Circus History](https://www.ringling.com/ringling-bros-history/)
+* [University of Wisconsin-Madison's Digital Collections on Ho-Chunk History](https://search.library.wisc.edu/digital/AWisconsin%20Historical%20Society%20Digital%20Collection/Ho-Chunk)
+
+_Thumbnail Photo by [Alex Marrero](https://unsplash.com/@alexmke) on [Unsplash](https://unsplash.com/photos/a-view-of-a-lake-surrounded-by-trees-XZrjaf4hStc)_ ]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>creativity</category>
+      <category>community</category>
+      <category>sustainability</category>
+    </item>
+    <item>
+      <title><![CDATA[Pythoness Perspective: Lunar New Year Edition]]></title>
+      <link>https://pythonessprogrammer.com/blog/lunar-new-year-2025</link>
+      <guid>https://pythonessprogrammer.com/blog/lunar-new-year-2025</guid>
+      <pubDate>Wed, 29 Jan 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[2025 -- When Silicon Sheds its Skin: The Wooden Snake's Silent Revolution. Exploring the intersection of technology, tradition, and transformation in the Year of the Wooden Snake.]]></description>
+      <content:encoded><![CDATA[
+# Pythoness Perspective: Lunar New Year Edition
+
+## 2025 -- When Silicon Sheds its Skin: The Wooden Snake's Silent Revolution
+
+The Wooden Snake's tongue flicks in two directions - tasting both silicon and stardust - revealing a truth neither pure technologists nor star-seers alone can grasp:
+
+### **What You Need to Know**
+
+This year's Lunar New Year brings the energy of the **Wooden Snake** - a symbol of patience, adaptability, and quiet transformation. Here's how its wisdom applies to our rapidly changing world of technology, politics, and everyday life.
+
+### **Key Lessons from the Wooden Snake Year (already)**
+
+1. **Limitations Can Spark Innovation**  
+When the U.S. restricted advanced computer chips to China, it forced Chinese engineers to find smarter, cheaper ways to build AI. The result? DeepSeek's new AI model now rivals systems like ChatGPT but uses far less time and energy. _The lesson:_ Scarcity often pushes us to create better solutions.
+
+2. **Community Beats Control**  
+While big companies guard their AI technology, open-source tools (free software anyone can improve) are rising. These community-driven projects prove that sharing knowledge often leads to faster progress than hoarding it.
+
+3. **Timing Matters**  
+DeepSeek's breakthrough happened just as OpenAI secured a massive $500 billion deal—a reminder that big changes often arrive quietly, while everyone's looking elsewhere.
+
+### **What This Means for You**
+
+* **For Non-Tech Readers:**  
+You don't need to understand AI to see the pattern. When things feel limited (like tight budgets or new rules), that's often when creativity thrives. Look for opportunities in constraints.  
+   * Start looking at your day to day and start creating workflows and "guides" on how you accomplish your work. Let's start looking at how we can start digitizing these workflows. Even without a full AI automation, seeing these real time workflows in your day-to-day life will unlock a new world of possibilities.
+
+* **For Tech Enthusiasts:**  
+Watch open-source projects like DeepSeek. They're proving you don't need corporate billions to innovate. Clever problem-solving and teamwork will always be the winner in the Tech Cold Wars.  
+   * Start looking at your day to day to see where you can improve on your communication workflows. We've been playing with these tools for years now, it's time to buckle down and make the tools work for us. What is one way you can improve your communication in your workflows?
+
+### **The Bigger Picture**
+
+* **AI's "Coincidences" Aren't Random**  
+Events like DeepSeek's rise during OpenAI's deal aren't just luck—they show how competition and necessity drive progress.  
+   * 2025 is going to continue to force us to look at the GLOBAL market. China's tech has always been incredible, and here in the United States we're going to be forced to really step back and let the world show us what they've been working on.
+
+* **Balance Wins**  
+Healthy systems need both big players _and_ grassroots innovators. Think forests: giant trees _and_ tiny fungi work together to thrive.  
+   * What do you need in order to thrive with balance? What is one thing you can add to your workflows today to help reduce a pain point and restore some balance to your everyday?
+
+### **A Final Note**
+
+The Wooden Snake's message is clear: **_True power isn't about brute force—it's about adapting, observing, and finding smarter paths forward_**. Stay curious, stay flexible, and don't underestimate quiet changes. 2025 is going to remain a bumpy ride for all of us, and we must do our best to shed our old skin along with the universe on this ride.
+
+**Stay Safe Online:**  
+While embracing new tools, keep devices updated. Security is the foundation of progress. Keep all of your devices up-to-date with their latest software and security firmware. Do not respond to social media accounts you suspect are bots.
+
+**Next Month:**  
+We'll explore how global AI policies affect everyday users and why ethical design matters.
+
+_The revolution isn't loud—it's unfolding in the gaps, cracks, and quiet spaces where creativity thrives._ 
+
+<Signature />]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>foundations</category>
+      <category>creativity</category>
+      <category>sustainability</category>
+    </item>
+    <item>
+      <title><![CDATA[Accommodating Yourself is Cute]]></title>
+      <link>https://pythonessprogrammer.com/blog/accommodating-yourself-is-cute</link>
+      <guid>https://pythonessprogrammer.com/blog/accommodating-yourself-is-cute</guid>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[A guide to making your development workflow more accessible and comfortable, featuring font recommendations and customization tips for VS Code.]]></description>
+      <content:encoded><![CDATA[
+> Find the original article on my LinkedIn: [Accommodating Yourself is Cute](https://www.linkedin.com/pulse/accommodating-yourself-cute-amanda-nelson/?trackingId=KVQFK7ydR%2By0xrJHQakeww%3D%3D)
+
+# Accommodating Yourself is Cute
+
+Hi Barbie 👋🏻 
+
+tl;dr: Updating the font in your workflow is self-care, babe 🔮 
+
+If you're anything like me, living in 2023 can make staring at your [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) near impossible. Being back in code is exhausting, and I must make changes to improve my workflow. In my era of not repeating cycles, my brain is better suited to struggling with complex systems and not trying to read my screen.
+
+So what's the solution? Make the font easier to read!
+
+![VS Code settings.json with custom color theme, zoom level, and Python formatting options](https://media.licdn.com/dms/image/v2/D4E12AQHolcSA345sqw/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1697393304801?e=1753920000&v=beta&t=rc4Vtee04JSbXGqV7yqhJO4GEpTY2YTEZJbxdAaLLdk)
+
+## Open Dyslexic
+
+[This font](https://opendyslexic.org/) has been tremendous in helping me get back into my writing and journaling, and as I get back into my coding practice again, I know that that will be my #1 choice of font. It may not give hacker-core, but accommodating yourself is cute.
+
+However, one issue is that it looks a little wonky in the terminal because it has extra large spaces (and I have an [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) layout I'm not changing yet 😉). Changing just the editor's font family will also automatically update the terminal within VSCode. So, while we're here, let's update the terminal font too!
+
+## Fira Code
+
+[This is the font](https://github.com/tonsky/FiraCode) you wish you had in your terminal. Fira Code looks just better in every way. This is also a great option to update your main editor font.
+
+[Here's a list of other Programming Fonts you might want to check out](https://kinsta.com/blog/best-programming-fonts/)
+
+## Install Instructions
+
+1. Download the desired font/s onto your computer. Make a note of the name of each font you'll be using for later.
+2. In VSCode, use the Shortcut: Command ⌘+Shift+P (control+shift+P on Windows) and search for your settings JSON. Start typing "settings.json" after the >, and you can select it. For this example, I'm updating the "User Settings."
+3. This should pull up your settings JSON, and you'll add the following key-value pairs to that JSON:
+
+```json
+"terminal.integrated.fontFamily": "'FiraCode', monospace",
+"editor.fontFamily": "'OpenDyslexic', monospace"
+```
+
+Feel free to save and adjust the fonts from there. Each install font you use should be in single quotes, followed by the default font you want to appear if things aren't working correctly.
+
+Making your workflow easier for your brain doesn't make you lazy, friend. It will save you time and stress, which is priceless.
+
+What font are you adding to your VS Code?
+
+Until next time,
+
+💕 Barbie
+
+<Signature />
+P.S. Deep Dive: The two fonts mentioned above have an [Open Font License (OFL)](https://en.wikipedia.org/wiki/SIL_Open_Font_License), which means they are free to install and use on projects, websites, etc. This type of font allows us engineers to know who created them and to whom to give credit. ]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>accessibility</category>
+      <category>automation</category>
+      <category>wellness</category>
+    </item>
+  </channel>
+</rss>
