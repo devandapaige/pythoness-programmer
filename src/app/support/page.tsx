@@ -61,15 +61,15 @@ export default function SupportPage() {
           <h2 className="font-display text-xl text-white mb-4 text-center">Why Your Support Matters Right Now</h2>
           <div className="text-white/90 space-y-4 text-left">
             <p>
-              We're currently in a government shutdown, and I've been out of work since January 2025. This is all I do now. 
+              We&apos;re currently in a government shutdown, and I&apos;ve been out of work since January 2025. This is all I do now. 
               As someone navigating the SSDI process while my husband works as a federal employee, our income depends on 
-              government budget approvals. We're in the middle of another long furlough with no end in sight.
+              government budget approvals. We&apos;re in the middle of another long furlough with no end in sight.
             </p>
             <p>
               I have no 401K, no savings to fall back on. Your contributions literally help me pay my bills, keep the lights on, 
               continue my research into accessible technology, and yes, keep my cats fed with their favorite treats. 
               More importantly, they let me keep creating content, tools, and resources that make technology more approachable 
-              for neurodivergent folks and everyone who's ever felt overwhelmed by the digital world.
+              for neurodivergent folks and everyone who&apos;s ever felt overwhelmed by the digital world.
             </p>
             <p className="text-brand-green-accent font-medium">
               Every coffee, every tip, every share makes a real difference in keeping this mission alive during this difficult time.

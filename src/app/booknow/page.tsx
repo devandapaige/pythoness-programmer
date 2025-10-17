@@ -1,11 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
 
 export default function BookNowRedirect() {
-  const router = useRouter()
-
   useEffect(() => {
     // Redirect to Cal.com booking page
     window.location.href = 'https://cal.com/pythoness'
@@ -16,7 +13,7 @@ export default function BookNowRedirect() {
       <div className="text-center">
         <h1 className="font-display text-2xl text-white mb-4">Redirecting to booking...</h1>
         <p className="text-white/80 mb-6">
-          If you're not automatically redirected, 
+          If you&apos;re not automatically redirected, 
           <a 
             href="https://cal.com/pythoness" 
             className="text-brand-green-accent hover:text-white underline ml-1"
