@@ -50,7 +50,7 @@ export default function Footer() {
           {/* Calendar Links */}
           <FooterSection title="Book a Call">
             <ul className="space-y-1" role="list" aria-label="Booking options">
-              <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Async Project & Web Presence Reading</Link></li>
+              <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Async Digital Psychic Reading</Link></li>
               <li className="pt-2 pb-1"><span className="text-white/60 text-xs font-medium">1:1 Calls:</span></li>
               <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>20min Software Psychic Session</Link></li>
               <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>60min Software Psychic Session</Link></li>
@@ -80,9 +80,9 @@ export default function Footer() {
             </ul>
           </FooterSection>
           <FooterSection title="Support">
-            <p className="text-white/80 text-sm mb-1">If you enjoy my work, you can buy me a coffee!</p>
+            <p className="text-white/80 text-sm mb-1">Help keep this digital psychic quest alive!</p>
             <ul className="space-y-1" role="list" aria-label="Support options">
-              <li><Link href="https://buy.stripe.com/eVaeWq6303RIejK28g" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Tip the Pythoness ☕</Link></li>
+              <li><Link href="/support" className={footerLinkClass}>Support the Pythoness ☕</Link></li>
             </ul>
           </FooterSection>
           <FooterSection title="Listen">

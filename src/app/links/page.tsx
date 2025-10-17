@@ -101,6 +101,11 @@ const supportLinks: LinkItem[] = [
     name: 'Tip the Pythoness ☕',
     url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
     color: 'bg-white/10 hover:bg-white/20'
+  },
+  {
+    name: 'Amazon Wishlist 🛍️',
+    url: 'https://www.amazon.com/hz/wishlist/ls/1ZXXDBUXYDDOC?ref_=wl_share',
+    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   }
 ]
 
@@ -196,20 +201,18 @@ export default function LinksPage() {
           </p>
         </div>
 
-        {/* Events & Connect Section */}
+        {/* Support Banner Section */}
         <div className="text-center mb-8">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 max-w-md mx-auto">
-            <h2 className="font-display text-xl text-white mb-3">Stay Updated & Connect</h2>
+            <h2 className="font-display text-xl text-white mb-3">Support Needed</h2>
             <p className="text-white/80 text-sm mb-4">
-              Join my upcoming events, workshops, co-working sessions, and more.
+              Government shutdown impact - help keep this digital psychic quest alive!
             </p>
             <Link
-              href="https://luma.com/pythoness"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/support"
               className="bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors inline-block mb-4"
             >
-              Upcoming Events
+              Support the Pythoness
             </Link>
             
             {/* Social Media Links */}
@@ -382,10 +385,10 @@ export default function LinksPage() {
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Support</h2>
               <p className="text-white/80 text-sm text-center mb-3">
-                If you enjoy my work, you can buy me a coffee!
+                Help keep this digital psychic quest alive during the shutdown!
               </p>
               {/* Direct support usernames */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                 <CopyField
                   label="Cash App"
                   value="$ANCreative"
@@ -395,6 +398,11 @@ export default function LinksPage() {
                   label="Venmo"
                   value="@ANCreative"
                   ariaLabel="Venmo username"
+                />
+                <CopyField
+                  label="Zelle"
+                  value="hello@amanda-nelson.com"
+                  ariaLabel="Zelle email address"
                 />
               </div>
               <div className="space-y-3">
