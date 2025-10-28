@@ -242,6 +242,47 @@ export default function ResourcesPage() {
                 </Link>
               </div>
 
+              {/* Password Security Guide */}
+              <div className="bg-white/95 border-2 border-brand-purple-accent rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-brand-purple-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl">🔐</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display text-brand-purple-dark mb-1">Password Security Guide</h3>
+                    <p className="text-brand-purple-dark/70 text-sm">Complete User Guide</p>
+                  </div>
+                </div>
+                <p className="text-brand-purple-dark mb-6">
+                  Your complete guide to password security and two-factor authentication. Learn how to manage dozens of 
+                  passwords without losing your mind, choose the right password manager, and set up 2FA without anxiety.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    30-Day Password Security Roadmap
+                  </div>
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    Password Manager Comparison & Recommendations
+                  </div>
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    Two-Factor Authentication Setup Guide
+                  </div>
+                  <div className="flex items-center text-brand-purple-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-purple-accent rounded-full mr-2"></span>
+                    Priority-Based Account Security Strategy
+                  </div>
+                </div>
+                <Link
+                  href="/passwords"
+                  className="block bg-brand-purple-accent text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                >
+                  Explore Password Guide
+                </Link>
+              </div>
+
               {/* AI Myth-Busting */}
               <div className="bg-white/95 border-2 border-brand-purple-accent rounded-3xl p-8 shadow-2xl">
                 <div className="flex items-center mb-6">
