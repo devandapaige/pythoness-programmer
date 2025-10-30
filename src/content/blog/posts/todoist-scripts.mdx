@@ -1,0 +1,131 @@
+---
+title: "Automating New Projects in Todoist with Python"
+date: "2025-10-30"
+description: "A small set of Python scripts that build out a complete Todoist project—sections, tasks, and sub‑tasks—from a simple JSON file."
+author: "Amanda Nelson"
+tags: ["automation", "todoist", "python", "workflows"]
+image: "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b585a570-ef5f-4988-a0bf-752b4e2d2a95/Beehiiv_Banner.png?t=1746662710"
+---
+
+# Automating New Projects in Todoist with Python
+
+Yesterday I built a small, friendly set of scripts to remove the friction of spinning up a new project in Todoist. Instead of clicking around to add sections and tasks, I now drop a short JSON file into a folder and run one command. Two minutes later, the whole project is ready for real work.
+
+Repo: [devandapaige/todoist](https://github.com/devandapaige/todoist)
+
+## What it does
+
+- **Creates or reuses a project**: If a project with the same name exists, it adds to it rather than duplicating it.
+- **Builds structure fast**: Adds sections, tasks, and optional sub‑tasks from a plain JSON file.
+- **Keeps focus on your flow**: I designed this to reduce cognitive load at the exact moment I’m shifting into a new initiative.
+
+## Why this matters for brain-and-energy aware work
+
+The first few minutes of any project are decision-heavy. By externalizing the structure—what sections I use, which tasks always start a project—I protect my energy for the meaningful parts. This is a tiny automation that creates space for momentum and reduces startup anxiety.
+
+## Quick start
+
+1) Create a virtual environment and install deps
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install todoist-api-python python-dotenv
+```
+
+2) Add your Todoist API token
+
+```bash
+echo "TODOIST_API_TOKEN=your-token-here" > .env
+```
+
+3) Define your project data
+
+```json
+{
+  "project_name": "Client Project Template",
+  "sections": [
+    {
+      "name": "Planning",
+      "tasks": [
+        {
+          "content": "Kickoff notes",
+          "sub_tasks": [
+            { "content": "Confirm goals" },
+            { "content": "List stakeholders" }
+          ]
+        },
+        { "content": "Define scope", "sub_tasks": [] }
+      ]
+    },
+    {
+      "name": "Execution",
+      "tasks": [ { "content": "Set up repo" }, { "content": "First milestone" } ]
+    }
+  ]
+}
+```
+
+4) Run the importer
+
+```bash
+python import_to_todoist.py
+```
+
+You’ll see progress logs as the project, sections, tasks, and sub‑tasks are created. If the project already exists, the script adds the new structure to it.
+
+## Notes and tradeoffs
+
+- The importer intentionally adds tasks each run; it doesn’t try to de‑duplicate similar items. That keeps the script simple and predictable when you’re iterating on templates.
+- Put the `.env` file next to `import_to_todoist.py`. The script loads it automatically.
+- If you prefer environment variables, export `TODOIST_API_TOKEN` instead of using `.env`.
+
+## How I’m using it
+
+I turn long AI chats into actionable Todoist projects by asking the model for a single JSON payload in the importer’s format. I paste that JSON into `project_data.json` and run the script—done.
+
+### Prompt I use (short and strict)
+
+```text
+You are helping me turn our conversation into an actionable Todoist project.
+
+Return ONLY valid JSON in this exact schema (no prose):
+{
+  "project_name": "<short-name>",
+  "sections": [
+    { "name": "<section>", "tasks": [
+      { "content": "<task>", "sub_tasks": [ { "content": "<subtask>" } ] }
+    ]}
+  ]
+}
+
+Rules:
+- Use 3–6 sections that reflect this chat’s themes.
+- Each section: 3–7 tasks.
+- Use clear, verb-led task names.
+- Include sub_tasks only where they reduce ambiguity.
+- Do not include comments, markdown, or trailing commas.
+```
+
+### Workflow
+
+1. Summarize the chat in my head into 3–6 themes (sections).
+2. Run the prompt with a one‑line context: “Topic: `what we discussed`.”
+3. Paste result into `project_data.json`.
+4. `python import_to_todoist.py` to create the project.
+
+This isn’t flashy; it’s deliberately boring—in a good way. It removes the micro‑decisions that slow me down and lets me get to the work that actually needs my attention.
+
+With digital care,
+
+The Pythoness Programmer
+
+<Signature />
+
+Amanda
+
+Reference: the full README, setup steps, and example JSON live in the repo: [devandapaige/todoist](https://github.com/devandapaige/todoist).
+
+Find the code on GitHub: [devandapaige/todoist](https://github.com/devandapaige/todoist)
+
