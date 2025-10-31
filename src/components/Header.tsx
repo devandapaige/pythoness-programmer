@@ -124,6 +124,13 @@ export default function Header() {
                   >
                     Password Security Guide
                   </Link>
+                  <Link 
+                    href="/privacy-pleasure" 
+                    className="block px-4 py-2 text-brand-green-hyperlink hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
+                    onClick={() => setIsResourcesOpen(false)}
+                  >
+                    Privacy Pleasure
+                  </Link>
                 </div>
               )}
             </div>
@@ -263,6 +270,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Password Security Guide
+              </Link>
+              <Link 
+                href="/privacy-pleasure" 
+                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Privacy Pleasure
               </Link>
             </div>
           </div>

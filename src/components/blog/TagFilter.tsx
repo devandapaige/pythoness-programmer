@@ -28,17 +28,16 @@ export default function TagFilter({ posts, selectedTag, onTagSelect }: TagFilter
           effectiveSelectedTag === null && "shadow-[0_0_8px_rgba(255,255,255,0.5)]"
         )}
         style={{
-          backgroundColor: 'rgba(255, 255, 255, 0.1)',
-          backdropFilter: 'blur(8px)',
-          color: '#F4F1DE',
-          border: `3px solid ${effectiveSelectedTag === null ? '#FFFFFF' : 'rgba(255, 255, 255, 0.2)'}`,
-          borderRadius: '12px',
+          backgroundColor: 'var(--brand-cream)',
+          color: '#000000',
+          border: '3px solid #000000',
+          borderRadius: '9999px',
           minHeight: '32px',
           minWidth: '90px',
           fontSize: '1.15rem',
           fontFamily: 'var(--font-norwester), sans-serif',
           letterSpacing: '0.02em',
-          padding: '0 14px',
+          padding: '8px 20px',
           margin: '0 6px 0 0',
           boxSizing: 'border-box',
           textTransform: 'uppercase',

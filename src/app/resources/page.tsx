@@ -283,6 +283,46 @@ export default function ResourcesPage() {
                 </Link>
               </div>
 
+              {/* Privacy Pleasure */}
+              <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-brand-green-accent/20 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-2xl">🛡️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-display text-brand-green-dark mb-1">Privacy Pleasure</h3>
+                    <p className="text-brand-green-dark/70 text-sm">4-Week Journey to Digital Independence</p>
+                  </div>
+                </div>
+                <p className="text-brand-green-dark mb-6">
+                  Building digital independence (slowly) in a world where billionaires monetize every click. A complete guide to password security, VPN protection, secure communication, and building your complete privacy system.
+                </p>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Week 1: Password Foundation
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Week 2: ISP & VPN Protection
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Week 3: Secure Communication & File Sharing
+                  </div>
+                  <div className="flex items-center text-brand-green-dark text-sm">
+                    <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
+                    Week 4: Your Complete System
+                  </div>
+                </div>
+                <Link
+                  href="/privacy-pleasure"
+                  className="block bg-brand-green-accent text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                >
+                  Explore Privacy Pleasure
+                </Link>
+              </div>
+
               {/* AI Myth-Busting */}
               <div className="bg-white/95 border-2 border-brand-purple-accent rounded-3xl p-8 shadow-2xl">
                 <div className="flex items-center mb-6">

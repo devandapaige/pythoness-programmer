@@ -5,7 +5,7 @@
     <link>https://pythonessprogrammer.com</link>
     <description>Thoughts on technology, accessibility, and the human experience.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 30 Oct 2025 18:41:52 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Oct 2025 20:19:41 GMT</lastBuildDate>
     <atom:link href="https://pythonessprogrammer.com/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -91,9 +91,37 @@ You’ll see progress logs as the project, sections, tasks, and sub‑tasks are 
 
 ## How I’m using it
 
-- **Client onboarding**: One JSON per service offering; instant sections for Planning, Execution, Review.
-- **Content sprints**: A lightweight editorial checklist that appears with a single command.
-- **Studio maintenance**: Monthly admin projects with recurring cleanup tasks bundled in.
+I turn long AI chats into actionable Todoist projects by asking the model for a single JSON payload in the importer’s format. I paste that JSON into `project_data.json` and run the script—done.
+
+### Prompt I use (short and strict)
+
+```text
+You are helping me turn our conversation into an actionable Todoist project.
+
+Return ONLY valid JSON in this exact schema (no prose):
+{
+  "project_name": "<short-name>",
+  "sections": [
+    { "name": "<section>", "tasks": [
+      { "content": "<task>", "sub_tasks": [ { "content": "<subtask>" } ] }
+    ]}
+  ]
+}
+
+Rules:
+- Use 3–6 sections that reflect this chat’s themes.
+- Each section: 3–7 tasks.
+- Use clear, verb-led task names.
+- Include sub_tasks only where they reduce ambiguity.
+- Do not include comments, markdown, or trailing commas.
+```
+
+### Workflow
+
+1. Summarize the chat in my head into 3–6 themes (sections).
+2. Run the prompt with a one‑line context: “Topic: `what we discussed`.”
+3. Paste result into `project_data.json`.
+4. `python import_to_todoist.py` to create the project.
 
 This isn’t flashy; it’s deliberately boring—in a good way. It removes the micro‑decisions that slow me down and lets me get to the work that actually needs my attention.
 
@@ -112,8 +140,7 @@ Find the code on GitHub: [devandapaige/todoist](https://github.com/devandapaige/
 ]]></content:encoded>
       <author>Amanda Nelson</author>
       <category>automation</category>
-      <category>todoist</category>
-      <category>python</category>
+      <category>software</category>
       <category>workflows</category>
     </item>
     <item>

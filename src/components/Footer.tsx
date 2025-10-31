@@ -67,6 +67,7 @@ export default function Footer() {
               <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
               <li><Link href="/mindful-automation" className={footerLinkClass}>Mindful Automation</Link></li>
               <li><Link href="/passwords" className={footerLinkClass}>Password Security Guide</Link></li>
+              <li><Link href="/privacy-pleasure" className={footerLinkClass}>Privacy Pleasure</Link></li>
             </ul>
           </FooterSection>
         </div>
