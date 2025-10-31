@@ -60,14 +60,10 @@ export default function Footer() {
           {/* Free Resources */}
           <FooterSection title="Free Resources">
             <ul className="space-y-1" role="list" aria-label="Free resources">
-              <li><Link href="/accessibility" className={footerLinkClass}>Accessibility Legal Guide</Link></li>
-              <li><Link href="/ai-mythbusting" className={footerLinkClass}>AI Myth-Busting</Link></li>
-              <li><Link href="/back-to-basics" className={footerLinkClass}>Back to Basics</Link></li>
-              <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
-              <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
-              <li><Link href="/mindful-automation" className={footerLinkClass}>Mindful Automation</Link></li>
-              <li><Link href="/passwords" className={footerLinkClass}>Password Security Guide</Link></li>
               <li><Link href="/privacy-pleasure" className={footerLinkClass}>Privacy Pleasure</Link></li>
+              <li><Link href="/passwords" className={footerLinkClass}>Password Security Guide</Link></li>
+              <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
+              <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
             </ul>
           </FooterSection>
         </div>
@@ -95,6 +91,7 @@ export default function Footer() {
           <FooterSection title="Read">
             <ul className="space-y-1" role="list" aria-label="Read options">
               <li><Link href="/blog" className={footerLinkClass}>Blog</Link></li>
+              <li><Link href="/resources" className={footerLinkClass}>All Resources</Link></li>
               <li><Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
             </ul>
           </FooterSection>
