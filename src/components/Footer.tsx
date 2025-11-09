@@ -64,11 +64,12 @@ export default function Footer() {
               <li><Link href="/passwords" className={footerLinkClass}>Password Security Guide</Link></li>
               <li><Link href="/digital-spring-cleaning" className={footerLinkClass}>Digital Spring Cleaning</Link></li>
               <li><Link href="/sourdough" className={footerLinkClass}>Sourdough Corner</Link></li>
+              <li><Link href="/resources" className={footerLinkClass}>All Resources</Link></li>
             </ul>
           </FooterSection>
         </div>
 
-        {/* Second Row: Legal, Support the Pythoness, Listen, Read */}
+        {/* Second Row: Legal, Support the Pythoness, Content, Read */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:gap-x-12 pb-2 md:pb-2">
           <FooterSection title="Legal">
             <ul className="space-y-1">
@@ -83,15 +84,15 @@ export default function Footer() {
               <li><Link href="/support" className={footerLinkClass}>Support the Pythoness ☕</Link></li>
             </ul>
           </FooterSection>
-          <FooterSection title="Listen">
-            <ul className="space-y-1" role="list" aria-label="Listen options">
+          <FooterSection title="Content">
+            <ul className="space-y-1" role="list" aria-label="Content options">
+              <li><Link href="https://videos.pythonessprogrammer.com" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Videos</Link></li>
               <li><Link href="https://pythoness.substack.com/podcast" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>NotebookLM Podcast</Link></li>
             </ul>
           </FooterSection>
           <FooterSection title="Read">
             <ul className="space-y-1" role="list" aria-label="Read options">
               <li><Link href="/blog" className={footerLinkClass}>Blog</Link></li>
-              <li><Link href="/resources" className={footerLinkClass}>All Resources</Link></li>
               <li><Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Newsletter</Link></li>
             </ul>
           </FooterSection>

@@ -141,6 +141,14 @@ export default function Header() {
               Blog
             </Link>
             <Link 
+              href="https://videos.pythonessprogrammer.com" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+            >
+              Videos
+            </Link>
+            <Link 
               href="https://stickyspells.etsy.com" 
               target="_blank"
               rel="noopener noreferrer"
@@ -286,6 +294,15 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           >
             Blog
+          </Link>
+          <Link 
+            href="https://videos.pythonessprogrammer.com" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Videos
           </Link>
           <Link 
             href="https://stickyspells.etsy.com" 
