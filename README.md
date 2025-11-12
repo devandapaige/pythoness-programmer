@@ -103,6 +103,8 @@ This approach allows for more complex user interactions and immediate feedback t
 - Professional experience showcase
 - Local craft services section
 - MDX-based blog system with RSC support
+- **Blog search functionality** - Search blog posts by title, description, and tags
+- **Resources search functionality** - Search free resources by title, description, and features
 - Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
 - Sourdough Corner - Local craft baking resource and guide (Freebie)
 - Enhanced error handling with user feedback
@@ -148,7 +150,20 @@ Your content here...
 </CodeBlock>
 ```
 
-4. RSS Feed:
+4. Search Functionality:
+
+The blog includes a powerful search feature that allows users to find posts by:
+- **Title** - Search through post titles
+- **Description** - Search through post descriptions
+- **Tags** - Search through post tags
+
+The search works seamlessly with the existing tag filter system, allowing users to combine tag filtering with text search. Search queries are synced with the URL, making search results shareable. The search interface includes:
+- Real-time filtering as you type
+- Result count display
+- Clear button to reset search
+- "No results" messaging when no posts match
+
+5. RSS Feed:
 
 The blog includes an RSS feed for subscribers to stay updated with new posts. The feed is available at `/feed.xml` and includes:
 - Full post content
@@ -327,6 +342,55 @@ The project uses the following environment variables:
 - `NEXT_PUBLIC_HOTJAR_ID` - Hotjar tracking ID
 - Additional environment variables can be added in `.env.local`
 
+## Resources Page
+
+The resources page (`/resources`) provides a comprehensive collection of free resources for digital wellness, automation, and neurodivergent-friendly tech solutions.
+
+### Resource Management
+
+Resources are managed through structured data in `src/lib/resources.ts` using TypeScript types defined in `src/types/resources.ts`. Each resource includes:
+- Title and subtitle
+- Description
+- Features list
+- Links to full resource pages
+- Download links (where applicable)
+- Visual styling (border colors, emojis)
+
+### Search Functionality
+
+The resources page includes a search feature that filters resources by:
+- **Title** - Search through resource titles
+- **Subtitle** - Search through resource subtitles
+- **Description** - Search through resource descriptions
+- **Features** - Search through resource feature lists
+
+The search interface provides:
+- Real-time filtering as you type
+- Result count display
+- Clear button to reset search
+- "No results" messaging when no resources match
+- Maintains existing styling and layout
+
+### Adding New Resources
+
+To add a new resource, update the `freeResources` array in `src/lib/resources.ts`:
+
+```typescript
+{
+  id: 'unique-resource-id',
+  title: 'Resource Title',
+  subtitle: 'Resource Subtitle',
+  description: 'Resource description...',
+  emoji: '🎯',
+  features: ['Feature 1', 'Feature 2'],
+  href: '/resource-page',
+  downloadHref: '/path/to/download.pdf', // Optional
+  downloadLabel: 'Download PDF', // Optional
+  borderColor: 'green' | 'purple',
+  type: 'free',
+}
+```
+
 ## Sections
 
 1. Hero - Introduction and primary CTAs
@@ -335,9 +399,10 @@ The project uses the following environment variables:
 4. Experience - Professional background
 5. Contact - Booking options and rates
 6. Newsletter - Industry insights signup
-7. Blog - Technical articles and resources
-8. Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
-9. Sourdough Corner - Local craft baking resource and guide (Freebie)
+7. Blog - Technical articles and resources with search functionality
+8. Resources - Free resources hub with search functionality
+9. Vibe Coding Cheatsheet - Professional TailwindCSS showcase & developer resource (Freebie)
+10. Sourdough Corner - Local craft baking resource and guide (Freebie)
 
 ## Code Standards
 
