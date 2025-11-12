@@ -119,7 +119,7 @@ export function BlogContent({ posts }: BlogContentProps) {
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35" />
           </svg>
-          {searchQuery.trim() && (
+          {searchQuery && (
             <button
               onClick={() => setSearchQuery('')}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors"
