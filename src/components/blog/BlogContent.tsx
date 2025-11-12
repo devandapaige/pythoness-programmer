@@ -53,50 +53,140 @@ export function BlogContent({ posts }: BlogContentProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const initialTag = searchParams.get('tag')
+  const initialSearch = searchParams.get('search') || ''
   const [selectedTag, setSelectedTag] = useState<string | null>(initialTag)
+  const [searchQuery, setSearchQuery] = useState<string>(initialSearch)
 
-  // Keep URL in sync with selectedTag
+  // Keep URL in sync with selectedTag and searchQuery
   useEffect(() => {
+    const params = new URLSearchParams()
     if (selectedTag) {
-      router.replace(`?tag=${encodeURIComponent(selectedTag)}`)
-    } else {
-      router.replace('?')
+      params.set('tag', selectedTag)
     }
-  }, [selectedTag, router])
+    if (searchQuery) {
+      params.set('search', searchQuery)
+    }
+    const queryString = params.toString()
+    router.replace(queryString ? `?${queryString}` : '?')
+  }, [selectedTag, searchQuery, router])
 
-  const filteredPosts = selectedTag
-    ? posts.filter(post => post.frontmatter.tags.includes(selectedTag))
-    : posts
+  // Filter posts by tag and search query
+  const filteredPosts = posts.filter(post => {
+    // Filter by tag if selected
+    if (selectedTag && !post.frontmatter.tags.includes(selectedTag)) {
+      return false
+    }
+    
+    // Filter by search query if provided
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase().trim()
+      const searchableText = [
+        post.frontmatter.title,
+        post.frontmatter.description,
+        ...post.frontmatter.tags,
+      ].join(' ').toLowerCase()
+      
+      return searchableText.includes(query)
+    }
+    
+    return true
+  })
 
   return (
     <>
+      {/* Search Input */}
+      <div className="mb-8">
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Search blog posts..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:border-transparent"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors"
+              aria-label="Clear search"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          )}
+        </div>
+        {searchQuery && (
+          <p className="mt-2 text-sm text-white/60">
+            Found {filteredPosts.length} {filteredPosts.length === 1 ? 'post' : 'posts'} matching &quot;{searchQuery}&quot;
+          </p>
+        )}
+      </div>
+      
       <TagFilter
         posts={posts}
         selectedTag={selectedTag}
         onTagSelect={setSelectedTag}
       />
-      <div className="space-y-8">
-        {filteredPosts.map((post) => (
-          <article key={post.frontmatter.slug} className="border-b border-gray-200 pb-8">
-            <h2 className="text-2xl font-display text-[#F4F1DE]">
-              <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-green">
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <div className="mt-2 text-sm text-white/60">
-              <time dateTime={post.frontmatter.date}>{new Date(post.frontmatter.date).toLocaleDateString()}</time>
-              <span className="mx-2">•</span>
-              <span>{post.frontmatter.author}</span>
-            </div>
-            <p className="mt-4 text-white/80">{post.frontmatter.description}</p>
-            <div className="mt-4">
-              {post.frontmatter.tags.map((tag) => (
-                <TagPill key={tag} tag={tag} />
-              ))}
-            </div>
-          </article>
-        ))}
-      </div>
+      {filteredPosts.length === 0 ? (
+        <div className="text-center py-12">
+          <p className="text-xl text-white/80 mb-2">No posts found</p>
+          <p className="text-white/60">
+            {searchQuery || selectedTag
+              ? 'Try adjusting your search or filter criteria'
+              : 'No blog posts available'}
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-8">
+          {filteredPosts.map((post) => (
+            <article key={post.frontmatter.slug} className="border-b border-gray-200 pb-8">
+              <h2 className="text-2xl font-display text-[#F4F1DE]">
+                <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-green">
+                  {post.frontmatter.title}
+                </Link>
+              </h2>
+              <div className="mt-2 text-sm text-white/60">
+                <time dateTime={post.frontmatter.date}>{new Date(post.frontmatter.date).toLocaleDateString()}</time>
+                <span className="mx-2">•</span>
+                <span>{post.frontmatter.author}</span>
+              </div>
+              <p className="mt-4 text-white/80">{post.frontmatter.description}</p>
+              <div className="mt-4">
+                {post.frontmatter.tags.map((tag) => (
+                  <TagPill key={tag} tag={tag} />
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
       <RSSFeedLink />
       <OpenSourceNotice />
     </>
