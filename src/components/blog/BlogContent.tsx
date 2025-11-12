@@ -63,8 +63,8 @@ export function BlogContent({ posts }: BlogContentProps) {
     if (selectedTag) {
       params.set('tag', selectedTag)
     }
-    if (searchQuery) {
-      params.set('search', searchQuery)
+    if (searchQuery.trim()) {
+      params.set('search', searchQuery.trim())
     }
     const queryString = params.toString()
     router.replace(queryString ? `?${queryString}` : '?')
@@ -119,7 +119,7 @@ export function BlogContent({ posts }: BlogContentProps) {
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35" />
           </svg>
-          {searchQuery && (
+          {searchQuery.trim() && (
             <button
               onClick={() => setSearchQuery('')}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors"
@@ -142,9 +142,9 @@ export function BlogContent({ posts }: BlogContentProps) {
             </button>
           )}
         </div>
-        {searchQuery && (
+        {searchQuery.trim() && (
           <p className="mt-2 text-sm text-white/60">
-            Found {filteredPosts.length} {filteredPosts.length === 1 ? 'post' : 'posts'} matching &quot;{searchQuery}&quot;
+            Found {filteredPosts.length} {filteredPosts.length === 1 ? 'post' : 'posts'} matching &quot;{searchQuery.trim()}&quot;
           </p>
         )}
       </div>
@@ -158,7 +158,7 @@ export function BlogContent({ posts }: BlogContentProps) {
         <div className="text-center py-12">
           <p className="text-xl text-white/80 mb-2">No posts found</p>
           <p className="text-white/60">
-            {searchQuery || selectedTag
+            {searchQuery.trim() || selectedTag
               ? 'Try adjusting your search or filter criteria'
               : 'No blog posts available'}
           </p>
