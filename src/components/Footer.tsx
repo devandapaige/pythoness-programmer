@@ -52,8 +52,8 @@ export default function Footer() {
             <ul className="space-y-1" role="list" aria-label="Booking options">
               <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Async Digital Psychic Reading</Link></li>
               <li className="pt-2 pb-1"><span className="text-white/60 text-xs font-medium">1:1 Calls:</span></li>
-              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>20min Software Psychic Session</Link></li>
-              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>60min Software Psychic Session</Link></li>
+              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>20min Digital Psychic Session</Link></li>
+              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>60min Digital Psychic Session</Link></li>
             </ul>
 
           </FooterSection>

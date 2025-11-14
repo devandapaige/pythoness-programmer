@@ -3,18 +3,18 @@
 ## Current Service Offerings (Updated 2025)
 
 ### Primary Services
-1. **20-Minute Software Psychic Session** - $30
+1. **20-Minute Digital Psychic Session** - $30
    - Quick guidance and ideation for software-related challenges
    - Tarot card pull at start and end of session
    - Perfect for specific questions or quick wins
 
-2. **60-Minute Software Psychic Session** - $60
+2. **60-Minute Digital Psychic Session** - $60
    - Extended time for comprehensive software problem-solving and system design
    - Tarot card pull at start and end of session
    - Ideal for complex challenges that need more exploration time
 
 ### Service Description
-**Software Psychic Sessions** with the Pythoness Programmer - I don't solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I make unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. With 3 years of software engineering experience and 10+ years in communications, customer service, and business operations, I understand how businesses actually work and how systems are designed to succeed or fail. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
+**Digital Psychic Sessions** with the Pythoness Programmer - I don't solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I make unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. With 3 years of software engineering experience and 10+ years in communications, customer service, and business operations, I understand how businesses actually work and how systems are designed to succeed or fail. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
 
 ## Cal.com Event Configuration
 
@@ -23,12 +23,12 @@
 - **60min Session**: `https://cal.com/pythoness/60min` - $60
 
 ### Event Descriptions
-**20-Minute Software Psychic Session**
+**20-Minute Digital Psychic Session**
 ```
 Quick software guidance and ideation with the Pythoness Programmer. We'll start and end with a tarot card pull to guide our session. Perfect for specific questions, quick wins, or exploring new ideas. $30 for 20 minutes of focused problem-solving.
 ```
 
-**60-Minute Software Psychic Session**
+**60-Minute Digital Psychic Session**
 ```
 Extended time for comprehensive software problem-solving and system design with the Pythoness Programmer. We'll start and end with a tarot card pull to guide our session. Ideal for complex challenges that need more exploration time, strategic planning, and detailed solution development. $60 for 60 minutes of extended problem-solving.
 ```
@@ -93,8 +93,8 @@ Extended time for comprehensive software problem-solving and system design with 
 - Old pricing: $70, $75, $265, $295
 
 ### Update To
-- 20-minute Software Psychic Session (`cal.com/pythoness/20min`) - $30
-- 60-minute Software Psychic Session (`cal.com/pythoness/60min`) - $60
+- 20-minute Digital Psychic Session (`cal.com/pythoness/20min`) - $30
+- 60-minute Digital Psychic Session (`cal.com/pythoness/60min`) - $60
 - New service descriptions emphasizing software focus and tarot/oracle elements
 - Remove free consultation options
 
@@ -119,7 +119,7 @@ Extended time for comprehensive software problem-solving and system design with 
 - Neurodivergent professionals seeking brain-friendly tech solutions
 
 ### Unique Value Proposition
-- **Software Psychic**: Combines technical expertise with intuitive problem-solving and pattern recognition
+- **Digital Psychic**: Combines technical expertise with intuitive problem-solving and pattern recognition
 - **Tarot/Oracle Integration**: Spiritual guidance alongside practical solutions for deeper insights
 - **Pattern Recognition**: Sees connections across industries that have historically gatekept knowledge
 - **Empowering Approach**: Guides clients to solve their own problems rather than solving for them

@@ -95,13 +95,13 @@ export default async function Home() {
             <p className="text-brand-cream/80 text-center mb-12">Interactive sessions with real-time guidance</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ServiceCard
-                title="20-Minute Software Psychic Session"
+                title="20-Minute Digital Psychic Session"
                 subtitle="Quick guidance and ideation"
                 price="$30"
-                description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
+                description="Perfect for when you need quick guidance on a specific digital challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
                 features={[
                   "Tarot card pull at start and end",
-                  "Quick software problem-solving",
+                  "Quick digital problem-solving",
                   "Tool and workflow recommendations",
                   "Action plan with next steps",
                   "Follow-up email with resources"
@@ -113,13 +113,13 @@ export default async function Home() {
                 note="Great for specific questions or quick wins"
               />
               <ServiceCard
-                title="60-Minute Software Psychic Session"
+                title="60-Minute Digital Psychic Session"
                 subtitle="Extended problem-solving & design"
                 price="$60"
-                description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
+                description="Extended time for comprehensive digital problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
                 features={[
                   "Tarot card pull at start and end",
-                  "Extended software problem-solving",
+                  "Extended digital problem-solving",
                   "Deep workflow analysis & design",
                   "Tool evaluation & recommendations",
                   "Strategic planning & next steps",

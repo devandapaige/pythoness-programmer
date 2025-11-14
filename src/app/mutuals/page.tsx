@@ -56,7 +56,7 @@ export default function MutualsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
             >
-              Book a Software Psychic Session
+              Book a Digital Psychic Session
             </Link>
           </div>
 

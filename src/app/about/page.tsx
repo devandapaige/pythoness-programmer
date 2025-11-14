@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import ServiceCard from '../../components/ServiceCard'
+import { calculateYearsOfExperience } from '@/lib/utils'
 
 export const metadata = {
   title: 'About Amanda | Pythoness Programmer',
@@ -8,6 +9,10 @@ export const metadata = {
 }
 
 export default function AboutPage() {
+  // Calculate years of experience (automatically updates)
+  const softwareEngineeringYears = calculateYearsOfExperience(2021, 10) // Started October 2021
+  const communicationsYears = calculateYearsOfExperience(2011, 1) // Started January 2011
+  
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -21,19 +26,19 @@ export default function AboutPage() {
                   I&apos;m Amanda, the Pythoness
                 </h1>
                 <p className="text-xl text-brand-cream/90 leading-relaxed">
-                  I help neurodivergent creatives and small businesses build digital fluency through thoughtful tech guidance and brain-friendly workflows.
+                  I help small business owners find their tech stack simple, easy, and functional—so you can manage it yourself without needing a regular IT person &quot;on-call.&quot;
                 </p>
                 <p className="text-lg text-brand-cream/80 mt-4">
-                  With 3 years of software engineering experience and 10+ years in communications, customer service, and business operations, I bring a unique perspective to tech challenges. My background spans access control security, training and hiring, managing, scheduling, order fulfillment, law settlements and recalls—experience that translates tremendously to understanding how businesses actually work and how systems are designed to succeed or fail.
+                  With {softwareEngineeringYears} years of software engineering experience and {communicationsYears}+ years in communications, customer service, and business operations, I bring a unique perspective to tech challenges. My background spans access control security, training and hiring, managing, scheduling, order fulfillment, law settlements and recalls—experience that translates tremendously to understanding how businesses actually work and how systems are designed to succeed or fail.
                 </p>
               </div>
               
               <div className="space-y-4">
                 <p className="text-lg text-brand-cream/80">
-                  With experience across both technical and operational systems, I understand the overwhelm that comes with too many tools and not enough clarity.
+                  What makes me unique? I don&apos;t want you dependent on me—I want you independent and confident. My goal is to help you build a tech stack that&apos;s simple enough to manage yourself, powerful enough to grow your business, and flexible enough to adapt as you evolve.
                 </p>
                 <p className="text-lg text-brand-cream/80">
-                  My approach is rooted in empathy, accessibility, and the belief that technology should work for you, not against you.
+                  My approach is rooted in empathy, accessibility, and the belief that technology should work for you, not against you. No more feeling like you need an IT person on speed dial—just clear, practical solutions you can understand and maintain.
                 </p>
               </div>
 
@@ -102,10 +107,13 @@ export default function AboutPage() {
             </p>
             
             <p>
-              Today, I combine my technical expertise with deep empathy for the neurodivergent experience to help others build digital fluency, support digital wellbeing, and create workflows that actually feel comfortable for your unique brain. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights.
+              Today, I combine my technical expertise with deep empathy for the neurodivergent experience to help small business owners build digital fluency, support digital wellbeing, and create workflows that actually feel comfortable for your unique brain. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights.
             </p>
             <p>
-              Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Software Engineer since 2021, when I completed a bootcamp and pivoted into tech. But my real superpower comes from my 10+ years in communications and customer service across access control security, training and hiring, managing, scheduling, order fulfillment (both in-person and online), law settlements and recalls, and other communication patterns. This diverse background translates tremendously to my tech work—I understand how businesses actually operate, how people communicate, and how systems are designed to work (or fail). My technical background means I bring not just empathy, but also deep operational insights and proven results to every project. But what truly sets me apart is my ability to see patterns others miss—connections across law, marketing, and tech that reveal how systems are designed to work, and where they&apos;re designed to fail.
+              Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Software Engineer since October 2021, when I completed a bootcamp and pivoted into tech. But my real superpower comes from my {communicationsYears}+ years in communications and customer service across access control security, training and hiring, managing, scheduling, order fulfillment (both in-person and online), law settlements and recalls, and other communication patterns. This diverse background translates tremendously to my tech work—I understand how businesses actually operate, how people communicate, and how systems are designed to work (or fail). My technical background means I bring not just empathy, but also deep operational insights and proven results to every project. But what truly sets me apart is my ability to see patterns others miss—connections across law, marketing, and tech that reveal how systems are designed to work, and where they&apos;re designed to fail.
+            </p>
+            <p>
+              <strong>Who I serve:</strong> Small business owners who are tired of feeling dependent on IT support. You want a tech stack that&apos;s simple, easy to understand, and functional—something you can manage yourself without needing someone on-call. You&apos;re ready to take control of your technology, but you need guidance to get there. That&apos;s where I come in. I help you build systems you can actually understand and maintain, so you can focus on running your business instead of managing tech emergencies.
             </p>
           </div>
         </div>
@@ -116,7 +124,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Why &quot;Software Psychic&quot;?
+              Why &quot;Digital Psychic&quot;?
             </h2>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
@@ -276,7 +284,7 @@ export default function AboutPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-black to-transparent"></div>
               <p className="text-xl text-black/80 max-w-3xl">
-                A comprehensive overview of my Software Psychic Sessions and how I can help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding.
+                A comprehensive overview of my Digital Psychic Sessions and how I can help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding.
                 <span className="block mt-2">
                   I don&apos;t solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life.
                 </span>
@@ -287,7 +295,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <ServiceCard
-              title="20-Minute Software Psychic Session"
+              title="20-Minute Digital Psychic Session"
               subtitle="Quick guidance & ideation"
               description="Perfect for specific questions, quick wins, or exploring new ideas. We'll start and end with a tarot card pull to guide our session."
               features={[
@@ -303,7 +311,7 @@ export default function AboutPage() {
             />
 
             <ServiceCard
-              title="60-Minute Software Psychic Session"
+              title="60-Minute Digital Psychic Session"
               subtitle="Extended problem-solving & design"
               description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
               features={[
@@ -337,7 +345,7 @@ export default function AboutPage() {
               target="_blank"
               className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
             >
-              Book a Software Psychic Session
+              Book a Digital Psychic Session
             </Link>
             <Link
               href="/services"

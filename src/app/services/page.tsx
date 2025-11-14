@@ -68,7 +68,7 @@ export default function ServicesPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-white max-w-3xl">
-                I offer deeply focused, brain-friendly software psychic sessions designed for neurodivergent professionals. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don't want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it's helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
+                I offer deeply focused, brain-friendly Digital Psychic sessions designed for small business owners who want to find their tech stack simple, easy, and functional—so you can manage it yourself without needing a regular IT person &quot;on-call.&quot; My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I don't want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life. My pattern recognition makes often unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. Creation and ideation are spiritual processes, and I find it's helpful to combine the spiritual and the technical to get at the heart of what a business, founder, or business owner needs in a lasting way.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -114,15 +114,15 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* 20-Minute Software Psychic Session */}
+            {/* 20-Minute Digital Psychic Session */}
             <ServiceCard
-              title="20-Minute Software Psychic Session"
+              title="20-Minute Digital Psychic Session"
               subtitle="Quick guidance and ideation"
-              description="Perfect for when you need quick guidance on a specific software challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
+              description="Perfect for when you need quick guidance on a specific digital challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
               price="$30"
               features={[
                 "Tarot card pull at start and end",
-                "Quick software problem-solving",
+                "Quick digital problem-solving",
                 "Tool and workflow recommendations",
                 "Action plan with next steps",
                 "Follow-up email with resources"
@@ -133,15 +133,15 @@ export default function ServicesPage() {
               note="Great for specific questions or quick wins"
             />
 
-            {/* 60-Minute Software Psychic Session */}
+            {/* 60-Minute Digital Psychic Session */}
             <ServiceCard
-              title="60-Minute Software Psychic Session"
+              title="60-Minute Digital Psychic Session"
               subtitle="Extended problem-solving & design"
-              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
+              description="Extended time for comprehensive digital problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
               price="$60"
               features={[
                 "Tarot card pull at start and end",
-                "Extended software problem-solving",
+                "Extended digital problem-solving",
                 "Deep workflow analysis & design",
                 "Tool evaluation & recommendations",
                 "Strategic planning & next steps",
@@ -161,7 +161,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Why &quot;Software Psychic&quot;?
+              Why &quot;Digital Psychic&quot;?
             </h2>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>

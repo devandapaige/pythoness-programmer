@@ -620,11 +620,11 @@ export default function PasswordsPage() {
             </p>
             <div className="bg-white/95 rounded-2xl p-6 space-y-4 mb-4">
               <div className="border-l-4 border-brand-green-accent pl-4">
-                <h3 className="font-semibold text-brand-green-dark mb-2">20-Minute Software Psychic Session ($30)</h3>
-                <p className="text-sm text-brand-green-dark">Perfect for quick guidance on specific software challenges</p>
+                <h3 className="font-semibold text-brand-green-dark mb-2">20-Minute Digital Psychic Session ($30)</h3>
+                <p className="text-sm text-brand-green-dark">Perfect for quick guidance on specific digital challenges</p>
               </div>
               <div className="border-l-4 border-brand-purple-accent pl-4">
-                <h3 className="font-semibold text-brand-green-dark mb-2">60-Minute Software Psychic Session ($60)</h3>
+                <h3 className="font-semibold text-brand-green-dark mb-2">60-Minute Digital Psychic Session ($60)</h3>
                 <p className="text-sm text-brand-green-dark">Extended problem-solving and comprehensive system design</p>
               </div>
             </div>

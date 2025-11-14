@@ -17,7 +17,7 @@ export default function HeroCard({
   mainText = "Feeling stuck in digital clutter? I provide clear, joyful, and human-first tech solutions. From coaching to coding, I help you build systems that reduce anxiety and amplify your creativity.",
   buttons = [
     {
-      text: "Book a Software Psychic Session",
+      text: "Book a Digital Psychic Session",
       href: "https://cal.com/pythoness/20min",
       primary: true
     },
