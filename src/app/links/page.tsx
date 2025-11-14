@@ -98,7 +98,7 @@ const resourceLinks: LinkItem[] = [
 // Support links section
 const supportLinks: LinkItem[] = [
   {
-    name: 'Tip the Pythoness ☕',
+    name: 'One-Time Tip ☕',
     url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
     color: 'bg-white/10 hover:bg-white/20'
   },
@@ -204,9 +204,10 @@ export default function LinksPage() {
         {/* Support Banner Section */}
         <div className="text-center mb-8">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 max-w-md mx-auto">
-            <h2 className="font-display text-xl text-white mb-3">Support Needed</h2>
+            <h2 className="font-display text-xl text-white mb-3">Keep Free Resources Flowing</h2>
             <p className="text-white/80 text-sm mb-4">
-              Government shutdown impact - help keep this digital psychic quest alive!
+              Every tutorial, guide, and tool I create is free. Your support makes that possible and ensures 
+              these resources stay accessible for everyone.
             </p>
             <Link
               href="/support"
@@ -385,7 +386,8 @@ export default function LinksPage() {
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Support</h2>
               <p className="text-white/80 text-sm text-center mb-3">
-                Help keep this digital psychic quest alive during the shutdown!
+                Whether it&apos;s the price of a coffee or a monthly contribution, your support directly fuels 
+                more free content for the community. Every amount makes a difference.
               </p>
               {/* Direct support usernames */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
