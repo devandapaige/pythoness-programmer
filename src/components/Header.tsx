@@ -9,6 +9,10 @@ export default function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+    // Reset resources to collapsed when menu closes
+    if (isMenuOpen) {
+      setIsResourcesOpen(false)
+    }
   }
 
   const toggleResources = () => {
@@ -205,7 +209,7 @@ export default function Header() {
         role="navigation"
         aria-label="Mobile navigation"
       >
-        <div className="flex flex-col space-y-4 p-6">
+        <div className="flex flex-col space-y-4 px-6 pt-2 pb-6">
           <Link 
             href="/about" 
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
@@ -221,72 +225,89 @@ export default function Header() {
             Services
           </Link>
           <div className="space-y-2">
-            <div className="text-white font-medium px-2 py-1">Resources</div>
-            <div className="ml-4 space-y-2">
-              <Link 
-                href="/resources" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
+            <button
+              onClick={toggleResources}
+              className="w-full text-left text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 flex items-center justify-between"
+              aria-expanded={isResourcesOpen}
+              aria-haspopup="true"
+            >
+              <span>Resources</span>
+              <svg 
+                className={`h-4 w-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`}
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
               >
-                All Resources
-              </Link>
-              <Link 
-                href="/digital-spring-cleaning" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Digital Spring Cleaning
-              </Link>
-              <Link 
-                href="/mindful-automation" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Mindful Automation
-              </Link>
-              <Link 
-                href="/accessibility" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Accessibility Legal Guide
-              </Link>
-              <Link 
-                href="/back-to-basics" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Back to Basics
-              </Link>
-              <Link 
-                href="/ai-mythbusting" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                AI Myth-Busting
-              </Link>
-              <Link 
-                href="/vibe-coding-cheatsheet" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Vibe Coding Cheatsheet
-              </Link>
-              <Link 
-                href="/passwords" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Password Security Guide
-              </Link>
-              <Link 
-                href="/privacy-pleasure" 
-                className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Privacy Pleasure
-              </Link>
-            </div>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {isResourcesOpen && (
+              <div className="ml-4 space-y-2">
+                <Link 
+                  href="/resources" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  All Resources
+                </Link>
+                <Link 
+                  href="/digital-spring-cleaning" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Digital Spring Cleaning
+                </Link>
+                <Link 
+                  href="/mindful-automation" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Mindful Automation
+                </Link>
+                <Link 
+                  href="/accessibility" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Accessibility Legal Guide
+                </Link>
+                <Link 
+                  href="/back-to-basics" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Back to Basics
+                </Link>
+                <Link 
+                  href="/ai-mythbusting" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  AI Myth-Busting
+                </Link>
+                <Link 
+                  href="/vibe-coding-cheatsheet" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Vibe Coding Cheatsheet
+                </Link>
+                <Link 
+                  href="/passwords" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Password Security Guide
+                </Link>
+                <Link 
+                  href="/privacy-pleasure" 
+                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Privacy Pleasure
+                </Link>
+              </div>
+            )}
           </div>
           <Link 
             href="/blog" 
