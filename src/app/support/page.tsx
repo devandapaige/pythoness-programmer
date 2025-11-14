@@ -20,7 +20,7 @@ interface LinkItem {
 // Support links section
 const supportLinks: LinkItem[] = [
   {
-    name: 'Tip the Pythoness ☕',
+    name: 'One-Time Tip ☕',
     url: 'https://buy.stripe.com/eVaeWq6303RIejK28g',
     color: 'bg-white/10 hover:bg-white/20'
   },
@@ -52,27 +52,33 @@ export default function SupportPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Your support keeps me on my digital psychic quest, making tech accessible and empowering for everyone.
+            Every resource I create is free. Every tutorial, every tool, every insight—available to anyone who needs it. 
+            Your support makes that possible.
           </p>
         </div>
 
-        {/* Personal Story Section */}
+        {/* Value Proposition Section */}
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 mb-8 max-w-2xl">
-          <h2 className="font-display text-xl text-white mb-4 text-center">Why Your Support Matters Right Now</h2>
+          <h2 className="font-display text-xl text-white mb-4 text-center">Keep the Free Resources Flowing</h2>
           <div className="text-white/90 space-y-4 text-left">
             <p>
-              We&apos;re currently in a government shutdown, and I&apos;ve been out of work since January 2025. This is all I do now. 
-              As someone navigating the SSDI process while my husband works as a federal employee, our income depends on 
-              government budget approvals. We&apos;re in the middle of another long furlough with no end in sight.
+              I believe technology education should be accessible to everyone—no paywalls, no gatekeeping, no barriers. 
+              That&apos;s why everything I create is free: coding tutorials, accessibility guides, neurodivergent-friendly tools, 
+              and resources that help people navigate the digital world with confidence.
             </p>
             <p>
-              I have no 401K, no savings to fall back on. Your contributions literally help me pay my bills, keep the lights on, 
-              continue my research into accessible technology, and yes, keep my cats fed with their favorite treats. 
-              More importantly, they let me keep creating content, tools, and resources that make technology more approachable 
-              for neurodivergent folks and everyone who&apos;s ever felt overwhelmed by the digital world.
+              Creating high-quality, free content takes time, research, and resources. Your support directly enables me to:
             </p>
+            <ul className="list-disc list-inside space-y-2 ml-4 text-white/90">
+              <li>Continue producing free tutorials and guides</li>
+              <li>Develop new tools and resources for the community</li>
+              <li>Research and share accessibility best practices</li>
+              <li>Maintain and improve existing free resources</li>
+              <li>Keep creating content that makes tech less intimidating</li>
+            </ul>
             <p className="text-brand-green-accent font-medium">
-              Every coffee, every tip, every share makes a real difference in keeping this mission alive during this difficult time.
+              When you support this work, you&apos;re not just supporting me—you&apos;re ensuring these resources stay free 
+              and accessible for everyone who needs them.
             </p>
           </div>
         </div>
@@ -81,9 +87,10 @@ export default function SupportPage() {
         <div className="w-full space-y-8">
           {supportLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Ways to Support</h2>
+              <h2 className="font-display text-xl text-white text-center">Choose Your Support Method</h2>
               <p className="text-white/80 text-sm text-center mb-3">
-                Every contribution, no matter the size, helps keep this mission going.
+                Whether it&apos;s the price of a coffee or a monthly contribution, your support directly fuels more free content 
+                for the community. Every amount makes a difference.
               </p>
               {/* Direct support usernames */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
