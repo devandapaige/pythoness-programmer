@@ -47,7 +47,7 @@ const socialLinks: LinkItem[] = [
 
 // Featured async service
 const featuredService: LinkItem = {
-  name: 'Async Project & Web Presence Reading - $30',
+  name: 'Async Project & Web Presence Reading ($30)',
   url: 'https://cal.com/pythoness/async',
   color: 'bg-gradient-to-r from-brand-purple-light to-brand-cream text-brand-purple-dark border-2 border-brand-purple-accent font-semibold'
 }
@@ -55,12 +55,12 @@ const featuredService: LinkItem = {
 // Booking links - easy to update
 const bookingLinks: LinkItem[] = [
   {
-    name: '20min Software Psychic Session',
+    name: '20min Digital Psychic Session ($30)',
     url: 'https://cal.com/pythoness/20min',
     color: 'bg-brand-green-accent text-brand-green-dark'
   },
   {
-    name: '60min Software Psychic Session',
+    name: '60min Digital Psychic Session ($60)',
     url: 'https://cal.com/pythoness/60min',
     color: 'bg-brand-green-accent text-brand-green-dark'
   }
@@ -105,14 +105,14 @@ const supportLinks: LinkItem[] = [
   {
     name: 'Amazon Wishlist 🛍️',
     url: 'https://www.amazon.com/hz/wishlist/ls/1ZXXDBUXYDDOC?ref_=wl_share',
-    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
+    color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
   }
 ]
 
 // Shop links section
 const shopLinks: LinkItem[] = [
   {
-    name: 'Sticky Spells Store',
+    name: 'Sticky Spells Store - Etsy',
     url: 'https://stickyspells.etsy.com',
     color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
   }
@@ -197,7 +197,7 @@ export default function LinksPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-md mx-auto">
-            Software Psychic Sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. From async video readings to live 1:1 sessions.
+            Digital Psychic sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. As a Software Engineer, I offer async video readings and live 1:1 sessions.
           </p>
         </div>
 
@@ -250,7 +250,11 @@ export default function LinksPage() {
           {/* Featured Service */}
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
-            <p className="text-white/80 text-center text-sm mb-4">20-minute video reading - no live meeting</p>
+            <p className="text-white/80 text-center text-sm mb-2">
+              Get a personalized Digital Psychic reading delivered asynchronously. Perfect for when you need insights 
+              on your project or web presence but prefer to watch on your own time.
+            </p>
+            <p className="text-white/60 text-center text-xs mb-4">20-minute video reading - no live meeting required</p>
             <Link
               href={featuredService.url}
               target="_blank"
@@ -264,7 +268,12 @@ export default function LinksPage() {
           {/* Booking Links */}
           {bookingLinks.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Live 1:1 Sessions</h2>
+              <h2 className="font-display text-xl text-white text-center">Live 1:1 Digital Psychic Sessions</h2>
+              <p className="text-white/80 text-center text-sm mb-3">
+                Connect live for real-time guidance on your tech challenges. These interactive sessions combine 
+                pattern recognition, spiritual insight, and deep technical understanding to help you solve problems 
+                and move forward with confidence.
+              </p>
               <div className="space-y-3">
                 {bookingLinks.map((link) => (
                   <Link
