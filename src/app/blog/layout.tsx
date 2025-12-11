@@ -13,8 +13,8 @@ export default function BlogLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--brand-forest)', color: 'var(--brand-cream)' }}>
-      <header className="border-b" style={{ borderColor: 'var(--brand-purple)', backgroundColor: 'var(--brand-forest)' }}>
+    <div className="min-h-screen bg-brand-purple-dark" style={{ color: 'var(--brand-cream)' }}>
+      <header className="border-b border-brand-purple-light/30 bg-brand-purple-dark">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">

@@ -12,13 +12,13 @@ function FooterSection({ title, children }: { title: string | ReactNode, childre
 
 export default function Footer() {
   // 1. Add a single class for all footer links
-  const footerLinkClass = "text-white/80 hover:text-brand-green-accent transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded px-1 py-0.5 text-sm";
+  const footerLinkClass = "text-white/80 hover:text-brand-purple-light transition-colors flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 rounded px-1 py-0.5 text-sm";
   // Inline version for crafted using sentence
-  const footerInlineLinkClass = "text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded px-1 py-0.5 text-sm";
+  const footerInlineLinkClass = "text-white/80 hover:text-brand-purple-light transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 rounded px-1 py-0.5 text-sm";
 
   return (
     <footer 
-      className="bg-brand-green-dark text-white py-8 md:py-12 px-4 md:px-6"
+      className="bg-brand-purple-dark text-white py-8 md:py-12 px-4 md:px-6"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto">
@@ -26,13 +26,12 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:gap-x-12 pb-4 md:pb-4">
           {/* Brand Column */}
           <FooterSection title={
-            <Link href="/" className="hover:text-brand-green-accent transition-colors">
+              <Link href="/" className="hover:text-brand-purple-light transition-colors">
               Pythoness Programmer
             </Link>
           }>
             <ul className="space-y-1">
               <li><Link href="/about" className={footerLinkClass}>About</Link></li>
-              <li><Link href="/services" className={footerLinkClass}>Services</Link></li>
               <li><Link href="/resources" className={footerLinkClass}>Resources</Link></li>
               <li><Link href="https://stickyspells.etsy.com" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</Link></li>
             </ul>
@@ -40,22 +39,28 @@ export default function Footer() {
           {/* Social Links */}
           <FooterSection title="Connect">
             <ul className="space-y-1" role="list" aria-label="Social media links">
-              <li><Link href="https://luma.com/pythoness" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Upcoming Events</Link></li>
               <li><Link href="https://github.com/devandapaige" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>GitHub</Link></li>
               <li><Link href="https://www.youtube.com/@pythonessprogrammer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>YouTube</Link></li>
               <li><Link href="https://www.tiktok.com/@pythoness_programmer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>TikTok</Link></li>
               <li><Link href="https://bsky.app/profile/pythonessdev.bsky.social" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Bluesky</Link></li>
             </ul>
           </FooterSection>
-          {/* Calendar Links */}
-          <FooterSection title="Book a Call">
-            <ul className="space-y-1" role="list" aria-label="Booking options">
-              <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Async Digital Psychic Reading</Link></li>
-              <li className="pt-2 pb-1"><span className="text-white/60 text-xs font-medium">1:1 Calls:</span></li>
-              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>20min Digital Psychic Session</Link></li>
-              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>60min Digital Psychic Session</Link></li>
-            </ul>
-
+          {/* Rest Mode Notice */}
+          <FooterSection title="Services">
+            <p className="text-white/80 text-sm mb-2">
+              We are currently in rest mode. Services will resume March 2026.
+            </p>
+            <Link 
+              href="https://newsletter.pythonessprogrammer.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${footerLinkClass} font-semibold`}
+            >
+              Subscribe to our newsletter
+            </Link>
+            <p className="text-white/60 text-xs mt-2">
+              Be the first to know when our schedule reopens
+            </p>
           </FooterSection>
           {/* Free Resources */}
           <FooterSection title="Free Resources">
@@ -87,7 +92,7 @@ export default function Footer() {
           <FooterSection title="Content">
             <ul className="space-y-1" role="list" aria-label="Content options">
               <li><Link href="https://videos.pythonessprogrammer.com" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Videos</Link></li>
-              <li><Link href="https://pythoness.substack.com/podcast" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>NotebookLM Podcast</Link></li>
+              <li><Link href="https://pythoness.substack.com" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>AI Generation Experiments Substack</Link></li>
             </ul>
           </FooterSection>
           <FooterSection title="Read">

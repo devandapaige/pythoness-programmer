@@ -54,31 +54,21 @@ export default function ResourcesPage() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🎙️</span>
+                  <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🔬</span>
                   </div>
-                  <h3 className="text-xl font-display text-brand-green-dark mb-3">NotebookLM Podcast</h3>
+                  <h3 className="text-xl font-display text-brand-green-dark mb-3">AI Generation Experiments Substack</h3>
                   <p className="text-brand-green-dark/80 mb-4">
-                    AI-powered insights from my research on technology, automation, and digital wellness.
+                    Exploring and sharing findings on AI tools and generation experiments outside my normal content lineup.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <Link
-                      href="https://open.spotify.com/show/0VLZyZrD50Pk9JcyJL2AdX"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-brand-green-accent text-white text-center px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
-                    >
-                      Listen on Spotify
-                    </Link>
-                    <Link
-                      href="https://www.youtube.com/playlist?list=PLl8kW5pVKC-p8kzPChiNPoEHkfi_kR1LA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 bg-brand-purple-dark text-white text-center px-4 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
-                    >
-                      Watch on YouTube
-                    </Link>
-                  </div>
+                  <Link
+                    href="https://pythoness.substack.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-brand-purple-light text-brand-purple-dark text-center px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-medium"
+                  >
+                    Visit Substack
+                  </Link>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">

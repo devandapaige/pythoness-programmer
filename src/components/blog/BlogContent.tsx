@@ -31,7 +31,7 @@ function RSSFeedLink() {
     <div className="mt-6 text-center">
       <Link
         href="/feed.xml"
-        className="inline-flex items-center gap-2 text-white/60 hover:text-brand-green-accent transition-colors"
+        className="inline-flex items-center gap-2 text-white/60 hover:text-brand-purple-light transition-colors"
         aria-label="Subscribe to RSS feed"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -102,7 +102,7 @@ export function BlogContent({ posts }: BlogContentProps) {
             placeholder="Search blog posts..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:border-transparent"
+            className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:border-transparent"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -166,9 +166,9 @@ export function BlogContent({ posts }: BlogContentProps) {
       ) : (
         <div className="space-y-8">
           {filteredPosts.map((post) => (
-            <article key={post.frontmatter.slug} className="border-b border-gray-200 pb-8">
-              <h2 className="text-2xl font-display text-[#F4F1DE]">
-                <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-green">
+            <article key={post.frontmatter.slug} className="border-b border-white/20 pb-8">
+              <h2 className="text-2xl font-display text-brand-cream">
+                <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-purple-light transition-colors">
                   {post.frontmatter.title}
                 </Link>
               </h2>

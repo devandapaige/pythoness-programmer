@@ -41,7 +41,7 @@ export default function CopyField({
           readOnly
           onFocus={(e) => e.currentTarget.select()}
           aria-label={ariaLabel ?? label ?? value}
-          className="w-full rounded-md bg-white/10 text-white placeholder-white/60 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:border-transparent"
+          className="w-full rounded-md bg-white/10 text-white placeholder-white/60 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:border-transparent"
         />
         <button
           type="button"

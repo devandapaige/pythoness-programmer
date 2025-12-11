@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  /* Brand color palette */
+  /* Brand color palette - Active Season */
   --brand-forest: #2e3d2a;
   --brand-cream: #f4f1de;
   --brand-green: #32d24d;
@@ -12,6 +12,12 @@
   --brand-blue: #00a6fb;
   --brand-fuchsia: #ff39bc;
   --brand-hyperlink-green: #156624;
+  
+  /* Rest Period Color Palette (Nov 2025 - Mar 2026) */
+  /* Main color: #442b48 (purple-dark) replaces #2e3d2a (green-dark) */
+  /* Accent color: #d8b9f7 (purple-light) replaces #32d24d (green-accent) */
+  --rest-main: #442b48;
+  --rest-accent: #d8b9f7;
 }
 
 html {
