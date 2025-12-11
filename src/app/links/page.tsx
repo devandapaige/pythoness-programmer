@@ -45,27 +45,6 @@ const socialLinks: LinkItem[] = [
   },
 ]
 
-// Featured async service
-const featuredService: LinkItem = {
-  name: 'Async Project & Web Presence Reading ($30)',
-  url: 'https://cal.com/pythoness/async',
-  color: 'bg-gradient-to-r from-brand-purple-light to-brand-cream text-brand-purple-dark border-2 border-brand-purple-accent font-semibold'
-}
-
-// Booking links - easy to update
-const bookingLinks: LinkItem[] = [
-  {
-    name: '20min Digital Psychic Session ($30)',
-    url: 'https://cal.com/pythoness/20min',
-    color: 'bg-brand-purple-light text-brand-purple-dark'
-  },
-  {
-    name: '60min Digital Psychic Session ($60)',
-    url: 'https://cal.com/pythoness/60min',
-    color: 'bg-brand-purple-light text-brand-purple-dark'
-  }
-]
-
 // Resource links - easy to update
 const resourceLinks: LinkItem[] = [
   {

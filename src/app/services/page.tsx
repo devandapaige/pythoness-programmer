@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import NewsletterCard from '../../components/NewsletterCard'
 
 export const metadata = {
@@ -60,7 +59,7 @@ export default function ServicesPage() {
               </div>
 
               <p className="text-brand-cream/90 text-lg leading-relaxed">
-                If you're interested in our services, we encourage you to subscribe to our newsletter to be the first to know when our schedule reopens in March 2026.
+                If you&apos;re interested in our services, we encourage you to subscribe to our newsletter to be the first to know when our schedule reopens in March 2026.
               </p>
             </div>
           </div>
