@@ -28,7 +28,7 @@ export default function PostCard({ post }: PostCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         )}
-        <h2 className="text-2xl font-display text-white mb-1 mt-4 group-hover:text-brand-green-accent transition-colors">
+        <h2 className="text-2xl font-display text-white mb-1 mt-4 group-hover:text-brand-purple-light transition-colors">
           {post.title}
         </h2>
         <div className="flex items-center space-x-4 text-sm text-white/60 mb-4">

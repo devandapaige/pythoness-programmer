@@ -25,7 +25,7 @@ export default function NewsletterCard({
         {/* Section header with glass effect */}
         <div className="text-center mb-12 animate-fade-in-up">
           <div className="inline-block bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-none">
-            <h2 className="text-4xl md:text-5xl font-display mb-4 text-brand-green-dark">
+            <h2 className="text-4xl md:text-5xl font-display mb-4 text-brand-purple-dark">
               {title}
             </h2>
             <p className="text-xl text-brand-purple-dark/90">

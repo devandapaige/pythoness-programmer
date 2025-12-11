@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import ServiceCard from '../../components/ServiceCard'
 import { calculateYearsOfExperience } from '@/lib/utils'
 
 export const metadata = {
@@ -42,26 +41,19 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/services"
-                  className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
-                >
-                  View My Services
-                </Link>
-                <Link
-                  href="https://cal.com/pythoness"
-                  target="_blank"
-                  className="inline-block bg-transparent border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-brand-cream/10 hover:border-brand-cream/50 transition-all duration-300 text-lg font-semibold"
-                >
-                  Book a Call
-                </Link>
+              <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-2xl p-6 border border-brand-purple-light/30">
+                <p className="text-lg text-brand-cream mb-2">
+                  <strong>Current Status:</strong> Rest Mode
+                </p>
+                <p className="text-brand-cream/90">
+                  Services resume <strong>March 2026</strong>. Active season: March - November 2026.
+                </p>
               </div>
             </div>
 
             {/* Image */}
             <div className="relative">
-              <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden ring-4 ring-brand-green-accent/30">
+              <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden ring-4 ring-brand-purple-light/30">
                 <Image
                   src="/images/headshot.png"
                   alt="Amanda Nelson - The Pythoness Programmer"
@@ -70,7 +62,7 @@ export default function AboutPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-green-accent/20 rounded-full"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-purple-light/20 rounded-full"></div>
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-cream/20 rounded-full"></div>
             </div>
           </div>
@@ -173,6 +165,57 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Active & Rest Periods Section */}
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+              Active & Rest Periods
+            </h2>
+            <div className="flex items-center justify-center gap-4">
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
+              <p className="text-xl text-brand-cream/90 max-w-3xl">
+                Following the ancient tradition of the Pythia Oracles of Delphi
+              </p>
+              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20">
+              <h3 className="text-2xl font-display mb-4 text-brand-purple-light">
+                The Tradition of Rest
+              </h3>
+              <p className="text-brand-cream/90 mb-4">
+                Just as the Pythia, the high priestess of the Temple of Apollo at Delphi, observed periods of rest during the winter months, I honor cycles of rest and renewal. The Pythia understood that wisdom and service require periods of restoration—times to withdraw, reflect, and prepare for the active season ahead.
+              </p>
+              <p className="text-brand-cream/90">
+                <strong>Active Season:</strong> March - November<br />
+                <strong>Rest Period:</strong> November - March
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20">
+              <h3 className="text-2xl font-display mb-4 text-brand-purple-light">
+                Accommodating Chronic Illness & Chronic Pain
+              </h3>
+              <p className="text-brand-cream/90">
+                This schedule isn&apos;t just about tradition—it&apos;s about sustainability and self-care. Living with chronic illnesses and chronic pain means I need to honor my body&apos;s needs and limitations. The rest period allows me to manage my health, reduce stress, and prevent burnout that would otherwise compromise the quality of my work and my ability to serve clients well.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20">
+              <h3 className="text-2xl font-display mb-4 text-brand-purple-light">
+                Nurturing Creativity Through Slowness
+              </h3>
+              <p className="text-brand-cream/90">
+                The rest period also forces me to live a slower life—and that&apos;s intentional. In our fast-paced world, creativity often gets squeezed out by constant productivity demands. By committing to rest, I create space for reflection, inspiration, and the kind of deep thinking that leads to breakthrough insights. This slower pace isn&apos;t a limitation—it&apos;s a feature that makes my active season more powerful and my insights more valuable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* My Philosophy Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
         <div className="max-w-7xl mx-auto">
@@ -183,7 +226,7 @@ export default function AboutPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-brand-cream/90 max-w-3xl">
-                The core principles that guide my approach to tech coaching and development.
+                The core principles that guide my approach to tech coaching and development, including honoring rest as a mirror to the Oracles of Delphi.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -192,7 +235,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Principle 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🧠</span>
               </div>
               <h3 className="text-2xl font-display mb-4 text-brand-cream">Brain-Friendly Design</h3>
@@ -247,7 +290,7 @@ export default function AboutPage() {
 
             {/* Principle 6 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🤝</span>
               </div>
               <h3 className="text-2xl font-display mb-4 text-brand-cream">Community-Centered Bargains</h3>
@@ -257,101 +300,44 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Centered Affirming Statement */}
+          {/* Centered Rest & Renewal Statement */}
           <div className="mt-16 text-center">
-            <div className="bg-brand-green-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20 shadow-2xl max-w-4xl mx-auto">
-              <div className="w-20 h-20 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-3xl">💚</span>
+            <div className="bg-brand-purple-light/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20 shadow-2xl max-w-4xl mx-auto">
+              <div className="w-20 h-20 bg-brand-purple-light/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <span className="text-3xl">🌙</span>
               </div>
               <h3 className="text-3xl font-display mb-6 text-brand-cream">
-                LGBTQIA+ & SW Affirming
+                Honoring Rest & Renewal
               </h3>
               <p className="text-xl text-brand-cream/90 leading-relaxed max-w-3xl mx-auto">
-                I provide a safe, affirming space for LGBTQIA+ individuals and SW, understanding the unique challenges and opportunities in our communities. This commitment to inclusivity and support is the foundation that makes all my other principles possible.
+                Following the tradition of the Pythia Oracles of Delphi, I honor cycles of rest and renewal. This schedule accommodates my chronic illnesses and chronic pain while nurturing creativity through intentional slowness. Rest isn&apos;t a limitation—it&apos;s essential for sustainable service and deeper insights. By forcing myself to live a slower life, I create space for reflection, inspiration, and the kind of deep thinking that leads to breakthrough insights.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* What I Do Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-cream via-brand-cream/95 to-brand-cream text-black">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 text-black">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-black">
-              What I Do
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-black to-transparent"></div>
-              <p className="text-xl text-black/80 max-w-3xl">
-                A comprehensive overview of my Digital Psychic Sessions and how I can help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding.
-                <span className="block mt-2">
-                  I don&apos;t solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life.
-                </span>
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-black to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ServiceCard
-              title="20-Minute Digital Psychic Session"
-              subtitle="Quick guidance & ideation"
-              description="Perfect for specific questions, quick wins, or exploring new ideas. We'll start and end with a tarot card pull to guide our session."
-              features={[
-                "Tarot card pull at start and end",
-                "Quick software problem-solving",
-                "Tool and workflow recommendations",
-                "Action plan with next steps"
-              ]}
-              ctaLink="https://cal.com/pythoness/20min"
-              ctaText="Book Now"
-              icon="🔮"
-              textColor="text-black"
-            />
-
-            <ServiceCard
-              title="60-Minute Digital Psychic Session"
-              subtitle="Extended problem-solving & design"
-              description="Extended time for comprehensive software problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
-              features={[
-                "Tarot card pull at start and end",
-                "Extended software problem-solving",
-                "Deep workflow analysis & design",
-                "Strategic planning & next steps"
-              ]}
-              ctaLink="https://cal.com/pythoness/60min"
-              ctaText="Book Now"
-              icon="🔮"
-              highlight={true}
-              textColor="text-black"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-            Ready to Solve Your Own Tech Challenges?
+            Services Resume March 2026
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            Let&apos;s work together to bring your vision to life. I&apos;ll guide you with pattern recognition, spiritual insight, and deep technical understanding—but the solutions will be yours.
+            We&apos;re currently in a period of rest and renewal. When we return, I&apos;ll be ready to guide you with pattern recognition, spiritual insight, and deep technical understanding—but the solutions will be yours.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/30 max-w-2xl mx-auto">
+            <p className="text-lg text-brand-cream mb-4">
+              Subscribe to our newsletter to be the first to know when our schedule reopens.
+            </p>
             <Link
-              href="https://cal.com/pythoness/20min"
+              href="https://newsletter.pythonessprogrammer.com/"
               target="_blank"
-              className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-purple-light text-brand-purple-dark px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
             >
-              Book a Digital Psychic Session
-            </Link>
-            <Link
-              href="/services"
-              className="inline-block bg-transparent border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-brand-cream/10 hover:border-brand-cream/50 transition-all duration-300 text-lg font-semibold"
-            >
-              View All Services
+              Subscribe to Newsletter
             </Link>
           </div>
         </div>

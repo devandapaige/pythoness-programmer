@@ -4,7 +4,7 @@ export function BlogStyles() {
   return (
     <style jsx global>{`
       body, .min-h-screen {
-        background-color: #2e3d2a !important;
+        background-color: #442b48 !important;
         color: #fff !important;
       }
       .blog-content {
@@ -28,7 +28,7 @@ export function BlogStyles() {
       }
       
       .blog-content a {
-        @apply text-brand-green-accent hover:text-brand-green-accent/80 underline;
+        @apply text-brand-purple-light hover:text-brand-purple-light/80 underline;
       }
       
       .blog-content ul, .blog-content ol {
@@ -52,7 +52,7 @@ export function BlogStyles() {
       }
       
       .blog-content blockquote {
-        @apply border-l-4 border-brand-green-accent pl-4 italic text-white/70 my-6;
+        @apply border-l-4 border-brand-purple-light pl-4 italic text-white/70 my-6;
       }
     `}</style>
   )

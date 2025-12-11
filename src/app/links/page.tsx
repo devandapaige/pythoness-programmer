@@ -5,7 +5,7 @@ import CopyField from '@/components/CopyField'
 
 export const metadata: Metadata = {
   title: 'Connect with Amanda | Pythoness Programmer',
-  description: 'Connect with Amanda through various platforms, book calls, and access free resources.',
+  description: 'Connect with Amanda through various platforms. We are currently in rest mode. Services will resume March 2026.',
 }
 
 // Define interface for link objects
@@ -43,27 +43,6 @@ const socialLinks: LinkItem[] = [
     color: 'bg-white/10 hover:bg-white/20',
     icon: '/icons/bluesky.svg'
   },
-]
-
-// Featured async service
-const featuredService: LinkItem = {
-  name: 'Async Project & Web Presence Reading ($30)',
-  url: 'https://cal.com/pythoness/async',
-  color: 'bg-gradient-to-r from-brand-purple-light to-brand-cream text-brand-purple-dark border-2 border-brand-purple-accent font-semibold'
-}
-
-// Booking links - easy to update
-const bookingLinks: LinkItem[] = [
-  {
-    name: '20min Digital Psychic Session ($30)',
-    url: 'https://cal.com/pythoness/20min',
-    color: 'bg-brand-green-accent text-brand-green-dark'
-  },
-  {
-    name: '60min Digital Psychic Session ($60)',
-    url: 'https://cal.com/pythoness/60min',
-    color: 'bg-brand-green-accent text-brand-green-dark'
-  }
 ]
 
 // Resource links - easy to update
@@ -105,7 +84,7 @@ const supportLinks: LinkItem[] = [
   {
     name: 'Amazon Wishlist 🛍️',
     url: 'https://www.amazon.com/hz/wishlist/ls/1ZXXDBUXYDDOC?ref_=wl_share',
-    color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
+    color: 'bg-brand-purple-light text-brand-purple-dark hover:bg-opacity-90'
   }
 ]
 
@@ -114,7 +93,7 @@ const shopLinks: LinkItem[] = [
   {
     name: 'Sticky Spells Store - Etsy',
     url: 'https://stickyspells.etsy.com',
-    color: 'bg-brand-green-accent text-brand-green-dark hover:bg-brand-green-accent/90'
+    color: 'bg-brand-purple-light text-brand-purple-dark hover:bg-opacity-90'
   }
 ]
 
@@ -123,22 +102,22 @@ const mediaLinks: LinkItem[] = [
   {
     name: 'Newsletter',
     url: 'https://newsletter.pythonessprogrammer.com/subscribe',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
   },
   {
-    name: 'NotebookLM Podcast',
-    url: 'https://pythoness.substack.com/podcast',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+    name: 'AI Generation Experiments Substack',
+    url: 'https://pythoness.substack.com',
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
   },
   {
     name: 'Current Music Rotation',
     url: 'https://open.spotify.com/playlist/19jEmPqzZqp4zH8uyF7uCS?si=d413cc41fba54edc',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
   },
   {
     name: 'Working Lo-Fi Playlist',
     url: 'https://open.spotify.com/playlist/6aZF7YvZTVkfqU2JC0HWQo?si=01d86ac4bd8347ac',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
   }
 ]
 
@@ -147,12 +126,12 @@ const readLinks: LinkItem[] = [
   {
     name: 'Blog',
     url: '/blog',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
   },
   {
     name: 'Newsletter',
     url: 'https://newsletter.pythonessprogrammer.com/',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
   }
 ]
 
@@ -167,23 +146,23 @@ const legalLinks: LinkItem[] = [
   {
     name: 'Privacy Policy',
     url: '/privacy-policy',
-    color: 'bg-brand-green-dark/40 backdrop-blur-md border border-white/10 hover:bg-brand-green-dark/60 text-white shadow-lg hover:shadow-xl transition-all duration-300'
+    color: 'bg-brand-purple-dark/40 backdrop-blur-md border border-white/10 hover:bg-brand-purple-dark/60 text-white shadow-lg hover:shadow-xl transition-all duration-300'
   },
   {
     name: 'Terms of Service',
     url: '/terms',
-    color: 'bg-brand-green-dark/40 backdrop-blur-md border border-white/10 hover:bg-brand-green-dark/60 text-white shadow-lg hover:shadow-xl transition-all duration-300'
+    color: 'bg-brand-purple-dark/40 backdrop-blur-md border border-white/10 hover:bg-brand-purple-dark/60 text-white shadow-lg hover:shadow-xl transition-all duration-300'
   }
 ]
 
 export default function LinksPage() {
   return (
-    <div className="min-h-screen bg-brand-green-dark text-white py-12 px-4">
+    <div className="min-h-screen bg-brand-purple-dark text-white py-12 px-4">
       <div className="max-w-3xl mx-auto flex flex-col items-center">
         {/* Profile Section */}
         <div className="text-center mb-8">
           <div className="mb-4 relative mx-auto">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-brand-green-accent relative mx-auto">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-brand-purple-light relative mx-auto">
               <Image 
                 src="/images/headshot.png" 
                 alt="Pythoness Programmer" 
@@ -196,9 +175,17 @@ export default function LinksPage() {
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
-          <p className="text-white/80 max-w-md mx-auto">
+          <p className="text-white/80 max-w-md mx-auto mb-4">
             Digital Psychic sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. As a Software Engineer, I offer async video readings and live 1:1 sessions.
           </p>
+          <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-lg p-4 border border-brand-purple-light/30 max-w-md mx-auto">
+            <p className="text-white/90 text-sm mb-2">
+              <strong>Current Status:</strong> Rest Mode
+            </p>
+            <p className="text-white/80 text-xs">
+              Services resume <strong>March 2026</strong>. Active season: March - November 2026.
+            </p>
+          </div>
         </div>
 
         {/* Support Banner Section */}
@@ -211,7 +198,7 @@ export default function LinksPage() {
             </p>
             <Link
               href="/support"
-              className="bg-brand-green-accent text-brand-green-dark px-6 py-3 rounded-lg font-medium hover:bg-brand-green-accent/90 transition-colors inline-block mb-4"
+              className="bg-brand-purple-light text-brand-purple-dark px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors inline-block mb-4"
             >
               Support the Pythoness
             </Link>
@@ -226,7 +213,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    className={`block ${link.color} w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
                     aria-label={link.name}
                   >
                     {link.icon && (
@@ -247,7 +234,7 @@ export default function LinksPage() {
 
         {/* Links Container */}
         <div className="w-full space-y-8">
-          {/* Featured Service */}
+          {/* Featured Service - Rest Mode */}
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
             <p className="text-white/80 text-center text-sm mb-2">
@@ -255,40 +242,49 @@ export default function LinksPage() {
               on your project or web presence but prefer to watch on your own time.
             </p>
             <p className="text-white/60 text-center text-xs mb-4">20-minute video reading - no live meeting required</p>
-            <Link
-              href={featuredService.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`block ${featuredService.color} py-4 md:py-5 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium shadow-lg`}
-            >
-              {featuredService.name}
-            </Link>
+            <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-lg p-6 border border-brand-purple-light/30 text-center">
+              <p className="text-white/90 text-sm mb-2">
+                Available starting <strong>March 2026</strong>
+              </p>
+              <p className="text-white/80 text-xs">
+                Subscribe to our newsletter to be the first to know when services resume.
+              </p>
+              <Link
+                href="https://newsletter.pythonessprogrammer.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 bg-brand-purple-light text-brand-purple-dark px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors"
+              >
+                Subscribe to Newsletter
+              </Link>
+            </div>
           </div>
 
-          {/* Booking Links */}
-          {bookingLinks.length > 0 && (
-            <div className="space-y-3">
-              <h2 className="font-display text-xl text-white text-center">Live 1:1 Digital Psychic Sessions</h2>
-              <p className="text-white/80 text-center text-sm mb-3">
-                Connect live for real-time guidance on your tech challenges. These interactive sessions combine 
-                pattern recognition, spiritual insight, and deep technical understanding to help you solve problems 
-                and move forward with confidence.
+          {/* Booking Links - Rest Mode Notice */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Live 1:1 Digital Psychic Sessions</h2>
+            <p className="text-white/80 text-center text-sm mb-3">
+              Connect live for real-time guidance on your tech challenges. These interactive sessions combine 
+              pattern recognition, spiritual insight, and deep technical understanding to help you solve problems 
+              and move forward with confidence.
+            </p>
+            <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-lg p-6 border border-brand-purple-light/30 text-center">
+              <p className="text-white/90 text-sm mb-2">
+                Services resume <strong>March 2026</strong>
               </p>
-              <div className="space-y-3">
-                {bookingLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
+              <p className="text-white/80 text-xs mb-4">
+                Subscribe to our newsletter to be the first to know when our schedule reopens.
+              </p>
+              <Link
+                href="https://newsletter.pythonessprogrammer.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-brand-purple-light text-brand-purple-dark px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors"
+              >
+                Subscribe to Newsletter
+              </Link>
             </div>
-          )}
+          </div>
 
           {/* Shop Links */}
           {shopLinks.length > 0 && (
@@ -301,7 +297,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark font-medium`}
                   >
                     {link.name}
                   </Link>
@@ -320,7 +316,7 @@ export default function LinksPage() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
                 >
                   {link.name}
                 </Link>
@@ -338,7 +334,7 @@ export default function LinksPage() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
                 >
                   {link.name}
                 </Link>
@@ -373,7 +369,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
                   >
                     {link.boldPart ? (
                       <>
@@ -404,16 +400,19 @@ export default function LinksPage() {
                   label="Cash App"
                   value="$ANCreative"
                   ariaLabel="Cash App username"
+                  copyButtonClassName="shrink-0 rounded-md px-3 py-2 bg-brand-purple-light text-brand-purple-dark hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple-light"
                 />
                 <CopyField
                   label="Venmo"
                   value="@ANCreative"
                   ariaLabel="Venmo username"
+                  copyButtonClassName="shrink-0 rounded-md px-3 py-2 bg-brand-purple-light text-brand-purple-dark hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple-light"
                 />
                 <CopyField
                   label="Zelle"
                   value="hello@amanda-nelson.com"
                   ariaLabel="Zelle email address"
+                  copyButtonClassName="shrink-0 rounded-md px-3 py-2 bg-brand-purple-light text-brand-purple-dark hover:bg-opacity-90 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple-light"
                 />
               </div>
               <div className="space-y-3">
@@ -423,7 +422,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark font-medium`}
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark font-medium`}
                   >
                     {link.name}
                   </Link>
@@ -436,7 +435,7 @@ export default function LinksPage() {
           <div className="pt-8 text-center">
             <Link
               href="/"
-              className="inline-flex items-center text-brand-green-accent hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark"
+              className="inline-flex items-center text-brand-purple-light hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark"
             >
               <span>Visit my website →</span>
             </Link>
