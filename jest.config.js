@@ -14,15 +14,16 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   testMatch: ['**/__tests__/**/*.test.[jt]s?(x)'],
-  collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/_*.{js,jsx,ts,tsx}',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
-    '!**/node_modules/**',
-    '!**/.next/**',
-  ],
+  collectCoverage: false, // Disabled due to test-exclude incompatibility with glob 10.4.6+
+  // Coverage can be re-enabled after migrating to Django or when test-exclude is updated
+  // collectCoverageFrom: [
+  //   'src/**/*.{js,jsx,ts,tsx}',
+  //   '!src/**/*.d.ts',
+  //   '!src/**/_*.{js,jsx,ts,tsx}',
+  //   '!src/**/*.stories.{js,jsx,ts,tsx}',
+  //   '!**/node_modules/**',
+  //   '!**/.next/**',
+  // ],
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
