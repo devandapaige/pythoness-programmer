@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <>
       <header 
-        className="h-20 px-4 md:px-6 bg-brand-purple-dark/95 backdrop-blur-sm sticky top-0 w-full z-50"
+        className="h-20 px-4 md:px-6 bg-brand-purple-dark/95 backdrop-blur-sm fixed w-full z-50"
         role="banner"
       >
         <nav 
