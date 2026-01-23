@@ -41,7 +41,6 @@ export default function Footer() {
             <ul className="space-y-1" role="list" aria-label="Social media links">
               <li><Link href="https://github.com/devandapaige" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>GitHub</Link></li>
               <li><Link href="https://www.youtube.com/@pythonessprogrammer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>YouTube</Link></li>
-              <li><Link href="https://www.tiktok.com/@pythoness_programmer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>TikTok</Link></li>
               <li><Link href="https://bsky.app/profile/pythonessdev.bsky.social" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Bluesky</Link></li>
             </ul>
           </FooterSection>
