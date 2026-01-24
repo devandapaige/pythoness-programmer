@@ -732,6 +732,40 @@ If you use AI to help draft or edit posts:
 8. **Check service alignment** - Ensure content aligns with your tech coaching focus, not web development services
 9. **Match content type** - Use appropriate voice for blog posts vs resource pages vs newsletters
 
+### CRITICAL: Never Fabricate Personal Examples
+
+**For AI assistants (including Cursor):**
+
+**NEVER invent, fabricate, or make up personal experiences, examples, stories, or anecdotes.**
+
+When content needs personal examples:
+
+1. **ASK THE USER FIRST** - Before adding any personal example, story, or experience, ask: 
+   - "Do you have a specific example from your experience I can use here?"
+   - "Can you share a real story about [topic]?"
+   - "What's a real example of [situation] from your experience?"
+
+2. **Use placeholder text** - If showing structure, use clear placeholders:
+   - `[Your specific example here]`
+   - `[Real story from your experience]`
+   - `[Actual tool you use]`
+   - `[Specific situation you've encountered]`
+
+3. **Flag when examples are needed** - Clearly indicate: "⚠️ This section needs a real personal example - please provide one"
+
+4. **Only reference existing content** - You may reference examples from published blog posts, but always cite them as coming from existing content.
+
+5. **Never make up:**
+   - Personal stories or anecdotes
+   - Tool preferences you haven't confirmed
+   - Specific experiences or situations
+   - Quotes or conversations
+   - Specific dates, numbers, or metrics from personal experience
+   - Client interactions or testimonials
+   - Personal health information or diagnoses
+
+**Remember:** Authenticity is paramount. It's better to ask for a real example, use a placeholder, or skip the example entirely than to fabricate one. Fabricated personal examples are a major AI "tell" and damage credibility.
+
 ---
 
 ## References
