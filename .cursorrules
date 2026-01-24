@@ -1,0 +1,217 @@
+# Cursor Rules for Pythoness Programmer Blog
+
+## Blog Writing Voice Guide
+
+When writing or editing blog posts (files in `src/content/blog/posts/*.mdx`), follow the comprehensive voice guide in `BLOG_VOICE_GUIDE.md`. 
+
+### Content Type Variations
+
+Content falls into three categories, each with valid voice patterns:
+
+**1. Personal Blog Posts** (e.g., "Off TikTok For Good", "Rest Mode")
+- Highly personal and conversational
+- Story-driven with specific examples
+- Signature openings: "Hey there, cosmic coders and [specific audience]"
+- Natural narrative flow
+
+**2. Resource Pages / Guide Posts** (e.g., "Tech Boundaries", "Digital Spring Cleaning")
+- More structured and informational
+- May or may not have conversational opening (both are valid)
+- Clear sections, frameworks, and practical guidance
+- Question-openings work well: "Does your digital world feel less like a creative partner..."
+
+**3. Newsletter-Style Posts** (e.g., "The Y.O.U. Framework", "Mindful Automation Systems")
+- Opens with "Hey there," or "Hey there, [specific audience]"
+- Includes roadmap/agenda sections
+- Tool spotlights and community corners
+- Personal updates sections
+
+**All three types are valid and authentic. Choose the style that fits the content purpose.**
+
+### Core Brand Voice
+
+The voice should be:
+
+- **Personal and conversational** (for blog posts) or **helpful and structured** (for resource pages)
+- **Direct and authentic** - Say what you mean, no fluff
+- **Specific and concrete** - Real examples, actual experiences, specific details
+- **Naturally structured** - Let ideas flow organically, not formulaically
+- **Genuinely helpful** - Practical advice from real experience
+- **Warm and approachable** - Like a trusted guide, never condescending
+- **Neurodivergent-centered** - Acknowledge different ways of thinking and processing
+- **Empowering** - Focus on building confidence and independence
+
+### Brand Identity
+
+- Writing as "Pythoness Programmer" (Amanda Nelson), a neurodivergent Senior Software Engineer, tech coach, and disability advocate
+- The name 'Pythoness' honors the Pythia—ancient oracles who demystified complexity
+- Mission: Make tech clear, joyful, and empowering for neurodivergent creatives and small businesses
+- Core message: "Tech That Works, for People Like Us"
+- Values: LGBTQIA+ affirming, neurodiversity celebrating, always judgment-free
+
+## Critical AI Patterns to Avoid
+
+### Content Patterns
+1. **No significance inflation** - Back claims with specifics, not grand statements
+2. **No vague attributions** - Cite sources with context: "In a 2024 study by Google..." not "studies show"
+3. **No superficial -ing analyses** - Remove "symbolizing... reflecting... showcasing" or expand with sources
+4. **No promotional language** - Be direct: "I've deleted my TikTok accounts" not "transitioned away from the platform"
+5. **No formulaic challenges** - Use specific facts about actual challenges
+
+### Language Patterns
+6. **No AI vocabulary** - Replace "additionally," "testament," "landscape," "showcasing" with natural words
+7. **No copula avoidance** - Use "is" and "has" instead of "serves as," "features," "boasts"
+8. **No negative parallelisms** - State points directly, not "It's not just X, it's Y"
+9. **No forced rule of three** - Use natural number of items in lists
+10. **No synonym cycling** - It's okay to repeat clear words like "Rest Mode"
+11. **No false ranges** - List topics directly, not "from X to Y"
+
+### Style Patterns
+12. **Em dashes sparingly** - Not multiple per paragraph
+13. **Bold for emphasis only** - Not every important term
+14. **No inline-header lists** - Convert to prose
+15. **Sentence case headings** - Not title case
+16. **No emojis** - Keep professional yet personal tone
+17. **Consistent quotes** - Straight quotes in code/technical contexts
+
+### Communication Patterns
+18. **No chatbot artifacts** - Remove "I hope this helps! Let me know if..."
+19. **No cutoff disclaimers** - Either find sources or remove
+20. **No sycophantic tone** - Be direct and authentic
+
+### Filler and Hedging
+21. **No filler phrases** - "To" not "in order to," "Because" not "due to the fact that"
+22. **No excessive hedging** - Be confident: "This has been transformative" not "could potentially be transformative"
+23. **No generic conclusions** - Use specific plans or facts, not "The future looks bright"
+
+## Blog Post Structure
+
+Blog posts use MDX format with frontmatter:
+```mdx
+---
+title: "Your Post Title"
+date: "YYYY-MM-DD"
+description: "A brief description"
+author: "Amanda Nelson"
+tags: ["tag1", "tag2"]
+image: "url"
+---
+
+# Title
+
+Content here...
+```
+
+## Chinese Zodiac Integration (2025-2026)
+
+### 2025: Wooden Snake (April 2025 - February 2026)
+- **Weave, don't comment** - "Applying the Wooden Snake's patience principle..." not "The Wooden Snake teaches us..."
+- **Three core principles:**
+  1. Observe Before You Judge
+  2. Adapt to the Tool's True Nature
+  3. Find Smarter Paths Forward
+- **Connect to creative work** - Every principle must explicitly connect to creative applications
+- **Include callouts** - "🐍 The Wooden Snake's Callout: What to Carry With You"
+
+### 2026: Fire Horse (February 2026 - February 2027)
+- **Weave, don't comment** - "Applying the Fire Horse's dynamic energy principle..." not "The Fire Horse teaches us..."
+- **Three core principles:**
+  1. Embrace Dynamic Energy
+  2. Lead with Independence
+  3. Innovate with Passion
+- **Connect to creative work** - Every principle must explicitly connect to creative breakthroughs
+- **Include callouts** - "🔥 The Fire Horse's Callout: What to Charge Forward With"
+
+## When Assisting with Content
+
+### For Personal Blog Posts:
+1. **Use conversational opening** - "Hey there, cosmic coders and [specific audience]"
+2. **Lead with personal experience** - "I've learned that..." or "Here's what I discovered..."
+3. **Include specific examples** - Real stories, actual experiences
+4. **Use natural transitions** - "Here's what I didn't expect:" not "It should be noted that"
+5. **End with authentic sign-offs** - "Yours in algorithms and accountability" style
+
+### For Resource Pages:
+1. **Opening is flexible** - Can be conversational OR question-based OR direct
+2. **Clear structure** - Sections like "What You'll Find", "Getting Started", "Access the Complete Resource"
+3. **Practical guidance** - Frameworks, step-by-step instructions, tool recommendations
+4. **Include personal examples** - But can be more structured than blog posts
+
+### For Newsletter-Style Posts:
+1. **Open with "Hey there,"** or "Hey there, [specific audience]"
+2. **Include roadmap/agenda** - "This Month's Roadmap" or "Week 1, Week 2" structure
+3. **Tool spotlights** - "Tool Spotlight:" sections with honest preferences
+4. **Community corners** - Engagement sections
+5. **Personal updates** - Reflection on the week's theme
+
+### Universal Guidelines:
+- **Add specific examples** from actual experience when possible
+- **Cut unnecessary words** - Every sentence should earn its place
+- **Weave zodiac principles naturally** - Don't just mention them, apply them (when relevant)
+- **Center neurodivergent perspectives** - Frame different thinking patterns as strengths
+- **Explain technical terms** - Define in context, use analogies
+- **Focus on practical applications** - Not just theory, but how to actually use it
+- **Run the pre-publication checklist** from BLOG_VOICE_GUIDE.md before finalizing
+
+## Voice Examples
+
+### Good Voice Patterns
+
+✅ **Good blog post opening:** "Hey there, cosmic coders. I've deleted my TikTok accounts completely. All of them. And I'm not coming back."
+
+✅ **Good resource page opening:** "Does your digital world feel less like a creative partner and more like a roadblock? You're not alone."
+
+✅ **Good newsletter opening:** "Hey there, I'm thrilled to dive into May's theme: Mindful Automation!"
+
+✅ **Good personal system:** "I design my systems around three energy states" not "Systems can be designed around various energy states"
+
+✅ **Good honest preference:** "I honestly love using this journal to help me see patterns" not "This journal can be useful for pattern recognition"
+
+✅ **Good direct problem-solution:** "The solution? Tools that adapt to your energy levels" not "It is recommended that one consider tools that may potentially adapt to various energy levels"
+
+✅ **Good story section:** "_My Story_: Working in the software industry, I've tried countless project management tools..."
+
+✅ **Good real example:** "_Real Example_: Earlier this year, I canceled my Repurpose.io subscription..."
+
+### Bad Voice Patterns
+
+❌ **Bad:** "Dear readers, I would like to inform you that I have made the decision to transition away from the TikTok platform, marking a pivotal moment in my digital journey."
+
+❌ **Bad:** "Additionally, it should be noted that these tools serve as a testament to the transformative landscape of modern technology, showcasing innovation, inspiration, and insights."
+
+❌ **Bad:** "While details are limited in available sources, experts believe this could potentially play a crucial role in the future of technology."
+
+## Key Phrases & Terminology
+
+**Use naturally:**
+- "Tech That Works, for People Like Us"
+- "Brain-friendly workflows"
+- "Human-first tech solutions"
+- "Digital fluency"
+- "Mindful automation"
+- "Neurodivergent systems thinker"
+- "Where code meets creativity & compassion"
+
+**Avoid:**
+- Corporate jargon ("leverage," "synergistic," "paradigm shift")
+- Hustle culture language
+- One-size-fits-all solutions
+- Assumptions about neurotypical thinking
+
+## Service Alignment
+
+**Important:** Content should align with tech coaching focus, NOT web development services. The brand offers:
+- ✅ Tech coaching and digital systems guidance
+- ✅ Brain-friendly workflow design
+- ✅ Tool selection and automation strategies
+- ❌ NOT custom web development or software development services
+
+## Technical Context
+
+- Next.js blog with MDX
+- Posts in `src/content/blog/posts/*.mdx`
+- Uses React Server Components
+- Custom MDX components available (Signature, Callout, CodeBlock)
+- RSS feed auto-generated
+- Newsletter content can be repurposed for blog posts
+- YouTube content aligns with newsletter monthly themes
