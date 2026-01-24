@@ -32,12 +32,6 @@ const socialLinks: LinkItem[] = [
     icon: '/icons/youtube.svg'
   },
   {
-    name: 'TikTok',
-    url: 'https://www.tiktok.com/@pythoness_programmer',
-    color: 'bg-white/10 hover:bg-white/20',
-    icon: '/icons/tiktok.svg'
-  },
-  {
     name: 'Bluesky',
     url: 'https://bsky.app/profile/pythonessdev.bsky.social',
     color: 'bg-white/10 hover:bg-white/20',
