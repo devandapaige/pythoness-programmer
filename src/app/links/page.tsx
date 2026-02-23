@@ -37,6 +37,12 @@ const socialLinks: LinkItem[] = [
     color: 'bg-white/10 hover:bg-white/20',
     icon: '/icons/bluesky.svg'
   },
+  {
+    name: 'Fable',
+    url: 'https://fable.co/fabler/pythoness-programmer-506807855588',
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/fable.svg'
+  },
 ]
 
 // Resource links - easy to update
@@ -129,10 +135,13 @@ const readLinks: LinkItem[] = [
   }
 ]
 
-// Affiliate links section - ready for future expansion
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// Affiliate/referral links section
 const affiliateLinks: LinkItem[] = [
-  // This section is ready for future affiliate links
+  {
+    name: 'Join Fable - Book & TV Social App',
+    url: 'https://fable.co/invite/?referralID=YK5IPnrfEW',
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
+  },
 ]
 
 // Legal links section
@@ -422,6 +431,29 @@ export default function LinksPage() {
                   </Link>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Affiliate/Referral Links */}
+          {affiliateLinks.length > 0 && (
+            <div className="space-y-3">
+              <h2 className="font-display text-xl text-white text-center">Referral Links</h2>
+              <div className="space-y-3">
+                {affiliateLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+              <p className="text-white/50 text-xs text-center">
+                These are referral links. I may receive credit or a small benefit if you sign up through them. I only share services I personally use and enjoy.
+              </p>
             </div>
           )}
 
