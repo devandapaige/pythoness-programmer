@@ -42,6 +42,7 @@ export default function Footer() {
               <li><Link href="https://github.com/devandapaige" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>GitHub</Link></li>
               <li><Link href="https://www.youtube.com/@pythonessprogrammer" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>YouTube</Link></li>
               <li><Link href="https://bsky.app/profile/pythonessdev.bsky.social" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Bluesky</Link></li>
+              <li><Link href="https://fable.co/fabler/pythoness-programmer-506807855588" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Fable</Link></li>
             </ul>
           </FooterSection>
           {/* Rest Mode Notice */}

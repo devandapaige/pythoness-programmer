@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Open book icon - left and right pages -->
+  <path d="M4 4v16c0 1.1.9 2 2 2h6V2H6c-1.1 0-2 .9-2 2zm14 0c0-1.1-.9-2-2-2h-6v20h6c1.1 0 2-.9 2-2V4z" fill="white"/>
+</svg>

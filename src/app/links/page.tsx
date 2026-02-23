@@ -37,6 +37,12 @@ const socialLinks: LinkItem[] = [
     color: 'bg-white/10 hover:bg-white/20',
     icon: '/icons/bluesky.svg'
   },
+  {
+    name: 'Fable',
+    url: 'https://fable.co/fabler/pythoness-programmer-506807855588',
+    color: 'bg-white/10 hover:bg-white/20',
+    icon: '/icons/fable.svg'
+  },
 ]
 
 // Resource links - easy to update
@@ -67,6 +73,9 @@ const resourceLinks: LinkItem[] = [
     color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
   }
 ]
+
+// Fable referral - with disclaimer
+const fableReferralLink = 'https://fable.co/invite/?referralID=YK5IPnrfEW'
 
 // Support links section
 const supportLinks: LinkItem[] = [
@@ -379,6 +388,26 @@ export default function LinksPage() {
               </div>
             </div>
           )}
+
+          {/* Fable Recommendation */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Try Fable</h2>
+            <p className="text-white/80 text-sm text-center mb-2">
+              Love audiobooks and book discussions? Fable is a community where readers connect over stories. 
+              Join using my link and I may receive credit.
+            </p>
+            <Link
+              href={fableReferralLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block bg-brand-purple-light/20 hover:bg-brand-purple-light/30 py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark font-medium border border-brand-purple-light/30"
+            >
+              Join Fable with my referral link
+            </Link>
+            <p className="text-white/60 text-xs text-center">
+              I may receive credit if you use this link. No extra cost to you.
+            </p>
+          </div>
 
           {/* Support Links section - moved to bottom */}
           {supportLinks.length > 0 && (
