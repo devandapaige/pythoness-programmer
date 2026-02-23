@@ -37,6 +37,11 @@ const socialLinks: LinkItem[] = [
     color: 'bg-white/10 hover:bg-white/20',
     icon: '/icons/bluesky.svg'
   },
+  {
+    name: 'Fable',
+    url: 'https://fable.co/fabler/pythoness-programmer-506807855588',
+    color: 'bg-white/10 hover:bg-white/20'
+  },
 ]
 
 // Resource links - easy to update
@@ -129,6 +134,20 @@ const readLinks: LinkItem[] = [
   }
 ]
 
+// Fable links section
+const fableLinks: LinkItem[] = [
+  {
+    name: 'Follow me on Fable',
+    url: 'https://fable.co/fabler/pythoness-programmer-506807855588',
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
+  },
+  {
+    name: 'Join Fable with my referral link',
+    url: 'https://fable.co/invite/?referralID=YK5IPnrfEW',
+    color: 'bg-brand-purple-light/20 hover:bg-brand-purple-light/30'
+  }
+]
+
 // Affiliate links section - ready for future expansion
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const affiliateLinks: LinkItem[] = [
@@ -210,7 +229,7 @@ export default function LinksPage() {
                     className={`block ${link.color} w-10 h-10 rounded-full flex items-center justify-center transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
                     aria-label={link.name}
                   >
-                    {link.icon && (
+                    {link.icon ? (
                       <Image
                         src={link.icon}
                         alt=""
@@ -218,6 +237,10 @@ export default function LinksPage() {
                         height={20}
                         className="w-5 h-5"
                       />
+                    ) : (
+                      <span className="text-xs font-semibold text-white">
+                        {link.name.charAt(0).toUpperCase()}
+                      </span>
                     )}
                   </Link>
                 ))}
@@ -316,6 +339,27 @@ export default function LinksPage() {
                 </Link>
               ))}
             </div>
+          </div>
+
+          {/* Fable Links */}
+          <div className="space-y-3">
+            <h2 className="font-display text-xl text-white text-center">Fable</h2>
+            <div className="space-y-3">
+              {fableLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-purple-light focus:ring-offset-2 focus:ring-offset-brand-purple-dark`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+            <p className="text-white/60 text-xs text-center">
+              Disclosure: I may receive referral credit if you use the referral link above.
+            </p>
           </div>
 
           {/* Listen Links */}
