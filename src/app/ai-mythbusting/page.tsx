@@ -96,7 +96,7 @@ export default function AIMythbustingPage() {
                 href="https://newsletter.pythonessprogrammer.com/p/ai-bullshit-detection"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-brand-green-accent text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-sm font-semibold shadow-lg"
+                className="inline-block bg-brand-green-accent text-black px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-sm font-semibold shadow-lg"
               >
                 Read Full Newsletter →
               </a>

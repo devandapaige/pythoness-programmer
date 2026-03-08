@@ -10,7 +10,7 @@ export default function NewsletterCard({
   title = "Stay Connected",
   description = "Get strategic insights on navigating tech spaces, building sustainable systems, and creating accessible solutions. No fluff, just practical expertise and industry awareness.",
   embedUrl = "https://embeds.beehiiv.com/5eb2e329-cfe4-4c22-b470-7ed460e5e900",
-  bgColor = "bg-gradient-to-br from-brand-purple-dark/5 via-brand-cream to-brand-green-dark/5",
+  bgColor = "bg-gradient-to-br from-brand-green-dark/5 via-brand-cream to-brand-green-dark/5",
   className = ""
 }: NewsletterCardProps) {
   return (
@@ -25,10 +25,10 @@ export default function NewsletterCard({
         {/* Section header with glass effect */}
         <div className="text-center mb-12 animate-fade-in-up">
           <div className="inline-block bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border-none">
-            <h2 className="text-4xl md:text-5xl font-display mb-4 text-brand-purple-dark">
+            <h2 className="text-4xl md:text-5xl font-display mb-4 text-brand-green-dark">
               {title}
             </h2>
-            <p className="text-xl text-brand-purple-dark/90">
+            <p className="text-xl text-brand-green-dark/90">
               {description}
             </p>
           </div>

@@ -45,28 +45,28 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            color: '#442b48', // brand-purple-dark
+            color: '#2e3d2a', // brand-green-dark (active)
             fontFamily: '"Open Sans", sans-serif',
             fontOpticalSizing: 'auto',
             fontStyle: 'normal',
             fontVariationSettings: '"wdth" 100',
             h1: {
-              color: '#442b48',
+              color: '#2e3d2a',
               fontWeight: '400',
               fontFamily: 'var(--font-display)',
             },
             h2: {
-              color: '#442b48',
+              color: '#2e3d2a',
               fontWeight: '400',
               fontFamily: 'var(--font-display)',
             },
             h3: {
-              color: '#442b48',
+              color: '#2e3d2a',
               fontWeight: '400',
               fontFamily: 'var(--font-display)',
             },
             h4: {
-              color: '#442b48',
+              color: '#2e3d2a',
               fontWeight: '400',
               fontFamily: 'var(--font-display)',
             },
@@ -77,7 +77,7 @@ const config: Config = {
               fontVariationSettings: '"wdth" 100',
             },
             strong: {
-              color: '#442b48',
+              color: '#2e3d2a',
               fontWeight: '600',
               fontFamily: '"Open Sans", sans-serif',
             },
@@ -88,18 +88,18 @@ const config: Config = {
               },
             },
             code: {
-              color: '#442b48',
-              backgroundColor: 'rgba(68, 43, 72, 0.1)',
+              color: '#2e3d2a',
+              backgroundColor: 'rgba(46, 61, 42, 0.1)',
               borderRadius: '0.25rem',
               padding: '0.125rem 0.25rem',
             },
             pre: {
-              backgroundColor: '#442b48',
+              backgroundColor: '#2e3d2a',
               color: '#f4f1d3',
             },
             blockquote: {
               borderLeftColor: '#32d24d',
-              color: '#442b48',
+              color: '#2e3d2a',
             },
           },
         },

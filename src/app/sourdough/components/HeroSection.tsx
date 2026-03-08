@@ -20,7 +20,7 @@ export default function HeroSection() {
               href="https://www.youtube.com/watch?v=sTAiDki7AQA"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-brand-green-accent/90 transition-colors"
+              className="inline-block bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-brand-green-accent/90 transition-colors"
             >
               Watch Joshua Weissman&apos;s Guide
             </a>

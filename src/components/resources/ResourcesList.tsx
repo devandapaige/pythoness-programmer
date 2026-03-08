@@ -172,10 +172,10 @@ export default function ResourcesList({ resources }: ResourcesListProps) {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href={resource.href}
-                  className={`flex-1 text-white text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold ${
+                  className={`flex-1 text-center px-4 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold ${
                     resource.borderColor === 'green'
-                      ? 'bg-brand-green-accent'
-                      : 'bg-brand-purple-accent'
+                      ? 'bg-brand-green-accent text-black'
+                      : 'bg-brand-purple-accent text-white'
                   }`}
                 >
                   View Full Resource

@@ -13,11 +13,10 @@
   --brand-fuchsia: #ff39bc;
   --brand-hyperlink-green: #156624;
   
-  /* Rest Period Color Palette (Nov 2025 - Mar 2026) */
-  /* Main color: #442b48 (purple-dark) replaces #2e3d2a (green-dark) */
-  /* Accent color: #d8b9f7 (purple-light) replaces #32d24d (green-accent) */
-  --rest-main: #442b48;
-  --rest-accent: #d8b9f7;
+  /* Active Period Color Palette (Mar 2026 onwards) */
+  /* Main: #2e3d2a (dark green), Accent: #32d24d (lime green) */
+  --rest-main: #2e3d2a;
+  --rest-accent: #32d24d;
 }
 
 html {

@@ -155,7 +155,7 @@ export default function PrivacyPleasurePage(): ReactNode {
                 href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-your-personal-act-of-digital-resistance"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-brand-green-accent text-white text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
               >
                 Read Full Week 1 Newsletter →
               </Link>
@@ -260,7 +260,7 @@ export default function PrivacyPleasurePage(): ReactNode {
                 href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-week-2-isp-vpn-protection"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-brand-green-accent text-white text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
               >
                 Read Full Week 2 Newsletter →
               </Link>
@@ -345,7 +345,7 @@ export default function PrivacyPleasurePage(): ReactNode {
                 href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-week-3-secure-communication-and-file-sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-brand-green-accent text-white text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
               >
                 Read Full Week 3 Newsletter →
               </Link>
@@ -442,7 +442,7 @@ export default function PrivacyPleasurePage(): ReactNode {
                 href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-week-4-your-complete-system"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-brand-green-accent text-white text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
               >
                 Read Full Week 4 Newsletter →
               </Link>

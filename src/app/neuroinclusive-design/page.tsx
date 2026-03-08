@@ -87,7 +87,7 @@ export default function NeuroinclusiveDesignPage(): ReactNode {
             </p>
             <Link 
               href="#design-principles"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
               aria-label="Start learning about neuroinclusive design principles"
             >
               Explore Design Principles

@@ -35,7 +35,7 @@ export default function BackToBasicsPage(): ReactNode {
             </p>
             <Link 
               href="#newsletter-series"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
               aria-label="Start exploring the Back to Basics series"
             >
               Explore the Series
@@ -139,7 +139,7 @@ export default function BackToBasicsPage(): ReactNode {
           {/* Week 1: Digital Organization */}
           <section id="week-1" className="mb-8 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
             <div className="flex items-center mb-6">
-              <span className="bg-brand-green-accent text-white text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
+              <span className="bg-brand-green-accent text-black text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
                 Week 1
               </span>
               <h2 className="text-3xl font-display text-brand-green-dark">From Digital Chaos to Creative Flow: Why Your Folders Matter</h2>
@@ -170,7 +170,7 @@ export default function BackToBasicsPage(): ReactNode {
                   </ul>
                 </div>
 
-                <div className="bg-[#D8B9F7]/10 border-2 border-[#D8B9F7] rounded-lg p-6">
+                <div className="bg-[#32D24D]/10 border-2 border-[#32D24D] rounded-lg p-6">
                   <h4 className="text-xl font-display text-black mb-3">Reference Materials</h4>
                   <p className="text-black mb-4">Templates, resources, and inspiration organized by category, not by project</p>
                   <ul className="text-black text-sm space-y-2">
@@ -214,7 +214,7 @@ export default function BackToBasicsPage(): ReactNode {
                   href="https://newsletter.pythonessprogrammer.com/p/from-digital-chaos-to-creative-flow-why-your-folders-matter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
+                  className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
                 >
                   Read Full Newsletter
                 </Link>
@@ -228,7 +228,7 @@ export default function BackToBasicsPage(): ReactNode {
           {/* Week 2: Creative Workflow Revolution */}
           <section id="week-2" className="mb-8 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
             <div className="flex items-center mb-6">
-              <span className="bg-brand-green-accent text-white text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
+              <span className="bg-brand-green-accent text-black text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
                 Week 2
               </span>
               <h2 className="text-3xl font-display text-brand-green-dark">The Creative Workflow Revolution: How Organization Becomes Your Creative Superpower</h2>
@@ -288,7 +288,7 @@ export default function BackToBasicsPage(): ReactNode {
                   href="https://newsletter.pythonessprogrammer.com/p/the-creative-workflow-revolution-how-organization-becomes-your-creative-superpower"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
+                  className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
                 >
                   Read Full Newsletter
                 </Link>
@@ -302,7 +302,7 @@ export default function BackToBasicsPage(): ReactNode {
           {/* Week 3: Data Flow */}
           <section id="week-3" className="mb-8 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
             <div className="flex items-center mb-6">
-              <span className="bg-brand-green-accent text-white text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
+              <span className="bg-brand-green-accent text-black text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
                 Week 3
               </span>
               <h2 className="text-3xl font-display text-brand-green-dark">Data Flow: From Chaos to Conscious</h2>
@@ -367,7 +367,7 @@ export default function BackToBasicsPage(): ReactNode {
                   href="https://newsletter.pythonessprogrammer.com/p/data-flow-from-chaos-to-conscious"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
+                  className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
                 >
                   Read Full Newsletter
                 </Link>
@@ -381,7 +381,7 @@ export default function BackToBasicsPage(): ReactNode {
           {/* Week 4: Basic Automation */}
           <section id="week-4" className="mb-8 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
             <div className="flex items-center mb-6">
-              <span className="bg-brand-green-accent text-white text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
+              <span className="bg-brand-green-accent text-black text-sm font-bold px-3 py-1 rounded-full mr-4 whitespace-nowrap">
                 Week 4
               </span>
               <h2 className="text-3xl font-display text-brand-green-dark">Basic Automation That Serves Your Creativity: From Data Flow to AI Agents</h2>
@@ -413,15 +413,15 @@ export default function BackToBasicsPage(): ReactNode {
                   </div>
                 </div>
 
-                <div className="bg-[#D8B9F7]/10 border-2 border-[#D8B9F7] rounded-lg p-6">
+                <div className="bg-[#32D24D]/10 border-2 border-[#32D24D] rounded-lg p-6">
                   <h4 className="text-2xl font-display text-black mb-4">Medium Energy Days</h4>
                   <p className="text-black mb-4">
                     Focus on routine automation and maintenance. Keep systems running smoothly.
                   </p>
                   <div className="flex flex-wrap gap-4">
-                    <span className="bg-[#D8B9F7]/20 text-black px-3 py-1 rounded-full text-sm">Use simple shortcuts</span>
-                    <span className="bg-[#D8B9F7]/20 text-black px-3 py-1 rounded-full text-sm">Run simple scripts</span>
-                    <span className="bg-[#D8B9F7]/20 text-black px-3 py-1 rounded-full text-sm">Maintain existing systems</span>
+                    <span className="bg-[#32D24D]/20 text-black px-3 py-1 rounded-full text-sm">Use simple shortcuts</span>
+                    <span className="bg-[#32D24D]/20 text-black px-3 py-1 rounded-full text-sm">Run simple scripts</span>
+                    <span className="bg-[#32D24D]/20 text-black px-3 py-1 rounded-full text-sm">Maintain existing systems</span>
                   </div>
                 </div>
 
@@ -459,7 +459,7 @@ export default function BackToBasicsPage(): ReactNode {
                   href="https://newsletter.pythonessprogrammer.com/p/basic-automation-that-serves-your-creativity-from-data-flow-to-ai-agents"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
+                  className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
                 >
                   Read Full Newsletter
                 </Link>
@@ -490,7 +490,7 @@ export default function BackToBasicsPage(): ReactNode {
                 </ul>
               </div>
 
-              <div className="bg-[#D8B9F7]/10 border-2 border-[#D8B9F7] rounded-lg p-6">
+              <div className="bg-[#32D24D]/10 border-2 border-[#32D24D] rounded-lg p-6">
                 <h3 className="text-2xl font-display mb-4 text-black mt-1">Reference Materials</h3>
                 <p className="text-black mb-4">
                   Templates, resources, and inspiration organized by category, not by project.

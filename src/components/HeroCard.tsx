@@ -29,7 +29,7 @@ export default function HeroCard({
   ]
 }: HeroCardProps) {
   return (
-    <div className="bg-gradient-to-b from-brand-green-dark to-brand-purple-dark text-white py-12 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-brand-green-dark to-brand-green-dark text-white py-12 relative overflow-hidden">
       {/* Enhanced background patterns with multiple layers */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>
@@ -63,7 +63,7 @@ export default function HeroCard({
                 target={button.href.startsWith('http') ? '_blank' : undefined}
                 className={`group w-full sm:w-auto inline-flex items-center justify-center ${
                   button.primary
-                    ? 'bg-brand-green-accent text-white hover:bg-opacity-90 shadow-lg shadow-brand-green-accent/20'
+                    ? 'bg-brand-green-accent text-black hover:bg-opacity-90 shadow-lg shadow-brand-green-accent/20'
                     : 'bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20'
                 } px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl`}
               >

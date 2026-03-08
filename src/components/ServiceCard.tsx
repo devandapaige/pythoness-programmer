@@ -120,7 +120,7 @@ export default function ServiceCard({
       <Link
         href={ctaLink}
         target={ctaLink.startsWith('http') ? '_blank' : undefined}
-        className={`inline-block w-full text-center bg-gradient-to-r from-${cardAccentColor} to-${cardAccentColor}/90 text-white px-6 py-3 rounded-lg hover:from-${cardAccentColor}/90 hover:to-${cardAccentColor} transition-all duration-300 shadow-${cardAccentColor}/20`}
+        className={`inline-block w-full text-center bg-gradient-to-r from-${cardAccentColor} to-${cardAccentColor}/90 text-black px-6 py-3 rounded-lg hover:from-${cardAccentColor}/90 hover:to-${cardAccentColor} transition-all duration-300 shadow-${cardAccentColor}/20`}
       >
         {ctaText}
       </Link>

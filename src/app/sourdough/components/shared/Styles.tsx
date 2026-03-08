@@ -13,5 +13,5 @@ export const sectionStyles = {
     ordered: "list-decimal pl-6 space-y-2",
   },
   link: "text-brand-green-accent hover:text-brand-green-dark transition-colors",
-  button: "inline-flex items-center px-6 py-3 bg-brand-green-dark hover:bg-brand-green-accent text-white rounded-lg transition-colors duration-200",
+  button: "inline-flex items-center px-6 py-3 bg-brand-green-dark hover:bg-brand-green-accent text-black rounded-lg transition-colors duration-200",
 } 

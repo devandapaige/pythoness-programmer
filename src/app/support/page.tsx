@@ -25,9 +25,9 @@ const supportLinks: LinkItem[] = [
     color: 'bg-white/10 hover:bg-white/20'
   },
   {
-    name: 'Amazon Wishlist 🛍️',
-    url: 'https://www.amazon.com/hz/wishlist/ls/1ZXXDBUXYDDOC?ref_=wl_share',
-    color: 'bg-brand-purple-light text-black hover:bg-brand-purple-light/90'
+    name: 'Throne Wishlist 🛍️',
+    url: 'https://throne.com/pythoness_programmer',
+    color: 'bg-brand-green-accent text-black hover:bg-opacity-90'
   }
 ]
 
@@ -52,33 +52,35 @@ export default function SupportPage() {
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
           <p className="text-white/80 max-w-2xl mx-auto text-lg">
-            Every resource I create is free. Every tutorial, every tool, every insight—available to anyone who needs it. 
-            Your support makes that possible.
+            All my digital resources are free—and I keep it that way. Your support helps me sustain that without putting guides or tools behind a paywall.
           </p>
         </div>
 
         {/* Value Proposition Section */}
         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 mb-8 max-w-2xl">
-          <h2 className="font-display text-xl text-white mb-4 text-center">Keep the Free Resources Flowing</h2>
+          <h2 className="font-display text-xl text-white mb-4 text-center">Free Resources, No Catch</h2>
           <div className="text-white/90 space-y-4 text-left">
             <p>
-              I believe technology education should be accessible to everyone—no paywalls, no gatekeeping, no barriers. 
-              That&apos;s why everything I create is free: coding tutorials, accessibility guides, neurodivergent-friendly tools, 
-              and resources that help people navigate the digital world with confidence.
+              Every digital resource I make is free: the <Link href="/accessibility" className="text-brand-green-accent hover:underline">accessibility legal guide</Link>, 
+              <Link href="/mindful-automation" className="text-brand-green-accent hover:underline">mindful automation</Link> and <Link href="/digital-spring-cleaning" className="text-brand-green-accent hover:underline">digital spring cleaning</Link> guides, 
+              <Link href="/back-to-basics" className="text-brand-green-accent hover:underline">back-to-basics</Link> and <Link href="/passwords" className="text-brand-green-accent hover:underline">password security</Link> resources, the <Link href="/blog" className="text-brand-green-accent hover:underline">blog</Link>, 
+              <Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline"> newsletter</Link>, and anything else I publish here. No paywalls, no &quot;free tier&quot; that gets worse later—they stay free.
             </p>
             <p>
-              Creating high-quality, free content takes time, research, and resources. Your support directly enables me to:
+              I monetize through optional support (tips, wishlist) and paid sessions (Software Psychic, async readings). 
+              That way I can keep a living without breaking the promise that the resources themselves stay free for everyone.
+            </p>
+            <p>
+              When you send a tip or use the wishlist, you&apos;re helping me:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4 text-white/90">
-              <li>Continue producing free tutorials and guides</li>
-              <li>Develop new tools and resources for the community</li>
-              <li>Research and share accessibility best practices</li>
-              <li>Maintain and improve existing free resources</li>
-              <li>Keep creating content that makes tech less intimidating</li>
+              <li>Keep all existing guides and tools free and available</li>
+              <li>Add new free resources without turning them into paid products</li>
+              <li>Maintain and improve what&apos;s already there</li>
+              <li>Stay sustainable so I don&apos;t have to gate the free stuff later</li>
             </ul>
             <p className="text-brand-green-accent font-medium">
-              When you support this work, you&apos;re not just supporting me—you&apos;re ensuring these resources stay free 
-              and accessible for everyone who needs them.
+              Supporting this work means the free resources stay free—and I can keep making more without changing that.
             </p>
           </div>
         </div>
@@ -89,8 +91,7 @@ export default function SupportPage() {
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Choose Your Support Method</h2>
               <p className="text-white/80 text-sm text-center mb-3">
-                Whether it&apos;s the price of a coffee or a monthly contribution, your support directly fuels more free content 
-                for the community. Every amount makes a difference.
+                Tips and wishlist gifts help me keep all my digital resources free. Every bit makes a difference.
               </p>
               {/* Direct support usernames */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-3">

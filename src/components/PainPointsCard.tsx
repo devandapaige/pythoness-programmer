@@ -21,7 +21,7 @@ export default function PainPointsCard({
     { text: "Tech decisions causing stress" },
     { text: "Need a clear digital strategy" }
   ],
-  className = "bg-brand-purple-dark text-white"
+  className = "bg-brand-green-dark text-white"
 }: PainPointsCardProps) {
   return (
     <div className={`p-8 border-none shadow-2xl animate-fade-in-up py-12 ${className}`}>
@@ -74,7 +74,7 @@ export default function PainPointsCard({
         </p>
         <a
           href="/services"
-          className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-white px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
+          className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
         >
           Let&apos;s Get Started
         </a>
