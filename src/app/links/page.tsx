@@ -15,6 +15,7 @@ interface LinkItem {
   color: string;
   icon?: string;
   boldPart?: string;
+  subtitle?: string;
 }
 
 // Social media links - easy to update
@@ -139,7 +140,25 @@ const readLinks: LinkItem[] = [
 // Affiliate/referral links section
 const affiliateLinks: LinkItem[] = [
   {
-    name: 'Join Fable - Book & TV Social App',
+    name: 'Cal.com',
+    url: 'https://refer.cal.com/pythoness',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30',
+    subtitle: 'Scheduling — what I use for sessions and async bookings'
+  },
+  {
+    name: 'Cora',
+    url: 'https://cora.computer/w?ref=tTKuEOSD',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30',
+    subtitle: 'What I use to keep my email organized'
+  },
+  {
+    name: 'Monologue',
+    url: 'https://monologue.to/?ref=YVCYPRP',
+    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30',
+    subtitle: 'My favorite voice-to-text tool for Mac'
+  },
+  {
+    name: 'Fable — Book & TV Social App',
     url: 'https://fable.co/invite/?referralID=YK5IPnrfEW',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   },
@@ -423,6 +442,9 @@ export default function LinksPage() {
           {affiliateLinks.length > 0 && (
             <div className="space-y-3">
               <h2 className="font-display text-xl text-white text-center">Referral Links</h2>
+              <p className="text-white/80 text-sm text-center mb-2">
+                <Link href="/referral" className="text-brand-green-accent hover:underline">Full tech stack & referral page →</Link>
+              </p>
               <div className="space-y-3">
                 {affiliateLinks.map((link) => (
                   <Link
@@ -432,7 +454,10 @@ export default function LinksPage() {
                     rel="noopener noreferrer"
                     className={`block ${link.color} py-2.5 md:py-3 px-6 rounded-lg text-center transition-transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark`}
                   >
-                    {link.name}
+                    <span className="font-medium">{link.name}</span>
+                    {link.subtitle && (
+                      <span className="block text-sm opacity-90 mt-0.5">{link.subtitle}</span>
+                    )}
                   </Link>
                 ))}
               </div>
