@@ -21,16 +21,17 @@ interface AboutCardProps {
 
 export default function AboutCard({
   title = "The Pythoness Behind The Code",
-  description = "I'm a tech coach, developer, and digital craftswoman who believes technology should be a joy to use, not a frustration to endure. With over a decade of experience building digital experiences that delight and empower, I work with conscious creators and business owners to make their digital visions come alive. I have an instinct for finding the signal in the noise and understanding what creatives and developers truly need to thrive. My goal is to transmit that knowledge back to the community, creating systems that feel supportive and intuitive.",
-  pythia = "The name 'Pythoness' is a nod to the Pythia, the high priestesses who served as oracles at the Temple of Apollo at Delphi. These women were the technology experts of their time, trusted advisors who helped leaders navigate uncertainty with wisdom and foresight. Like the ancient oracles, I aim to demystify complex systems and help you find clarity in your digital journey.",
+  description = "I don't swoop in with quick fixes. I guide you through reflection and pattern recognition so you understand why your systems keep breaking—and discover new pathways forward. Together we reflect on the patterns you keep repeating, uncover what you've internalized from ableist productivity culture, discover resources that actually fit your brain, and build understanding so you don't make it a third time.",
+  pythia = "The name 'Pythoness' honors the Pythia, the high priestesses who served as oracles at Delphi—trusted advisors who helped people navigate uncertainty. Like them, I aim to demystify complexity and help you find clarity. My sessions blend deep technical expertise, tarot-guided intuition, and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.",
   values = {
-    title: "My Approach",
+    title: "What I Bring",
     items: [
-      "Human-centered design that puts your users first and creates intuitive, beautiful experiences",
-      "Sustainable technology choices that grow with you and don't lock you into expensive ecosystems",
-      "Education alongside implementation, empowering you to understand and manage your digital tools",
-      "Conscious business practices that align with your values and amplify your positive impact",
-      "Joy and creativity in every step of the process - because technology should be fun!"
+      "Learning: Building digital fluency, not dependency—guiding you to your own aha moments",
+      "Resourcefulness: Pointing you toward tools and approaches that don't get mainstream attention but might be perfect for your brain",
+      "Serenity: Calm, grounded sessions with no pressure, no judgment, no urgency—just clarity",
+      "Inclusion: A safe, affirming space for LGBTQIA+ folks and anyone marginalized by mainstream tech culture",
+      "Humor: Levity and perspective—taking our work seriously doesn't mean we can't have fun",
+      "Resilience: Building systems and understanding that make you stronger for the next hurdle"
     ]
   },
   photo = {

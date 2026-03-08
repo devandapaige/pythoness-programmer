@@ -36,7 +36,7 @@ export default function PainPointsCard({
         <div className="flex items-center justify-center gap-4">
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
           <p className="text-xl text-white/80 max-w-3xl">
-            You&apos;re not alone in feeling overwhelmed by technology. These are the most common challenges I help people solve.
+            {description ? "These are the kinds of challenges we unpack together." : "You're not alone in feeling overwhelmed by technology. These are the most common challenges I help people solve."}
           </p>
           <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
         </div>
@@ -70,13 +70,13 @@ export default function PainPointsCard({
       {/* Call to Action */}
       <div className="text-center mt-12">
         <p className="text-white/70 mb-6">
-          Ready to turn these pain points into solutions?
+          Ready to understand what your struggles are trying to teach you?
         </p>
         <a
           href="/services"
           className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
         >
-          Let&apos;s Get Started
+          View Sessions
         </a>
       </div>
     </div>

@@ -6,8 +6,8 @@ import AboutCard from '../components/AboutCard'
 import NewsletterCard from '../components/NewsletterCard'
 
 export const metadata = {
-  title: 'Pythoness Programmer | Tech Coaching & Digital Psychic Sessions',
-  description: 'Tech coaching and Digital Psychic sessions for conscious creators and business owners. Reflection, pattern recognition, and brain-friendly systems.',
+  title: 'Pythoness Programmer | Tech Coaching & Reflection Sessions',
+  description: 'I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.',
   other: {
     'p:domain_verify': '18888270799e128d4d49644962be5ab6'
   }
@@ -26,7 +26,18 @@ export default async function Home() {
       {/* Pain Points Section */}
       <section className="bg-brand-green-dark overflow-hidden">
         <div>
-          <PainPointsCard />
+          <PainPointsCard
+            title="Hitting the Same Walls?"
+            description="You're already doing the work. You're building systems, learning your tools, making progress. But the same friction points keep slowing you down—or making you feel like you're failing when you're not."
+            painPoints={[
+              { text: "Same patterns repeating no matter what you try" },
+              { text: "Productivity tools that don't fit your brain" },
+              { text: "Tech that works against you instead of with you" },
+              { text: "Internalized assumptions hiding in your workflow" },
+              { text: "Colonial logic baked into how you organize" },
+              { text: "Ready to understand what your struggles are teaching you" }
+            ]}
+          />
         </div>
       </section>
 
@@ -43,12 +54,12 @@ export default async function Home() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Your Digital Journey, Your Way
+              Reflection Sessions, Not Rescue
             </h2>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-brand-cream max-w-3xl">
-                Everyone learns and grows differently. I&apos;m here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way.
+                These aren&apos;t troubleshooting sessions—they&apos;re reflection sessions where we examine your last tech hurdle and figure out what it&apos;s revealing about what you&apos;ve internalized and what your brain actually needs.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -98,12 +109,13 @@ export default async function Home() {
                 title="20-Minute Software Psychic Session"
                 subtitle="Quick reflection and resource discovery"
                 price="$30"
-                description="Perfect for when you need quick guidance on a specific digital challenge or want to explore working together. We'll start and end with a tarot card pull to guide our session."
+                description="Quick reflection and resource discovery. We start and end with a tarot pull to guide our session. Perfect for understanding a specific struggle, discovering resources you haven't heard of, or getting clarity on your next step."
                 features={[
                   "Tarot card pull at start and end",
-                  "Quick digital problem-solving",
-                  "Tool and workflow recommendations",
-                  "Action plan with next steps",
+                  "Reflection on your recent tech struggle",
+                  "Pattern recognition: what this reveals about what you've internalized",
+                  "Resources and tools you may not have heard of",
+                  "One clear next step forward",
                   "Follow-up email with resources"
                 ]}
                 ctaLink="https://cal.com/pythoness/20min"
@@ -114,16 +126,17 @@ export default async function Home() {
               />
               <ServiceCard
                 title="60-Minute Software Psychic Session"
-                subtitle="Extended problem-solving & design"
+                subtitle="Deep dive into your tech patterns"
                 price="$60"
-                description="Extended time for comprehensive digital problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session."
+                description="Deep dive into your tech patterns. We start and end with a tarot pull. Ideal for understanding recurring struggles, uncovering what you've internalized from ableist tech culture, and building a framework for better decisions going forward."
                 features={[
                   "Tarot card pull at start and end",
-                  "Extended digital problem-solving",
-                  "Deep workflow analysis & design",
-                  "Tool evaluation & recommendations",
-                  "Strategic planning & next steps",
-                  "Detailed action plan with resources"
+                  "Deep reflection on patterns you keep repeating",
+                  "Uncover what you've internalized from productivity culture",
+                  "Discover neurodivergent-friendly alternatives to mainstream tools",
+                  "Build a framework for making better tech decisions",
+                  "Implementation roadmap that works with your brain",
+                  "30-day follow-up consultation"
                 ]}
                 ctaLink="https://cal.com/pythoness/60min"
                 ctaText="Book Now"

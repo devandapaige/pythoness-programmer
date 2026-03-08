@@ -4,7 +4,7 @@ import { calculateYearsOfExperience } from '@/lib/utils'
 
 export const metadata = {
   title: 'About Amanda | Pythoness Programmer',
-  description: 'Learn about Amanda Nelson, the Pythoness Programmer. Tech coaching and development services with a focus on neurodivergent-friendly approaches and digital confidence.',
+  description: 'I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection, pattern recognition, and brain-friendly clarity—not rescue.',
 }
 
 export default function AboutPage() {
@@ -24,23 +24,26 @@ export default function AboutPage() {
                 <h1 className="text-5xl md:text-6xl font-display mb-6 text-white">
                   I&apos;m Amanda, the Pythoness
                 </h1>
-                <p className="text-xl text-brand-cream/90 leading-relaxed italic">
+                <p className="text-xl text-brand-cream/90 leading-relaxed italic mb-6">
                   I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
                 </p>
                 <p className="text-xl text-brand-cream/90 leading-relaxed">
-                  I help small business owners find their tech stack simple, easy, and functional—so you can manage it yourself without needing a regular IT person &quot;on-call.&quot;
+                  I&apos;m not here to rescue you from tech emergencies. I&apos;m here to sit with you in the aftermath of your last tech hurdle and ask: What is this struggle trying to teach you?
                 </p>
                 <p className="text-lg text-brand-cream/80 mt-4">
-                  With {softwareEngineeringYears} years of software engineering experience and {communicationsYears}+ years in communications, customer service, and business operations, I bring a unique perspective to tech challenges. My background spans access control security, training and hiring, managing, scheduling, order fulfillment, law settlements and recalls—experience that translates tremendously to understanding how businesses actually work and how systems are designed to succeed or fail.
+                  You&apos;re already doing the work. You&apos;re building your own systems, learning your tools, making progress. But you keep hitting the same walls. The same friction points. The same patterns that slow you down or make you feel like you&apos;re failing when you&apos;re not.
+                </p>
+                <p className="text-lg text-brand-cream/80 mt-4">
+                  I help you see what you can&apos;t see alone: the internalized assumptions hiding in your workflow, the colonial logic baked into your folder structure, the ways your tools are working against your neurodivergent brain instead of with it.
                 </p>
               </div>
               
               <div className="space-y-4">
                 <p className="text-lg text-brand-cream/80">
-                  What makes me unique? I don&apos;t want you dependent on me—I want you independent and confident. My goal is to help you build a tech stack that&apos;s simple enough to manage yourself, powerful enough to grow your business, and flexible enough to adapt as you evolve.
+                  I don&apos;t swoop in with quick fixes. I guide you through reflection and pattern recognition so you understand why your systems keep breaking—and discover new pathways forward.
                 </p>
                 <p className="text-lg text-brand-cream/80">
-                  My approach is rooted in empathy, accessibility, and the belief that technology should work for you, not against you. No more feeling like you need an IT person on speed dial—just clear, practical solutions you can understand and maintain.
+                  With {softwareEngineeringYears} years of software engineering and {communicationsYears}+ years in communications, customer service, and business operations, I bring deep technical expertise plus a lens for how systems are designed to work—or fail. My sessions blend that expertise with tarot-guided intuition and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
                 </p>
               </div>
 
@@ -100,7 +103,10 @@ export default function AboutPage() {
               Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Software Engineer since October 2021, when I completed a bootcamp and pivoted into tech. But my real superpower comes from my {communicationsYears}+ years in communications and customer service across access control security, training and hiring, managing, scheduling, order fulfillment (both in-person and online), law settlements and recalls, and other communication patterns. This diverse background translates tremendously to my tech work—I understand how businesses actually operate, how people communicate, and how systems are designed to work (or fail). My technical background means I bring not just empathy, but also deep operational insights and proven results to every project. But what truly sets me apart is my ability to see patterns others miss—connections across law, marketing, and tech that reveal how systems are designed to work, and where they&apos;re designed to fail.
             </p>
             <p>
-              <strong>Who I serve:</strong> Small business owners who are tired of feeling dependent on IT support. You want a tech stack that&apos;s simple, easy to understand, and functional—something you can manage yourself without needing someone on-call. You&apos;re ready to take control of your technology, but you need guidance to get there. That&apos;s where I come in. I help you build systems you can actually understand and maintain, so you can focus on running your business instead of managing tech emergencies.
+              <strong>Who this is for:</strong> You&apos;re looking for a guide who helps you understand your tech struggles, not just solve them. You might be a neurodivergent creative who keeps hitting the same workflow walls; someone who&apos;s tried all the &quot;productivity&quot; tools and they all feel wrong; a small business owner tired of tech that doesn&apos;t fit how your brain works; a person doing decolonizing work who wants tech that aligns with your values; or anyone who wants to learn, not just be rescued.
+            </p>
+            <p>
+              <strong>Who this isn&apos;t for:</strong> People looking for emergency tech rescue; anyone wanting me to &quot;just fix it&quot; without understanding why it broke; folks who aren&apos;t interested in reflection or pattern work; or anyone expecting me to have all the answers. I&apos;m a guide, not a guru.
             </p>
           </div>
         </div>
@@ -221,76 +227,76 @@ export default function AboutPage() {
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-brand-cream/90 max-w-3xl">
-                The core principles that guide my approach to tech coaching and development, including honoring rest as a mirror to the Oracles of Delphi.
+                The core values that guide how I work with you: learning over dependency, resourcefulness, serenity, inclusion, humor, and resilience.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Principle 1 */}
+            {/* Learning */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🧠</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Brain-Friendly Design</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Learning</h3>
               <p className="text-brand-cream/80">
-                Technology should adapt to how your brain works, not force you to adapt to it. I design solutions that respect neurodivergent thinking patterns.
+                I believe in building digital fluency, not dependency. My goal is to guide you to your own aha moments—to help you understand your tech deeply enough that you can troubleshoot your own patterns.
               </p>
             </div>
 
-            {/* Principle 2 */}
+            {/* Resourcefulness */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🎯</span>
+                <span className="text-2xl">🔍</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Clarity Over Complexity</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Resourcefulness</h3>
               <p className="text-brand-cream/80">
-                The best solution is often the simplest one. I help you cut through the noise and find what actually works for your specific needs.
+                There are so many tools, approaches, and frameworks that don&apos;t get mainstream attention but might be perfect for your brain. I love pointing people toward resources they&apos;ve never heard of—the hidden gems that change everything.
               </p>
             </div>
 
-            {/* Principle 3 */}
+            {/* Serenity */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🤝</span>
+                <span className="text-2xl">🌙</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Judgment-Free Support</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Serenity</h3>
               <p className="text-brand-cream/80">
-                No question is too basic, no challenge too small. I provide a safe space to explore technology without fear of judgment or shame.
+                Tech struggles are stressful enough. Our sessions are calm, grounded spaces where we can slow down and actually think. No pressure, no judgment, no urgency—just clarity.
               </p>
             </div>
 
-            {/* Principle 4 */}
+            {/* Inclusion */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🔄</span>
+                <span className="text-2xl">🌈</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Sustainable Solutions</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Inclusion</h3>
               <p className="text-brand-cream/80">
-                I focus on building systems that grow with you, not ones that require constant maintenance or cause burnout.
+                This is a safe, affirming space for LGBTQIA+ folks, sex workers, and anyone marginalized by mainstream tech culture. I center neurodivergent experiences and decolonizing practices in everything I do.
               </p>
             </div>
 
-            {/* Principle 5 */}
+            {/* Humor */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🌟</span>
+                <span className="text-2xl">✨</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Empowering Independence</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Humor</h3>
               <p className="text-brand-cream/80">
-                My goal is to help you develop the confidence and skills to navigate technology independently, with ongoing support when needed.
+                Sometimes the best way through a tech struggle is to laugh at the absurdity of it all. I bring levity and perspective—because taking our work seriously doesn&apos;t mean we can&apos;t have fun.
               </p>
             </div>
 
-            {/* Principle 6 */}
+            {/* Resilience */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
               <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🤝</span>
+                <span className="text-2xl">🛡️</span>
               </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Community-Centered Bargains</h3>
+              <h3 className="text-2xl font-display mb-4 text-brand-cream">Resilience</h3>
               <p className="text-brand-cream/80">
-                I believe in clear, fair exchanges. When we work together, whether in a coaching session or in the free community, my commitment is to provide immense value in exchange for your trust and engagement. We build this space together.
+                You&apos;ve survived every tech hurdle so far. My job is to help you build systems and understanding that make you even stronger for the next one. We&apos;re not just solving problems—we&apos;re building capacity.
               </p>
             </div>
           </div>
@@ -320,7 +326,7 @@ export default function AboutPage() {
             Ready to Reflect?
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            If you&apos;re tired of repeating the same tech mistakes and ready to understand what your struggles are trying to teach you, let&apos;s work together. I offer Software Psychic sessions—reflection sessions with tarot-guided insight and pattern recognition—so you don&apos;t make the same mistake twice.
+            If you&apos;re tired of repeating the same tech mistakes and ready to understand what your struggles are trying to teach you, let&apos;s work together. I offer Software Psychic sessions—reflection sessions with tarot-guided insight and pattern recognition—so you don&apos;t make it a third time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link

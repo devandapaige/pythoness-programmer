@@ -13,7 +13,7 @@ Together, we:
 Reflect on the patterns you keep repeating (and why they keep failing)
 Uncover what you've internalized from ableist, productivity-obsessed tech culture
 Discover resources you didn't know existed—tools, approaches, frameworks that actually fit your brain
-Build understanding so you don't make the same mistake twice
+Build understanding so you don't make it a third time
 My sessions blend deep technical expertise, tarot-guided intuition, and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection, and I help you find clarity in the complexity.
 My Core Values
 
@@ -52,7 +52,7 @@ SERVICES PAGE
 
 Reflect on Your Tech Struggles with the Software Psychic
 
-I help neurodivergent creatives and small business owners understand the patterns they keep repeating so they don't make the same mistake twice.
+I help neurodivergent creatives and small business owners understand the patterns they keep repeating—so they don't make it a third time.
 These aren't troubleshooting sessions—they're reflection sessions where we examine your last tech hurdle and figure out what it's revealing about what you've internalized and what your brain actually needs.
 Through tarot-guided insight and deep technical expertise, I help you see what you can't see alone: the ways your tools work against you, the resources you didn't know existed, and the new pathways forward.
 20-Minute Software Psychic Session

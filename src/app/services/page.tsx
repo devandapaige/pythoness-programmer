@@ -5,7 +5,7 @@ import PainPointsCard from '../../components/PainPointsCard'
 
 export const metadata = {
   title: 'Services | Pythoness Programmer',
-  description: 'Reflect on your tech struggles with the Software Psychic. Neurodivergent-friendly sessions with tarot-guided insight and pattern recognition.',
+  description: 'I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions with tarot-guided insight and pattern recognition—not troubleshooting rescue.',
 }
 
 export default function ServicesPage() {
@@ -15,11 +15,14 @@ export default function ServicesPage() {
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-display mb-6 text-white">
+            <p className="text-xl md:text-2xl text-brand-cream/95 mb-6 leading-relaxed italic">
+              I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-white">
               Reflect on Your Tech Struggles with the Software Psychic
             </h1>
             <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
-              I help neurodivergent creatives and small business owners understand the patterns they keep repeating so they don&apos;t make the same mistake twice. These aren&apos;t troubleshooting sessions—they&apos;re reflection sessions where we examine your last tech hurdle and figure out what it&apos;s revealing about what you&apos;ve internalized and what your brain actually needs.
+              I help neurodivergent creatives and small business owners understand the patterns they keep repeating—so they don&apos;t make it a third time. These aren&apos;t troubleshooting sessions—they&apos;re reflection sessions where we examine your last tech hurdle and figure out what it&apos;s revealing about what you&apos;ve internalized and what your brain actually needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -46,14 +49,15 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <PainPointsCard
             className="bg-brand-green-dark text-white"
-            title="Struggling with Tech? I Understand."
+            title="Hitting the Same Walls?"
+            description="You're already doing the work—building systems, learning your tools, making progress. But the same friction points keep slowing you down or making you feel like you're failing when you're not."
             painPoints={[
-              { text: "Overwhelmed by too many tool options" },
-              { text: "Can't find workflows that work for your brain" },
-              { text: "Worried about security and privacy" },
-              { text: "Need a website but don't know where to start" },
-              { text: "Tools don't talk to each other properly" },
-              { text: "Tech decisions causing decision fatigue" }
+              { text: "Same patterns repeating no matter what you try" },
+              { text: "Productivity tools that don't fit your brain" },
+              { text: "Tech that works against you instead of with you" },
+              { text: "Internalized assumptions hiding in your workflow" },
+              { text: "Ready to understand what your struggles are teaching you" },
+              { text: "Want to learn, not just be rescued" }
             ]}
           />
         </div>
@@ -289,16 +293,16 @@ export default function ServicesPage() {
                 What makes your approach different?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                I design solutions specifically for neurodivergent brains, focusing on reducing cognitive load, providing clear structure, and creating systems that actually work for your unique thinking patterns. No judgment, no assumptions, just practical solutions.
+                I don&apos;t swoop in with quick fixes. These are reflection sessions: we examine what your tech struggles reveal about what you&apos;ve internalized and what your brain actually needs. I blend deep technical expertise with tarot-guided intuition and neurodivergent-centered design. It&apos;s a judgment-free, affirming space (LGBTQIA+ and sex-worker affirming) where we slow down, reflect, and build understanding together.
               </p>
             </div>
 
             <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
               <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                Do you work with people who aren&apos;t tech-savvy?
+                Who are these sessions for?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Absolutely! In fact, many of my clients come to me feeling overwhelmed by technology. I specialize in breaking down complex concepts into manageable pieces and providing judgment-free support regardless of your current tech comfort level.
+                You&apos;re already capable and learning. You need someone who can help you see the patterns you&apos;re too close to notice, point you toward resources that match your actual brain, validate that the friction you feel is real—and show you different ways forward. Not for: emergency tech rescue, anyone who wants me to &quot;just fix it&quot; without understanding why, or folks who aren&apos;t interested in reflection or pattern work.
               </p>
             </div>
 
@@ -307,7 +311,7 @@ export default function ServicesPage() {
                 How do I know which service is right for me?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Start with a <a href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">20-minute session</a>! We&apos;ll discuss your specific needs and I&apos;ll recommend the best approach. The 20-minute session is perfect for exploring options, while the 60-minute session is ideal for comprehensive change.
+                Start with a <a href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">20-minute session</a> for a specific struggle or to discover resources you haven&apos;t tried. The 60-minute session is ideal when you want to understand why you keep hitting the same walls, map patterns across multiple struggles, or build a framework for better tech decisions. The async reading works when you want a potent reflection on your project or web presence on your own time.
               </p>
             </div>
 
@@ -316,7 +320,7 @@ export default function ServicesPage() {
                 What if I need ongoing support?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                I offer ongoing tech support plans and can also work with you on a project basis. Many clients start with a consultation or overhaul and then choose ongoing support to maintain their systems and continue growing.
+                The 60-minute session includes a 30-day follow-up consultation. Many clients book another session when they&apos;re ready to go deeper or tackle the next pattern. We build understanding so you don&apos;t make it a third time—and you can always return when you need a reflection partner again.
               </p>
             </div>
 
@@ -325,7 +329,7 @@ export default function ServicesPage() {
                 Do you work with businesses or just individuals?
               </h3>
               <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Both! I work with individual professionals, small business owners, and teams. My approach scales well for different needs, whether you&apos;re a solopreneur or managing a small team&apos;s digital systems.
+                Both. I work with neurodivergent creatives, small business owners, and anyone doing decolonizing work who wants tech that aligns with their values. My approach is the same: reflection and pattern recognition so you understand your struggles and discover pathways that fit your brain.
               </p>
             </div>
           </div>
