@@ -61,8 +61,8 @@ export default function SupportPage() {
           <h2 className="font-display text-xl text-white mb-4 text-center">Free Resources, No Catch</h2>
           <div className="text-white/90 space-y-4 text-left">
             <p>
-              Every digital resource I make is free: the <Link href="/accessibility" className="text-brand-green-accent hover:underline">accessibility legal guide</Link>, 
-              <Link href="/mindful-automation" className="text-brand-green-accent hover:underline">mindful automation</Link> and <Link href="/digital-spring-cleaning" className="text-brand-green-accent hover:underline">digital spring cleaning</Link> guides, 
+              Every digital resource I make is free: the <Link href="/accessibility" className="text-brand-green-accent hover:underline">accessibility legal guide</Link>,  
+              <Link href="/mindful-automation" className="text-brand-green-accent hover:underline">mindful automation</Link> and <Link href="/digital-spring-cleaning" className="text-brand-green-accent hover:underline">digital spring cleaning</Link> guides,  
               <Link href="/back-to-basics" className="text-brand-green-accent hover:underline">back-to-basics</Link> and <Link href="/passwords" className="text-brand-green-accent hover:underline">password security</Link> resources, the <Link href="/blog" className="text-brand-green-accent hover:underline">blog</Link>, 
               <Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline"> newsletter</Link>, and anything else I publish here. No paywalls, no &quot;free tier&quot; that gets worse later—they stay free.
             </p>
