@@ -17,7 +17,7 @@ export default function HeroCard({
   mainText = "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. I'm not here to rescue you from tech emergencies—I'm here to sit with you in the aftermath and ask: What is this struggle trying to teach you?",
   buttons = [
     {
-      text: "Book a Session",
+      text: "Book a 20-Min Session",
       href: "https://cal.com/pythoness/20min",
       primary: true
     },

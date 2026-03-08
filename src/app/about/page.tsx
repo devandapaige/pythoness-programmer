@@ -4,7 +4,7 @@ import { calculateYearsOfExperience } from '@/lib/utils'
 
 export const metadata = {
   title: 'About Amanda | Pythoness Programmer',
-  description: 'I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection, pattern recognition, and brain-friendly clarity—not rescue.',
+  description: 'I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection, pattern recognition, and brain-friendly clarity—not rescue.',
 }
 
 export default function AboutPage() {
@@ -43,7 +43,7 @@ export default function AboutPage() {
                   I don&apos;t swoop in with quick fixes. I guide you through reflection and pattern recognition so you understand why your systems keep breaking—and discover new pathways forward.
                 </p>
                 <p className="text-lg text-brand-cream/80">
-                  With {softwareEngineeringYears} years of software engineering and {communicationsYears}+ years in communications, customer service, and business operations, I bring deep technical expertise plus a lens for how systems are designed to work—or fail. My sessions blend that expertise with tarot-guided intuition and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
+                  With {softwareEngineeringYears} years of software engineering and {communicationsYears}+ years in communications, customer service, and business operations, I bring deep technical expertise plus a lens for how systems are designed to work—or fail. That background informs my coaching; I don&apos;t build custom websites or software for clients under this brand. My sessions blend that expertise with tarot-guided intuition and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
                 </p>
               </div>
 

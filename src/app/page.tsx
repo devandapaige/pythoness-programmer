@@ -7,7 +7,7 @@ import NewsletterCard from '../components/NewsletterCard'
 
 export const metadata = {
   title: 'Pythoness Programmer | Tech Coaching & Reflection Sessions',
-  description: 'I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.',
+  description: 'I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.',
   other: {
     'p:domain_verify': '18888270799e128d4d49644962be5ab6'
   }

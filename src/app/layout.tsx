@@ -20,7 +20,7 @@ const norwester = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://pythonessprogrammer.com'),
   title: "Pythoness Programmer | Tech Coaching & Reflection Sessions",
-  description: "I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.",
+  description: "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.",
   keywords: [
     "Tech Coaching",
     "Software Psychic",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     "Decolonizing Tech",
     "Tech That Works for People Like Us",
     "LGBTQIA+ Affirming",
-    "Judgment-free Tech Support",
-    "Tech Consultation",
+    "Judgment-free tech coaching",
+    "Reflection sessions",
     "Digital Fluency",
     "Amanda Nelson",
     "Pythoness Programmer"
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   creator: "Pythoness Programmer",
   openGraph: {
     title: "Pythoness Programmer | Tech Coaching & Reflection Sessions",
-    description: "I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.",
+    description: "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.",
     type: "website",
     url: '/',
     siteName: 'Pythoness Programmer',

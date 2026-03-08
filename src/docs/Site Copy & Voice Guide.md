@@ -1,6 +1,8 @@
-# Pythoness Programmer Copy Guide — 2025 Update
+# Pythoness Programmer Copy Guide — 2025–2026
 
 This guide reflects the updated website content and voice, ensuring brand messaging, service descriptions, and content marketing strategy are fully aligned with your current site. All sections are formatted for easy use in Obsidian.
+
+**What we offer:** Reflection sessions (Software Psychic, Async Readings), free digital resources, and optional support (tips, wishlist). We do **not** offer custom web or software development, nor a separate community platform (e.g. Pythoness Network).
 
 ## Brand Voice & Philosophy
 
@@ -14,7 +16,16 @@ This guide reflects the updated website content and voice, ensuring brand messag
 
 ## Website Copy: Core Messaging
 
+**Canonical phrases (use consistently; see sections below for context):**
+- "Tech That Works, for People Like Us"
+- "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need"
+- "Reflection sessions, not rescue"
+- "What is this struggle trying to teach you?" / "what your brain actually needs"
+- "So you don't make it a third time"
+
 ## Hero Section
+
+**When to use:** Hero = headline + primary description on the main landing; supporting text can be used for subheads or shorter blocks.
 
 **Main Headline:**  
 Tech That Works, for People Like Us
@@ -81,16 +92,17 @@ I philosophize with other decolonizing neurodivergents about how our tech strugg
 
 - 13+ years as a Senior Full Stack Software Engineer with experience at Amazon.com, small businesses, and SaaS startups.
     
-- Proficient with React, Next.js, TypeScript, Node.js, and cloud platforms.
+- Proficient with React, Next.js, TypeScript, Node.js, and cloud platforms. *This background informs my coaching; I do not offer custom web or software development under the Pythoness Programmer brand.*
     
-- "I build systems that won't burn you out. Accessibility isn't an afterthought—it's fundamental. I balance technical excellence with practical implementation, always respecting your pace and process."
+- "I build systems that won't burn you out. Accessibility isn't an afterthought—it's fundamental. I balance technical excellence with practical implementation, always respecting your pace and process." *(Framed around the systems and clarity I help you design for yourself, not build-for-hire.)*
     
 - **Philosophy:**  
     Technology should adapt to how your brain works, not force you to adapt to it. I design solutions that respect neurodivergent thinking patterns, prioritize clarity over complexity, and create sustainable systems that grow with you.
 
 ## Core Practice Areas
 
-**Building Our Digital Confidence, Together:**
+**Building Our Digital Confidence, Together:**  
+*Emojis are fine here and in newsletter section headers; avoid in blog post body (see .cursorrules / BLOG_VOICE_GUIDE).*
 
 - **⚡ Workflow Optimization:** Streamline your digital processes for maximum efficiency and minimal stress.
 - **🧰 Tool Selection:** Choose the right tools for your needs without getting overwhelmed by options.
@@ -114,6 +126,7 @@ I philosophize with other decolonizing neurodivergents about how our tech strugg
 
 ## How We Work Together
 
+**Use when:** You need a more formal or structured process description (e.g. one-pagers, sales context). For the main site and brand voice, prefer **How Sessions Work** (reflection sessions, not rescue).
 **A clear, structured process designed to reduce overwhelm and maximize results:**
 
 1. **Book & Share:** Secure your session and fill out a quick intake form to share your goals, challenges, and priorities.
@@ -138,7 +151,7 @@ I philosophize with other decolonizing neurodivergents about how our tech strugg
 
 - **Software Psychic Sessions (reflection sessions):** I help neurodivergent creatives and small business owners understand the patterns they keep repeating—so they don't make it a third time. These aren't troubleshooting sessions; they're reflection sessions where we examine your last tech hurdle and figure out what it's revealing about what you've internalized and what your brain actually needs. Through tarot-guided insight and deep technical expertise, I help you see what you can't see alone.
 
-**Note:** I do not offer emergency tech rescue, "just fix it" support, or web development/custom software under the Pythoness Programmer brand. My focus is reflection, pattern recognition, and brain-friendly clarity—a guide, not a guru.
+**What I don't offer:** Emergency tech rescue; "just fix it" support; custom web development or software build-for-hire; or a separate community platform (e.g. Pythoness Network). My focus is reflection, pattern recognition, and brain-friendly clarity—a guide, not a guru.
 
 ## Content Marketing Plan (2025–2026)
 
@@ -231,13 +244,14 @@ I philosophize with other decolonizing neurodivergents about how our tech strugg
 **Values Statement:**  
 Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Always judgment-free.
 
-**Community Building:**
+**Community Building:**  
+*(No separate community platform e.g. Pythoness Network. Community happens via newsletter, social, and optional future offerings.)*
 
 - Exploring Geneva as an anti-big-tech community platform alternative.
     
 - Sharing practical tips, AI applications, and project updates in the newsletter.
     
-- Creating spaces for knowledge-sharing and community growth.
+- Creating spaces for knowledge-sharing and community growth (newsletter, content, engagement).
     
 
 ## Tone & Style Checklist
@@ -373,7 +387,7 @@ Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Alwa
 - 1-minute read time estimate
 - One actionable takeaway readers can implement today
 - One tool or resource to try
-- One zodiac principle and application
+- One zodiac principle and application (choose the principle from the current year's theme that best fits the week's topic)
 - Direct, clear language that respects busy schedules
 
 **Opening (2-3 paragraphs):**
@@ -415,7 +429,7 @@ Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Alwa
 **Support the Pythoness:**
 - Software Psychic Sessions: 20-min ($30), 60-min ($60), Async Project & Web Presence Reading ($30)
 - Current art drops and creative work
-- Community support options
+- Optional support: one-time tip, Throne wishlist, Cash App / Venmo / Zelle (see support page)
 - Easy ways to share and connect
 - Gratitude for community support
 
@@ -428,6 +442,8 @@ Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Alwa
 
 ### Core Identity
 You are writing as "Pythoness Programmer" (Amanda Nelson), a neurodivergent Senior Software Engineer, tech coach, and disability advocate. Your voice is a unique blend of technical expertise, neurodivergent creativity, and empathetic guidance. The name 'Pythoness' honors the Pythia, ancient oracles who demystified complex systems. Your mission is to do the same for modern technology.
+
+**Offerings:** Reflection sessions (Software Psychic, Async Readings), free digital resources, and optional support (tips, wishlist). You do **not** offer custom web or software development, or a separate community platform (e.g. Pythoness Network).
 
 **Signature intro (use where relevant):** "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need." Frame offerings as reflection sessions, not rescue—and as helping people not make it a third time.
 
@@ -479,7 +495,7 @@ You're speaking to neurodivergent creatives, small business owners, and consciou
 - **Structure:** Use clear headings, bullet points (`✓` or `*`), and numbered lists to make information digestible.
 - **Sentences:** Keep them relatively short and direct.
 - **Keywords:** Naturally include terms like `neurodiversity`, `accessibility`, `automation`, `digital wellness`, `systems thinking`, `tech clarity`, and `mindful automation`.
-- **Call to Action:** End with clear, low-pressure next steps like "Book a Free Consultation" or "Let's Get Started."
+- **Call to Action:** End with clear, low-pressure next steps like "Book a 20-minute session," "Try the free Digital Spring Cleaning guide," or "Support the Pythoness" (tips, wishlist). Do not offer a "free consultation"—sessions are paid.
 
 ### Chinese Zodiac Integration Rules
 
@@ -509,25 +525,27 @@ You're speaking to neurodivergent creatives, small business owners, and consciou
 ## Resources Section Copy
 
 ### Free Resources
-- **Pythoness Network:** Community access and peer support
 - **Digital Spring Cleaning:** GRIT Framework Toolkit with comprehensive 4-page worksheet
 - **Mindful Automation:** Y.O.U. Framework System for brain-friendly workflows
 - **Vibe Coding Cheatsheet:** Interactive TailwindCSS examples for developers
 - **Sourdough Corner:** Comprehensive baking guide with recipes and techniques
+- **Accessibility legal guide,** **back-to-basics,** **password security,** **blog,** and **newsletter** (all free; no paywalls)
+
+### Premium / Paid (Current)
+- **Software Psychic Sessions:** 20-min ($30), 60-min ($60), Async Project & Web Presence Reading ($30)
 
 ### Premium Resources (Coming Soon)
 - In-depth automation courses
 - Interactive workshops and group sessions
 - Premium tools and templates
-- Community access and peer support
 
 ## Footer & Legal Copy
 
 **Location:** Based in New Kent, Virginia crafting remote, digital services since 2018
 
-**Support:** If you enjoy my work, you can buy me a coffee!
+**Support:** All digital resources are free. Optional support: one-time tip (Stripe), Throne wishlist, Cash App ($ANCreative), Venmo (@ANCreative), Zelle (hello@amanda-nelson.com). Paid offerings: Software Psychic Sessions and Async Readings. See Support the Pythoness page for details.
 
 **Crafted using:** TypeScript, Next.js, Tailwind, MDX, Vercel
 
 **Summary:**  
-This guide ensures your copy and content marketing reflect the updated, human-centered, and inclusive brand of Pythoness Programmer. It centers sustainable, burnout-resistant solutions, celebrates neurodiversity, and prioritizes clarity, empowerment, and joy in all things tech.
+This guide ensures your copy and content marketing reflect the updated, human-centered, and inclusive brand of Pythoness Programmer. It centers sustainable, burnout-resistant solutions, celebrates neurodiversity, and prioritizes clarity, empowerment, and joy in all things tech. Offerings are reflection sessions and free resources (plus optional support); we do not offer custom development or a separate community platform.

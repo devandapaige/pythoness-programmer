@@ -298,9 +298,9 @@ export default function TechBoundariesPage(): ReactNode {
 
               {/* Week 2 */}
               <div className="bg-brand-green-dark/10 p-6 rounded-lg">
-                <h3 className="text-2xl font-display mb-4 text-brand-green-dark mt-1">Week 2: Pythoness Network Launch</h3>
+                <h3 className="text-2xl font-display mb-4 text-brand-green-dark mt-1">Week 2: Digital Environments That Amplify Creativity</h3>
                 <p className="text-brand-green-dark mb-4">
-                  Launching the FREE Slack community and exploring how to create digital environments that amplify creativity instead of draining it.
+                  Exploring how to create digital environments that amplify creativity instead of draining it.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 

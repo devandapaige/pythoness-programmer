@@ -111,7 +111,7 @@ export default function ResourcesPage() {
               </h3>
               <p className="text-brand-green-dark/80 mb-6 max-w-2xl mx-auto">
                 I&apos;m developing comprehensive courses, workshops, and premium tools to support your digital wellness journey. 
-                These will include deeper dive content, community access, and personalized support.
+                These will include deeper dive content and personalized support.
               </p>
               <div className="space-y-3 mb-8">
                 <div className="flex items-center justify-center text-brand-green-dark text-sm">
@@ -125,10 +125,6 @@ export default function ResourcesPage() {
                 <div className="flex items-center justify-center text-brand-green-dark text-sm">
                   <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
                   Premium tools and templates
-                </div>
-                <div className="flex items-center justify-center text-brand-green-dark text-sm">
-                  <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
-                  Community access and peer support
                 </div>
               </div>
               <Link

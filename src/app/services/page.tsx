@@ -5,7 +5,7 @@ import PainPointsCard from '../../components/PainPointsCard'
 
 export const metadata = {
   title: 'Services | Pythoness Programmer',
-  description: 'I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions with tarot-guided insight and pattern recognition—not troubleshooting rescue.',
+  description: 'I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions with tarot-guided insight and pattern recognition—not troubleshooting rescue.',
 }
 
 export default function ServicesPage() {
