@@ -1,6 +1,6 @@
 ABOUT PAGE
 
-I philosophize with decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need.
+I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need.
 
 Hi, I'm Amanda Nelson—the Pythoness Programmer.
 I'm not here to rescue you from tech emergencies. I'm here to sit with you in the aftermath of your last tech hurdle and ask: What is this struggle trying to teach you?
