@@ -179,8 +179,11 @@ export default function LinksPage() {
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
-          <p className="text-white/80 max-w-md mx-auto mb-4">
-            Digital Psychic sessions that help you solve your own tech challenges through pattern recognition, spiritual insight, and deep technical understanding. As a Software Engineer, I offer async video readings and live 1:1 sessions.
+          <p className="text-white/80 max-w-md mx-auto mb-2 italic">
+            I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
+          </p>
+          <p className="text-white/80 max-w-md mx-auto mb-4 text-sm">
+            Software Psychic sessions—async video readings and live 1:1—to reflect on your patterns and move forward. Book below.
           </p>
         </div>
 
@@ -189,8 +192,7 @@ export default function LinksPage() {
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 max-w-md mx-auto">
             <h2 className="font-display text-xl text-white mb-3">Keep Free Resources Flowing</h2>
             <p className="text-white/80 text-sm mb-4">
-              Every tutorial, guide, and tool I create is free. Your support makes that possible and ensures 
-              these resources stay accessible for everyone.
+              All my digital resources are free. Your support keeps them that way.
             </p>
             <Link
               href="/support"
@@ -233,11 +235,9 @@ export default function LinksPage() {
           {/* Featured Service - Async */}
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
-            <p className="text-white/80 text-center text-sm mb-2">
-              Get a personalized Software Psychic reading delivered asynchronously. Perfect for when you need insights
-              on your project or web presence but prefer to watch on your own time.
+            <p className="text-white/80 text-center text-sm mb-4">
+              Personalized video reading for your project or web presence. Watch on your time—no live meeting. 20 min · $30.
             </p>
-            <p className="text-white/60 text-center text-xs mb-4">20-minute video reading - no live meeting required</p>
             <Link
               href="https://cal.com/pythoness/async"
               target="_blank"
@@ -250,11 +250,9 @@ export default function LinksPage() {
 
           {/* Booking Links - Live 1:1 */}
           <div className="space-y-3">
-            <h2 className="font-display text-xl text-white text-center">Live 1:1 Software Psychic Sessions</h2>
+            <h2 className="font-display text-xl text-white text-center">Live 1:1 Sessions</h2>
             <p className="text-white/80 text-center text-sm mb-3">
-              Connect live for real-time guidance on your tech challenges. These interactive sessions combine
-              pattern recognition, spiritual insight, and deep technical understanding to help you solve problems
-              and move forward with confidence.
+              Real-time reflection and guidance. Pattern recognition, tarot, and technical depth.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link

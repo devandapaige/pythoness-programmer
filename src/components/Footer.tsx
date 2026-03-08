@@ -91,7 +91,6 @@ export default function Footer() {
           <FooterSection title="Content">
             <ul className="space-y-1" role="list" aria-label="Content options">
               <li><Link href="https://videos.pythonessprogrammer.com" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-semibold`}>Videos</Link></li>
-              <li><Link href="https://pythoness.substack.com" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>AI Generation Experiments Substack</Link></li>
             </ul>
           </FooterSection>
           <FooterSection title="Read">
