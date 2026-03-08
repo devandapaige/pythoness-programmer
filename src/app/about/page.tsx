@@ -24,6 +24,9 @@ export default function AboutPage() {
                 <h1 className="text-5xl md:text-6xl font-display mb-6 text-white">
                   I&apos;m Amanda, the Pythoness
                 </h1>
+                <p className="text-xl text-brand-cream/90 leading-relaxed italic">
+                  I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
+                </p>
                 <p className="text-xl text-brand-cream/90 leading-relaxed">
                   I help small business owners find their tech stack simple, easy, and functional—so you can manage it yourself without needing a regular IT person &quot;on-call.&quot;
                 </p>
