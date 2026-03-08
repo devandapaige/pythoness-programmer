@@ -82,7 +82,7 @@ export default function ResourcesPage() {
                     href="https://newsletter.pythonessprogrammer.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-brand-green-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+                    className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
                   >
                     Subscribe Now
                   </Link>
@@ -135,7 +135,7 @@ export default function ResourcesPage() {
                 href="https://newsletter.pythonessprogrammer.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-brand-green-accent text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                className="inline-block bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
               >
                 Get Notified When Available
               </Link>
@@ -155,7 +155,7 @@ export default function ResourcesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/services"
-                  className="bg-brand-green-accent text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+                  className="bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
                 >
                   Book a Session
                 </Link>

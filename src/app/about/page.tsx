@@ -15,7 +15,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white overflow-hidden">
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
@@ -41,19 +41,11 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-2xl p-6 border border-brand-purple-light/30">
-                <p className="text-lg text-brand-cream mb-2">
-                  <strong>Current Status:</strong> Rest Mode
-                </p>
-                <p className="text-brand-cream/90">
-                  Services resume <strong>March 2026</strong>. Active season: March - November 2026.
-                </p>
-              </div>
             </div>
 
             {/* Image */}
             <div className="relative">
-              <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden ring-4 ring-brand-purple-light/30">
+              <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden ring-4 ring-brand-green-accent/30">
                 <Image
                   src="/images/headshot.png"
                   alt="Amanda Nelson - The Pythoness Programmer"
@@ -62,7 +54,7 @@ export default function AboutPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-purple-light/20 rounded-full"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-green-accent/20 rounded-full"></div>
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-cream/20 rounded-full"></div>
             </div>
           </div>
@@ -166,7 +158,7 @@ export default function AboutPage() {
       </section>
 
       {/* Active & Rest Periods Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
@@ -182,8 +174,8 @@ export default function AboutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20">
-              <h3 className="text-2xl font-display mb-4 text-brand-purple-light">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-accent">
                 The Tradition of Rest
               </h3>
               <p className="text-brand-cream/90 mb-4">
@@ -195,8 +187,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20">
-              <h3 className="text-2xl font-display mb-4 text-brand-purple-light">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-accent">
                 Accommodating Chronic Illness & Chronic Pain
               </h3>
               <p className="text-brand-cream/90">
@@ -204,8 +196,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20">
-              <h3 className="text-2xl font-display mb-4 text-brand-purple-light">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-accent">
                 Nurturing Creativity Through Slowness
               </h3>
               <p className="text-brand-cream/90">
@@ -217,7 +209,7 @@ export default function AboutPage() {
       </section>
 
       {/* My Philosophy Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
@@ -235,7 +227,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Principle 1 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🧠</span>
               </div>
               <h3 className="text-2xl font-display mb-4 text-brand-cream">Brain-Friendly Design</h3>
@@ -290,7 +282,7 @@ export default function AboutPage() {
 
             {/* Principle 6 */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🤝</span>
               </div>
               <h3 className="text-2xl font-display mb-4 text-brand-cream">Community-Centered Bargains</h3>
@@ -302,8 +294,8 @@ export default function AboutPage() {
 
           {/* Centered Rest & Renewal Statement */}
           <div className="mt-16 text-center">
-            <div className="bg-brand-purple-light/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/20 shadow-2xl max-w-4xl mx-auto">
-              <div className="w-20 h-20 bg-brand-purple-light/20 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div className="bg-brand-green-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20 shadow-2xl max-w-4xl mx-auto">
+              <div className="w-20 h-20 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <span className="text-3xl">🌙</span>
               </div>
               <h3 className="text-3xl font-display mb-6 text-brand-cream">
@@ -319,27 +311,36 @@ export default function AboutPage() {
 
 
       {/* Call to Action Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/90 to-brand-purple-dark text-white">
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-            Services Resume March 2026
+            Ready to Reflect?
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            We&apos;re currently in a period of rest and renewal. When we return, I&apos;ll be ready to guide you with pattern recognition, spiritual insight, and deep technical understanding—but the solutions will be yours.
+            If you&apos;re tired of repeating the same tech mistakes and ready to understand what your struggles are trying to teach you, let&apos;s work together. I offer Software Psychic sessions—reflection sessions with tarot-guided insight and pattern recognition—so you don&apos;t make the same mistake twice.
           </p>
-          <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-2xl p-8 border border-brand-purple-light/30 max-w-2xl mx-auto">
-            <p className="text-lg text-brand-cream mb-4">
-              Subscribe to our newsletter to be the first to know when our schedule reopens.
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
-              href="https://newsletter.pythonessprogrammer.com/"
+              href="/services"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
+            >
+              View Services &amp; Pricing
+            </Link>
+            <Link
+              href="https://cal.com/pythoness/async"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-brand-purple-light text-brand-purple-dark px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
+              className="inline-block bg-white/10 border-2 border-brand-cream/50 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold"
             >
-              Subscribe to Newsletter
+              Book Async Reading — $30
             </Link>
           </div>
+          <p className="text-brand-cream/80 text-sm mb-2">
+            Or book a live session: <Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline font-medium">20-min</Link> or <Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline font-medium">60-min</Link>
+          </p>
+          <p className="text-brand-cream/70 text-sm">
+            Stay in the loop: <Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline">Subscribe to our newsletter</Link> for insights and updates.
+          </p>
         </div>
       </section>
     </main>

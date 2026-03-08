@@ -80,7 +80,7 @@ export default function TechBoundariesPage(): ReactNode {
             </p>
             <Link 
               href="#boundary-pillars"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
               aria-label="Start learning about tech boundary principles"
             >
               Explore Boundary Principles
@@ -243,15 +243,15 @@ export default function TechBoundariesPage(): ReactNode {
               </div>
 
               {/* Medium Energy */}
-              <div className="bg-[#D8B9F7]/10 border-2 border-[#D8B9F7] rounded-lg p-6">
+              <div className="bg-[#32D24D]/10 border-2 border-[#32D24D] rounded-lg p-6">
                 <h3 className="text-2xl font-display mb-4 text-black mt-1">Medium Energy Days</h3>
                 <p className="text-black mb-4">
                   Focus on routine automation and maintenance. Keep systems running smoothly.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <span className="bg-[#D8B9F7]/20 text-black px-3 py-1 rounded-full text-sm">Use Stream Deck shortcuts</span>
-                  <span className="bg-[#D8B9F7]/20 text-black px-3 py-1 rounded-full text-sm">Run simple scripts</span>
-                  <span className="bg-[#D8B9F7]/20 text-black px-3 py-1 rounded-full text-sm">Maintain existing systems</span>
+                  <span className="bg-[#32D24D]/20 text-black px-3 py-1 rounded-full text-sm">Use Stream Deck shortcuts</span>
+                  <span className="bg-[#32D24D]/20 text-black px-3 py-1 rounded-full text-sm">Run simple scripts</span>
+                  <span className="bg-[#32D24D]/20 text-black px-3 py-1 rounded-full text-sm">Maintain existing systems</span>
                 </div>
               </div>
 

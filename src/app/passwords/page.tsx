@@ -204,7 +204,7 @@ export default function PasswordsPage() {
                     href="https://bitwarden.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-brand-green-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-sm"
+                    className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-sm"
                   >
                     Get Started: bitwarden.com
                   </Link>
@@ -239,7 +239,7 @@ export default function PasswordsPage() {
                     href="https://1password.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-brand-green-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-sm"
+                    className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-sm"
                   >
                     Get Started: 1password.com
                   </Link>
@@ -273,7 +273,7 @@ export default function PasswordsPage() {
                     href="https://dashlane.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-brand-green-accent text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-sm"
+                    className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-sm"
                   >
                     Get Started: dashlane.com
                   </Link>
@@ -630,7 +630,7 @@ export default function PasswordsPage() {
             </div>
             <Link
               href="/services"
-              className="inline-block bg-brand-green-accent text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
+              className="inline-block bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
             >
               Book a Session
             </Link>

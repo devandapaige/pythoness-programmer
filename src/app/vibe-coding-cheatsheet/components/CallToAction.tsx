@@ -26,7 +26,7 @@ export default function CallToAction() {
       </div>
       <Link 
         href="/#services"
-        className="inline-block bg-brand-green-accent text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+        className="inline-block bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
         aria-label="View our services"
       >
         Explore Services

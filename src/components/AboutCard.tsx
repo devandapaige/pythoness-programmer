@@ -57,7 +57,7 @@ export default function AboutCard({
           <div className="relative mx-auto max-w-md">
             {/* Decorative elements */}
             <div className="absolute -bottom-12 -left-4 w-48 h-48 rounded-full bg-brand-green-accent/20 backdrop-blur-sm -z-10"></div>
-            <div className="absolute -top-3 -right-3 w-24 h-24 rounded-full bg-brand-purple-dark/20 backdrop-blur-sm z-0"></div>
+            <div className="absolute -top-3 -right-3 w-24 h-24 rounded-full bg-brand-green-dark/20 backdrop-blur-sm z-0"></div>
             {/* Main photo */}
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
               {photo?.main ? (
@@ -69,7 +69,7 @@ export default function AboutCard({
                   style={{ width: '100%', height: 'auto', backgroundColor: 'transparent' }}
                 />
               ) : (
-                <div className="w-full h-[400px] flex items-center justify-center bg-brand-purple-dark/10">
+                <div className="w-full h-[400px] flex items-center justify-center bg-brand-green-dark/10">
                   <p className="text-brand-purple-dark">Image coming soon</p>
                 </div>
               )}
@@ -104,7 +104,7 @@ export default function AboutCard({
               </>
             )}
             {/* Pythia caption */}
-            <div className="mt-6 bg-brand-purple-dark rounded-lg shadow-lg p-4 relative z-10 transform rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div className="mt-6 bg-brand-green-dark rounded-lg shadow-lg p-4 relative z-10 transform rotate-1 hover:rotate-0 transition-transform duration-500">
               <p className="text-sm text-white/90 italic leading-relaxed">
                 {pythia}
               </p>

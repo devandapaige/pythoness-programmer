@@ -54,7 +54,7 @@ export default function MutualsPage() {
               href="https://cal.com/pythoness/20min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
             >
               Book a Digital Psychic Session
             </Link>
@@ -78,7 +78,7 @@ export default function MutualsPage() {
               />
               <button
                 onClick={handleCouponSubmit}
-                className="w-full sm:w-auto px-6 py-2 bg-brand-green-accent text-white rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+                className="w-full sm:w-auto px-6 py-2 bg-brand-green-accent text-black rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
               >
                 Apply
               </button>
@@ -97,7 +97,7 @@ export default function MutualsPage() {
                               href="https://newsletter.pythonessprogrammer.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
             >
               Join Newsletter
             </Link>
@@ -126,7 +126,7 @@ export default function MutualsPage() {
                   href="/media-kit/podcast-one-sheet.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-brand-green-accent text-white rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+                  className="inline-flex items-center px-4 py-2 bg-brand-green-accent text-black rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
                 >
                   Download One Sheet
                 </Link>
@@ -145,7 +145,7 @@ export default function MutualsPage() {
                   href="/media-kit/branding-guidelines.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 bg-brand-green-accent text-white rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
+                  className="inline-flex items-center px-4 py-2 bg-brand-green-accent text-black rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
                 >
                   View Guidelines
                 </Link>

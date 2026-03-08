@@ -1,16 +1,16 @@
 # Rest Period Implementation Notes
 
-## Current Status: REST MODE (Nov 2025 - Mar 8, 2026)
+## Current Status: ACTIVE MODE (from Mar 8, 2026)
 
-The site is currently in **Rest Mode** with the purple color scheme inspired by the Pythia Oracles of Delphi tradition.
+The site is in **Active Mode** with the green color scheme (#2e3d2a dark green, #32d24d lime accent).
 
 ## Color Scheme Changes
 
-### Rest Period Colors (Current)
-- **Main color:** `#442b48` (brand-purple-dark) - replaces `#2e3d2a` (brand-green-dark)
-- **Accent color:** `#d8b9f7` (brand-purple-light) - replaces `#32d24d` (brand-green-accent)
+### Rest Period Colors (Nov 2025 - Mar 2026)
+- **Main color:** `#442b48` (brand-purple-dark)
+- **Accent color:** `#d8b9f7` (brand-purple-light)
 
-### Active Season Colors (March 8, 2026 onwards)
+### Active Season Colors (Current - from March 8, 2026)
 - **Main color:** `#2e3d2a` (brand-green-dark)
 - **Accent color:** `#32d24d` (brand-green-accent)
 

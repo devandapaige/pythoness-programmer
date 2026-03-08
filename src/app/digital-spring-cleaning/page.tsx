@@ -52,7 +52,7 @@ export default function DigitalSpringCleaningPage() {
               <a
                 href="/digital-spring-cleaning/digitalspringcleaningWorksheet.pdf"
                 download
-                className="bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg"
+                className="bg-brand-green-accent text-black px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg"
               >
                 Download PDF Worksheet
               </a>

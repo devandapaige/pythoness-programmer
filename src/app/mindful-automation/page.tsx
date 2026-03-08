@@ -82,7 +82,7 @@ export default function May2025LandingPage(): ReactNode {
             </p>
             <Link 
               href="#you-framework"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg mt-0"
               aria-label="Start learning about the Y.O.U. Framework"
             >
               Start the Y.O.U. Framework
@@ -212,7 +212,7 @@ export default function May2025LandingPage(): ReactNode {
             </p>
             <Link 
               href="/mindful-automation/youframework.pdf"
-              className="inline-block bg-brand-green-accent text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold shadow-lg"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -281,7 +281,7 @@ export default function May2025LandingPage(): ReactNode {
                   </Link>
                   <Link 
                     href="/mindful-automation/error-proofing-worksheet.pdf"
-                    className="inline-block bg-brand-green-accent text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    className="inline-block bg-brand-green-accent text-black px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -307,7 +307,7 @@ export default function May2025LandingPage(): ReactNode {
                   </Link>
                   <Link 
                     href="https://www.canva.com/design/DAGorHEU8wY/lXRelW3MghRn5kUZKERZUw/view?utm_content=DAGorHEU8wY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab887fd650"
-                    className="inline-block bg-brand-green-accent text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
+                    className="inline-block bg-brand-green-accent text-black px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

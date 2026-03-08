@@ -68,11 +68,11 @@ export default function ForeverTopicsCard({
           {title}
         </h2>
         {description && (
-          <p className="text-lg text-brand-purple max-w-3xl mx-auto mb-6">{description}</p>
+          <p className="text-lg text-brand-green-dark max-w-3xl mx-auto mb-6">{description}</p>
         )}
         <div className="flex items-center justify-center gap-4">
-          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
-          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-purple to-transparent"></div>
+          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-green-dark to-transparent"></div>
+          <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-green-dark to-transparent"></div>
         </div>
       </div>
 
@@ -80,12 +80,12 @@ export default function ForeverTopicsCard({
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {topics.map((topic, index) => {
           const isEven = index % 2 === 0;
-          const borderColor = isEven ? 'border-brand-purple-dark/30' : 'border-brand-green-accent/30';
-          const iconText = isEven ? 'text-brand-purple-dark' : 'text-brand-green-accent';
+          const borderColor = isEven ? 'border-brand-green-dark/30' : 'border-brand-green-accent/30';
+          const iconText = isEven ? 'text-brand-green-dark' : 'text-brand-green-accent';
           return (
             <div
               key={index}
-              className={`group rounded-xl p-6 hover:bg-brand-purple/10 transition-all duration-300 text-center border-2 ${borderColor}`}
+              className={`group rounded-xl p-6 hover:bg-brand-green-dark/10 transition-all duration-300 text-center border-2 ${borderColor}`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Topic Icon - emoji only, no circle, accessible */}
@@ -97,7 +97,7 @@ export default function ForeverTopicsCard({
                 )}
               </div>
               {/* Topic Title */}
-              <h3 className="text-lg font-display text-brand-purple group-hover:text-black transition-colors mb-3">
+              <h3 className="text-lg font-display text-brand-green-dark group-hover:text-brand-green-accent transition-colors mb-3">
                 {topic.title}
               </h3>
               {/* Topic Description */}
