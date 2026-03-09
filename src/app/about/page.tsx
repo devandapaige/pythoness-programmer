@@ -1,55 +1,36 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { calculateYearsOfExperience } from '@/lib/utils'
 
 export const metadata = {
-  title: 'About Amanda | Pythoness Programmer',
-  description: 'I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection, pattern recognition, and brain-friendly clarity—not rescue.',
+  title: 'About Amanda',
+  description: 'Amanda Nelson—the Pythoness Programmer. Senior Full Stack Software Engineer, late-identified neurodivergent, chronic illness navigator. How I got here, how I work, why tarot, and the story behind the name.',
+  openGraph: {
+    title: 'About Amanda | Pythoness Programmer',
+    description: 'Amanda Nelson—the Pythoness Programmer. Late-identified neurodivergent, software engineer, and guide for reflection sessions that ask: What is this struggle trying to teach you?',
+    url: '/about',
+    type: 'website',
+    siteName: 'Pythoness Programmer',
+  },
 }
 
 export default function AboutPage() {
-  // Calculate years of experience (automatically updates)
-  const softwareEngineeringYears = calculateYearsOfExperience(2021, 10) // Started October 2021
-  const communicationsYears = calculateYearsOfExperience(2011, 1) // Started January 2011
-  
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <div className="space-y-8">
-              <div>
-                <h1 className="text-5xl md:text-6xl font-display mb-6 text-white">
-                  I&apos;m Amanda, the Pythoness
-                </h1>
-                <p className="text-xl text-brand-cream/90 leading-relaxed italic mb-6">
-                  I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
-                </p>
-                <p className="text-xl text-brand-cream/90 leading-relaxed">
-                  I&apos;m not here to rescue you from tech emergencies. I&apos;m here to sit with you in the aftermath of your last tech hurdle and ask: What is this struggle trying to teach you?
-                </p>
-                <p className="text-lg text-brand-cream/80 mt-4">
-                  You&apos;re already doing the work. You&apos;re building your own systems, learning your tools, making progress. But you keep hitting the same walls. The same friction points. The same patterns that slow you down or make you feel like you&apos;re failing when you&apos;re not.
-                </p>
-                <p className="text-lg text-brand-cream/80 mt-4">
-                  I help you see what you can&apos;t see alone: the internalized assumptions hiding in your workflow, the colonial logic baked into your folder structure, the ways your tools are working against your neurodivergent brain instead of with it.
-                </p>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-lg text-brand-cream/80">
-                  I don&apos;t swoop in with quick fixes. I guide you through reflection and pattern recognition so you understand why your systems keep breaking—and discover new pathways forward.
-                </p>
-                <p className="text-lg text-brand-cream/80">
-                  With {softwareEngineeringYears} years of software engineering and {communicationsYears}+ years in communications, customer service, and business operations, I bring deep technical expertise plus a lens for how systems are designed to work—or fail. That background informs my coaching; I don&apos;t build custom websites or software for clients under this brand. My sessions blend that expertise with tarot-guided intuition and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
-                </p>
-              </div>
-
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-white">
+                I spent 15 years being good at systems. I just didn&apos;t know why — or what it was costing me.
+              </h1>
+              <p className="text-xl text-brand-cream/90 leading-relaxed">
+                I&apos;m Amanda Nelson — the Pythoness Programmer. Senior Full Stack Software Engineer. Late-identified neurodivergent. Chronic illness navigator. And someone who built the reflection skills I now teach entirely by necessity, in the hardest stretch of my life so far.
+              </p>
+              <p className="text-lg text-brand-cream/80">
+                Here&apos;s the version of my story that actually matters for why you&apos;re here.
+              </p>
             </div>
-
-            {/* Image */}
             <div className="relative">
               <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden ring-4 ring-brand-green-accent/30">
                 <Image
@@ -60,296 +41,261 @@ export default function AboutPage() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-green-accent/20 rounded-full"></div>
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-cream/20 rounded-full"></div>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-green-accent/20 rounded-full" aria-hidden="true" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-brand-cream/20 rounded-full" aria-hidden="true" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* My Story Section */}
+      {/* How I Got Here */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-cream via-brand-cream/95 to-brand-cream text-brand-green-dark">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-brand-green-dark">
-              My Story
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-green-dark to-transparent"></div>
-              <p className="text-xl text-brand-green-dark/80 max-w-2xl">
-                How I became the Pythoness and why I&apos;m passionate about helping others find tech clarity.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-green-dark to-transparent"></div>
-            </div>
-          </div>
-
+          <h2 className="text-4xl md:text-5xl font-display mb-12 text-brand-green-dark">
+            How I Got Here
+          </h2>
           <div className="space-y-8 text-lg leading-relaxed">
             <p>
-            My journey into tech has always been about making sense of the chaos. I&apos;ve found that the biggest breakthroughs—in code and in life—often come after periods of deep confusion. My gift is sitting with that complexity until the &apos;aha&apos; moment arrives, and then sharing that clarity with others. But it&apos;s not just about solving problems—it&apos;s about seeing the patterns others miss and connecting dots across industries that have historically gatekept knowledge.
-            </p>
-            
-            <p>
-              I discovered that traditional tech approaches often don&apos;t account for different ways of thinking and processing information. The overwhelm of too many options, the frustration of tools that don&apos;t work the way my brain does, and the constant feeling of being &quot;behind&quot; in an ever-changing landscape. But more than that, I realized that many industries—law, marketing, tech—are designed to keep people dependent rather than empowered.
-            </p>
-            
-            <p>
-              This led me to develop a different approach - one that prioritizes clarity over complexity, accessibility over assumptions, and individual needs over one-size-fits-all solutions. I don&apos;t want clients who want me to solve their problems—I want clients who want to solve their own problems but need a hand in bringing their vision to life.
-            </p>
-            
-            <p>
-              Today, I combine my technical expertise with deep empathy for the neurodivergent experience to help small business owners build digital fluency, support digital wellbeing, and create workflows that actually feel comfortable for your unique brain. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights.
+              I came to software engineering sideways. Before code, I spent over 15 years in communications, customer service, and systems building — work that required exactly the kind of pattern recognition, detail orientation, and systems thinking that neurodivergent brains are often exceptional at. I just didn&apos;t have that language for it yet.
             </p>
             <p>
-              Alongside my passion for making tech accessible, I&apos;ve had the privilege of working as a Software Engineer since October 2021, when I completed a bootcamp and pivoted into tech. But my real superpower comes from my {communicationsYears}+ years in communications and customer service across access control security, training and hiring, managing, scheduling, order fulfillment (both in-person and online), law settlements and recalls, and other communication patterns. This diverse background translates tremendously to my tech work—I understand how businesses actually operate, how people communicate, and how systems are designed to work (or fail). My technical background means I bring not just empathy, but also deep operational insights and proven results to every project. But what truly sets me apart is my ability to see patterns others miss—connections across law, marketing, and tech that reveal how systems are designed to work, and where they&apos;re designed to fail.
+              In 2020, during the pandemic, I enrolled in a part-time software development bootcamp. I wanted to make the formal leap into tech. What I didn&apos;t know was that I was also walking into the most clarifying — and most destabilizing — period of my life.
             </p>
             <p>
-              <strong>Who this is for:</strong> You&apos;re looking for a guide who helps you understand your tech struggles, not just solve them. You might be a neurodivergent creative who keeps hitting the same workflow walls; someone who&apos;s tried all the &quot;productivity&quot; tools and they all feel wrong; a small business owner tired of tech that doesn&apos;t fit how your brain works; a person doing decolonizing work who wants tech that aligns with your values; or anyone who wants to learn, not just be rescued.
+              I got my first engineering job in 2021 at Zappos.com. I was proud. I was also, quietly, falling apart in ways I couldn&apos;t name yet.
             </p>
             <p>
-              <strong>Who this isn&apos;t for:</strong> People looking for emergency tech rescue; anyone wanting me to &quot;just fix it&quot; without understanding why it broke; folks who aren&apos;t interested in reflection or pattern work; or anyone expecting me to have all the answers. I&apos;m a guide, not a guru.
+              That same year I received an official ADHD diagnosis. I&apos;d had it my whole life. Suddenly, a lot of things made sense — and a lot of other things got harder, because now I had to actually look at them.
+            </p>
+            <p>
+              I&apos;d been living with fibromyalgia since 2016 and chronic migraines since the same year. In 2018 I was bedbound for nine months. My body had been telling me something for years. I was only beginning to learn how to listen.
+            </p>
+            <p>
+              Being a new software engineer while also being a newly-diagnosed neurodivergent person with a chronic illness, no direct manager, and no roadmap — that&apos;s not a gap year story. That&apos;s just what it was. Hard. Clarifying. Mine.
+            </p>
+            <p>
+              What helped wasn&apos;t a system. It was people. A TikTok community of late-identified and lifelong neurodivergent adults who were naming patterns I&apos;d been carrying alone. Marginalized voices who had been talking for years about how our systems — tech systems, productivity systems, social systems — were built to serve a particular kind of brain and body, and how everyone else was just expected to adapt.
+            </p>
+            <p>
+              I&apos;m near Richmond, Virginia — where I went to college, where I took my first steps into adulthood, and where, in 2020, I watched confederate statues come down in the streets. That wasn&apos;t just a national moment. It was a collective reckoning happening in a place I know, in a community I belong to — a visible, physical act of examining what had been inherited, erected, and normalized, and deciding to stop carrying it.
+            </p>
+            <p>
+              The BLM protests of 2020 cracked something open in me about decolonization — about what it means to look honestly at the systems we&apos;ve inherited and internalized, and stop blaming ourselves for struggling inside them. That framework didn&apos;t just change how I thought about society. It changed how I thought about my tools. Not how everyone else was using them — how <em>I</em> was using them, and what that revealed about what I&apos;d absorbed without question.
+            </p>
+            <p>
+              That&apos;s where the Pythoness Programmer comes from. Not from having it all figured out. From building the reflection skills in the middle of the hardest stretch — and refusing to stop once I got through it.
             </p>
           </div>
         </div>
       </section>
 
-      {/* The "Psychic" Approach Section */}
+      {/* How I Work */}
       <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Why &quot;Digital Psychic&quot;?
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-              <p className="text-xl text-white max-w-3xl">
-                My insights aren&apos;t mystical predictions—they&apos;re real connections drawn from deep pattern recognition across industries that have historically gatekept knowledge.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Left Column */}
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-                <h3 className="text-2xl font-display mb-4 text-brand-cream">Pattern Recognition</h3>
-                <p className="text-white/90">
-                  My background in sociology, civics, and politics gives me a unique lens for seeing how systems truly work—and where they&apos;re designed to fail. I don&apos;t just see the surface-level tech issues; I see the deeper structural problems that create them.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-                <h3 className="text-2xl font-display mb-4 text-brand-cream">Industry Connections</h3>
-                <p className="text-white/90">
-                  I make unsettling connections across law, marketing, and tech—industries that have historically gatekept knowledge from the people who need it most. My recommendations come from understanding how these systems interconnect and where the gaps are designed to keep people dependent.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Column */}
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-                <h3 className="text-2xl font-display mb-4 text-brand-cream">Spiritual Creation</h3>
-                <p className="text-white/90">
-                  Creation and ideation are spiritual processes. I combine the mystical with the practical to get at the heart of what your business truly needs. The tarot cards aren&apos;t about fortune-telling—they&apos;re about accessing deeper intuition and wisdom.
-                </p>
-              </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-                <h3 className="text-2xl font-display mb-4 text-brand-cream">Empowering, Not Enabling</h3>
-                <p className="text-white/90">
-                  I don&apos;t want clients who want me to solve their problems. I want clients who want to solve their own problems but need a hand in bringing their vision to life. My role is to guide you to your own insights and help you implement them.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+            How I Work
+          </h2>
+          <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
+            I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
+          </p>
+          <p className="text-lg text-brand-cream/80 mb-8">
+            I don&apos;t swoop in with quick fixes. I don&apos;t have all the answers, and I&apos;m not here to pretend otherwise. I&apos;m a guide, not a guru.
+          </p>
+          <p className="text-xl text-brand-cream mb-8 leading-relaxed">
+            What I do is sit with you in the aftermath of your last tech hurdle and ask: <em>What is this struggle trying to teach you?</em>
+          </p>
+          <p className="text-lg text-brand-cream/80 mb-6">Together we:</p>
+          <ul className="space-y-4 text-brand-cream/90 mb-8">
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Reflect on the patterns you keep repeating — and why they keep failing
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Uncover what you&apos;ve internalized from ableist, productivity-obsessed tech culture
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Discover resources you didn&apos;t know existed — tools, approaches, and frameworks that actually fit your brain
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Build understanding so you don&apos;t make it a third time
+            </li>
+          </ul>
+          <p className="text-lg text-brand-cream/80">
+            My sessions blend deep technical expertise, tarot-guided intuition, and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
+          </p>
         </div>
       </section>
 
-      {/* Active & Rest Periods Section */}
+      {/* Why Tarot */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Active & Rest Periods
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-              <p className="text-xl text-brand-cream/90 max-w-3xl">
-                Following the ancient tradition of the Pythia Oracles of Delphi
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-8 text-lg leading-relaxed">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-accent">
-                The Tradition of Rest
-              </h3>
-              <p className="text-brand-cream/90 mb-4">
-                Just as the Pythia, the high priestess of the Temple of Apollo at Delphi, observed periods of rest during the winter months, I honor cycles of rest and renewal. The Pythia understood that wisdom and service require periods of restoration—times to withdraw, reflect, and prepare for the active season ahead.
-              </p>
-              <p className="text-brand-cream/90">
-                <strong>Active Season:</strong> March - November<br />
-                <strong>Rest Period:</strong> November - March
-              </p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-accent">
-                Accommodating Chronic Illness & Chronic Pain
-              </h3>
-              <p className="text-brand-cream/90">
-                This schedule isn&apos;t just about tradition—it&apos;s about sustainability and self-care. Living with chronic illnesses and chronic pain means I need to honor my body&apos;s needs and limitations. The rest period allows me to manage my health, reduce stress, and prevent burnout that would otherwise compromise the quality of my work and my ability to serve clients well.
-              </p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-accent">
-                Nurturing Creativity Through Slowness
-              </h3>
-              <p className="text-brand-cream/90">
-                The rest period also forces me to live a slower life—and that&apos;s intentional. In our fast-paced world, creativity often gets squeezed out by constant productivity demands. By committing to rest, I create space for reflection, inspiration, and the kind of deep thinking that leads to breakthrough insights. This slower pace isn&apos;t a limitation—it&apos;s a feature that makes my active season more powerful and my insights more valuable.
-              </p>
-            </div>
-          </div>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+            Why Tarot
+          </h2>
+          <p className="text-xl text-brand-cream/90 leading-relaxed mb-6">
+            Because the best diagnostic tool isn&apos;t always a flowchart.
+          </p>
+          <p className="text-lg text-brand-cream/80 leading-relaxed mb-6">
+            Tarot works for me the same way pattern recognition works — it surfaces what&apos;s already present and gives it a frame. I&apos;m not predicting your future. I&apos;m using it as a structured way to enter and exit the reflection space, to hold the complexity of what we&apos;re examining, and to give you something to carry with you after we&apos;re done.
+          </p>
+          <p className="text-lg text-brand-cream/80 leading-relaxed">
+            If that&apos;s not your thing, you&apos;re still welcome here. But it&apos;s not going anywhere.
+          </p>
         </div>
       </section>
 
-      {/* My Philosophy Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              My Philosophy
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-              <p className="text-xl text-brand-cream/90 max-w-3xl">
-                The core values that guide how I work with you: learning over dependency, resourcefulness, serenity, inclusion, humor, and resilience.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-            </div>
-          </div>
+      {/* The Name */}
+      <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
+            The Name
+          </h2>
+          <p className="text-xl text-brand-cream/90 leading-relaxed">
+            The Pythia were ancient oracles — the ones people came to when they were standing at a crossroads and needed someone to sit with the complexity and speak plainly. They didn&apos;t give orders. They demystified.
+          </p>
+          <p className="text-xl text-brand-cream/90 leading-relaxed mt-6">
+            That&apos;s the work. Tech is full of complexity that gets used to make people feel small. My job is to make it clear — and to remind you that your brain was never the problem.
+          </p>
+        </div>
+      </section>
 
+      {/* My Core Values */}
+      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-cream via-brand-cream/95 to-brand-cream text-brand-green-dark">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-display mb-12 text-brand-green-dark text-center">
+            My Core Values
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Learning */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🧠</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Learning</h3>
-              <p className="text-brand-cream/80">
-                I believe in building digital fluency, not dependency. My goal is to guide you to your own aha moments—to help you understand your tech deeply enough that you can troubleshoot your own patterns.
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-dark/10">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">Learning</h3>
+              <p className="text-brand-green-dark/80">
+                I believe in building digital fluency, not dependency. My goal is to guide you to your own aha moments, not create a reliance on mine.
               </p>
             </div>
-
-            {/* Resourcefulness */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🔍</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Resourcefulness</h3>
-              <p className="text-brand-cream/80">
-                There are so many tools, approaches, and frameworks that don&apos;t get mainstream attention but might be perfect for your brain. I love pointing people toward resources they&apos;ve never heard of—the hidden gems that change everything.
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-dark/10">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">Resourcefulness</h3>
+              <p className="text-brand-green-dark/80">
+                There are so many tools, frameworks, and approaches that don&apos;t get mainstream attention but might be exactly right for your brain. I love finding them. Hidden gems are my thing.
               </p>
             </div>
-
-            {/* Serenity */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🌙</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Serenity</h3>
-              <p className="text-brand-cream/80">
-                Tech struggles are stressful enough. Our sessions are calm, grounded spaces where we can slow down and actually think. No pressure, no judgment, no urgency—just clarity.
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-dark/10">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">Serenity</h3>
+              <p className="text-brand-green-dark/80">
+                Tech struggles are stressful enough. Our sessions are calm, grounded spaces. No pressure, no judgment, no urgency. Just clarity.
               </p>
             </div>
-
-            {/* Inclusion */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🌈</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Inclusion</h3>
-              <p className="text-brand-cream/80">
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-dark/10">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">Inclusion</h3>
+              <p className="text-brand-green-dark/80">
                 This is a safe, affirming space for LGBTQIA+ folks, sex workers, and anyone marginalized by mainstream tech culture. I center neurodivergent experiences and decolonizing practices in everything I do.
               </p>
             </div>
-
-            {/* Humor */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">✨</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Humor</h3>
-              <p className="text-brand-cream/80">
-                Sometimes the best way through a tech struggle is to laugh at the absurdity of it all. I bring levity and perspective—because taking our work seriously doesn&apos;t mean we can&apos;t have fun.
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-dark/10">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">Humor</h3>
+              <p className="text-brand-green-dark/80">
+                Sometimes the most useful thing we can do is laugh at the absurdity of a system that was never built for us. I bring levity. It&apos;s part of the work.
               </p>
             </div>
-
-            {/* Resilience */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6">
-                <span className="text-2xl">🛡️</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-brand-cream">Resilience</h3>
-              <p className="text-brand-cream/80">
-                You&apos;ve survived every tech hurdle so far. My job is to help you build systems and understanding that make you even stronger for the next one. We&apos;re not just solving problems—we&apos;re building capacity.
-              </p>
-            </div>
-          </div>
-
-          {/* Centered Rest & Renewal Statement */}
-          <div className="mt-16 text-center">
-            <div className="bg-brand-green-accent/10 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-accent/20 shadow-2xl max-w-4xl mx-auto">
-              <div className="w-20 h-20 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-3xl">🌙</span>
-              </div>
-              <h3 className="text-3xl font-display mb-6 text-brand-cream">
-                Honoring Rest & Renewal
-              </h3>
-              <p className="text-xl text-brand-cream/90 leading-relaxed max-w-3xl mx-auto">
-                Following the tradition of the Pythia Oracles of Delphi, I honor cycles of rest and renewal. This schedule accommodates my chronic illnesses and chronic pain while nurturing creativity through intentional slowness. Rest isn&apos;t a limitation—it&apos;s essential for sustainable service and deeper insights. By forcing myself to live a slower life, I create space for reflection, inspiration, and the kind of deep thinking that leads to breakthrough insights.
+            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border border-brand-green-dark/10">
+              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">Resilience</h3>
+              <p className="text-brand-green-dark/80">
+                You&apos;ve survived every tech hurdle so far. My job is to help you build the understanding that makes you stronger for the next one. We&apos;re not just working through a problem — we&apos;re building capacity.
               </p>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Who This Is For / Who This Isn't For */}
+      <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xl text-brand-cream/90 mb-12 text-center">
+            You&apos;re looking for a guide who helps you understand your tech struggles, not just patch them.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-display mb-6 text-brand-green-accent">
+                Who This Is For
+              </h2>
+              <p className="text-brand-cream/80 mb-4">You might be:</p>
+              <ul className="space-y-3 text-brand-cream/90">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+                  A neurodivergent creative who keeps hitting the same workflow walls
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+                  Someone newly diagnosed — or in the middle of figuring out what your brain actually is — who&apos;s looking back at old patterns with new eyes
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+                  A small business owner tired of tech that doesn&apos;t fit how you think
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+                  Someone doing decolonizing work who wants their systems to align with their values
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+                  A person who&apos;s tried every productivity tool and is starting to wonder if the tools are the problem
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-display mb-6 text-brand-cream">
+                Who This Isn&apos;t For
+              </h2>
+              <ul className="space-y-3 text-brand-cream/80">
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-cream/60" />
+                  People looking for emergency tech rescue
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-cream/60" />
+                  Anyone who wants me to &quot;just fix it&quot; without understanding why it broke
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-cream/60" />
+                  Folks who aren&apos;t interested in reflection or pattern work
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-cream/60" />
+                  Anyone expecting me to have all the answers
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Call to Action Section */}
+      {/* Call to Action */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
             Ready to Reflect?
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            If you&apos;re tired of repeating the same tech mistakes and ready to understand what your struggles are trying to teach you, let&apos;s work together. I offer Software Psychic sessions—reflection sessions with tarot-guided insight and pattern recognition—so you don&apos;t make it a third time.
+            If you&apos;re tired of repeating the same tech patterns and ready to understand what they&apos;re trying to teach you, let&apos;s work together.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services"
-              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
-            >
-              View Services &amp; Pricing
-            </Link>
-            <Link
-              href="https://cal.com/pythoness/async"
+              href="https://cal.com/pythoness/20min"
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
+            >
+              Book a Session
+            </Link>
+            <Link
+              href="/resources"
               className="inline-block bg-white/10 border-2 border-brand-cream/50 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold"
             >
-              Book Async Reading — $30
+              Explore Free Resources
             </Link>
           </div>
-          <p className="text-brand-cream/80 text-sm mb-2">
-            Or book a live session: <Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline font-medium">20-min</Link> or <Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline font-medium">60-min</Link>
-          </p>
-          <p className="text-brand-cream/70 text-sm">
-            Stay in the loop: <Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline">Subscribe to our newsletter</Link> for insights and updates.
-          </p>
         </div>
       </section>
     </main>

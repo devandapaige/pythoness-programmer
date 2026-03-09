@@ -1,15 +1,16 @@
 # Cal.com Events Copy Guide — Pythoness Programmer
 
-Use this guide when creating or updating your Cal.com event types for Software Psychic sessions. Keep copy consistent with the site and the [Site Copy & Voice Guide](./Site%20Copy%20&%20Voice%20Guide.md).
+Use this guide when creating or updating your Cal.com event types for Software Psychic sessions. Keep copy consistent with the site and the [Site Copy & Voice Guide](./Site%20Copy%20&%20Voice%20Guide.md). Updated March 2026.
 
 ---
 
 ## Voice alignment
 
 - **Reflection, not rescue:** Sessions are for understanding patterns and what your brain needs, not emergency fixes.
-- **Intro thread:** "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need."
-- **Levity:** Help people not make the mistake a **third** time (you've already made it—let's not repeat it).
+- **Central question:** "What is this struggle trying to teach you?"
+- **Levity:** So you don't make it a **third** time (you've already made it—let's not repeat it).
 - **Inclusion:** Judgment-free, LGBTQIA+ and sex-worker affirming.
+- **Guide, not guru:** I don't have all the answers; I sit with you and reflect.
 
 ---
 
@@ -24,21 +25,21 @@ Use this guide when creating or updating your Cal.com event types for Software P
 **Description (what invitees see when booking):**
 
 ```
-Quick reflection and resource discovery with the Pythoness Programmer.
+Quick reflection and resource discovery.
 
-We'll start and end with a tarot card pull to guide our session. Perfect for understanding a specific struggle, discovering new resources, or getting clarity on your next step.
+We start and end with a tarot pull. In between, we look at one specific tech struggle — not to fix it, but to understand what it's revealing. I'll point you toward resources and approaches you may not have heard of. You'll leave with one clear next step and a follow-up email with everything we covered.
 
 What to expect:
-• Tarot card pull at start and end
-• Reflection on your recent tech struggle
-• Pattern recognition: what this reveals about what you've internalized
-• Resources and tools you may not have heard of
-• One clear next step forward
+• Tarot pull at start and end
+• Focused reflection on a specific tech struggle
+• Pattern recognition: what this is revealing about what you've internalized
+• Resources and tools tailored to your brain — not the mainstream defaults
+• One clear next step
 • Follow-up email with resources
 
-Perfect for: understanding a specific tech struggle, discovering neurodivergent-friendly resources you haven't tried, getting a second perspective on what feels "off," or an initial consultation before a deeper dive.
+This session is right for you if: you're trying to understand a specific friction point; you want a second perspective on something that feels off; you're new here and want to get a feel for the work before going deeper; you've just discovered something about your brain and you're looking back at old tech patterns with new eyes; you want resources — real ones, not the same five apps everyone recommends.
 
-These aren't troubleshooting sessions—they're reflection sessions. No pressure, no judgment. $30.
+Reflection sessions, not rescue. $30.
 ```
 
 **Suggested intake questions (if you use Cal.com custom questions):**
@@ -72,20 +73,20 @@ Reminder: Your 20-min Software Psychic session is [time]. We'll start with a tar
 **Description (what invitees see when booking):**
 
 ```
-Deep dive into your tech patterns with the Pythoness Programmer.
+Deep pattern work. Includes an optional 20-minute follow-up consultation within 30 days.
 
-We'll start and end with a tarot card pull to guide our session. Ideal for understanding recurring struggles, uncovering what you've internalized from ableist tech culture, and building a framework for better decisions going forward.
+This is the deep dive. We start and end with a tarot pull and spend the time in between going beneath the surface — not just the most recent struggle, but the pattern underneath it. What keeps recurring. What you keep trying that doesn't stick. What productivity culture has convinced you is a personal failure. You'll leave with a framework for understanding your own tech patterns, resources tailored to how your brain actually works, and the option to book a 20-minute follow-up consultation within 30 days if you want to check in on what's landing.
 
 What to expect:
-• Tarot card pull at start and end
-• Deep reflection on patterns you keep repeating
-• Uncover what you've internalized from productivity culture
-• Discover neurodivergent-friendly alternatives to mainstream tools
-• Build a framework for making better tech decisions
-• Implementation roadmap that works with your brain
-• 30-day follow-up consultation
+• Tarot pull at start and end
+• Deep reflection on recurring patterns
+• Examination of what you've internalized from ableist, productivity-obsessed tech culture
+• Neurodivergent-friendly alternatives to tools and approaches that aren't working
+• A framework for making better tech decisions going forward
+• Implementation roadmap built around your brain, not a generic system
+• Optional 20-minute follow-up consultation within 30 days
 
-Perfect for: understanding why you keep hitting the same walls, mapping patterns across multiple struggles, discovering resources tailored to your neurodivergent brain, building systems that actually fit you, or when you're ready to stop repeating the same mistakes—so you don't make it a third time.
+This session is right for you if: you keep hitting the same walls and you're ready to understand why; you want to map patterns across multiple struggles, not just solve one; you're building systems — for your business, your creative practice, your life — and they keep breaking; you're ready to stop repeating the same patterns and understand what's underneath them; you want the deeper work, not just a next step.
 
 Reflection sessions, not rescue. $60.
 ```
@@ -99,13 +100,13 @@ Reflection sessions, not rescue. $60.
 **Confirmation / thank-you message:**
 
 ```
-You're booked for a 60-min deep dive. We'll use tarot and reflection to unpack your patterns and build a path forward—plus you'll have a 30-day follow-up consultation. See you soon.
+You're booked for a 60-min deep dive. We'll use tarot and reflection to unpack your patterns and build a path forward—plus you'll have the option to book a 20-minute follow-up within 30 days. See you soon.
 ```
 
 **Reminder message:**
 
 ```
-Reminder: Your 60-min Software Psychic session is [time]. We'll start with a tarot pull and go deep on your patterns. Your 30-day follow-up is included.
+Reminder: Your 60-min Software Psychic session is [time]. We'll start with a tarot pull and go deep on your patterns. Your optional 20-min follow-up within 30 days is available when you're ready.
 ```
 
 ---
@@ -121,23 +122,28 @@ Reminder: Your 60-min Software Psychic session is [time]. We'll start with a tar
 **Description (what invitees see when booking):**
 
 ```
-Receive a potent 20-minute intuitive reading for your project, website, or online presence, delivered as a private video.
+A 20-minute tarot-guided reading for your project, website, or online presence — delivered as a private video, on your schedule.
 
-This is asynchronous—we don't meet live. The time you select is your delivery deadline: that's when you'll receive your video by email. You're not booking a meeting slot; you're choosing when you want your reading to land in your inbox.
+This is asynchronous—we don't meet live. You provide context through the intake form, I record your personalized reading with a tarot pull at start and end, and you receive a private video delivered to your inbox by your chosen deadline. Watch it once. Watch it five times. Share it with no one. It's yours.
 
-How it works:
-1. Choose your delivery time — pick the date and time when you want to receive your video. I'll record your reading and email it to you by that time.
-2. Provide context — answer the intake questions when you book (the more detail, the deeper the reading).
-3. Receive your video — I'll record your personalized session with a tarot pull at start and end and send it to your email by your chosen time. Watch and re-watch at your own pace.
-
-What you'll get:
+What you'll receive:
 • Tarot-guided reflection on your project or web presence
-• Insights on what's working with your brain vs. against it
-• Pattern recognition: what your current setup reveals
+• Insight into what's working with your brain versus against it
+• Pattern recognition: what your current setup is revealing
 • Suggestions for resources or approaches you may not have considered
 • Clarity on next steps
 
-Important: This is not a live meeting—your video will be recorded and emailed to you by your selected time. Non-refundable once booked; please be ready to proceed. You'll get a confirmation request—please verify via email to ensure delivery.
+How it works:
+1. Choose your delivery deadline — the date and time you want your video to arrive
+2. Fill out the intake form — the more context you give, the deeper the reading
+3. Receive your private video by your chosen time
+
+Important to know:
+• This is not a live meeting — you're booking a delivery deadline, not a meeting slot
+• Non-refundable once booked — please be ready to proceed before confirming
+• You'll receive a confirmation request — please verify via email to ensure delivery
+
+This reading is right for you if: your schedule doesn't allow for live sessions right now; you want an outside perspective on a project, site, or digital presence; you process better by watching and rewatching on your own time; you're at a crossroads with something and want intuitive guidance without the pressure of a live conversation.
 
 $30.
 ```
@@ -179,11 +185,11 @@ Use these as a blueprint when setting up Cal.com workflows (or similar automatio
 
 | When | Type | Copy / purpose |
 |------|------|----------------|
-| **24h before** | Reminder | "Reminder: Your 60-min Software Psychic session is tomorrow at [time]. We'll start with a tarot pull and go deep on your patterns. Your 30-day follow-up consultation is included." |
+| **24h before** | Reminder | "Reminder: Your 60-min Software Psychic session is tomorrow at [time]. We'll start with a tarot pull and go deep on your patterns. Your optional 20-minute follow-up within 30 days is available when you're ready." |
 | **1h before** (optional) | Reminder | "Your deep dive is in 1 hour. See you soon." |
-| **Right after** | Follow-up | Thank them; summarize the framework or roadmap you co-created. Remind them of the 30-day follow-up and how to book it (e.g. "Reply to this email or book again when you're ready within 30 days"). |
-| **Within 24–48h** | Follow-up (summary + resources) | Send a concise summary, implementation roadmap, and resources. Include a clear CTA for the 30-day follow-up (e.g. "Book your follow-up anytime in the next 30 days"). |
-| **~25–28 days after** (optional) | Nudge | "You have a few days left to use your 30-day follow-up. If you want to check in on your patterns or next steps, just reply or book a time." |
+| **Right after** | Follow-up | Thank them; summarize the framework or roadmap you co-created. Remind them of the optional 20-minute follow-up within 30 days and how to book it (e.g. "Reply to this email or book a 20-min follow-up when you're ready within 30 days"). |
+| **Within 24–48h** | Follow-up (summary + resources) | Send a concise summary, implementation roadmap, and resources. Include a clear CTA for the optional 20-minute follow-up (e.g. "Book your 20-min follow-up anytime in the next 30 days if you want to check in on what's landing"). |
+| **~25–28 days after** (optional) | Nudge | "You have a few days left to book your optional 20-min follow-up. If you want to check in on your patterns or next steps, just reply or book a time." |
 
 ### Async Project & Web Presence Reading
 
@@ -198,8 +204,8 @@ Use these as a blueprint when setting up Cal.com workflows (or similar automatio
 
 - [ ] **Reminders** are set for each event type (at least 24h before; 1h optional for live sessions).
 - [ ] **Async** reminders say "delivery by [time]" not "meeting at [time]."
-- [ ] **Follow-up** after live sessions includes the promised resources and (for 60-min) the 30-day follow-up CTA.
-- [ ] **60-min:** Optional nudge before the 30-day follow-up window closes.
+- [ ] **Follow-up** after live sessions includes the promised resources and (for 60-min) the optional 20-min follow-up within 30 days CTA.
+- [ ] **60-min:** Optional nudge before the 30-day window to book the follow-up closes.
 - [ ] **Async:** Confirmation and reminder both state that the selected time is when they receive the video.
 
 ---
@@ -211,15 +217,13 @@ Use this in your Cal.com profile or "about" section so booking visitors see the 
 **Suggested copy:**
 
 ```
-I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need.
+I'm Amanda — the Pythoness Programmer. Late-identified neurodivergent, Senior Software Engineer with 15+ years across communications, systems, and code. I don't swoop in with quick fixes. I'm a guide, not a guru. What I do is sit with you in the aftermath of your last tech hurdle and ask: What is this struggle trying to teach you?
 
-I'm Amanda, the Pythoness Programmer. I'm not here to rescue you from tech emergencies—I'm here to sit with you in the aftermath of your last tech hurdle and ask: What is this struggle trying to teach you?
+Together we reflect on the patterns you keep repeating — and why they keep failing; uncover what you've internalized from ableist, productivity-obsessed tech culture; discover resources you didn't know existed; and build understanding so you don't make it a third time. My sessions blend deep technical expertise, tarot-guided intuition, and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
 
-Through a blend of deep technical expertise, tarot-guided intuition, and neurodivergent-centered design, I help you see what you can't see alone: the internalized assumptions in your workflow, the ways your tools work against your brain instead of with it, and the resources you didn't know existed. My Software Psychic sessions are reflection sessions—we start and end with a tarot pull—so you don't make it a third time.
+Reflection sessions, not rescue. Judgment-free, affirming space (LGBTQIA+ & SW affirming). Built around your brain, not a productivity standard.
 
-My approach is built on: building digital fluency, not dependency; pointing you toward hidden gems that fit your brain; calm, grounded sessions with no pressure; a safe, affirming space (LGBTQIA+ & SW affirming); levity when you need it; and building capacity for the next hurdle.
-
-Ready to understand what your struggles are trying to teach you? Let's connect.
+Ready to understand what your struggles are trying to teach you? Book a session.
 ```
 
 ---
@@ -231,10 +235,10 @@ Ready to understand what your struggles are trying to teach you? Let's connect.
 - [ ] **Pricing** is correct in the event ($30 / $60) and mentioned in the description if helpful.
 - [ ] **Confirmation and reminder** messages are warm, short, and consistent with the site (no rescue language; reflection + tarot).
 - [ ] **Intake questions** ask about the struggle or pattern, not "what do you want fixed."
-- [ ] **60-min** copy mentions the 30-day follow-up consultation.
-- [ ] **Async** copy clearly states: the time they select is when they **receive** their video (delivery deadline), not a meeting time; no live meeting; video by email; non-refundable; confirm via email for delivery.
+- [ ] **60-min** copy mentions the **optional 20-minute follow-up consultation within 30 days** (not "30-day follow-up" as a single block).
+- [ ] **Async** copy clearly states: the time they select is their **delivery deadline** (when they receive the video), not a meeting time; no live meeting; video by email; non-refundable once booked; confirm via email to ensure delivery.
 - [ ] **Workflows** (reminders, follow-ups) are set per event type; async reminders say "delivery by [time]."
-- [ ] **Cal.com about/profile** uses the updated description above (intro sentence, reflection not rescue, third time, core values).
+- [ ] **Cal.com about/profile** uses the updated description above (story-led, guide not guru, reflection not rescue, third time).
 
 ---
 

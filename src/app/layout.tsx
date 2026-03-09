@@ -19,8 +19,11 @@ const norwester = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pythonessprogrammer.com'),
-  title: "Pythoness Programmer | Tech Coaching & Reflection Sessions",
-  description: "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.",
+  title: {
+    default: "Pythoness Programmer | Tech That Works, for People Like Us",
+    template: "%s | Pythoness Programmer",
+  },
+  description: "Reflection sessions, not rescue. I sit with neurodivergent creatives and small business owners in the aftermath of tech hurdles and ask: What is this struggle trying to teach you? Tarot-guided insight, pattern recognition, and brain-friendly clarity—so you don't make it a third time.",
   keywords: [
     "Tech Coaching",
     "Software Psychic",
@@ -37,13 +40,15 @@ export const metadata: Metadata = {
     "Reflection sessions",
     "Digital Fluency",
     "Amanda Nelson",
-    "Pythoness Programmer"
+    "Pythoness Programmer",
+    "late-identified neurodivergent",
+    "tech clarity"
   ],
   authors: [{ name: "Amanda Nelson" }],
   creator: "Pythoness Programmer",
   openGraph: {
-    title: "Pythoness Programmer | Tech Coaching & Reflection Sessions",
-    description: "I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need. Reflection sessions, not rescue—pattern recognition and brain-friendly clarity.",
+    title: "Pythoness Programmer | Tech That Works, for People Like Us",
+    description: "Reflection sessions, not rescue. Tarot-guided reflection and pattern recognition for neurodivergent creatives and small business owners—so you don't make it a third time.",
     type: "website",
     url: '/',
     siteName: 'Pythoness Programmer',

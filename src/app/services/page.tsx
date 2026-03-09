@@ -1,11 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import ServiceCard from '../../components/ServiceCard'
-import PainPointsCard from '../../components/PainPointsCard'
 
 export const metadata = {
-  title: 'Services | Pythoness Programmer',
-  description: 'I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we\'ve internalized and what our brains actually need. Reflection sessions with tarot-guided insight and pattern recognition—not troubleshooting rescue.',
+  title: 'Services',
+  description: 'Reflect on your tech struggles with the Software Psychic. 20-min and 60-min sessions plus async video readings. Tarot-guided reflection, pattern recognition, and resources that fit your brain—starting at $30.',
+  openGraph: {
+    title: 'Services | Pythoness Programmer',
+    description: 'Reflection sessions with the Software Psychic. 20-min, 60-min, and async readings. Understand the patterns you keep repeating—so you don\'t make it a third time.',
+    url: '/services',
+    type: 'website',
+    siteName: 'Pythoness Programmer',
+  },
 }
 
 export default function ServicesPage() {
@@ -13,96 +19,107 @@ export default function ServicesPage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto">
-            <p className="text-xl md:text-2xl text-brand-cream/95 mb-6 leading-relaxed italic">
-              I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
-            </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-white">
-              Reflect on Your Tech Struggles with the Software Psychic
-            </h1>
-            <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
-              I help neurodivergent creatives and small business owners understand the patterns they keep repeating—so they don&apos;t make it a third time. These aren&apos;t troubleshooting sessions—they&apos;re reflection sessions where we examine your last tech hurdle and figure out what it&apos;s revealing about what you&apos;ve internalized and what your brain actually needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="https://cal.com/pythoness/async"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
-              >
-                Book Your Async Reading
-              </Link>
-              <Link
-                href="#services"
-                className="inline-block bg-transparent border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-brand-cream/10 hover:border-brand-cream/50 transition-all duration-300 text-lg font-semibold"
-              >
-                View All Services
-              </Link>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-white">
+            Reflect on Your Tech Struggles with the Software Psychic
+          </h1>
+          <p className="text-xl text-brand-cream/90 mb-8 leading-relaxed">
+            I help neurodivergent creatives and small business owners understand the patterns they keep repeating — so they don&apos;t make it a third time.
+          </p>
+          <p className="text-lg text-brand-cream/80 mb-8 leading-relaxed">
+            These aren&apos;t troubleshooting sessions. They&apos;re reflection sessions.
+          </p>
+          <p className="text-lg text-brand-cream/80 mb-8 leading-relaxed">
+            We examine your last tech hurdle and figure out what it&apos;s revealing: about what you&apos;ve internalized from productivity culture, about what your brain actually needs, about the assumptions hiding in your workflow that you&apos;re too close to see alone.
+          </p>
+          <p className="text-xl text-brand-cream leading-relaxed">
+            Through tarot-guided insight and deep technical expertise, I help you find the clarity that quick fixes never actually deliver.
+          </p>
         </div>
       </section>
 
-      {/* Pain Points Section */}
-      <section className="bg-brand-green-dark">
-        <div className="max-w-7xl mx-auto">
-          <PainPointsCard
-            className="bg-brand-green-dark text-white"
-            title="Hitting the Same Walls?"
-            description="You're already doing the work—building systems, learning your tools, making progress. But the same friction points keep slowing you down or making you feel like you're failing when you're not."
-            painPoints={[
-              { text: "Same patterns repeating no matter what you try" },
-              { text: "Productivity tools that don't fit your brain" },
-              { text: "Tech that works against you instead of with you" },
-              { text: "Internalized assumptions hiding in your workflow" },
-              { text: "Ready to understand what your struggles are teaching you" },
-              { text: "Want to learn, not just be rescued" }
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Main Services Section */}
+      {/* The Sessions */}
       <section id="services" className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              My Services
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
-              <p className="text-xl text-white max-w-3xl">
-                Through tarot-guided insight and deep technical expertise, I help you see what you can&apos;t see alone: the ways your tools work against you, the resources you didn&apos;t know existed, and the new pathways forward.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
+          <h2 className="text-4xl md:text-5xl font-display mb-16 text-white text-center">
+            The Sessions
+          </h2>
+
+          {/* 20-Minute Session */}
+          <div className="mb-16">
+            <div className="max-w-2xl mx-auto">
+              <ServiceCard
+                title="20-Minute Software Psychic Session — $30"
+                subtitle="Quick reflection and resource discovery."
+                description="We start and end with a tarot pull. In between, we look at one specific tech struggle — not to fix it, but to understand what it's revealing. I'll point you toward resources and approaches you may not have heard of. You'll leave with one clear next step and a follow-up email with everything we covered."
+                price="$30"
+                features={[
+                  "Tarot pull at start and end",
+                  "Focused reflection on a specific tech struggle",
+                  "Pattern recognition: what this is revealing about what you've internalized",
+                  "Resources and tools tailored to your brain — not the mainstream defaults",
+                  "One clear next step",
+                  "Follow-up email with resources"
+                ]}
+                ctaLink="https://cal.com/pythoness/20min"
+                ctaText="Book the 20-Minute Session — $30"
+                icon="🔮"
+                textColor="text-brand-cream"
+                note="This session is right for you if: You're trying to understand a specific friction point; you want a second perspective on something that feels off; you're new here and want to get a feel for the work before going deeper; you've just discovered something about your brain and you're looking back at old tech patterns with new eyes; you want resources — real ones, not the same five apps everyone recommends."
+              />
             </div>
           </div>
 
-          {/* Async Service - Featured in its own row */}
-          <div className="mb-12">
+          {/* 60-Minute Session */}
+          <div className="mb-16">
             <div className="max-w-2xl mx-auto">
               <ServiceCard
-                title="Async Project & Web Presence Reading"
-                subtitle="20-Minute Video Recording"
-                description="Receive a potent 20-minute intuitive reading for your project, website, or online presence, delivered as a private video. No live meeting required—perfect for busy schedules."
+                title="60-Minute Software Psychic Session — $60"
+                subtitle="Deep pattern work. Includes an optional 20-minute follow-up consultation within 30 days."
+                description="This is the deep dive. We start and end with a tarot pull and spend the time in between going beneath the surface — not just the most recent struggle, but the pattern underneath it. What keeps recurring. What you keep trying that doesn't stick. What productivity culture has convinced you is a personal failure. You'll leave with a framework for understanding your own tech patterns, resources tailored to how your brain actually works, and the option to book a 20-minute follow-up consultation within 30 days if you want to check in on what's landing."
+                price="$60"
+                features={[
+                  "Tarot pull at start and end",
+                  "Deep reflection on recurring patterns",
+                  "Examination of what you've internalized from ableist, productivity-obsessed tech culture",
+                  "Neurodivergent-friendly alternatives to tools and approaches that aren't working",
+                  "A framework for making better tech decisions going forward",
+                  "Implementation roadmap built around your brain, not a generic system",
+                  "Optional 20-minute follow-up consultation within 30 days"
+                ]}
+                ctaLink="https://cal.com/pythoness/60min"
+                ctaText="Book the 60-Minute Session — $60"
+                icon="🔮"
+                textColor="text-brand-cream"
+                note="This session is right for you if: You keep hitting the same walls and you're ready to understand why; you want to map patterns across multiple struggles, not just solve one; you're building systems — for your business, your creative practice, your life — and they keep breaking; you're ready to stop repeating the same patterns and understand what's underneath them; you want the deeper work, not just a next step."
+              />
+            </div>
+          </div>
+
+          {/* Async Reading */}
+          <div className="mb-16">
+            <div className="max-w-2xl mx-auto">
+              <ServiceCard
+                title="Async Project & Web Presence Reading — $30"
+                subtitle="A 20-minute tarot-guided reading for your project, website, or online presence — delivered as a private video, on your schedule."
+                description="This is asynchronous, meaning we don't meet live. You provide context through the intake form, I record your personalized reading with a tarot pull at start and end, and you receive a private video delivered to your inbox by your chosen deadline. Watch it once. Watch it five times. Share it with no one. It's yours."
                 price="$30"
                 features={[
-                  "Personalized video recording",
-                  "Tarot card pull at start and end",
-                  "Deep project & web presence analysis",
-                  "Pattern recognition insights",
-                  "Watch and re-watch at your pace"
+                  "Tarot-guided reflection on your project or web presence",
+                  "Insight into what's working with your brain versus against it",
+                  "Pattern recognition: what your current setup is revealing",
+                  "Suggestions for resources or approaches you may not have considered",
+                  "Clarity on next steps"
                 ]}
                 ctaLink="https://cal.com/pythoness/async"
-                ctaText="Book Your Async Reading"
+                ctaText="Book the Async Reading — $30"
                 icon="🎥"
                 highlight={true}
-                isNew={true}
-                note="Asynchronous—no live meeting"
+                textColor="text-brand-cream"
+                note="How it works: 1) Choose your delivery deadline. 2) Fill out the intake form — the more context you give, the deeper the reading. 3) Receive your private video by your chosen time. Important: This is not a live meeting — you're booking a delivery deadline, not a meeting slot. Non-refundable once booked. You'll receive a confirmation request — please verify via email to ensure delivery."
                 customStyling={{
-                  backgroundColor: 'from-brand-cream to-white',
-                  textColor: 'text-brand-green-dark',
+                  backgroundColor: 'from-brand-cream/10 to-white/5',
+                  textColor: 'text-brand-cream',
                   accentColor: 'brand-green-accent',
                   borderColor: 'border-brand-green-accent',
                   badgeText: 'ASYNC',
@@ -111,254 +128,144 @@ export default function ServicesPage() {
               />
             </div>
           </div>
-
-          {/* Live 1:1 Services */}
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-display text-white mb-2">Live 1:1 Sessions</h3>
-            <p className="text-brand-cream/80">Interactive sessions with real-time guidance</p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <ServiceCard
-              title="20-Minute Software Psychic Session"
-              subtitle="Quick reflection and resource discovery"
-              description="Quick reflection and resource discovery with the Pythoness Programmer. We'll start and end with a tarot card pull to guide our session. Perfect for understanding a specific struggle, discovering new resources, or getting clarity on your next step."
-              price="$30"
-              features={[
-                "Tarot card pull at start and end",
-                "Reflection on your recent tech struggle",
-                "Pattern recognition: what this reveals about what you've internalized",
-                "Resources and tools you may not have heard of",
-                "One clear next step forward",
-                "Follow-up email with resources"
-              ]}
-              ctaLink="https://cal.com/pythoness/20min"
-              ctaText="Book 20-Minute Session"
-              icon="🔮"
-              note="Great for specific questions or quick wins"
-            />
-
-            <ServiceCard
-              title="60-Minute Software Psychic Session"
-              subtitle="Deep dive into your tech patterns"
-              description="Deep dive into your tech patterns with the Pythoness Programmer. We'll start and end with a tarot card pull. Ideal for understanding recurring struggles, uncovering what you've internalized from ableist tech culture, and building a framework for better decisions going forward."
-              price="$60"
-              features={[
-                "Tarot card pull at start and end",
-                "Deep reflection on patterns you keep repeating",
-                "Uncover what you've internalized from productivity culture",
-                "Discover neurodivergent-friendly alternatives to mainstream tools",
-                "Build a framework for making better tech decisions",
-                "Implementation roadmap that works with your brain",
-                "30-day follow-up consultation"
-              ]}
-              ctaLink="https://cal.com/pythoness/60min"
-              ctaText="Book 60-Minute Session"
-              icon="🔮"
-              note="Most popular for extended guidance"
-            />
-          </div>
         </div>
       </section>
 
-      {/* Why "Software Psychic" Section */}
+      {/* What Makes This Different */}
       <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Why &quot;Software Psychic&quot;?
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-              <p className="text-xl text-white max-w-3xl">
-                My approach isn&apos;t about predicting the future—it&apos;s about seeing patterns others miss and connecting dots across industries that have historically gatekept knowledge.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl">🔍</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Pattern Recognition</h3>
-              <p className="text-white/90">
-                My background in sociology, civics, and politics gives me a unique lens for seeing how systems truly work—and where they&apos;re designed to fail.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl">🔗</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Industry Connections</h3>
-              <p className="text-white/90">
-                I make unsettling connections across law, marketing, and tech—industries that have historically gatekept knowledge from the people who need it most.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl">✨</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Spiritual Creation</h3>
-              <p className="text-white/90">
-                Creation and ideation are spiritual processes. I combine the mystical with the practical to get at the heart of what your business truly needs.
-              </p>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-display mb-8 text-white text-center">
+            What Makes This Different
+          </h2>
+          <p className="text-xl text-brand-cream/90 leading-relaxed mb-6">
+            Most tech help assumes you&apos;re neurotypical, able-bodied, and running on a linear schedule. It assumes the goal is to be more productive, more efficient, more optimized — on someone else&apos;s terms.
+          </p>
+          <p className="text-xl text-brand-cream/90 leading-relaxed mb-6">
+            That&apos;s not what this is.
+          </p>
+          <p className="text-lg text-brand-cream/80 leading-relaxed mb-6">
+            I&apos;ve been the person trying to figure out a new diagnosis while also being a new engineer with no manager, no roadmap, and a body that was already at its limit. I know what it&apos;s like to look for resources and find nothing designed for a brain like yours. I know what it feels like when the productivity advice makes you feel worse, not better, and you&apos;re not sure if that&apos;s a character flaw or a sign that the advice was never built for you.
+          </p>
+          <p className="text-xl text-brand-cream font-medium leading-relaxed">
+            It was never built for you.
+          </p>
+          <p className="text-xl text-brand-green-accent font-medium leading-relaxed mt-2">
+            This work is built for you.
+          </p>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              How We&apos;ll Work Together
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-              <p className="text-xl text-white max-w-3xl">
-                A clear, structured process designed to reduce overwhelm and maximize results. The process starts as soon as you book your session, including your deck preference for our tarot or oracle card pulls.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-white to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl font-bold text-brand-green-accent">1</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Book & Share</h3>
-              <p className="text-white/90">
-                Secure your session and fill out a quick intake form to share your goals, challenges, and priorities.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl font-bold text-brand-green-accent">2</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Assessment</h3>
-              <p className="text-white/90">
-                I review your information and analyze your current systems to identify opportunities for improvement.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl font-bold text-brand-green-accent">3</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Session & Solutions</h3>
-              <p className="text-white/90">
-                We meet for your session, diving into your challenges, brainstorming solutions, and creating a clear action plan together.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-none shadow-2xl text-center">
-              <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <span className="text-2xl font-bold text-brand-green-accent">4</span>
-              </div>
-              <h3 className="text-2xl font-display mb-4 text-white">Follow-Up & Support</h3>
-              <p className="text-white/90">
-                Receive a summary, resources, and next steps after your session. There are options for ongoing support if you need it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
+      {/* Who These Sessions Are For / Aren't For */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-cream via-brand-cream/95 to-brand-cream text-brand-green-dark">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display mb-6 text-brand-green-dark">
-              Frequently Asked Questions
-            </h2>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-green-dark to-transparent"></div>
-              <p className="text-xl text-brand-green-dark/80 max-w-2xl">
-                Common questions about my services and approach.
-              </p>
-              <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-green-dark to-transparent"></div>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                What makes your approach different?
-              </h3>
-              <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                I don&apos;t swoop in with quick fixes. These are reflection sessions: we examine what your tech struggles reveal about what you&apos;ve internalized and what your brain actually needs. I blend deep technical expertise with tarot-guided intuition and neurodivergent-centered design. It&apos;s a judgment-free, affirming space (LGBTQIA+ and sex-worker affirming) where we slow down, reflect, and build understanding together.
-              </p>
-            </div>
-
-            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                Who are these sessions for?
-              </h3>
-              <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                You&apos;re already capable and learning. You need someone who can help you see the patterns you&apos;re too close to notice, point you toward resources that match your actual brain, validate that the friction you feel is real—and show you different ways forward. Not for: emergency tech rescue, anyone who wants me to &quot;just fix it&quot; without understanding why, or folks who aren&apos;t interested in reflection or pattern work.
-              </p>
-            </div>
-
-            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                How do I know which service is right for me?
-              </h3>
-              <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Start with a <a href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:text-brand-green-dark underline">20-minute session</a> for a specific struggle or to discover resources you haven&apos;t tried. The 60-minute session is ideal when you want to understand why you keep hitting the same walls, map patterns across multiple struggles, or build a framework for better tech decisions. The async reading works when you want a potent reflection on your project or web presence on your own time.
-              </p>
-            </div>
-
-            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                What if I need ongoing support?
-              </h3>
-              <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                The 60-minute session includes a 30-day follow-up consultation. Many clients book another session when they&apos;re ready to go deeper or tackle the next pattern. We build understanding so you don&apos;t make it a third time—and you can always return when you need a reflection partner again.
-              </p>
-            </div>
-
-            <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-8 border-none shadow-lg">
-              <h3 className="text-2xl font-display mb-4 text-brand-green-dark">
-                Do you work with businesses or just individuals?
-              </h3>
-              <p className="text-lg text-brand-green-dark/80 leading-relaxed">
-                Both. I work with neurodivergent creatives, small business owners, and anyone doing decolonizing work who wants tech that aligns with their values. My approach is the same: reflection and pattern recognition so you understand your struggles and discover pathways that fit your brain.
-              </p>
-            </div>
-          </div>
+          <p className="text-xl text-brand-green-dark/90 mb-12 text-center">
+            You&apos;re already capable. You&apos;re already working on it. You just need someone who can:
+          </p>
+          <ul className="space-y-4 text-lg text-brand-green-dark/90 mb-16 max-w-2xl mx-auto">
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              See the patterns you&apos;re too close to notice
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Point you toward resources that match your actual brain — not the brain productivity culture designed its tools for
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Validate that the friction you&apos;re feeling is real, and there are different ways forward
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Help you build understanding that sticks, so you don&apos;t keep making it a third time
+            </li>
+          </ul>
+          <h2 className="text-2xl font-display mb-4 text-brand-green-dark text-center">
+            Who These Sessions Aren&apos;t For
+          </h2>
+          <ul className="space-y-3 text-brand-green-dark/80 max-w-2xl mx-auto mb-8">
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-dark/40" />
+              People looking for emergency tech rescue
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-dark/40" />
+              Anyone who wants me to &quot;just fix it&quot; without understanding why it broke
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-dark/40" />
+              People who aren&apos;t interested in reflection or pattern recognition
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-dark/40" />
+              Anyone expecting quick fixes without the deeper work
+            </li>
+          </ul>
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* Session Features (All Sessions) */}
+      <section className="py-24 px-4 md:px-6 bg-brand-green-dark text-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display mb-8 text-white text-center">
+            Session Features (All Sessions)
+          </h2>
+          <ul className="space-y-4 text-brand-cream/90 text-lg">
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Tarot pull at start and end — every time
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Judgment-free, affirming space (LGBTQIA+ &amp; SW affirming)
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Resources and tools you may not have heard of — the hidden gems, not the defaults
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Pattern recognition over quick fixes
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
+              Built around your brain, not a productivity standard
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Call to Action */}
       <section className="py-24 px-4 md:px-6 bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-            Ready to Understand Your Tech Struggles?
+            Ready?
           </h2>
           <p className="text-xl text-brand-cream/90 mb-8 max-w-2xl mx-auto">
-            Choose the session that fits your needs, and let&apos;s reflect together. No pressure, no judgment—just a conversation about how I can help.
+            Choose the session that fits where you are right now.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <p className="text-lg text-brand-cream/80 mb-8 max-w-2xl mx-auto">
+            Not sure which one? Start with the 20-minute session. It&apos;s a real session, not a sample — and it&apos;ll give you a clear sense of whether the deeper work is right for you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
             <Link
-              href="https://cal.com/pythoness/async"
+              href="https://cal.com/pythoness/20min"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
+              className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
             >
-              Book Your Async Reading
+              Book a Session
             </Link>
             <Link
-              href="/about"
-              className="inline-block bg-transparent border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-brand-cream/10 hover:border-brand-cream/50 transition-all duration-300 text-lg font-semibold"
+              href="mailto:help@pythonessprogrammer.com"
+              className="inline-block bg-white/10 border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold"
             >
-              Learn More About Me
+              Email Me With Questions
+            </Link>
+            <Link
+              href="/resources"
+              className="inline-block bg-white/10 border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold"
+            >
+              Browse Free Resources
             </Link>
           </div>
         </div>
