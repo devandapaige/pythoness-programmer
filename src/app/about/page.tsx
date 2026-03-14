@@ -71,7 +71,10 @@ export default function AboutPage() {
               I&apos;d been living with fibromyalgia since 2016 and chronic migraines since the same year. In 2018 I was bedbound for nine months. My body had been telling me something for years. I was only beginning to learn how to listen.
             </p>
             <p>
-              Being a new software engineer while also being a newly-diagnosed neurodivergent person with a chronic illness, no direct manager, and no roadmap — that&apos;s not a gap year story. That&apos;s just what it was. Hard. Clarifying. Mine.
+              Being a new software engineer while also being a newly-diagnosed neurodivergent person with a chronic illness in a brand-new corporate environment at Zappos, during its post-holacracy transition into full Amazon ownership, wasn&apos;t a gap-year story. That&apos;s just what it was. Hard. Clarifying. Mine.
+            </p>
+            <p>
+              Then I was laid off in January 2023. That moment hurt, and it also forced a reckoning: I could see how much people-pleasing had shaped the way I worked, while emotional sustainability was treated as optional. That layoff became the turning point that pushed me into the deep end of building what Pythoness Programmer is becoming.
             </p>
             <p>
               What helped wasn&apos;t a system. It was people. A TikTok community of late-identified and lifelong neurodivergent adults who were naming patterns I&apos;d been carrying alone. Marginalized voices who had been talking for years about how our systems — tech systems, productivity systems, social systems — were built to serve a particular kind of brain and body, and how everyone else was just expected to adapt.
