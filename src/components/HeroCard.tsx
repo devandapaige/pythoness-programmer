@@ -31,7 +31,7 @@ export default function HeroCard({
   ]
   const lines = paragraphs ?? (mainText ? [mainText] : defaultParagraphs)
   return (
-    <div className="bg-gradient-to-b from-brand-green-dark to-brand-green-dark text-white py-12 relative overflow-hidden">
+    <div className="bg-gradient-to-b from-brand-green-dark to-brand-purple-dark text-white py-12 relative overflow-hidden">
       {/* Enhanced background patterns with multiple layers */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>
