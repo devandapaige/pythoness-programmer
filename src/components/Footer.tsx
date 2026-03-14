@@ -33,6 +33,7 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="/about" className={footerLinkClass}>About</Link></li>
               <li><Link href="/resources" className={footerLinkClass}>Resources</Link></li>
+              <li><Link href="https://luma.com/pythoness" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Events</Link></li>
               <li><Link href="https://stickyspells.etsy.com" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</Link></li>
             </ul>
           </FooterSection>
@@ -79,7 +80,6 @@ export default function Footer() {
             <ul className="space-y-1">
               <li><Link href="/privacy-policy" className={footerLinkClass}>Privacy Policy</Link></li>
               <li><Link href="/terms" className={footerLinkClass}>Terms of Service</Link></li>
-              <li><span className="text-white/60 text-sm">Based in New Kent, Virginia crafting remote, digital services since 2018</span></li>
             </ul>
           </FooterSection>
           <FooterSection title="Support">
