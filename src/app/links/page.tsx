@@ -198,7 +198,13 @@ export default function LinksPage() {
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <h1 className="font-display text-3xl md:text-4xl text-white mb-2">Pythoness Programmer</h1>
           </Link>
-          <p className="text-white/80 max-w-md mx-auto mb-2 italic">
+          <p className="text-white/90 max-w-md mx-auto mb-1 text-sm">
+            Reflection sessions, not rescue. 🐍🔮 🔻
+          </p>
+          <p className="text-white/90 max-w-md mx-auto mb-2 text-sm">
+            Tech that works, for people like us. 🌶️🧠♿🍃
+          </p>
+          <p className="text-white/80 max-w-md mx-auto mb-2 italic text-sm">
             I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
           </p>
           <p className="text-white/80 max-w-md mx-auto mb-4 text-sm">
