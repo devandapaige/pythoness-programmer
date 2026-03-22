@@ -89,9 +89,9 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 **Reflection sessions, not rescue:**
 
-1. **Book a session** — async written reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225).
+1. **Book a session** — async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225).
 2. **Share your context** — fill out the intake when you book: your question, what you've tried, what a good outcome would feel like (software, strategy, creative work).
-3. **Reflect together** — live sessions start and end with a tarot pull; async is a written reading you can reread. No hustle-culture script.
+3. **Reflect together** — live sessions start and end with a tarot pull; async is a private video you receive by link. No hustle-culture script.
 4. **Leave with clarity** — pattern naming, strategic angles, and next steps that fit your brain and business.
 
 **CTAs:** Book a Session | See All Services | Browse Free Resources
@@ -100,11 +100,11 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 | Service | Description | Price |
 |--------|-------------|-------|
-| 20-Minute Async Reflection | Written tarot-informed guidance on one focused question (software, strategy, or creative). No live call. Delivered within 3 business days of complete intake or by the delivery time selected when booking. Non-refundable once booked. | $75 |
+| 20-Minute Async Reflection | Private tarot-guided video on one focused question (software, strategy, or creative). No live call—booking is a delivery deadline for your video. Delivered within 3 business days of complete intake or by the delivery time selected when booking. Non-refundable once booked. | $75 |
 | 20-Minute Live Reading | Real-time video or voice; tarot at start and end; interactive counsel for one focused decision or stuck point. | $95 |
 | 60-Minute Deep Dive | Extended intuitive business counsel; deeper pattern work across tech, operations, and creative direction. Optional 20-minute follow-up consultation within 30 days. | $225 |
 
-**What every offering includes:** Live sessions — tarot at start and end. Async — written reading informed by the same reflective process. Judgment-free, affirming space (LGBTQIA+ & SW affirming). Grounded language; professional intuitive counsel, not fortune-telling. Pattern recognition and strategic perspective; built around your brain, not a productivity standard.
+**What every offering includes:** Live sessions — tarot at start and end. Async — recorded video with tarot at start and end. Judgment-free, affirming space (LGBTQIA+ & SW affirming). Grounded language; professional intuitive counsel, not fortune-telling. Pattern recognition and strategic perspective; built around your brain, not a productivity standard.
 
 ## Professional Experience & Philosophy
 
@@ -448,7 +448,7 @@ Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Alwa
 - Provide grounding for the journey
 
 **Support the Pythoness:**
-- Software Psychic: Async written ($75), Live 20 min ($95), Deep dive 60 min ($225)
+- Software Psychic: Async video ($75), Live 20 min ($95), Deep dive 60 min ($225)
 - Current art drops and creative work
 - Optional support: one-time tip, Throne wishlist, Cash App / Venmo / Zelle (see support page)
 - Easy ways to share and connect

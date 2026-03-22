@@ -4,11 +4,11 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: '20-Minute Async Reflection - $75 | The Pythoness Programmer',
   description:
-    'Written tarot-informed guidance for neurodivergent business owners—software, strategy, and creative decisions. No live call. Delivered on a clear timeline.',
+    'Private tarot-guided video for neurodivergent business owners—software, strategy, and creative decisions. No live call. Delivered on a clear timeline.',
   openGraph: {
     title: '20-Minute Async Reflection - $75',
     description:
-      'Professional intuitive counsel in writing. One focused question, clear delivery, no meeting to coordinate.',
+      'Professional intuitive counsel as a private video. One focused question, clear delivery, no meeting to coordinate.',
     type: 'website',
     url: 'https://www.pythonessprogrammer.com/async',
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '20-Minute Async Reflection - $75',
     description:
-      'Written tarot-informed guidance for software, strategy, and creative blocks. Reflection, not rescue.',
+      'Private tarot-guided video for software, strategy, and creative blocks. Reflection, not rescue.',
   },
 }
 
@@ -30,12 +30,13 @@ export default function AsyncServicePage() {
               20-Minute Async Reflection
             </h1>
             <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide mb-6 mt-0">
-              Written intuitive guidance — <strong className="text-brand-cream font-semibold">$75</strong>. No live meeting.
+              Private video reading — <strong className="text-brand-cream font-semibold">$75</strong>. No live meeting.
             </p>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-white font-light leading-relaxed mb-8">
-              You share one focused question or situation through the intake. I pull cards and return a{' '}
-              <strong className="text-white font-medium">written reading</strong>—grounded, concrete, and informed by tech and business context as well
-              as tarot. Built for neurodivergent business owners who want clarity <em>without</em> scheduling another call.
+              You share one focused question or situation through the intake. I record a{' '}
+              <strong className="text-white font-medium">personalized video</strong> with tarot at start and end—grounded, concrete, and informed by tech
+              and business context. You get a private link by email: watch once or rewatch on your own time. Built for neurodivergent business owners who want
+              clarity <em>without</em> scheduling a live call.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -59,10 +60,10 @@ export default function AsyncServicePage() {
             <h2 className="text-3xl font-display mb-6 text-brand-green-dark text-center mt-0">What you get</h2>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="space-y-4">
-                <h3 className="text-xl font-display text-brand-green-dark">Written reading (async)</h3>
+                <h3 className="text-xl font-display text-brand-green-dark">Video reading (async)</h3>
                 <ul className="list-disc pl-5 text-brand-green-dark space-y-2">
                   <li>One focused question or situation (software, strategy, or creative direction)</li>
-                  <li>Tarot-informed reflection in clear prose—no performance, no jargon required</li>
+                  <li>Tarot pull at start and end of the recording—reflection in plain language</li>
                   <li>Pattern naming and next-step angles that fit your capacity</li>
                   <li>Delivered within <strong>3 business days</strong> of a <strong>complete intake</strong>, or by the delivery time you select when booking</li>
                 </ul>
@@ -70,8 +71,8 @@ export default function AsyncServicePage() {
               <div className="space-y-4">
                 <h3 className="text-xl font-display text-brand-green-dark">Why async</h3>
                 <ul className="list-disc pl-5 text-brand-green-dark space-y-2">
-                  <li>Reread and process on your own timeline</li>
-                  <li>No video call to coordinate</li>
+                  <li>Watch and rewatch on your own timeline</li>
+                  <li>No live call to coordinate</li>
                   <li>Strong fit when you already know the decision you&apos;re circling</li>
                   <li>Professional intuitive counsel—not fortune-telling</li>
                 </ul>
@@ -88,7 +89,7 @@ export default function AsyncServicePage() {
                 </div>
                 <h3 className="text-lg font-display mb-2 text-brand-green-dark">Book</h3>
                 <p className="text-sm text-brand-green-dark">
-                  Reserve through Cal.com. The time you choose is your <strong>delivery deadline</strong> (when you receive the written reading)—not a live
+                  Reserve through Cal.com. The time you choose is your <strong>delivery deadline</strong> (when your private video will be ready)—not a live
                   meeting slot, unless your Cal setup says otherwise. Match what you configure in Cal.
                 </p>
               </div>
@@ -107,8 +108,8 @@ export default function AsyncServicePage() {
                 </div>
                 <h3 className="text-lg font-display mb-2 text-brand-green-dark">Receive</h3>
                 <p className="text-sm text-brand-green-dark">
-                  I send your <strong>written reading</strong> by email (or your stated channel) by the agreed time—typically within three business days of
-                  a complete intake if that&apos;s how you operate.
+                  I send your <strong>private video link</strong> by email (or your stated channel) by the agreed time—typically within three business days
+                  of a complete intake if that&apos;s how you operate.
                 </p>
               </div>
             </div>
@@ -153,8 +154,8 @@ export default function AsyncServicePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <h3 className="text-xl font-display mb-3 text-white">Not a live session</h3>
                 <p className="text-white/90">
-                  There is nothing to join on Zoom for this offering—you receive a <strong>written</strong> reading by the delivery time associated with
-                  your booking.
+                  There is nothing to join live for this offering—you receive a <strong>recorded video link</strong> by the delivery time associated with your
+                  booking.
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -182,10 +183,10 @@ export default function AsyncServicePage() {
                 </p>
               </div>
               <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6">
-                <h3 className="text-xl font-display mb-3 text-brand-green-dark">When will I receive my reading?</h3>
+                <h3 className="text-xl font-display mb-3 text-brand-green-dark">When will I receive my video?</h3>
                 <p className="text-brand-green-dark">
-                  By the delivery time you selected at booking, or within three business days of a complete intake—whichever matches how you run this
-                  event in Cal.com.
+                  By the delivery time you selected at booking, or within three business days of a complete intake—whichever matches how you run this event
+                  in Cal.com.
                 </p>
               </div>
             </div>

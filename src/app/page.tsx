@@ -63,7 +63,7 @@ export default async function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Book a session</h3>
               <p className="text-brand-cream/90">
-                Async written reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225). Pick what fits your decision.
+                Async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225). Pick what fits your decision.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -75,7 +75,7 @@ export default async function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Reflect together</h3>
               <p className="text-brand-cream/90">
-                Live sessions start and end with a tarot pull; async is a written reading you can revisit. We name patterns and next steps—no hustle-culture script.
+                Live sessions start and end with a tarot pull; async is a recorded video you receive by link—watch on your own time. We name patterns and next steps—no hustle-culture script.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -120,22 +120,22 @@ export default async function Home() {
             <div className="max-w-2xl mx-auto">
               <ServiceCard
                 title="20-Minute Async Reflection"
-                subtitle="Written reading — no live call"
+                subtitle="Private video — no live call"
                 price="$75"
-                description="You share one focused question or situation through the intake; I return a written, tarot-informed reading—clear, concrete, and respectful of your time. Delivered within 3 business days of a complete intake, or by the delivery time you select when booking."
+                description="You share context through the intake; I record a personalized tarot-guided video on one focused question—software, strategy, or creative blocks. Private link by email. Delivered within 3 business days of a complete intake, or by the delivery deadline you select when booking."
                 features={[
-                  "Written guidance you can reread—no meeting to coordinate",
+                  "Private video recording (watch and rewatch)",
+                  "Tarot pull at start and end",
                   "Software, business strategy, and creative blocks",
-                  "Pattern recognition without vague mysticism",
-                  "Next-step angles that fit your capacity",
+                  "No live meeting to coordinate",
                 ]}
                 ctaLink="https://cal.com/pythoness/async"
                 ctaText="Book Async Reflection — $75"
-                icon="✉️"
+                icon="🎥"
                 highlight={true}
                 isNew={true}
                 textColor="text-brand-green-dark"
-                note="Non-refundable once booked. You&apos;re booking a delivery window, not a live video slot—confirm via email so delivery reaches you."
+                note="Non-refundable once booked. You&apos;re booking when your recorded video will be delivered—not a live call to join. Confirm via email so delivery reaches you."
                 customStyling={{
                   backgroundColor: 'from-brand-cream to-white',
                   textColor: 'text-brand-green-dark',

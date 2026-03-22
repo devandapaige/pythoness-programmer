@@ -5,11 +5,11 @@ import ServiceCard from '../../components/ServiceCard'
 export const metadata = {
   title: 'Services',
   description:
-    'Software Psychic sessions for neurodivergent business owners: async written reflection ($75), 20-minute live reading ($95), and 60-minute deep dive ($225). Tarot-informed intuitive counsel—not fortune-telling.',
+    'Software Psychic sessions for neurodivergent business owners: async video reflection ($75), 20-minute live reading ($95), and 60-minute deep dive ($225). Tarot-informed intuitive counsel—not fortune-telling.',
   openGraph: {
     title: 'Services | Pythoness Programmer',
     description:
-      'Reflection, not rescue. Async written guidance, live readings, and deep-dive business counsel with the Software Psychic.',
+      'Reflection, not rescue. Async video readings, live sessions, and deep-dive business counsel with the Software Psychic.',
     url: '/services',
     type: 'website',
     siteName: 'Pythoness Programmer',
@@ -58,34 +58,35 @@ export default function ServicesPage() {
             <div className="max-w-2xl mx-auto">
               <ServiceCard
                 title="20-Minute Async Reflection"
-                subtitle="Written intuitive guidance on your schedule. No live call."
+                subtitle="Private video reading on your schedule. No live call."
                 price="$75"
                 description={
                   <>
                     <p>
-                      <strong>What you get:</strong> Written guidance on <strong>one focused question or situation</strong>, pulled through tarot and
-                      read through the lens of tech, business, and how <em>your</em> mind works.
+                      <strong>What you get:</strong> A <strong>personalized video recording</strong> on <strong>one focused question or situation</strong>
+                      — tarot at start and end, read through the lens of tech, business, and how <em>your</em> mind works.
                     </p>
                     <p>
-                      <strong>How it works:</strong> You book, complete the intake with the details I need, and I return a <strong>written reading</strong>{' '}
-                      you can revisit. <strong>Delivered within 3 business days</strong> of a complete intake — or by the delivery time you select when
-                      booking, whichever applies to your Cal event.
+                      <strong>How it works:</strong> You book a <strong>delivery deadline</strong> (when you&apos;ll receive the video), complete the
+                      intake, and I record your reading. You get a <strong>private video link</strong> by email — watch once or rewatch on your own time.{' '}
+                      <strong>Delivered within 3 business days</strong> of a complete intake — or by the delivery time you select when booking, whichever
+                      applies to your Cal event.
                     </p>
                     <p>
-                      <strong>What shifts:</strong> Room to stop doom-scrolling options and <strong>name the pattern</strong> under the stuckness — so
-                      you can act from clarity instead of anxiety.
+                      <strong>What shifts:</strong> Room to stop doom-scrolling options and <strong>name the pattern</strong> under the stuckness — so you
+                      can act from clarity instead of anxiety, without having to coordinate a live slot.
                     </p>
                   </>
                 }
                 features={[
-                  'Written reading (reread anytime; no meeting to coordinate)',
-                  'Tarot-informed reflection on software, strategy, or creative blocks',
+                  'Private video (not live; watch and rewatch at your pace)',
+                  'Tarot pull at start and end of the recording',
+                  'Software, strategy, and creative blocks',
                   'Concrete framing — not vague mysticism',
-                  'Clear angles on next steps that fit your capacity',
                 ]}
                 ctaLink="https://cal.com/pythoness/async"
                 ctaText="Book Async Reflection — $75"
-                icon="✉️"
+                icon="🎥"
                 highlight={true}
                 isNew={true}
                 textColor="text-brand-cream"
@@ -94,8 +95,8 @@ export default function ServicesPage() {
                     <strong>Best for:</strong> A specific fork in the road, a tool or workflow decision, or a stuck point where you want perspective
                     without a live call.
                     <br />
-                    <strong>Important:</strong> This is not a live meeting — you&apos;re booking a delivery window or deadline, not a video slot.{' '}
-                    <strong>Non-refundable</strong> once booked. Please confirm via email so delivery reaches you.
+                    <strong>Important:</strong> This is not a live meeting — you&apos;re booking when your <strong>recorded video</strong> will be ready,
+                    not a call to join. <strong>Non-refundable</strong> once booked. Please confirm via email so delivery reaches you.
                   </>
                 }
                 customStyling={{
@@ -285,7 +286,7 @@ export default function ServicesPage() {
               <span className="flex-shrink-0 w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-green-accent" />
               <span>
                 <strong className="text-brand-cream">Live sessions</strong> start and end with a tarot pull. <strong className="text-brand-cream">Async</strong>{' '}
-                is a written reading informed by that same reflective process.
+                is a <strong className="text-brand-cream">recorded video</strong> with tarot at start and end — same reflective process, on your timeline.
               </span>
             </li>
             <li className="flex items-start gap-3">
@@ -332,7 +333,7 @@ export default function ServicesPage() {
               </p>
               <p>
                 <strong className="text-brand-cream">Live</strong> sessions are conversational and interactive. <strong className="text-brand-cream">Async</strong>{' '}
-                is a <strong className="text-brand-cream">written</strong> reading you can reread on your own time.
+                is a <strong className="text-brand-cream">private video</strong> you receive by link — watch and rewatch on your own time (no live meeting).
               </p>
             </div>
 
@@ -344,9 +345,9 @@ export default function ServicesPage() {
                   <strong>at least 24 hours&apos; notice</strong> when possible. Cancellations inside that window may be <strong>non-refundable</strong>.
                 </li>
                 <li>
-                  <strong className="text-brand-cream">Async written readings:</strong> <strong>Non-refundable</strong> once booked. Delivery follows the
-                  timing stated on your booking (e.g. within 3 business days of a complete intake or by your selected delivery time — match what you set in
-                  Cal).
+                  <strong className="text-brand-cream">Async video readings:</strong> <strong>Non-refundable</strong> once booked. Your video is delivered
+                  by the time stated on your booking (e.g. within 3 business days of a complete intake or by your selected delivery deadline — match what
+                  you set in Cal).
                 </li>
                 <li>
                   This is <strong>professional intuitive counsel</strong>, not medical, mental health, legal, or financial advice. It is{' '}

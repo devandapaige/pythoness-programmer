@@ -18,7 +18,7 @@ const tools: Tool[] = [
   {
     name: 'Cal.com',
     tagline: 'Scheduling',
-    description: 'What I use for Software Psychic sessions (live and async written bookings). Open-source, privacy-friendly scheduling that just works.',
+    description: 'What I use for Software Psychic sessions (live and async video bookings). Open-source, privacy-friendly scheduling that just works.',
     referralUrl: 'https://refer.cal.com/pythoness',
   },
   {

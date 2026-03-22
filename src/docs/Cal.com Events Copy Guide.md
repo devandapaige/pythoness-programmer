@@ -2,14 +2,14 @@
 
 Use this guide when creating or updating your Cal.com event types for Software Psychic sessions. Keep copy consistent with the site and the [Site Copy & Voice Guide](./Site%20Copy%20&%20Voice%20Guide.md). Updated March 2026.
 
-**Set prices in the Cal.com dashboard** to match the site: **$75** (async written), **$95** (live 20 min), **$225** (deep dive 60 min).
+**Set prices in the Cal.com dashboard** to match the site: **$75** (async video), **$95** (live 20 min), **$225** (deep dive 60 min).
 
 ---
 
 ## Voice alignment
 
 - **Reflection, not rescue:** Sessions are for understanding patterns and what your brain needs, not emergency fixes.
-- **Central question:** "What is this struggle trying to teach you?" (still useful for live framing; async focuses on one written question.)
+- **Central question:** "What is this struggle trying to teach you?" (still useful for live framing; async focuses on one question delivered as a recorded video.)
 - **Levity:** So you don't make it a **third** time (you've already made it—let's not repeat it).
 - **Inclusion:** Judgment-free, LGBTQIA+ and sex-worker affirming.
 - **Guide, not guru:** I don't have all the answers; I sit with you and reflect.
@@ -109,10 +109,10 @@ Reminder: Your 60-minute deep dive is [time]. We'll start with a tarot pull. You
 
 ---
 
-## 20-Minute Async Reflection (written)
+## 20-Minute Async Reflection (video)
 
 **Event name (title):**  
-`20-Minute Async Reflection` or `Async Reflection — written`
+`20-Minute Async Reflection` or `Async Reflection — video`
 
 **Location/URL slug (if editable):**  
 `async` (matches current cal.com/pythoness/async)
@@ -120,22 +120,22 @@ Reminder: Your 60-minute deep dive is [time]. We'll start with a tarot pull. You
 **Description (what invitees see when booking):**
 
 ```
-Written tarot-informed guidance on one focused question—software, business strategy, or creative direction. No live call.
+Private tarot-guided video on one focused question—software, business strategy, or creative direction. No live call.
 
-This is asynchronous. You complete the intake; I pull cards and return a clear written reading you can reread. Delivery: within 3 business days of a complete intake, or by the delivery deadline you select when booking—match this sentence to how you configure the event in Cal.
+This is asynchronous. You complete the intake; I record your personalized reading with a tarot pull at start and end, and you receive a private video link by email by your delivery deadline. Delivery: within 3 business days of a complete intake, or by the deadline you select when booking—match this sentence to how you configure the event in Cal.
 
 What you'll receive:
-• Written reading (email or agreed channel)—not a live meeting
-• Tarot-informed reflection in plain language (no tarot knowledge required on your side)
+• Private video recording—not a live meeting (nothing to join at the scheduled time)
+• Tarot pull at start and end; reflection in plain language (no tarot knowledge required on your side)
 • Pattern naming and next-step angles that fit your capacity
 
 How it works:
-1. Book and choose your delivery deadline (if your Cal setup uses a "delivery by" time).
+1. Book and choose your delivery deadline (when your video will arrive).
 2. Complete intake questions—the more context, the more specific the reading.
-3. Receive your written reading by the agreed time.
+3. Receive your private video link by the agreed time.
 
 Important:
-• Not a live meeting—nothing to join on video
+• Not a live session—you're booking a delivery deadline, not a meeting slot
 • Non-refundable once booked; confirm via email so delivery reaches you
 • Professional intuitive counsel—not therapy, legal, or financial advice
 
@@ -151,13 +151,13 @@ $75.
 **Confirmation / thank-you message:**
 
 ```
-You're booked for an Async Reflection. The time you selected is when you'll receive your written reading by email (or as configured)—not a live meeting. Please complete the intake if you haven't already. Thank you.
+You're booked for an Async Reflection. The time you selected is when you'll receive your private video—I'll email the link by then. Not a live meeting. If you haven't already, please complete the intake so I can record your reading. Watch whenever you're ready.
 ```
 
 **Reminder message (optional; e.g. 24–48h before delivery):**
 
 ```
-Reminder: Your written Async Reflection will arrive by [date/time]. If intake isn't complete yet, please finish it so I can deliver on time.
+Reminder: Your Async video will be delivered to your email by [date/time]. If intake isn't complete yet, please finish it so I can record on time.
 ```
 
 ---
@@ -185,19 +185,19 @@ Use these as a blueprint when setting up Cal.com workflows (or similar automatio
 | **Within 24–48h** | Follow-up | Written summary, resources, roadmap as promised. CTA for optional 20-minute follow-up. |
 | **~25–28 days after** (optional) | Nudge | "A few days left to use your optional 20-minute follow-up if you want to check in." |
 
-### 20-Minute Async Reflection (written)
+### 20-Minute Async Reflection (video)
 
 | When | Type | Copy / purpose |
 |------|------|----------------|
-| **At booking** | Confirmation | Clarify: delivery is a **written reading** by the selected time—not a video, not a live meeting (unless you change the offer). |
-| **24–48h before delivery** | Reminder (optional) | "Your written reading will arrive by [time]. Complete intake if you haven't." |
-| **When you send the reading** | Delivery email | Short note; attach or paste reading. Optional: invite them to book live if they want to go deeper. |
-| **Optional, 3–7 days after** | Follow-up | "Hope the reading helped. Live 20-minute and 60-minute sessions are on the site if you want to continue in conversation." |
+| **At booking** | Confirmation | Emphasize: the time they chose is when they'll **receive the video link**—not a live meeting time. |
+| **24–48h before delivery** | Reminder (optional) | "Your Async video will arrive by [time]. Complete intake if you haven't." |
+| **When you send the video** | Delivery email | Short note with link; watch at your pace. Optional: invite them to book live if they want to go deeper. |
+| **Optional, 3–7 days after** | Follow-up | "Hope the video helped. Live 20-minute and 60-minute sessions are on the site if you want to continue in conversation." |
 
 ### Workflow checklist
 
 - [ ] **Reminders** are set for each event type (at least 24h before live; async optional before delivery).
-- [ ] **Async** reminders refer to **written** delivery by [time], not "join meeting" or "video."
+- [ ] **Async** reminders say **video delivered by [time]**, not "meeting at [time]."
 - [ ] **Follow-up** after live sessions matches what you promise in session.
 - [ ] **60-min:** Optional nudge before the 30-day follow-up window closes.
 - [ ] **Prices** in Cal match the site: $75 / $95 / $225.
@@ -213,11 +213,11 @@ Use this in your Cal.com profile or "about" section so booking visitors see the 
 ```
 I'm Amanda — the Pythoness Programmer / Software Psychic. Late-identified neurodivergent, Senior Software Engineer with 15+ years across communications, systems, and code. I work with neurodivergent business owners on software decisions, strategy, and creative projects.
 
-This is reflection, not rescue: tarot-informed intuitive counsel and technical context so you can trust your judgment and choose your next step. Live sessions start and end with a tarot pull; async is a written reading you can reread. You don't need to know tarot—it's a structure for insight, not fortune-telling.
+This is reflection, not rescue: tarot-informed intuitive counsel and technical context so you can trust your judgment and choose your next step. Live sessions start and end with a tarot pull; async is a private video you watch on your own time. You don't need to know tarot—it's a structure for insight, not fortune-telling.
 
 Judgment-free, affirming space (LGBTQIA+ & SW affirming). Not therapy, legal, or financial advice.
 
-Book the tier that fits: async written ($75), live 20 min ($95), or deep dive 60 min ($225).
+Book the tier that fits: async video ($75), live 20 min ($95), or deep dive 60 min ($225).
 ```
 
 ---
@@ -228,8 +228,8 @@ Book the tier that fits: async written ($75), live 20 min ($95), or deep dive 60
 - [ ] **Prices** in the dashboard are **$75**, **$95**, **$225**.
 - [ ] **Descriptions** use reflection language, neurodivergent business owner framing, and **professional intuitive counsel** (not "predictions").
 - [ ] **60-min** copy includes **optional 20-minute follow-up consultation within 30 days**.
-- [ ] **Async** copy states **written** delivery, **non-refundable** once booked, **no live meeting**, confirm via email, delivery by selected time or within stated business days.
-- [ ] **Workflows** updated: no "record your video" automation if you have switched to written async.
+- [ ] **Async** copy states **private video** delivery by the selected time, **non-refundable** once booked, **no live meeting**, confirm via email.
+- [ ] **Workflows** (reminders, delivery email) match **video** async—not written text.
 - [ ] **Cal.com about/profile** reflects Software Psychic positioning and current tiers.
 
 ---
@@ -241,8 +241,8 @@ Book the tier that fits: async written ($75), live 20 min ($95), or deep dive 60
 | Reflection session / intuitive counsel | Troubleshooting-only / fix-it-only framing |
 | What this struggle is trying to teach you | "I'll tell you what to do" as the whole pitch |
 | So you don't make it a third time | So you don't make the same mistake twice |
-| Tarot pull at start and end (live) | (omit on async if you prefer—written is informed by the same process) |
-| Written reading / delivery by [time] (async) | Video delivery (unless you still offer video—then align site + Cal) |
+| Tarot pull at start and end (live and async video) | |
+| Private video / delivery by [time] (async) | Implies a live call at the booked time |
 | Judgment-free, affirming (LGBTQIA+ & SW affirming) | Generic "inclusive" only |
 
 ---

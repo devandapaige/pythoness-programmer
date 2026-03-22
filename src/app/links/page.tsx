@@ -208,7 +208,7 @@ export default function LinksPage() {
             I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
           </p>
           <p className="text-white/80 max-w-md mx-auto mb-4 text-sm">
-            Software Psychic sessions—async written readings and live 1:1—to reflect on your patterns and move forward. Book below.
+            Software Psychic sessions—async video readings and live 1:1—to reflect on your patterns and move forward. Book below.
           </p>
         </div>
 
@@ -261,7 +261,7 @@ export default function LinksPage() {
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
             <p className="text-white/80 text-center text-sm mb-4">
-              Written tarot-informed guidance on one focused question—software, strategy, or creative blocks. No live call. 20 min scope · $75.
+              Private video reading on one focused question—software, strategy, or creative blocks. No live call. ~20 min · $75.
             </p>
             <Link
               href="https://cal.com/pythoness/async"
