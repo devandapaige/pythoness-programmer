@@ -208,7 +208,7 @@ export default function LinksPage() {
             I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we&apos;ve internalized and what our brains actually need.
           </p>
           <p className="text-white/80 max-w-md mx-auto mb-4 text-sm">
-            Software Psychic sessions—async video readings and live 1:1—to reflect on your patterns and move forward. Book below.
+            Software Psychic sessions—async written readings and live 1:1—to reflect on your patterns and move forward. Book below.
           </p>
         </div>
 
@@ -261,7 +261,7 @@ export default function LinksPage() {
           <div className="space-y-3">
             <h2 className="font-display text-2xl text-white text-center">Featured Service</h2>
             <p className="text-white/80 text-center text-sm mb-4">
-              Personalized video reading for your project or web presence. Watch on your time—no live meeting. 20 min · $30.
+              Written tarot-informed guidance on one focused question—software, strategy, or creative blocks. No live call. 20 min scope · $75.
             </p>
             <Link
               href="https://cal.com/pythoness/async"
@@ -269,7 +269,7 @@ export default function LinksPage() {
               rel="noopener noreferrer"
               className="block bg-brand-green-accent/20 backdrop-blur-sm rounded-lg p-6 border border-brand-green-accent/30 text-center hover:bg-brand-green-accent/30 transition-colors"
             >
-              <span className="text-brand-green-accent font-semibold">Book Async Reading — $30</span>
+              <span className="text-brand-green-accent font-semibold">Book Async Reflection — $75</span>
             </Link>
           </div>
 
@@ -286,7 +286,7 @@ export default function LinksPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent text-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center"
               >
-                Book 20-Min Session — $30
+                Book Live 20 min — $95
               </Link>
               <Link
                 href="https://cal.com/pythoness/60min"
@@ -294,7 +294,7 @@ export default function LinksPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent/80 text-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center"
               >
-                Book 60-Min Session — $60
+                Book Deep 60 min — $225
               </Link>
             </div>
           </div>

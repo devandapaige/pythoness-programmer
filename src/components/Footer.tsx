@@ -57,9 +57,9 @@ export default function Footer() {
               </Link>
           }>
             <ul className="space-y-1" role="list" aria-label="Service links">
-              <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Book Async Reading</Link></li>
-              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Book 20-Min Session</Link></li>
-              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Book 60-Min Session</Link></li>
+              <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Async reflection — $75</Link></li>
+              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Live 20 min — $95</Link></li>
+              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Deep dive 60 min — $225</Link></li>
             </ul>
           </FooterSection>
           {/* Free Resources */}

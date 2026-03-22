@@ -62,15 +62,21 @@ export default async function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white mb-12">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Book a session</h3>
-              <p className="text-brand-cream/90">20 minutes, 60 minutes, or an async video reading. All start at $30.</p>
+              <p className="text-brand-cream/90">
+                Async written reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225). Pick what fits your decision.
+              </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Share your context</h3>
-              <p className="text-brand-cream/90">Fill out a quick intake when you book. Your recent tech hurdle, what keeps repeating, what you&apos;ve already tried.</p>
+              <p className="text-brand-cream/90">
+                Fill out the intake when you book—your question, what you&apos;ve tried, and what a good outcome would feel like for your business or creative work.
+              </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Reflect together</h3>
-              <p className="text-brand-cream/90">We start and end with a tarot pull. We examine what your struggle is revealing. No pressure, no judgment, no urgency.</p>
+              <p className="text-brand-cream/90">
+                Live sessions start and end with a tarot pull; async is a written reading you can revisit. We name patterns and next steps—no hustle-culture script.
+              </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Leave with clarity</h3>
@@ -97,12 +103,12 @@ export default async function Home() {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display mb-6 text-white">
-              Reflection Sessions, Not Rescue
+              Reflection, not rescue
             </h2>
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
               <p className="text-xl text-brand-cream max-w-3xl">
-                These aren&apos;t troubleshooting sessions—they&apos;re reflection sessions where we examine your last tech hurdle and figure out what it&apos;s revealing about what you&apos;ve internalized and what your brain actually needs.
+                Professional intuitive counsel for software, strategy, and creative decisions—grounded, neurodivergent-centered, and built for business owners who want clarity without the mysticism or the hard sell.
               </p>
               <div className="h-px w-12 bg-gradient-to-r from-transparent via-brand-cream to-transparent"></div>
             </div>
@@ -113,24 +119,23 @@ export default async function Home() {
             <h3 className="text-3xl font-display text-center mb-12 text-brand-cream">Featured Service</h3>
             <div className="max-w-2xl mx-auto">
               <ServiceCard
-                title="Async Project & Web Presence Reading"
-                subtitle="20-Minute Video Recording"
-                price="$30"
-                description="A 20-minute tarot-guided reading for your project, website, or online presence — delivered as a private video, on your schedule. No live meeting required."
+                title="20-Minute Async Reflection"
+                subtitle="Written reading — no live call"
+                price="$75"
+                description="You share one focused question or situation through the intake; I return a written, tarot-informed reading—clear, concrete, and respectful of your time. Delivered within 3 business days of a complete intake, or by the delivery time you select when booking."
                 features={[
-                  "Tarot-guided reflection on your project or web presence",
-                  "Insight into what's working with your brain versus against it",
-                  "Pattern recognition: what your current setup is revealing",
-                  "Suggestions for resources or approaches you may not have considered",
-                  "Watch and re-watch at your pace"
+                  "Written guidance you can reread—no meeting to coordinate",
+                  "Software, business strategy, and creative blocks",
+                  "Pattern recognition without vague mysticism",
+                  "Next-step angles that fit your capacity",
                 ]}
                 ctaLink="https://cal.com/pythoness/async"
-                ctaText="Book Your Async Reading"
-                icon="🎥"
+                ctaText="Book Async Reflection — $75"
+                icon="✉️"
                 highlight={true}
                 isNew={true}
                 textColor="text-brand-green-dark"
-                note="Asynchronous—no live meeting"
+                note="Non-refundable once booked. You&apos;re booking a delivery window, not a live video slot—confirm via email so delivery reaches you."
                 customStyling={{
                   backgroundColor: 'from-brand-cream to-white',
                   textColor: 'text-brand-green-dark',
@@ -149,43 +154,38 @@ export default async function Home() {
             <p className="text-brand-cream/80 text-center mb-12">Interactive sessions with real-time guidance</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <ServiceCard
-                title="20-Minute Software Psychic Session"
-                subtitle="Quick reflection and resource discovery"
-                price="$30"
-                description="We start and end with a tarot pull. In between, we look at one specific tech struggle — not to fix it, but to understand what it's revealing. You'll leave with one clear next step and a follow-up email with everything we covered."
+                title="20-Minute Live Reading"
+                subtitle="Video or voice — interactive tarot and counsel"
+                price="$95"
+                description="Real-time session for one focused decision or stuck point. We start and end with a tarot pull, with room for follow-up questions in the moment—clarity when you need to think out loud without being rushed."
                 features={[
                   "Tarot pull at start and end",
-                  "Focused reflection on a specific tech struggle",
-                  "Pattern recognition: what this is revealing about what you've internalized",
-                  "Resources and tools tailored to your brain — not the mainstream defaults",
-                  "One clear next step",
-                  "Follow-up email with resources"
+                  "Live back-and-forth on software, strategy, or creative direction",
+                  "Technical and business context without the hustle script",
+                  "You leave with a clearer read on what to try next",
                 ]}
                 ctaLink="https://cal.com/pythoness/20min"
-                ctaText="Book Now"
+                ctaText="Book Live Reading — $95"
                 icon="🔮"
                 textColor="text-brand-cream"
-                note="Great for specific questions or quick wins"
+                note="Best for urgent decisions or when you process better in conversation"
               />
               <ServiceCard
-                title="60-Minute Software Psychic Session"
-                subtitle="Deep pattern work"
-                price="$60"
-                description="The deep dive. We start and end with a tarot pull and spend the time in between going beneath the surface — not just the most recent struggle, but the pattern underneath it. Includes an optional 20-minute follow-up consultation within 30 days."
+                title="60-Minute Deep Dive"
+                subtitle="Extended intuitive business counsel"
+                price="$225"
+                description="A full hour to go beneath the surface: patterns across tech, operations, and creative work, plus strategic guidance. Includes optional 20-minute follow-up within 30 days when you want to check in on what's landing."
                 features={[
                   "Tarot pull at start and end",
-                  "Deep reflection on recurring patterns",
-                  "Examination of what you've internalized from ableist, productivity-obsessed tech culture",
-                  "Neurodivergent-friendly alternatives to tools and approaches that aren't working",
-                  "A framework for making better tech decisions going forward",
-                  "Implementation roadmap built around your brain, not a generic system",
-                  "Optional 20-minute follow-up consultation within 30 days"
+                  "Deep pattern work and strategic framing",
+                  "Neurodivergent-friendly angles on tools and business choices",
+                  "Optional 20-minute follow-up consultation within 30 days",
                 ]}
                 ctaLink="https://cal.com/pythoness/60min"
-                ctaText="Book Now"
+                ctaText="Book Deep Dive — $225"
                 icon="🔮"
                 textColor="text-brand-cream"
-                note="Most popular for extended guidance"
+                note="Best for major transitions or intertwined decisions"
               />
             </div>
           </div>

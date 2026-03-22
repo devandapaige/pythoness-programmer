@@ -89,10 +89,10 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 **Reflection sessions, not rescue:**
 
-1. **Book a session** — 20 minutes, 60 minutes, or an async video reading. All start at $30.
-2. **Share your context** — fill out a quick intake when you book. Your recent tech hurdle, what keeps repeating, what you've already tried.
-3. **Reflect together** — we start and end with a tarot pull. We examine what your struggle is revealing. No pressure, no judgment, no urgency.
-4. **Leave with clarity** — resources you may not have heard of, a framework for understanding the pattern, and a path forward that actually fits your brain.
+1. **Book a session** — async written reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225).
+2. **Share your context** — fill out the intake when you book: your question, what you've tried, what a good outcome would feel like (software, strategy, creative work).
+3. **Reflect together** — live sessions start and end with a tarot pull; async is a written reading you can reread. No hustle-culture script.
+4. **Leave with clarity** — pattern naming, strategic angles, and next steps that fit your brain and business.
 
 **CTAs:** Book a Session | See All Services | Browse Free Resources
 
@@ -100,11 +100,11 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 | Service | Description | Price |
 |--------|-------------|-------|
-| 20-Minute Software Psychic Session | Quick reflection and resource discovery. We start and end with a tarot pull. In between, we look at one specific tech struggle — not to fix it, but to understand what it's revealing. You'll leave with one clear next step and a follow-up email with everything we covered. | $30 |
-| 60-Minute Software Psychic Session | Deep pattern work. We start and end with a tarot pull and go beneath the surface — not just the most recent struggle, but the pattern underneath it. Includes an optional 20-minute follow-up consultation within 30 days. | $60 |
-| Async Project & Web Presence Reading | A 20-minute tarot-guided reading for your project, website, or online presence — delivered as a private video, on your schedule. Asynchronous: you're booking a delivery deadline, not a meeting slot. Non-refundable once booked; confirm via email to ensure delivery. | $30 |
+| 20-Minute Async Reflection | Written tarot-informed guidance on one focused question (software, strategy, or creative). No live call. Delivered within 3 business days of complete intake or by the delivery time selected when booking. Non-refundable once booked. | $75 |
+| 20-Minute Live Reading | Real-time video or voice; tarot at start and end; interactive counsel for one focused decision or stuck point. | $95 |
+| 60-Minute Deep Dive | Extended intuitive business counsel; deeper pattern work across tech, operations, and creative direction. Optional 20-minute follow-up consultation within 30 days. | $225 |
 
-**Session features (all sessions):** Tarot pull at start and end — every time; judgment-free, affirming space (LGBTQIA+ & SW affirming); resources and tools you may not have heard of — the hidden gems, not the defaults; pattern recognition over quick fixes; built around your brain, not a productivity standard.
+**What every offering includes:** Live sessions — tarot at start and end. Async — written reading informed by the same reflective process. Judgment-free, affirming space (LGBTQIA+ & SW affirming). Grounded language; professional intuitive counsel, not fortune-telling. Pattern recognition and strategic perspective; built around your brain, not a productivity standard.
 
 ## Professional Experience & Philosophy
 
@@ -448,7 +448,7 @@ Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Alwa
 - Provide grounding for the journey
 
 **Support the Pythoness:**
-- Software Psychic Sessions: 20-min ($30), 60-min ($60), Async Project & Web Presence Reading ($30)
+- Software Psychic: Async written ($75), Live 20 min ($95), Deep dive 60 min ($225)
 - Current art drops and creative work
 - Optional support: one-time tip, Throne wishlist, Cash App / Venmo / Zelle (see support page)
 - Easy ways to share and connect
@@ -553,7 +553,7 @@ You're speaking to neurodivergent creatives, small business owners, and consciou
 - **Accessibility legal guide,** **back-to-basics,** **password security,** **blog,** and **newsletter** (all free; no paywalls)
 
 ### Premium / Paid (Current)
-- **Software Psychic Sessions:** 20-min ($30), 60-min ($60), Async Project & Web Presence Reading ($30)
+- **Software Psychic:** 20-Minute Async Reflection ($75), 20-Minute Live Reading ($95), 60-Minute Deep Dive ($225)
 
 ### Premium Resources (Coming Soon)
 - In-depth automation courses

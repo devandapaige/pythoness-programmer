@@ -67,7 +67,7 @@ export default function SupportPage() {
               <Link href="https://newsletter.pythonessprogrammer.com/" target="_blank" rel="noopener noreferrer" className="text-brand-green-accent hover:underline"> newsletter</Link>, and anything else I publish here. No paywalls, no &quot;free tier&quot; that gets worse later—they stay free.
             </p>
             <p>
-              I monetize through optional support (tips, wishlist) and paid sessions (Software Psychic, async readings). 
+              I monetize through optional support (tips, wishlist) and paid sessions (Software Psychic: async written, live readings, deep dives). 
               That way I can keep a living without breaking the promise that the resources themselves stay free for everyone.
             </p>
             <p>

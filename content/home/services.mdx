@@ -3,29 +3,35 @@ id: "services"
 title: "Your Digital Journey, Your Way"
 description: "Everyone learns and grows differently. I'm here to help you discover your own path to digital confidence, with a healthy dose of humor and zero judgment along the way."
 mainServices:
-  - title: "20-Minute Digital Psychic Session"
-    subtitle: "Quick Guidance & Ideation"
+  - title: "20-Minute Async Reflection"
+    subtitle: "Written guidance — no live call"
     features:
-      - "Tarot card pull at start and end of session"
-      - "Quick digital problem-solving and ideation"
-      - "Tool and workflow recommendations"
-      - "Post-session email with actionable suggestions and resources"
-      - "A framework for making future digital decisions with confidence"
-    price: "$30"
-    description: "Transform your digital workflow with this focused 20-minute consultation (over Zoom) where we'll examine your current digital challenges, identify opportunities, and discover solutions. We'll start and end with a tarot card pull to guide our session. I'll help you evaluate which tools truly serve your needs and which might be creating unnecessary friction in your day-to-day operations."
+      - "Written tarot-informed reading on one focused question"
+      - "Software, business strategy, creative blocks"
+      - "Delivered within 3 business days of complete intake (or by your booking deadline)"
+      - "Reread on your own time"
+    price: "$75"
+    description: "Share context through the intake; receive a clear written reading—no meeting to coordinate. Non-refundable once booked."
+    ctaLink: "https://cal.com/pythoness/async"
+    ctaText: "Book Now"
+  - title: "20-Minute Live Reading"
+    subtitle: "Video or voice — interactive"
+    features:
+      - "Tarot pull at start and end"
+      - "Real-time questions and reflection"
+      - "Focused software, strategy, or creative decision"
+    price: "$95"
+    description: "When you need to think out loud with someone who won't rush you. Professional intuitive counsel, not fortune-telling."
     ctaLink: "https://cal.com/pythoness/20min"
     ctaText: "Book Now"
-  - title: "60-Minute Digital Psychic Session"
-    subtitle: "Extended Problem-Solving & Design"
+  - title: "60-Minute Deep Dive"
+    subtitle: "Extended business counsel"
     features:
-      - "Tarot card pull at start and end of session"
-      - "Extended digital problem-solving"
-      - "Deep workflow analysis & design"
-      - "Tool evaluation & recommendations"
-      - "Strategic planning & next steps"
-      - "Perfect for small business owners"
-    price: "$60"
-    description: "Extended time for comprehensive digital problem-solving, system design, and workflow optimization. We'll start and end with a tarot card pull to guide our session. Perfect for small business owners who want to find their tech stack simple, easy, and functional—so you can manage it yourself without needing a regular IT person on-call."
+      - "Tarot pull at start and end"
+      - "Deep pattern work across tech and operations"
+      - "Optional 20-minute follow-up within 30 days"
+    price: "$225"
+    description: "For major transitions or intertwined decisions. Strategic guidance grounded in neurodivergent-centered practice."
     highlight: true
     ctaLink: "https://cal.com/pythoness/60min"
     ctaText: "Book Now"
@@ -55,9 +61,9 @@ additionalServices:
 
 {description}
 
-## Quick Tech Support
+## Software Psychic sessions
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 {mainServices.map((service) => (
   <div key={service.title} className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl ${service.highlight ? 'ring-2 ring-brand-green-accent' : ''}`}>
     <h3 className="text-2xl font-display mb-3 text-brand-cream">{service.title}</h3>

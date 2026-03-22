@@ -1,15 +1,16 @@
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 interface ServiceCardProps {
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   price?: string;
-  description?: string;
-  features?: string[];
+  description?: ReactNode;
+  features?: ReactNode[];
   ctaLink: string;
   ctaText: string;
   icon?: string;
-  note?: string;
+  note?: ReactNode;
   highlight?: boolean;
   isNew?: boolean;
   className?: string;
@@ -76,10 +77,10 @@ export default function ServiceCard({
       </h3>
 
       {/* Subtitle */}
-      {subtitle && (
-        <p className={`${cardTextColor}/80 mb-6`}>
+      {subtitle != null && subtitle !== '' && (
+        <div className={`${cardTextColor}/80 mb-6`}>
           {subtitle}
-        </p>
+        </div>
       )}
 
       {/* Price */}
@@ -90,21 +91,21 @@ export default function ServiceCard({
       )}
 
       {/* Description */}
-      {description && (
-        <p className={`text-sm ${cardTextColor}/70 mb-6`}>
+      {description != null && description !== '' && (
+        <div className={`text-sm ${cardTextColor}/70 mb-6 space-y-3`}>
           {description}
-        </p>
+        </div>
       )}
 
       {/* Features list */}
       {features.length > 0 && (
         <ul className="space-y-3 mb-6">
-          {features.map((feature: string, featureIndex: number) => (
+          {features.map((feature, featureIndex: number) => (
             <li 
               key={featureIndex} 
-              className={`flex items-center space-x-3 ${cardTextColor}/80`}
+              className={`flex items-start space-x-3 ${cardTextColor}/80`}
             >
-              <span className={`flex-shrink-0 w-1.5 h-1.5 rounded-full bg-${cardAccentColor}`}></span>
+              <span className={`flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-${cardAccentColor}`}></span>
               <span>{feature}</span>
             </li>
           ))}
@@ -112,8 +113,8 @@ export default function ServiceCard({
       )}
 
       {/* Note */}
-      {note && (
-        <p className={`text-sm ${cardTextColor}/70 italic mb-6`}>{note}</p>
+      {note != null && note !== '' && (
+        <div className={`text-sm ${cardTextColor}/70 italic mb-6 space-y-2`}>{note}</div>
       )}
 
       {/* Call to action button */}

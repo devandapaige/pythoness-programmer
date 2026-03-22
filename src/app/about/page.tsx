@@ -285,12 +285,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://cal.com/pythoness/20min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/services"
               className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold"
             >
-              Book a Session
+              View sessions &amp; book
             </Link>
             <Link
               href="/resources"
