@@ -89,7 +89,7 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 **Reflection sessions, not rescue:**
 
-1. **Book a session** — async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225).
+1. **Book a session** — async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($255).
 2. **Share your context** — complete the intake before you confirm booking: your question, what you've tried, what a good outcome would feel like (software, strategy, creative work). Async requires a full intake before you can select a delivery slot.
 3. **Reflect together** — live sessions start and end with a tarot pull; async is a private video you receive by link. No hustle-culture script.
 4. **Leave with clarity** — pattern naming, strategic angles, and next steps that fit your brain and business.
@@ -102,7 +102,7 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 |--------|-------------|-------|
 | 20-Minute Async Reflection | Private tarot-guided video on one focused question (software, strategy, or creative). No live call—intake required before booking; the slot you book is when your video will be delivered by. Non-refundable once booked. | $75 |
 | 20-Minute Live Reading | Real-time video or voice; tarot at start and end; interactive counsel for one focused decision or stuck point. | $95 |
-| 60-Minute Deep Dive | Extended intuitive business counsel; deeper pattern work across tech, operations, and creative direction. Optional 20-minute follow-up consultation within 30 days. | $225 |
+| 60-Minute Deep Dive | Extended intuitive business counsel; deeper pattern work across tech, operations, and creative direction. Optional 20-minute follow-up consultation within 30 days. | $255 |
 
 **What every offering includes:** Live sessions — tarot at start and end. Async — recorded video with tarot at start and end. Judgment-free, affirming space (LGBTQIA+ & SW affirming). Grounded language; professional intuitive counsel, not fortune-telling. Pattern recognition and strategic perspective; built around your brain, not a productivity standard.
 
@@ -448,7 +448,7 @@ Proudly serving all humans. LGBTQIA+ affirming. Neurodiversity celebrating. Alwa
 - Provide grounding for the journey
 
 **Support the Pythoness:**
-- Software Psychic: Async video ($75), Live 20 min ($95), Deep dive 60 min ($225)
+- Software Psychic: Async video ($75), Live 20 min ($95), Deep dive 60 min ($255)
 - Current art drops and creative work
 - Optional support: one-time tip, Throne wishlist, Cash App / Venmo / Zelle (see support page)
 - Easy ways to share and connect
@@ -553,7 +553,7 @@ You're speaking to neurodivergent creatives, small business owners, and consciou
 - **Accessibility legal guide,** **back-to-basics,** **password security,** **blog,** and **newsletter** (all free; no paywalls)
 
 ### Premium / Paid (Current)
-- **Software Psychic:** 20-Minute Async Reflection ($75), 20-Minute Live Reading ($95), 60-Minute Deep Dive ($225)
+- **Software Psychic:** 20-Minute Async Reflection ($75), 20-Minute Live Reading ($95), 60-Minute Deep Dive ($255)
 
 ### Premium Resources (Coming Soon)
 - In-depth automation courses

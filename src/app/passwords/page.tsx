@@ -624,7 +624,7 @@ export default function PasswordsPage() {
                 <p className="text-sm text-brand-green-dark">Perfect for quick guidance on specific digital challenges</p>
               </div>
               <div className="border-l-4 border-brand-purple-accent pl-4">
-                <h3 className="font-semibold text-brand-green-dark mb-2">60-Minute Deep Dive ($225)</h3>
+                <h3 className="font-semibold text-brand-green-dark mb-2">60-Minute Deep Dive ($255)</h3>
                 <p className="text-sm text-brand-green-dark">Extended problem-solving and comprehensive system design</p>
               </div>
             </div>

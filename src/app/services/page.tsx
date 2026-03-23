@@ -6,7 +6,7 @@ import { bookingUrls } from '../../config/booking'
 export const metadata = {
   title: 'Services',
   description:
-    'Software Psychic sessions for neurodivergent business owners: async video reflection ($75), 20-minute live reading ($95), and 60-minute deep dive ($225). Tarot-informed intuitive counsel—not fortune-telling.',
+    'Software Psychic sessions for neurodivergent business owners: async video reflection ($75), 20-minute live reading ($95), and 60-minute deep dive ($255). Tarot-informed intuitive counsel—not fortune-telling.',
   openGraph: {
     title: 'Services | Pythoness Programmer',
     description:
@@ -160,7 +160,7 @@ export default function ServicesPage() {
               <ServiceCard
                 title="60-Minute Deep Dive"
                 subtitle="Extended intuitive business counsel. Optional 20-minute follow-up within 30 days."
-                price="$225"
+                price="$255"
                 description={
                   <>
                     <p>
@@ -191,7 +191,7 @@ export default function ServicesPage() {
                   'Optional 20-minute follow-up consultation within 30 days',
                 ]}
                 ctaLink={bookingUrls.deep60}
-                ctaText="Book Deep Dive — $225"
+                ctaText="Book Deep Dive — $255"
                 icon="🔮"
                 textColor="text-brand-cream"
                 note={
@@ -380,7 +380,7 @@ export default function ServicesPage() {
               rel="noopener noreferrer"
               className="inline-block bg-white/10 border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold text-center"
             >
-              Book Deep 60 — $225
+              Book Deep 60 — $255
             </Link>
             <Link
               href="mailto:help@pythonessprogrammer.com"

@@ -64,7 +64,7 @@ export default async function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Book a session</h3>
               <p className="text-brand-cream/90">
-                Async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225). Pick what fits your decision.
+                Async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($255). Pick what fits your decision.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -175,7 +175,7 @@ export default async function Home() {
               <ServiceCard
                 title="60-Minute Deep Dive"
                 subtitle="Extended intuitive business counsel"
-                price="$225"
+                price="$255"
                 description="A full hour to go beneath the surface: patterns across tech, operations, and creative work, plus strategic guidance. Includes optional 20-minute follow-up within 30 days when you want to check in on what's landing."
                 features={[
                   "Tarot pull at start and end",
@@ -184,7 +184,7 @@ export default async function Home() {
                   "Optional 20-minute follow-up consultation within 30 days",
                 ]}
                 ctaLink={bookingUrls.deep60}
-                ctaText="Book Deep Dive — $225"
+                ctaText="Book Deep Dive — $255"
                 icon="🔮"
                 textColor="text-brand-cream"
                 note="Best for major transitions or intertwined decisions"

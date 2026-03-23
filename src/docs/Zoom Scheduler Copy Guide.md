@@ -2,7 +2,7 @@
 
 Use this guide when creating or updating **Zoom Scheduler** scheduling links for Software Psychic sessions. Payments run through **Stripe** inside Zoom Scheduler (see Zoom’s current admin flow in [Zoom Scheduler support](https://support.zoom.com/hc/en/category?id=kb_category&kb_category=9a27b21a8720391089a37408dabb35c5)). Keep positioning aligned with the site and the [Site Copy & Voice Guide](./Site%20Copy%20&%20Voice%20Guide.md).
 
-**Public pricing (match Stripe / Scheduler):** **$75** (async video), **$95** (live 20 min), **$225** (deep dive 60 min).
+**Public pricing (match Stripe / Scheduler):** **$75** (async video), **$95** (live 20 min), **$255** (deep dive 60 min).
 
 **Why Zoom Scheduler + Stripe:** Native Stripe checkout on the booking flow, reminders via Zoom Scheduler, and—at current published rates—lower per-seat scheduler cost than many standalone schedulers (compare plans on [Zoom Scheduler pricing](https://zoom.us/pricing/scheduler)). Confirm fees, taxes, and regional availability in your Zoom and Stripe dashboards.
 
@@ -28,7 +28,7 @@ Do these in **your** Zoom account; exact menu names can change—use [Get starte
 3. Create **three separate scheduling links** (or three “event types” / appointment templates—terminology varies) for:
    - **20-Minute Async Reflection (video)** — $75  
    - **20-Minute Live Reading** — $95  
-   - **60-Minute Deep Dive** — $225  
+   - **60-Minute Deep Dive** — $255  
 4. Set **duration** to **20 min**, **20 min**, and **60 min** respectively. For **async**, the booked time should represent your **delivery commitment** (when the private video will be ready), not a live session—say so clearly in the title and description (see below).
 5. **Calendar:** Connect the calendar(s) Scheduler should respect for availability.
 6. **Reminders:** Use Scheduler’s **email and/or SMS** reminders; paste the copy from this guide into the templates Zoom provides.
@@ -145,7 +145,7 @@ We start and end with a tarot pull. In between, we move together—naming what's
 
 **Duration:** 60 minutes  
 
-**Price (Stripe):** $225  
+**Price (Stripe):** $255  
 
 **Description (what bookers see):**
 
@@ -164,7 +164,7 @@ We start and end with a tarot pull and spend the hour beneath the surface: recur
 
 **Best for:** major transitions, intertwined decisions, foundational questions about how you want to run the work.
 
-**Reflection, not rescue. $225.**
+**Reflection, not rescue. $255.**
 
 ---
 
@@ -278,13 +278,13 @@ This is **reflection, not rescue:** tarot-informed intuitive counsel and technic
 
 **Judgment-free, affirming space** (LGBTQIA+ & SW affirming). Not therapy, legal, or financial advice.
 
-**Book the tier that fits:** async video (**$75**), live 20 min (**$95**), or deep dive 60 min (**$225**).
+**Book the tier that fits:** async video (**$75**), live 20 min (**$95**), or deep dive 60 min (**$255**).
 
 ---
 
 ## Checklist when updating Zoom Scheduler
 
-- [ ] Three scheduling links exist with correct **durations** and **Stripe prices** ($75 / $95 / $225).  
+- [ ] Three scheduling links exist with correct **durations** and **Stripe prices** ($75 / $95 / $255).  
 - [ ] **Async** copy states **private video**, **intake before booking**, **delivery by the selected booking slot**, **non-refundable**, **no live meeting**.  
 - [ ] **60-min** copy includes **optional 20-minute follow-up within 30 days**.  
 - [ ] **Form fields** cover intake (required before booking), including **pronouns** on all three links; optional **referral partner code** if running affiliates.  

@@ -23,7 +23,7 @@ Canonical URLs live in `src/config/booking.ts`. Production defaults:
 - **Hub:** `https://scheduler.zoom.us/pythoness`
 - **Async video:** `https://scheduler.zoom.us/pythoness/async` — $75
 - **20 min live:** `https://scheduler.zoom.us/pythoness/20min` — $95
-- **60 min deep:** `https://scheduler.zoom.us/pythoness/60min` — $225
+- **60 min deep:** `https://scheduler.zoom.us/pythoness/60min` — $255
 
 ### Event Descriptions
 **20-Minute Digital Psychic Session**

@@ -7,7 +7,7 @@
 
 Use this guide when creating or updating your Cal.com event types for Software Psychic sessions. Keep copy consistent with the site and the [Site Copy & Voice Guide](./Site%20Copy%20&%20Voice%20Guide.md). Updated March 2026.
 
-**Set prices in the Cal.com dashboard** to match the site: **$75** (async video), **$95** (live 20 min), **$225** (deep dive 60 min).
+**Set prices in the Cal.com dashboard** to match the site: **$75** (async video), **$95** (live 20 min), **$255** (deep dive 60 min).
 
 ---
 
@@ -146,7 +146,7 @@ We start and end with a tarot pull and spend the hour beneath the surface: recur
 
 **Best for:** major transitions, intertwined decisions, foundational questions about how you want to run the work.
 
-**Reflection, not rescue. $225.**
+**Reflection, not rescue. $255.**
 
 ---
 
@@ -260,7 +260,7 @@ Use these as a blueprint when setting up Cal.com workflows (or similar automatio
 - [ ] **Async** reminders say **video delivered by [time]**, not "meeting at [time]."
 - [ ] **Follow-up** after live sessions matches what you promise in session.
 - [ ] **60-min:** Optional nudge before the 30-day follow-up window closes.
-- [ ] **Prices** in Cal match the site: $75 / $95 / $225.
+- [ ] **Prices** in Cal match the site: $75 / $95 / $255.
 
 ---
 
@@ -276,14 +276,14 @@ This is **reflection, not rescue:** tarot-informed intuitive counsel and technic
 
 **Judgment-free, affirming space** (LGBTQIA+ & SW affirming). Not therapy, legal, or financial advice.
 
-**Book the tier that fits:** async video (**$75**), live 20 min (**$95**), or deep dive 60 min (**$225**).
+**Book the tier that fits:** async video (**$75**), live 20 min (**$95**), or deep dive 60 min (**$255**).
 
 ---
 
 ## Checklist when updating Cal.com
 
 - [ ] Event **titles** align with the site: **20-Minute Async Reflection**, **20-Minute Live Reading**, **60-Minute Deep Dive**.
-- [ ] **Prices** in the dashboard are **$75**, **$95**, **$225**.
+- [ ] **Prices** in the dashboard are **$75**, **$95**, **$255**.
 - [ ] **Descriptions** use reflection language, neurodivergent business owner framing, and **professional intuitive counsel** (not "predictions").
 - [ ] **60-min** copy includes **optional 20-minute follow-up consultation within 30 days**.
 - [ ] **Async** copy states **private video** delivery by the selected time, **non-refundable** once booked, **no live meeting**, confirm via email.

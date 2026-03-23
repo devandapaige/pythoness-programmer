@@ -295,7 +295,7 @@ export default function LinksPage() {
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent/80 text-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center"
               >
-                Book Deep 60 min — $225
+                Book Deep 60 min — $255
               </Link>
             </div>
           </div>
