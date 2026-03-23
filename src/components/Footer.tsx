@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
+import { bookingUrls } from '../config/booking'
 
 function FooterSection({ title, children }: { title: string | ReactNode, children: React.ReactNode }) {
   return (
@@ -57,9 +58,10 @@ export default function Footer() {
               </Link>
           }>
             <ul className="space-y-1" role="list" aria-label="Service links">
-              <li><Link href="https://cal.com/pythoness/async" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Async reflection — $75</Link></li>
-              <li><Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Live 20 min — $95</Link></li>
-              <li><Link href="https://cal.com/pythoness/60min" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Deep dive 60 min — $225</Link></li>
+              <li><Link href={bookingUrls.async} target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Async reflection — $75</Link></li>
+              <li><Link href={bookingUrls.live20} target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Live 20 min — $95</Link></li>
+              <li><Link href={bookingUrls.deep60} target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Deep dive 60 min — $225</Link></li>
+              <li><Link href="/affiliate-program" className={footerLinkClass}>Affiliate program</Link></li>
             </ul>
           </FooterSection>
           {/* Free Resources */}

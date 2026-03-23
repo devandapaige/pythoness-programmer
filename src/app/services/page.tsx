@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import ServiceCard from '../../components/ServiceCard'
+import { bookingUrls } from '../../config/booking'
 
 export const metadata = {
   title: 'Services',
@@ -67,10 +68,9 @@ export default function ServicesPage() {
                       — tarot at start and end, read through the lens of tech, business, and how <em>your</em> mind works.
                     </p>
                     <p>
-                      <strong>How it works:</strong> You book a <strong>delivery deadline</strong> (when you&apos;ll receive the video), complete the
-                      intake, and I record your reading. You get a <strong>private video link</strong> by email — watch once or rewatch on your own time.{' '}
-                      <strong>Delivered within 3 business days</strong> of a complete intake — or by the delivery time you select when booking, whichever
-                      applies to your Cal event.
+                      <strong>How it works:</strong> You complete the <strong>intake first</strong> (required before you can book). Then you choose a
+                      booking slot—that time is <strong>when your private video will be delivered by</strong>. I record your reading; you get a{' '}
+                      <strong>private video link</strong> by email — watch once or rewatch on your own time.
                     </p>
                     <p>
                       <strong>What shifts:</strong> Room to stop doom-scrolling options and <strong>name the pattern</strong> under the stuckness — so you
@@ -84,7 +84,7 @@ export default function ServicesPage() {
                   'Software, strategy, and creative blocks',
                   'Concrete framing — not vague mysticism',
                 ]}
-                ctaLink="https://cal.com/pythoness/async"
+                ctaLink={bookingUrls.async}
                 ctaText="Book Async Reflection — $75"
                 icon="🎥"
                 highlight={true}
@@ -140,7 +140,7 @@ export default function ServicesPage() {
                   'Software and business context without the hustle-culture script',
                   'You leave with a clearer read on what to try next',
                 ]}
-                ctaLink="https://cal.com/pythoness/20min"
+                ctaLink={bookingUrls.live20}
                 ctaText="Book Live Reading — $95"
                 icon="🔮"
                 textColor="text-brand-cream"
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                   'Neurodivergent-friendly angles on tools, workflows, and strategy',
                   'Optional 20-minute follow-up consultation within 30 days',
                 ]}
-                ctaLink="https://cal.com/pythoness/60min"
+                ctaLink={bookingUrls.deep60}
                 ctaText="Book Deep Dive — $225"
                 icon="🔮"
                 textColor="text-brand-cream"
@@ -316,8 +316,9 @@ export default function ServicesPage() {
             <div>
               <h3 className="text-xl font-display text-brand-cream mb-3">How to book</h3>
               <p>
-                Use the <strong className="text-brand-cream">Cal.com</strong> button on the offering you want. You&apos;ll complete a short{' '}
-                <strong className="text-brand-cream">intake</strong> so I&apos;m not guessing your context. Not sure which tier fits? Email{' '}
+                Use the <strong className="text-brand-cream">Zoom Scheduler</strong> link on the offering you want. Intake is part of booking so I&apos;m
+                not guessing your context—async requires a <strong className="text-brand-cream">complete intake before you can book</strong>. Not sure
+                which tier fits? Email{' '}
                 <a href="mailto:help@pythonessprogrammer.com" className="text-brand-green-accent underline hover:no-underline">
                   help@pythonessprogrammer.com
                 </a>{' '}
@@ -346,8 +347,7 @@ export default function ServicesPage() {
                 </li>
                 <li>
                   <strong className="text-brand-cream">Async video readings:</strong> <strong>Non-refundable</strong> once booked. Your video is delivered
-                  by the time stated on your booking (e.g. within 3 business days of a complete intake or by your selected delivery deadline — match what
-                  you set in Cal).
+                  by the <strong>booking slot time you selected</strong> (intake is completed before you book).
                 </li>
                 <li>
                   This is <strong>professional intuitive counsel</strong>, not medical, mental health, legal, or financial advice. It is{' '}
@@ -359,7 +359,7 @@ export default function ServicesPage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center flex-wrap mt-14">
             <Link
-              href="https://cal.com/pythoness/async"
+              href={bookingUrls.async}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold text-center"
@@ -367,7 +367,7 @@ export default function ServicesPage() {
               Book Async — $75
             </Link>
             <Link
-              href="https://cal.com/pythoness/20min"
+              href={bookingUrls.live20}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white/10 border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold text-center"
@@ -375,7 +375,7 @@ export default function ServicesPage() {
               Book Live 20 — $95
             </Link>
             <Link
-              href="https://cal.com/pythoness/60min"
+              href={bookingUrls.deep60}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-white/10 border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold text-center"

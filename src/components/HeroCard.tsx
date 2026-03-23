@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { bookingUrls } from '../config/booking'
 
 export interface Button {
   href: string;
@@ -18,7 +19,7 @@ export default function HeroCard({
   mainText,
   paragraphs,
   buttons = [
-    { text: "Book a Session", href: "https://cal.com/pythoness/20min", primary: true },
+    { text: "Book a Session", href: bookingUrls.live20, primary: true },
     { text: "See All Services", href: "/services", primary: false },
     { text: "Browse Free Resources", href: "/resources", primary: false }
   ]

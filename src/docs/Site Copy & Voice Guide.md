@@ -90,7 +90,7 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 **Reflection sessions, not rescue:**
 
 1. **Book a session** — async video reflection ($75), 20-minute live reading ($95), or 60-minute deep dive ($225).
-2. **Share your context** — fill out the intake when you book: your question, what you've tried, what a good outcome would feel like (software, strategy, creative work).
+2. **Share your context** — complete the intake before you confirm booking: your question, what you've tried, what a good outcome would feel like (software, strategy, creative work). Async requires a full intake before you can select a delivery slot.
 3. **Reflect together** — live sessions start and end with a tarot pull; async is a private video you receive by link. No hustle-culture script.
 4. **Leave with clarity** — pattern naming, strategic angles, and next steps that fit your brain and business.
 
@@ -100,7 +100,7 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 | Service | Description | Price |
 |--------|-------------|-------|
-| 20-Minute Async Reflection | Private tarot-guided video on one focused question (software, strategy, or creative). No live call—booking is a delivery deadline for your video. Delivered within 3 business days of complete intake or by the delivery time selected when booking. Non-refundable once booked. | $75 |
+| 20-Minute Async Reflection | Private tarot-guided video on one focused question (software, strategy, or creative). No live call—intake required before booking; the slot you book is when your video will be delivered by. Non-refundable once booked. | $75 |
 | 20-Minute Live Reading | Real-time video or voice; tarot at start and end; interactive counsel for one focused decision or stuck point. | $95 |
 | 60-Minute Deep Dive | Extended intuitive business counsel; deeper pattern work across tech, operations, and creative direction. Optional 20-minute follow-up consultation within 30 days. | $225 |
 
@@ -150,7 +150,7 @@ Everything on this site is designed to be brain-friendly and barrier-free. Brows
 **Use when:** You need a more formal or structured process description (e.g. one-pagers, sales context). For the main site and brand voice, prefer **How Sessions Work** (reflection sessions, not rescue).
 **A clear, structured process designed to reduce overwhelm and maximize results:**
 
-1. **Book & Share:** Secure your session and fill out a quick intake form to share your goals, challenges, and priorities.
+1. **Book & Share:** Complete intake as part of booking (async: full intake before you can schedule) so your goals and context are clear.
 2. **Assessment:** I review your information and analyze your current systems to identify opportunities for improvement.
 3. **Session & Solutions:** We meet for your session, diving into your challenges, brainstorming solutions, and creating a clear action plan together.
 4. **Follow-Up & Support:** Receive a summary, resources, and next steps after your session. There are options for ongoing support if you need it.

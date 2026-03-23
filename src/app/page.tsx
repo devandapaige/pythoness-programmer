@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeroCard from '../components/HeroCard'
+import { bookingUrls } from '../config/booking'
 import ServiceCard from '../components/ServiceCard'
 import AboutCard from '../components/AboutCard'
 import NewsletterCard from '../components/NewsletterCard'
@@ -69,7 +70,8 @@ export default async function Home() {
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <h3 className="text-xl font-display text-brand-green-accent mb-3">Share your context</h3>
               <p className="text-brand-cream/90">
-                Fill out the intake when you book—your question, what you&apos;ve tried, and what a good outcome would feel like for your business or creative work.
+                Complete the intake before you confirm—your question, what you&apos;ve tried, and what a good outcome would feel like. Async video requires a
+                full intake before you can pick a delivery slot.
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
@@ -84,7 +86,7 @@ export default async function Home() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="https://cal.com/pythoness/20min" target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold text-center">
+            <Link href={bookingUrls.live20} target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold text-center">
               Book a Session
             </Link>
             <Link href="/services" className="inline-block bg-white/10 border-2 border-brand-cream/30 text-brand-cream px-8 py-4 rounded-lg hover:bg-white/20 transition-all duration-300 text-lg font-semibold text-center">
@@ -122,14 +124,14 @@ export default async function Home() {
                 title="20-Minute Async Reflection"
                 subtitle="Private video — no live call"
                 price="$75"
-                description="You share context through the intake; I record a personalized tarot-guided video on one focused question—software, strategy, or creative blocks. Private link by email. Delivered within 3 business days of a complete intake, or by the delivery deadline you select when booking."
+                description="Complete the intake first, then book a slot—that time is when your private video will be delivered by. I record a personalized tarot-guided video on one focused question—software, strategy, or creative blocks. Private link by email."
                 features={[
                   "Private video recording (watch and rewatch)",
                   "Tarot pull at start and end",
                   "Software, business strategy, and creative blocks",
                   "No live meeting to coordinate",
                 ]}
-                ctaLink="https://cal.com/pythoness/async"
+                ctaLink={bookingUrls.async}
                 ctaText="Book Async Reflection — $75"
                 icon="🎥"
                 highlight={true}
@@ -164,7 +166,7 @@ export default async function Home() {
                   "Technical and business context without the hustle script",
                   "You leave with a clearer read on what to try next",
                 ]}
-                ctaLink="https://cal.com/pythoness/20min"
+                ctaLink={bookingUrls.live20}
                 ctaText="Book Live Reading — $95"
                 icon="🔮"
                 textColor="text-brand-cream"
@@ -181,7 +183,7 @@ export default async function Home() {
                   "Neurodivergent-friendly angles on tools and business choices",
                   "Optional 20-minute follow-up consultation within 30 days",
                 ]}
-                ctaLink="https://cal.com/pythoness/60min"
+                ctaLink={bookingUrls.deep60}
                 ctaText="Book Deep Dive — $225"
                 icon="🔮"
                 textColor="text-brand-cream"

@@ -16,11 +16,14 @@
 ### Service Description
 **Digital Psychic Sessions** with the Pythoness Programmer - I don't solve your problems—I help you solve your own. Through my unique blend of technical expertise, pattern recognition, and spiritual insight, I guide you to bring your vision to life. My approach comes from a place of deep inner knowledge and connected insights from my background in sociology, civics, politics, and human rights. I make unsettling connections across industries that have historically gatekept knowledge, and my recommendations come from this place of deep understanding. With 3 years of software engineering experience and 10+ years in communications, customer service, and business operations, I understand how businesses actually work and how systems are designed to succeed or fail. Creation and ideation are spiritual processes, and I combine the mystical with the practical to get at the heart of what your business truly needs.
 
-## Cal.com Event Configuration
+## Zoom Scheduler URLs
 
-### Event Names & URLs
-- **20min Session**: `https://cal.com/pythoness/20min` - $30
-- **60min Session**: `https://cal.com/pythoness/60min` - $60
+Canonical URLs live in `src/config/booking.ts`. Production defaults:
+
+- **Hub:** `https://scheduler.zoom.us/pythoness`
+- **Async video:** `https://scheduler.zoom.us/pythoness/async` — $75
+- **20 min live:** `https://scheduler.zoom.us/pythoness/20min` — $95
+- **60 min deep:** `https://scheduler.zoom.us/pythoness/60min` — $225
 
 ### Event Descriptions
 **20-Minute Digital Psychic Session**

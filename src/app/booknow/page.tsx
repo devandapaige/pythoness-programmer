@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect } from 'react'
+import { bookingUrls } from '@/config/booking'
 
 export default function BookNowRedirect() {
   useEffect(() => {
-    // Redirect to Cal.com booking page
-    window.location.href = 'https://cal.com/pythoness'
+    window.location.href = bookingUrls.hub
   }, [])
 
   return (
@@ -15,7 +15,7 @@ export default function BookNowRedirect() {
         <p className="text-white/80 mb-6">
           If you&apos;re not automatically redirected, 
           <a 
-            href="https://cal.com/pythoness" 
+            href={bookingUrls.hub} 
             className="text-brand-green-accent hover:text-white underline ml-1"
           >
             click here

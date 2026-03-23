@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { bookingUrls } from '../../config/booking'
 
 export const metadata: Metadata = {
   title: '20-Minute Async Reflection - $75 | The Pythoness Programmer',
@@ -33,14 +34,15 @@ export default function AsyncServicePage() {
               Private video reading — <strong className="text-brand-cream font-semibold">$75</strong>. No live meeting.
             </p>
             <p className="text-lg md:text-xl max-w-3xl mx-auto text-white font-light leading-relaxed mb-8">
-              You share one focused question or situation through the intake. I record a{' '}
-              <strong className="text-white font-medium">personalized video</strong> with tarot at start and end—grounded, concrete, and informed by tech
-              and business context. You get a private link by email: watch once or rewatch on your own time. Built for neurodivergent business owners who want
+              You complete the <strong className="text-white font-medium">intake first</strong> (required before you can book). Then you choose a slot—that
+              time is <strong className="text-white font-medium">when your private video will be delivered by</strong>, not a live call. I record a{' '}
+              <strong className="text-white font-medium">personalized video</strong> with tarot at start and end—grounded, concrete, and informed by tech and
+              business context. You get a private link by email: watch once or rewatch on your own time. Built for neurodivergent business owners who want
               clarity <em>without</em> scheduling a live call.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://cal.com/pythoness/async"
+                href={bookingUrls.async}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
@@ -65,7 +67,9 @@ export default function AsyncServicePage() {
                   <li>One focused question or situation (software, strategy, or creative direction)</li>
                   <li>Tarot pull at start and end of the recording—reflection in plain language</li>
                   <li>Pattern naming and next-step angles that fit your capacity</li>
-                  <li>Delivered within <strong>3 business days</strong> of a <strong>complete intake</strong>, or by the delivery time you select when booking</li>
+                  <li>
+                    Delivered by the <strong>booking slot time you select</strong>—your intake is already complete before you book
+                  </li>
                 </ul>
               </div>
               <div className="space-y-4">
@@ -87,19 +91,20 @@ export default function AsyncServicePage() {
                 <div className="w-12 h-12 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <span className="text-xl font-bold text-brand-green-accent">1</span>
                 </div>
-                <h3 className="text-lg font-display mb-2 text-brand-green-dark">Book</h3>
+                <h3 className="text-lg font-display mb-2 text-brand-green-dark">Intake</h3>
                 <p className="text-sm text-brand-green-dark">
-                  Reserve through Cal.com. The time you choose is your <strong>delivery deadline</strong> (when your private video will be ready)—not a live
-                  meeting slot, unless your Cal setup says otherwise. Match what you configure in Cal.
+                  Complete the intake <strong>before</strong> you can book—you can&apos;t schedule until it&apos;s filled out. The more honest context you
+                  give, the more specific the reading can be.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-brand-green-accent/20 rounded-full flex items-center justify-center mb-4 mx-auto">
                   <span className="text-xl font-bold text-brand-green-accent">2</span>
                 </div>
-                <h3 className="text-lg font-display mb-2 text-brand-green-dark">Intake</h3>
+                <h3 className="text-lg font-display mb-2 text-brand-green-dark">Book</h3>
                 <p className="text-sm text-brand-green-dark">
-                  Answer the questions when you book. The more honest context you give, the more specific the reading can be.
+                  Reserve through Zoom Scheduler. The time you choose is <strong>when your private video will be delivered by</strong>—not a live meeting to
+                  join.
                 </p>
               </div>
               <div className="text-center">
@@ -108,8 +113,7 @@ export default function AsyncServicePage() {
                 </div>
                 <h3 className="text-lg font-display mb-2 text-brand-green-dark">Receive</h3>
                 <p className="text-sm text-brand-green-dark">
-                  I send your <strong>private video link</strong> by email (or your stated channel) by the agreed time—typically within three business days
-                  of a complete intake if that&apos;s how you operate.
+                  I send your <strong>private video link</strong> by email by the <strong>booking slot time you selected</strong>.
                 </p>
               </div>
             </div>
@@ -126,7 +130,7 @@ export default function AsyncServicePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://cal.com/pythoness/async"
+                href={bookingUrls.async}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold"
@@ -161,8 +165,7 @@ export default function AsyncServicePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <h3 className="text-xl font-display mb-3 text-white">Refunds</h3>
                 <p className="text-white/90">
-                  Async readings are <strong>non-refundable</strong> once booked (align with your Cal.com terms). Please be ready to proceed before you
-                  confirm.
+                  Async readings are <strong>non-refundable</strong> once booked. You&apos;ll verify before you confirm payment—please be ready to proceed.
                 </p>
               </div>
             </div>
@@ -185,8 +188,8 @@ export default function AsyncServicePage() {
               <div className="bg-white/50 backdrop-blur-sm rounded-2xl p-6">
                 <h3 className="text-xl font-display mb-3 text-brand-green-dark">When will I receive my video?</h3>
                 <p className="text-brand-green-dark">
-                  By the delivery time you selected at booking, or within three business days of a complete intake—whichever matches how you run this event
-                  in Cal.com.
+                  By the <strong>booking slot time you selected</strong>. Your intake is already complete before you book, so that slot is the delivery
+                  commitment.
                 </p>
               </div>
             </div>
@@ -198,7 +201,7 @@ export default function AsyncServicePage() {
               20-minute live readings and 60-minute deep dives are on the main services page—with pricing and policies in one place.
             </p>
             <Link
-              href="https://cal.com/pythoness/async"
+              href={bookingUrls.async}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-gradient-to-r from-brand-green-accent to-brand-green-accent/90 text-black px-8 py-4 rounded-lg hover:from-brand-green-accent/90 hover:to-brand-green-accent transition-all duration-300 shadow-brand-green-accent/20 text-lg font-semibold mr-4 mb-4"

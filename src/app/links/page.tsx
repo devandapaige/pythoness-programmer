@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { bookingUrls } from '@/config/booking'
 import CopyField from '@/components/CopyField'
 
 export const metadata: Metadata = {
@@ -264,7 +265,7 @@ export default function LinksPage() {
               Private video reading on one focused question—software, strategy, or creative blocks. No live call. ~20 min · $75.
             </p>
             <Link
-              href="https://cal.com/pythoness/async"
+              href={bookingUrls.async}
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-brand-green-accent/20 backdrop-blur-sm rounded-lg p-6 border border-brand-green-accent/30 text-center hover:bg-brand-green-accent/30 transition-colors"
@@ -281,7 +282,7 @@ export default function LinksPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link
-                href="https://cal.com/pythoness/20min"
+                href={bookingUrls.live20}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent text-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center"
@@ -289,7 +290,7 @@ export default function LinksPage() {
                 Book Live 20 min — $95
               </Link>
               <Link
-                href="https://cal.com/pythoness/60min"
+                href={bookingUrls.deep60}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent/80 text-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center"
