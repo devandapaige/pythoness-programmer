@@ -141,12 +141,6 @@ const readLinks: LinkItem[] = [
 // Affiliate/referral links section
 const affiliateLinks: LinkItem[] = [
   {
-    name: 'Cal.com',
-    url: 'https://refer.cal.com/pythoness',
-    color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30',
-    subtitle: 'Scheduling — what I use for sessions and async bookings'
-  },
-  {
     name: 'Cora',
     url: 'https://cora.computer/w?ref=tTKuEOSD',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30',
