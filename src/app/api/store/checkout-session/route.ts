@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import { syncStoreSubscriberToBeehiiv } from '@/lib/store/beehiiv'
 import { getStoreProductBySlug } from '@/lib/store/products'
+import { createPaidDownloadToken } from '@/lib/store/secureDownload'
 import { getStripeClient } from '@/lib/store/stripe'
 import { isValidString, sanitizeString } from '@/lib/validation'
 
@@ -42,21 +42,15 @@ export async function GET(request: Request) {
       (typeof session.customer_email === 'string' ? session.customer_email : '')
 
     const normalizedEmail = sanitizeString(email).toLowerCase()
-    const beehiivResult =
-      normalizedEmail.length > 0
-        ? await syncStoreSubscriberToBeehiiv({
-            email: normalizedEmail,
-            productSlug: product.slug,
-          })
-        : { configured: false, synced: false, message: 'No customer email found.' }
 
     return NextResponse.json({
       paid: true,
       productTitle: product.title,
       fileLabel: product.fileLabel,
-      downloadUrl: product.downloadUrl,
+      downloadUrl: `/api/store/paid-download?session_id=${encodeURIComponent(
+        sessionId
+      )}&token=${encodeURIComponent(createPaidDownloadToken(sessionId))}`,
       customerEmail: normalizedEmail || null,
-      beehiiv: beehiivResult,
     })
   } catch (error) {
     const message =

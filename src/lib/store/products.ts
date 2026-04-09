@@ -30,3 +30,6 @@ export const storeProducts: StoreProduct[] = [
 
 export const getStoreProductBySlug = (slug: string): StoreProduct | undefined =>
   storeProducts.find((product) => product.slug === slug)
+
+export const getStoreProductById = (id: string): StoreProduct | undefined =>
+  storeProducts.find((product) => product.id === id)

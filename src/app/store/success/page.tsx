@@ -9,11 +9,6 @@ interface StoreSuccessPayload {
   fileLabel: string
   downloadUrl: string
   customerEmail: string | null
-  beehiiv?: {
-    configured: boolean
-    synced: boolean
-    message?: string
-  }
 }
 
 export default function StoreSuccessPage() {
@@ -93,11 +88,9 @@ export default function StoreSuccessPage() {
             >
               Download: {payload.fileLabel}
             </a>
-            {payload.beehiiv?.configured && !payload.beehiiv.synced && payload.beehiiv.message && (
-              <p className="text-sm text-brand-cream/80">
-                Newsletter sync note: {payload.beehiiv.message}
-              </p>
-            )}
+            <p className="text-sm text-brand-cream/80">
+              You can also use the download link from your purchase email.
+            </p>
             <p className="text-sm text-brand-cream/80">
               Need help? Email{' '}
               <a

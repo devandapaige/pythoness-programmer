@@ -60,6 +60,7 @@ export async function POST(request: Request) {
       ],
       metadata: {
         product_slug: product.slug,
+        fulfillment_status: 'pending',
       },
       success_url: `${siteUrl}/store/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${siteUrl}/store?cancelled=true`,

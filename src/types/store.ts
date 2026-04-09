@@ -19,3 +19,10 @@ export interface BeehiivSyncResult {
   message?: string
 }
 
+export interface TransactionalEmailResult {
+  configured: boolean
+  sent: boolean
+  messageId?: string
+  message?: string
+}
+

@@ -342,8 +342,12 @@ The project uses the following environment variables:
 - `NEXT_PUBLIC_HOTJAR_ID` - Hotjar tracking ID
 - `NEXT_PUBLIC_SITE_URL` - Canonical site URL used for store checkout redirects (example: `https://pythonessprogrammer.com`)
 - `STRIPE_SECRET_KEY` - Stripe secret key for paid product checkout sessions
+- `STRIPE_WEBHOOK_SECRET` - Stripe webhook signing secret for `POST /api/store/webhook`
 - `BEEHIIV_API_KEY` - Beehiiv API key for optional subscriber sync after free claims and paid purchases
 - `BEEHIIV_PUBLICATION_ID` - Beehiiv publication ID (format: `pub_...`) used by subscription API calls
+- `RESEND_API_KEY` - Resend API key for transactional purchase emails
+- `STORE_EMAIL_FROM` - Optional sender for transactional emails (default: `store@pythonessprogrammer.com`)
+- `STORE_DOWNLOAD_TOKEN_SECRET` - Optional HMAC secret for paid download gate tokens (falls back to `STRIPE_WEBHOOK_SECRET`)
 - Additional environment variables can be added in `.env.local`
 
 ## Resources Page
