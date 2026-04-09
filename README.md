@@ -350,6 +350,49 @@ The project uses the following environment variables:
 - `STORE_DOWNLOAD_TOKEN_SECRET` - Optional HMAC secret for paid download gate tokens (falls back to `STRIPE_WEBHOOK_SECRET`)
 - Additional environment variables can be added in `.env.local`
 
+## Stripe webhook local testing (small CLI flow)
+
+Use Stripe CLI to test paid fulfillment locally (webhook + gated download + transactional email send).
+
+1. Start the app:
+
+```bash
+npm run dev
+```
+
+2. In a second terminal, authenticate Stripe CLI if needed:
+
+```bash
+stripe login
+```
+
+3. Start webhook forwarding to the local webhook route:
+
+```bash
+stripe listen --events checkout.session.completed --forward-to localhost:3000/api/store/webhook
+```
+
+4. Copy the webhook signing secret shown by Stripe CLI (`whsec_...`) into `.env.local`:
+
+```bash
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxx
+```
+
+5. Trigger a real test checkout in the app:
+- Open `http://localhost:3000/store`
+- Buy the paid product with a Stripe test card (for example `4242 4242 4242 4242`)
+- Confirm the redirect lands on `/store/success`
+
+6. Verify fulfillment:
+- Stripe CLI shows `checkout.session.completed` delivered
+- webhook logs show `POST /api/store/webhook` succeeded
+- buyer receives transactional email if `RESEND_API_KEY` is configured
+- success-page download button and emailed link both pass through `/api/store/paid-download`
+
+Notes:
+- `stripe trigger checkout.session.completed` can test webhook wiring, but a real checkout is the best end-to-end test because it includes your exact metadata and redirect behavior.
+- Free-product claims do not require Stripe and continue through `/api/store/free-claim`.
+
 ## Resources Page
 
 The resources page (`/resources`) provides a comprehensive collection of free resources for digital wellness, automation, and neurodivergent-friendly tech solutions.
