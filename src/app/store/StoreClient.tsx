@@ -157,10 +157,22 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
   return (
     <main className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-green-dark/95 to-brand-purple-dark text-white py-16 px-4 md:px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-display mb-4">Digital store</h1>
           <p className="text-lg text-brand-cream/90 max-w-3xl mx-auto">
             Instant digital downloads. Some are free, some are paid through secure Stripe checkout.
+          </p>
+        </div>
+
+        <div
+          className="mb-10 rounded-xl border border-brand-cream/35 bg-white/10 px-5 py-4 text-left text-brand-cream/95 max-w-3xl mx-auto"
+          role="status"
+        >
+          <p className="font-semibold text-brand-cream mb-2">Work in progress</p>
+          <p className="text-sm md:text-base text-brand-cream/90 leading-relaxed">
+            This store is still under construction. If you landed here, you&apos;re seeing an early
+            version while we test downloads, email delivery, and checkout—not a finished public
+            catalog yet.
           </p>
         </div>
 
@@ -182,10 +194,17 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
                 ? 'Unlocking file...'
                 : 'Get free download'
 
+            const isErrorProofingTest =
+              product.slug === 'error-proofing-worksheet-pack'
+
             return (
               <article
                 key={product.id}
-                className="rounded-2xl border border-brand-cream/30 bg-white/10 backdrop-blur-sm p-6"
+                className={`rounded-2xl border backdrop-blur-sm p-6 ${
+                  isErrorProofingTest
+                    ? 'border-amber-300/50 bg-amber-950/25'
+                    : 'border-brand-cream/30 bg-white/10'
+                }`}
               >
                 <div className="flex items-start justify-between gap-3 mb-4">
                   <h2 className="text-2xl font-display text-brand-cream">{product.title}</h2>
@@ -193,6 +212,18 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
                     {formatPriceCents(product.priceCents, product.currency)}
                   </span>
                 </div>
+
+                {isErrorProofingTest && (
+                  <div className="mb-4 rounded-lg border border-amber-300/40 bg-black/20 px-3 py-2.5 text-sm text-amber-100/95">
+                    <p className="font-semibold text-amber-100 mb-1">Test product only</p>
+                    <p className="text-amber-100/90 leading-relaxed">
+                      The Error-Proofing Worksheet Pack is here so we can test Stripe and delivery.
+                      It is <span className="font-medium">not</span> offered for sale to the public
+                      right now. Please don&apos;t complete checkout unless you&apos;re explicitly
+                      helping test the system.
+                    </p>
+                  </div>
+                )}
 
                 <p className="text-brand-cream/90 mb-5">{product.description}</p>
 

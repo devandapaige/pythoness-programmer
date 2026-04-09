@@ -17,13 +17,14 @@ export const metadata: Metadata = {
 }
 
 interface StorePageProps {
-  searchParams?: {
+  searchParams: Promise<{
     cancelled?: string
-  }
+  }>
 }
 
-export default function StorePage({ searchParams }: StorePageProps) {
-  const cancelled = searchParams?.cancelled === 'true'
+export default async function StorePage({ searchParams }: StorePageProps) {
+  const { cancelled: cancelledParam } = await searchParams
+  const cancelled = cancelledParam === 'true'
 
   return <StoreClient products={storeProducts} cancelled={cancelled} />
 }
