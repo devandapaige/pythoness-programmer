@@ -340,6 +340,10 @@ A GitHub Actions workflow runs on all PRs and pushes to the main branch:
 
 The project uses the following environment variables:
 - `NEXT_PUBLIC_HOTJAR_ID` - Hotjar tracking ID
+- `NEXT_PUBLIC_SITE_URL` - Canonical site URL used for store checkout redirects (example: `https://pythonessprogrammer.com`)
+- `STRIPE_SECRET_KEY` - Stripe secret key for paid product checkout sessions
+- `BEEHIIV_API_KEY` - Beehiiv API key for optional subscriber sync after free claims and paid purchases
+- `BEEHIIV_PUBLICATION_ID` - Beehiiv publication ID (format: `pub_...`) used by subscription API calls
 - Additional environment variables can be added in `.env.local`
 
 ## Resources Page

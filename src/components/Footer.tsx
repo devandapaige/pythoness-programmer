@@ -33,6 +33,7 @@ export default function Footer() {
           }>
             <ul className="space-y-1">
               <li><Link href="/about" className={footerLinkClass}>About</Link></li>
+              <li><Link href="/store" className={footerLinkClass}>Store</Link></li>
               <li><Link href="/resources" className={footerLinkClass}>Resources</Link></li>
               <li><Link href="https://luma.com/pythoness" target="_blank" rel="noopener noreferrer" className={footerLinkClass}>Events</Link></li>
               <li><Link href="https://stickyspells.etsy.com" target="_blank" rel="noopener noreferrer" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</Link></li>
