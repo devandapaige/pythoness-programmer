@@ -1,9 +1,11 @@
 [build]
   command = "next build"
-  publish = "out"
+  # Overrides Netlify UI if it still points at `out` from the old static-export setup.
+  # Standard `next build` writes to `.next/`; there is no `out/` without `output: "export"`.
+  publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

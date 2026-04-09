@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Link from 'next/link'
 import ServiceCard from '../../components/ServiceCard'
 import { bookingUrls } from '../../config/booking'

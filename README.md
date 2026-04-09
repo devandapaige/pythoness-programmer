@@ -340,7 +340,58 @@ A GitHub Actions workflow runs on all PRs and pushes to the main branch:
 
 The project uses the following environment variables:
 - `NEXT_PUBLIC_HOTJAR_ID` - Hotjar tracking ID
+- `NEXT_PUBLIC_SITE_URL` - Canonical site URL used for store checkout redirects (example: `https://pythonessprogrammer.com`)
+- `STRIPE_SECRET_KEY` - Stripe secret key for paid product checkout sessions
+- `STRIPE_WEBHOOK_SECRET` - Stripe webhook signing secret for `POST /api/store/webhook`
+- `BEEHIIV_API_KEY` - Beehiiv API key for optional subscriber sync after free claims and paid purchases
+- `BEEHIIV_PUBLICATION_ID` - Beehiiv publication ID (format: `pub_...`) used by subscription API calls
+- `RESEND_API_KEY` - Resend API key for transactional purchase emails
+- `STORE_EMAIL_FROM` - Optional sender for transactional emails (default: `store@pythonessprogrammer.com`)
+- `STORE_DOWNLOAD_TOKEN_SECRET` - Optional HMAC secret for paid download gate tokens (falls back to `STRIPE_WEBHOOK_SECRET`)
 - Additional environment variables can be added in `.env.local`
+
+## Stripe webhook local testing (small CLI flow)
+
+Use Stripe CLI to test paid fulfillment locally (webhook + gated download + transactional email send).
+
+1. Start the app:
+
+```bash
+npm run dev
+```
+
+2. In a second terminal, authenticate Stripe CLI if needed:
+
+```bash
+stripe login
+```
+
+3. Start webhook forwarding to the local webhook route:
+
+```bash
+stripe listen --events checkout.session.completed --forward-to localhost:3000/api/store/webhook
+```
+
+4. Copy the webhook signing secret shown by Stripe CLI (`whsec_...`) into `.env.local`:
+
+```bash
+STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxxx
+```
+
+5. Trigger a real test checkout in the app:
+- Open `http://localhost:3000/store`
+- Buy the paid product with a Stripe test card (for example `4242 4242 4242 4242`)
+- Confirm the redirect lands on `/store/success`
+
+6. Verify fulfillment:
+- Stripe CLI shows `checkout.session.completed` delivered
+- webhook logs show `POST /api/store/webhook` succeeded
+- buyer receives transactional email if `RESEND_API_KEY` is configured
+- success-page download button and emailed link both pass through `/api/store/paid-download`
+
+Notes:
+- `stripe trigger checkout.session.completed` can test webhook wiring, but a real checkout is the best end-to-end test because it includes your exact metadata and redirect behavior.
+- Free-product claims do not require Stripe and continue through `/api/store/free-claim`.
 
 ## Resources Page
 

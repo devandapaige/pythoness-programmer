@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Ensures next-mdx-remote uses the app’s React/jsx-runtime (avoids “older version of React” during prerender with Turbopack).
+  transpilePackages: ['next-mdx-remote'],
   reactStrictMode: true,
   images: {
     unoptimized: true,
