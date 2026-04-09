@@ -49,6 +49,7 @@
     "typescript": "^5"
   },
   "overrides": {
-    "glob": "^10.4.6"
+    "glob": "^10.4.6",
+    "@tootallnate/once": "^3.0.1"
   }
 }
