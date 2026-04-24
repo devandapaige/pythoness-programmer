@@ -26,13 +26,13 @@ Do these in **your** Zoom account; exact menu names can change—use [Get starte
 1. **Zoom Scheduler** is available as an add-on or bundled with some Zoom Workplace plans ([pricing](https://zoom.us/pricing/scheduler)).
 2. **Connect Stripe** for paid bookings: in Scheduler / billing settings, complete Stripe onboarding so clients pay when they book (Zoom’s docs describe **Take payment with Stripe** as a Scheduler capability).
 3. Create **three separate scheduling links** (or three “event types” / appointment templates—terminology varies) for:
-   - **20-Minute Async Reflection (video)** — $75  
-   - **20-Minute Live Reading** — $95  
-   - **60-Minute Deep Dive** — $255  
+  - **20-Minute Async Reflection (video)** — $75  
+  - **20-Minute Live Reading** — $95  
+  - **60-Minute Deep Dive** — $255
 4. Set **duration** to **20 min**, **20 min**, and **60 min** respectively. For **async**, the booked time should represent your **delivery commitment** (when the private video will be ready), not a live session—say so clearly in the title and description (see below).
 5. **Calendar:** Connect the calendar(s) Scheduler should respect for availability.
 6. **Reminders:** Use Scheduler’s **email and/or SMS** reminders; paste the copy from this guide into the templates Zoom provides.
-7. **Website:** Live site booking URLs are centralized in [`src/config/booking.ts`](../config/booking.ts) (defaults: **hub** `https://scheduler.zoom.us/pythoness`, **async** `/async`, **live 20** `/20min`, **deep 60** `/60min`). Override with **`NEXT_PUBLIC_BOOKING_*`** in `.env.local` if paths change. Keep **`content/home/*.mdx`** `ctaLink` / hero `href` values in sync with the same base (`scheduler.zoom.us/pythoness/...`).
+7. **Website:** Live site booking URLs are centralized in `[src/config/booking.ts](../config/booking.ts)` (defaults: **hub** `https://scheduler.zoom.us/pythoness`, **async** `/async`, **live 20** `/20min`, **deep 60** `/60min`). Override with `**NEXT_PUBLIC_BOOKING_*`** in `.env.local` if paths change. Keep `**content/home/*.mdx**` `ctaLink` / hero `href` values in sync with the same base (`scheduler.zoom.us/pythoness/...`).
 
 ---
 
@@ -54,19 +54,23 @@ Configure your flow so clients **complete intake before they can book**—e.g. r
 
 Add these as **custom questions** in Zoom Scheduler (exact labels are suggestions—mirror tone across async, live 20, and deep 60).
 
-| # | Suggested field label (guest-facing) | Type | Notes |
-|---|--------------------------------------|------|--------|
-| 1 | **What pronouns should I use for you in your reading and emails?** | Short text | **Include on every event type.** Example helper text: `e.g. she/her, they/them, he/him, xe/xem—or write “use my name only” or “any.”` Mark **required** if your workflow needs it; if you keep it optional, nudge in helper text so most people fill it in. |
-| 2 | **What is the one decision, question, or stuck point you want to focus on?** | Long or short text | Core focus for the session. |
-| 3 | **What have you already tried?** | Short text | “Brief is fine.” |
-| 4 | **Anything else you want me to know?** | Short text | Optional. |
+
+| #   | Suggested field label (guest-facing)                                         | Type               | Notes                                                                                                                                                                                                                                                       |
+| --- | ---------------------------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **What pronouns should I use for you in your reading and emails?**           | Short text         | **Include on every event type.** Example helper text: `e.g. she/her, they/them, he/him, xe/xem—or write “use my name only” or “any.”` Mark **required** if your workflow needs it; if you keep it optional, nudge in helper text so most people fill it in. |
+| 2   | **What is the one decision, question, or stuck point you want to focus on?** | Long or short text | Core focus for the session.                                                                                                                                                                                                                                 |
+| 3   | **What have you already tried?**                                             | Short text         | “Brief is fine.”                                                                                                                                                                                                                                            |
+| 4   | **Anything else you want me to know?**                                       | Short text         | Optional.                                                                                                                                                                                                                                                   |
+
 
 **Async — add or emphasize (in addition to the master fields)**
 
-| Suggested field label | Type | Notes |
-|------------------------|------|--------|
-| **What is the single question or situation you want this reading to address?** | Long text | Can mirror #2 above if you prefer one field—don’t duplicate if one “focus” field is enough. |
-| **Relevant links or context** (project, stack, business stage) | Short text | Optional. |
+
+| Suggested field label                                                          | Type       | Notes                                                                                       |
+| ------------------------------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------------------- |
+| **What is the single question or situation you want this reading to address?** | Long text  | Can mirror #2 above if you prefer one field—don’t duplicate if one “focus” field is enough. |
+| **Relevant links or context** (project, stack, business stage)                 | Short text | Optional.                                                                                   |
+
 
 **Deep 60 — swap or add (layer on top of master fields)**
 
@@ -83,9 +87,9 @@ Per-session copy blocks below repeat the **full intake list** for each tier so y
 **Affiliate program (~5 partners)**
 
 - Add an optional **short text** field: **Referral partner code** (or **How did you hear about this?**). Partners ask clients to enter their code, or you map known partners manually.  
-- If Zoom adds **scheduling tracking fields** or URL parameters that pre-fill custom fields, align with [Zoom’s tracking-field documentation](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0067020) and test in a sandbox booking. Until then, **manual code entry + monthly reconciliation** is fine for a small program. Partner terms: [`/affiliate-program`](../app/affiliate-program/page.tsx).
+- If Zoom adds **scheduling tracking fields** or URL parameters that pre-fill custom fields, align with [Zoom’s tracking-field documentation](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0067020) and test in a sandbox booking. Until then, **manual code entry + monthly reconciliation** is fine for a small program. Partner terms: `[/affiliate-program](../app/affiliate-program/page.tsx)`.
 
-**Commission snapshot:** **20%** of qualifying paid bookings attributed to a partner; payout via **Stripe** (manual or semi-manual) or credit toward your own sessions per [`/affiliate-program`](../app/affiliate-program/page.tsx).
+**Commission snapshot:** **20%** of qualifying paid bookings attributed to a partner; payout via **Stripe** (manual or semi-manual) or credit toward your own sessions per `[/affiliate-program](../app/affiliate-program/page.tsx)`.
 
 ---
 
@@ -111,7 +115,7 @@ We start and end with a tarot pull. In between, we move together—naming what's
 - Tarot pull at start and end  
 - Live back-and-forth on software, strategy, or creative direction  
 - Pattern recognition and next-step clarity  
-- You stay in charge of what you implement  
+- You stay in charge of what you implement
 
 **Best for:** time-sensitive decisions; when you process better out loud; when you want live exchange alongside strategic reflection.
 
@@ -121,9 +125,9 @@ We start and end with a tarot pull. In between, we move together—naming what's
 
 **Intake questions (paste into Zoom Scheduler form fields)**
 
-1. **What pronouns should I use for you in your reading and emails?** (short text — see master table for helper text)  
-2. **What is the one decision, question, or stuck point you want to focus on?**  
-3. **What have you already tried?** (brief is fine)  
+1. **What pronouns should I use for you in your reading and emails?** (short text — see master table for helper text)
+2. **What is the one decision, question, or stuck point you want to focus on?**
+3. **What have you already tried?** (brief is fine)
 4. **Anything else you want me to know before we meet?** (optional)
 
 ---
@@ -160,7 +164,7 @@ We start and end with a tarot pull and spend the hour beneath the surface: recur
 - Tarot pull at start and end  
 - Deep pattern work and strategic framing  
 - Neurodivergent-friendly angles on tools and business choices  
-- Optional 20-minute follow-up consultation within 30 days  
+- Optional 20-minute follow-up consultation within 30 days
 
 **Best for:** major transitions, intertwined decisions, foundational questions about how you want to run the work.
 
@@ -170,10 +174,10 @@ We start and end with a tarot pull and spend the hour beneath the surface: recur
 
 **Intake questions (paste into Zoom Scheduler form fields)**
 
-1. **What pronouns should I use for you in your reading and emails?** (short text — see master table for helper text)  
-2. **What patterns or decisions keep looping for you?**  
-3. **What have you already tried or changed that didn’t stick?**  
-4. **What would a good outcome feel like after this session?** (optional)  
+1. **What pronouns should I use for you in your reading and emails?** (short text — see master table for helper text)
+2. **What patterns or decisions keep looping for you?**
+3. **What have you already tried or changed that didn’t stick?**
+4. **What would a good outcome feel like after this session?** (optional)
 5. **Anything else you want me to know?** (optional)
 
 *If you prefer a shorter form, use the **master intake fields** (#1–4 in the table above) instead of 2–5; always keep **pronouns**.**
@@ -211,19 +215,19 @@ This is asynchronous. **Intake is required before you can book.** I record your 
 
 - Private video recording—not a live meeting (nothing to join at the scheduled time)  
 - Tarot pull at start and end; reflection in plain language (no tarot knowledge required on your side)  
-- Pattern naming and next-step angles that fit your capacity  
+- Pattern naming and next-step angles that fit your capacity
 
 **How it works**
 
-1. Complete the intake (required before booking).  
-2. Book a slot—the time you choose is when your private video will be **delivered by**.  
-3. Receive your private video link by email by that time.  
+1. Complete the intake (required before booking).
+2. Book a slot—the time you choose is when your private video will be **delivered by**.
+3. Receive your private video link by email by that time.
 
 **Important**
 
 - Not a live session—you're booking **when your video will be ready**, not a call to join  
 - Non-refundable once booked; confirm via email so delivery reaches you  
-- Professional intuitive counsel—not therapy, legal, or financial advice  
+- Professional intuitive counsel—not therapy, legal, or financial advice
 
 **$75.**
 
@@ -231,14 +235,14 @@ This is asynchronous. **Intake is required before you can book.** I record your 
 
 **Intake questions (paste into Zoom Scheduler form fields)**
 
-1. **What pronouns should I use for you in your reading and emails?** (short text — see master table for helper text)  
-2. **What is the single question or situation you want this reading to address?**  
+1. **What pronouns should I use for you in your reading and emails?** (short text — see master table for helper text)
+2. **What is the single question or situation you want this reading to address?**
 3. **What have you already tried?** (optional)
 
 Add if you want more context:
 
-4. **Relevant links or context** (project, stack, business stage) (optional)  
-5. **Anything else you want me to know?** (optional)
+1. **Relevant links or context** (project, stack, business stage) (optional)
+2. **Anything else you want me to know?** (optional)
 
 *If you use one combined “focus” field instead of #2 and #3, merge them—keep **pronouns** on this link.*
 
@@ -256,13 +260,15 @@ Add if you want more context:
 
 ## Zoom Scheduler workflows (reminders & follow-ups)
 
-| Session | When | Purpose |
-|--------|------|---------|
-| **Live 20** | 24h before | Reminder + tarot / no prep |
-| **Live 20** | 1h before (optional) | Short reminder |
-| **Deep 60** | 24h before | Reminder + optional follow-up within 30 days |
-| **Async** | After booking | Clarify: time = **delivery**, not live join |
-| **Async** | 24–48h before delivery | Optional nudge: video arrives by [time]; no live meeting |
+
+| Session     | When                   | Purpose                                                  |
+| ----------- | ---------------------- | -------------------------------------------------------- |
+| **Live 20** | 24h before             | Reminder + tarot / no prep                               |
+| **Live 20** | 1h before (optional)   | Short reminder                                           |
+| **Deep 60** | 24h before             | Reminder + optional follow-up within 30 days             |
+| **Async**   | After booking          | Clarify: time = **delivery**, not live join              |
+| **Async**   | 24–48h before delivery | Optional nudge: video arrives by [time]; no live meeting |
+
 
 Tune copy in Scheduler’s **notification** settings. Add a **follow-up** email after live sessions if you promise resources by email.
 
@@ -284,26 +290,28 @@ This is **reflection, not rescue:** tarot-informed intuitive counsel and technic
 
 ## Checklist when updating Zoom Scheduler
 
-- [ ] Three scheduling links exist with correct **durations** and **Stripe prices** ($75 / $95 / $255).  
-- [ ] **Async** copy states **private video**, **intake before booking**, **delivery by the selected booking slot**, **non-refundable**, **no live meeting**.  
-- [ ] **60-min** copy includes **optional 20-minute follow-up within 30 days**.  
-- [ ] **Form fields** cover intake (required before booking), including **pronouns** on all three links; optional **referral partner code** if running affiliates.  
-- [ ] **Confirmation + reminder** templates match this guide.  
-- [ ] **Website and footer** point to **Zoom Scheduler URLs** (not old Cal links) after cutover.  
-- [ ] Stripe payouts, refunds, and tax settings match your accountant’s guidance.  
+- Three scheduling links exist with correct **durations** and **Stripe prices** ($75 / $95 / $255).  
+- **Async** copy states **private video**, **intake before booking**, **delivery by the selected booking slot**, **non-refundable**, **no live meeting**.  
+- **60-min** copy includes **optional 20-minute follow-up within 30 days**.  
+- **Form fields** cover intake (required before booking), including **pronouns** on all three links; optional **referral partner code** if running affiliates.  
+- **Confirmation + reminder** templates match this guide.  
+- **Website and footer** point to **Zoom Scheduler URLs** (not old Cal links) after cutover.  
+- Stripe payouts, refunds, and tax settings match your accountant’s guidance.
 
 ---
 
 ## Quick reference: phrases to use
 
-| Use | Avoid |
-|-----|-------|
-| Reflection session / intuitive counsel | Troubleshooting-only framing |
-| What this struggle is trying to teach you | "I'll tell you what to do" as the whole pitch |
-| Tarot pull at start and end (live and async video) | |
-| Private video / delivery by [time] (async) | Implying a live call at the booked time |
-| Judgment-free, affirming (LGBTQIA+ & SW affirming) | Generic "inclusive" only |
+
+| Use                                                | Avoid                                         |
+| -------------------------------------------------- | --------------------------------------------- |
+| Reflection session / intuitive counsel             | Troubleshooting-only framing                  |
+| What this struggle is trying to teach you          | "I'll tell you what to do" as the whole pitch |
+| Tarot pull at start and end (live and async video) |                                               |
+| Private video / delivery by [time] (async)         | Implying a live call at the booked time       |
+| Judgment-free, affirming (LGBTQIA+ & SW affirming) | Generic "inclusive" only                      |
+
 
 ---
 
-*Supersedes Cal.com-specific setup for day-to-day operations. Legacy Cal copy is preserved in [`Cal.com Events Copy Guide.md`](./Cal.com%20Events%20Copy%20Guide.md) for reference only.*
+*Supersedes Cal.com-specific setup for day-to-day operations. Legacy Cal copy is preserved in `[Cal.com Events Copy Guide.md](./Cal.com%20Events%20Copy%20Guide.md)` for reference only.*
