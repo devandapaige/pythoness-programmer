@@ -76,7 +76,7 @@ export default function ResourcesPage() {
                   </div>
                   <h3 className="text-xl font-display text-brand-green-dark mb-3">Newsletter</h3>
                   <p className="text-brand-green-dark/80 mb-4">
-                    Monthly insights on digital wellness, automation strategies, and neurodivergent-friendly tech.
+                    Weekly insights on digital wellness, sustainable systems, and neurodivergent-friendly tech.
                   </p>
                   <Link
                     href="https://newsletter.pythonessprogrammer.com"
@@ -145,7 +145,7 @@ export default function ResourcesPage() {
                 Ready to Transform Your Digital Life?
               </h2>
               <p className="text-brand-cream/90 mb-6 max-w-2xl mx-auto">
-                Start with any of these free resources, or book a personalized session to get tailored guidance 
+                Start with any of these free resources, or book a personalized session to get tailored guidance
                 for your specific needs and goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -156,10 +156,16 @@ export default function ResourcesPage() {
                   Book a Session
                 </Link>
                 <Link
+                  href="/coming-out-of-rest-mode"
+                  className="bg-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/30 transition-colors font-semibold"
+                >
+                  March: Coming Out of Rest Mode
+                </Link>
+                <Link
                   href="/digital-spring-cleaning"
                   className="bg-white/20 text-white px-8 py-3 rounded-lg hover:bg-white/30 transition-colors font-semibold"
                 >
-                  Start with Digital Spring Cleaning
+                  April: Digital Spring Cleaning
                 </Link>
               </div>
             </div>
