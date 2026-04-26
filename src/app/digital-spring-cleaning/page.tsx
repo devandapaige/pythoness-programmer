@@ -131,12 +131,35 @@ export default function DigitalSpringCleaningPage() {
               <p className="text-brand-green-dark mb-2">
                 <strong>Spring Cleaning Your Digital Life</strong> — Sunday, April 26, 2026
               </p>
-              <p className="text-brand-green-dark text-sm mb-3">
+              <p className="text-brand-green-dark text-sm mb-4">
                 A live walk-through of the Grit Framework in practice, the NAA reset, and building a maintenance plan
                 that doesn&apos;t collapse at the first unexpected life event.
               </p>
-              {/* TODO: Replace with replay URL once available after the April 26 event */}
-              <p className="text-brand-green-dark/60 text-sm italic">Replay coming soon — check back after the event.</p>
+              <div className="w-full">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed/54NqQqnlmzI"
+                  title="Spring Cleaning Your Digital Life — April 26, 2026"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ borderRadius: '12px' }}
+                />
+              </div>
+              <p className="text-brand-green-dark text-sm mt-4">
+                Want to follow along with the slides?{' '}
+                <a
+                  href="https://canva.link/fkioq84i0qwjd28"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-brand-purple-dark font-semibold"
+                >
+                  View the live presentation on Canva
+                </a>
+                .
+              </p>
             </div>
           </section>
 
