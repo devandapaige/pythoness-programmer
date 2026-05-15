@@ -5,9 +5,324 @@
     <link>https://pythonessprogrammer.com</link>
     <description>Thoughts on technology, accessibility, and the human experience.</description>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Apr 2026 18:37:57 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2026 02:34:02 GMT</lastBuildDate>
     <atom:link href="https://pythonessprogrammer.com/feed.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title><![CDATA[Your IDE Is a Workbench]]></title>
+      <link>https://pythonessprogrammer.com/blog/2026-05-15-your-ide-is-workbench</link>
+      <guid>https://pythonessprogrammer.com/blog/2026-05-15-your-ide-is-workbench</guid>
+      <pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Learn the VS Code layout, open a real folder, and have a grounded first chat with an in-editor AI—without treating the tool like magic.]]></description>
+      <content:encoded><![CDATA[
+*Published: May 15, 2026 · Part of the [Mindful Automation](https://www.pythonessprogrammer.com/mindful-automation) series*
+
+---
+
+Here is the through-line for May, weeks one and two, in one place:
+
+You do not need to write code to benefit from a code editor. You need a **workbench**: one window where your folder, your text, and (when you want it) an AI panel share the same air. Last week was “learn the room.” This week is “have a conversation that stays tied to your files.”
+
+This guide uses **Visual Studio Code** as the stable teaching environment. If you use **GitHub Copilot** (or another extension that adds a chat side panel), the ideas transfer: open a project, point the assistant at real files, keep prompts specific. Product-specific menus change; the mental model does not.
+
+---
+
+## Week 1: Video walkthrough
+
+If you want this post as a narrated tour, start here. Week 1 covers the layout, shortcuts, and how I think about the IDE as a workbench—not a shrine to coding.
+
+<div
+  style={{
+    position: 'relative',
+    paddingBottom: '56.25%',
+    height: 0,
+    overflow: 'hidden',
+    maxWidth: '100%',
+    margin: '1.5rem 0',
+    borderRadius: '0.5rem',
+  }}
+>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+    src="https://www.youtube.com/embed/fYZMZS0jw7c"
+    title="Mindful Automation Week 1: Your IDE is a workbench"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
+
+[Open Week 1 on YouTube](https://youtu.be/fYZMZS0jw7c) if the embed does not load in your reader.
+
+---
+
+## Week 2: Video (publishing next)
+
+Week 2 is the “observation before optimization” beat: a grounded first chat, `my-rhythms.md`, and keeping context tied to files you control. The embed will sit in this space as soon as the Part 2 video is public—same responsive iframe pattern as Week 1, swapping in the new YouTube `embed/…` URL and title.
+
+**Week 2 YouTube embed goes here** (same responsive iframe block as Week 1—swap in the new `embed/…` URL and `title` when the video is public).
+
+Until the link is live: [subscribe on YouTube](https://www.youtube.com/@pythonessprogrammer) so you catch Part 2 when it drops.
+
+---
+
+## The mental model: IDE ≈ almost an Obsidian vault
+
+If you have lived in **Obsidian**, you already know half of this: notes are files, the sidebar is structure, search is muscle memory, and the value is *visibility*—you can see what you have without opening twelve apps.
+
+An IDE is similar, with two honest differences:
+
+1. **It expects a “project folder” mindset.** You use `File → Open Folder…` and everything under that tree is the workspace.
+2. **It is comfortable with plain text everywhere.** Markdown, `.txt`, config files—the same habit as a vault-first workflow.
+
+Some people keep a vault in one tool and a “shipping” folder in VS Code. Some live mostly in **Cursor** when they want heavier AI affordances and switch to something calmer when they do not. That bouncing is normal. The goal here is not a prescription; it is literacy. When you recognize “this is the same file-and-search game I already play,” the IDE stops feeling like someone else’s profession.
+
+---
+
+## Bare basics: install, open a folder, meet the Activity Bar
+
+1. Install [Visual Studio Code](https://code.visualstudio.com/) (free, Mac / Windows / Linux).
+2. Choose `File → Open Folder…` and select the folder where your notes, templates, or project files already live.
+3. Breathe. You are not committing to a lifestyle—just opening a drawer.
+
+### The Activity Bar and primary sidebar
+
+The **Activity Bar** is the narrow strip of icons that opens the main “rooms” beside your files. In a default VS Code layout it sits on the **far left**; the wider **primary sidebar** shows the Explorer, Search results, Source Control, and so on.
+
+![VS Code primary sidebar and Activity Bar with labels for Explorer, Search, Source Control, Run and Debug, and Extensions, plus shortcuts (screenshot shows macOS symbols).](/blog/your-ide-is-workbench/primary-sidebar-activity-bar.png)
+
+These five icons are the ones worth mapping first. Shortcuts below match the default **Visual Studio Code** keymaps on macOS and Windows (Linux is usually the same as Windows, with <kbd>Super</kbd> sometimes standing in for <kbd>Ctrl</kbd> depending on your distro).
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Room</th>
+      <th>macOS</th>
+      <th>Windows</th>
+      <th>What you use it for</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><strong>Explorer</strong></td>
+      <td><kbd>⇧⌘E</kbd></td>
+      <td><kbd>Ctrl+Shift+E</kbd></td>
+      <td>Folder tree, create and move files</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>Search</strong></td>
+      <td><kbd>⇧⌘F</kbd></td>
+      <td><kbd>Ctrl+Shift+F</kbd></td>
+      <td>Find text across the whole folder</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Source Control</strong></td>
+      <td><kbd>⌃⇧G</kbd></td>
+      <td><kbd>Ctrl+Shift+G</kbd></td>
+      <td>Git changes (ignore until you need it)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>Run and Debug</strong></td>
+      <td><kbd>⇧⌘D</kbd></td>
+      <td><kbd>Ctrl+Shift+D</kbd></td>
+      <td>For running code later; skip for now if you are not coding yet</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>Extensions</strong></td>
+      <td><kbd>⇧⌘X</kbd></td>
+      <td><kbd>Ctrl+Shift+X</kbd></td>
+      <td>Themes, Copilot, linters</td>
+    </tr>
+  </tbody>
+</table>
+
+### Tuning the Explorer
+
+You can slim the sidebar to what you actually use. Open the `…` menu in the Explorer header to toggle sections such as Open Editors, Outline, and Timeline.
+
+![Explorer sidebar with callout to the “more actions” menu for layout options like Open Editors and Outline.](/blog/your-ide-is-workbench/primary-sidebar-explorer.png)
+
+---
+
+## Command Palette: plain-English navigation
+
+<kbd>⇧⌘P</kbd> (Mac) or <kbd>Ctrl+Shift+P</kbd> (Windows / Linux) opens the **Command Palette**: searchable actions instead of memorized menus. When you are lost, type a verb (“Markdown,” “Git,” “Zoom”).
+
+![Command Palette open at the top of the editor with the shortcut ⌘⇧P called out.](/blog/your-ide-is-workbench/command-palette-1.png)
+
+![Command Palette in command mode with a list of actions and shortcuts on the right.](/blog/your-ide-is-workbench/command-palette-2.png)
+
+For Markdown, raw syntax in the editor is fine. When you want a rendered preview, the Command Palette (<kbd>⇧⌘P</kbd> / <kbd>Ctrl+Shift+P</kbd>) → “Markdown: Open Preview” (or the split-preview variant) does the job without a separate app.
+
+---
+
+## The editor (center) and where chat usually lives
+
+Click a file in the Explorer; it opens in the **editor** in the center. Many AI extensions dock **chat on the right** as a secondary sidebar so your prompt sits next to the file you mean—not in a disconnected browser tab you paste into.
+
+Zen Mode (<kbd>⌘K</kbd> then <kbd>Z</kbd> on Mac, or <kbd>Ctrl+K</kbd> then <kbd>Z</kbd> on Windows / Linux) clears chrome when you need a calmer surface. Press <kbd>Esc</kbd> twice to exit (default on both platforms).
+
+![Center editor with Zen Mode shortcut, common shortcuts (Open Chat, Show All Commands, Open Recent, Open File or Folder, New Untitled File), and the Chat / Build with Agent panel on the right.](/blog/your-ide-is-workbench/editor-zen-mode.png)
+
+In VS Code, AI chat usually arrives through **GitHub Copilot Chat** (extension plus sign-in) or whatever assistant your org approves. Menus shift between versions; after install, search the Command Palette for “Chat” or “Copilot.” The habit matters more than the logo: **keep the file in view while you chat.**
+
+---
+
+## Bottom panel: terminal, problems, output
+
+The strip along the bottom holds **Terminal**, **Problems**, **Output**, **Debug Console**, and **Ports**. You can hide the whole panel with <kbd>⌘J</kbd> on Mac or <kbd>Ctrl+J</kbd> on Windows / Linux (toggle panel visibility) when you want more vertical room for writing.
+
+![Bottom panel with Terminal active; callout for toggling the panel with ⌘J.](/blog/your-ide-is-workbench/bottom-panel-toggle.png)
+
+When you are ready for the integrated terminal, <kbd>⌃</kbd> + <kbd>`</kbd> on Mac or <kbd>Ctrl</kbd> + <kbd>`</kbd> on Windows / Linux toggles it. <kbd>⌃⇧</kbd> + <kbd>`</kbd> or <kbd>Ctrl+Shift</kbd> + <kbd>`</kbd> opens a **new** terminal instance. Same “everything in one window” spirit; you do not need shell commands yet to benefit from the layout.
+
+![Bottom panel with Terminal tab selected; callouts for toggling the terminal and creating a new terminal.](/blog/your-ide-is-workbench/bottom-panel-terminal.png)
+
+---
+
+## First conversation that actually helps: make rhythms visible
+
+Week two of the arc is about **observation before optimization**—making your communication timing visible so you (and tools) can align with it.
+
+Create `my-rhythms.md` in your folder. Before you open chat, draft bullet facts: newsletter send window, reminder policy, days you do not email, your best writing hours.
+
+Then ask for something **bounded**, not cosmic.
+
+**Too broad:** “Help me organize my communication workflow.”
+
+**Grounded:** “Using only the facts I list below, write `my-rhythms.md` with sections for Newsletter, Reminders, Quiet hours, and Focus window. Under 25 lines, plain language, `last updated` at top.”
+
+Paste your bullets; review every line; save the file yourself. The win is not clever AI—it is a **file you can point to** next week when templates and mentions enter the story.
+
+---
+
+## What the assistant can see (and why privacy is a mindset)
+
+Typical in-editor assistants can read:
+
+- The file currently focused in the editor (and sometimes adjacent open tabs)
+- Files you explicitly attach or `@`-mention (wording varies by product)
+- **Not** your email, calendar, or cloud drives—unless you paste them in
+
+Treat that boundary as **feature, not failure**: you choose the context. Keep sensitive client material out of the workspace you index for experiments, or use a dedicated folder with only decoy or sample text while learning.
+
+**Privacy mindset (short):**
+
+- Read the vendor’s **data handling** page before you paste secrets.
+- Prefer **workspaces you control** over “dump everything in.”
+- If a setting mentions training, logging, or “improve the model,” decide consciously—especially for HIPAA-, NDA-, or identity-heavy work.
+
+---
+
+## If you also use Cursor (high level, because UIs move fast)
+
+Cursor-style tools sit on the same VS Code skeleton; shortcuts and panel names drift between releases. One layout difference that trips people up: in **Cursor**, the activity strip is often **horizontal above the file tree** instead of a vertical bar on the far left.
+
+![Comparison: standard VS Code vertical Activity Bar versus Cursor with a horizontal activity row above the primary sidebar.](/blog/your-ide-is-workbench/activity-panel-cursor.png)
+
+Instead of screenshot-chasing every release:
+
+- Open **Settings** and search **privacy**—note what is sent off-device and what stays local.
+- Search **telemetry** and **indexing**—large personal archives may deserve excludes (often `.gitignore`-style ignore files).
+- Teach yourself **where the chat panel gets its context** (open files vs mentions). That mental model survives UI churn.
+
+---
+
+## Quick reference
+
+<table>
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>macOS</th>
+      <th>Windows / Linux</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Command Palette</td>
+      <td><kbd>⇧⌘P</kbd></td>
+      <td><kbd>Ctrl+Shift+P</kbd></td>
+    </tr>
+    <tr>
+      <td>Explorer</td>
+      <td><kbd>⇧⌘E</kbd></td>
+      <td><kbd>Ctrl+Shift+E</kbd></td>
+    </tr>
+    <tr>
+      <td>Search</td>
+      <td><kbd>⇧⌘F</kbd></td>
+      <td><kbd>Ctrl+Shift+F</kbd></td>
+    </tr>
+    <tr>
+      <td>Source Control</td>
+      <td><kbd>⌃⇧G</kbd></td>
+      <td><kbd>Ctrl+Shift+G</kbd></td>
+    </tr>
+    <tr>
+      <td>Run and Debug</td>
+      <td><kbd>⇧⌘D</kbd></td>
+      <td><kbd>Ctrl+Shift+D</kbd></td>
+    </tr>
+    <tr>
+      <td>Extensions</td>
+      <td><kbd>⇧⌘X</kbd></td>
+      <td><kbd>Ctrl+Shift+X</kbd></td>
+    </tr>
+    <tr>
+      <td>Toggle bottom panel</td>
+      <td><kbd>⌘J</kbd></td>
+      <td><kbd>Ctrl+J</kbd></td>
+    </tr>
+    <tr>
+      <td>Toggle terminal</td>
+      <td>
+        <kbd>⌃</kbd> + <kbd>`</kbd>
+      </td>
+      <td>
+        <kbd>Ctrl</kbd> + <kbd>`</kbd>
+      </td>
+    </tr>
+    <tr>
+      <td>New terminal</td>
+      <td>
+        <kbd>⌃⇧</kbd> + <kbd>`</kbd>
+      </td>
+      <td>
+        <kbd>Ctrl+Shift</kbd> + <kbd>`</kbd>
+      </td>
+    </tr>
+    <tr>
+      <td>Toggle primary sidebar</td>
+      <td><kbd>⌘B</kbd></td>
+      <td><kbd>Ctrl+B</kbd></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+## What’s next in the arc
+
+You now have the same “workbench” story weeks one and two were circling: **visible structure + a first grounded chat + a rhythms file on disk.** Week three levels up file references and light automation habits—still mindful, still plain text first.
+
+---
+
+*Part of the Mindful Automation series — [pythonessprogrammer.com/mindful-automation](https://www.pythonessprogrammer.com/mindful-automation)*
+
+*Questions? Hit reply on the newsletter or find me on socials linked from [pythonessprogrammer.com](https://www.pythonessprogrammer.com).*
+]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>automation</category>
+      <category>foundations</category>
+      <category>workflows</category>
+    </item>
     <item>
       <title><![CDATA[I'm Off TikTok For Good: A Political Boycott and the Final Snake Skin Shed]]></title>
       <link>https://pythonessprogrammer.com/blog/off-tiktok-for-good-tech-ethics-and-boundaries</link>
