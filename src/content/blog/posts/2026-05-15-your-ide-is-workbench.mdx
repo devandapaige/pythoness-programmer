@@ -1,27 +1,27 @@
 ---
 title: "Your IDE Is a Workbench"
-date: "2026-05-15"
+date: "2026-05-18"
 description: "Learn the VS Code layout, open a real folder, and have a grounded first chat with an in-editor AI—without treating the tool like magic."
 author: "Amanda Nelson"
 tags: ["automation", "foundations", "workflows"]
 image: "/blog/your-ide-is-workbench/editor-zen-mode.png"
 ---
 
-*Published: May 15, 2026 · Part of the [Mindful Automation](https://www.pythonessprogrammer.com/mindful-automation) series*
+*Published: May 18, 2026 · Part of the [Mindful Automation](https://www.pythonessprogrammer.com/mindful-automation) series*
 
 ---
 
-Here is the through-line for May, weeks one and two, in one place:
+Sprint 1 of May’s **mindful automation** arc had two beats: learn the room, then make your rhythms visible on disk.
 
-You do not need to write code to benefit from a code editor. You need a **workbench**: one window where your folder, your text, and (when you want it) an AI panel share the same air. Last week was “learn the room.” This week is “have a conversation that stays tied to your files.”
+**Watch first:** If you have not yet walked through the layout, start with the Week 1 screen-share — [Your First 30 Minutes in VSCode (No Coding Required)](https://youtu.be/fYZMZS0jw7c) (~15 min). That video covers install, `Open Folder…`, the Activity Bar, Command Palette, and making the window yours. **This post** is the written follow-up: mental model, where chat lives, and your first grounded conversation that stays tied to your files.
+
+You do not need to write code to benefit from a code editor. You need a **workbench**—one window where your folder, your text, and (when you want it) an AI panel share the same air.
 
 This guide uses **Visual Studio Code** as the stable teaching environment. If you use **GitHub Copilot** (or another extension that adds a chat side panel), the ideas transfer: open a project, point the assistant at real files, keep prompts specific. Product-specific menus change; the mental model does not.
 
 ---
 
-## Week 1: Video walkthrough
-
-If you want this post as a narrated tour, start here. Week 1 covers the layout, shortcuts, and how I think about the IDE as a workbench—not a shrine to coding.
+## Week 1: Screen-share walkthrough
 
 <div
   style={{
@@ -48,16 +48,6 @@ If you want this post as a narrated tour, start here. Week 1 covers the layout, 
 
 ---
 
-## Week 2: Video (publishing next)
-
-Week 2 is the “observation before optimization” beat: a grounded first chat, `my-rhythms.md`, and keeping context tied to files you control. The embed will sit in this space as soon as the Part 2 video is public—same responsive iframe pattern as Week 1, swapping in the new YouTube `embed/…` URL and title.
-
-**Week 2 YouTube embed goes here** (same responsive iframe block as Week 1—swap in the new `embed/…` URL and `title` when the video is public).
-
-Until the link is live: [subscribe on YouTube](https://www.youtube.com/@pythonessprogrammer) so you catch Part 2 when it drops.
-
----
-
 ## The mental model: IDE ≈ almost an Obsidian vault
 
 If you have lived in **Obsidian**, you already know half of this: notes are files, the sidebar is structure, search is muscle memory, and the value is *visibility*—you can see what you have without opening twelve apps.
@@ -67,13 +57,13 @@ An IDE is similar, with two honest differences:
 1. **It expects a “project folder” mindset.** You use `File → Open Folder…` and everything under that tree is the workspace.
 2. **It is comfortable with plain text everywhere.** Markdown, `.txt`, config files—the same habit as a vault-first workflow.
 
-Some people keep a vault in one tool and a “shipping” folder in VS Code. Some live mostly in **Cursor** when they want heavier AI affordances and switch to something calmer when they do not. That bouncing is normal. The goal here is not a prescription; it is literacy. When you recognize “this is the same file-and-search game I already play,” the IDE stops feeling like someone else’s profession.
+Some people keep a vault in one tool and a “shipping” folder in VS Code. Some live mostly in [**Cursor**](https://cursor.com/referral?code=HE5B2LBMDM7G) when they want heavier AI affordances and switch to something calmer when they do not. That bouncing is normal. The goal here is not a prescription; it is literacy. When you recognize “this is the same file-and-search game I already play,” the IDE stops feeling like someone else’s profession.
 
 ---
 
 ## Bare basics: install, open a folder, meet the Activity Bar
 
-1. Install [Visual Studio Code](https://code.visualstudio.com/) (free, Mac / Windows / Linux).
+1. Install [Visual Studio Code](https://code.visualstudio.com/) (free, Mac / Windows / Linux). The same layout applies in [Cursor](https://cursor.com/referral?code=HE5B2LBMDM7G) (VS Code–based, free tier; referral link, same price for you).
 2. Choose `File → Open Folder…` and select the folder where your notes, templates, or project files already live.
 3. Breathe. You are not committing to a lifestyle—just opening a drawer.
 
@@ -178,9 +168,9 @@ When you are ready for the integrated terminal, <kbd>⌃</kbd> + <kbd>`</kbd> on
 
 ---
 
-## First conversation that actually helps: make rhythms visible
+## O — Observe & Optimize: make rhythms visible (written exercise)
 
-Week two of the arc is about **observation before optimization**—making your communication timing visible so you (and tools) can align with it.
+This step is **O** in the Y.O.U.R. framework: **observation before optimization**—making your communication timing visible so you (and tools) can align with it. No separate video for this beat; work through it in your open folder.
 
 Create `my-rhythms.md` in your folder. Before you open chat, draft bullet facts: newsletter send window, reminder policy, days you do not email, your best writing hours.
 
@@ -190,7 +180,7 @@ Then ask for something **bounded**, not cosmic.
 
 **Grounded:** “Using only the facts I list below, write `my-rhythms.md` with sections for Newsletter, Reminders, Quiet hours, and Focus window. Under 25 lines, plain language, `last updated` at top.”
 
-Paste your bullets; review every line; save the file yourself. The win is not clever AI—it is a **file you can point to** next week when templates and mentions enter the story.
+Paste your bullets; review every line; save the file yourself. The win is not clever AI—it is a **file you can point to** when templates, @mentions, and your automation playbook enter the story later this month.
 
 ---
 
@@ -212,9 +202,9 @@ Treat that boundary as **feature, not failure**: you choose the context. Keep se
 
 ---
 
-## If you also use Cursor (high level, because UIs move fast)
+## If you also use [Cursor](https://cursor.com/referral?code=HE5B2LBMDM7G) (high level, because UIs move fast)
 
-Cursor-style tools sit on the same VS Code skeleton; shortcuts and panel names drift between releases. One layout difference that trips people up: in **Cursor**, the activity strip is often **horizontal above the file tree** instead of a vertical bar on the far left.
+[Cursor](https://cursor.com/referral?code=HE5B2LBMDM7G)-style tools sit on the same VS Code skeleton; shortcuts and panel names drift between releases. One layout difference that trips people up: in **Cursor**, the activity strip is often **horizontal above the file tree** instead of a vertical bar on the far left.
 
 ![Comparison: standard VS Code vertical Activity Bar versus Cursor with a horizontal activity row above the primary sidebar.](/blog/your-ide-is-workbench/activity-panel-cursor.png)
 
@@ -300,11 +290,13 @@ Instead of screenshot-chasing every release:
 
 ---
 
-## Stay in the loop for May
+## What's next in the arc
 
-You’ve got a workbench layout that reads clearly. If you tried the Week 2 section, you also have a rhythms file on disk you can open without hunting through a pile of apps. The next pieces of this month’s Mindful Automation arc will land on [YouTube](https://www.youtube.com/@pythonessprogrammer) and in the newsletter when they’re ready.
+You now have **visible structure + a rhythms file on disk**—the Sprint 1 written payoff.
 
-Want it in your inbox? [Subscribe to the newsletter](https://newsletter.pythonessprogrammer.com/subscribe). Prefer to watch? Subscribe on [YouTube](https://www.youtube.com/@pythonessprogrammer) so you catch the Week 2 walkthrough and the rest of May’s videos.
+- **Friday May 22:** Error-proofing and client journey design in the newsletter, plus **written** IDE tips (@mentions, templates, `ls`) in the resource guide—no new video that week.
+- **Friday May 29:** One **capstone** screen-share (files → rules → playbook → GitHub) plus a combined blog post—the only video for Sprint 2.
+- **Sunday May 31:** Live event — [register here](https://luma.com/indojpzh).
 
 ---
 
