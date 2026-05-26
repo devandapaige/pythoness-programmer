@@ -2,6 +2,26 @@
 
 Newsletter issues live in the repo at `src/content/newsletter/posts/*.mdx` and render at `/newsletter/[slug]`. Subscribers are managed in **Resend** (segment + broadcasts). Beehiiv is only needed once to export the backlog.
 
+## Migration status
+
+- On-site newsletter archive is live at `/newsletter` and `/newsletter/[slug]`.
+- Beehiiv is now a one-time export step (`npm run export-newsletter`). The site does not sync from Beehiiv at runtime.
+- Exact duplicate issues that were previously published on the blog are consolidated SEO-safely:
+  - If a slug exists in both `src/content/blog/posts/*.mdx` and `src/content/newsletter/posts/*.mdx`, the newsletter issue is canonical.
+  - Legacy blog URLs for those exact duplicates redirect with a permanent SEO-safe `308` to the newsletter URL.
+  - The blog page emits a `<link rel="canonical">` pointing at the newsletter URL for those exact duplicates.
+  - Exception: `on-elon-musk-and-dates` remains canonical on `/blog/on-elon-musk-and-dates` (not redirected).
+
+## Duplicate handling going forward
+
+- Treat a shared slug between `src/content/blog/posts` and `src/content/newsletter/posts` as a duplicate.
+- For exact duplicates:
+  - Redirect `/blog/<slug>` -> `/newsletter/<slug>` using `308` when it is safe 1:1.
+  - Use canonicals on the blog side only when redirects are not appropriate yet.
+- For medium/low-confidence overlaps (composites, themed sections, partial republishings): do not redirect automatically; keep them as-is and open a review.
+
+Tip for internal linking: when linking to a newsletter issue (including from “resource” content), prefer `/newsletter/<slug>` over `/blog/<slug>`.
+
 ## One-time Beehiiv export (free Launch plan)
 
 1. Beehiiv **Settings → API**: key with `posts:read`, V2 `pub_...` publication ID.

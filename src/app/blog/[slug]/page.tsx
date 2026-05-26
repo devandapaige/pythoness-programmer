@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { PostMetadata } from '@/components/blog/PostMetadata'
 import PostNavigation from '@/components/blog/PostNavigation'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
+import { getSiteBaseUrl } from '@/lib/newsletter/config'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import Image from 'next/image'
 import type { MDXComponents } from 'mdx/types'
@@ -13,14 +14,37 @@ interface PostPageProps {
   }>
 }
 
+const BLOG_TO_NEWSLETTER_CANONICAL_SLUGS = new Set<string>([
+  'digital-spring-cleaning-a-month-of-grit-and-growth',
+  'digital-spring-cleaning-deepening-our-grit-journey',
+  'digital-sustainability-that-wont-burn-you-out',
+  'error-proofing-your-automation',
+  'lunar-new-year-2025',
+  'mindful-automation-systems',
+  'monthly-grit-framework-for-your-digital-spring-cleaning',
+  'monthly-grit-reflection-worksheet',
+  // Explicit exception: keep canonical on /blog
+  // 'on-elon-musk-and-dates',
+  'sawdust-and-sacred-stones',
+  'tech-is-just-a-tool',
+  'the-you-framework',
+])
+
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const resolvedParams = await params
-  const post = await getPostBySlug(resolvedParams.slug)
+  const slug = resolvedParams.slug
+  const post = await getPostBySlug(slug)
   if (!post) return {}
+
+  const baseUrl = getSiteBaseUrl()
+  const canonicalToNewsletter = BLOG_TO_NEWSLETTER_CANONICAL_SLUGS.has(slug)
 
   return {
     title: post.frontmatter.title,
     description: post.frontmatter.description,
+    alternates: canonicalToNewsletter
+      ? { canonical: `${baseUrl}/newsletter/${slug}` }
+      : undefined,
   }
 }
 
