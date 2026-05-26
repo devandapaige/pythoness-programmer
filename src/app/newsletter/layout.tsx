@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { NewsletterStyles } from '@/components/newsletter/NewsletterStyles'
 
 export const metadata: Metadata = {
-  title: 'Newsletter | Pythoness Programmer',
+  title: 'Pythoness Perspective (Weekly) | Pythoness Programmer',
   description:
-    'Archive of Pythoness Perspective newsletter issues on tech, creativity, and brain-friendly systems.',
+    'Weekly Pythoness Perspective archive with practical issues on tech, creativity, and brain-friendly systems.',
 }
 
 export default function NewsletterLayout({
@@ -39,9 +39,12 @@ export default function NewsletterLayout({
               className="text-sm"
               style={{ color: 'var(--brand-cream)' }}
             >
-              Blog
+              Lab Notes
             </Link>
           </div>
+          <p className="pb-4 text-sm text-brand-cream/80">
+            Pythoness Perspective is the weekly main newsletter archive.
+          </p>
         </div>
       </header>
 

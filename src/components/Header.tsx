@@ -142,13 +142,13 @@ export default function Header() {
               href="/blog" 
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
             >
-              Blog
+              Lab Notes
             </Link>
             <Link 
               href="/newsletter" 
               className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
             >
-              Newsletter
+              Pythoness Perspective
             </Link>
             <Link 
               href="https://videos.pythonessprogrammer.com" 
@@ -313,14 +313,14 @@ export default function Header() {
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
             onClick={() => setIsMenuOpen(false)}
           >
-            Blog
+            Lab Notes
           </Link>
           <Link 
             href="/newsletter" 
             className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
             onClick={() => setIsMenuOpen(false)}
           >
-            Newsletter
+            Pythoness Perspective
           </Link>
           <Link 
             href="https://videos.pythonessprogrammer.com" 
