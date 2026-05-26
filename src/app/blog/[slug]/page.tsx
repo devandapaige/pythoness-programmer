@@ -4,8 +4,8 @@ import { PostMetadata } from '@/components/blog/PostMetadata'
 import PostNavigation from '@/components/blog/PostNavigation'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
 import { getSiteBaseUrl } from '@/lib/newsletter/config'
+import Signature from '@/components/Signature'
 import { compileMDX } from 'next-mdx-remote/rsc'
-import Image from 'next/image'
 import type { MDXComponents } from 'mdx/types'
 
 interface PostPageProps {
@@ -66,17 +66,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   // Define mdxComponents directly instead of using the hook
   const mdxComponents: MDXComponents = {
-    Signature: () => (
-      <div style={{ textAlign: 'left', width: '100%' }}>
-        <Image
-          src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5abd08ee-bc4d-49f0-9303-3d5d75ef4359/email_signatures.png?t=1742411231"
-          alt="Signature"
-          width={200}
-          height={100}
-          style={{ width: '33%', height: 'auto', display: 'inline-block' }}
-        />
-      </div>
-    ),
+    Signature,
   }
 
   // Compile MDX content here

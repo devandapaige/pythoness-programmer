@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import { siteHeaderOffset } from "@/lib/marketingLayout"
 
 export default function RootLayoutClient({
   children,
@@ -16,7 +17,7 @@ export default function RootLayoutClient({
   return (
     <>
       {!isLinksPage && <Header />}
-      <main className={!isHomePage && !isLinksPage ? "pt-20" : ""}>
+      <main className={!isHomePage && !isLinksPage ? siteHeaderOffset : ""}>
         {children}
       </main>
       {!isLinksPage && <Footer />}

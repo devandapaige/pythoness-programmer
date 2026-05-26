@@ -1,6 +1,6 @@
 import {
   normalizeNewsletterBodyHtml,
-  rewriteBeehiivSignupLinks,
+  rewriteLegacyNewsletterLinks,
 } from '@/lib/newsletter/normalize-body-html'
 
 describe('normalizeNewsletterBodyHtml', () => {
@@ -22,13 +22,24 @@ describe('normalizeNewsletterBodyHtml', () => {
     expect(output).toContain('newsletter-heading')
   })
 
-  it('rewrites Beehiiv signup links to the on-site subscribe page', () => {
+  it('rewrites legacy signup links to the on-site Resend subscribe page', () => {
     const input =
       '<a href="https://newsletter.pythonessprogrammer.com/?modal=signup">Join</a>'
-    const output = rewriteBeehiivSignupLinks(input)
+    const output = rewriteLegacyNewsletterLinks(input)
 
     expect(output).toContain('https://pythonessprogrammer.com/newsletter/subscribe')
     expect(output).not.toContain('beehiiv')
     expect(output).not.toContain('modal=signup')
+  })
+
+  it('rewrites legacy Beehiiv issue URLs to the on-site archive', () => {
+    const input =
+      '<a href="https://pythoness.beehiiv.com/p/digital-spring-cleaning-deepening-our-grit-journey?utm_source=x">Read</a>'
+    const output = rewriteLegacyNewsletterLinks(input)
+
+    expect(output).toContain(
+      'https://pythonessprogrammer.com/newsletter/digital-spring-cleaning-deepening-our-grit-journey?utm_source=x'
+    )
+    expect(output).not.toContain('beehiiv.com')
   })
 })

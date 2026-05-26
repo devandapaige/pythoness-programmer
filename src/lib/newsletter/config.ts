@@ -9,3 +9,6 @@ export const getNewsletterSubscribeUrl = (): string =>
 
 export const getNewsletterReplyTo = (): string =>
   process.env.NEWSLETTER_REPLY_TO ?? 'help@pythonessprogrammer.com'
+
+/** Self-hosted signature image (migrated off Beehiiv CDN). */
+export const NEWSLETTER_SIGNATURE_SRC = '/images/email-signature.png'

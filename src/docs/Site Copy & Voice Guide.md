@@ -2,7 +2,9 @@
 
 This guide reflects the updated website content and voice (March 2026), ensuring brand messaging, service descriptions, and content marketing strategy are fully aligned with your current site. All sections are formatted for easy use in Obsidian.
 
-**What we offer:** Reflection sessions (Software Psychic, Async Readings), free digital resources, and optional support (tips, wishlist). We do **not** offer custom web or software development, nor a separate community platform (e.g. Pythoness Network).
+**What we offer:** Reflection sessions with the Pythoness Programmer (async video, live readings, deep dive), free digital resources, and optional support (tips, wishlist). We do **not** offer custom web or software development, nor a separate community platform (e.g. Pythoness Network).
+
+**Source of truth (site):** Live marketing copy is centralized in `src/data/siteCopy.ts` and rendered on Home, About, and Services. Edit that file first, then sync this guide if needed.
 
 **Positioning note:** Your story is the entry point—not the framework or philosophy first. "Neurodivergent" stays the primary audience descriptor. The Pythoness origin lands after the reader already feels seen.
 
@@ -33,11 +35,9 @@ This guide reflects the updated website content and voice (March 2026), ensuring
 **Main Headline:**  
 Tech That Works, for People Like Us
 
-**Hero paragraphs (story-led intro):**
+**Hero paragraphs (story-led intro, condensed):**
 - For most of my life, I thought I was bad at systems. Turns out the systems were bad for my brain.
-- I'm Amanda — the Pythoness Programmer. I'm a late-identified neurodivergent, a Senior Software Engineer with 15+ years across communications, systems, and code, and someone who learned everything I now teach the hard way: in the middle of a pandemic bootcamp, a first engineering job, a new diagnosis, and a body that had been asking me to slow down for years before I finally listened.
-- I didn't find clarity through a productivity system. I found it through community, through decolonizing frameworks, through other neurodivergent people naming the patterns I'd been blaming on myself my whole life.
-- That's what I offer now. Not rescue. Reflection.
+- I'm Amanda Nelson — the Pythoness Programmer. Late-identified neurodivergent, Senior Software Engineer, and someone who offers reflection sessions when tech keeps fighting the way your brain works.
 
 **Tagline (below hero):**  
 Reflection sessions, not rescue.
@@ -48,38 +48,28 @@ Reflection sessions, not rescue.
 
 **Headline:** What is this struggle trying to teach you?
 
-**Copy:**
-- You're not broken. You're not lazy. You're not bad at tech.
-- You're running a brain that mainstream tools were never designed for — and you've probably spent years trying to adapt yourself to systems that were always going to fight you.
-- I sit with you in the aftermath of your last tech hurdle and ask the question nobody else is asking: *What is this struggle trying to teach you?*
-- Together we examine what the friction is actually revealing — about what you've internalized from productivity culture, about what your brain actually needs, about the patterns you keep repeating and why they keep failing.
-- So you don't make it a third time.
+**Copy (condensed, two beats):**
+- You're not broken, lazy, or bad at tech — you're running a brain mainstream tools were never designed for.
+- I sit with you after your last tech hurdle and ask: *What is this struggle trying to teach you?* So you don't make it a third time.
 
 ## About / Approach
 
 **About page hero (story-led):**  
 I spent 15 years being good at systems. I just didn't know why — or what it was costing me.
 
-I'm Amanda Nelson — the Pythoness Programmer. Senior Full Stack Software Engineer. Late-identified neurodivergent. Chronic illness navigator. And someone who built the reflection skills I now teach entirely by necessity, in the hardest stretch of my life so far.
+I'm Amanda Nelson — the Pythoness Programmer. Senior Full Stack Software Engineer, late-identified neurodivergent, chronic illness navigator. I built the reflection skills I now teach in the hardest stretch of my life so far. Here's the version of my story that matters for why you're here.
 
-Here's the version of my story that actually matters for why you're here.
+**How I Got Here (four paragraphs on site):**  
+15+ years communications/systems before code; 2020 bootcamp → 2021 Zappos + ADHD diagnosis + chronic illness context; 2023 layoff and ND community naming patterns; Richmond/decolonization and tools — that's where Pythoness Programmer comes from.
 
-**How I Got Here (story summary):**  
-Communications, customer service, and systems building (15+ years) before code; pandemic bootcamp 2020; first engineering job at Zappos.com 2021; ADHD diagnosis same year; fibromyalgia since 2016, chronic migraines, bedbound nine months in 2018; body had been asking to slow down for years. What helped wasn't a system—it was people: TikTok community of late-identified neurodivergent adults, marginalized voices on how our systems were built for a particular brain and body. Near Richmond, Virginia—where confederate statues came down in 2020; BLM cracked open decolonization for me: looking honestly at what we've inherited and internalized, and stopping blaming ourselves for struggling inside it. That's where the Pythoness Programmer comes from: building reflection skills in the hardest stretch, and refusing to stop once through it.
+**How I Work (condensed):**
 
-**How I Work:**
+- Philosophy line on what tech friction reveals (internalized vs. what your brain needs).
+- Together we ask: *What is this struggle trying to teach you?* — four bullets (patterns, culture absorbed, resources, don't make it a third time).
+- Sessions blend technical context, tarot bookends, neurodivergent-centered reflection. CTA to Services.
 
-- I philosophize with other decolonizing neurodivergents about how our tech struggles reveal what we've internalized and what our brains actually need.
-- I don't swoop in with quick fixes. I don't have all the answers, and I'm not here to pretend otherwise. I'm a guide, not a guru.
-- What I do is sit with you in the aftermath of your last tech hurdle and ask: *What is this struggle trying to teach you?*
-- Together we: reflect on the patterns you keep repeating — and why they keep failing; uncover what you've internalized from ableist, productivity-obsessed tech culture; discover resources you didn't know existed — tools, approaches, and frameworks that actually fit your brain; build understanding so you don't make it a third time.
-- My sessions blend deep technical expertise, tarot-guided intuition, and neurodivergent-centered design. We start and end with a tarot pull to guide our reflection.
-
-**Why Tarot:**  
-Because the best diagnostic tool isn't always a flowchart. Tarot works for me the same way pattern recognition works — it surfaces what's already present and gives it a frame. I'm not predicting your future. I'm using it as a structured way to enter and exit the reflection space, to hold the complexity of what we're examining, and to give you something to carry with you after we're done. If that's not your thing, you're still welcome here. But it's not going anywhere.
-
-**The Name:**  
-The Pythia were ancient oracles — the ones people came to when they were standing at a crossroads and needed someone to sit with the complexity and speak plainly. They didn't give orders. They demystified. That's the work. Tech is full of complexity that gets used to make people feel small. My job is to make it clear — and to remind you that your brain was never the problem.
+**Why tarot, and the name (one section):**  
+Tarot as frame for reflection, not prediction; Pythia as crossroads oracles who demystified; your brain was never the problem.
 
 **Who This Is For:** You're looking for a guide who helps you understand your tech struggles, not just patch them. You might be: a neurodivergent creative who keeps hitting the same workflow walls; someone newly diagnosed — or in the middle of figuring out what your brain actually is — who's looking back at old patterns with new eyes; a small business owner tired of tech that doesn't fit how you think; someone doing decolonizing work who wants their systems to align with their values; a person who's tried every productivity tool and is starting to wonder if the tools are the problem.
 
@@ -133,7 +123,6 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 - You've tried every productivity tool and they all feel wrong
 - You keep hitting the same tech walls no matter what you change
 - You're neurodivergent — diagnosed, self-identified, or still figuring it out
-- You're doing decolonizing work and want your tech to align with your values
 - You want to understand what's happening, not just patch it
 
 **This Isn't For You If...**
@@ -143,7 +132,9 @@ The Pythia were ancient oracles — the ones people came to when they were stand
 
 ## Free Resources, Always (Homepage block)
 
-Everything on this site is designed to be brain-friendly and barrier-free. Browse free guides, frameworks, and tools — no paywall, no email gate, no hustle. CTA: Explore Free Resources.
+Brain-friendly guides and tools on this site — no paywall, no email gate, no hustle. CTA: Explore Free Resources.
+
+**Home about teaser (not full values list):** Guide, not guru — one paragraph + link to About. Core values live on About only (`#values`).
 
 ## How We Work Together
 
@@ -155,24 +146,26 @@ Everything on this site is designed to be brain-friendly and barrier-free. Brows
 3. **Session & Solutions:** We meet for your session, diving into your challenges, brainstorming solutions, and creating a clear action plan together.
 4. **Follow-Up & Support:** Receive a summary, resources, and next steps after your session. There are options for ongoing support if you need it.
 
-## Philosophy & Core Principles (My Core Values)
+## Philosophy & Core Principles (My Core Values — one line each on About)
 
-- **Learning** — I believe in building digital fluency, not dependency. My goal is to guide you to your own aha moments, not create a reliance on mine.
-- **Resourcefulness** — There are so many tools, frameworks, and approaches that don't get mainstream attention but might be exactly right for your brain. I love finding them. Hidden gems are my thing.
-- **Serenity** — Tech struggles are stressful enough. Our sessions are calm, grounded spaces. No pressure, no judgment, no urgency. Just clarity.
-- **Inclusion** — This is a safe, affirming space for LGBTQIA+ folks, sex workers, and anyone marginalized by mainstream tech culture. I center neurodivergent experiences and decolonizing practices in everything I do.
-- **Humor** — Sometimes the most useful thing we can do is laugh at the absurdity of a system that was never built for us. I bring levity. It's part of the work.
-- **Resilience** — You've survived every tech hurdle so far. My job is to help you build the understanding that makes you stronger for the next one. We're not just working through a problem — we're building capacity.
+- **Learning** — Digital fluency, not dependency.
+- **Resourcefulness** — Hidden-gem tools mainstream advice skips.
+- **Serenity** — Calm sessions; no false urgency.
+- **Inclusion** — LGBTQIA+ and SW affirming; ND and decolonizing practices centered.
+- **Humor** — Levity at systems never built for us.
+- **Resilience** — Capacity for the next hurdle, not just a patch.
 
 ## What I Do (Services page lead)
 
-**Reflect on Your Tech Struggles with the Software Psychic**
+**H1:** Reflection sessions for neurodivergent business owners
 
-I help neurodivergent creatives and small business owners understand the patterns they keep repeating — so they don't make it a third time.
+**Lead:** Amanda Nelson — the Pythoness Programmer. Tarot-informed counsel on software, strategy, and creative decisions. Reflection, not rescue. Professional counsel, not fortune-telling. Technical context for ND brains under pressure.
 
-These aren't troubleshooting sessions. They're reflection sessions. We examine your last tech hurdle and figure out what it's revealing: about what you've internalized from productivity culture, about what your brain actually needs, about the assumptions hiding in your workflow that you're too close to see alone. Through tarot-guided insight and deep technical expertise, I help you find the clarity that quick fixes never actually deliver.
+**Compare sessions table** (above cards): Format / Best for / Booking × Async $75, Live 20 $95, Deep 60 $255.
 
-**What I don't offer:** Emergency tech rescue; "just fix it" support; custom web development or software build-for-hire; or a separate community platform (e.g. Pythoness Network). My focus is reflection, pattern recognition, and brain-friendly clarity—a guide, not a guru.
+**Session cards:** One outcome sentence + three feature bullets + best-for note. Full policies in bullet lists under How to book / What to expect / Policies.
+
+**What I don't offer:** Emergency tech rescue; "just fix it"; custom web or software build-for-hire; separate community platform. Reflection and pattern recognition only.
 
 ## Content Marketing Plan (2025–2026)
 

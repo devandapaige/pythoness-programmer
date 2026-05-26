@@ -19,9 +19,6 @@ export interface NewsletterSyncResult {
   message?: string
 }
 
-/** @deprecated Use NewsletterSyncResult */
-export type BeehiivSyncResult = NewsletterSyncResult
-
 export interface TransactionalEmailResult {
   configured: boolean
   sent: boolean

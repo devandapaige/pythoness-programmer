@@ -51,7 +51,7 @@ export default function ServiceCard({
 
   return (
     <div
-      className={`group relative ${cardBg} rounded-2xl p-8 ${cardBorderColor ? `border-2 ${cardBorderColor}` : 'border-none'} shadow-2xl transition-all duration-300 animate-fade-in-up ${
+      className={`group relative ${cardBg} rounded-2xl p-5 md:p-6 lg:p-8 ${cardBorderColor ? `border-2 ${cardBorderColor}` : 'border-none'} shadow-2xl transition-all duration-300 animate-fade-in-up ${
         highlight ? `ring-2 ring-${cardAccentColor}` : ''
       } ${className}`}
     >
@@ -78,28 +78,28 @@ export default function ServiceCard({
 
       {/* Subtitle */}
       {subtitle != null && subtitle !== '' && (
-        <div className={`${cardTextColor}/80 mb-6`}>
+        <div className={`${cardTextColor}/80 mb-4 md:mb-5`}>
           {subtitle}
         </div>
       )}
 
       {/* Price */}
       {price && (
-        <p className={`text-3xl font-display mb-6 text-${cardAccentColor}`}>
+        <p className={`text-3xl font-display mb-4 md:mb-5 text-${cardAccentColor}`}>
           {price}
         </p>
       )}
 
       {/* Description */}
       {description != null && description !== '' && (
-        <div className={`text-sm ${cardTextColor}/70 mb-6 space-y-3`}>
+        <div className={`text-sm ${cardTextColor}/70 mb-4 md:mb-5 space-y-2 md:space-y-3`}>
           {description}
         </div>
       )}
 
       {/* Features list */}
       {features.length > 0 && (
-        <ul className="space-y-3 mb-6">
+        <ul className="space-y-2 md:space-y-3 mb-4 md:mb-5">
           {features.map((feature, featureIndex: number) => (
             <li 
               key={featureIndex} 
@@ -114,7 +114,7 @@ export default function ServiceCard({
 
       {/* Note */}
       {note != null && note !== '' && (
-        <div className={`text-sm ${cardTextColor}/70 italic mb-6 space-y-2`}>{note}</div>
+        <div className={`text-sm ${cardTextColor}/70 italic mb-4 md:mb-5 space-y-2`}>{note}</div>
       )}
 
       {/* Call to action button */}

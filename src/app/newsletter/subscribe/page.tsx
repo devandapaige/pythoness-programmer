@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { NewsletterSubscribeForm } from '@/components/NewsletterSubscribeForm'
+import { pythonessPerspective } from '@/data/siteCopy'
 
 export const metadata: Metadata = {
-  title: 'Subscribe | Pythoness Perspective',
-  description:
-    'Join Pythoness Perspective — weekly mindful tech insights for neurodivergent creatives and small businesses.',
+  title: `Subscribe | ${pythonessPerspective.name}`,
+  description: pythonessPerspective.subscribeMetaDescription,
   alternates: {
     canonical: '/newsletter/subscribe',
   },
@@ -33,13 +33,14 @@ export default async function NewsletterSubscribePage({
   return (
     <div className="py-6 sm:py-10">
       <header className="mb-10 text-center">
-        <h1 className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-white mb-4">
-          Pythoness Perspective
+        <h1 className="text-3xl sm:text-4xl font-display uppercase tracking-tight text-white mb-2">
+          {pythonessPerspective.name}
         </h1>
+        <p className="text-sm text-brand-green-accent font-medium mb-4">
+          {pythonessPerspective.scheduleLabel}
+        </p>
         <p className="text-lg text-brand-cream/90 leading-relaxed max-w-xl mx-auto">
-          Weekly mindful tech for cosmic coders, neurodivergent creatives, and
-          small businesses building systems that work with your brain—not against
-          it.
+          {pythonessPerspective.description}
         </p>
       </header>
 

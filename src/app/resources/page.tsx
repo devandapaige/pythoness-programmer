@@ -1,16 +1,17 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import ResourcesList from '@/components/resources/ResourcesList'
+import { pythonessPerspective } from '@/data/siteCopy'
 import { freeResources } from '@/lib/resources'
 
 export const metadata: Metadata = {
   title: 'Resources | Pythoness Programmer',
-  description: 'Free and paid resources for digital wellness, automation, and neurodivergent-friendly tech solutions.',
+  description: 'Free resources for digital wellness, automation, and neurodivergent-friendly tech solutions.',
 }
 
 export default function ResourcesPage() {
   return (
-    <main className="min-h-screen pt-20 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
+    <main className="min-h-screen pt-16 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
           {/* Hero Section */}
@@ -41,100 +42,54 @@ export default function ResourcesPage() {
             <ResourcesList resources={freeResources} />
           </section>
 
-          {/* Podcast & Newsletter Section */}
+          {/* Newsletter & Lab Notes */}
           <section className="mb-16">
             <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-display text-brand-green-dark mb-4">
-                  Podcast & Newsletter
+                  Newsletter & Lab Notes
                 </h2>
                 <p className="text-lg text-brand-green-dark/80 max-w-2xl mx-auto">
-                  Stay updated with the latest in AI, automation, and neurodivergent-friendly tech solutions.
+                  {pythonessPerspective.resourcesSectionIntro}
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🔬</span>
-                  </div>
-                  <h3 className="text-xl font-display text-brand-green-dark mb-3">AI Generation Experiments Substack</h3>
-                  <p className="text-brand-green-dark/80 mb-4">
-                    Exploring and sharing findings on AI tools and generation experiments outside my normal content lineup.
-                  </p>
-                  <Link
-                    href="https://pythoness.substack.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-brand-purple-light text-brand-purple-dark text-center px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-medium"
-                  >
-                    Visit Substack
-                  </Link>
-                </div>
-                <div className="text-center">
                   <div className="w-16 h-16 bg-brand-green-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl">📧</span>
                   </div>
-                  <h3 className="text-xl font-display text-brand-green-dark mb-3">Newsletter</h3>
+                  <h3 className="text-xl font-display text-brand-green-dark mb-3">
+                    {pythonessPerspective.name}
+                  </h3>
+                  <p className="text-brand-green-dark/80 mb-1 text-sm font-medium">
+                    {pythonessPerspective.scheduleLabel}
+                  </p>
                   <p className="text-brand-green-dark/80 mb-4">
-                    Weekly insights on digital wellness, sustainable systems, and neurodivergent-friendly tech.
+                    {pythonessPerspective.shortBlurb}
                   </p>
                   <Link
-                    href="/newsletter"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
+                    href="/newsletter/subscribe"
+                    className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-medium"
                   >
-                    Subscribe Now
+                    Subscribe
+                  </Link>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-brand-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📝</span>
+                  </div>
+                  <h3 className="text-xl font-display text-brand-green-dark mb-3">Lab Notes</h3>
+                  <p className="text-brand-green-dark/80 mb-4">
+                    Blog posts on tools, workflows, and the messy real work of making tech fit your brain.
+                  </p>
+                  <Link
+                    href="/blog"
+                    className="inline-block bg-brand-purple-light text-brand-purple-dark px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors font-medium"
+                  >
+                    Read Lab Notes
                   </Link>
                 </div>
               </div>
-            </div>
-          </section>
-
-          {/* Paid Resources Section - Future */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-display text-white mb-4">
-                Premium Resources
-              </h2>
-              <p className="text-lg text-brand-cream/90 max-w-2xl mx-auto">
-                Coming soon: In-depth courses, workshops, and premium tools designed for deeper transformation.
-              </p>
-            </div>
-
-            <div className="bg-white/95 border-2 border-brand-green-accent rounded-3xl p-8 shadow-2xl text-center">
-              <div className="w-20 h-20 bg-brand-green-accent/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl">🚀</span>
-              </div>
-              <h3 className="text-2xl font-display text-brand-green-dark mb-4">
-                Premium Content Coming Soon
-              </h3>
-              <p className="text-brand-green-dark/80 mb-6 max-w-2xl mx-auto">
-                I&apos;m developing comprehensive courses, workshops, and premium tools to support your digital wellness journey. 
-                These will include deeper dive content and personalized support.
-              </p>
-              <div className="space-y-3 mb-8">
-                <div className="flex items-center justify-center text-brand-green-dark text-sm">
-                  <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
-                  In-depth automation courses
-                </div>
-                <div className="flex items-center justify-center text-brand-green-dark text-sm">
-                  <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
-                  Interactive workshops and group sessions
-                </div>
-                <div className="flex items-center justify-center text-brand-green-dark text-sm">
-                  <span className="w-2 h-2 bg-brand-green-accent rounded-full mr-2"></span>
-                  Premium tools and templates
-                </div>
-              </div>
-              <Link
-                href="/newsletter"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
-              >
-                Get Notified When Available
-              </Link>
             </div>
           </section>
 

@@ -2,11 +2,11 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 import { NewsletterStyles } from '@/components/newsletter/NewsletterStyles'
+import { pythonessPerspective } from '@/data/siteCopy'
 
 export const metadata: Metadata = {
-  title: 'Pythoness Perspective (Weekly) | Pythoness Programmer',
-  description:
-    'Weekly Pythoness Perspective archive with practical issues on tech, creativity, and brain-friendly systems.',
+  title: `${pythonessPerspective.name} (${pythonessPerspective.scheduleLabel}) | Pythoness Programmer`,
+  description: pythonessPerspective.subscribeMetaDescription,
 }
 
 export default function NewsletterLayout({
@@ -43,7 +43,7 @@ export default function NewsletterLayout({
             </Link>
           </div>
           <p className="pb-4 text-sm text-brand-cream/80">
-            Pythoness Perspective is the weekly main newsletter archive.
+            {pythonessPerspective.scheduleLabel} — monthly arcs on tech sovereignty, week by week.
           </p>
         </div>
       </header>

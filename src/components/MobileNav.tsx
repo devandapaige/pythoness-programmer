@@ -1,4 +1,8 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useCallback, useEffect, useState } from 'react'
 import { resourceLinks } from '@/config/nav-links'
 
 const mobileLinkClassName =
@@ -7,14 +11,36 @@ const mobileLinkClassName =
 const mobileSubLinkClassName =
   'text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 focus:ring-offset-brand-green-dark rounded-lg px-2 py-2 block'
 
-/** Hamburger / close control — stays in the header row (shrink-0, never off-screen). */
-export function MobileNavToggle() {
+export function useMobileNavState() {
+  const pathname = usePathname()
+  const [open, setOpen] = useState(false)
+  const close = useCallback(() => setOpen(false), [])
+
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
+
+  return { open, setOpen, close }
+}
+
+export function MobileNavToggle({
+  open,
+  setOpen,
+  close,
+}: {
+  open: boolean
+  setOpen: (open: boolean) => void
+  close: () => void
+}) {
   return (
     <div className="relative h-10 w-10 shrink-0 md:hidden">
-      <label
-        htmlFor="mobile-nav-toggle"
-        className="absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 touch-manipulation peer-checked/mobile:hidden"
+      <button
+        type="button"
+        className={`absolute inset-0 flex cursor-pointer items-center justify-center rounded-lg text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 touch-manipulation ${open ? 'hidden' : 'flex'}`}
         aria-label="Open menu"
+        aria-expanded={open}
+        aria-controls="mobile-menu"
+        onClick={() => setOpen(true)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,12 +52,15 @@ export function MobileNavToggle() {
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
         </svg>
-      </label>
+      </button>
 
-      <label
-        htmlFor="mobile-nav-toggle"
-        className="absolute inset-0 hidden cursor-pointer items-center justify-center rounded-lg text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 touch-manipulation peer-checked/mobile:flex"
+      <button
+        type="button"
+        className={`absolute inset-0 cursor-pointer items-center justify-center rounded-lg text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 touch-manipulation ${open ? 'flex' : 'hidden'}`}
         aria-label="Close menu"
+        aria-expanded={open}
+        aria-controls="mobile-menu"
+        onClick={close}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,24 +72,27 @@ export function MobileNavToggle() {
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
         </svg>
-      </label>
+      </button>
     </div>
   )
 }
 
-/** Full-width panel below the header bar (no fixed positioning — avoids horizontal scroll). */
-export function MobileNavMenu() {
+export function MobileNavMenu({ open, close }: { open: boolean; close: () => void }) {
+  if (!open) {
+    return null
+  }
+
   return (
     <nav
       id="mobile-menu"
       aria-label="Mobile navigation"
-      className="hidden max-w-full overflow-x-hidden border-t border-brand-cream/20 bg-brand-green-dark pb-6 pt-2 peer-checked/mobile:block md:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto"
+      className="max-w-full overflow-x-hidden border-t border-brand-cream/20 bg-brand-green-dark pb-5 pt-2 md:hidden max-h-[calc(100dvh-4rem)] overflow-y-auto"
     >
       <div className="flex flex-col">
-        <Link href="/about" className={mobileLinkClassName}>
+        <Link href="/about" className={mobileLinkClassName} onClick={close}>
           About
         </Link>
-        <Link href="/services" className={mobileLinkClassName}>
+        <Link href="/services" className={mobileLinkClassName} onClick={close}>
           Services
         </Link>
         <details className="group/resources">
@@ -80,16 +112,16 @@ export function MobileNavMenu() {
           </summary>
           <div className="ml-4 flex flex-col">
             {resourceLinks.map(({ href, label }) => (
-              <Link key={href} href={href} className={mobileSubLinkClassName}>
+              <Link key={href} href={href} className={mobileSubLinkClassName} onClick={close}>
                 {label}
               </Link>
             ))}
           </div>
         </details>
-        <Link href="/blog" className={mobileLinkClassName}>
+        <Link href="/blog" className={mobileLinkClassName} onClick={close}>
           Lab Notes
         </Link>
-        <Link href="/newsletter" className={mobileLinkClassName}>
+        <Link href="/newsletter" className={mobileLinkClassName} onClick={close}>
           Pythoness Perspective
         </Link>
         <Link
@@ -97,6 +129,7 @@ export function MobileNavMenu() {
           target="_blank"
           rel="noopener noreferrer"
           className={mobileLinkClassName}
+          onClick={close}
         >
           Videos
         </Link>
@@ -105,6 +138,7 @@ export function MobileNavMenu() {
           target="_blank"
           rel="noopener noreferrer"
           className={`${mobileLinkClassName} font-medium`}
+          onClick={close}
         >
           Shop
         </Link>

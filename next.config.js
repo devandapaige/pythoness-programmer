@@ -3,6 +3,8 @@ const nextConfig = {
   // Ensures next-mdx-remote uses the app’s React/jsx-runtime (avoids “older version of React” during prerender with Turbopack).
   transpilePackages: ['next-mdx-remote'],
   reactStrictMode: true,
+  // LAN / phone dev testing: allows webpack-hmr from your machine’s network IP (update if DHCP changes).
+  allowedDevOrigins: ['192.168.0.125'],
   async redirects() {
     // Newsletter issues are canonical; some legacy blog slugs redirect 1:1.
     // Permanent redirects in Next.js use 308 when `permanent: true`.

@@ -11,11 +11,10 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
   if (posts.length === 0) {
     return (
       <p className="text-white/80">
-        No issues in the archive yet. Run{' '}
-        <code className="text-brand-green-accent">node scripts/export-beehiiv-archive.js</code>{' '}
-        once with Beehiiv API keys in <code className="text-brand-green-accent">.env.local</code>
-        , or add MDX files under{' '}
-        <code className="text-brand-green-accent">src/content/newsletter/posts/</code>.
+        No issues in the archive yet. Add MDX files under{' '}
+        <code className="text-brand-green-accent">src/content/newsletter/posts/</code> or see{' '}
+        <code className="text-brand-green-accent">docs/newsletter-resend.md</code> for the
+        publishing workflow.
       </p>
     )
   }

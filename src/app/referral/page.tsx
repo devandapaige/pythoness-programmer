@@ -88,10 +88,11 @@ const tools: Tool[] = [
     websiteUrl: 'https://netlify.com',
   },
   {
-    name: 'Beehiiv',
-    tagline: 'Newsletter',
-    description: 'Newsletter platform for the Pythoness Programmer newsletter. Growth tools, analytics, and a straightforward editor.',
-    websiteUrl: 'https://www.beehiiv.com',
+    name: 'Resend',
+    tagline: 'Newsletter & email',
+    description:
+      'Delivers Pythoness Perspective and transactional email from pythonessprogrammer.com.',
+    websiteUrl: 'https://resend.com',
   },
   {
     name: 'Etsy',

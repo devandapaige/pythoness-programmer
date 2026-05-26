@@ -1,5 +1,6 @@
 import { NewsletterIndexList } from '@/components/newsletter/NewsletterIndexList'
 import { NewsletterSubscribeCta } from '@/components/newsletter/NewsletterSubscribeCta'
+import { pythonessPerspective } from '@/data/siteCopy'
 import { getAllNewsletterPosts } from '@/lib/newsletter/mdx'
 import Link from 'next/link'
 
@@ -9,12 +10,14 @@ export default async function NewsletterIndexPage() {
   return (
     <div>
       <header className="mb-10">
-        <h1 className="text-4xl font-display text-white mb-4">
-          Pythoness Perspective
+        <h1 className="text-4xl font-display text-white mb-2">
+          {pythonessPerspective.name}
         </h1>
+        <p className="text-sm text-brand-green-accent font-medium mb-4">
+          {pythonessPerspective.scheduleLabel}
+        </p>
         <p className="text-white/85 text-lg leading-relaxed">
-          The weekly main newsletter archive for cosmic coders, neurodivergent creatives,
-          and small businesses building tech that works for people like us.
+          {pythonessPerspective.archiveIntro}
         </p>
         <p className="mt-3 text-white/75">
           Looking for overflow ideas, experiments, and reactions?{' '}

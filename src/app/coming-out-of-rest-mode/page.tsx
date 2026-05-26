@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function ComingOutOfRestModePage() {
   return (
-    <main className="min-h-screen pt-20 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
+    <main className="min-h-screen pt-16 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="prose prose-lg max-w-none">
 
@@ -193,10 +193,10 @@ export default function ComingOutOfRestModePage() {
                 <strong>Subscribe to the Pythoness Perspective</strong> — weekly brain-friendly tech for
                 neurodivergent creatives and small businesses:{' '}
                 <Link
-                  href="/newsletter"
+                  href="/newsletter/subscribe"
                   className="underline hover:text-brand-purple-dark"
                 >
-                  Pythoness Perspective archive
+                  Subscribe to Pythoness Perspective
                 </Link>
               </p>
               <p>

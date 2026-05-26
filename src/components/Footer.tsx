@@ -4,8 +4,8 @@ import { bookingUrls } from '../config/booking'
 
 function FooterSection({ title, children }: { title: string | ReactNode, children: React.ReactNode }) {
   return (
-    <div className="space-y-2">
-      <h3 className="font-display text-lg text-white mb-1">{title}</h3>
+    <div className="space-y-1.5">
+      <h3 className="font-display text-base md:text-lg text-white mb-0.5">{title}</h3>
       {children}
     </div>
   );
@@ -19,12 +19,12 @@ export default function Footer() {
 
   return (
     <footer 
-      className="bg-brand-green-dark text-white py-8 md:py-12 px-4 md:px-6"
+      className="bg-brand-green-dark text-white py-6 md:py-8 px-3 sm:px-4 md:px-5"
       role="contentinfo"
     >
       <div className="max-w-7xl mx-auto">
         {/* First Row: Main Sections */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:gap-x-12 pb-4 md:pb-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 md:gap-x-10 pb-3 md:pb-3">
           {/* Brand Column */}
           <FooterSection title={
               <Link href="/" className="hover:text-brand-green-accent transition-colors">
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Second Row: Legal, Support the Pythoness, Content, Read */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 md:gap-x-12 pb-2 md:pb-2">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 md:gap-x-10 pb-2 md:pb-2">
           <FooterSection title="Legal">
             <ul className="space-y-1">
               <li><Link href="/privacy-policy" className={footerLinkClass}>Privacy Policy</Link></li>
@@ -96,13 +96,13 @@ export default function Footer() {
           <FooterSection title="Read">
             <ul className="space-y-1" role="list" aria-label="Read options">
               <li><Link href="/blog" className={footerLinkClass}>Lab Notes</Link></li>
-              <li><Link href="/newsletter" className={footerLinkClass}>Pythoness Perspective (weekly)</Link></li>
+              <li><Link href="/newsletter" className={footerLinkClass}>Pythoness Perspective (Mar–Nov)</Link></li>
             </ul>
           </FooterSection>
         </div>
 
         {/* Third Row: Copyright and Tech Stack */}
-        <div className="pt-4 mt-4 border-t border-white/10 w-full" role="contentinfo">
+        <div className="pt-3 mt-3 border-t border-white/10 w-full" role="contentinfo">
           <div className="flex flex-col gap-2 md:flex-row md:justify-between md:items-center w-full">
             <div>
               <p className="text-white/60 text-xs mb-1">© {new Date().getFullYear()} Pythoness Programmer. All rights reserved.</p>
