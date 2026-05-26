@@ -343,12 +343,17 @@ The project uses the following environment variables:
 - `NEXT_PUBLIC_SITE_URL` - Canonical site URL used for store checkout redirects (example: `https://pythonessprogrammer.com`)
 - `STRIPE_SECRET_KEY` - Stripe secret key for paid product checkout sessions
 - `STRIPE_WEBHOOK_SECRET` - Stripe webhook signing secret for `POST /api/store/webhook`
-- `BEEHIIV_API_KEY` - Beehiiv API key for optional subscriber sync after free claims and paid purchases
-- `BEEHIIV_PUBLICATION_ID` - Beehiiv publication ID (format: `pub_...`) used by subscription API calls
+- `RESEND_API_KEY` - Resend API key for store transactional email and newsletter signups
+- `RESEND_NEWSLETTER_SEGMENT_ID` - Resend segment ID for Pythoness Perspective subscribers
+- `NEWSLETTER_REPLY_TO` - Optional reply-to email shown on `/newsletter/[slug]` issue pages
+- `BEEHIIV_API_KEY` - Only for one-time export (`npm run export-newsletter`), not production
+- `BEEHIIV_PUBLICATION_ID` - Beehiiv `pub_...` ID for export script only
 - `RESEND_API_KEY` - Resend API key for transactional purchase emails
 - `STORE_EMAIL_FROM` - Optional sender for transactional emails (default: `store@pythonessprogrammer.com`)
 - `STORE_DOWNLOAD_TOKEN_SECRET` - Optional HMAC secret for paid download gate tokens (falls back to `STRIPE_WEBHOOK_SECRET`)
 - Additional environment variables can be added in `.env.local`
+
+See [docs/newsletter-resend.md](docs/newsletter-resend.md) for the `/newsletter` archive, Resend setup, and one-time Beehiiv export.
 
 ## Stripe webhook local testing (small CLI flow)
 

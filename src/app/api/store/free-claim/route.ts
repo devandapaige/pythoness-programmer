@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
-import { syncStoreSubscriberToBeehiiv } from '@/lib/store/beehiiv'
+
+import { subscribeToNewsletter } from '@/lib/resend/newsletter'
 import { getStoreProductBySlug } from '@/lib/store/products'
 import { isValidEmail, isValidString, sanitizeString } from '@/lib/validation'
 
@@ -37,18 +38,18 @@ export async function POST(request: Request) {
       )
     }
 
-    const beehiivResult = await syncStoreSubscriberToBeehiiv({
+    const newsletterResult = await subscribeToNewsletter({
       email,
-      productSlug: product.slug,
+      source: `store-free-${product.slug}`,
     })
 
     return NextResponse.json({
       success: true,
       downloadUrl: product.downloadUrl,
-      message: beehiivResult.synced
-        ? 'Thanks! Your download is ready and you were added to updates.'
+      message: newsletterResult.subscribed
+        ? 'Thanks! Your download is ready and you were added to the newsletter.'
         : 'Thanks! Your download is ready.',
-      beehiiv: beehiivResult,
+      newsletter: newsletterResult,
     })
   } catch (error) {
     const message =

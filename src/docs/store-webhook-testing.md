@@ -12,8 +12,7 @@ This is a quick local checklist for testing paid-store fulfillment with Stripe C
 - Optional for full fulfillment:
   - `RESEND_API_KEY`
   - `STORE_EMAIL_FROM`
-  - `BEEHIIV_API_KEY`
-  - `BEEHIIV_PUBLICATION_ID`
+  - `RESEND_NEWSLETTER_SEGMENT_ID` (adds buyer to newsletter segment)
 
 ## Run Stripe listener
 

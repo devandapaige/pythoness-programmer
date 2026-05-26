@@ -292,7 +292,7 @@ export default function DigitalSpringCleaningPage() {
             <ul className="list-disc list-inside text-brand-green-dark space-y-2 mb-6 text-left max-w-xl mx-auto">
               <li>
                 <a
-                  href="https://newsletter.pythonessprogrammer.com/p/april-audit-your-top-3-energy-leaks"
+                  href="/newsletter/april-audit-your-top-3-energy-leaks"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-brand-purple-dark"
@@ -302,7 +302,7 @@ export default function DigitalSpringCleaningPage() {
               </li>
               <li>
                 <a
-                  href="https://newsletter.pythonessprogrammer.com/p/now-soon-reference-spring-cleaning"
+                  href="/newsletter/now-soon-reference-spring-cleaning"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-brand-purple-dark"
@@ -312,7 +312,7 @@ export default function DigitalSpringCleaningPage() {
               </li>
               <li>
                 <a
-                  href="https://newsletter.pythonessprogrammer.com/p/attention-and-notification-hygiene"
+                  href="/newsletter/attention-and-notification-hygiene"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-brand-purple-dark"
@@ -322,7 +322,7 @@ export default function DigitalSpringCleaningPage() {
               </li>
               <li>
                 <a
-                  href="https://newsletter.pythonessprogrammer.com/p/maintenance-beats-motivation"
+                  href="/newsletter/maintenance-beats-motivation"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-brand-purple-dark"
@@ -334,7 +334,7 @@ export default function DigitalSpringCleaningPage() {
             <p className="text-base text-brand-green-dark text-center">
               Want more brain-friendly tech?{' '}
               <a
-                href="https://newsletter.pythonessprogrammer.com"
+                href="/newsletter"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold underline hover:text-brand-purple-dark"

@@ -50,7 +50,7 @@ export default function PrivacyPolicy() {
       <h2>Third-Party Services</h2>
       <p>We use trusted third-party services for:</p>
       <ul>
-        <li>Newsletter distribution (Beehiiv)</li>
+        <li>Newsletter distribution (Resend)</li>
         <li>Appointment scheduling (Cal.com)</li>
         <li>Website analytics</li>
         <li>Payment processing</li>

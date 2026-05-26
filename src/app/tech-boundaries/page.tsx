@@ -286,7 +286,7 @@ export default function TechBoundariesPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/july-6th-2025-tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-da64e2e781dd0784"
+                    href="/newsletter/july-6th-2025-tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-da64e2e781dd0784"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -304,7 +304,7 @@ export default function TechBoundariesPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-my-free-slack-community-9af738de"
+                    href="/newsletter/tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-my-free-slack-community-9af738de"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -322,7 +322,7 @@ export default function TechBoundariesPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/july-16th-2025-workspace-design-for-creative-flow-organizing-your-digital-environment"
+                    href="/newsletter/july-16th-2025-workspace-design-for-creative-flow-organizing-your-digital-environment"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -340,7 +340,7 @@ export default function TechBoundariesPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/july-23rd-2025-tech-tools-that-respect-your-boundaries-automation-that-works-with-your-brain"
+                    href="/newsletter/july-23rd-2025-tech-tools-that-respect-your-boundaries-automation-that-works-with-your-brain"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -358,7 +358,7 @@ export default function TechBoundariesPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/july-31st-2025-building-sustainable-digital-habits-your-complete-tech-wellness-toolkit"
+                    href="/newsletter/july-31st-2025-building-sustainable-digital-habits-your-complete-tech-wellness-toolkit"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"

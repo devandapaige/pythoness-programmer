@@ -95,7 +95,7 @@ export default function MutualsPage() {
               Get strategic insights on navigating tech spaces and building sustainable systems.
             </p>
             <Link
-                              href="https://newsletter.pythonessprogrammer.com"
+                              href="/newsletter"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"

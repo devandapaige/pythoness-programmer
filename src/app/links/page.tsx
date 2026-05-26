@@ -133,7 +133,7 @@ const readLinks: LinkItem[] = [
   },
   {
     name: 'Newsletter',
-    url: 'https://newsletter.pythonessprogrammer.com/',
+    url: '/newsletter',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   }
 ]

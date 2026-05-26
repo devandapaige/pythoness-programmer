@@ -254,7 +254,7 @@ export default function NeuroinclusiveDesignPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/neuroinclusive-design-building-accessible-tech-for-all-brains-b2885a3a6882ca6e"
+                    href="/newsletter/neuroinclusive-design-building-accessible-tech-for-all-brains-b2885a3a6882ca6e"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -272,7 +272,7 @@ export default function NeuroinclusiveDesignPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/context-is-everything-building-neurocomplex-conscious-slack-channels"
+                    href="/newsletter/context-is-everything-building-neurocomplex-conscious-slack-channels"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -290,7 +290,7 @@ export default function NeuroinclusiveDesignPage(): ReactNode {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link 
-                    href="https://newsletter.pythonessprogrammer.com/p/building-sustainable-accessible-systems"
+                    href="/newsletter/building-sustainable-accessible-systems"
                     className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"

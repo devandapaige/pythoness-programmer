@@ -13,11 +13,14 @@ export interface StoreProduct {
   stripeProductName?: string
 }
 
-export interface BeehiivSyncResult {
+export interface NewsletterSyncResult {
   configured: boolean
   synced: boolean
   message?: string
 }
+
+/** @deprecated Use NewsletterSyncResult */
+export type BeehiivSyncResult = NewsletterSyncResult
 
 export interface TransactionalEmailResult {
   configured: boolean

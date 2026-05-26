@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "node scripts/generate-rss.js && next build",
+    "export-newsletter": "node scripts/export-beehiiv-archive.js",
     "start": "next start",
     "lint": "eslint .",
     "test": "jest",
@@ -23,6 +24,7 @@
     "next-mdx-remote": "^6.0.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "sanitize-html": "^2.17.4",
     "sharp": "^0.34.1",
     "stripe": "^22.0.1",
     "tailwind-merge": "^3.5.0"
@@ -33,6 +35,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/sanitize-html": "^2.16.1",
     "@typescript-eslint/eslint-plugin": "^8.58.2",
     "@typescript-eslint/parser": "^8.58.2",
     "autoprefixer": "^10.5.0",

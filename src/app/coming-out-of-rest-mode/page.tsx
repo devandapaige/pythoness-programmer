@@ -191,12 +191,10 @@ export default function ComingOutOfRestModePage() {
                 <strong>Subscribe to the Pythoness Perspective</strong> — weekly brain-friendly tech for
                 neurodivergent creatives and small businesses:{' '}
                 <a
-                  href="https://newsletter.pythonessprogrammer.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/newsletter"
                   className="underline hover:text-brand-purple-dark"
                 >
-                  newsletter.pythonessprogrammer.com
+                  Pythoness Perspective archive
                 </a>
               </p>
               <p>

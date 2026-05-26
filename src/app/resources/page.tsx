@@ -79,7 +79,7 @@ export default function ResourcesPage() {
                     Weekly insights on digital wellness, sustainable systems, and neurodivergent-friendly tech.
                   </p>
                   <Link
-                    href="https://newsletter.pythonessprogrammer.com"
+                    href="/newsletter"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-brand-green-accent text-black px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors"
@@ -128,7 +128,7 @@ export default function ResourcesPage() {
                 </div>
               </div>
               <Link
-                href="https://newsletter.pythonessprogrammer.com"
+                href="/newsletter"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
