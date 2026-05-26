@@ -21,7 +21,6 @@ const getNewsletterSegmentId = (): string | undefined =>
 
 export const subscribeToNewsletter = async ({
   email,
-  source = 'website',
 }: SubscribeToNewsletterInput): Promise<NewsletterSubscribeResult> => {
   const apiKey = getResendApiKey()
   const segmentId = getNewsletterSegmentId()
