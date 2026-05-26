@@ -103,7 +103,7 @@ export default function BackToBasicsPage(): ReactNode {
             <p className="text-sm text-white/80 mb-6 text-center max-w-2xl mx-auto">
               <em>Learn more about the Wooden Snake&apos;s significance in 2025 and how it guides our approach to technology and creativity in our </em>
               <Link 
-                href="https://newsletter.pythonessprogrammer.com/p/lunar-new-year-2025" 
+                href="/newsletter/lunar-new-year-2025" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-brand-green-hyperlink hover:text-brand-green-hyperlink/80 underline"
@@ -211,7 +211,7 @@ export default function BackToBasicsPage(): ReactNode {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://newsletter.pythonessprogrammer.com/p/from-digital-chaos-to-creative-flow-why-your-folders-matter"
+                  href="/newsletter/from-digital-chaos-to-creative-flow-why-your-folders-matter"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
@@ -285,7 +285,7 @@ export default function BackToBasicsPage(): ReactNode {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://newsletter.pythonessprogrammer.com/p/the-creative-workflow-revolution-how-organization-becomes-your-creative-superpower"
+                  href="/newsletter/the-creative-workflow-revolution-how-organization-becomes-your-creative-superpower"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
@@ -364,7 +364,7 @@ export default function BackToBasicsPage(): ReactNode {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://newsletter.pythonessprogrammer.com/p/data-flow-from-chaos-to-conscious"
+                  href="/newsletter/data-flow-from-chaos-to-conscious"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"
@@ -456,7 +456,7 @@ export default function BackToBasicsPage(): ReactNode {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
-                  href="https://newsletter.pythonessprogrammer.com/p/basic-automation-that-serves-your-creativity-from-data-flow-to-ai-agents"
+                  href="/newsletter/basic-automation-that-serves-your-creativity-from-data-flow-to-ai-agents"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-green-accent text-black px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold text-center"

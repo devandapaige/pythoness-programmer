@@ -1,5 +1,5 @@
 import 'server-only'
-import { syncStoreSubscriberToBeehiiv } from '@/lib/store/beehiiv'
+import { subscribeToNewsletter } from '@/lib/resend/newsletter'
 import { sendStoreDownloadEmail } from '@/lib/store/email'
 import { getStoreProductBySlug } from '@/lib/store/products'
 import { createPaidDownloadToken } from '@/lib/store/secureDownload'
@@ -35,9 +35,9 @@ export const runPaidFulfillment = async ({
   }
 
   await Promise.all([
-    syncStoreSubscriberToBeehiiv({
+    subscribeToNewsletter({
       email,
-      productSlug: product.slug,
+      source: `store-${product.slug}`,
     }),
     sendStoreDownloadEmail({
       to: email,

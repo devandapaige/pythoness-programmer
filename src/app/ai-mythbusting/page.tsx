@@ -63,7 +63,7 @@ export default function AIMythbustingPage() {
                 </p>
               </div>
               <a
-                href="https://newsletter.pythonessprogrammer.com/p/the-wooden-snake-s-ai-wisdom-debunking-myths-in-the-tech-power-government-era"
+                href="/newsletter/the-wooden-snake-s-ai-wisdom-debunking-myths-in-the-tech-power-government-era"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-purple-accent text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-sm font-semibold shadow-lg"
@@ -93,7 +93,7 @@ export default function AIMythbustingPage() {
                 </p>
               </div>
               <a
-                href="https://newsletter.pythonessprogrammer.com/p/ai-bullshit-detection"
+                href="/newsletter/ai-bullshit-detection"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-green-accent text-black px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-sm font-semibold shadow-lg"
@@ -118,7 +118,7 @@ export default function AIMythbustingPage() {
                 </ul>
               </div>
               <a
-                href="https://newsletter.pythonessprogrammer.com/p/the-truth-about-ai-what-you-need-to-know-before-getting-creative"
+                href="/newsletter/the-truth-about-ai-what-you-need-to-know-before-getting-creative"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-purple-accent text-white px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors text-sm font-semibold shadow-lg"
@@ -161,11 +161,11 @@ export default function AIMythbustingPage() {
             <h2 className="text-2xl font-display mb-4 text-brand-purple-dark text-center">From Our August 2025 Newsletter Series</h2>
             <p className="mb-4 text-base text-brand-purple-dark text-center">These resources are adapted from our in-depth AI myth-busting series. Dive deeper into each week&apos;s topic:</p>
             <ul className="list-disc list-inside text-brand-purple-accent mb-4 text-left max-w-xl mx-auto">
-              <li><a href="https://newsletter.pythonessprogrammer.com/p/the-wooden-snake-s-ai-wisdom-debunking-myths-in-the-tech-power-government-era" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week One: The Wooden Snake&apos;s AI Wisdom</a></li>
-              <li><a href="https://newsletter.pythonessprogrammer.com/p/ai-bullshit-detection" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week Two: AI Bullshit Detection</a></li>
-              <li><a href="https://newsletter.pythonessprogrammer.com/p/the-truth-about-ai-what-you-need-to-know-before-getting-creative" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week Three: The Truth About AI</a></li>
+              <li><a href="/newsletter/the-wooden-snake-s-ai-wisdom-debunking-myths-in-the-tech-power-government-era" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week One: The Wooden Snake&apos;s AI Wisdom</a></li>
+              <li><a href="/newsletter/ai-bullshit-detection" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week Two: AI Bullshit Detection</a></li>
+              <li><a href="/newsletter/the-truth-about-ai-what-you-need-to-know-before-getting-creative" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week Three: The Truth About AI</a></li>
             </ul>
-            <p className="text-base text-brand-purple-dark text-center">Want more mindful tech insights and AI myth-busting? <a href="https://newsletter.pythonessprogrammer.com/subscribe" target="_blank" rel="noopener noreferrer" className="font-semibold underline text-brand-purple-accent hover:text-brand-green-dark">Subscribe to the Pythoness Perspective newsletter</a> for the latest critical thinking strategies!</p>
+            <p className="text-base text-brand-purple-dark text-center">Want more mindful tech insights and AI myth-busting? <a href="https://pythonessprogrammer.com/newsletter/subscribe" className="font-semibold underline text-brand-purple-accent hover:text-brand-green-dark">Subscribe to the Pythoness Perspective newsletter</a> for the latest critical thinking strategies!</p>
           </section>
 
           {/* Encouragement/Outro */}

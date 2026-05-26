@@ -152,7 +152,7 @@ export default function PrivacyPleasurePage(): ReactNode {
               </div>
 
               <Link
-                href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-your-personal-act-of-digital-resistance"
+                href="/newsletter/privacy-pleasure-your-personal-act-of-digital-resistance"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
@@ -257,7 +257,7 @@ export default function PrivacyPleasurePage(): ReactNode {
               </div>
 
               <Link
-                href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-week-2-isp-vpn-protection"
+                href="/newsletter/privacy-pleasure-week-2-isp-vpn-protection"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
@@ -342,7 +342,7 @@ export default function PrivacyPleasurePage(): ReactNode {
               </div>
 
               <Link
-                href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-week-3-secure-communication-and-file-sharing"
+                href="/newsletter/privacy-pleasure-week-3-secure-communication-and-file-sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
@@ -439,7 +439,7 @@ export default function PrivacyPleasurePage(): ReactNode {
               </div>
 
               <Link
-                href="https://newsletter.pythonessprogrammer.com/p/privacy-pleasure-week-4-your-complete-system"
+                href="/newsletter/privacy-pleasure-week-4-your-complete-system"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-brand-green-accent text-black text-center px-6 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"

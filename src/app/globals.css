@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,6 +44,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -89,4 +91,108 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Newsletter archive (Beehiiv HTML on brand-green-dark) */
+.newsletter-issue-body :is(h1, h2, h3, h4, h5, h6, .newsletter-heading) {
+  color: #ffffff !important;
+  font-family: var(--font-norwester), sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.015em !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  line-height: 1.2 !important;
+}
+
+.newsletter-issue-body h1 {
+  font-size: 1.875rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.newsletter-issue-body h2 {
+  font-size: 1.5rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.newsletter-issue-body h3 {
+  font-size: 1.25rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.newsletter-issue-body h4,
+.newsletter-issue-body h5,
+.newsletter-issue-body h6 {
+  font-size: 1.125rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.newsletter-issue-body p,
+.newsletter-issue-body li {
+  color: rgba(244, 241, 222, 0.88) !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 1.0625rem !important;
+  line-height: 1.65 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Beehiiv "Week N:" / section labels in bold paragraphs (not list items) */
+.newsletter-issue-body div > p > b:first-child,
+.newsletter-issue-body div > p > strong:first-child {
+  color: #ffffff !important;
+  font-family: var(--font-norwester), sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.015em !important;
+  font-weight: 400 !important;
+  font-size: 1.25rem !important;
+  display: block;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.35rem !important;
+}
+
+.newsletter-issue-body a {
+  color: #32d24d !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+.newsletter-issue-body a:hover {
+  color: #ffffff !important;
+}
+
+.newsletter-issue-body ul,
+.newsletter-issue-body ol {
+  margin-bottom: 1.5rem !important;
+  margin-left: 1.5rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.newsletter-issue-body blockquote {
+  border-left: 4px solid #32d24d !important;
+  padding-left: 1rem !important;
+  font-style: italic !important;
+  color: rgba(244, 241, 222, 0.7) !important;
+  margin: 1.5rem 0 !important;
+}
+
+.newsletter-issue-body img {
+  border-radius: 0.5rem !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 1.5rem 0 !important;
+}
+
+.newsletter-issue-body table {
+  width: 100% !important;
+  margin: 1.5rem 0 !important;
+  color: rgba(244, 241, 222, 0.88) !important;
+}
+
+.newsletter-issue-body th,
+.newsletter-issue-body td {
+  border: 1px solid rgba(244, 241, 222, 0.2) !important;
+  padding: 0.5rem 0.75rem !important;
 }

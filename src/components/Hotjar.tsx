@@ -1,8 +1,15 @@
-'use client';
+'use client'
 
-import Script from 'next/script';
+import Script from 'next/script'
+import { useProductionSiteScripts } from '@/lib/use-production-site-scripts'
 
 export default function Hotjar() {
+  const enabled = useProductionSiteScripts()
+
+  if (!enabled) {
+    return null
+  }
+
   return (
     <Script
       id="hotjar-script"
@@ -20,5 +27,5 @@ export default function Hotjar() {
         `,
       }}
     />
-  );
+  )
 }

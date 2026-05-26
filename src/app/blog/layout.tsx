@@ -3,8 +3,9 @@ import Link from 'next/link'
 import { BlogStyles } from '@/components/blog/BlogStyles'
 
 export const metadata: Metadata = {
-  title: 'Blog | Pythoness Programmer',
-  description: 'Technical articles, coding tips, and industry insights from Pythoness Programmer.',
+  title: 'Lab Notes | Pythoness Programmer',
+  description:
+    'Lab Notes: overflow ideas, reactions, experiments, and creative project dispatches from Pythoness Programmer.',
 }
 
 export default function BlogLayout({
@@ -19,7 +20,7 @@ export default function BlogLayout({
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <Link href="/blog" className="text-xl" style={{ color: '#fff', fontFamily: 'var(--font-norwester), sans-serif', letterSpacing: '-0.015em', textTransform: 'uppercase' }}>
-                Blog
+                Lab Notes
               </Link>
             </div>
             <div className="flex items-center space-x-4">
@@ -32,6 +33,9 @@ export default function BlogLayout({
               </Link>
             </div>
           </div>
+          <p className="pb-4 text-sm text-brand-cream/80">
+            Lab Notes is where overflow ideas, reactions to current events, and in-progress creative threads live.
+          </p>
         </div>
       </header>
 

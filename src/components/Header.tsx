@@ -1,334 +1,39 @@
-'use client'
-
-import { useState } from 'react'
 import Link from 'next/link'
+import DesktopNav from '@/components/DesktopNav'
+import { MobileNavMenu, MobileNavToggle } from '@/components/MobileNav'
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-    // Reset resources to collapsed when menu closes
-    if (isMenuOpen) {
-      setIsResourcesOpen(false)
-    }
-  }
-
-  const toggleResources = () => {
-    setIsResourcesOpen(!isResourcesOpen)
-  }
-
   return (
-    <>
-      <header 
-        className="h-20 px-4 md:px-6 bg-brand-green-dark/95 backdrop-blur-sm fixed w-full z-50"
-        role="banner"
-      >
-        <nav 
-          className="max-w-7xl mx-auto flex items-center justify-between w-full h-full relative"
-          aria-label="Main navigation"
-        >
-          <Link 
-            href="/" 
-            className="text-xl font-display tracking-tight uppercase text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg"
+    <header
+      className="fixed top-0 left-0 right-0 z-[100] w-full max-w-[100vw] overflow-x-hidden bg-brand-green-dark shadow-lg"
+      role="banner"
+    >
+      <div className="mx-auto max-w-7xl overflow-x-hidden px-4 md:px-6">
+        {/* Checkbox must be a sibling of peer-checked targets (toggle labels + menu). */}
+        <input
+          type="checkbox"
+          id="mobile-nav-toggle"
+          className="peer/mobile sr-only md:hidden"
+          aria-hidden="true"
+        />
+
+        <div className="flex h-20 min-w-0 items-center justify-between gap-2 md:gap-3">
+          <Link
+            href="/"
+            className="min-w-0 shrink truncate text-xl font-display uppercase leading-none tracking-tight text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg"
             aria-label="Pythoness Programmer - Home"
           >
             Pythoness Programmer
           </Link>
-          <div 
-            className="hidden md:flex space-x-8 text-sm font-medium"
-            role="navigation"
-            aria-label="Primary navigation"
-          >
-            <Link 
-              href="/about" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            >
-              About
-            </Link>
-            <Link 
-              href="/services" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            >
-              Services
-            </Link>
-            <div className="relative">
-              <button
-                onClick={toggleResources}
-                className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 flex items-center"
-                aria-expanded={isResourcesOpen}
-                aria-haspopup="true"
-              >
-                Resources
-                <svg 
-                  className={`ml-1 h-4 w-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`}
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              {isResourcesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-brand-green-accent/20 py-2 z-50">
-                  <Link 
-                    href="/resources" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    All Resources
-                  </Link>
-                  <Link 
-                    href="/digital-spring-cleaning" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Digital Spring Cleaning
-                  </Link>
-                  <Link 
-                    href="/mindful-automation" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Mindful Automation
-                  </Link>
-                  <Link 
-                    href="/accessibility" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Accessibility Legal Guide
-                  </Link>
-                  <Link 
-                    href="/back-to-basics" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Back to Basics
-                  </Link>
-                  <Link 
-                    href="/ai-mythbusting" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    AI Myth-Busting
-                  </Link>
-                  <Link 
-                    href="/vibe-coding-cheatsheet" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Vibe Coding Cheatsheet
-                  </Link>
-                  <Link 
-                    href="/passwords" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Password Security Guide
-                  </Link>
-                  <Link 
-                    href="/privacy-pleasure" 
-                    className="block px-4 py-2 text-brand-green-dark hover:text-brand-green-accent hover:bg-brand-green-accent/10 transition-colors"
-                    onClick={() => setIsResourcesOpen(false)}
-                  >
-                    Privacy Pleasure
-                  </Link>
-                </div>
-              )}
-            </div>
-            <Link 
-              href="/blog" 
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            >
-              Blog
-            </Link>
-            <Link 
-              href="https://videos.pythonessprogrammer.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            >
-              Videos
-            </Link>
-            <Link 
-              href="https://stickyspells.etsy.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 font-medium"
-            >
-              Shop
-            </Link>
+
+          <div className="flex shrink-0 items-center justify-end md:gap-8">
+            <DesktopNav />
+            <MobileNavToggle />
           </div>
-          <button 
-            className="md:hidden text-white hover:text-brand-green-accent focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg p-2"
-            aria-label="Toggle mobile menu"
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-            onClick={toggleMenu}
-          >
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="h-6 w-6" 
-              fill="none" 
-              viewBox="0 0 24 24" 
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d={isMenuOpen 
-                  ? "M6 18L18 6M6 6l12 12" 
-                  : "M4 6h16M4 12h16M4 18h16"} 
-              />
-            </svg>
-          </button>
-        </nav>
-      </header>
-      {/* Mobile Menu - moved outside header for proper stacking */}
-      <div 
-        id="mobile-menu"
-        className={`
-          fixed left-0 top-20 w-full 
-          bg-brand-green-dark/95 backdrop-blur-sm
-          md:hidden
-          z-50
-          transition-all duration-300 ease-in-out
-          ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}
-        `}
-        role="navigation"
-        aria-label="Mobile navigation"
-      >
-        <div className="flex flex-col space-y-4 px-6 pt-2 pb-6">
-          <Link 
-            href="/about" 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </Link>
-          <Link 
-            href="/services" 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Services
-          </Link>
-          <div className="space-y-2">
-            <button
-              onClick={toggleResources}
-              className="w-full text-left text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 flex items-center justify-between"
-              aria-expanded={isResourcesOpen}
-              aria-haspopup="true"
-            >
-              <span>Resources</span>
-              <svg 
-                className={`h-4 w-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`}
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-            {isResourcesOpen && (
-              <div className="ml-4 space-y-2">
-                <Link 
-                  href="/resources" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  All Resources
-                </Link>
-                <Link 
-                  href="/digital-spring-cleaning" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Digital Spring Cleaning
-                </Link>
-                <Link 
-                  href="/mindful-automation" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Mindful Automation
-                </Link>
-                <Link 
-                  href="/accessibility" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Accessibility Legal Guide
-                </Link>
-                <Link 
-                  href="/back-to-basics" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Back to Basics
-                </Link>
-                <Link 
-                  href="/ai-mythbusting" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AI Myth-Busting
-                </Link>
-                <Link 
-                  href="/vibe-coding-cheatsheet" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Vibe Coding Cheatsheet
-                </Link>
-                <Link 
-                  href="/passwords" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Password Security Guide
-                </Link>
-                <Link 
-                  href="/privacy-pleasure" 
-                  className="block text-white/80 hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Privacy Pleasure
-                </Link>
-              </div>
-            )}
-          </div>
-          <Link 
-            href="/blog" 
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Blog
-          </Link>
-          <Link 
-            href="https://videos.pythonessprogrammer.com" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Videos
-          </Link>
-          <Link 
-            href="https://stickyspells.etsy.com" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-brand-green-accent transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent focus:ring-offset-2 rounded-lg px-2 py-1 font-medium"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Shop
-          </Link>
         </div>
+
+        <MobileNavMenu />
       </div>
-    </>
+    </header>
   )
-} 
+}

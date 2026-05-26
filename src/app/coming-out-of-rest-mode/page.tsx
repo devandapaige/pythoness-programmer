@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function ComingOutOfRestModePage() {
   return (
     <main className="min-h-screen pt-20 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
@@ -190,14 +192,12 @@ export default function ComingOutOfRestModePage() {
               <p>
                 <strong>Subscribe to the Pythoness Perspective</strong> — weekly brain-friendly tech for
                 neurodivergent creatives and small businesses:{' '}
-                <a
-                  href="https://newsletter.pythonessprogrammer.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/newsletter"
                   className="underline hover:text-brand-purple-dark"
                 >
-                  newsletter.pythonessprogrammer.com
-                </a>
+                  Pythoness Perspective archive
+                </Link>
               </p>
               <p>
                 <strong>Watch the event replay</strong> — Coming Out of Rest Mode: Sustainable Tech for the
