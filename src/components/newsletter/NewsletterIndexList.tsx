@@ -35,7 +35,7 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
                 day: 'numeric',
               })}
             </time>
-            <h2 className="mt-2 text-2xl font-display">
+            <h2 className="mt-2 text-2xl font-display uppercase tracking-tight">
               <Link
                 href={`/newsletter/${post.slug}`}
                 className="text-white hover:text-brand-green-accent transition-colors"
@@ -45,9 +45,6 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
             </h2>
             {post.subtitle && (
               <p className="mt-1 text-brand-green-accent/90">{post.subtitle}</p>
-            )}
-            {post.preview_text && (
-              <p className="mt-3 text-white/80 line-clamp-3">{post.preview_text}</p>
             )}
             {post.thumbnail_url && (
               <Link href={`/newsletter/${post.slug}`} className="mt-4 block">

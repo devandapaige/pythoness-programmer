@@ -19,7 +19,9 @@ export function NewsletterIssueHeader({ post }: NewsletterIssueHeaderProps) {
       <p className="text-sm uppercase tracking-wide text-brand-green-accent mb-3">
         Pythoness Perspective
       </p>
-      <h1 className="text-4xl font-display text-white mb-6">{post.title}</h1>
+      <h1 className="mb-6 text-4xl font-display uppercase tracking-tight text-white">
+        {post.title}
+      </h1>
 
       <dl className="grid gap-3 text-sm text-white/80 sm:grid-cols-2">
         <div>

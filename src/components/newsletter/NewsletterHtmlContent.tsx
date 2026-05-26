@@ -1,3 +1,5 @@
+import { normalizeNewsletterBodyHtml } from '@/lib/newsletter/normalize-body-html'
+
 type NewsletterHtmlContentProps = {
   html: string
 }
@@ -11,10 +13,12 @@ export function NewsletterHtmlContent({ html }: NewsletterHtmlContentProps) {
     )
   }
 
+  const normalizedHtml = normalizeNewsletterBodyHtml(html)
+
   return (
     <div
-      className="newsletter-issue-body prose prose-lg max-w-none prose-invert"
-      dangerouslySetInnerHTML={{ __html: html }}
+      className="newsletter-issue-body"
+      dangerouslySetInnerHTML={{ __html: normalizedHtml }}
     />
   )
 }
