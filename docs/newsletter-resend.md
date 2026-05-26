@@ -70,12 +70,24 @@ npm run export-newsletter
 
 Use one Resend account with **separate segments** and **verified domains** per site. Each Netlify project gets its own `RESEND_NEWSLETTER_SEGMENT_ID`.
 
+## Signup URL (Resend)
+
+Canonical signup page (use in emails, link-in-bio, and issue headers):
+
+`https://pythonessprogrammer.com/newsletter/subscribe`
+
+Optional query: `?source=issue-slug` or UTM params; passed through to the subscribe API as `source`.
+
+Exported issue HTML still containing Beehiiv `?modal=signup` or `/subscribe` links is rewritten at render time in `normalizeNewsletterBodyHtml`.
+
 ## Old Beehiiv URLs
 
-On the **newsletter** host (`newsletter.pythonessprogrammer.com`), add a redirect rule:
+On the **newsletter** host (`newsletter.pythonessprogrammer.com`), add redirect rules:
 
 ```
 /p/*  https://pythonessprogrammer.com/newsletter/:splat  301
+/?modal=signup  https://pythonessprogrammer.com/newsletter/subscribe  301
+/subscribe  https://pythonessprogrammer.com/newsletter/subscribe  301
 ```
 
 Configure in Netlify for that subdomain or in Beehiiv web settings.
@@ -85,6 +97,7 @@ Configure in Netlify for that subdomain or in Beehiiv web settings.
 | Piece | Path |
 |-------|------|
 | Archive MDX loader | `src/lib/newsletter/mdx.ts` |
+| Subscribe page | `src/app/newsletter/subscribe/page.tsx` |
 | Subscribe API | `src/app/api/newsletter/subscribe/route.ts` |
 | Resend contacts | `src/lib/resend/newsletter.ts` |
 | Export script | `scripts/export-beehiiv-archive.js` |

@@ -165,7 +165,7 @@ export default function AIMythbustingPage() {
               <li><a href="/newsletter/ai-bullshit-detection" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week Two: AI Bullshit Detection</a></li>
               <li><a href="/newsletter/the-truth-about-ai-what-you-need-to-know-before-getting-creative" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-green-dark">Week Three: The Truth About AI</a></li>
             </ul>
-            <p className="text-base text-brand-purple-dark text-center">Want more mindful tech insights and AI myth-busting? <a href="https://newsletter.pythonessprogrammer.com/subscribe" target="_blank" rel="noopener noreferrer" className="font-semibold underline text-brand-purple-accent hover:text-brand-green-dark">Subscribe to the Pythoness Perspective newsletter</a> for the latest critical thinking strategies!</p>
+            <p className="text-base text-brand-purple-dark text-center">Want more mindful tech insights and AI myth-busting? <a href="https://pythonessprogrammer.com/newsletter/subscribe" className="font-semibold underline text-brand-purple-accent hover:text-brand-green-dark">Subscribe to the Pythoness Perspective newsletter</a> for the latest critical thinking strategies!</p>
           </section>
 
           {/* Encouragement/Outro */}

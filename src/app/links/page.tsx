@@ -109,7 +109,7 @@ const shopLinks: LinkItem[] = [
 const mediaLinks: LinkItem[] = [
   {
     name: 'Newsletter',
-    url: 'https://newsletter.pythonessprogrammer.com/subscribe',
+    url: 'https://pythonessprogrammer.com/newsletter/subscribe',
     color: 'bg-brand-green-accent/20 hover:bg-brand-green-accent/30'
   },
   {

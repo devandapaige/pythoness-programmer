@@ -1,4 +1,7 @@
-import { normalizeNewsletterBodyHtml } from '@/lib/newsletter/normalize-body-html'
+import {
+  normalizeNewsletterBodyHtml,
+  rewriteBeehiivSignupLinks,
+} from '@/lib/newsletter/normalize-body-html'
 
 describe('normalizeNewsletterBodyHtml', () => {
   it('removes inline styles from headings and adds newsletter-heading class', () => {
@@ -17,5 +20,15 @@ describe('normalizeNewsletterBodyHtml', () => {
 
     expect(output).not.toContain('<style')
     expect(output).toContain('newsletter-heading')
+  })
+
+  it('rewrites Beehiiv signup links to the on-site subscribe page', () => {
+    const input =
+      '<a href="https://newsletter.pythonessprogrammer.com/?modal=signup">Join</a>'
+    const output = rewriteBeehiivSignupLinks(input)
+
+    expect(output).toContain('https://pythonessprogrammer.com/newsletter/subscribe')
+    expect(output).not.toContain('beehiiv')
+    expect(output).not.toContain('modal=signup')
   })
 })

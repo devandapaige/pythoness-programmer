@@ -5,12 +5,16 @@ import { FormEvent, useState } from 'react'
 type NewsletterSubscribeFormProps = {
   source?: string
   className?: string
+  /** Light card (default) or newsletter dark-green page */
+  variant?: 'light' | 'onDark'
 }
 
 export function NewsletterSubscribeForm({
   source = 'website',
   className = '',
+  variant = 'light',
 }: NewsletterSubscribeFormProps) {
+  const isOnDark = variant === 'onDark'
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>(
     'idle'
@@ -73,12 +77,20 @@ export function NewsletterSubscribeForm({
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
           disabled={status === 'loading'}
-          className="flex-1 rounded-lg border border-brand-green-dark/20 px-4 py-3 text-brand-green-dark placeholder:text-brand-green-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent"
+          className={
+            isOnDark
+              ? 'flex-1 rounded-lg border border-brand-cream/30 bg-brand-green-dark/80 px-4 py-3 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent'
+              : 'flex-1 rounded-lg border border-brand-green-dark/20 px-4 py-3 text-brand-green-dark placeholder:text-brand-green-dark/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent'
+          }
         />
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="rounded-lg bg-brand-green-dark px-6 py-3 font-semibold text-white hover:bg-brand-green-dark/90 transition-colors disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-brand-green-accent"
+          className={
+            isOnDark
+              ? 'rounded-lg bg-brand-green-accent px-6 py-3 font-semibold text-brand-green-dark hover:bg-brand-green-accent/90 transition-colors disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-brand-cream'
+              : 'rounded-lg bg-brand-green-dark px-6 py-3 font-semibold text-white hover:bg-brand-green-dark/90 transition-colors disabled:opacity-60 focus:outline-none focus:ring-2 focus:ring-brand-green-accent'
+          }
         >
           {status === 'loading' ? 'Joining…' : 'Subscribe'}
         </button>
@@ -87,7 +99,13 @@ export function NewsletterSubscribeForm({
         <p
           role="status"
           className={`text-sm ${
-            status === 'error' ? 'text-red-700' : 'text-brand-green-dark'
+            status === 'error'
+              ? isOnDark
+                ? 'text-red-300'
+                : 'text-red-700'
+              : isOnDark
+                ? 'text-brand-cream'
+                : 'text-brand-green-dark'
           }`}
         >
           {message}
