@@ -1,8 +1,20 @@
-'use client';
+'use client'
 
-import Script from 'next/script';
+import { useEffect, useState } from 'react'
+import Script from 'next/script'
+import { isProductionSite } from '@/lib/third-party-scripts'
 
 export default function Hotjar() {
+  const [enabled, setEnabled] = useState(false)
+
+  useEffect(() => {
+    setEnabled(isProductionSite(window.location.hostname))
+  }, [])
+
+  if (!enabled) {
+    return null
+  }
+
   return (
     <Script
       id="hotjar-script"
@@ -20,5 +32,5 @@ export default function Hotjar() {
         `,
       }}
     />
-  );
+  )
 }
