@@ -12,3 +12,10 @@ export const getNewsletterReplyTo = (): string =>
 
 /** Self-hosted signature image (migrated off Beehiiv CDN). */
 export const NEWSLETTER_SIGNATURE_SRC = '/images/email-signature.png'
+
+/** Resolve site-relative asset paths for Open Graph and external consumers. */
+export function toAbsoluteAssetUrl(assetPath: string): string {
+  if (!assetPath || /^https?:\/\//i.test(assetPath)) return assetPath
+  const base = getSiteBaseUrl().replace(/\/+$/, '')
+  return `${base}${assetPath.startsWith('/') ? assetPath : `/${assetPath}`}`
+}

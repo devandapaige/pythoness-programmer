@@ -5,7 +5,7 @@
     <link>https://pythonessprogrammer.com</link>
     <description>Thoughts on technology, accessibility, and the human experience.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 27 May 2026 19:21:39 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 19:52:06 GMT</lastBuildDate>
     <atom:link href="https://pythonessprogrammer.com/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -101,7 +101,7 @@ Framework-agnostic order that worked for us:
 ## What we did not fix
 
 - Heading hierarchy inside long resource page prose (hundreds of lines per file; separate editorial pass).
-- Third-party widgets: Beehiiv newsletter HTML, Stripe checkout, Hotjar, CookieYes.
+- Third-party widgets: Stripe checkout, Hotjar, CookieYes. (Newsletter archive HTML is self-hosted; signup uses Resend.)
 - Full WCAG 2.2 AA audit or legal “compliance certified” claims.
 - Automated axe in CI (reasonable next step; we stayed manual for this round).
 

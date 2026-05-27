@@ -1,3 +1,4 @@
+import { NewsletterContentPanel } from '@/components/newsletter/NewsletterContentPanel'
 import { normalizeNewsletterBodyHtml } from '@/lib/newsletter/normalize-body-html'
 
 type NewsletterHtmlContentProps = {
@@ -16,9 +17,11 @@ export function NewsletterHtmlContent({ html }: NewsletterHtmlContentProps) {
   const normalizedHtml = normalizeNewsletterBodyHtml(html)
 
   return (
-    <div
-      className="newsletter-issue-body"
-      dangerouslySetInnerHTML={{ __html: normalizedHtml }}
-    />
+    <NewsletterContentPanel>
+      <div
+        className="newsletter-issue-body"
+        dangerouslySetInnerHTML={{ __html: normalizedHtml }}
+      />
+    </NewsletterContentPanel>
   )
 }

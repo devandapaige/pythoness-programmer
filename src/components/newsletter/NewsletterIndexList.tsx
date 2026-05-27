@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { NewsletterContentPanel } from '@/components/newsletter/NewsletterContentPanel'
 import type { NewsletterPostSummary } from '@/types/newsletter'
 
 type NewsletterIndexListProps = {
@@ -21,8 +22,9 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
 
   return (
     <ul className="space-y-8">
-      {posts.map((post) => (
-        <li key={post.slug} className="border-b border-brand-cream/15 pb-8 last:border-0">
+      {posts.map((post, index) => (
+        <li key={post.slug} className="pb-8 last:pb-0">
+          <NewsletterContentPanel>
           <article>
             <time
               dateTime={post.publishedAt.toISOString()}
@@ -53,6 +55,7 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
                   width={800}
                   height={420}
                   className="w-full max-w-xl h-auto rounded-lg"
+                  priority={index === 0}
                 />
               </Link>
             )}
@@ -63,6 +66,7 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
               Read issue →
             </Link>
           </article>
+          </NewsletterContentPanel>
         </li>
       ))}
     </ul>

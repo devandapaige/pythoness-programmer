@@ -132,6 +132,26 @@ body {
   }
 }
 
+/* Faint reading panel on brand-green-dark (#2e3d2a) — keeps white/cream text accessible */
+.newsletter-content-panel {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.5rem;
+  padding: 1.25rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .newsletter-content-panel {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+.newsletter-content-panel .newsletter-issue-body
+  :is(h1, h2, h3, h4, h5, h6, .newsletter-heading):first-child,
+.newsletter-content-panel .newsletter-issue-body h2:first-of-type {
+  margin-top: 0 !important;
+}
+
 /* Newsletter archive (Beehiiv HTML on brand-green-dark) */
 .newsletter-issue-body :is(h1, h2, h3, h4, h5, h6, .newsletter-heading) {
   color: #ffffff !important;
@@ -178,9 +198,8 @@ body {
   margin-bottom: 1rem !important;
 }
 
-/* Beehiiv "Week N:" / section labels in bold paragraphs (not list items) */
-.newsletter-issue-body div > p > b:first-child,
-.newsletter-issue-body div > p > strong:first-child {
+/* Section labels marked in normalize-body-html (not inline <b> emphasis) */
+.newsletter-issue-body .newsletter-section-label {
   color: #ffffff !important;
   font-family: var(--font-norwester), sans-serif !important;
   text-transform: uppercase !important;
@@ -190,6 +209,20 @@ body {
   display: block;
   margin-top: 1.5rem !important;
   margin-bottom: 0.35rem !important;
+}
+
+/* Inline emphasis stays in body font and flow (not section labels) */
+.newsletter-issue-body p b:not(.newsletter-section-label),
+.newsletter-issue-body p strong:not(.newsletter-section-label),
+.newsletter-issue-body li b:not(.newsletter-section-label),
+.newsletter-issue-body li strong:not(.newsletter-section-label) {
+  color: #ffffff !important;
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  display: inline !important;
+  margin: 0 !important;
 }
 
 .newsletter-issue-body a {

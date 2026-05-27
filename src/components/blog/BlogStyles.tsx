@@ -54,6 +54,39 @@ export function BlogStyles() {
       .blog-content blockquote {
         @apply border-l-4 border-brand-green-accent pl-4 italic text-white/70 my-6;
       }
+
+      .blog-content table {
+        @apply my-8 w-full border-collapse text-sm;
+        display: block;
+        overflow-x: auto;
+      }
+
+      @media (min-width: 640px) {
+        .blog-content table {
+          display: table;
+          overflow-x: visible;
+        }
+      }
+
+      .blog-content thead {
+        @apply border-b border-white/25;
+      }
+
+      .blog-content th {
+        @apply px-4 py-3 text-left font-semibold text-brand-cream align-top;
+        text-transform: none;
+        letter-spacing: normal;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .blog-content td {
+        @apply border-t border-white/15 px-4 py-3 text-white/85 align-top;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .blog-content tbody tr:hover td {
+        @apply bg-white/5;
+      }
     `}</style>
   )
 } 

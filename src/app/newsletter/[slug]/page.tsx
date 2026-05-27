@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation'
 import { NewsletterHtmlContent } from '@/components/newsletter/NewsletterHtmlContent'
 import { NewsletterIssueHeader } from '@/components/newsletter/NewsletterIssueHeader'
 import { NewsletterSubscribeCta } from '@/components/newsletter/NewsletterSubscribeCta'
-import { getSiteBaseUrl } from '@/lib/newsletter/config'
+import { getSiteBaseUrl, toAbsoluteAssetUrl } from '@/lib/newsletter/config'
 import {
   getAllNewsletterPosts,
   getNewsletterPostBySlug,
@@ -40,7 +40,9 @@ export async function generateMetadata({
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,
-      images: post.thumbnail_url ? [{ url: post.thumbnail_url }] : undefined,
+      images: post.thumbnail_url
+        ? [{ url: toAbsoluteAssetUrl(post.thumbnail_url) }]
+        : undefined,
     },
   }
 }

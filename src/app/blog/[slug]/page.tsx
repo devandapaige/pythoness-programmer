@@ -7,6 +7,7 @@ import { getSiteBaseUrl } from '@/lib/newsletter/config'
 import Signature from '@/components/Signature'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import type { MDXComponents } from 'mdx/types'
+import { blogMdxOptions } from '@/lib/mdx-compile'
 
 interface PostPageProps {
   params: Promise<{
@@ -73,7 +74,10 @@ export default async function PostPage({ params }: PostPageProps) {
   const { content: compiledContent } = await compileMDX({
     source: post.content,
     components: mdxComponents,
-    options: { parseFrontmatter: true },
+    options: {
+      parseFrontmatter: true,
+      mdxOptions: blogMdxOptions,
+    },
   })
 
   return (
@@ -86,7 +90,7 @@ export default async function PostPage({ params }: PostPageProps) {
         tags={post.frontmatter.tags}
         image={post.frontmatter.image}
       />
-      <div className="blog-content prose prose-lg max-w-none prose-invert">
+      <div className="blog-content prose prose-lg max-w-none prose-invert prose-table:w-full">
         {compiledContent}
       </div>
       <PostNavigation previousPost={previousPost} nextPost={nextPost} />

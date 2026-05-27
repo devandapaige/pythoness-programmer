@@ -7,11 +7,11 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
   const title = 'Privacy Policy';
-  const lastUpdated = '2025-04-11';
+  const lastUpdated = '2026-05-27';
   return (
     <LegalLayout title={title} lastUpdated={lastUpdated}>
       <h1>Privacy Policy</h1>
-      <p><strong>Last updated:</strong> April 11, 2025</p>
+      <p><strong>Last updated:</strong> May 27, 2026</p>
       <h2>Introduction</h2>
       <p>Welcome to Pythoness Programmer. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.</p>
       <h2>Information We Collect</h2>

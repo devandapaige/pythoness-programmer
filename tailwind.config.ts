@@ -150,6 +150,24 @@ const config: Config = {
               borderLeftColor: '#32d24d',
               color: '#f4f1d3',
             },
+            table: {
+              width: '100%',
+            },
+            thead: {
+              borderBottomWidth: '1px',
+              borderBottomColor: 'rgba(244, 241, 222, 0.25)',
+            },
+            th: {
+              color: '#f4f1de',
+              fontFamily: '"Open Sans", sans-serif',
+              textTransform: 'none',
+              letterSpacing: 'normal',
+            },
+            td: {
+              color: 'rgba(244, 241, 222, 0.85)',
+              borderTopWidth: '1px',
+              borderTopColor: 'rgba(244, 241, 222, 0.15)',
+            },
           },
         },
       },

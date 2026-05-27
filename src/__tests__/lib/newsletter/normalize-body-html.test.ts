@@ -1,6 +1,8 @@
 import {
+  markNewsletterSectionLabels,
   normalizeNewsletterBodyHtml,
   rewriteLegacyNewsletterLinks,
+  shouldMarkSectionLabel,
 } from '@/lib/newsletter/normalize-body-html'
 
 describe('normalizeNewsletterBodyHtml', () => {
@@ -30,6 +32,25 @@ describe('normalizeNewsletterBodyHtml', () => {
     expect(output).toContain('https://pythonessprogrammer.com/newsletter/subscribe')
     expect(output).not.toContain('beehiiv')
     expect(output).not.toContain('modal=signup')
+  })
+
+  it('marks section labels but not inline bold emphasis in paragraphs', () => {
+    expect(
+      shouldMarkSectionLabel(
+        'Still useful. This year we\'re adding the letter <b>R</b> from <b>Y.O.U.R.</b>'
+      )
+    ).toBe(false)
+    expect(shouldMarkSectionLabel('yours <b>and</b> the people')).toBe(false)
+    expect(shouldMarkSectionLabel('<b>R</b> is the discipline of designing')).toBe(false)
+    expect(shouldMarkSectionLabel('<b>What stays</b>')).toBe(true)
+    expect(shouldMarkSectionLabel('<b>Week 2:</b> Rest of the section')).toBe(true)
+
+    const output = markNewsletterSectionLabels(
+      '<p>Still useful. letter <b>R</b> from</p><p><b>What stays</b></p>'
+    )
+    expect(output).toContain('<p>Still useful. letter <b>R</b> from</p>')
+    expect(output).toContain('class="newsletter-section-label"')
+    expect(output).not.toMatch(/letter <b[^>]*newsletter-section-label[^>]*>R<\/b>/)
   })
 
   it('rewrites legacy Beehiiv issue URLs to the on-site archive', () => {

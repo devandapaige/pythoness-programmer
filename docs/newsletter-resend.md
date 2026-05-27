@@ -35,7 +35,18 @@ npm run export-newsletter
 ```
 
 4. Commit the generated MDX files under `src/content/newsletter/posts/`.
-5. Deploy. You can cancel Beehiiv after subscribers are in Resend.
+5. Self-host images (run once after export, or after any re-export that still references Beehiiv URLs):
+
+```bash
+npm run migrate-beehiiv-images
+npm run migrate-beehiiv-links
+```
+
+`migrate-beehiiv-images` downloads assets into `public/newsletter/assets/{uuid}/` and rewrites frontmatter `image:` plus inline HTML `src` URLs. Inline email signatures map to `/images/email-signature.png`.
+
+`migrate-beehiiv-links` rewrites legacy `pythoness.beehiiv.com/p/...` issue links to `/newsletter/...` and downloads Beehiiv-hosted PDFs into `public/`.
+
+6. Deploy. You can cancel Beehiiv after subscribers are in Resend and images are migrated.
 
 ## Resend setup
 
@@ -56,8 +67,9 @@ npm run export-newsletter
 ## Publishing a new issue
 
 1. Add `src/content/newsletter/posts/your-slug.mdx` (frontmatter + HTML body in a `newsletter-exported-body` div, or copy structure from an exported file).
-2. Deploy.
-3. Resend → **Broadcasts** → new campaign to your segment:
+2. Put cover and inline images in `public/newsletter/assets/` (site-wide assets like the signature live in `public/images/`). Reference them with site-relative paths, e.g. `image: "/newsletter/assets/{uuid}/banner.png"` — do not hotlink Beehiiv.
+3. Deploy.
+4. Resend → **Broadcasts** → new campaign to your segment:
    - Short teaser + link: `https://pythonessprogrammer.com/newsletter/your-slug`
    - Include `{{{RESEND_UNSUBSCRIBE_URL}}}` in the template.
 
@@ -101,4 +113,6 @@ Configure in Netlify for that subdomain or in Beehiiv web settings.
 | Subscribe API | `src/app/api/newsletter/subscribe/route.ts` |
 | Resend contacts | `src/lib/resend/newsletter.ts` |
 | Export script | `scripts/export-beehiiv-archive.js` |
+| Image migration | `scripts/migrate-beehiiv-images.js` (`npm run migrate-beehiiv-images`) |
+| Link & PDF migration | `scripts/migrate-beehiiv-links.js` (`npm run migrate-beehiiv-links`) |
 | Signup UI | `src/components/NewsletterSubscribeForm.tsx` |
