@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import DesktopNav from '@/components/DesktopNav'
 import { MobileNavMenu, MobileNavToggle, useMobileNavState } from '@/components/MobileNav'
+import { siteGutterX } from '@/lib/marketingLayout'
 
 export default function Header() {
   const { open, setOpen, close } = useMobileNavState()
@@ -12,7 +13,7 @@ export default function Header() {
       className="fixed top-0 left-0 right-0 z-[100] w-full max-w-[100vw] overflow-x-hidden bg-brand-green-dark shadow-lg"
       role="banner"
     >
-      <div className="mx-auto max-w-7xl overflow-x-hidden px-3 sm:px-4 md:px-5">
+      <div className={`${siteGutterX} mx-auto max-w-7xl overflow-x-hidden`}>
         <div className="flex h-16 min-w-0 items-center justify-between gap-2 md:gap-3">
           <Link
             href="/"

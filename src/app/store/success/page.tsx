@@ -55,7 +55,7 @@ export default function StoreSuccessPage() {
   }, [])
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-green-dark/95 to-brand-purple-dark text-white py-16 px-4 md:px-6">
+    <div className="site-gutter min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-green-dark/95 to-brand-purple-dark text-white">
       <div className="max-w-3xl mx-auto rounded-2xl border border-brand-cream/30 bg-white/10 backdrop-blur-sm p-8">
         <h1 className="text-3xl md:text-4xl font-display text-brand-cream mb-4">
           Purchase complete
@@ -107,6 +107,6 @@ export default function StoreSuccessPage() {
           </div>
         )}
       </div>
-    </main>
+    </div>
   )
 }

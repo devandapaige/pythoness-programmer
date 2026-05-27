@@ -67,8 +67,8 @@ const boundaryPillars: BoundaryPillar[] = [
 
 export default function TechBoundariesPage(): ReactNode {
   return (
-    <main className="min-h-screen pt-16 bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
+      <div className="site-gutter max-w-4xl mx-auto">
         <div className="prose prose-lg max-w-none">
           {/* Hero Section */}
           <section className="mb-6 mt-0 text-center">
@@ -416,6 +416,6 @@ export default function TechBoundariesPage(): ReactNode {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

@@ -58,7 +58,7 @@ export default function ServicesPage() {
   const deep60Session = sessions.deep60
 
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <section
         id="services"
         className={`${marketingSection} bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden`}
@@ -271,6 +271,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

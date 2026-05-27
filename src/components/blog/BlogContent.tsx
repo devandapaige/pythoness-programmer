@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
+import ExternalLink from '@/components/a11y/ExternalLink'
 import { BlogPost } from '@/lib/mdx'
 import TagFilter from './TagFilter'
 import { TagPill } from './Tag'
@@ -12,14 +13,12 @@ function OpenSourceNotice() {
     <div className="mt-12 p-6 bg-white/5 rounded-lg border border-white/10">
       <p className="text-center text-white/80">
         This blog is open source! Check out the code on{' '}
-        <a 
-          href="https://github.com/devandapaige/pythoness-programmer" 
-          target="_blank" 
-          rel="noopener noreferrer"
+        <ExternalLink
+          href="https://github.com/devandapaige/pythoness-programmer"
           className="text-brand-purple-light hover:text-brand-purple-light/80 underline"
         >
           GitHub
-        </a>
+        </ExternalLink>
         . Issues and pull requests are welcome!
       </p>
     </div>
@@ -97,8 +96,12 @@ export function BlogContent({ posts }: BlogContentProps) {
       {/* Search Input */}
       <div className="mb-8">
         <div className="relative">
+          <label htmlFor="blog-search" className="sr-only">
+            Search blog posts
+          </label>
           <input
-            type="text"
+            id="blog-search"
+            type="search"
             placeholder="Search blog posts..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -114,15 +117,17 @@ export function BlogContent({ posts }: BlogContentProps) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 pointer-events-none"
+            aria-hidden="true"
           >
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35" />
           </svg>
           {searchQuery && (
             <button
+              type="button"
               onClick={() => setSearchQuery('')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-purple-light rounded"
               aria-label="Clear search"
             >
               <svg
@@ -135,6 +140,7 @@ export function BlogContent({ posts }: BlogContentProps) {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />

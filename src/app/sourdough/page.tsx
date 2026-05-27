@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 
 export default function SourdoughPage() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <HeroSection />
       <StarterGuideSection />
       <TerminologySection />
       <ToolsAndResourcesSection />
       <RecipesSection />
-    </main>
+    </div>
   )
 }

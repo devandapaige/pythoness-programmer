@@ -1,5 +1,5 @@
 export const sectionStyles = {
-  container: "container mx-auto px-4",
+  container: "container mx-auto site-gutter",
   content: "max-w-3xl mx-auto",
   heading: {
     h1: "text-5xl font-display mb-6 text-brand-purple-dark",

@@ -1,9 +1,10 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import { siteHeaderOffset } from "@/lib/marketingLayout"
+import SkipLink from '@/components/a11y/SkipLink'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { siteHeaderOffset } from '@/lib/marketingLayout'
 
 export default function RootLayoutClient({
   children,
@@ -16,11 +17,16 @@ export default function RootLayoutClient({
 
   return (
     <>
+      {!isLinksPage && <SkipLink />}
       {!isLinksPage && <Header />}
-      <main className={!isHomePage && !isLinksPage ? siteHeaderOffset : ""}>
+      <main
+        id="main-content"
+        tabIndex={-1}
+        className={!isHomePage && !isLinksPage ? siteHeaderOffset : ''}
+      >
         {children}
       </main>
       {!isLinksPage && <Footer />}
     </>
   )
-} 
+}

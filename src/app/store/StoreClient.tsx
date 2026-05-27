@@ -155,8 +155,8 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-green-dark/95 to-brand-purple-dark text-white py-16 px-4 md:px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className="site-gutter min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-green-dark/95 to-brand-purple-dark text-white">
+      <div className="mx-auto max-w-5xl">
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-display mb-4">Digital store</h1>
           <p className="text-lg text-brand-cream/90 max-w-3xl mx-auto">
@@ -248,6 +248,14 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
                     required
                     value={emailByProduct[product.id] ?? ''}
                     onChange={(event) => setEmail(product.id, event.target.value)}
+                    aria-invalid={Boolean(errorByProduct[product.id])}
+                    aria-describedby={
+                      errorByProduct[product.id]
+                        ? `store-error-${product.id}`
+                        : successByProduct[product.id]
+                          ? `store-success-${product.id}`
+                          : undefined
+                    }
                     className="w-full rounded-lg border border-brand-cream/30 bg-brand-green-dark/80 px-3 py-2 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent"
                     placeholder="you@example.com"
                     autoComplete="email"
@@ -263,10 +271,22 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
                 </form>
 
                 {errorByProduct[product.id] && (
-                  <p className="mt-3 text-sm text-red-200">{errorByProduct[product.id]}</p>
+                  <p
+                    id={`store-error-${product.id}`}
+                    role="alert"
+                    aria-live="assertive"
+                    className="mt-3 text-sm text-red-200"
+                  >
+                    {errorByProduct[product.id]}
+                  </p>
                 )}
                 {successByProduct[product.id] && (
-                  <p className="mt-3 text-sm text-brand-green-accent">
+                  <p
+                    id={`store-success-${product.id}`}
+                    role="status"
+                    aria-live="polite"
+                    className="mt-3 text-sm text-brand-green-accent"
+                  >
                     {successByProduct[product.id]}
                   </p>
                 )}
@@ -275,6 +295,6 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
           })}
         </div>
       </div>
-    </main>
+    </div>
   )
 }

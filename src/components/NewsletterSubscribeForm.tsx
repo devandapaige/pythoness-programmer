@@ -77,6 +77,8 @@ export function NewsletterSubscribeForm({
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
           disabled={status === 'loading'}
+          aria-invalid={status === 'error'}
+          aria-describedby={message ? 'newsletter-form-feedback' : undefined}
           className={
             isOnDark
               ? 'flex-1 rounded-lg border border-brand-cream/30 bg-brand-green-dark/80 px-4 py-3 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:ring-2 focus:ring-brand-green-accent'
@@ -97,7 +99,9 @@ export function NewsletterSubscribeForm({
       </div>
       {message && (
         <p
-          role="status"
+          id="newsletter-form-feedback"
+          role={status === 'error' ? 'alert' : 'status'}
+          aria-live={status === 'error' ? 'assertive' : 'polite'}
           className={`text-sm ${
             status === 'error'
               ? isOnDark

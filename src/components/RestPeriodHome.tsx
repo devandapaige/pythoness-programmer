@@ -2,9 +2,9 @@ import NewsletterCard from './NewsletterCard'
 
 export default function RestPeriodHome() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/95 to-brand-purple-dark">
+    <div className="min-h-screen bg-gradient-to-br from-brand-purple-dark via-brand-purple-dark/95 to-brand-purple-dark">
       {/* Hero Section - Rest Mode Announcement */}
-      <section className="pt-32 pb-16 px-4 md:px-6">
+      <section className="site-gutter pt-32">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12 animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-display mb-6 text-brand-cream">
@@ -30,7 +30,7 @@ export default function RestPeriodHome() {
       </section>
 
       {/* Pythia Oracles Background Section */}
-      <section className="py-16 px-4 md:px-6 bg-brand-purple-dark/50">
+      <section className="site-gutter bg-brand-purple-dark/50">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-brand-purple-light/20">
             <h2 className="text-3xl md:text-4xl font-display mb-6 text-brand-cream">
@@ -109,7 +109,7 @@ export default function RestPeriodHome() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-16 px-4 md:px-6">
+      <section className="site-gutter">
         <div className="max-w-4xl mx-auto">
           <NewsletterCard
             title="Stay Connected During Rest"
@@ -118,6 +118,6 @@ export default function RestPeriodHome() {
           />
         </div>
       </section>
-    </main>
+    </div>
   )
 }

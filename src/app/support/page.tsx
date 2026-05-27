@@ -33,7 +33,7 @@ const supportLinks: LinkItem[] = [
 
 export default function SupportPage() {
   return (
-    <div className="min-h-screen bg-brand-green-dark text-white py-12 px-4">
+    <div className="site-gutter min-h-screen bg-brand-green-dark text-white">
       <div className="max-w-3xl mx-auto flex flex-col items-center">
         {/* Profile Section */}
         <div className="text-center mb-8">

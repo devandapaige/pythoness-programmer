@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useCallback, useEffect, useState } from 'react'
+import ExternalLink from '@/components/a11y/ExternalLink'
 import { resourceLinks } from '@/config/nav-links'
 
 const mobileLinkClassName =
@@ -19,6 +20,15 @@ export function useMobileNavState() {
   useEffect(() => {
     setOpen(false)
   }, [pathname])
+
+  useEffect(() => {
+    if (!open) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [open])
 
   return { open, setOpen, close }
 }
@@ -124,24 +134,20 @@ export function MobileNavMenu({ open, close }: { open: boolean; close: () => voi
         <Link href="/newsletter" className={mobileLinkClassName} onClick={close}>
           Pythoness Perspective
         </Link>
-        <Link
+        <ExternalLink
           href="https://videos.pythonessprogrammer.com"
-          target="_blank"
-          rel="noopener noreferrer"
           className={mobileLinkClassName}
           onClick={close}
         >
           Videos
-        </Link>
-        <Link
+        </ExternalLink>
+        <ExternalLink
           href="https://stickyspells.etsy.com"
-          target="_blank"
-          rel="noopener noreferrer"
           className={`${mobileLinkClassName} font-medium`}
           onClick={close}
         >
           Shop
-        </Link>
+        </ExternalLink>
       </div>
     </nav>
   )

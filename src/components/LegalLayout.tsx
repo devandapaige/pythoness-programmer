@@ -8,7 +8,7 @@ interface LegalLayoutProps {
 
 export default function LegalLayout({ children, title, lastUpdated }: LegalLayoutProps) {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
+    <div className="site-gutter max-w-4xl mx-auto">
       <article className="prose prose-green prose-lg max-w-none">
         <header className="mb-8">
           <h1 className="text-4xl font-display mb-4">{title}</h1>

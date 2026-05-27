@@ -35,8 +35,12 @@ export default function ResourcesList({ resources }: ResourcesListProps) {
       {/* Search Input */}
       <div className="mb-12">
         <div className="relative max-w-2xl mx-auto">
+          <label htmlFor="resources-search" className="sr-only">
+            Search resources
+          </label>
           <input
-            type="text"
+            id="resources-search"
+            type="search"
             placeholder="Search resources..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -52,15 +56,17 @@ export default function ResourcesList({ resources }: ResourcesListProps) {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 pointer-events-none"
+            aria-hidden="true"
           >
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35" />
           </svg>
           {searchQuery && (
             <button
+              type="button"
               onClick={() => setSearchQuery('')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/50 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-green-accent rounded"
               aria-label="Clear search"
             >
               <svg
@@ -73,6 +79,7 @@ export default function ResourcesList({ resources }: ResourcesListProps) {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
                 <line x1="18" y1="6" x2="6" y2="18" />
                 <line x1="6" y1="6" x2="18" y2="18" />

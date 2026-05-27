@@ -64,7 +64,7 @@ export default function AboutCard({
               {photo?.main ? (
                 <Image
                   src={photo.main}
-                  alt="Pythoness Programmer"
+                  alt="Amanda Nelson, Pythoness Programmer"
                   width={400}
                   height={400}
                   style={{ width: '100%', height: 'auto', backgroundColor: 'transparent' }}
@@ -82,19 +82,20 @@ export default function AboutCard({
                   <div className="absolute top-1/4 -right-6 w-24 h-24 rounded-lg overflow-hidden transform -rotate-6 hover:rotate-0 transition-transform duration-500 z-20">
                     <Image
                       src={photo.decorative[0]}
-                      alt="Decorative"
+                      alt=""
                       width={100}
                       height={100}
                       className="w-full h-full object-cover"
                       style={{ backgroundColor: 'transparent' }}
+                      aria-hidden
                     />
                   </div>
                 )}
                 {photo.decorative[1] && (
-                  <div className="absolute bottom-1/4 -left-6 w-24 h-24 rounded-lg overflow-hidden transform rotate-6 hover:rotate-0 transition-transform duration-500 z-20">
+                  <div className="absolute bottom-1/4 -left-6 w-24 h-24 rounded-lg overflow-hidden transform rotate-6 hover:rotate-0 transition-transform duration-500 z-20" aria-hidden>
                     <Image
                       src={photo.decorative[1]}
-                      alt="Decorative"
+                      alt=""
                       width={100}
                       height={100}
                       className="w-full h-full object-cover"

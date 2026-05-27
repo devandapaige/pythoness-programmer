@@ -16,7 +16,7 @@ export default function BlogLayout({
   return (
     <div className="min-h-screen bg-brand-green-dark" style={{ color: 'var(--brand-cream)' }}>
       <header className="border-b border-brand-cream/20 bg-brand-green-dark">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="site-gutter mx-auto max-w-7xl">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center">
               <Link href="/blog" className="text-xl" style={{ color: '#fff', fontFamily: 'var(--font-norwester), sans-serif', letterSpacing: '-0.015em', textTransform: 'uppercase' }}>
@@ -39,12 +39,12 @@ export default function BlogLayout({
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="site-gutter mx-auto max-w-7xl">
         <div className="mx-auto max-w-3xl" style={{ color: 'var(--brand-cream)' }}>
           <BlogStyles />
           {children}
         </div>
-      </main>
+      </div>
     </div>
   )
 } 

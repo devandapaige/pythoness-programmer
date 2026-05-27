@@ -5,9 +5,177 @@
     <link>https://pythonessprogrammer.com</link>
     <description>Thoughts on technology, accessibility, and the human experience.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 26 May 2026 17:12:10 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 19:21:39 GMT</lastBuildDate>
     <atom:link href="https://pythonessprogrammer.com/feed.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title><![CDATA[What we fixed in our site accessibility pass]]></title>
+      <link>https://pythonessprogrammer.com/blog/site-accessibility-pass-lab-notes</link>
+      <guid>https://pythonessprogrammer.com/blog/site-accessibility-pass-lab-notes</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[A practical changelog from tightening landmarks, keyboard navigation, forms, and motion on pythonessprogrammer.com—and how to adapt the same patterns on your stack.]]></description>
+      <content:encoded><![CDATA[
+Hey there, cosmic coders and fellow site owners.
+
+We preach accessibility on this site—there is a whole [Digital Accessibility Legal Guide](/accessibility) for business owners who need the compliance picture. That resource is different from this post. Today I am documenting what we actually changed in the **code** for pythonessprogrammer.com: the shell every page shares, the navigation, a few forms, and the patterns you can steal.
+
+This is not a WCAG certification. It is a focused pass on the things that tend to break real usage: keyboard paths, screen reader landmarks, motion sensitivity, and form feedback.
+
+---
+
+## What we changed
+
+### One main landmark per page
+
+**Before:** The root layout wrapped every page in `<main>`, and most pages declared another `<main>` inside it. Screen readers saw nested mains and had a harder time orienting.
+
+**After:** `RootLayoutClient` owns a single `<main id="main-content">`. Page files use a `<div>` for their outer wrapper instead.
+
+### Skip link
+
+**Before:** Our legal guide recommends skip navigation, but the live site did not offer one.
+
+**After:** `SkipLink` is the first focusable control on standard pages. It jumps to `#main-content`.
+
+### Desktop Resources menu
+
+**Before:** The Resources dropdown opened on click only. No Escape, no click-outside close, incomplete ARIA.
+
+**After:** `DesktopNav` uses `aria-controls`, `aria-expanded`, `role="menu"`, Escape to close with focus return, and closes on route change.
+
+### External links
+
+**Before:** Many `target="_blank"` links had no indication for assistive tech.
+
+**After:** `ExternalLink` adds a screen-reader-only “(opens in new tab)” suffix and consistent `rel` attributes. Header, footer, mobile nav, and blog index use it for off-site URLs.
+
+### Reduced motion
+
+**Before:** The home hero background patterns spun continuously.
+
+**After:** Global `prefers-reduced-motion` rules in `globals.css` and `motion-reduce:animate-none` on `HeroCard` decorative layers.
+
+### Forms
+
+**Before:** Store and newsletter errors appeared visually but were not always tied to fields.
+
+**After:** `aria-invalid`, `aria-describedby`, and `role="alert"` / `aria-live` on the store checkout forms and newsletter signup. Resource and blog search inputs got labels via `sr-only` text paired with `id` attributes.
+
+### Mobile menu
+
+**After:** Opening the mobile menu locks body scroll until close (cleanup on unmount).
+
+### Small image fixes
+
+Decorative photos in `AboutCard` use empty `alt=""`. The primary portrait keeps a descriptive alt.
+
+---
+
+## Why each change matters
+
+| Change | So what |
+|--------|---------|
+| Single `<main>` | Landmarks are how many AT users skim a page. One main = one “start reading here.” |
+| Skip link | Keyboard users should not tab through the entire nav on every page load. |
+| Menu keyboard + Escape | If you cannot operate the nav without a mouse, screen reader users often cannot either. |
+| External link hint | Unexpected new windows disorient people; announcing them is cheap kindness. |
+| Reduced motion | Vestibular and sensory overwhelm are real; decorative spin is never worth that cost. |
+| Form ARIA | Errors only in red text fail people who cannot see color—or who hear the page instead. |
+
+---
+
+## How to adapt this on your site
+
+Framework-agnostic order that worked for us:
+
+1. **Audit landmarks** — Search your repo for `<main>`. You want one per view. Layout + page both defining `main` is the usual bug in Next.js apps.
+2. **Add a skip link** — Link to `#main-content`, hide off-screen until `:focus`, put it early in the tab order.
+3. **Fix navigation** — Dropdowns need Escape, focus return, and `aria-expanded` / `aria-controls`. Native `<details>` on mobile is fine (we already used that).
+4. **Wrap external tabs** — One component beats thirty copy-pasted `target="_blank"` links.
+5. **Respect motion preferences** — CSS `prefers-reduced-motion` plus Tailwind `motion-reduce:` on decorative animation classes.
+6. **Wire forms** — Each field with an error needs `aria-invalid` and `aria-describedby` pointing at the error element’s `id`.
+7. **Test** — Tab only. Zoom to 200%. Run VoiceOver or NVDA on nav + one form. Spot-check contrast on your body text pairs (we used WebAIM’s checker on cream-on-green and white-on-green footer text).
+
+---
+
+## What we did not fix
+
+- Heading hierarchy inside long resource page prose (hundreds of lines per file; separate editorial pass).
+- Third-party widgets: Beehiiv newsletter HTML, Stripe checkout, Hotjar, CookieYes.
+- Full WCAG 2.2 AA audit or legal “compliance certified” claims.
+- Automated axe in CI (reasonable next step; we stayed manual for this round).
+
+For the legal and business framing, still start with the [accessibility resource](/accessibility).
+
+---
+
+## Prompts for an AI agent
+
+Copy these into your editor chat and replace the bracketed parts.
+
+### Audit prompt
+
+```text
+Review this [Next.js / React] codebase for accessibility issues:
+- Duplicate or nested <main> landmarks (layout vs pages)
+- Missing skip-to-content link targeting #main-content
+- Navigation dropdowns without keyboard support (Escape, aria-expanded, aria-controls)
+- target="_blank" links without a screen-reader new-tab indication
+- Decorative CSS animations without prefers-reduced-motion handling
+- Form errors not linked via aria-describedby / aria-invalid
+
+List findings by file path and severity. Do not invent issues; cite the component or line.
+```
+
+### Implement prompt
+
+```text
+Add accessible primitives to this project:
+1. SkipLink — visually hidden until focus, href="#main-content", brand focus ring: [paste your focus classes]
+2. ExternalLink — <a target="_blank" rel="noopener noreferrer"> with sr-only "(opens in new tab)"
+3. Single <main id="main-content" tabIndex={-1}> in the root layout; remove inner <main> from page components
+
+Match existing Tailwind patterns. Minimize unrelated diffs.
+```
+
+### Verify prompt
+
+```text
+Generate a manual test checklist for these routes: [/, /about, /services, /resources, /blog, /store].
+
+Include: keyboard-only navigation, skip link first tab, Resources menu Escape behavior, 200% zoom without horizontal scroll trap, and one form error announced by screen reader.
+
+Format as a markdown checklist I can run in 30 minutes.
+```
+
+### Adapt prompt
+
+```text
+I use [Astro / WordPress / plain HTML]. Map these patterns from a Next.js site:
+- One main landmark per page
+- Skip link to main content
+- External links that announce new tabs to assistive tech
+- prefers-reduced-motion for decorative animations
+- Form field errors with aria-describedby
+
+Suggest file structure and code snippets for my stack. Ask me for my layout file if needed.
+```
+
+---
+
+## Closing
+
+Accessibility is maintenance, not a one-time badge. This pass made our **shared shell** behave more like what we already tell clients to aim for. If you run similar tests on your site and want to compare notes, I am interested in what tools you trust beyond manual tabbing—axe, Lighthouse, something else.
+
+Yours in algorithms and accountability,
+
+Amanda / Pythoness Programmer
+]]></content:encoded>
+      <author>Amanda Nelson</author>
+      <category>accessibility</category>
+      <category>neuroinclusive</category>
+      <category>workflows</category>
+    </item>
     <item>
       <title><![CDATA[Your IDE Is a Workbench]]></title>
       <link>https://pythonessprogrammer.com/blog/your-ide-is-workbench</link>

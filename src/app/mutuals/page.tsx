@@ -17,7 +17,7 @@ export default function MutualsPage() {
   };
 
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>
@@ -25,7 +25,7 @@ export default function MutualsPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/50 to-transparent"></div>
       </div>
 
-      <div className="relative max-w-4xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+      <div className="site-gutter relative mx-auto max-w-4xl">
         {/* Header Section */}
         <div className="text-center mb-16 animate-fade-in-up">
           <div className="inline-block bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl">
@@ -156,6 +156,6 @@ export default function MutualsPage() {
           */}
         </div>
       </div>
-    </main>
+    </div>
   );
 }

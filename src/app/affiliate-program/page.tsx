@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AffiliateProgramPage() {
   return (
-    <main className="min-h-screen bg-brand-green-dark text-white py-12 px-4 md:px-6">
+    <div className="site-gutter min-h-screen bg-brand-green-dark text-white">
       <div className="max-w-3xl mx-auto">
         <h1 className="font-display text-4xl md:text-5xl text-white mb-6 text-center">
           Affiliate program
@@ -117,6 +117,6 @@ export default function AffiliateProgramPage() {
           </Link>
         </p>
       </div>
-    </main>
+    </div>
   )
 }

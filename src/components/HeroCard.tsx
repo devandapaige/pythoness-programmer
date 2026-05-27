@@ -30,23 +30,23 @@ export default function HeroCard({
     <div className="bg-gradient-to-b from-brand-green-dark via-brand-purple-dark to-brand-green-dark text-white py-6 md:py-10 relative overflow-hidden">
       {/* Enhanced background patterns with multiple layers */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat animate-[spin_60s_linear_infinite]"></div>
-        <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat [transform:rotate(60deg)] animate-[spin_80s_linear_reverse_infinite]"></div>
+        <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat motion-reduce:animate-none animate-[spin_60s_linear_infinite]" aria-hidden="true" />
+        <div className="absolute inset-0 opacity-[0.05] bg-[url('/pattern.svg')] bg-repeat [transform:rotate(60deg)] motion-reduce:animate-none animate-[spin_80s_linear_reverse_infinite]" aria-hidden="true" />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/50 to-transparent"></div>
       </div>
       
-      <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6 py-4 md:py-6">
+      <div className="site-gutter relative mx-auto max-w-4xl text-center">
         {/* Content container with glass effect */}
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-5 sm:p-6 md:p-10 border border-white/10 shadow-2xl">
           {/* Title with enhanced animation */}
-          <div className="animate-fade-in-up">
+          <div className="motion-reduce:animate-none animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display mb-4 tracking-tight text-white">
               {title}
             </h1>
           </div>
           
           {/* Main content with staggered animation */}
-          <div className="space-y-4 md:space-y-6 animate-fade-in-up animation-delay-150">
+          <div className="space-y-4 md:space-y-6 motion-reduce:animate-none animate-fade-in-up animation-delay-150">
             {lines.map((para, i) => (
               <p key={i} className="text-xl md:text-2xl max-w-3xl mx-auto text-white font-light leading-relaxed">
                 {para}
@@ -58,7 +58,7 @@ export default function HeroCard({
           </div>
           
           {/* Buttons with enhanced hover effects */}
-          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-fade-in-up animation-delay-300">
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 motion-reduce:animate-none animate-fade-in-up animation-delay-300">
             {buttons.map((button, index) => (
               <Link
                 key={index}

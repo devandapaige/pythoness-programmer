@@ -49,7 +49,7 @@ function BulletList({ items, accent = 'bg-brand-green-accent' }: { items: readon
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <section
         className={`${marketingSection} bg-gradient-to-br from-brand-green-dark via-brand-green-dark/90 to-brand-green-dark text-white overflow-hidden`}
       >
@@ -192,6 +192,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

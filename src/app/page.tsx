@@ -55,8 +55,8 @@ export default async function Home() {
   const deep60Session = sessions.deep60
 
   return (
-    <main className={marketingHomeRhythm}>
-      <section className={`bg-brand-green-dark ${siteHeaderOffset} md:pt-20 pb-[5px] overflow-hidden`}>
+    <div className={marketingHomeRhythm}>
+      <section className={`bg-brand-green-dark ${siteHeaderOffset} overflow-hidden`}>
         <HeroCard />
       </section>
 
@@ -239,6 +239,6 @@ export default async function Home() {
           <NewsletterCard />
         </div>
       </section>
-    </main>
+    </div>
   )
 }

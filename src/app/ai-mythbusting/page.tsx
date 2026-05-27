@@ -1,7 +1,7 @@
 export default function AIMythbustingPage() {
   return (
-    <main className="min-h-screen pt-16 bg-gradient-to-br from-brand-purple-dark via-brand-green-dark to-brand-purple-dark">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-brand-purple-dark via-brand-green-dark to-brand-purple-dark">
+      <div className="site-gutter max-w-4xl mx-auto">
         <div className="prose prose-lg max-w-none">
           {/* Hero Section with Value Proposition */}
           <section className="mb-6 mt-0 text-center">
@@ -181,6 +181,6 @@ export default function AIMythbustingPage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

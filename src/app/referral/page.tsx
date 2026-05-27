@@ -104,7 +104,7 @@ const tools: Tool[] = [
 
 export default function ReferralPage() {
   return (
-    <div className="min-h-screen bg-brand-green-dark text-white py-12 px-4">
+    <div className="site-gutter min-h-screen bg-brand-green-dark text-white">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-display text-3xl md:text-4xl text-white mb-3">
