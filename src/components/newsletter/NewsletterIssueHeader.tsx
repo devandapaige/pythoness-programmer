@@ -15,7 +15,7 @@ export function NewsletterIssueHeader({ post }: NewsletterIssueHeaderProps) {
   })
 
   return (
-    <header className="mb-10 border-b border-brand-cream/20 pb-8">
+    <header className="mb-10 border-b border-brand-purple-accent pb-8">
       <p className="text-sm uppercase tracking-wide text-brand-green-accent mb-3">
         Pythoness Perspective
       </p>

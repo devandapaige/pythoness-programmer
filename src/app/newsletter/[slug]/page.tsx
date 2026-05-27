@@ -82,7 +82,7 @@ export default async function NewsletterIssuePage({
 
       {(previousPost || nextPost) && (
         <nav
-          className="mt-12 flex flex-col gap-4 border-t border-brand-cream/20 pt-8 sm:flex-row sm:justify-between"
+          className="mt-12 flex flex-col gap-4 border-t border-brand-purple-accent pt-8 sm:flex-row sm:justify-between"
           aria-label="Newsletter issue navigation"
         >
           {previousPost ? (

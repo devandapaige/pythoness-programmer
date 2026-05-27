@@ -8,7 +8,7 @@ interface PostNavigationProps {
 
 export default function PostNavigation({ previousPost, nextPost }: PostNavigationProps) {
   return (
-    <nav className="flex justify-between items-start mt-12 pt-6 border-t border-gray-700">
+    <nav className="flex justify-between items-start mt-12 pt-6 border-t border-brand-green-accent">
       <div className="flex-1 flex flex-col items-start">
         {previousPost ? (
           <Link 

@@ -172,7 +172,7 @@ export function BlogContent({ posts }: BlogContentProps) {
       ) : (
         <div className="space-y-8">
           {filteredPosts.map((post) => (
-            <article key={post.frontmatter.slug} className="border-b border-white/20 pb-8">
+            <article key={post.frontmatter.slug} className="border-b border-brand-green-accent pb-8">
               <h2 className="text-2xl font-display text-brand-cream">
                 <Link href={`/blog/${post.frontmatter.slug}`} className="hover:text-brand-purple-light transition-colors">
                   {post.frontmatter.title}

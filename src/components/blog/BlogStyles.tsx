@@ -42,6 +42,13 @@ export function BlogStyles() {
       .blog-content code {
         @apply bg-white/10 text-white px-1.5 py-0.5 rounded text-sm;
       }
+
+      .blog-content kbd {
+        @apply inline-block rounded border border-white/20 bg-white/10 px-1.5 py-0.5 font-mono text-sm text-white align-middle;
+        min-width: 1.75em;
+        text-align: center;
+        white-space: nowrap;
+      }
       
       .blog-content pre {
         @apply bg-white/5 p-4 rounded-lg mb-6 overflow-x-auto;
@@ -53,6 +60,17 @@ export function BlogStyles() {
       
       .blog-content blockquote {
         @apply border-l-4 border-brand-green-accent pl-4 italic text-white/70 my-6;
+      }
+
+      /* Markdown --- section breaks */
+      .blog-content hr {
+        border: 0;
+        border-top: 4px solid #32d24d;
+        width: 36%;
+        max-width: 14rem;
+        margin: 2.5rem auto;
+        background: transparent;
+        opacity: 1;
       }
 
       .blog-content table {

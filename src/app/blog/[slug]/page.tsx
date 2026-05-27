@@ -4,6 +4,7 @@ import { PostMetadata } from '@/components/blog/PostMetadata'
 import PostNavigation from '@/components/blog/PostNavigation'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
 import { getSiteBaseUrl } from '@/lib/newsletter/config'
+import Key from '@/components/Key'
 import Signature from '@/components/Signature'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import type { MDXComponents } from 'mdx/types'
@@ -67,6 +68,7 @@ export default async function PostPage({ params }: PostPageProps) {
 
   // Define mdxComponents directly instead of using the hook
   const mdxComponents: MDXComponents = {
+    Key,
     Signature,
   }
 

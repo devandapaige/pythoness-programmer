@@ -146,10 +146,36 @@ body {
   }
 }
 
+/* Newsletter archive index cards only — not full issue pages */
+.newsletter-content-panel--index {
+  background-color: rgba(255, 255, 255, 0.11);
+  border-color: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem 0.625rem;
+}
+
+@media (min-width: 640px) {
+  .newsletter-content-panel--index {
+    padding: 0.875rem 0.75rem;
+  }
+}
+
 .newsletter-content-panel .newsletter-issue-body
   :is(h1, h2, h3, h4, h5, h6, .newsletter-heading):first-child,
 .newsletter-content-panel .newsletter-issue-body h2:first-of-type {
   margin-top: 0 !important;
+}
+
+/* Beehiiv-export horizontal rules (override inline green/purple mix) */
+.newsletter-issue-body div[style*="border-top:3px"],
+.newsletter-issue-body div[style*="border-top:4px"],
+.newsletter-issue-body hr {
+  border-top-color: #d8b9f7 !important;
+}
+
+.newsletter-issue-body div[style*="border-top:3px"],
+.newsletter-issue-body div[style*="border-top:4px"] {
+  border-top-width: 4px !important;
+  border-top-style: solid !important;
 }
 
 /* Newsletter archive (Beehiiv HTML on brand-green-dark) */

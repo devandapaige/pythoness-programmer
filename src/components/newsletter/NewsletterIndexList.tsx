@@ -24,7 +24,7 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
     <ul className="space-y-8">
       {posts.map((post, index) => (
         <li key={post.slug} className="pb-8 last:pb-0">
-          <NewsletterContentPanel>
+          <NewsletterContentPanel variant="index">
           <article>
             <time
               dateTime={post.publishedAt.toISOString()}

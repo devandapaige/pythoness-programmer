@@ -3,7 +3,7 @@ import { pythonessPerspective } from '@/data/siteCopy'
 
 export function NewsletterSubscribeCta() {
   return (
-    <section className="mt-16 pt-10 border-t border-brand-cream/20">
+    <section className="mt-16 pt-10 border-t border-brand-purple-accent">
       <p className="text-white/80 mb-6 text-center max-w-2xl mx-auto">
         This issue was sent to newsletter subscribers. Sign up to receive the next one (
         {pythonessPerspective.scheduleLabel.toLowerCase()}).

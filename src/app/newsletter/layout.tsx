@@ -19,30 +19,23 @@ export default function NewsletterLayout({
       className="min-h-screen bg-brand-green-dark"
       style={{ color: 'var(--brand-cream)' }}
     >
-      <header className="border-b border-brand-cream/20 bg-brand-green-dark">
-        <div className="site-gutter mx-auto max-w-7xl">
-          <div className="flex h-16 items-center justify-between">
+      <header className="border-b border-brand-purple-accent bg-brand-green-dark">
+        <div className="site-gutter-x mx-auto max-w-7xl pb-4 pt-2">
+          <div className="flex min-h-12 flex-wrap items-center justify-between gap-3">
             <Link
               href="/newsletter"
-              className="text-xl"
-              style={{
-                color: '#fff',
-                fontFamily: 'var(--font-norwester), sans-serif',
-                letterSpacing: '-0.015em',
-                textTransform: 'uppercase',
-              }}
+              className="font-display text-xl uppercase tracking-tight text-white hover:text-brand-purple-light"
             >
               Pythoness Perspective
             </Link>
             <Link
               href="/blog"
-              className="text-sm"
-              style={{ color: 'var(--brand-cream)' }}
+              className="text-sm text-brand-cream hover:text-brand-purple-light"
             >
               Lab Notes
             </Link>
           </div>
-          <p className="pb-4 text-sm text-brand-cream/80">
+          <p className="mt-2 text-sm text-brand-cream/80">
             {pythonessPerspective.scheduleLabel} — monthly arcs on tech sovereignty, week by week.
           </p>
         </div>
