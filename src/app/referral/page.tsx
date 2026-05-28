@@ -46,6 +46,12 @@ const tools: Tool[] = [
     websiteUrl: 'https://duckduckgo.com/browser',
   },
   {
+    name: 'Proton VPN',
+    tagline: 'VPN',
+    description: 'Swiss-based VPN with a no-logs policy and a free tier. Simple to set up—a solid harm-reduction layer when you want more privacy on public Wi‑Fi or from casual ISP tracking.',
+    referralUrl: 'https://pr.tn/ref/PGWX9ZCK',
+  },
+  {
     name: 'Canva Pro',
     tagline: 'Design',
     description: 'Templates, brand kits, and quick graphics for social, worksheets, and visual content. I use it for guides and resource PDFs.',
@@ -61,7 +67,7 @@ const tools: Tool[] = [
     name: 'Cursor IDE',
     tagline: 'AI hub & IDE',
     description: 'My main AI hub and IDE. Code, edit, and think with AI built in—where most of my technical and writing work happens.',
-    websiteUrl: 'https://cursor.com',
+    referralUrl: 'https://cursor.com/referral?code=HE5B2LBMDM7G',
   },
   {
     name: '1Password',
