@@ -102,10 +102,14 @@ Template IDs are written to `config/resend-templates.json`. Re-running `--apply`
 
 Section header images use the same paths as newsletter MDX exports (under `/newsletter/assets/`), including:
 
-- `/newsletter/assets/email/pythoness-perspective-header.png` (top banner)
+- `/newsletter/assets/email/pythoness-perspective-header.png` (weekly newsletter top banner)
+- `/newsletter/assets/email/pythoness-programmer-header.png` (event, lab notes, and monthly recap top banner)
+- `/newsletter/assets/email/this-month-header.png` (monthly recap intro section)
 - `/newsletter/assets/db3496f9-3b1b-4566-a1bd-6f8a166f1fbf/2.png` (This Week)
 - `/newsletter/assets/dcbe0db6-6b06-4714-b1ee-48d9036b9db3/4.png` (TLDR)
 - `/newsletter/assets/email/up-next-header.png` (Up next)
+
+All four top banners link to `https://www.pythonessprogrammer.com/`. Every template footer includes the mailing address: P.O. Box 201, New Kent, VA 23124.
 
 ### Templates
 

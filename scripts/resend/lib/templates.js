@@ -17,9 +17,15 @@ const EMAIL_FONTS =
 
 const SIGNATURE_PATH = '/images/email-signature.png'
 
+const EMAIL_HOME_URL = 'https://www.pythonessprogrammer.com/'
+
+const MAILING_ADDRESS = 'P.O. Box 201, New Kent, VA 23124'
+
 const NEWSLETTER_SECTION_HEADERS = {
+  brand: '/newsletter/assets/email/pythoness-programmer-header.png',
   perspective: '/newsletter/assets/email/pythoness-perspective-header.png',
   thisWeek: '/newsletter/assets/db3496f9-3b1b-4566-a1bd-6f8a166f1fbf/2.png',
+  thisMonth: '/newsletter/assets/email/this-month-header.png',
   tldr: '/newsletter/assets/dcbe0db6-6b06-4714-b1ee-48d9036b9db3/4.png',
   subscribe: '/newsletter/assets/e00bb2b9-903d-4d8b-88db-3a55ed9ce659/3.png',
   support: '/newsletter/assets/dee36210-72ca-42e6-bead-22c13378a18e/8.png',
@@ -56,6 +62,9 @@ const buildPreheaderHtml = (preheader) => {
 
 const buildSectionHeaderImage = (imageUrl, alt) =>
   `<div style="padding-left:10px;padding-right:10px"><div style="padding-bottom:20px;padding-left:0px;padding-right:0px;padding-top:20px"><img alt="${escapeHtml(alt)}" style="margin:0 auto 0 auto;width:100%;display:block;border:0;height:auto;" src="${imageUrl}" /></div></div>`
+
+const buildTopEmailHeader = (imageUrl, alt) =>
+  buildLinkedSectionHeaderImage(EMAIL_HOME_URL, imageUrl, alt)
 
 const buildLinkedSectionHeaderImage = (href, imageUrl, alt) =>
   `<div style="padding-left:10px;padding-right:10px"><div style="padding-bottom:20px;padding-left:0px;padding-right:0px;padding-top:20px"><a href="${href}" rel="nofollow noopener noreferrer" style="text-decoration:none" target="_blank"><img alt="${escapeHtml(alt)}" style="margin:0 auto 0 auto;width:100%;display:block;border:0;height:auto;" src="${imageUrl}" /></a></div></div>`
@@ -95,6 +104,9 @@ const buildFooterHtml = (siteUrl) => {
       </p>
       <p style="margin:0 0 12px 0;">
         Questions? Reply or email <a href="mailto:help@pythonessprogrammer.com" style="color:${EMAIL_COLORS.greenHyperlink};text-decoration:underline;">help@pythonessprogrammer.com</a>
+      </p>
+      <p style="margin:0 0 12px 0;font-size:12px;color:#666666;">
+        ${escapeHtml(MAILING_ADDRESS)}
       </p>
       <p style="margin:0;font-size:12px;color:#666666;">
         <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#666666;text-decoration:underline;">Unsubscribe</a>
@@ -179,7 +191,7 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         siteUrl,
         preheader: '{{{PREHEADER}}}',
         sections: [
-          { html: buildSectionHeaderImage(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.perspective), 'Pythoness Perspective') },
+          { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.perspective), 'Pythoness Perspective') },
           { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.thisWeek), 'This Week', 'THIS_WEEK_HTML') },
           { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.tldr), "TLDR (Too Long, Didn't Read Summary)", 'TLDR_HTML') },
           { html: buildLinkedSectionHeaderImage(subscribeUrl, sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.subscribe), 'Did a friend forward this to you? Subscribe Here.') },
@@ -209,7 +221,7 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
       html: buildEmailShell({
         siteUrl,
         sections: [
-          { html: buildSectionHeaderImage(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.perspective), 'Pythoness Perspective') },
+          { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
           { html: buildTextHeaderBar('{{{REMINDER_HEADLINE}}}', 'Event reminder') },
           {
             html: `
@@ -246,7 +258,7 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
       html: buildEmailShell({
         siteUrl,
         sections: [
-          { html: buildSectionHeaderImage(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.perspective), 'Pythoness Perspective') },
+          { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
           { html: buildTextHeaderBar('Lab Notes', 'New on the blog') },
           {
             html: `
@@ -276,8 +288,8 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
       html: buildEmailShell({
         siteUrl,
         sections: [
-          { html: buildSectionHeaderImage(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.perspective), 'Pythoness Perspective') },
-          { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.thisWeek), 'This month', 'RECAP_INTRO_HTML') },
+          { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
+          { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.thisMonth), 'This month', 'RECAP_INTRO_HTML') },
           { html: buildTextHeaderBar('{{{RECAP_MONTH}}}', '{{{RECAP_TITLE}}}') },
           { html: buildContentSlot('HIGHLIGHTS_HTML') },
           { html: buildContentSlot('BODY_HTML') },

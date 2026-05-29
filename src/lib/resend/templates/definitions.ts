@@ -10,10 +10,10 @@ import {
   buildGreenButton,
   buildNewsletterSection,
   buildReadOnlineSection,
-  buildSectionHeaderImage,
   buildSubscribeForwardSection,
   buildSupportSection,
   buildTextHeaderBar,
+  buildTopEmailHeader,
   buildUpNextSection,
 } from '@/lib/resend/templates/shell'
 
@@ -60,7 +60,7 @@ export const buildNewsletterTemplate = (
     preheader: '{{{PREHEADER}}}',
     sections: [
       {
-        html: buildSectionHeaderImage(
+        html: buildTopEmailHeader(
           sectionUrl(NEWSLETTER_SECTION_HEADERS.perspective),
           'Pythoness Perspective'
         ),
@@ -124,9 +124,9 @@ export const buildEventReminderTemplate = (
     siteUrl,
     sections: [
       {
-        html: buildSectionHeaderImage(
-          sectionUrl(NEWSLETTER_SECTION_HEADERS.perspective),
-          'Pythoness Perspective'
+        html: buildTopEmailHeader(
+          sectionUrl(NEWSLETTER_SECTION_HEADERS.brand),
+          'Pythoness Programmer'
         ),
       },
       {
@@ -177,9 +177,9 @@ export const buildLabNotesTemplate = (
     siteUrl,
     sections: [
       {
-        html: buildSectionHeaderImage(
-          sectionUrl(NEWSLETTER_SECTION_HEADERS.perspective),
-          'Pythoness Perspective'
+        html: buildTopEmailHeader(
+          sectionUrl(NEWSLETTER_SECTION_HEADERS.brand),
+          'Pythoness Programmer'
         ),
       },
       {
@@ -225,14 +225,14 @@ export const buildMonthlyRecapTemplate = (
     siteUrl,
     sections: [
       {
-        html: buildSectionHeaderImage(
-          sectionUrl(NEWSLETTER_SECTION_HEADERS.perspective),
-          'Pythoness Perspective'
+        html: buildTopEmailHeader(
+          sectionUrl(NEWSLETTER_SECTION_HEADERS.brand),
+          'Pythoness Programmer'
         ),
       },
       {
         html: buildNewsletterSection(
-          sectionUrl(NEWSLETTER_SECTION_HEADERS.thisWeek),
+          sectionUrl(NEWSLETTER_SECTION_HEADERS.thisMonth),
           'This month',
           'RECAP_INTRO_HTML'
         ),

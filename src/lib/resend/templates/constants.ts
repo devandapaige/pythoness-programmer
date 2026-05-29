@@ -13,11 +13,17 @@ export const EMAIL_COLORS = {
 export const EMAIL_FONTS =
   "'Open Sans','Segoe UI','Apple SD Gothic Neo','Lucida Grande','Lucida Sans Unicode',sans-serif"
 
+export const EMAIL_HOME_URL = 'https://www.pythonessprogrammer.com/'
+
+export const MAILING_ADDRESS = 'P.O. Box 201, New Kent, VA 23124'
+
 /** Section header images reused across newsletter MDX exports (already on-site). */
 export const NEWSLETTER_SECTION_HEADERS = {
+  brand: '/newsletter/assets/email/pythoness-programmer-header.png',
   perspective:
     '/newsletter/assets/email/pythoness-perspective-header.png',
   thisWeek: '/newsletter/assets/db3496f9-3b1b-4566-a1bd-6f8a166f1fbf/2.png',
+  thisMonth: '/newsletter/assets/email/this-month-header.png',
   tldr: '/newsletter/assets/dcbe0db6-6b06-4714-b1ee-48d9036b9db3/4.png',
   subscribe: '/newsletter/assets/e00bb2b9-903d-4d8b-88db-3a55ed9ce659/3.png',
   toolSpotlight: '/newsletter/assets/481d1df1-1934-4ac6-9848-ddb1f9e3958b/5.png',
@@ -32,6 +38,9 @@ export const getSectionHeaderUrl = (path: string): string =>
 
 export const getPerspectiveHeaderUrl = (): string =>
   getSectionHeaderUrl(NEWSLETTER_SECTION_HEADERS.perspective)
+
+export const getBrandHeaderUrl = (): string =>
+  getSectionHeaderUrl(NEWSLETTER_SECTION_HEADERS.brand)
 
 export const getUpNextHeaderUrl = (): string =>
   getSectionHeaderUrl(NEWSLETTER_SECTION_HEADERS.upNext)

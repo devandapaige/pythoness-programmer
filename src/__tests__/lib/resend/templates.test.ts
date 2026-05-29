@@ -2,12 +2,16 @@ import {
   buildEmailShell,
   buildFooterHtml,
   buildSectionHeaderImage,
+  buildTopEmailHeader,
   buildUpNextSection,
 } from '@/lib/resend/templates/shell'
 import { getAllBroadcastTemplates } from '@/lib/resend/templates/definitions'
 import {
+  EMAIL_HOME_URL,
+  getBrandHeaderUrl,
   getPerspectiveHeaderUrl,
   getUpNextHeaderUrl,
+  MAILING_ADDRESS,
   NEWSLETTER_SECTION_HEADERS,
 } from '@/lib/resend/templates/constants'
 
@@ -30,6 +34,7 @@ describe('Resend broadcast templates', () => {
 
     expect(newsletter.html).toContain('padding-left:10px;padding-right:10px')
     expect(newsletter.html).toContain(getPerspectiveHeaderUrl())
+    expect(newsletter.html).toContain(EMAIL_HOME_URL)
     expect(newsletter.html).toContain(NEWSLETTER_SECTION_HEADERS.thisWeek)
     expect(newsletter.html).toContain(NEWSLETTER_SECTION_HEADERS.tldr)
     expect(newsletter.html).toContain('alt="This Week"')
@@ -56,7 +61,9 @@ describe('Resend broadcast templates', () => {
       'BODY_HTML',
     ])
     expect(eventTemplate?.html).toContain('{{{CALENDAR_URL}}}')
-    expect(eventTemplate?.html).toContain(getPerspectiveHeaderUrl())
+    expect(eventTemplate?.html).toContain(getBrandHeaderUrl())
+    expect(eventTemplate?.html).not.toContain(getPerspectiveHeaderUrl())
+    expect(eventTemplate?.html).toContain(EMAIL_HOME_URL)
   })
 
   it('buildEmailShell footer includes subscribe link', () => {
@@ -67,6 +74,23 @@ describe('Resend broadcast templates', () => {
 
     expect(html).toContain(buildFooterHtml(siteUrl))
     expect(html).toContain('/newsletter/subscribe')
+    expect(html).toContain(MAILING_ADDRESS)
+  })
+
+  it('monthly recap uses brand header and This month section', () => {
+    const recap = getAllBroadcastTemplates(siteUrl).find(
+      (template) => template.alias === 'pythoness-monthly-recap'
+    )
+
+    expect(recap?.html).toContain(getBrandHeaderUrl())
+    expect(recap?.html).toContain(NEWSLETTER_SECTION_HEADERS.thisMonth)
+    expect(recap?.html).not.toContain(NEWSLETTER_SECTION_HEADERS.thisWeek)
+  })
+
+  it('buildTopEmailHeader links to homepage', () => {
+    const header = buildTopEmailHeader(getBrandHeaderUrl(), 'Pythoness Programmer')
+    expect(header).toContain(EMAIL_HOME_URL)
+    expect(header).toContain(getBrandHeaderUrl())
   })
 
   it('buildSectionHeaderImage matches newsletter export markup', () => {

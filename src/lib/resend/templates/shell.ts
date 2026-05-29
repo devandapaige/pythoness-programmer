@@ -1,6 +1,8 @@
 import {
   EMAIL_COLORS,
   EMAIL_FONTS,
+  EMAIL_HOME_URL,
+  MAILING_ADDRESS,
   getSignatureUrl,
   getSubscribeUrl,
   getSupportUrl,
@@ -31,6 +33,10 @@ export const buildPreheaderHtml = (preheader: string): string => {
 /** Matches Beehiiv/export markup used in newsletter MDX posts. */
 export const buildSectionHeaderImage = (imageUrl: string, alt: string): string =>
   `<div style="padding-left:10px;padding-right:10px"><div style="padding-bottom:20px;padding-left:0px;padding-right:0px;padding-top:20px"><img alt="${escapeHtml(alt)}" style="margin:0 auto 0 auto;width:100%;display:block;border:0;height:auto;" src="${imageUrl}" /></div></div>`
+
+/** Top-of-email banner linked to the site homepage. */
+export const buildTopEmailHeader = (imageUrl: string, alt: string): string =>
+  buildLinkedSectionHeaderImage(EMAIL_HOME_URL, imageUrl, alt)
 
 export const buildLinkedSectionHeaderImage = (
   href: string,
@@ -80,6 +86,9 @@ export const buildFooterHtml = (siteUrl: string): string => {
       </p>
       <p style="margin:0 0 12px 0;">
         Questions? Reply or email <a href="mailto:help@pythonessprogrammer.com" style="color:${EMAIL_COLORS.greenHyperlink};text-decoration:underline;">help@pythonessprogrammer.com</a>
+      </p>
+      <p style="margin:0 0 12px 0;font-size:12px;color:#666666;">
+        ${escapeHtml(MAILING_ADDRESS)}
       </p>
       <p style="margin:0;font-size:12px;color:#666666;">
         <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" style="color:#666666;text-decoration:underline;">Unsubscribe</a>
