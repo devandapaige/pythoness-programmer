@@ -69,9 +69,87 @@ npm run migrate-beehiiv-links
 1. Add `src/content/newsletter/posts/your-slug.mdx` (frontmatter + HTML body in a `newsletter-exported-body` div, or copy structure from an exported file).
 2. Put cover and inline images in `public/newsletter/assets/` (site-wide assets like the signature live in `public/images/`). Reference them with site-relative paths, e.g. `image: "/newsletter/assets/{uuid}/banner.png"` — do not hotlink Beehiiv.
 3. Deploy.
-4. Resend → **Broadcasts** → new campaign to your segment:
-   - Short teaser + link: `https://pythonessprogrammer.com/newsletter/your-slug`
-   - Include `{{{RESEND_UNSUBSCRIBE_URL}}}` in the template.
+4. Resend → **Broadcasts** → pick a branded template (see [Broadcast templates](#broadcast-templates) below) → fill variables → send to your segment.
+
+## Broadcast templates
+
+Four reusable Resend templates live in the repo and can be registered once via the API (no emails sent during setup).
+
+### One-time setup
+
+1. Ensure `RESEND_API_KEY` is in `.env` or `.env.local` (same key as newsletter signups).
+2. Optional: set `NEWSLETTER_EMAIL_FROM` (default `Pythoness Perspective <newsletter@pythonessprogrammer.com>`).
+3. Optional: set `NEXT_PUBLIC_SITE_URL` so header/signature image URLs resolve correctly (default `https://pythonessprogrammer.com`).
+4. Preview locally (dry run — no API calls):
+
+```bash
+npm run resend:templates
+```
+
+5. Create and publish templates in Resend:
+
+```bash
+npm run resend:templates -- --apply
+```
+
+6. After changing template HTML in the repo, push updates to Resend:
+
+```bash
+npm run resend:templates -- --apply --update
+```
+
+Template IDs are written to `config/resend-templates.json`. Re-running `--apply` skips aliases that already exist unless you pass `--update`.
+
+Section header images use the same paths as newsletter MDX exports (under `/newsletter/assets/`), including:
+
+- `/newsletter/assets/email/pythoness-perspective-header.png` (top banner)
+- `/newsletter/assets/db3496f9-3b1b-4566-a1bd-6f8a166f1fbf/2.png` (This Week)
+- `/newsletter/assets/dcbe0db6-6b06-4714-b1ee-48d9036b9db3/4.png` (TLDR)
+- `/newsletter/assets/email/up-next-header.png` (Up next)
+
+### Templates
+
+| Alias | Use |
+|-------|-----|
+| `pythoness-perspective-newsletter` | Weekly Pythoness Perspective issues |
+| `pythoness-event-reminder` | Luma / live event reminders |
+| `pythoness-lab-notes-update` | New Lab Notes blog post announcements |
+| `pythoness-monthly-recap` | End-of-month recap broadcasts |
+
+### Weekly newsletter variables (`pythoness-perspective-newsletter`)
+
+The template mirrors your regular issue structure:
+
+| Variable | What goes here |
+|----------|----------------|
+| `SUBJECT_LINE` | Email subject |
+| `PREHEADER` | Inbox preview text |
+| `THIS_WEEK_HTML` | Opening paragraphs after the **This Week** header |
+| `TLDR_HTML` | Bullet summary after the **TLDR** header |
+| `MAIN_FEATURE_HTML` | Main feature body (include your `MAIN FEATURE` heading if needed) |
+| `EXTRA_SECTIONS_HTML` | Tool Spotlight, Struggle is Real, Fire Horse, sign-off — paste from MDX export |
+| `UP_NEXT_HTML` | Upcoming content after the **Up next** header |
+| `READ_ONLINE_URL` | Archive URL for the green “Read the full issue” button (teaser sends only) |
+
+Subscribe-forward and Support banners are baked into the template (linked images).
+
+### Other send modes
+
+**Full issue in email:** fill `THIS_WEEK_HTML`, `TLDR_HTML`, `MAIN_FEATURE_HTML`, and paste remaining sections into `EXTRA_SECTIONS_HTML`.
+
+**Teaser + archive link:** short copy in `THIS_WEEK_HTML` / `TLDR_HTML`, set `READ_ONLINE_URL` to `https://pythonessprogrammer.com/newsletter/your-slug`.
+
+**UP NEXT section:** set `UP_NEXT_HTML` when you have upcoming content. Leave empty when skipping.
+
+All templates include `{{{RESEND_UNSUBSCRIBE_URL}}}` in the footer automatically.
+
+### Per-send workflow
+
+1. Resend → **Broadcasts** → **Create broadcast**.
+2. Choose the template alias above.
+3. Fill template variables for this send.
+4. Select your newsletter segment (`RESEND_NEWSLETTER_SEGMENT_ID`).
+5. Review and send.
 
 ## Analytics
 
@@ -112,6 +190,10 @@ Configure in Netlify for that subdomain or in Beehiiv web settings.
 | Subscribe page | `src/app/newsletter/subscribe/page.tsx` |
 | Subscribe API | `src/app/api/newsletter/subscribe/route.ts` |
 | Resend contacts | `src/lib/resend/newsletter.ts` |
+| Broadcast template shell | `src/lib/resend/templates/shell.ts` |
+| Broadcast template definitions | `src/lib/resend/templates/definitions.ts` |
+| Template setup script | `scripts/resend/create-broadcast-templates.js` |
+| Template IDs (generated) | `config/resend-templates.json` |
 | Export script | `scripts/export-beehiiv-archive.js` |
 | Image migration | `scripts/migrate-beehiiv-images.js` (`npm run migrate-beehiiv-images`) |
 | Link & PDF migration | `scripts/migrate-beehiiv-links.js` (`npm run migrate-beehiiv-links`) |

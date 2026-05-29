@@ -1,0 +1,29 @@
+{
+  "updatedAt": "2026-05-29T21:56:24.583Z",
+  "templates": [
+    {
+      "alias": "pythoness-perspective-newsletter",
+      "name": "pythoness-perspective-newsletter",
+      "id": "79925002-96c1-4311-b471-92a9cca3ad3d",
+      "status": "updated"
+    },
+    {
+      "alias": "pythoness-event-reminder",
+      "name": "pythoness-event-reminder",
+      "id": "2e13141a-e5a4-410a-a71d-3c5b68a9a477",
+      "status": "updated"
+    },
+    {
+      "alias": "pythoness-lab-notes-update",
+      "name": "pythoness-lab-notes-update",
+      "id": "d304def4-bf78-4055-adda-4d87246834ae",
+      "status": "updated"
+    },
+    {
+      "alias": "pythoness-monthly-recap",
+      "name": "pythoness-monthly-recap",
+      "id": "48c288ef-263e-4704-8bd7-97292dc11d7a",
+      "status": "updated"
+    }
+  ]
+}

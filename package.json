@@ -8,6 +8,7 @@
     "export-newsletter": "node scripts/export-beehiiv-archive.js",
     "migrate-beehiiv-images": "node scripts/migrate-beehiiv-images.js",
     "migrate-beehiiv-links": "node scripts/migrate-beehiiv-links.js",
+    "resend:templates": "node scripts/resend/create-broadcast-templates.js",
     "start": "next start",
     "lint": "eslint .",
     "test": "jest",
