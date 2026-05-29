@@ -4,6 +4,7 @@ import path from 'path'
 import {
   getNewsletterPostBySlugSync,
   hasNewsletterArchive,
+  parseNewsletterDate,
 } from '@/lib/newsletter/mdx'
 
 const POSTS_DIR = path.join(process.cwd(), 'src/content/newsletter/posts')
@@ -18,5 +19,15 @@ describe('newsletter mdx', () => {
 
   it('returns null for missing slug', () => {
     expect(getNewsletterPostBySlugSync('this-slug-does-not-exist-xyz')).toBeNull()
+  })
+
+  it('parses date-only strings as calendar dates', () => {
+    const parsed = parseNewsletterDate('2026-05-29')
+    expect(parsed.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timeZone: 'America/New_York',
+    })).toBe('May 29, 2026')
   })
 })

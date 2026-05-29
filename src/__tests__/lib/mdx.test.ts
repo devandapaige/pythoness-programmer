@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { 
   getAllPosts, 
   getPostBySlug, 
-  getPostBySlugSync
+  getPostBySlugSync,
 } from '@/lib/mdx';
 
 // Mock dependencies

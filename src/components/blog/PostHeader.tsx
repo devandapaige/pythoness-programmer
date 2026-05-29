@@ -1,4 +1,5 @@
-import { BlogPost } from '@/lib/mdx'
+import type { BlogPost } from '@/types/blog'
+import { formatBlogDate } from '@/lib/blog-date'
 import Image from 'next/image'
 import { TagPill } from './Tag'
 
@@ -14,11 +15,7 @@ export default function PostHeader({ post }: PostHeaderProps) {
       </h1>
       <div className="flex items-center space-x-4 text-white/60 mb-4">
         <time dateTime={post.frontmatter.date}>
-          {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
+          {formatBlogDate(post.frontmatter.date)}
         </time>
         <span>by {post.frontmatter.author}</span>
       </div>

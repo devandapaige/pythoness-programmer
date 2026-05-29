@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { BlogPost } from '@/lib/mdx'
+import type { BlogPost } from '@/types/blog'
 
 interface PostNavigationProps {
   previousPost: BlogPost | null

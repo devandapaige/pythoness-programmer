@@ -10,6 +10,16 @@ import type {
 
 const POSTS_DIR = path.join(process.cwd(), 'src/content/newsletter/posts')
 
+/** Parse YYYY-MM-DD as a calendar date (not UTC midnight, which shifts to prior day in US TZ). */
+export function parseNewsletterDate(dateStr: string): Date {
+  const dateOnly = dateStr.trim().slice(0, 10)
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateOnly)) {
+    const [year, month, day] = dateOnly.split('-').map(Number)
+    return new Date(year, month - 1, day)
+  }
+  return new Date(dateStr)
+}
+
 const toSummary = (
   frontmatter: NewsletterPostFrontmatter
 ): NewsletterPostSummary => ({
@@ -18,7 +28,7 @@ const toSummary = (
   subtitle: frontmatter.subtitle,
   preview_text: frontmatter.description,
   thumbnail_url: frontmatter.image,
-  publishedAt: new Date(frontmatter.date),
+  publishedAt: parseNewsletterDate(frontmatter.date),
 })
 
 export function getNewsletterPostsDir(): string {

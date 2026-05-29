@@ -1,4 +1,4 @@
-import { BlogPost } from '@/lib/mdx'
+import type { BlogPost } from '@/types/blog'
 import { TagPill } from './Tag'
 import { useSearchParams } from 'next/navigation'
 import { cn } from '@/lib/utils'

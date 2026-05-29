@@ -5,6 +5,16 @@ const matter = require('gray-matter')
 // Constants for file paths to improve maintainability and avoid hardcoding
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
 
+/** Parse YYYY-MM-DD as a calendar date (not UTC midnight). */
+function parseBlogDate(dateStr) {
+  const dateOnly = dateStr.trim().slice(0, 10)
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateOnly)) {
+    const [year, month, day] = dateOnly.split('-').map(Number)
+    return new Date(year, month - 1, day)
+  }
+  return new Date(dateStr)
+}
+
 function getAllPosts() {
   const files = fs.readdirSync(POSTS_DIR)
   const posts = files
@@ -15,7 +25,13 @@ function getAllPosts() {
     })
     .filter(Boolean)
   // Sort by date descending (newest first)
-  posts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+  posts.sort((a, b) => {
+    const dateDiff =
+      parseBlogDate(b.frontmatter.date).getTime() -
+      parseBlogDate(a.frontmatter.date).getTime()
+    if (dateDiff !== 0) return dateDiff
+    return b.frontmatter.slug.localeCompare(a.frontmatter.slug)
+  })
   return posts
 }
 
@@ -65,7 +81,7 @@ function generateRSS() {
       <title><![CDATA[${post.frontmatter.title}]]></title>
       <link>${baseUrl}/blog/${post.frontmatter.slug}</link>
       <guid>${baseUrl}/blog/${post.frontmatter.slug}</guid>
-      <pubDate>${new Date(post.frontmatter.date).toUTCString()}</pubDate>
+      <pubDate>${parseBlogDate(post.frontmatter.date).toUTCString()}</pubDate>
       <description><![CDATA[${post.frontmatter.description}]]></description>
       <content:encoded><![CDATA[${post.content}]]></content:encoded>
       <author>${post.frontmatter.author}</author>

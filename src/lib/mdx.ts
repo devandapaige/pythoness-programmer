@@ -2,24 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-// Constants for file paths to improve maintainability and avoid hardcoding
+import { parseBlogDate } from '@/lib/blog-date'
+import type { BlogPost, BlogPostFrontmatter } from '@/types/blog'
+
+export type { BlogPost, BlogPostFrontmatter } from '@/types/blog'
+export { formatBlogDate, parseBlogDate } from '@/lib/blog-date'
+
 const POSTS_DIR = path.join(process.cwd(), 'src/content/blog/posts')
-// const contentDirectory = path.join(process.cwd(), 'content')
-
-export type BlogPostFrontmatter = {
-  slug: string
-  title: string
-  date: string
-  description: string
-  author: string
-  tags: string[]
-  image: string
-}
-
-export type BlogPost = {
-  frontmatter: BlogPostFrontmatter
-  content: string
-}
 
 /**
  * Retrieves all blog posts from the posts directory
@@ -38,8 +27,13 @@ export async function getAllPosts(): Promise<BlogPost[]> {
       return getPostBySlugSync(slug)
     })
     .filter(Boolean) as BlogPost[]
-  // Sort by date descending (newest first)
-  posts.sort((a, b) => new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime())
+  posts.sort((a, b) => {
+    const dateDiff =
+      parseBlogDate(b.frontmatter.date).getTime() -
+      parseBlogDate(a.frontmatter.date).getTime()
+    if (dateDiff !== 0) return dateDiff
+    return b.frontmatter.slug.localeCompare(a.frontmatter.slug)
+  })
   return posts
 }
 

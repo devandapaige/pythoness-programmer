@@ -1,11 +1,13 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { isValidElement, type ReactNode } from 'react'
 import { PostMetadata } from '@/components/blog/PostMetadata'
 import PostNavigation from '@/components/blog/PostNavigation'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
 import { getSiteBaseUrl } from '@/lib/newsletter/config'
 import Key from '@/components/Key'
 import Signature from '@/components/Signature'
+import Mermaid from '@/components/blog/Mermaid'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import type { MDXComponents } from 'mdx/types'
 import { blogMdxOptions } from '@/lib/mdx-compile'
@@ -14,6 +16,33 @@ interface PostPageProps {
   params: Promise<{
     slug: string
   }>
+}
+
+function getMermaidChart(children: ReactNode): string | null {
+  if (!isValidElement<{ className?: string; children?: ReactNode }>(children)) {
+    return null
+  }
+
+  const className = children.props.className ?? ''
+  if (!className.includes('language-mermaid')) {
+    return null
+  }
+
+  const chart = children.props.children
+  return typeof chart === 'string' ? chart : String(chart ?? '')
+}
+
+const blogMdxComponents: MDXComponents = {
+  Key,
+  Signature,
+  pre: ({ children, ...props }) => {
+    const chart = getMermaidChart(children)
+    if (chart) {
+      return <Mermaid chart={chart} />
+    }
+
+    return <pre {...props}>{children}</pre>
+  },
 }
 
 const BLOG_TO_NEWSLETTER_CANONICAL_SLUGS = new Set<string>([
@@ -66,16 +95,9 @@ export default async function PostPage({ params }: PostPageProps) {
   const previousPost = postIndex > 0 ? posts[postIndex - 1] : null
   const nextPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null
 
-  // Define mdxComponents directly instead of using the hook
-  const mdxComponents: MDXComponents = {
-    Key,
-    Signature,
-  }
-
-  // Compile MDX content here
   const { content: compiledContent } = await compileMDX({
     source: post.content,
-    components: mdxComponents,
+    components: blogMdxComponents,
     options: {
       parseFrontmatter: true,
       mdxOptions: blogMdxOptions,

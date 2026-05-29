@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import ExternalLink from '@/components/a11y/ExternalLink'
-import { BlogPost } from '@/lib/mdx'
+import type { BlogPost } from '@/types/blog'
+import { formatBlogDate } from '@/lib/blog-date'
 import TagFilter from './TagFilter'
 import { TagPill } from './Tag'
 
@@ -179,7 +180,7 @@ export function BlogContent({ posts }: BlogContentProps) {
                 </Link>
               </h2>
               <div className="mt-2 text-sm text-white/60">
-                <time dateTime={post.frontmatter.date}>{new Date(post.frontmatter.date).toLocaleDateString()}</time>
+                <time dateTime={post.frontmatter.date}>{formatBlogDate(post.frontmatter.date)}</time>
                 <span className="mx-2">•</span>
                 <span>{post.frontmatter.author}</span>
               </div>
