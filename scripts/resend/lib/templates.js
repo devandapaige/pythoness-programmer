@@ -19,6 +19,8 @@ const SIGNATURE_PATH = '/images/email-signature.png'
 
 const EMAIL_HOME_URL = 'https://www.pythonessprogrammer.com/'
 
+const STRUGGLE_FORM_URL = 'https://forms.fillout.com/t/rXw4rYBaxgus'
+
 const MAILING_ADDRESS = 'P.O. Box 201, New Kent, VA 23124'
 
 const NEWSLETTER_SECTION_HEADERS = {
@@ -28,6 +30,9 @@ const NEWSLETTER_SECTION_HEADERS = {
   thisMonth: '/newsletter/assets/email/this-month-header.png',
   tldr: '/newsletter/assets/dcbe0db6-6b06-4714-b1ee-48d9036b9db3/4.png',
   subscribe: '/newsletter/assets/e00bb2b9-903d-4d8b-88db-3a55ed9ce659/3.png',
+  toolSpotlight: '/newsletter/assets/481d1df1-1934-4ac6-9848-ddb1f9e3958b/5.png',
+  struggle: '/newsletter/assets/be70b3ac-a8e7-41c1-bd53-2d33965f6f5f/6.png',
+  fireHorse: '/newsletter/assets/0e7291b2-378e-4161-9f74-86dc0d4ac79e/7.png',
   support: '/newsletter/assets/dee36210-72ca-42e6-bead-22c13378a18e/8.png',
   upNext: '/newsletter/assets/email/up-next-header.png',
 }
@@ -57,7 +62,8 @@ const escapeHtml = (value) =>
 
 const buildPreheaderHtml = (preheader) => {
   if (!preheader.trim()) return ''
-  return `<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${escapeHtml(preheader)}</div>`
+  const content = preheader.includes('{{{') ? preheader : escapeHtml(preheader)
+  return `<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${content}</div>`
 }
 
 const buildSectionHeaderImage = (imageUrl, alt) =>
@@ -105,6 +111,9 @@ const buildFooterHtml = (siteUrl) => {
       <p style="margin:0 0 12px 0;">
         Questions? Reply or email <a href="mailto:help@pythonessprogrammer.com" style="color:${EMAIL_COLORS.greenHyperlink};text-decoration:underline;">help@pythonessprogrammer.com</a>
       </p>
+      <p style="margin:0 0 12px 0;">
+        Got a tech challenge? <a href="${STRUGGLE_FORM_URL}" style="color:${EMAIL_COLORS.greenHyperlink};font-style:italic;text-decoration:underline;">Share it in The Struggle is Real</a>
+      </p>
       <p style="margin:0 0 12px 0;font-size:12px;color:#666666;">
         ${escapeHtml(MAILING_ADDRESS)}
       </p>
@@ -116,8 +125,23 @@ const buildFooterHtml = (siteUrl) => {
 </table>`.trim()
 }
 
+const buildShellRow = (cellHtml) => `
+<tr>
+  <td style="padding:0 10px 16px 10px;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.5;color:${EMAIL_COLORS.bodyText};vertical-align:top;">
+    ${cellHtml}
+  </td>
+</tr>`.trim()
+
+const asShellRows = (sections) =>
+  sections
+    .map((section) => {
+      const html = section.html.trim()
+      return html.startsWith('<tr') ? html : buildShellRow(html)
+    })
+    .join('\n')
+
 const buildEmailShell = ({ siteUrl, sections, preheader = '' }) => {
-  const bodySections = sections.map((section) => section.html).join('\n')
+  const bodyRows = asShellRows(sections)
   const preheaderHtml = buildPreheaderHtml(preheader)
 
   return `<!DOCTYPE html>
@@ -134,12 +158,8 @@ const buildEmailShell = ({ siteUrl, sections, preheader = '' }) => {
     <tr>
       <td align="center" style="padding:24px 12px;">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background-color:${EMAIL_COLORS.white};border-radius:8px;">
-          <tr>
-            <td style="padding:12px 0 24px 0;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.6;color:${EMAIL_COLORS.bodyText};">
-              ${bodySections}
-              ${buildFooterHtml(siteUrl)}
-            </td>
-          </tr>
+          ${bodyRows}
+          ${buildShellRow(buildFooterHtml(siteUrl))}
         </table>
       </td>
     </tr>
@@ -148,26 +168,68 @@ const buildEmailShell = ({ siteUrl, sections, preheader = '' }) => {
 </html>`
 }
 
-const buildContentSlot = (variableName) => `
-<div style="padding-bottom:12px;padding-left:10px;padding-right:10px;padding-top:12px;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.5;color:${EMAIL_COLORS.bodyText};">
-  {{{${variableName}}}}
-</div>`.trim()
+const buildContentSlot = (variableName) =>
+  `<!-- begin:${variableName} -->\n{{{${variableName}}}}\n<!-- end:${variableName} -->`
+
+const buildContentSlotRow = (variableName) => buildShellRow(buildContentSlot(variableName))
 
 const buildNewsletterSection = (headerImageUrl, alt, variableName) =>
-  `${buildSectionHeaderImage(headerImageUrl, alt)}\n${buildContentSlot(variableName)}`
+  `${buildShellRow(buildSectionHeaderImage(headerImageUrl, alt))}\n${buildContentSlotRow(variableName)}`
 
 const buildUpNextSection = (upNextHeaderUrl) =>
   buildNewsletterSection(upNextHeaderUrl, 'Up next', 'UP_NEXT_HTML')
 
-const buildReadOnlineSection = () => `
-<div style="padding-left:10px;padding-right:10px;">
-  ${buildGreenButton('{{{READ_ONLINE_URL}}}', 'Read the full issue →')}
-</div>`.trim()
+const buildReadOnlineTopLink = (urlVariable, label = 'Read Online') =>
+  buildShellRow(
+    `<p style="margin:0;font-size:14px;line-height:1.5;text-align:right;">
+  <a href="{{{${urlVariable}}}}" target="_blank" rel="noopener noreferrer" style="color:${EMAIL_COLORS.greenHyperlink};font-style:italic;text-decoration:underline;">${escapeHtml(label)}</a>
+</p>`.trim()
+  )
+
+const buildMinimalPlainText = (readOnlineVariable) => {
+  const lines = []
+  if (readOnlineVariable) {
+    lines.push(`Read online: {{{${readOnlineVariable}}}}`, '')
+  }
+  lines.push(
+    '---',
+    'Pythoness Programmer',
+    MAILING_ADDRESS,
+    'Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}'
+  )
+  return lines.join('\n')
+}
+
+const buildStruggleSection = (struggleImageUrl) =>
+  `${buildShellRow(
+    buildLinkedSectionHeaderImage(
+      STRUGGLE_FORM_URL,
+      struggleImageUrl,
+      'The Struggle is Real. Your tech struggles, reflected back. Got one? Send it in.'
+    )
+  )}\n${buildContentSlotRow('STRUGGLE_HTML')}`
+
+const buildEventDetailsCard = () => `
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;">
+  <tr>
+    <td style="padding:20px 24px;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.6;color:${EMAIL_COLORS.bodyText};">
+      <p style="margin:0 0 12px 0;font-size:20px;font-weight:700;color:${EMAIL_COLORS.greenDark};">{{{EVENT_NAME}}}</p>
+      <p style="margin:0 0 8px 0;"><strong>When:</strong> {{{EVENT_WHEN}}}</p>
+      <p style="margin:0;"><strong>Where:</strong> {{{EVENT_WHERE}}}</p>
+    </td>
+  </tr>
+</table>`.trim()
+
+const buildEventDetailsRow = () => buildShellRow(buildEventDetailsCard())
+
+const buildGreenButtonRow = (href, label) => buildShellRow(buildGreenButton(href, label))
 
 const buildArchiveLinkSection = (archiveUrl) => `
-<p style="margin:24px 10px 0 10px;font-family:${EMAIL_FONTS};font-size:15px;line-height:1.6;text-align:center;">
+<p style="margin:24px 0 0 0;font-family:${EMAIL_FONTS};font-size:15px;line-height:1.6;text-align:center;">
   <a href="${archiveUrl}" style="color:${EMAIL_COLORS.greenHyperlink};font-style:italic;text-decoration:underline;">Browse the newsletter archive</a>
 </p>`.trim()
+
+const buildArchiveLinkRow = (archiveUrl) => buildShellRow(buildArchiveLinkSection(archiveUrl))
 
 const stringVar = (key, fallbackValue = '') => ({
   key,
@@ -192,24 +254,31 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         preheader: '{{{PREHEADER}}}',
         sections: [
           { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.perspective), 'Pythoness Perspective') },
+          { html: buildReadOnlineTopLink('READ_ONLINE_URL') },
           { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.thisWeek), 'This Week', 'THIS_WEEK_HTML') },
           { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.tldr), "TLDR (Too Long, Didn't Read Summary)", 'TLDR_HTML') },
           { html: buildLinkedSectionHeaderImage(subscribeUrl, sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.subscribe), 'Did a friend forward this to you? Subscribe Here.') },
-          { html: buildContentSlot('MAIN_FEATURE_HTML') },
-          { html: buildContentSlot('EXTRA_SECTIONS_HTML') },
+          { html: buildContentSlotRow('MAIN_FEATURE_HTML') },
+          { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.toolSpotlight), 'Tool Spotlight', 'TOOL_SPOTLIGHT_HTML') },
+          { html: buildStruggleSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.struggle)) },
+          { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.fireHorse), 'Fire Horse Wisdom', 'FIRE_HORSE_HTML') },
           { html: buildUpNextSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.upNext)) },
-          { html: buildReadOnlineSection() },
           { html: buildLinkedSectionHeaderImage(supportUrl, sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.support), 'Support the Pythoness') },
+          { html: buildContentSlotRow('SUPPORT_HTML') },
         ],
       }),
+      text: buildMinimalPlainText('READ_ONLINE_URL'),
       variables: [
         stringVar('SUBJECT_LINE', 'New from Pythoness Perspective'),
         stringVar('PREHEADER'),
         stringVar('THIS_WEEK_HTML'),
         stringVar('TLDR_HTML'),
         stringVar('MAIN_FEATURE_HTML'),
-        stringVar('EXTRA_SECTIONS_HTML'),
+        stringVar('TOOL_SPOTLIGHT_HTML'),
+        stringVar('STRUGGLE_HTML'),
+        stringVar('FIRE_HORSE_HTML'),
         stringVar('UP_NEXT_HTML'),
+        stringVar('SUPPORT_HTML'),
         stringVar('READ_ONLINE_URL'),
       ],
     },
@@ -223,24 +292,12 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         sections: [
           { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
           { html: buildTextHeaderBar('{{{REMINDER_HEADLINE}}}', 'Event reminder') },
-          {
-            html: `
-<div style="padding-bottom:12px;padding-left:10px;padding-right:10px;padding-top:12px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;">
-    <tr>
-      <td style="padding:20px 24px;font-family:'Open Sans','Segoe UI',sans-serif;font-size:16px;line-height:1.6;color:#2D2D2D;">
-        <p style="margin:0 0 12px 0;font-size:20px;font-weight:700;color:#2e3d2a;">{{{EVENT_NAME}}}</p>
-        <p style="margin:0 0 8px 0;"><strong>When:</strong> {{{EVENT_WHEN}}}</p>
-        <p style="margin:0;"><strong>Where:</strong> {{{EVENT_WHERE}}}</p>
-      </td>
-    </tr>
-  </table>
-</div>`.trim(),
-          },
-          { html: buildContentSlot('BODY_HTML') },
-          { html: `<div style="padding-left:10px;padding-right:10px;">${buildGreenButton('{{{CALENDAR_URL}}}', 'Add to calendar →')}</div>` },
+          { html: buildEventDetailsRow() },
+          { html: buildContentSlotRow('BODY_HTML') },
+          { html: buildGreenButtonRow('{{{CALENDAR_URL}}}', 'Add to calendar →') },
         ],
       }),
+      text: buildMinimalPlainText(),
       variables: [
         stringVar('REMINDER_HEADLINE', "You're invited"),
         stringVar('EVENT_NAME'),
@@ -259,19 +316,12 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         siteUrl,
         sections: [
           { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
+          { html: buildReadOnlineTopLink('POST_URL') },
           { html: buildTextHeaderBar('Lab Notes', 'New on the blog') },
-          {
-            html: `
-<div style="padding-bottom:12px;padding-left:10px;padding-right:10px;padding-top:12px;">
-  <h1 style="margin:0 0 12px 0;font-family:'Open Sans','Segoe UI',sans-serif;font-size:24px;line-height:1.3;color:#2e3d2a;">{{{POST_TITLE}}}</h1>
-  <p style="margin:0 0 8px 0;font-family:'Open Sans','Segoe UI',sans-serif;font-size:16px;line-height:1.6;color:#2D2D2D;">{{{POST_DESCRIPTION}}}</p>
-  <p style="margin:0;font-family:'Open Sans','Segoe UI',sans-serif;font-size:14px;line-height:1.5;color:#666666;">{{{PUBLISH_DATE}}}</p>
-</div>`.trim(),
-          },
-          { html: buildContentSlot('BODY_HTML') },
-          { html: `<div style="padding-left:10px;padding-right:10px;">${buildGreenButton('{{{POST_URL}}}', 'Read on the blog →')}</div>` },
+          { html: buildContentSlotRow('BODY_HTML') },
         ],
       }),
+      text: buildMinimalPlainText('POST_URL'),
       variables: [
         stringVar('POST_TITLE'),
         stringVar('POST_DESCRIPTION'),
@@ -289,20 +339,25 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         siteUrl,
         sections: [
           { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
+          { html: buildReadOnlineTopLink('READ_ONLINE_URL') },
           { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.thisMonth), 'This month', 'RECAP_INTRO_HTML') },
           { html: buildTextHeaderBar('{{{RECAP_MONTH}}}', '{{{RECAP_TITLE}}}') },
-          { html: buildContentSlot('HIGHLIGHTS_HTML') },
-          { html: buildContentSlot('BODY_HTML') },
-          { html: buildArchiveLinkSection(archiveUrl) },
+          { html: buildContentSlotRow('HIGHLIGHTS_HTML') },
+          { html: buildContentSlotRow('BODY_HTML') },
+          { html: buildArchiveLinkRow(archiveUrl) },
           { html: buildLinkedSectionHeaderImage(supportUrl, sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.support), 'Support the Pythoness') },
+          { html: buildContentSlotRow('SUPPORT_HTML') },
         ],
       }),
+      text: buildMinimalPlainText('READ_ONLINE_URL'),
       variables: [
         stringVar('RECAP_MONTH'),
         stringVar('RECAP_TITLE'),
         stringVar('RECAP_INTRO_HTML'),
         stringVar('HIGHLIGHTS_HTML'),
         stringVar('BODY_HTML'),
+        stringVar('SUPPORT_HTML'),
+        stringVar('READ_ONLINE_URL'),
         stringVar('ARCHIVE_URL', archiveUrl),
       ],
     },
@@ -315,7 +370,7 @@ const toCreateTemplatePayload = (template) => ({
   from: template.from,
   subject: template.subject,
   html: template.html,
-  text: '',
+  text: template.text,
   variables: template.variables.map((variable) => ({
     key: variable.key,
     type: variable.type,

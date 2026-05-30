@@ -107,9 +107,12 @@ Section header images use the same paths as newsletter MDX exports (under `/news
 - `/newsletter/assets/email/this-month-header.png` (monthly recap intro section)
 - `/newsletter/assets/db3496f9-3b1b-4566-a1bd-6f8a166f1fbf/2.png` (This Week)
 - `/newsletter/assets/dcbe0db6-6b06-4714-b1ee-48d9036b9db3/4.png` (TLDR)
+- `/newsletter/assets/481d1df1-1934-4ac6-9848-ddb1f9e3958b/5.png` (Tool Spotlight)
+- `/newsletter/assets/be70b3ac-a8e7-41c1-bd53-2d33965f6f5f/6.png` (The Struggle is Real → form)
+- `/newsletter/assets/0e7291b2-378e-4161-9f74-86dc0d4ac79e/7.png` (Fire Horse Wisdom)
 - `/newsletter/assets/email/up-next-header.png` (Up next)
 
-All four top banners link to `https://www.pythonessprogrammer.com/`. Every template footer includes the mailing address: P.O. Box 201, New Kent, VA 23124.
+All four top banners link to `https://www.pythonessprogrammer.com/`. Every template footer includes the mailing address (P.O. Box 201, New Kent, VA 23124) and a link to [The Struggle is Real form](https://forms.fillout.com/t/rXw4rYBaxgus).
 
 ### Templates
 
@@ -131,17 +134,55 @@ The template mirrors your regular issue structure:
 | `THIS_WEEK_HTML` | Opening paragraphs after the **This Week** header |
 | `TLDR_HTML` | Bullet summary after the **TLDR** header |
 | `MAIN_FEATURE_HTML` | Main feature body (include your `MAIN FEATURE` heading if needed) |
-| `EXTRA_SECTIONS_HTML` | Tool Spotlight, Struggle is Real, Fire Horse, sign-off — paste from MDX export |
+| `TOOL_SPOTLIGHT_HTML` | Tool Spotlight content after the section header |
+| `STRUGGLE_HTML` | Weekly prompt and reply text after **The Struggle is Real** header (header links to the submission form) |
+| `FIRE_HORSE_HTML` | Fire Horse callout content after the **Fire Horse Wisdom** header |
 | `UP_NEXT_HTML` | Upcoming content after the **Up next** header |
-| `READ_ONLINE_URL` | Archive URL for the green “Read the full issue” button (teaser sends only) |
+| `SUPPORT_HTML` | Support blurb, ways to help, and series links after the **Support the Pythoness** banner (before the signature) |
+| `READ_ONLINE_URL` | Archive URL for the top **Read Online** link (`https://pythonessprogrammer.com/newsletter/your-slug`) |
 
-Subscribe-forward and Support banners are baked into the template (linked images).
+Subscribe-forward, Tool Spotlight, Struggle is Real (→ [Fillout form](https://forms.fillout.com/t/rXw4rYBaxgus)), Fire Horse Wisdom, and Support banners are baked into the template.
 
 ### Other send modes
 
-**Full issue in email:** fill `THIS_WEEK_HTML`, `TLDR_HTML`, `MAIN_FEATURE_HTML`, and paste remaining sections into `EXTRA_SECTIONS_HTML`.
+**Full issue in email:** fill each section slot with that section’s HTML only (do not paste the full issue into every slot). Set `READ_ONLINE_URL` to the archive page for the top **Read Online** link.
 
-**Teaser + archive link:** short copy in `THIS_WEEK_HTML` / `TLDR_HTML`, set `READ_ONLINE_URL` to `https://pythonessprogrammer.com/newsletter/your-slug`.
+**Avoid broken layout:** All four templates use row-isolated slots (no wrapper `<div>` around variables). Paste **body copy only** — `<p>`, `<ul>`, `<h2>` — not Beehiiv exports with nested `<table>` or extra `</div>` tags. Section header images are baked in.
+
+### Event reminder (`pythoness-event-reminder`)
+
+| Variable | What goes here |
+|----------|----------------|
+| `REMINDER_HEADLINE` | Green bar title (e.g. "You're invited") |
+| `EVENT_NAME` | Event title in the details card |
+| `EVENT_WHEN` | Date/time line |
+| `EVENT_WHERE` | Location or "Online" |
+| `CALENDAR_URL` | Luma or calendar link for the green button |
+| `BODY_HTML` | Optional extra copy below the details card |
+
+### Lab notes (`pythoness-lab-notes-update`)
+
+| Variable | What goes here |
+|----------|----------------|
+| `POST_TITLE` | Email subject (via template subject line) |
+| `POST_URL` | Top **Read Online** link (`https://pythonessprogrammer.com/blog/your-slug`) |
+| `BODY_HTML` | Post body HTML only |
+| `POST_DESCRIPTION`, `PUBLISH_DATE` | Optional metadata (not rendered in template HTML) |
+
+### Monthly recap (`pythoness-monthly-recap`)
+
+| Variable | What goes here |
+|----------|----------------|
+| `RECAP_MONTH` | Green bar month label |
+| `RECAP_TITLE` | Green bar subtitle |
+| `RECAP_INTRO_HTML` | Copy after the **This month** header |
+| `HIGHLIGHTS_HTML` | Bullet or short list of highlights |
+| `BODY_HTML` | Longer recap sections |
+| `SUPPORT_HTML` | Support blurb after the **Support the Pythoness** banner |
+| `READ_ONLINE_URL` | Top **Read Online** link |
+| `ARCHIVE_URL` | Default archive link in footer section (fallback in template) |
+
+Plain-text parts are minimal (read-online link when applicable + footer) so Resend does not duplicate the HTML body.
 
 **UP NEXT section:** set `UP_NEXT_HTML` when you have upcoming content. Leave empty when skipping.
 

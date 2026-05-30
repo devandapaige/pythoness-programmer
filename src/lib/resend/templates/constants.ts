@@ -15,6 +15,8 @@ export const EMAIL_FONTS =
 
 export const EMAIL_HOME_URL = 'https://www.pythonessprogrammer.com/'
 
+export const STRUGGLE_FORM_URL = 'https://forms.fillout.com/t/rXw4rYBaxgus'
+
 export const MAILING_ADDRESS = 'P.O. Box 201, New Kent, VA 23124'
 
 /** Section header images reused across newsletter MDX exports (already on-site). */

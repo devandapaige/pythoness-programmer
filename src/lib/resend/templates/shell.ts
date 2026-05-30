@@ -3,6 +3,7 @@ import {
   EMAIL_FONTS,
   EMAIL_HOME_URL,
   MAILING_ADDRESS,
+  STRUGGLE_FORM_URL,
   getSignatureUrl,
   getSubscribeUrl,
   getSupportUrl,
@@ -27,7 +28,8 @@ const escapeHtml = (value: string): string =>
 
 export const buildPreheaderHtml = (preheader: string): string => {
   if (!preheader.trim()) return ''
-  return `<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${escapeHtml(preheader)}</div>`
+  const content = preheader.includes('{{{') ? preheader : escapeHtml(preheader)
+  return `<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">${content}</div>`
 }
 
 /** Matches Beehiiv/export markup used in newsletter MDX posts. */
@@ -87,6 +89,9 @@ export const buildFooterHtml = (siteUrl: string): string => {
       <p style="margin:0 0 12px 0;">
         Questions? Reply or email <a href="mailto:help@pythonessprogrammer.com" style="color:${EMAIL_COLORS.greenHyperlink};text-decoration:underline;">help@pythonessprogrammer.com</a>
       </p>
+      <p style="margin:0 0 12px 0;">
+        Got a tech challenge? <a href="${STRUGGLE_FORM_URL}" style="color:${EMAIL_COLORS.greenHyperlink};font-style:italic;text-decoration:underline;">Share it in The Struggle is Real</a>
+      </p>
       <p style="margin:0 0 12px 0;font-size:12px;color:#666666;">
         ${escapeHtml(MAILING_ADDRESS)}
       </p>
@@ -98,12 +103,28 @@ export const buildFooterHtml = (siteUrl: string): string => {
 </table>`.trim()
 }
 
+/** One table row inside the white card — isolates each block so pasted HTML cannot close the outer shell. */
+export const buildShellRow = (cellHtml: string): string => `
+<tr>
+  <td style="padding:0 10px 16px 10px;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.5;color:${EMAIL_COLORS.bodyText};vertical-align:top;">
+    ${cellHtml}
+  </td>
+</tr>`.trim()
+
+const asShellRows = (sections: EmailShellSection[]): string =>
+  sections
+    .map((section) => {
+      const html = section.html.trim()
+      return html.startsWith('<tr') ? html : buildShellRow(html)
+    })
+    .join('\n')
+
 export const buildEmailShell = ({
   siteUrl,
   sections,
   preheader = '',
 }: BuildEmailShellOptions): string => {
-  const bodySections = sections.map((section) => section.html).join('\n')
+  const bodyRows = asShellRows(sections)
   const preheaderHtml = buildPreheaderHtml(preheader)
 
   return `<!DOCTYPE html>
@@ -120,12 +141,8 @@ export const buildEmailShell = ({
     <tr>
       <td align="center" style="padding:24px 12px;">
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background-color:${EMAIL_COLORS.white};border-radius:8px;">
-          <tr>
-            <td style="padding:12px 0 24px 0;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.6;color:${EMAIL_COLORS.bodyText};">
-              ${bodySections}
-              ${buildFooterHtml(siteUrl)}
-            </td>
-          </tr>
+          ${bodyRows}
+          ${buildShellRow(buildFooterHtml(siteUrl))}
         </table>
       </td>
     </tr>
@@ -134,30 +151,78 @@ export const buildEmailShell = ({
 </html>`
 }
 
-export const buildContentSlot = (variableName: string): string => `
-<div style="padding-bottom:12px;padding-left:10px;padding-right:10px;padding-top:12px;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.5;color:${EMAIL_COLORS.bodyText};">
-  {{{${variableName}}}}
-</div>`.trim()
+/** Variable only — no wrapper div (paste <p> and <ul> from resend-snippets, not Beehiiv exports). */
+export const buildContentSlot = (variableName: string): string =>
+  `<!-- begin:${variableName} -->\n{{{${variableName}}}}\n<!-- end:${variableName} -->`
+
+export const buildContentSlotRow = (variableName: string): string =>
+  buildShellRow(buildContentSlot(variableName))
 
 export const buildNewsletterSection = (
   headerImageUrl: string,
   alt: string,
   variableName: string
 ): string =>
-  `${buildSectionHeaderImage(headerImageUrl, alt)}\n${buildContentSlot(variableName)}`
+  `${buildShellRow(buildSectionHeaderImage(headerImageUrl, alt))}\n${buildContentSlotRow(variableName)}`
 
 export const buildUpNextSection = (upNextHeaderUrl: string): string =>
   buildNewsletterSection(upNextHeaderUrl, 'Up next', 'UP_NEXT_HTML')
 
-export const buildReadOnlineSection = (): string => `
-<div style="padding-left:10px;padding-right:10px;">
-  ${buildGreenButton('{{{READ_ONLINE_URL}}}', 'Read the full issue →')}
-</div>`.trim()
+/** Compact top link for on-the-go readers; full issue stays in HTML body below. */
+export const buildReadOnlineTopLink = (
+  urlVariable: string,
+  label = 'Read Online'
+): string =>
+  buildShellRow(
+    `<p style="margin:0;font-size:14px;line-height:1.5;text-align:right;">
+  <a href="{{{${urlVariable}}}}" target="_blank" rel="noopener noreferrer" style="color:${EMAIL_COLORS.greenHyperlink};font-style:italic;text-decoration:underline;">${escapeHtml(label)}</a>
+</p>`.trim()
+  )
+
+/**
+ * Minimal plain-text part so Resend broadcasts do not auto-generate a full
+ * duplicate of the HTML body (which triggers duplication warnings).
+ */
+export const buildMinimalPlainText = (readOnlineVariable?: string): string => {
+  const lines: string[] = []
+
+  if (readOnlineVariable) {
+    lines.push(`Read online: {{{${readOnlineVariable}}}}`, '')
+  }
+
+  lines.push(
+    '---',
+    'Pythoness Programmer',
+    MAILING_ADDRESS,
+    'Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}'
+  )
+
+  return lines.join('\n')
+}
+
+export const buildEventDetailsCard = (): string => `
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f9fafb;border:1px solid #e5e7eb;border-radius:6px;">
+  <tr>
+    <td style="padding:20px 24px;font-family:${EMAIL_FONTS};font-size:16px;line-height:1.6;color:${EMAIL_COLORS.bodyText};">
+      <p style="margin:0 0 12px 0;font-size:20px;font-weight:700;color:${EMAIL_COLORS.greenDark};">{{{EVENT_NAME}}}</p>
+      <p style="margin:0 0 8px 0;"><strong>When:</strong> {{{EVENT_WHEN}}}</p>
+      <p style="margin:0;"><strong>Where:</strong> {{{EVENT_WHERE}}}</p>
+    </td>
+  </tr>
+</table>`.trim()
+
+export const buildEventDetailsRow = (): string => buildShellRow(buildEventDetailsCard())
+
+export const buildGreenButtonRow = (href: string, label: string): string =>
+  buildShellRow(buildGreenButton(href, label))
 
 export const buildArchiveLinkSection = (defaultArchiveUrl: string): string => `
-<p style="margin:24px 10px 0 10px;font-family:${EMAIL_FONTS};font-size:15px;line-height:1.6;text-align:center;">
+<p style="margin:24px 0 0 0;font-family:${EMAIL_FONTS};font-size:15px;line-height:1.6;text-align:center;">
   <a href="${defaultArchiveUrl}" style="color:${EMAIL_COLORS.greenHyperlink};font-style:italic;text-decoration:underline;">Browse the newsletter archive</a>
 </p>`.trim()
+
+export const buildArchiveLinkRow = (defaultArchiveUrl: string): string =>
+  buildShellRow(buildArchiveLinkSection(defaultArchiveUrl))
 
 export const buildSupportSection = (siteUrl: string, supportImageUrl: string): string =>
   buildLinkedSectionHeaderImage(
@@ -175,3 +240,12 @@ export const buildSubscribeForwardSection = (
     subscribeImageUrl,
     'Did a friend forward this to you? Subscribe Here.'
   )
+
+export const buildStruggleSection = (struggleImageUrl: string): string =>
+  `${buildShellRow(
+    buildLinkedSectionHeaderImage(
+      STRUGGLE_FORM_URL,
+      struggleImageUrl,
+      'The Struggle is Real. Your tech struggles, reflected back. Got one? Send it in.'
+    )
+  )}\n${buildContentSlotRow('STRUGGLE_HTML')}`

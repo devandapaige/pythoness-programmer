@@ -113,6 +113,7 @@ export const toCreateTemplatePayload = (template: {
   from: string
   subject: string
   html: string
+  text: string
   variables: Array<{
     key: string
     type: 'string' | 'number'
@@ -124,6 +125,6 @@ export const toCreateTemplatePayload = (template: {
   from: template.from,
   subject: template.subject,
   html: template.html,
-  text: '',
+  text: template.text,
   variables: toResendVariables(template.variables),
 })
