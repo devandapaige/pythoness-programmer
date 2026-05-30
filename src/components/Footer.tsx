@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import ExternalLink from '@/components/a11y/ExternalLink'
+import SiteSearchForm from '@/components/search/SiteSearchForm'
 import { bookingUrls } from '../config/booking'
 
 function FooterSection({ title, children }: { title: string | ReactNode, children: React.ReactNode }) {
@@ -28,11 +29,9 @@ export default function Footer() {
               Pythoness Programmer
             </Link>
           }>
+            <SiteSearchForm id="footer-site-search" />
             <ul className="space-y-1">
               <li><Link href="/about" className={footerLinkClass}>About</Link></li>
-              <li><Link href="/resources" className={footerLinkClass}>Resources</Link></li>
-              <li><ExternalLink href="https://luma.com/pythoness" className={footerLinkClass}>Events</ExternalLink></li>
-              <li><ExternalLink href="https://stickyspells.etsy.com" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</ExternalLink></li>
             </ul>
           </FooterSection>
           <FooterSection title={
@@ -80,11 +79,13 @@ export default function Footer() {
           <FooterSection title="Support">
             <ul className="space-y-1" aria-label="Support options">
               <li><Link href="/support" className={footerLinkClass}>Support the Pythoness ☕</Link></li>
+              <li><ExternalLink href="https://stickyspells.etsy.com" className={`${footerLinkClass} font-medium`}>Shop - Sticky Spells</ExternalLink></li>
             </ul>
           </FooterSection>
           <FooterSection title="Content">
             <ul className="space-y-1" aria-label="Content options">
               <li><ExternalLink href="https://videos.pythonessprogrammer.com" className={`${footerLinkClass} font-semibold`}>Videos</ExternalLink></li>
+              <li><ExternalLink href="https://luma.com/pythoness" className={footerLinkClass}>Events</ExternalLink></li>
             </ul>
           </FooterSection>
           <FooterSection title="Read">

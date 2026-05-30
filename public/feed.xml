@@ -5,7 +5,7 @@
     <link>https://pythonessprogrammer.com</link>
     <description>Thoughts on technology, accessibility, and the human experience.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 29 May 2026 18:08:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2026 03:03:03 GMT</lastBuildDate>
     <atom:link href="https://pythonessprogrammer.com/feed.xml" rel="self" type="application/rss+xml" />
     
     <item>
@@ -15,8 +15,6 @@
       <pubDate>Fri, 29 May 2026 04:00:00 GMT</pubDate>
       <description><![CDATA[Plain-language GitHub for beginners: what a repository is, how commit and push work, diagrams you can skim, and a safe first project—your username README on your profile.]]></description>
       <content:encoded><![CDATA[
-*Published: May 29, 2026 · Part of the [Mindful Automation](https://www.pythonessprogrammer.com/mindful-automation) series*
-
 ---
 
 GitHub is a home for folders that can travel. You edit files on your computer (or in the browser), save a snapshot with a short note, and send that snapshot to GitHub so the same folder is available from anywhere.
@@ -144,8 +142,6 @@ GitHub Desktop is a free app that shows your changed files and buttons for commi
 3. Open the folder in your editor, edit `README.md`, save.
 4. In GitHub Desktop: review the diff → write a **Summary** → **Commit to main** → **Push origin**.
 
-The [capstone video](https://www.youtube.com/@pythonessprogrammer) walks through cloning a workbench folder and opening it in Cursor—same commit/push habit, different project.
-
 ---
 
 ## Fork and private repositories (short)
@@ -167,15 +163,12 @@ When you are ready for a practice workbench with sample files:
 | If you want to… | Go here |
 |-----------------|--------|
 | Clone a sample IDE folder and use Cursor with AI | [From Files to Playbook](https://www.pythonessprogrammer.com/blog/from-files-to-playbook) + [ide-workbench-starter](https://github.com/devandapaige/ide-workbench-starter) |
-| Watch the clone-and-push walkthrough | [Pythoness Programmer on YouTube](https://www.youtube.com/@pythonessprogrammer) |
+| Watch the clone-and-push walkthrough | [Put Your IDE Workbench on GitHub](https://youtu.be/hRqye_TTbpI) |
 | Learn the IDE layout first | [Your IDE Is a Workbench](https://www.pythonessprogrammer.com/blog/your-ide-is-workbench) |
-| Full month of written tips | See link below |
-
-**VS Code / Cursor resource guide:** [Resources hub](https://www.pythonessprogrammer.com/resources) — open **Mindful Automation** for May IDE walkthroughs and worksheets.
 
 ---
 
-*Previous: [Your IDE Is a Workbench](https://www.pythonessprogrammer.com/blog/your-ide-is-workbench) · Next: [From Files to Playbook](https://www.pythonessprogrammer.com/blog/from-files-to-playbook)*
+*[Your IDE Is a Workbench](https://www.pythonessprogrammer.com/blog/your-ide-is-workbench) · [From Files to Playbook](https://www.pythonessprogrammer.com/blog/from-files-to-playbook) · [Starter repository](https://github.com/devandapaige/ide-workbench-starter)*
 ]]></content:encoded>
       <author>Amanda Nelson</author>
       <category>automation</category>
@@ -187,11 +180,32 @@ When you are ready for a practice workbench with sample files:
       <link>https://pythonessprogrammer.com/blog/from-files-to-playbook</link>
       <guid>https://pythonessprogrammer.com/blog/from-files-to-playbook</guid>
       <pubDate>Fri, 29 May 2026 04:00:00 GMT</pubDate>
-      <description><![CDATA[Clone the IDE workbench starter repo, point Cursor at your templates with @mentions, set rules and AGENTS.md, and sync with GitHub Desktop—no arc required.]]></description>
+      <description><![CDATA[Clone the IDE workbench starter repo, point Cursor at your templates with @mentions, set rules and AGENTS.md, and sync with GitHub Desktop.]]></description>
       <content:encoded><![CDATA[
-*Published: May 29, 2026 · Part of the [Mindful Automation](https://www.pythonessprogrammer.com/mindful-automation) series*
+> **Video version:** [Put Your IDE Workbench on GitHub](https://youtu.be/hRqye_TTbpI) (~10–12 min — GitHub Desktop, clone [ide-workbench-starter](https://github.com/devandapaige/ide-workbench-starter), open in Cursor, commit and push)
 
-> **Video version:** [Put Your IDE Workbench on GitHub](https://www.youtube.com/@pythonessprogrammer) (~10–12 min — GitHub Desktop, clone [ide-workbench-starter](https://github.com/devandapaige/ide-workbench-starter), open in Cursor, commit and push)
+<div
+  style={{
+    position: 'relative',
+    paddingBottom: '56.25%',
+    height: 0,
+    overflow: 'hidden',
+    maxWidth: '100%',
+    margin: '1.5rem 0',
+    borderRadius: '0.5rem',
+  }}
+>
+  <iframe
+    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+    src="https://www.youtube.com/embed/hRqye_TTbpI"
+    title="Put Your IDE Workbench on GitHub"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
+
+[Open on YouTube](https://youtu.be/hRqye_TTbpI) if the embed does not load in your reader.
 
 ---
 
@@ -280,8 +294,6 @@ Open `AGENTS.md` at the repo root. It describes what the folder is and what agen
 
 Open `automation-playbook.md`. The file lists five questions with **fictional examples**. Replace them with your real automations, backup plans, and client journey in plain language.
 
-For a longer narrative on why the playbook matters, see the optional [newsletter issue](https://www.pythonessprogrammer.com/newsletter/build-your-automation-playbook)—not required to complete the IDE steps here.
-
 Add or refresh `last updated: YYYY-MM-DD` at the top of each context file. A monthly reminder to re-read these files keeps them honest.
 
 ---
@@ -335,7 +347,7 @@ Structured files on disk are something any human, AI, or script can read—your 
 
 ---
 
-*[Your IDE Is a Workbench](https://www.pythonessprogrammer.com/blog/your-ide-is-workbench) · [GitHub Basics (profile README)](https://www.pythonessprogrammer.com/blog/github-basics-profile-readme) · [Resources hub](https://www.pythonessprogrammer.com/resources) · [Starter repository](https://github.com/devandapaige/ide-workbench-starter)*
+*[Your IDE Is a Workbench](https://www.pythonessprogrammer.com/blog/your-ide-is-workbench) · [GitHub Basics (profile README)](https://www.pythonessprogrammer.com/blog/github-basics-profile-readme) · [Starter repository](https://github.com/devandapaige/ide-workbench-starter)*
 ]]></content:encoded>
       <author>Amanda Nelson</author>
       <category>automation</category>

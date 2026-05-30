@@ -10,10 +10,10 @@ export default function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-[100] w-full max-w-[100vw] overflow-x-hidden bg-brand-green-dark shadow-lg"
+      className="fixed top-0 left-0 right-0 z-[100] w-full max-w-[100vw] bg-brand-green-dark shadow-lg"
       role="banner"
     >
-      <div className={`${siteGutterX} mx-auto max-w-7xl overflow-x-hidden`}>
+      <div className={`${siteGutterX} mx-auto max-w-7xl`}>
         <div className="flex h-16 min-w-0 items-center justify-between gap-2 md:gap-3">
           <Link
             href="/"

@@ -11,6 +11,7 @@ import Mermaid from '@/components/blog/Mermaid'
 import { compileMDX } from 'next-mdx-remote/rsc'
 import type { MDXComponents } from 'mdx/types'
 import { blogMdxOptions } from '@/lib/mdx-compile'
+import { BLOG_TO_NEWSLETTER_CANONICAL_SLUGS } from '@/lib/blog-newsletter-canonical'
 
 interface PostPageProps {
   params: Promise<{
@@ -44,22 +45,6 @@ const blogMdxComponents: MDXComponents = {
     return <pre {...props}>{children}</pre>
   },
 }
-
-const BLOG_TO_NEWSLETTER_CANONICAL_SLUGS = new Set<string>([
-  'digital-spring-cleaning-a-month-of-grit-and-growth',
-  'digital-spring-cleaning-deepening-our-grit-journey',
-  'digital-sustainability-that-wont-burn-you-out',
-  'error-proofing-your-automation',
-  'lunar-new-year-2025',
-  'mindful-automation-systems',
-  'monthly-grit-framework-for-your-digital-spring-cleaning',
-  'monthly-grit-reflection-worksheet',
-  // Explicit exception: keep canonical on /blog
-  // 'on-elon-musk-and-dates',
-  'sawdust-and-sacred-stones',
-  'tech-is-just-a-tool',
-  'the-you-framework',
-])
 
 export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
   const resolvedParams = await params
