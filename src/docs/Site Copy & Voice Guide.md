@@ -540,7 +540,7 @@ You're speaking to neurodivergent creatives, small business owners, and consciou
 
 ### Free Resources
 - **Digital Spring Cleaning:** GRIT Framework Toolkit with comprehensive 4-page worksheet
-- **Mindful Automation:** Y.O.U. Framework System for brain-friendly workflows
+- **Mindful Automation:** Y.O.U.R. Framework System for brain-friendly workflows
 - **Vibe Coding Cheatsheet:** Interactive TailwindCSS examples for developers
 - **Sourdough Corner:** Comprehensive baking guide with recipes and techniques
 - **Accessibility legal guide,** **back-to-basics,** **password security,** **blog,** and **newsletter** (all free; no paywalls)
