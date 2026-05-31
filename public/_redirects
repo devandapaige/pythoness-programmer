@@ -1,1 +1,46 @@
+# Existing (all domains)
 /booknow https://scheduler.zoom.us/pythoness 301
+
+# ---------------------------------------------------------------------------
+# Beehiiv mirror subdomain ONLY (newsletter.pythonessprogrammer.com)
+# Full URL in "from" avoids hijacking pythonessprogrammer.com / or /p/ paths.
+# Add as Netlify domain alias + DNS CNAME before these take effect.
+# See docs/beehiiv-newsletter-redirects.md for slug mismatch table.
+# ---------------------------------------------------------------------------
+
+# Explicit slug mismatches (must precede wildcard)
+https://newsletter.pythonessprogrammer.com/p/2025-wooden-snake-what-we-shed-and-why-it-had-to-go https://www.pythonessprogrammer.com/newsletter/2025-wooden-snake-what-we-shed 301!
+https://newsletter.pythonessprogrammer.com/p/2026-fire-horse-when-the-shed-skin-burns https://www.pythonessprogrammer.com/newsletter/2026-fire-horse 301!
+https://newsletter.pythonessprogrammer.com/p/50-isn-t-failure-it-s-a-bridge https://www.pythonessprogrammer.com/newsletter/50-isn-t-failure 301!
+https://newsletter.pythonessprogrammer.com/p/ai-bullshit-detection-why-your-critical-thinking-is-your-best-ai-tool https://www.pythonessprogrammer.com/newsletter/ai-bullshit-detection 301!
+https://newsletter.pythonessprogrammer.com/p/april-audit-your-top-3-energy-leaks-before-you-fix-anything https://www.pythonessprogrammer.com/newsletter/april-audit-your-top-3-energy-leaks 301!
+https://newsletter.pythonessprogrammer.com/p/bringing-it-all-together-your-brain-dump-processing-playbook https://www.pythonessprogrammer.com/newsletter/bringing-it-all-together-mindful-automation-1 301!
+https://newsletter.pythonessprogrammer.com/p/data-flow-from-chaos-to-conscious-creation https://www.pythonessprogrammer.com/newsletter/data-flow-from-chaos-to-conscious 301!
+https://newsletter.pythonessprogrammer.com/p/data-flow-the-hidden-rhythm-behind-every-creative-process https://www.pythonessprogrammer.com/newsletter/data-flow-from-chaos-to-conscious 301!
+https://newsletter.pythonessprogrammer.com/p/digital-spring-cleaning-completing-our-grit-journey https://www.pythonessprogrammer.com/newsletter/monthly-grit-reflection-worksheet 301!
+https://newsletter.pythonessprogrammer.com/p/error-proofing-your-automation-building-systems-that-last https://www.pythonessprogrammer.com/newsletter/error-proofing-your-automation 301!
+https://newsletter.pythonessprogrammer.com/p/if-you-re-already-talking-to-ai-your-next-move-is-to-give-it-a-home https://www.pythonessprogrammer.com/newsletter/give-your-ai-a-home 301!
+https://newsletter.pythonessprogrammer.com/p/july-6th-2025-tech-boundaries-digital-wellness-your-month-of-intentional-tech-use https://www.pythonessprogrammer.com/newsletter/july-6th-2025-tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-da64e2e781dd0784 301!
+https://newsletter.pythonessprogrammer.com/p/maintenance-beats-motivation-rhythms-for-imperfect-weeks-april-finale https://www.pythonessprogrammer.com/newsletter/maintenance-beats-motivation 301!
+https://newsletter.pythonessprogrammer.com/p/mindful-automation-systems-that-work-for-y-o-u https://www.pythonessprogrammer.com/newsletter/mindful-automation-systems 301!
+https://newsletter.pythonessprogrammer.com/p/neuroinclusive-design-building-accessible-tech-for-all-brains https://www.pythonessprogrammer.com/newsletter/neuroinclusive-design-building-accessible-tech-for-all-brains-b2885a3a6882ca6e 301!
+https://newsletter.pythonessprogrammer.com/p/now-soon-reference-spring-cleaning-for-your-brain-that-will-actually-work-monday-morning https://www.pythonessprogrammer.com/newsletter/now-soon-reference-spring-cleaning 301!
+https://newsletter.pythonessprogrammer.com/p/pythoness-perspective-digital-sustainability-that-won-t-burn-you-out https://www.pythonessprogrammer.com/newsletter/digital-sustainability-that-wont-burn-you-out 301!
+https://newsletter.pythonessprogrammer.com/p/sustainable-tech-in-practice-my-keep-drain-buckets https://www.pythonessprogrammer.com/newsletter/my-keep-drain-buckets-2026 301!
+https://newsletter.pythonessprogrammer.com/p/tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-my-free-slack-community https://www.pythonessprogrammer.com/newsletter/tech-boundaries-digital-wellness-your-month-of-intentional-tech-use-my-free-slack-community-9af738de 301!
+https://newsletter.pythonessprogrammer.com/p/the-foundation-is-built-now-let-s-automate-on-top-of-it https://www.pythonessprogrammer.com/newsletter/the-foundation-is-built 301!
+https://newsletter.pythonessprogrammer.com/p/the-y-o-u-framework-creating-automations-that-work-for-you https://www.pythonessprogrammer.com/newsletter/the-you-framework 301!
+https://newsletter.pythonessprogrammer.com/p/what-happens-when-your-automation-breaks-and-who-carries-that-cost https://www.pythonessprogrammer.com/newsletter/what-happens-when-your-automation-breaks 301!
+https://newsletter.pythonessprogrammer.com/p/workflow-organization-building-systems-that-support-your-creative-process https://www.pythonessprogrammer.com/newsletter/the-creative-workflow-revolution-how-organization-becomes-your-creative-superpower 301!
+https://newsletter.pythonessprogrammer.com/p/your-overload-starts-with-new-defaults-not-discipline https://www.pythonessprogrammer.com/newsletter/attention-and-notification-hygiene 301!
+
+# Default: Beehiiv slug matches MDX filename
+https://newsletter.pythonessprogrammer.com/p/:slug https://www.pythonessprogrammer.com/newsletter/:slug 301!
+
+# Subdomain root paths
+https://newsletter.pythonessprogrammer.com/subscribe https://www.pythonessprogrammer.com/newsletter/subscribe 301!
+https://newsletter.pythonessprogrammer.com/ https://www.pythonessprogrammer.com/newsletter 301!
+
+# Legacy Beehiiv hostname (optional — point pythoness.beehiiv.com DNS at Netlify too)
+https://pythoness.beehiiv.com/p/:slug https://www.pythonessprogrammer.com/newsletter/:slug 301!
+https://pythoness.beehiiv.com/ https://www.pythonessprogrammer.com/newsletter 301!
