@@ -220,13 +220,26 @@ Script: [`scripts/resend/create-broadcast-draft.js`](../scripts/resend/create-br
 
 Deploy the site so `READ_ONLINE_URL` resolves; image embeds are for draft preview and pre-deploy sends.
 
+### Send schedule (Pythoness Perspective)
+
+Weekly issues go out **Fridays at 4pm ET** (issue date in frontmatter is that Friday).
+
+In Resend, on the send/review step, set **When** to something like:
+
+- `Friday at 4pm ET` (first send of the month)
+- `June 5 at 4pm ET` (specific Friday)
+
+Resend accepts natural language or ISO 8601. If you omit a timezone, Resend may use local time — prefer including **ET** so it matches your usual slot.
+
+API alternative after creating a draft: `POST /broadcasts/{id}/send` with `"scheduled_at": "Friday at 4pm ET"`. See [Send Broadcast](https://resend.com/docs/api-reference/broadcasts/send-broadcast).
+
 ### Per-send workflow
 
 1. Resend → **Broadcasts** → **Create broadcast** (or run `npm run resend:draft`).
 2. Choose the template alias above.
 3. Fill template variables for this send (or use the JSON snippet file).
 4. Select your newsletter segment (`RESEND_NEWSLETTER_SEGMENT_ID`).
-5. Review and send.
+5. Review, set **When** to Friday 4pm ET, and send or schedule.
 
 ## Analytics
 
