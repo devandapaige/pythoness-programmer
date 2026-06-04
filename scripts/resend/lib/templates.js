@@ -381,5 +381,6 @@ const toCreateTemplatePayload = (template) => ({
 module.exports = {
   getAllBroadcastTemplates,
   getSiteUrl,
+  getNewsletterFrom,
   toCreateTemplatePayload,
 }

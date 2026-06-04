@@ -188,11 +188,43 @@ Plain-text parts are minimal (read-online link when applicable + footer) so Rese
 
 All templates include `{{{RESEND_UNSUBSCRIBE_URL}}}` in the footer automatically.
 
+### Draft broadcast (API)
+
+For weekly Perspective issues, store section HTML in:
+
+`src/content/newsletter/posts/resend-snippets/{slug}.json`
+
+Each file includes `broadcastName`, `templateAlias` (default `pythoness-perspective-newsletter`), and the template variables (`SUBJECT_LINE`, `PREHEADER`, `THIS_WEEK_HTML`, etc.). Use **body HTML only** in each slot — no section banner images.
+
+Preview rendering locally (no API call):
+
+```bash
+npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026 --dry-run
+```
+
+Create a **draft** broadcast in Resend (requires `RESEND_API_KEY` and `RESEND_NEWSLETTER_SEGMENT_ID`):
+
+```bash
+npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026
+```
+
+Refresh an existing draft (e.g. after editing the JSON or adding images):
+
+```bash
+npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026 --update YOUR_BROADCAST_ID
+```
+
+Script: [`scripts/resend/create-broadcast-draft.js`](../scripts/resend/create-broadcast-draft.js). It renders the same template HTML as `resend:templates`, substitutes variables, and `POST`s to `/broadcasts` without `send: true`.
+
+**Inline images in Resend:** Add a `localImages` array to the snippet JSON mapping production URLs to repo files (e.g. `public/images/yellowlushimg.jpeg`). The script embeds them as base64 `data:` URLs in the draft HTML so screenshots appear in the Resend editor before deploy. After deploy, sent mail can use the hosted URLs in the JSON (re-run without embed only if you use `--no-embed-images`).
+
+Deploy the site so `READ_ONLINE_URL` resolves; image embeds are for draft preview and pre-deploy sends.
+
 ### Per-send workflow
 
-1. Resend → **Broadcasts** → **Create broadcast**.
+1. Resend → **Broadcasts** → **Create broadcast** (or run `npm run resend:draft`).
 2. Choose the template alias above.
-3. Fill template variables for this send.
+3. Fill template variables for this send (or use the JSON snippet file).
 4. Select your newsletter segment (`RESEND_NEWSLETTER_SEGMENT_ID`).
 5. Review and send.
 
@@ -238,6 +270,8 @@ Configure in Netlify for that subdomain or in Beehiiv web settings.
 | Broadcast template shell | `src/lib/resend/templates/shell.ts` |
 | Broadcast template definitions | `src/lib/resend/templates/definitions.ts` |
 | Template setup script | `scripts/resend/create-broadcast-templates.js` |
+| Draft broadcast script | `scripts/resend/create-broadcast-draft.js` |
+| Per-issue Resend variables | `src/content/newsletter/posts/resend-snippets/*.json` |
 | Template IDs (generated) | `config/resend-templates.json` |
 | Export script | `scripts/export-beehiiv-archive.js` |
 | Image migration | `scripts/migrate-beehiiv-images.js` (`npm run migrate-beehiiv-images`) |

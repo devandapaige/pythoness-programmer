@@ -9,6 +9,7 @@
     "migrate-beehiiv-images": "node scripts/migrate-beehiiv-images.js",
     "migrate-beehiiv-links": "node scripts/migrate-beehiiv-links.js",
     "resend:templates": "node scripts/resend/create-broadcast-templates.js",
+    "resend:draft": "node scripts/resend/create-broadcast-draft.js",
     "start": "next start",
     "lint": "eslint .",
     "test": "jest",
