@@ -155,7 +155,7 @@ const main = async () => {
   if (!skipEmbed && localImages.length > 0) {
     html = embedLocalImagesInHtml(html, localImages, ROOT)
     console.log(
-      `Embedded ${localImages.length} local image(s) as data URLs for Resend preview.`
+      `Embedded ${localImages.length} compressed image(s) as data URLs (uses emailPath when set).`
     )
   } else if (localImages.length === 0) {
     console.warn(
@@ -167,7 +167,13 @@ const main = async () => {
   console.log(`Template: ${template.alias}`)
   console.log(`Broadcast name: ${broadcastName}`)
   console.log(`Subject: ${subject}`)
-  console.log(`HTML size: ${Buffer.byteLength(html, 'utf8')} bytes`)
+  const htmlBytes = Buffer.byteLength(html, 'utf8')
+  console.log(`HTML size: ${htmlBytes} bytes`)
+  if (htmlBytes > 102_400) {
+    console.warn(
+      'Warning: HTML exceeds ~100KB — Gmail may clip the message ("View entire message"). Use emailPath in localImages (compressed files under public/images/email/).'
+    )
+  }
 
   if (isDryRun) {
     console.log('\nDry run — no API call. Remove --dry-run to create the draft.')

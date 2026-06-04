@@ -216,7 +216,7 @@ npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026 --update Y
 
 Script: [`scripts/resend/create-broadcast-draft.js`](../scripts/resend/create-broadcast-draft.js). It renders the same template HTML as `resend:templates`, substitutes variables, and `POST`s to `/broadcasts` without `send: true`.
 
-**Inline images in Resend:** Add a `localImages` array to the snippet JSON mapping production URLs to repo files (e.g. `public/images/yellowlushimg.jpeg`). The script embeds them as base64 `data:` URLs in the draft HTML so screenshots appear in the Resend editor before deploy. After deploy, sent mail can use the hosted URLs in the JSON (re-run without embed only if you use `--no-embed-images`).
+**Inline images in Resend:** Add a `localImages` array to the snippet JSON. Use `emailPath` for compressed assets (e.g. `public/images/email/yellowlushimg-email.jpeg`, ~20KB each) so base64 embed stays under Gmail’s ~102KB clip limit. The script embeds `emailPath` as `data:` URLs for draft preview; `THIS_WEEK_HTML` should use table-wrapped `<img>` markup (not bare `<p><img>`). After deploy, hosted URLs under `/images/email/` work without embed (`--no-embed-images`).
 
 Deploy the site so `READ_ONLINE_URL` resolves; image embeds are for draft preview and pre-deploy sends.
 

@@ -19,12 +19,13 @@ const embedLocalImagesInHtml = (html, localImages, rootDir) => {
   let result = html
 
   for (const entry of localImages) {
-    const { url, path: filePath, contentType } = entry
+    const { url, path: filePath, emailPath, contentType } = entry
     if (!url || !filePath) continue
 
-    const absolutePath = path.isAbsolute(filePath)
-      ? filePath
-      : path.join(rootDir, filePath)
+    const embedPath = emailPath ?? filePath
+    const absolutePath = path.isAbsolute(embedPath)
+      ? embedPath
+      : path.join(rootDir, embedPath)
 
     if (!fs.existsSync(absolutePath)) {
       throw new Error(`Local image not found for Resend embed: ${absolutePath}`)
