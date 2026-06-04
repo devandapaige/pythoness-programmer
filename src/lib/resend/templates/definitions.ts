@@ -236,7 +236,6 @@ export const buildMonthlyRecapTemplate = (
           'Pythoness Programmer'
         ),
       },
-      { html: buildReadOnlineTopLink('READ_ONLINE_URL') },
       {
         html: buildNewsletterSection(
           sectionUrl(NEWSLETTER_SECTION_HEADERS.thisMonth),
@@ -266,7 +265,7 @@ export const buildMonthlyRecapTemplate = (
     from: getNewsletterFrom(),
     subject: '{{{RECAP_MONTH}}}: {{{RECAP_TITLE}}}',
     html,
-    text: buildMinimalPlainText('READ_ONLINE_URL'),
+    text: buildMinimalPlainText(),
     variables: [
       stringVar('RECAP_MONTH'),
       stringVar('RECAP_TITLE'),
@@ -274,7 +273,6 @@ export const buildMonthlyRecapTemplate = (
       stringVar('HIGHLIGHTS_HTML'),
       stringVar('BODY_HTML'),
       stringVar('SUPPORT_HTML'),
-      stringVar('READ_ONLINE_URL'),
       stringVar('ARCHIVE_URL', archiveUrl),
     ],
   }

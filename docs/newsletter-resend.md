@@ -179,8 +179,9 @@ Subscribe-forward, Tool Spotlight, Struggle is Real (→ [Fillout form](https://
 | `HIGHLIGHTS_HTML` | Bullet or short list of highlights |
 | `BODY_HTML` | Longer recap sections |
 | `SUPPORT_HTML` | Support blurb after the **Support the Pythoness** banner |
-| `READ_ONLINE_URL` | Top **Read Online** link |
 | `ARCHIVE_URL` | Default archive link in footer section (fallback in template) |
+
+Monthly recaps are designed to be read in the inbox — no **Read Online** link in the template.
 
 Plain-text parts are minimal (read-online link when applicable + footer) so Resend does not duplicate the HTML body.
 
@@ -190,28 +191,35 @@ All templates include `{{{RESEND_UNSUBSCRIBE_URL}}}` in the footer automatically
 
 ### Draft broadcast (API)
 
-For weekly Perspective issues, store section HTML in:
+Store section HTML in:
 
 `src/content/newsletter/posts/resend-snippets/{slug}.json`
 
-Each file includes `broadcastName`, `templateAlias` (default `pythoness-perspective-newsletter`), and the template variables (`SUBJECT_LINE`, `PREHEADER`, `THIS_WEEK_HTML`, etc.). Use **body HTML only** in each slot — no section banner images.
+Each file includes `broadcastName`, `templateAlias`, and the template variables for that alias. Use **body HTML only** in each slot — no section banner images.
+
+**Weekly** (`templateAlias`: `pythoness-perspective-newsletter`, default): `SUBJECT_LINE`, `PREHEADER`, `THIS_WEEK_HTML`, etc.
+
+**Monthly recap** (`templateAlias`: `pythoness-monthly-recap`): `RECAP_MONTH`, `RECAP_TITLE`, `RECAP_INTRO_HTML`, `HIGHLIGHTS_HTML`, `BODY_HTML`, `SUPPORT_HTML`, optional `ARCHIVE_URL`.
 
 Preview rendering locally (no API call):
 
 ```bash
 npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026 --dry-run
+npm run resend:draft -- --slug may-2026-monthly-recap --dry-run
 ```
 
 Create a **draft** broadcast in Resend (requires `RESEND_API_KEY` and `RESEND_NEWSLETTER_SEGMENT_ID`):
 
 ```bash
 npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026
+npm run resend:draft -- --slug may-2026-monthly-recap
 ```
 
 Refresh an existing draft (e.g. after editing the JSON or adding images):
 
 ```bash
 npm run resend:draft -- --slug human-eyes-readable-contrast-june-2026 --update YOUR_BROADCAST_ID
+npm run resend:draft -- --slug may-2026-monthly-recap --update YOUR_BROADCAST_ID
 ```
 
 Script: [`scripts/resend/create-broadcast-draft.js`](../scripts/resend/create-broadcast-draft.js). It renders the same template HTML as `resend:templates`, substitutes variables, and `POST`s to `/broadcasts` without `send: true`.

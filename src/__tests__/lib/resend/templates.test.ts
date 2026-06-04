@@ -112,6 +112,8 @@ describe('Resend broadcast templates', () => {
     expect(recap?.html).toContain('<!-- begin:HIGHLIGHTS_HTML -->')
     expect(recap?.html).toContain('{{{SUPPORT_HTML}}}')
     expect(recap?.variables.map((v) => v.key)).toContain('SUPPORT_HTML')
+    expect(recap?.html).not.toContain('>Read Online</a>')
+    expect(recap?.variables.map((v) => v.key)).not.toContain('READ_ONLINE_URL')
   })
 
   it('lab notes uses top Read Online and a single BODY_HTML slot', () => {

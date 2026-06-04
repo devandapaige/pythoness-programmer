@@ -339,7 +339,6 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         siteUrl,
         sections: [
           { html: buildTopEmailHeader(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.brand), 'Pythoness Programmer') },
-          { html: buildReadOnlineTopLink('READ_ONLINE_URL') },
           { html: buildNewsletterSection(sectionUrl(siteUrl, NEWSLETTER_SECTION_HEADERS.thisMonth), 'This month', 'RECAP_INTRO_HTML') },
           { html: buildTextHeaderBar('{{{RECAP_MONTH}}}', '{{{RECAP_TITLE}}}') },
           { html: buildContentSlotRow('HIGHLIGHTS_HTML') },
@@ -349,7 +348,7 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
           { html: buildContentSlotRow('SUPPORT_HTML') },
         ],
       }),
-      text: buildMinimalPlainText('READ_ONLINE_URL'),
+      text: buildMinimalPlainText(),
       variables: [
         stringVar('RECAP_MONTH'),
         stringVar('RECAP_TITLE'),
@@ -357,7 +356,6 @@ const getAllBroadcastTemplates = (siteUrl = getSiteUrl()) => {
         stringVar('HIGHLIGHTS_HTML'),
         stringVar('BODY_HTML'),
         stringVar('SUPPORT_HTML'),
-        stringVar('READ_ONLINE_URL'),
         stringVar('ARCHIVE_URL', archiveUrl),
       ],
     },
