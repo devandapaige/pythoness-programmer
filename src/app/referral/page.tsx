@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Tech Stack & Referral Links | Pythoness Programmer',
-  description: 'Tools I use and recommend: scheduling, email, voice-to-text, browser, design, notes, IDE, passwords, tasks, messaging, deployment, newsletter, and more.',
+  description: 'Tools I use and recommend: scheduling, email, voice-to-text, browser, design, notes, IDE, passwords, tasks, messaging, deployment, and newsletters I read.',
 }
 
 type Tool = {
@@ -108,6 +108,49 @@ const tools: Tool[] = [
   },
 ]
 
+const newsletters: Tool[] = [
+  {
+    name: 'TLDR',
+    tagline: 'Daily tech digest',
+    description:
+      'My favorite tech newsletter. A free daily email that keeps you current on AI and tech without the scroll-hole—readable in about five minutes.',
+    referralUrl: 'https://refer.tldr.tech/acf62c5f/2',
+  },
+]
+
+function ToolCard({ tool }: { tool: Tool }) {
+  return (
+    <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+        <div className="flex-1">
+          <div className="flex items-center gap-2 mb-1 flex-wrap">
+            <h2 className="font-display text-xl text-white">
+              {tool.name}
+              {tool.referralUrl && (
+                <span className="text-brand-green-accent font-medium ml-0.5" aria-label="Referral link">
+                  *
+                </span>
+              )}
+            </h2>
+            <span className="text-brand-green-accent/90 text-sm font-medium">{tool.tagline}</span>
+          </div>
+          <p className="text-white/90 text-sm leading-relaxed mb-4">{tool.description}</p>
+          {(tool.referralUrl || tool.websiteUrl) && (
+            <Link
+              href={tool.referralUrl ?? tool.websiteUrl ?? '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-brand-green-accent text-black px-5 py-2.5 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-sm"
+            >
+              {tool.referralUrl ? `Try ${tool.name} →` : 'Visit site →'}
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function ReferralPage() {
   return (
     <div className="site-gutter min-h-screen bg-brand-green-dark text-white">
@@ -123,39 +166,21 @@ export default function ReferralPage() {
 
         <div className="space-y-6">
           {tools.map((tool) => (
-            <div
-              key={tool.name}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-colors"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <h2 className="font-display text-xl text-white">
-                      {tool.name}
-                      {tool.referralUrl && (
-                        <span className="text-brand-green-accent font-medium ml-0.5" aria-label="Referral link">*</span>
-                      )}
-                    </h2>
-                    <span className="text-brand-green-accent/90 text-sm font-medium">{tool.tagline}</span>
-                  </div>
-                  <p className="text-white/90 text-sm leading-relaxed mb-4">
-                    {tool.description}
-                  </p>
-                  {(tool.referralUrl || tool.websiteUrl) && (
-                    <Link
-                      href={tool.referralUrl ?? tool.websiteUrl ?? '#'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-brand-green-accent text-black px-5 py-2.5 rounded-lg font-medium hover:bg-opacity-90 transition-colors text-sm"
-                    >
-                      {tool.referralUrl ? `Try ${tool.name} →` : 'Visit site →'}
-                    </Link>
-                  )}
-                </div>
-              </div>
-            </div>
+            <ToolCard key={tool.name} tool={tool} />
           ))}
         </div>
+
+        <section className="mt-14">
+          <h2 className="font-display text-2xl text-white text-center mb-2">Newsletters I recommend</h2>
+          <p className="text-white/70 text-sm text-center mb-6">
+            What I read to stay informed without living in the feed.
+          </p>
+          <div className="space-y-6">
+            {newsletters.map((newsletter) => (
+              <ToolCard key={newsletter.name} tool={newsletter} />
+            ))}
+          </div>
+        </section>
 
         <p className="text-white/50 text-xs text-center mt-10">
           <span className="text-brand-green-accent/80">*</span> = referral link. I may receive credit or a small benefit if you sign up through these.
