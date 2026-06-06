@@ -1,6 +1,7 @@
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
 import type { CalWebhookEvent } from '@/lib/booking/types'
+import { isBookingWebhookEnabled } from '@/lib/booking/config'
 import { processCalWebhookEvent } from '@/lib/booking/handler'
 import { verifyCalWebhookSignature } from '@/lib/booking/verify'
 
@@ -17,6 +18,15 @@ const getWebhookSecret = (): string => {
 }
 
 export async function POST(request: Request) {
+  if (!isBookingWebhookEnabled()) {
+    return NextResponse.json({
+      received: true,
+      enabled: false,
+      message:
+        'Booking webhook automation is disabled. Client emails are handled in Cal.com workflows.',
+    })
+  }
+
   try {
     const body = await request.text()
     const signature = (await headers()).get('x-cal-signature-256')

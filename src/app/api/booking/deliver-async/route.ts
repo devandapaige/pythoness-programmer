@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { isBookingWebhookEnabled } from '@/lib/booking/config'
 import { getBookingSchedule } from '@/lib/booking/schedule-store'
 import { handleAsyncVideoDelivery } from '@/lib/booking/workflows'
 import type { ParsedBooking } from '@/lib/booking/types'
@@ -30,6 +31,16 @@ const isAuthorized = (request: Request): boolean => {
 }
 
 export async function POST(request: Request) {
+  if (!isBookingWebhookEnabled()) {
+    return NextResponse.json(
+      {
+        error:
+          'Booking email automation is disabled. Send async delivery via Cal.com workflow or email.',
+      },
+      { status: 503 }
+    )
+  }
+
   try {
     if (!isAuthorized(request)) {
       return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 })

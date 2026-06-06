@@ -35,7 +35,7 @@ Do these in **your** Zoom account; exact menu names can change—use [Get starte
 4. Set **duration** to **20 min**, **20 min**, and **60 min** respectively. For **async**, the booked time should represent your **delivery commitment** (when the private video will be ready), not a live session—say so clearly in the title and description (see below).
 5. **Calendar:** Connect the calendar(s) Scheduler should respect for availability.
 6. **Reminders:** Use Scheduler’s **email and/or SMS** reminders; paste the copy from this guide into the templates Zoom provides.
-7. **Website:** Live site booking URLs are centralized in `[src/config/booking.ts](../config/booking.ts)` (defaults: **hub** `https://cal.com/pythoness`, **async** `https://cal.com/pythoness/async?`, **live 20** `/20min`, **deep 60** `/60min`). Override with `NEXT_PUBLIC_BOOKING_*` in `.env.local` if paths change. Service emails: [`docs/booking-email-workflows.md`](../../docs/booking-email-workflows.md).
+7. **Website:** Live site booking URLs are centralized in `[src/config/booking.ts](../config/booking.ts)` (defaults: **hub** `https://cal.com/pythoness`, **async** `https://cal.com/pythoness/async?`, **live 20** `/20min`, **deep 60** `/60min`). Client emails: **[`docs/cal-com-workflows-setup-line-by-line.md`](../../docs/cal-com-workflows-setup-line-by-line.md)** (line-by-line).
 
 ---
 

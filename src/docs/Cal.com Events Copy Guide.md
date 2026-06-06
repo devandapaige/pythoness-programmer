@@ -1,7 +1,9 @@
 # Cal.com Events Copy Guide — Pythoness Programmer
 
-> **Active — scheduling stack is Cal.com + Resend service emails.**  
-> Historical Zoom Scheduler setup notes live in **[`Zoom Scheduler Copy Guide.md`](./Zoom%20Scheduler%20Copy%20Guide.md)** (archived). Service email automation is documented in **[`docs/booking-email-workflows.md`](../../docs/booking-email-workflows.md)**.
+> **Active — client emails run through Cal.com workflows** (Cal.com guest email verification stays in the booking flow).  
+> **Line-by-line workflow setup:** **[`docs/cal-com-workflows-setup-line-by-line.md`](../../docs/cal-com-workflows-setup-line-by-line.md)**.  
+> Overview: **[`docs/cal-com-client-workflows.md`](../../docs/cal-com-client-workflows.md)**.  
+> Historical Zoom Scheduler: **[`Zoom Scheduler Copy Guide.md`](./Zoom%20Scheduler%20Copy%20Guide.md)** (archived). Dormant Resend automation: **[`docs/booking-email-workflows-resend-archived.md`](../../docs/booking-email-workflows-resend-archived.md)**.
 
 ---
 
