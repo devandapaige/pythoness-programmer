@@ -2,6 +2,8 @@
 
 import { FormEvent, useState } from 'react'
 
+import { userMessages } from '@/data/userMessages'
+
 type NewsletterSubscribeFormProps = {
   source?: string
   className?: string
@@ -41,19 +43,16 @@ export function NewsletterSubscribeForm({
 
       if (!response.ok) {
         setStatus('error')
-        setMessage(data.error ?? 'Something went wrong. Please try again.')
+        setMessage(data.error ?? userMessages.newsletter.signupFailed)
         return
       }
 
       setStatus('success')
-      setMessage(
-        data.message ??
-          'You are on the list. Watch your inbox for Pythoness Perspective.'
-      )
+      setMessage(data.message ?? userMessages.newsletter.success)
       setEmail('')
     } catch {
       setStatus('error')
-      setMessage('Network error. Please try again.')
+      setMessage(userMessages.newsletter.network)
     }
   }
 

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 
+import { userMessages } from '@/data/userMessages'
 import { subscribeToNewsletter } from '@/lib/resend/newsletter'
 import { isValidEmail, isValidString, sanitizeString } from '@/lib/validation'
 
@@ -16,7 +17,7 @@ export async function POST(request: Request) {
 
     if (!isValidString(body.email)) {
       return NextResponse.json(
-        { error: 'Email is required.' },
+        { error: userMessages.newsletter.emailRequired },
         { status: 400 }
       )
     }
@@ -25,7 +26,7 @@ export async function POST(request: Request) {
 
     if (!isValidEmail(email)) {
       return NextResponse.json(
-        { error: 'Please enter a valid email address.' },
+        { error: userMessages.newsletter.invalidEmail },
         { status: 400 }
       )
     }
@@ -39,35 +40,26 @@ export async function POST(request: Request) {
 
     if (!result.configured) {
       return NextResponse.json(
-        {
-          error:
-            'Newsletter signup is not configured yet. Please try again later.',
-        },
+        { error: userMessages.newsletter.unavailable },
         { status: 503 }
       )
     }
 
     if (!result.subscribed) {
       return NextResponse.json(
-        {
-          error:
-            result.message ??
-            'We could not add you to the list. Please try again.',
-        },
+        { error: userMessages.newsletter.signupFailed },
         { status: 502 }
       )
     }
 
     return NextResponse.json({
       success: true,
-      message:
-        'You are on the list. Watch your inbox for Pythoness Perspective.',
+      message: userMessages.newsletter.success,
     })
-  } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : 'Unexpected error during newsletter signup.'
-    return NextResponse.json({ error: message }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { error: userMessages.newsletter.genericFailure },
+      { status: 500 }
+    )
   }
 }

@@ -5,7 +5,8 @@ import { getAllPosts } from '@/lib/mdx'
 
 export const metadata: Metadata = {
   title: 'Blog | Pythoness Programmer',
-  description: 'Technical articles, coding tips, and industry insights from Pythoness Programmer.',
+  description:
+    'Lab Notes: tools, workflows, and the messy real work of making tech fit your brain.',
 }
 
 export default async function BlogPage() {
@@ -21,7 +22,7 @@ export default async function BlogPage() {
   }))
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading Lab Notes…</div>}>
       <BlogContent posts={processedPosts} />
     </Suspense>
   )

@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
+import { supportEmail, userMessages } from '@/data/userMessages'
+
 interface StoreSuccessPayload {
   paid: boolean
   productTitle: string
@@ -22,7 +24,7 @@ export default function StoreSuccessPage() {
       const sessionId = params.get('session_id')
 
       if (!sessionId) {
-        setError('Missing checkout session ID. Please contact support if you were charged.')
+        setError(userMessages.store.receiptLoadFailed)
         setLoading(false)
         return
       }
@@ -34,18 +36,14 @@ export default function StoreSuccessPage() {
         const json = (await response.json()) as StoreSuccessPayload & { error?: string }
 
         if (!response.ok) {
-          setError(json.error ?? 'Could not verify your purchase yet.')
+          setError(json.error ?? userMessages.store.verifyPurchasePending)
           setLoading(false)
           return
         }
 
         setPayload(json)
-      } catch (requestError) {
-        setError(
-          requestError instanceof Error
-            ? requestError.message
-            : 'Unexpected error while loading your receipt.'
-        )
+      } catch {
+        setError(userMessages.store.genericReceiptError)
       } finally {
         setLoading(false)
       }
@@ -94,10 +92,10 @@ export default function StoreSuccessPage() {
             <p className="text-sm text-brand-cream/80">
               Need help? Email{' '}
               <a
-                href="mailto:help@pythonessprogrammer.com"
+                href={`mailto:${supportEmail}`}
                 className="text-brand-green-accent underline hover:no-underline"
               >
-                help@pythonessprogrammer.com
+                {supportEmail}
               </a>
               .
             </p>

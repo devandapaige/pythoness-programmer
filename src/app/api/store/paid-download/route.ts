@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server'
+
+import { userMessages } from '@/data/userMessages'
 import { getStoreProductBySlug } from '@/lib/store/products'
 import { verifyPaidDownloadToken } from '@/lib/store/secureDownload'
 import { getStripeClient } from '@/lib/store/stripe'
@@ -13,7 +15,7 @@ export async function GET(request: Request) {
 
   if (!isValidString(rawSessionId) || !isValidString(rawToken)) {
     return NextResponse.json(
-      { error: 'session_id and token are required.' },
+      { error: userMessages.store.downloadLinkExpired },
       { status: 400 }
     )
   }
@@ -22,7 +24,10 @@ export async function GET(request: Request) {
   const token = sanitizeString(rawToken)
 
   if (!verifyPaidDownloadToken(token, sessionId)) {
-    return NextResponse.json({ error: 'Invalid or expired download token.' }, { status: 403 })
+    return NextResponse.json(
+      { error: userMessages.store.downloadLinkExpired },
+      { status: 403 }
+    )
   }
 
   try {
@@ -30,23 +35,28 @@ export async function GET(request: Request) {
     const session = await stripe.checkout.sessions.retrieve(sessionId)
 
     if (session.payment_status !== 'paid') {
-      return NextResponse.json({ error: 'Payment is not completed.' }, { status: 403 })
+      return NextResponse.json(
+        { error: userMessages.store.paymentIncomplete },
+        { status: 403 }
+      )
     }
 
     const productSlug = session.metadata?.product_slug
     const product = productSlug ? getStoreProductBySlug(productSlug) : undefined
 
     if (!product || product.pricing !== 'paid') {
-      return NextResponse.json({ error: 'Paid product was not found.' }, { status: 404 })
+      return NextResponse.json(
+        { error: userMessages.store.paidProductNotFound },
+        { status: 404 }
+      )
     }
 
     const redirectTo = new URL(product.downloadUrl, requestUrl.origin)
     return NextResponse.redirect(redirectTo)
-  } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : 'Unexpected error while processing paid download.'
-    return NextResponse.json({ error: message }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { error: userMessages.store.genericPaidDownloadError },
+      { status: 500 }
+    )
   }
 }

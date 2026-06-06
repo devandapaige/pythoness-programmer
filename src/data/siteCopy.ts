@@ -27,7 +27,7 @@ export const howItWorks = {
   title: 'How It Works',
   steps: [
     {
-      title: 'Book a session',
+      title: 'Book a Software Psychic session',
       description:
         'Async video ($75), live 20-minute ($95), or 60-minute deep dive ($255) — pick what fits your decision.',
     },
@@ -247,7 +247,7 @@ export const aboutCta = {
 } as const
 
 export const servicesHero = {
-  title: 'Reflection sessions for neurodivergent business owners',
+  title: 'Software Psychic sessions for neurodivergent business owners',
   paragraphs: [
     'Amanda Nelson — the Pythoness Programmer. Tarot-informed counsel on software, strategy, and creative decisions. Reflection, not rescue. Professional counsel, not fortune-telling.',
     "You don't need to know tarot. I bring technical context and respect for how neurodivergent brains decide under pressure — so you're not translating your reality to someone who only speaks productivity culture.",
@@ -319,8 +319,8 @@ export const metadataCopy = {
   },
   services: {
     description:
-      'Pythoness Programmer reflection sessions: async video ($75), live 20-minute ($95), deep dive ($255). Tarot-informed counsel for neurodivergent business owners.',
+      'Software Psychic sessions from Pythoness Programmer: async video ($75), live 20-minute ($95), deep dive ($255). Tarot-informed counsel for neurodivergent business owners.',
     openGraphDescription:
-      'Reflection, not rescue. Compare async, live, and deep-dive sessions with the Pythoness Programmer.',
+      'Reflection, not rescue. Compare Software Psychic async, live, and deep-dive sessions with the Pythoness Programmer.',
   },
 } as const

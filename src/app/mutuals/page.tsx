@@ -12,8 +12,9 @@ export default function MutualsPage() {
   const [couponCode, setCouponCode] = useState<CouponState['code']>('');
 
   const handleCouponSubmit = () => {
-    // Add your coupon validation logic here
-    alert('Coupon code applied!');
+    alert(
+      "Coupon checking isn't live yet—use the code Amanda sent you at checkout."
+    )
   };
 
   return (
@@ -57,7 +58,7 @@ export default function MutualsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-brand-green-accent hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105 hover:shadow-lg shadow-brand-green-accent/20"
             >
-              Book a Digital Psychic Session
+              Book a Software Psychic session
             </Link>
           </div>
 

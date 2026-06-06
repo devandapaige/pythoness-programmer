@@ -53,9 +53,9 @@ export default function Footer() {
               </Link>
           }>
             <ul className="space-y-1" aria-label="Service links">
-              <li><ExternalLink href={bookingUrls.async} className={footerLinkClass}>Async reflection — $75</ExternalLink></li>
-              <li><ExternalLink href={bookingUrls.live20} className={footerLinkClass}>Live 20 min — $95</ExternalLink></li>
-              <li><ExternalLink href={bookingUrls.deep60} className={footerLinkClass}>Deep dive 60 min — $255</ExternalLink></li>
+              <li><ExternalLink href={bookingUrls.async} className={footerLinkClass}>Software Psychic async — $75</ExternalLink></li>
+              <li><ExternalLink href={bookingUrls.live20} className={footerLinkClass}>Software Psychic live 20 min — $95</ExternalLink></li>
+              <li><ExternalLink href={bookingUrls.deep60} className={footerLinkClass}>Software Psychic deep dive 60 min — $255</ExternalLink></li>
             </ul>
           </FooterSection>
           <FooterSection title="Free Resources">

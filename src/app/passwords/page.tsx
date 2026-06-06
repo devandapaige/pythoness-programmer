@@ -632,7 +632,7 @@ export default function PasswordsPage() {
               href="/services"
               className="inline-block bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
             >
-              Book a Session
+              Book Software Psychic
             </Link>
           </section>
 

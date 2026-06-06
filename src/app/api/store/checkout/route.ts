@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server'
+
+import { userMessages } from '@/data/userMessages'
 import { getStoreProductBySlug } from '@/lib/store/products'
 import { getSiteUrl } from '@/lib/store/site'
 import { getStripeClient } from '@/lib/store/stripe'
@@ -15,7 +17,7 @@ export async function POST(request: Request) {
 
     if (!isValidString(body.productSlug) || !isValidString(body.email)) {
       return NextResponse.json(
-        { error: 'Product and email are required.' },
+        { error: userMessages.store.productEmailRequired },
         { status: 400 }
       )
     }
@@ -25,7 +27,7 @@ export async function POST(request: Request) {
 
     if (!isValidEmail(email)) {
       return NextResponse.json(
-        { error: 'Please enter a valid email address.' },
+        { error: userMessages.newsletter.invalidEmail },
         { status: 400 }
       )
     }
@@ -34,7 +36,7 @@ export async function POST(request: Request) {
 
     if (!product || product.pricing !== 'paid') {
       return NextResponse.json(
-        { error: 'This product is not available for checkout.' },
+        { error: userMessages.store.checkoutUnavailable },
         { status: 404 }
       )
     }
@@ -69,19 +71,16 @@ export async function POST(request: Request) {
 
     if (!session.url) {
       return NextResponse.json(
-        { error: 'Unable to start checkout session.' },
+        { error: userMessages.store.checkoutSessionFailed },
         { status: 500 }
       )
     }
 
     return NextResponse.json({ url: session.url })
-  } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : 'Unexpected error while creating checkout session.'
-
-    return NextResponse.json({ error: message }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { error: userMessages.store.genericCheckoutError },
+      { status: 500 }
+    )
   }
 }
-

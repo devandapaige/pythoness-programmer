@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server'
+
+import { userMessages } from '@/data/userMessages'
 import { getStoreProductBySlug } from '@/lib/store/products'
 import { createPaidDownloadToken } from '@/lib/store/secureDownload'
 import { getStripeClient } from '@/lib/store/stripe'
@@ -11,7 +13,10 @@ export async function GET(request: Request) {
   const rawSessionId = requestUrl.searchParams.get('session_id')
 
   if (!isValidString(rawSessionId)) {
-    return NextResponse.json({ error: 'session_id is required.' }, { status: 400 })
+    return NextResponse.json(
+      { error: userMessages.store.receiptLinkIncomplete },
+      { status: 400 }
+    )
   }
 
   const sessionId = sanitizeString(rawSessionId)
@@ -25,14 +30,14 @@ export async function GET(request: Request) {
 
     if (!product) {
       return NextResponse.json(
-        { error: 'Could not resolve the purchased product for this checkout.' },
+        { error: userMessages.store.purchaseNotFound },
         { status: 404 }
       )
     }
 
     if (session.payment_status !== 'paid') {
       return NextResponse.json(
-        { error: 'Checkout is not marked as paid yet.' },
+        { error: userMessages.store.paymentProcessing },
         { status: 400 }
       )
     }
@@ -52,12 +57,10 @@ export async function GET(request: Request) {
       )}&token=${encodeURIComponent(createPaidDownloadToken(sessionId))}`,
       customerEmail: normalizedEmail || null,
     })
-  } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : 'Unexpected error while retrieving checkout session.'
-
-    return NextResponse.json({ error: message }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { error: userMessages.store.genericReceiptError },
+      { status: 500 }
+    )
   }
 }

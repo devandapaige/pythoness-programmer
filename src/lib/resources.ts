@@ -84,7 +84,8 @@ export const freeResources: Resource[] = [
     id: 'vibe-coding-cheatsheet',
     title: 'Vibe Coding Cheatsheet',
     subtitle: 'Interactive Developer Resource',
-    description: 'A professional showcase of TailwindCSS techniques with interactive features. Perfect for developers looking to level up their styling game with copy-to-clipboard functionality.',
+    description:
+      'Copy-ready prompts and Tailwind examples for neurodivergent-friendly coding workflows.',
     emoji: '💻',
     features: [
       'Interactive TailwindCSS Examples',

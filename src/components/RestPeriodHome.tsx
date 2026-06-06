@@ -16,7 +16,7 @@ export default function RestPeriodHome() {
             </p>
             <div className="bg-brand-purple-light/20 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-brand-purple-light/30">
               <p className="text-xl md:text-2xl text-brand-cream mb-4">
-                Consulting services will resume
+                Software Psychic sessions will resume
               </p>
               <p className="text-3xl md:text-4xl font-display text-brand-purple-light mb-6">
                 March 2026

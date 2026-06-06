@@ -2,6 +2,8 @@
 
 import React, { useState } from "react"
 
+import { userMessages } from "@/data/userMessages"
+
 type CopyFieldProps = {
   label?: string
   value: string
@@ -18,16 +20,25 @@ export default function CopyField({
   copyButtonClassName,
 }: CopyFieldProps) {
   const [copied, setCopied] = useState(false)
+  const [copyError, setCopyError] = useState(false)
 
   async function handleCopy() {
+    setCopyError(false)
     try {
       await navigator.clipboard.writeText(value)
       setCopied(true)
       setTimeout(() => setCopied(false), 1500)
     } catch {
-      // no-op; clipboard may be unavailable
+      setCopyError(true)
+      setTimeout(() => setCopyError(false), 2500)
     }
   }
+
+  const buttonLabel = copied
+    ? userMessages.clipboard.copied
+    : copyError
+      ? "Copy failed"
+      : "Copy"
 
   return (
     <div className={className}>
@@ -52,11 +63,14 @@ export default function CopyField({
           }
           aria-label={`Copy ${ariaLabel ?? label ?? value} to clipboard`}
         >
-          {copied ? "Copied!" : "Copy"}
+          {buttonLabel}
         </button>
       </div>
+      {copyError && (
+        <p className="mt-1 text-xs text-red-200" role="alert">
+          {userMessages.clipboard.copyFailedWithShortcut}
+        </p>
+      )}
     </div>
   )
 }
-
-

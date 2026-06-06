@@ -166,7 +166,7 @@ export function BlogContent({ posts }: BlogContentProps) {
           <p className="text-xl text-white/80 mb-2">No posts found</p>
           <p className="text-white/60">
             {searchQuery.trim() || selectedTag
-              ? 'Try adjusting your search or filter criteria'
+              ? 'Try a different search word or clear the tag filter.'
               : 'No blog posts available'}
           </p>
         </div>

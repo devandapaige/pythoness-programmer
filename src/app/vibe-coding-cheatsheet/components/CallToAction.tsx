@@ -14,7 +14,8 @@ export default function CallToAction() {
         Need More Support?
       </h2>
       <p className="mb-4 text-white">
-        Ready to level up your coding experience? Explore reflection sessions and resources for tailored support on your tech and creative journey.
+        Want help making your coding setup work with your brain? Explore Software Psychic
+        sessions and free resources for tailored support on your tech and creative journey.
       </p>
       <div 
         className="flex items-center justify-between mb-6"

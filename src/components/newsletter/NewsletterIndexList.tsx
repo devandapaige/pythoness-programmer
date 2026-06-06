@@ -12,10 +12,11 @@ export function NewsletterIndexList({ posts }: NewsletterIndexListProps) {
   if (posts.length === 0) {
     return (
       <p className="text-white/80">
-        No issues in the archive yet. Add MDX files under{' '}
-        <code className="text-brand-green-accent">src/content/newsletter/posts/</code> or see{' '}
-        <code className="text-brand-green-accent">docs/newsletter-resend.md</code> for the
-        publishing workflow.
+        No issues in the archive yet. New editions publish March through November—{' '}
+        <Link href="/newsletter/subscribe" className="text-brand-green-accent hover:underline">
+          subscribe
+        </Link>{' '}
+        to get the next one in your inbox.
       </p>
     )
   }

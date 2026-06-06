@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 
+import { userMessages } from '@/data/userMessages'
 import { subscribeToNewsletter } from '@/lib/resend/newsletter'
 import { getStoreProductBySlug } from '@/lib/store/products'
 import { isValidEmail, isValidString, sanitizeString } from '@/lib/validation'
@@ -15,7 +16,7 @@ export async function POST(request: Request) {
 
     if (!isValidString(body.productSlug) || !isValidString(body.email)) {
       return NextResponse.json(
-        { error: 'Product and email are required.' },
+        { error: userMessages.store.productEmailRequired },
         { status: 400 }
       )
     }
@@ -25,7 +26,7 @@ export async function POST(request: Request) {
 
     if (!isValidEmail(email)) {
       return NextResponse.json(
-        { error: 'Please enter a valid email address.' },
+        { error: userMessages.newsletter.invalidEmail },
         { status: 400 }
       )
     }
@@ -33,7 +34,7 @@ export async function POST(request: Request) {
     const product = getStoreProductBySlug(productSlug)
     if (!product || product.pricing !== 'free') {
       return NextResponse.json(
-        { error: 'This free product was not found.' },
+        { error: userMessages.store.freeProductNotFound },
         { status: 404 }
       )
     }
@@ -51,11 +52,10 @@ export async function POST(request: Request) {
         : 'Thanks! Your download is ready.',
       newsletter: newsletterResult,
     })
-  } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : 'Unexpected error while claiming free product.'
-    return NextResponse.json({ error: message }, { status: 500 })
+  } catch {
+    return NextResponse.json(
+      { error: userMessages.store.genericFreeClaimError },
+      { status: 500 }
+    )
   }
 }

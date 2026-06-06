@@ -1,6 +1,7 @@
 'use client'
 
 import { FormEvent, useMemo, useState } from 'react'
+import { userMessages } from '@/data/userMessages'
 import { formatPriceCents } from '@/lib/store/format'
 import { StoreProduct } from '@/types/store'
 
@@ -55,7 +56,7 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
 
     const email = (emailByProduct[product.id] ?? '').trim().toLowerCase()
     if (!isEmailValid(email)) {
-      setError(product.id, 'Please enter a valid email before checkout.')
+      setError(product.id, userMessages.store.invalidEmailCheckout)
       return
     }
 
@@ -77,19 +78,14 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
       if (!response.ok || !payload.url) {
         setError(
           product.id,
-          payload.error ?? 'Could not start checkout. Please try again.'
+          payload.error ?? userMessages.store.checkoutStartFailed
         )
         return
       }
 
       window.location.assign(payload.url)
-    } catch (error) {
-      setError(
-        product.id,
-        error instanceof Error
-          ? error.message
-          : 'Unexpected error while starting checkout.'
-      )
+    } catch {
+      setError(product.id, userMessages.store.checkoutStartFailed)
     } finally {
       setActiveProductId(null)
     }
@@ -104,7 +100,7 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
 
     const email = (emailByProduct[product.id] ?? '').trim().toLowerCase()
     if (!isEmailValid(email)) {
-      setError(product.id, 'Please enter a valid email to access this free file.')
+      setError(product.id, userMessages.store.invalidEmailFree)
       return
     }
 
@@ -132,23 +128,18 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
       if (!response.ok || !payload.success || !payload.downloadUrl) {
         setError(
           product.id,
-          payload.error ?? 'Could not unlock this free file. Please try again.'
+          payload.error ?? userMessages.store.freeDownloadFailed
         )
         return
       }
 
       setSuccess(
         product.id,
-        payload.message ?? 'Thanks. Your file is ready to download.'
+        payload.message ?? userMessages.store.freeClaimSuccess
       )
       window.location.assign(payload.downloadUrl)
-    } catch (error) {
-      setError(
-        product.id,
-        error instanceof Error
-          ? error.message
-          : 'Unexpected error while unlocking free file.'
-      )
+    } catch {
+      setError(product.id, userMessages.store.freeDownloadFailed)
     } finally {
       setActiveProductId(null)
     }
@@ -189,9 +180,9 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
               product.pricing === 'paid'
                 ? active
                   ? 'Redirecting to checkout...'
-                  : 'Buy with Stripe'
+                  : 'Continue to checkout'
                 : active
-                ? 'Unlocking file...'
+                ? 'Starting download...'
                 : 'Get free download'
 
             const isErrorProofingTest =
@@ -217,10 +208,8 @@ export default function StoreClient({ products, cancelled }: StoreClientProps) {
                   <div className="mb-4 rounded-lg border border-amber-300/40 bg-black/20 px-3 py-2.5 text-sm text-amber-100/95">
                     <p className="font-semibold text-amber-100 mb-1">Test product only</p>
                     <p className="text-amber-100/90 leading-relaxed">
-                      The Error-Proofing Worksheet Pack is here so we can test Stripe and delivery.
-                      It is <span className="font-medium">not</span> offered for sale to the public
-                      right now. Please don&apos;t complete checkout unless you&apos;re explicitly
-                      helping test the system.
+                      This item is for checkout testing only. Use the free toolkit below unless
+                      Amanda asked you to test payment.
                     </p>
                   </div>
                 )}

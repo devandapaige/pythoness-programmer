@@ -97,7 +97,7 @@ export default function ResourcesPage() {
           <section className="text-center">
             <div className="bg-gradient-to-r from-brand-green-accent/20 to-brand-purple-dark/20 rounded-3xl p-8 border border-white/20">
               <h2 className="text-3xl font-display text-white mb-4">
-                Ready to Transform Your Digital Life?
+                Want guidance that fits how you think?
               </h2>
               <p className="text-brand-cream/90 mb-6 max-w-2xl mx-auto">
                 Start with any of these free resources, or book a personalized session to get tailored guidance
@@ -108,7 +108,7 @@ export default function ResourcesPage() {
                   href="/services"
                   className="bg-brand-green-accent text-black px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors font-semibold"
                 >
-                  Book a Session
+                  Book Software Psychic
                 </Link>
                 <Link
                   href="/coming-out-of-rest-mode"

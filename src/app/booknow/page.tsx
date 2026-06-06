@@ -18,7 +18,7 @@ export default function BookNowRedirect() {
             href={bookingUrls.hub} 
             className="text-brand-green-accent hover:text-white underline ml-1"
           >
-            click here
+            Go to booking
           </a>
         </p>
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-green-accent mx-auto"></div>

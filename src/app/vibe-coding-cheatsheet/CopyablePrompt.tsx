@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { userMessages } from '@/data/userMessages'
 import { logError } from '@/lib/errorHandling'
 
 export default function CopyablePrompt({ text }: { text: string }) {
@@ -46,7 +47,7 @@ export default function CopyablePrompt({ text }: { text: string }) {
           role="status"
           aria-live="polite"
         >
-          Copied!
+          {userMessages.clipboard.copied}
         </div>
       )}
       {showError && (
@@ -55,7 +56,7 @@ export default function CopyablePrompt({ text }: { text: string }) {
           role="alert"
           aria-live="assertive"
         >
-          Failed to copy!
+          {userMessages.clipboard.copyFailed}
         </div>
       )}
     </div>

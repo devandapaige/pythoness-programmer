@@ -90,7 +90,7 @@ export default async function Home() {
               rel="noopener noreferrer"
               className="inline-block bg-brand-green-accent text-black px-8 py-4 rounded-lg hover:bg-opacity-90 transition-all duration-300 text-lg font-semibold text-center"
             >
-              Book a Session
+              Book Software Psychic
             </Link>
             <Link
               href="/services"

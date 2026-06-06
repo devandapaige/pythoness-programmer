@@ -47,7 +47,7 @@ export default async function NewsletterSubscribePage({
       <div className="rounded-2xl border border-brand-cream/20 bg-brand-green-dark/60 p-6 sm:p-8 shadow-lg">
         <NewsletterSubscribeForm source={source} variant="onDark" />
         <p className="mt-6 text-sm text-brand-cream/70 text-center">
-          Free. Unsubscribe anytime. We use Resend to deliver issues from{' '}
+          Free. Unsubscribe anytime. Issues come from{' '}
           <span className="whitespace-nowrap">pythonessprogrammer.com</span>.
         </p>
       </div>
