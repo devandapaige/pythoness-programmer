@@ -41,7 +41,7 @@ export default function AffiliateProgramPage() {
         <section className="mb-12 space-y-4 text-brand-cream/90 text-lg leading-relaxed">
           <h2 className="font-display text-2xl text-white mb-4">How referrals are tracked</h2>
           <p>
-            Bookings run through <strong>Zoom Scheduler</strong> with <strong>Stripe</strong> at checkout. Approved partners get <strong>direct links</strong>{' '}
+            Bookings run through <strong>Cal.com</strong> with <strong>Stripe</strong> at checkout. Approved partners get <strong>direct links</strong>{' '}
             to each session type (async video, live 20, deep 60)—same pricing as{' '}
             <Link href="/services" className="text-brand-green-accent underline hover:no-underline">
               /services

@@ -275,7 +275,7 @@ export const offeringIncludes = {
 export const policies = {
   title: 'How to book, what to expect, policies',
   howToBook: [
-    'Use the Zoom Scheduler link on the offering you want.',
+    'Use the Cal.com link on the offering you want.',
     'Intake is part of booking — async requires complete intake before you can book.',
   ],
   whatToExpect: [

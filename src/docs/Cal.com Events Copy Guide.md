@@ -1,7 +1,7 @@
 # Cal.com Events Copy Guide — Pythoness Programmer
 
-> **Archived — scheduling stack moved to Zoom Scheduler.**  
-> Day-to-day event copy, Stripe payments, and setup instructions now live in **[`Zoom Scheduler Copy Guide.md`](./Zoom%20Scheduler%20Copy%20Guide.md)**. Keep this file only if you need historical Cal.com wording or a side-by-side during migration.
+> **Active — scheduling stack is Cal.com + Resend service emails.**  
+> Historical Zoom Scheduler setup notes live in **[`Zoom Scheduler Copy Guide.md`](./Zoom%20Scheduler%20Copy%20Guide.md)** (archived). Service email automation is documented in **[`docs/booking-email-workflows.md`](../../docs/booking-email-workflows.md)**.
 
 ---
 

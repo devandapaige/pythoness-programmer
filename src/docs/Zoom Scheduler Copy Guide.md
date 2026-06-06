@@ -1,5 +1,8 @@
 # Zoom Scheduler Copy Guide — Pythoness Programmer
 
+> **Archived — scheduling stack moved back to Cal.com.**  
+> Day-to-day event copy, Stripe payments, and setup instructions now live in **[`Cal.com Events Copy Guide.md`](./Cal.com%20Events%20Copy%20Guide.md)**. Keep this file only if you need historical Zoom Scheduler wording.
+
 Use this guide when creating or updating **Zoom Scheduler** scheduling links for Software Psychic sessions. Payments run through **Stripe** inside Zoom Scheduler (see Zoom’s current admin flow in [Zoom Scheduler support](https://support.zoom.com/hc/en/category?id=kb_category&kb_category=9a27b21a8720391089a37408dabb35c5)). Keep positioning aligned with the site and the [Site Copy & Voice Guide](./Site%20Copy%20&%20Voice%20Guide.md).
 
 **Public pricing (match Stripe / Scheduler):** **$75** (async video), **$95** (live 20 min), **$255** (deep dive 60 min).
@@ -32,7 +35,7 @@ Do these in **your** Zoom account; exact menu names can change—use [Get starte
 4. Set **duration** to **20 min**, **20 min**, and **60 min** respectively. For **async**, the booked time should represent your **delivery commitment** (when the private video will be ready), not a live session—say so clearly in the title and description (see below).
 5. **Calendar:** Connect the calendar(s) Scheduler should respect for availability.
 6. **Reminders:** Use Scheduler’s **email and/or SMS** reminders; paste the copy from this guide into the templates Zoom provides.
-7. **Website:** Live site booking URLs are centralized in `[src/config/booking.ts](../config/booking.ts)` (defaults: **hub** `https://scheduler.zoom.us/pythoness`, **async** `/async`, **live 20** `/20min`, **deep 60** `/60min`). Override with `**NEXT_PUBLIC_BOOKING_*`** in `.env.local` if paths change. Keep `**content/home/*.mdx**` `ctaLink` / hero `href` values in sync with the same base (`scheduler.zoom.us/pythoness/...`).
+7. **Website:** Live site booking URLs are centralized in `[src/config/booking.ts](../config/booking.ts)` (defaults: **hub** `https://cal.com/pythoness`, **async** `https://cal.com/pythoness/async?`, **live 20** `/20min`, **deep 60** `/60min`). Override with `NEXT_PUBLIC_BOOKING_*` in `.env.local` if paths change. Service emails: [`docs/booking-email-workflows.md`](../../docs/booking-email-workflows.md).
 
 ---
 

@@ -103,7 +103,7 @@ export default function AsyncServicePage() {
                 </div>
                 <h3 className="text-lg font-display mb-2 text-brand-green-dark">Book</h3>
                 <p className="text-sm text-brand-green-dark">
-                  Reserve through Zoom Scheduler. The time you choose is <strong>when your private video will be delivered by</strong>—not a live meeting to
+                  Reserve through Cal.com. The time you choose is <strong>when your private video will be delivered by</strong>—not a live meeting to
                   join.
                 </p>
               </div>
