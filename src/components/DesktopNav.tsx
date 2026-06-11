@@ -16,15 +16,23 @@ export default function DesktopNav() {
   const containerRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
   const pathname = usePathname()
+  const [resourcesPath, setResourcesPath] = useState(pathname)
 
   const closeResources = useCallback(() => setIsResourcesOpen(false), [])
 
-  useEffect(() => {
-    closeResources()
-  }, [pathname, closeResources])
+  const showResources = isResourcesOpen && resourcesPath === pathname
+
+  const toggleResources = () => {
+    if (isResourcesOpen) {
+      setIsResourcesOpen(false)
+      return
+    }
+    setResourcesPath(pathname)
+    setIsResourcesOpen(true)
+  }
 
   useEffect(() => {
-    if (!isResourcesOpen) return
+    if (!showResources) return
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -46,7 +54,7 @@ export default function DesktopNav() {
       document.removeEventListener('keydown', onKeyDown)
       document.removeEventListener('mousedown', onPointerDown)
     }
-  }, [isResourcesOpen, closeResources])
+  }, [showResources, closeResources])
 
   return (
     <div
@@ -65,15 +73,15 @@ export default function DesktopNav() {
           ref={buttonRef}
           type="button"
           id={menuId}
-          onClick={() => setIsResourcesOpen((open) => !open)}
+          onClick={toggleResources}
           className={`${navLinkClass} flex items-center`}
-          aria-expanded={isResourcesOpen}
+          aria-expanded={showResources}
           aria-haspopup="menu"
           aria-controls={panelId}
         >
           Resources
           <svg
-            className={`ml-1 h-4 w-4 transition-transform motion-reduce:transition-none ${isResourcesOpen ? 'rotate-180' : ''}`}
+            className={`ml-1 h-4 w-4 transition-transform motion-reduce:transition-none ${showResources ? 'rotate-180' : ''}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -82,7 +90,7 @@ export default function DesktopNav() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        {isResourcesOpen && (
+        {showResources && (
           <div
             id={panelId}
             role="menu"

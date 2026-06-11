@@ -26,12 +26,6 @@ const PUBLICATION_LOGO_PATTERN =
 const STATIC_ASSET_PATTERN =
   /https?:\/\/media\.beehiiv\.com\/cdn-cgi\/image\/[^"'\s>]*?\/static_assets\/([^?"'\s>]+)(?:\?[^"'\s>]*)?/gi
 
-const ALL_IMAGE_PATTERNS = [
-  ASSET_FILE_PATTERN,
-  PUBLICATION_LOGO_PATTERN,
-  STATIC_ASSET_PATTERN,
-]
-
 function listMdxFiles(dir) {
   if (!fs.existsSync(dir)) return []
   return fs

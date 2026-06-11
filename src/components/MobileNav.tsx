@@ -14,12 +14,22 @@ const mobileSubLinkClassName =
 
 export function useMobileNavState() {
   const pathname = usePathname()
-  const [open, setOpen] = useState(false)
-  const close = useCallback(() => setOpen(false), [])
+  const [requestedOpen, setRequestedOpen] = useState(false)
+  const [menuPath, setMenuPath] = useState(pathname)
+  const close = useCallback(() => setRequestedOpen(false), [])
 
-  useEffect(() => {
-    setOpen(false)
-  }, [pathname])
+  const setOpen = useCallback(
+    (value: boolean | ((prev: boolean) => boolean)) => {
+      setRequestedOpen((prev) => {
+        const next = typeof value === 'function' ? value(prev) : value
+        if (next) setMenuPath(pathname)
+        return next
+      })
+    },
+    [pathname]
+  )
+
+  const open = requestedOpen && menuPath === pathname
 
   useEffect(() => {
     if (!open) return

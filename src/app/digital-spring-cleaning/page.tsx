@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function DigitalSpringCleaningPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
@@ -333,12 +335,12 @@ export default function DigitalSpringCleaningPage() {
             </ul>
             <p className="text-base text-brand-green-dark text-center">
               Want more brain-friendly tech?{' '}
-              <a
+              <Link
                 href="/newsletter/subscribe"
                 className="font-semibold underline hover:text-brand-purple-dark"
               >
                 Subscribe to the Pythoness Perspective
-              </a>{' '}
+              </Link>{' '}
               — free, every week.
             </p>
             <p className="text-base text-brand-green-dark text-center mt-3">

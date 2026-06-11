@@ -3,7 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 import { parseBlogDate } from '@/lib/blog-date'
-import type { BlogPost, BlogPostFrontmatter } from '@/types/blog'
+import type { BlogPost } from '@/types/blog'
 
 export type { BlogPost, BlogPostFrontmatter } from '@/types/blog'
 export { formatBlogDate, parseBlogDate } from '@/lib/blog-date'
