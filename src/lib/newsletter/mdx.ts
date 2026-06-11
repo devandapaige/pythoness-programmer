@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
+import { parseBlogDate } from '@/lib/blog-date'
 import type {
   NewsletterPostDetail,
   NewsletterPostFrontmatter,
@@ -10,15 +11,8 @@ import type {
 
 const POSTS_DIR = path.join(process.cwd(), 'src/content/newsletter/posts')
 
-/** Parse YYYY-MM-DD as a calendar date (not UTC midnight, which shifts to prior day in US TZ). */
-export function parseNewsletterDate(dateStr: string): Date {
-  const dateOnly = dateStr.trim().slice(0, 10)
-  if (/^\d{4}-\d{2}-\d{2}$/.test(dateOnly)) {
-    const [year, month, day] = dateOnly.split('-').map(Number)
-    return new Date(year, month - 1, day)
-  }
-  return new Date(dateStr)
-}
+/** Parse YYYY-MM-DD as a calendar date (see parseBlogDate). */
+export const parseNewsletterDate = parseBlogDate
 
 const toSummary = (
   frontmatter: NewsletterPostFrontmatter
