@@ -51,6 +51,21 @@ export const freeResources: Resource[] = [
     type: 'free',
   },
   {
+    id: 'accessible-tech-design',
+    title: 'Accessible Tech Design',
+    subtitle: 'June 2026 Newsletter Hub (Temporary)',
+    description: 'A temporary hub for June 2026 accessible tech design newsletters. Follow each weekly fix in one place as new issues are published this month.',
+    emoji: '♿',
+    features: [
+      'Fix 1: Readable contrast',
+      'Fix 2: Scannable structure',
+      'Fix 3: Alt text workflow',
+    ],
+    href: '/accessible-tech-design',
+    borderColor: 'green',
+    type: 'free',
+  },
+  {
     id: 'neuroinclusive-design',
     title: 'Neuroinclusive Design',
     subtitle: 'June 2025 Deep Dive',
