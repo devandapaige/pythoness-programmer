@@ -53,11 +53,12 @@ export const freeResources: Resource[] = [
   {
     id: 'accessible-tech-design',
     title: 'Accessible Tech Design',
-    subtitle: 'June 2026 Series Hub',
+    subtitle: 'June 2026 Five-Fix Guide',
     description:
-      'The complete June 2026 accessible tech design arc — four newsletter issues, five practical fixes, and a free pin-up checklist PDF.',
+      'Self-guided five-fix accessibility arc with checklist PDF — work through contrast, structure, alt text, captions, and honest links in 15-minute steps.',
     emoji: '♿',
     features: [
+      'Self-guided fix walkthroughs on one page',
       'Fix 1: Readable contrast',
       'Fix 2: Scannable structure',
       'Fix 3: Alt text workflow',

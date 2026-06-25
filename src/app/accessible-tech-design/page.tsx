@@ -2,167 +2,228 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import NewsletterSection from '../components/home/NewsletterSection'
-
-interface AccessibleDesignIssue {
-  slug: string
-  dateLabel: string
-  title: string
-  summary: string
-  highlights: string[]
-}
-
-interface FiveFixRecap {
-  fixNumber: number
-  area: string
-  slug: string
-  keyAction: string
-}
-
-interface ToolResource {
-  name: string
-  href: string
-  bestFor: string
-}
-
-const june2026Issues: AccessibleDesignIssue[] = [
-  {
-    slug: 'human-eyes-readable-contrast-june-2026',
-    dateLabel: 'Jun 5, 2026',
-    title: 'Fix 1: readable contrast',
-    summary:
-      'Start with one surface and make it readable on a real phone screen before you send or post.',
-    highlights: [
-      'Readable contrast check for body text and primary CTAs.',
-      'Human preview as the final step before publishing AI-assisted content.',
-      'Simple ten-minute ritual you can repeat weekly.',
-    ],
-  },
-  {
-    slug: 'scannable-structure-fix-2-june-2026',
-    dateLabel: 'Jun 12, 2026',
-    title: 'Fix 2: scannable structure',
-    summary:
-      'Use clear headings and short, skimmable sections so readers and assistive tools can navigate your work.',
-    highlights: [
-      'The 10-second skim test for pages, posts, and long captions.',
-      'Predictable heading hierarchy (H1, H2, H3) for screen readers.',
-      'Wall-of-text recovery strategies for busy weeks.',
-    ],
-  },
-  {
-    slug: 'alt-text-workflow-june-2026',
-    dateLabel: 'Jun 19, 2026',
-    title: 'Fix 3: alt text workflow',
-    summary:
-      'Treat alt text as a repeatable habit so your message still lands when images do not.',
-    highlights: [
-      'Copy-ready alt text template: what is shown and why it matters.',
-      'Sunday batch workflow for image-heavy weeks.',
-      'Platform-specific reminders for websites, email, and social posts.',
-    ],
-  },
-  {
-    slug: 'five-fixes-closeout-june-2026',
-    dateLabel: 'Jun 26, 2026',
-    title: 'Fix 4 + 5: captions, honest links, and the full recap',
-    summary:
-      'Close the month with video/audio inclusion, descriptive links and forms, plus the pin-up Accessible Tech Checklist.',
-    highlights: [
-      'Captions reviewed + three-line text summary for video/audio.',
-      'Rewrite five vague links; fix one confusing form label.',
-      'Full five-fix recap and Magnifica Humanitas mapping.',
-    ],
-  },
-]
-
-const fiveFixRecap: FiveFixRecap[] = [
-  {
-    fixNumber: 1,
-    area: 'Readable contrast',
-    slug: 'human-eyes-readable-contrast-june-2026',
-    keyAction: 'Phone preview + 4.5:1 contrast check',
-  },
-  {
-    fixNumber: 2,
-    area: 'Scannable structure',
-    slug: 'scannable-structure-fix-2-june-2026',
-    keyAction: '10-second skim test + heading hierarchy',
-  },
-  {
-    fixNumber: 3,
-    area: 'Alt text workflow',
-    slug: 'alt-text-workflow-june-2026',
-    keyAction: 'Top 3 images + Sunday batch',
-  },
-  {
-    fixNumber: 4,
-    area: 'Video & audio',
-    slug: 'five-fixes-closeout-june-2026',
-    keyAction: 'Captions reviewed + text summary',
-  },
-  {
-    fixNumber: 5,
-    area: 'Links & flows',
-    slug: 'five-fixes-closeout-june-2026',
-    keyAction: 'Descriptive links + form labels',
-  },
-]
-
-const juneTools: ToolResource[] = [
-  {
-    name: 'WebAIM Contrast Checker',
-    href: 'https://webaim.org/resources/contrastchecker/',
-    bestFor: 'Fix 1 — start here',
-  },
-  {
-    name: 'Who Can Use',
-    href: 'https://whocanuse.com',
-    bestFor: 'Choosing brand color pairs',
-  },
-  {
-    name: 'TPGi Colour Contrast Analyser',
-    href: 'https://www.tpgi.com/color-contrast-checker/',
-    bestFor: 'Sampling colors from a live site or screenshot',
-  },
-  {
-    name: 'WAVE Web Accessibility Evaluation Tool',
-    href: 'https://wave.webaim.org/',
-    bestFor: 'Quick page scan',
-  },
-  {
-    name: 'Firefox Accessibility Inspector',
-    href: 'https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html',
-    bestFor: 'Built-in contrast check on live elements',
-  },
-  {
-    name: 'The A11Y Project Checklist',
-    href: 'https://www.a11yproject.com/checklist/',
-    bestFor: 'Broader sanity check beyond contrast',
-  },
-  {
-    name: 'Accessible Social',
-    href: 'https://www.accessible-social.com/',
-    bestFor: 'Social posts — captions, alt text, platform advisories',
-  },
-]
+import {
+  AccessibleFix,
+  accessibleFixes,
+  consolidatedTools,
+  humanTouchpointSteps,
+  june2026Issues,
+  magnificaMappings,
+  skimTestQuestions,
+  whoThisIsFor,
+} from './data/fixes'
 
 export const metadata: Metadata = {
-  title: 'Accessible Tech Design: June 2026 newsletter hub | Pythoness Programmer',
+  title: 'Accessible Tech Design: Five-Fix Guide | Pythoness Programmer',
   description:
-    'The complete June 2026 Accessible Tech Design series — four newsletter issues, five practical fixes, and a free pin-up checklist PDF.',
+    'Self-guided five-fix accessibility arc — contrast, structure, alt text, captions, and honest links in 15-minute steps, plus a free pin-up checklist PDF.',
   openGraph: {
-    title: 'Accessible Tech Design: June 2026 newsletter hub',
+    title: 'Accessible Tech Design: Five-Fix Guide',
     description:
-      'Follow the June 2026 Accessible Tech Design newsletter arc with weekly fixes, tools, and a free Accessible Tech Checklist PDF.',
+      'Work through the full June accessible tech arc on one page — checks, actions, templates, and tools — plus a free checklist PDF.',
     type: 'website',
     url: 'https://www.pythonessprogrammer.com/accessible-tech-design',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Accessible Tech Design: June 2026 newsletter hub',
+    title: 'Accessible Tech Design: Five-Fix Guide',
     description:
-      'Four June 2026 issues, five accessibility fixes, and a free checklist PDF — all in one place.',
+      'Self-guided accessibility fixes in 15-minute steps — contrast, structure, alt text, captions, and honest links.',
   },
+}
+
+function FixCard({ fix }: { fix: AccessibleFix }): ReactNode {
+  return (
+    <article
+      id={`fix-${fix.number}`}
+      className="bg-brand-green-dark/10 border border-brand-green-accent/30 rounded-2xl p-5 md:p-6"
+    >
+      <div className="flex gap-4 items-start mb-4">
+        <span
+          className="flex-shrink-0 w-10 h-10 rounded-full bg-brand-green-dark text-white flex items-center justify-center font-bold"
+          aria-hidden="true"
+        >
+          {fix.number}
+        </span>
+        <div>
+          <h3 className="text-2xl font-display text-brand-green-dark mt-0 mb-1">{fix.title}</h3>
+          <p className="text-sm font-semibold text-brand-green-dark mb-0">
+            {fix.timeEstimate} ·{' '}
+            <span className="font-normal italic">The check: {fix.checkQuestion}</span>
+          </p>
+        </div>
+      </div>
+
+      <p className="text-brand-green-dark mb-4">
+        <strong>Do this:</strong> {fix.action}
+      </p>
+
+      {fix.number === 2 && (
+        <div className="mb-4">
+          <p className="text-brand-green-dark font-semibold mb-2">10-second skim test</p>
+          <p className="text-brand-green-dark text-sm mb-2">
+            Hand your phone to a friend — or pretend you are seeing your own page for the first time.
+            Within ten seconds, can they answer:
+          </p>
+          <ol className="list-decimal list-inside text-brand-green-dark text-sm space-y-1 mb-0">
+            {skimTestQuestions.map((question) => (
+              <li key={question}>{question}</li>
+            ))}
+          </ol>
+        </div>
+      )}
+
+      {fix.lensRows && fix.lensRows.length > 0 && (
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
+            <thead className="bg-brand-green-dark/10">
+              <tr>
+                <th className="px-3 py-2 text-left font-semibold">If you…</th>
+                <th className="px-3 py-2 text-left font-semibold">Pick one surface</th>
+                <th className="px-3 py-2 text-left font-semibold">What to change</th>
+              </tr>
+            </thead>
+            <tbody>
+              {fix.lensRows.map((row) => (
+                <tr key={row.audience} className="border-t border-brand-green-accent/20">
+                  <td className="px-3 py-2">{row.audience}</td>
+                  <td className="px-3 py-2">{row.surface}</td>
+                  <td className="px-3 py-2">{row.change}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {fix.rules && fix.rules.length > 0 && (
+        <div className="mb-4">
+          <p className="text-brand-green-dark font-semibold mb-2">
+            {fix.number === 2 ? 'Heading hierarchy (simple rules)' : 'Rules of thumb'}
+          </p>
+          <ul className="list-disc list-inside text-brand-green-dark text-sm space-y-1 mb-0">
+            {fix.rules.map((rule) => (
+              <li key={rule}>{rule}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {fix.template && (
+        <div className="mb-4">
+          <p className="text-brand-green-dark font-semibold mb-2">Alt text template (copy this)</p>
+          <pre className="bg-brand-green-dark/10 border border-brand-green-accent/30 rounded-lg p-3 text-sm text-brand-green-dark overflow-x-auto mb-3">
+            <code>{fix.template}</code>
+          </pre>
+          {fix.examples && fix.examples.length > 0 && (
+            <>
+              <p className="text-brand-green-dark font-semibold mb-2">Examples</p>
+              <ul className="list-none text-brand-green-dark text-sm space-y-1 mb-0 pl-0">
+                {fix.examples.map((ex) => (
+                  <li key={ex.bad}>
+                    Bad: <code className="bg-brand-green-accent/10 px-1 rounded text-xs">{ex.bad}</code>
+                    {' → '}
+                    Good: <code className="bg-brand-green-accent/10 px-1 rounded text-xs">{ex.good}</code>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </div>
+      )}
+
+      {fix.number === 5 && fix.examples && (
+        <div className="mb-4">
+          <p className="text-brand-green-dark font-semibold mb-2">Bad → better</p>
+          <ul className="list-none text-brand-green-dark text-sm space-y-1 mb-0 pl-0">
+            {fix.examples.map((ex) => (
+              <li key={ex.bad}>
+                &ldquo;{ex.bad}&rdquo; → &ldquo;{ex.good}&rdquo;
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {fix.platformRows && fix.platformRows.length > 0 && (
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
+            <thead className="bg-brand-green-dark/10">
+              <tr>
+                <th className="px-3 py-2 text-left font-semibold">Platform</th>
+                <th className="px-3 py-2 text-left font-semibold">Where alt text lives</th>
+                <th className="px-3 py-2 text-left font-semibold">Quirk to know</th>
+              </tr>
+            </thead>
+            <tbody>
+              {fix.platformRows.map((row) => (
+                <tr key={row.platform} className="border-t border-brand-green-accent/20">
+                  <td className="px-3 py-2">{row.platform}</td>
+                  <td className="px-3 py-2">{row.where}</td>
+                  <td className="px-3 py-2">{row.quirk}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {fix.extraNotes?.map((note) => (
+        <p key={note} className="text-brand-green-dark text-sm mb-4">
+          {note}
+        </p>
+      ))}
+
+      {fix.platforms && (
+        <p className="text-brand-green-dark text-sm mb-4">
+          <strong>Platforms you already use:</strong> {fix.platforms}
+        </p>
+      )}
+
+      {fix.reflectionPrompt && (
+        <p className="text-brand-green-dark text-sm italic mb-4">
+          <strong>Reflection:</strong> {fix.reflectionPrompt}
+        </p>
+      )}
+
+      {fix.tools && fix.tools.length > 0 && (
+        <div className="mb-4">
+          <p className="text-brand-green-dark font-semibold mb-2">Tools for this fix</p>
+          <ul className="list-disc list-inside text-brand-green-dark text-sm space-y-1 mb-0">
+            {fix.tools.map((tool) => (
+              <li key={tool.name}>
+                {tool.href.startsWith('/') ? (
+                  <Link href={tool.href} className="underline hover:text-brand-purple-dark">
+                    {tool.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={tool.href}
+                    className="underline hover:text-brand-purple-dark"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {tool.name}
+                  </a>
+                )}
+                {' — '}
+                {tool.bestFor}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <Link
+        href={`/newsletter/${fix.slug}`}
+        className="inline-block bg-brand-purple-dark text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors text-sm"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Read the full issue
+      </Link>
+    </article>
+  )
 }
 
 export default function AccessibleTechDesignPage(): ReactNode {
@@ -170,23 +231,81 @@ export default function AccessibleTechDesignPage(): ReactNode {
     <div className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
       <div className="site-gutter max-w-4xl mx-auto">
         <div className="prose prose-lg max-w-none">
+          {/* Hero */}
           <section className="mb-6 mt-0 text-center">
             <h1 className="font-display text-4xl md:text-5xl text-white mb-2 mt-0">
               Accessible Tech Design
             </h1>
             <p className="text-xl md:text-2xl text-brand-cream font-light tracking-wide mb-4 mt-0">
-              June 2026 newsletter series hub
+              Five fixes for the surfaces you already touch
             </p>
             <p className="text-base md:text-lg text-white/90 max-w-3xl mx-auto mb-0">
-              Five fixes for the digital surfaces you already touch — one per week, fifteen minutes
-              each. Read all four June issues here, download the checklist, and keep the arc in one
-              place.
+              A self-guided resource — one fix at a time, fifteen minutes each, no full rebuild
+              required. Work through the checks, actions, and templates here, then pin the checklist
+              above where you publish.
             </p>
           </section>
 
+          {/* Who this is for */}
+          <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl font-display mb-4 text-brand-green-dark mt-0">
+              Who this is for
+            </h2>
+            <ul className="list-disc list-inside text-brand-green-dark space-y-2 mb-0">
+              {whoThisIsFor.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </section>
+
+          {/* How to use */}
+          <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl font-display mb-4 text-brand-green-dark mt-0">
+              How to use this page
+            </h2>
+            <ul className="list-disc list-inside text-brand-green-dark space-y-2 mb-0">
+              <li>Work in order (Fix 1 → 5) or jump to the fix you need today.</li>
+              <li>
+                Each fix has a <strong>check question</strong>, a timed action, and optional tables
+                or templates.
+              </li>
+              <li>
+                Download the checklist PDF and scan any page, post, or send before it goes live.
+              </li>
+              <li>Newsletter links at the bottom are optional deep dives — not required reading.</li>
+            </ul>
+          </section>
+
+          {/* May → June bridge */}
+          <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
+            <h2 className="text-2xl font-display mb-4 text-brand-green-dark mt-0">
+              How May connects to June
+            </h2>
+            <p className="text-brand-green-dark mb-3">
+              May&apos;s{' '}
+              <Link href="/mindful-automation" className="underline hover:text-brand-purple-dark">
+                Mindful Automation
+              </Link>{' '}
+              hub expanded Y.O.U. to <strong>Y.O.U.R.</strong> — same three questions about your
+              brain, your observations, and keeping things simple, plus <strong>R for Reach</strong>:
+              who is on the other end, and what do they need that they should not have to ask for?
+            </p>
+            <p className="text-brand-green-dark mb-3">
+              June adds a layer: <strong>you are responsible for the readability of every piece of
+              text your systems put into the world at scale.</strong> When volume goes up — more
+              posts, more sequences, more AI-assisted drafts — your obligation to preview goes up
+              with it. Reach is not only when something sends. It is whether a tired human can{' '}
+              <strong>read</strong> it without zooming.
+            </p>
+            <p className="text-brand-green-dark text-sm mb-0">
+              Human eyes. Accessibility first. Then send.
+            </p>
+          </section>
+
+          {/* Checklist PDF */}
           <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
             <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
-              What&apos;s inside
+              Your leave-with
             </h2>
             <p className="text-brand-green-dark text-center mb-6">
               Print it, pin it above where you publish. No sign-up required.
@@ -199,25 +318,155 @@ export default function AccessibleTechDesignPage(): ReactNode {
               >
                 Accessible Tech Checklist (PDF)
               </a>
-              <Link
-                href="/newsletter/five-fixes-closeout-june-2026"
-                className="border border-brand-green-dark text-brand-green-dark px-6 py-3 rounded-md hover:bg-brand-green-dark/10 transition-colors font-semibold text-center text-sm"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read the June closeout issue
-              </Link>
             </div>
           </section>
 
+          {/* Human touchpoint ritual */}
           <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
             <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
-              All four June issues
+              Human touchpoint before publish
             </h2>
             <p className="text-brand-green-dark text-center mb-6">
-              Read in order or jump to the fix you need today.
+              Run this before anything goes out — post, email, Story template, automated trigger.
+              Not after complaints. First.
             </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
+                <thead className="bg-brand-green-dark/10">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-semibold">Step</th>
+                    <th className="px-4 py-3 text-left font-semibold">Ask</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {humanTouchpointSteps.map((row) => (
+                    <tr key={row.step} className="border-t border-brand-green-accent/20">
+                      <td className="px-4 py-3 font-semibold">{row.step}</td>
+                      <td className="px-4 py-3">{row.ask}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
 
+          {/* Five fixes */}
+          <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
+            <h2 className="text-3xl font-display mb-2 text-brand-green-dark text-center mt-0">
+              The five fixes
+            </h2>
+            <p className="text-brand-green-dark text-center mb-6">
+              One question per area. Fifteen minutes each — or ten for Fix 1.
+            </p>
+            <div className="space-y-6">
+              {accessibleFixes.map((fix) => (
+                <FixCard key={fix.number} fix={fix} />
+              ))}
+            </div>
+          </section>
+
+          {/* Magnifica Humanitas */}
+          <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
+            <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
+              Disarmed, welcoming, accessible
+            </h2>
+            <p className="text-brand-green-dark text-center mb-6">
+              Pope Leo XIV&apos;s{' '}
+              <a
+                href="https://www.vatican.va/content/leo-xiv/en/encyclicals/documents/20260515-magnifica-humanitas.html"
+                className="underline hover:text-brand-purple-dark"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <em>Magnifica Humanitas</em>
+              </a>{' '}
+              charges that AI must be disarmed, welcoming, and accessible — not merely regulated.
+              Here is how the five fixes map to that charge at your scale:
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
+                <thead className="bg-brand-green-dark/10">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-semibold">Word</th>
+                    <th className="px-4 py-3 text-left font-semibold">Your June fix</th>
+                    <th className="px-4 py-3 text-left font-semibold">What it looks like in practice</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {magnificaMappings.map((row) => (
+                    <tr key={row.word} className="border-t border-brand-green-accent/20">
+                      <td className="px-4 py-3 font-semibold">{row.word}</td>
+                      <td className="px-4 py-3">{row.fixes}</td>
+                      <td className="px-4 py-3">{row.practice}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-brand-green-dark text-sm text-center mt-4 mb-0">
+              Accessible design accepts human limitation — tired eyes, slow connections, brains that
+              skim, bodies that need captions. Show up when you can. Include everyone when you
+              publish.
+            </p>
+          </section>
+
+          {/* Tools consolidated */}
+          <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
+            <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
+              Tools reference
+            </h2>
+            <p className="text-brand-green-dark text-center mb-6">
+              You do not need every tool — pick what matches how you work.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
+                <thead className="bg-brand-green-dark/10">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-semibold">Fix</th>
+                    <th className="px-4 py-3 text-left font-semibold">Resource</th>
+                    <th className="px-4 py-3 text-left font-semibold">Best for</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {consolidatedTools.map((tool) => (
+                    <tr key={tool.name} className="border-t border-brand-green-accent/20">
+                      <td className="px-4 py-3">{tool.fixNumber}</td>
+                      <td className="px-4 py-3">
+                        {tool.href.startsWith('/') ? (
+                          <Link href={tool.href} className="underline hover:text-brand-purple-dark">
+                            {tool.name}
+                          </Link>
+                        ) : (
+                          <a
+                            href={tool.href}
+                            className="underline hover:text-brand-purple-dark"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {tool.name}
+                          </a>
+                        )}
+                      </td>
+                      <td className="px-4 py-3">{tool.bestFor}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-brand-green-dark text-center mt-4 mb-0">
+              Fix 3 tip: turn on Bluesky <strong>Require alt text before posting</strong> in Settings
+              → Accessibility.
+            </p>
+          </section>
+
+          {/* Read full newsletters */}
+          <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
+            <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
+              Read the full newsletters
+            </h2>
+            <p className="text-brand-green-dark text-center mb-6">
+              Optional deep dives — stories, context, and the full June arc as it was sent.
+            </p>
             <div className="space-y-6">
               {june2026Issues.map((issue, index) => (
                 <article
@@ -249,86 +498,7 @@ export default function AccessibleTechDesignPage(): ReactNode {
             </div>
           </section>
 
-          <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
-            <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
-              Five-fix recap
-            </h2>
-            <p className="text-brand-green-dark text-center mb-6">
-              One question per area — scan before you publish.
-            </p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
-                <thead className="bg-brand-green-dark/10">
-                  <tr>
-                    <th className="px-4 py-3 text-left font-semibold">#</th>
-                    <th className="px-4 py-3 text-left font-semibold">Area</th>
-                    <th className="px-4 py-3 text-left font-semibold">Key action</th>
-                    <th className="px-4 py-3 text-left font-semibold">Issue</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {fiveFixRecap.map((fix) => (
-                    <tr key={fix.fixNumber} className="border-t border-brand-green-accent/20">
-                      <td className="px-4 py-3">{fix.fixNumber}</td>
-                      <td className="px-4 py-3">{fix.area}</td>
-                      <td className="px-4 py-3">{fix.keyAction}</td>
-                      <td className="px-4 py-3">
-                        <Link
-                          href={`/newsletter/${fix.slug}`}
-                          className="underline hover:text-brand-purple-dark"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Read
-                        </Link>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section className="mb-6 mt-0 bg-white/95 border-2 border-brand-green-accent rounded-3xl p-6 md:p-8 shadow-2xl">
-            <h2 className="text-3xl font-display mb-3 text-brand-green-dark text-center mt-0">
-              Tools from this month
-            </h2>
-            <p className="text-brand-green-dark text-center mb-6">
-              You do not need every tool — pick what matches how you work.
-            </p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm text-brand-green-dark border border-brand-green-accent/30 rounded-lg overflow-hidden">
-                <thead className="bg-brand-green-dark/10">
-                  <tr>
-                    <th className="px-4 py-3 text-left font-semibold">Resource</th>
-                    <th className="px-4 py-3 text-left font-semibold">Best for</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {juneTools.map((tool) => (
-                    <tr key={tool.name} className="border-t border-brand-green-accent/20">
-                      <td className="px-4 py-3">
-                        <a
-                          href={tool.href}
-                          className="underline hover:text-brand-purple-dark"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {tool.name}
-                        </a>
-                      </td>
-                      <td className="px-4 py-3">{tool.bestFor}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-sm text-brand-green-dark text-center mt-4 mb-0">
-              Fix 3 tip: turn on Bluesky <strong>Require alt text before posting</strong> in Settings
-              → Accessibility.
-            </p>
-          </section>
-
+          {/* What's next */}
           <section className="mb-6 mt-0 bg-white/90 border border-brand-green-accent rounded-2xl p-6 shadow-xl">
             <h2 className="text-2xl font-display mb-3 text-brand-green-dark mt-0">
               What&apos;s next
@@ -386,7 +556,7 @@ export default function AccessibleTechDesignPage(): ReactNode {
             role="status"
             aria-label="Content update status"
           >
-            <p className="text-sm">June 2026 series hub · Last updated: June 26, 2026</p>
+            <p className="text-sm">June 2026 five-fix guide · Last updated: June 26, 2026</p>
           </div>
         </div>
       </div>
