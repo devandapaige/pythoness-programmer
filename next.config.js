@@ -1,10 +1,29 @@
+const os = require('os')
+
+/** Collect non-loopback IPv4 addresses for LAN phone dev testing. */
+function getLocalDevOrigins() {
+  const origins = new Set(['192.168.0.125'])
+  for (const name of Object.keys(os.networkInterfaces())) {
+    for (const iface of os.networkInterfaces()[name] || []) {
+      if (iface.family === 'IPv4' && !iface.internal) {
+        origins.add(iface.address)
+      }
+    }
+  }
+  for (const origin of (process.env.ALLOWED_DEV_ORIGINS || '').split(',')) {
+    const trimmed = origin.trim()
+    if (trimmed) origins.add(trimmed)
+  }
+  return [...origins]
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Ensures next-mdx-remote uses the app’s React/jsx-runtime (avoids “older version of React” during prerender with Turbopack).
   transpilePackages: ['next-mdx-remote'],
   reactStrictMode: true,
-  // LAN / phone dev testing: allows webpack-hmr from your machine’s network IP (update if DHCP changes).
-  allowedDevOrigins: ['192.168.0.125'],
+  // LAN / phone dev testing: Next.js 16 blocks /_next/* from other origins unless listed here.
+  allowedDevOrigins: getLocalDevOrigins(),
   async redirects() {
     // Newsletter issues are canonical; some legacy blog slugs redirect 1:1.
     // Permanent redirects in Next.js use 308 when `permanent: true`.

@@ -25,7 +25,6 @@ import {
   marketingHomeRhythm,
   marketingHomeSectionTightTop,
   marketingSubheading,
-  siteHeaderOffset,
 } from '../lib/marketingLayout'
 
 export const metadata = {
@@ -56,7 +55,7 @@ export default async function Home() {
 
   return (
     <div className={marketingHomeRhythm}>
-      <section className={`bg-brand-green-dark ${siteHeaderOffset} overflow-hidden`}>
+      <section className="overflow-hidden bg-brand-green-dark">
         <HeroCard />
       </section>
 

@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:mobile": "next dev --hostname 0.0.0.0",
+    "dev:info": "node scripts/show-dev-urls.js",
     "build": "node scripts/generate-rss.js && next build",
     "export-newsletter": "node scripts/export-beehiiv-archive.js",
     "migrate-beehiiv-images": "node scripts/migrate-beehiiv-images.js",

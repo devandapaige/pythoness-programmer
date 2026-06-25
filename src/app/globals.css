@@ -73,11 +73,13 @@ body {
   /* Skip link: off-screen until keyboard focus */
   .skip-link {
     transform: translateY(-200%);
+    pointer-events: none;
   }
 
   .skip-link:focus,
   .skip-link:focus-visible {
     transform: translateY(0);
+    pointer-events: auto;
   }
 }
 

@@ -10,7 +10,6 @@ export default function RootLayoutClient({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const isHomePage = pathname === '/'
   const isLinksPage = pathname === '/links' || pathname.startsWith('/links/')
 
   return (
@@ -20,7 +19,7 @@ export default function RootLayoutClient({
       <main
         id="main-content"
         tabIndex={-1}
-        className={!isHomePage && !isLinksPage ? 'pt-16' : ''}
+        className={!isLinksPage ? 'pt-16' : ''}
       >
         {children}
       </main>

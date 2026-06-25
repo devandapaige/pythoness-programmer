@@ -53,7 +53,7 @@ export const freeResources: Resource[] = [
   {
     id: 'accessible-tech-design',
     title: 'Accessible Tech Design',
-    subtitle: 'June 2026 Five-Fix Guide',
+    subtitle: 'Five-Fix Guide',
     description:
       'Self-guided five-fix accessibility arc with checklist PDF — work through contrast, structure, alt text, captions, and honest links in 15-minute steps.',
     emoji: '♿',

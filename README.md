@@ -309,6 +309,38 @@ npm start
 npm run lint
 ```
 
+### Mobile dev testing (phone on your LAN)
+
+Next.js 16 blocks cross-origin requests to dev-only assets (`/_next/*`) unless your phone’s origin is allowed. If you open the site on your phone via a LAN IP (for example `http://192.168.0.127:3000`), you may see the page layout but **nothing responds to taps** — React never hydrates.
+
+**Use the mobile dev scripts:**
+
+```bash
+# Start dev server reachable on your network (bind 0.0.0.0)
+npm run dev:mobile
+
+# Print desktop + LAN URLs to open on your phone
+npm run dev:info
+```
+
+1. Run `npm run dev:mobile` (not plain `npm run dev` if you need phone access).
+2. Run `npm run dev:info` and open one of the **Mobile** URLs on your phone (same Wi‑Fi as your Mac).
+3. Restart the dev server after changing network or if taps stop working.
+
+**How origins are allowed:** [`next.config.js`](next.config.js) auto-detects local IPv4 addresses at startup and merges them into `allowedDevOrigins`. You can add more via environment variable:
+
+```bash
+ALLOWED_DEV_ORIGINS=192.168.0.127,192.168.0.114 npm run dev:mobile
+```
+
+**Production vs local dev:** The live site uses a production build and is not affected by this. Mobile menu testing on a **built** app locally is also fine:
+
+```bash
+npm run build && npm start -- -H 0.0.0.0
+```
+
+Then open the LAN URL from `npm run dev:info` (same port if you use default 3000).
+
 ## Testing
 
 The project uses Jest and React Testing Library for testing:

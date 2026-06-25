@@ -2,7 +2,7 @@ export const resourceLinks = [
   { href: '/resources', label: 'All Resources' },
   { href: '/digital-spring-cleaning', label: 'Digital Spring Cleaning' },
   { href: '/mindful-automation', label: 'Mindful Automation' },
-  { href: '/accessible-tech-design', label: 'Accessible Tech Design (June 2026)' },
+  { href: '/accessible-tech-design', label: 'Accessible Tech Design' },
   { href: '/accessibility', label: 'Accessibility Legal Guide' },
   { href: '/back-to-basics', label: 'Back to Basics' },
   { href: '/ai-mythbusting', label: 'AI Myth-Busting' },
