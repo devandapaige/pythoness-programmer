@@ -53,15 +53,21 @@ export const freeResources: Resource[] = [
   {
     id: 'accessible-tech-design',
     title: 'Accessible Tech Design',
-    subtitle: 'June 2026 Newsletter Hub (Temporary)',
-    description: 'A temporary hub for June 2026 accessible tech design newsletters. Follow each weekly fix in one place as new issues are published this month.',
+    subtitle: 'June 2026 Series Hub',
+    description:
+      'The complete June 2026 accessible tech design arc — four newsletter issues, five practical fixes, and a free pin-up checklist PDF.',
     emoji: '♿',
     features: [
       'Fix 1: Readable contrast',
       'Fix 2: Scannable structure',
       'Fix 3: Alt text workflow',
+      'Fix 4: Video & audio inclusion',
+      'Fix 5: Honest links & flows',
+      'Free Accessible Tech Checklist (PDF)',
     ],
     href: '/accessible-tech-design',
+    downloadHref: '/accessible-tech-design/accessible-tech-checklist-2026.pdf',
+    downloadLabel: 'Download Accessible Tech Checklist (PDF)',
     borderColor: 'green',
     type: 'free',
   },
