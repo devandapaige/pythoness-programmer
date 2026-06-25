@@ -31,7 +31,7 @@
     "next": "^16.2.6",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.2.5",
-    "react-dom": "^19.2.5",
+    "react-dom": "^19.2.6",
     "remark-gfm": "^4.0.1",
     "sanitize-html": "^2.17.4",
     "sharp": "^0.34.1",
