@@ -230,7 +230,7 @@ export default function AccessibleTechDesignPage(): ReactNode {
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-green-dark via-brand-purple-dark to-brand-green-dark">
       <div className="site-gutter max-w-4xl mx-auto">
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none prose-a:text-brand-green-dark prose-a:hover:text-brand-purple-dark">
           {/* Hero */}
           <section className="mb-6 mt-0 text-center">
             <h1 className="font-display text-4xl md:text-5xl text-white mb-2 mt-0">
